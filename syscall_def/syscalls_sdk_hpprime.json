@@ -1,0 +1,23 @@
+{
+    "0x102d1": "mount_file_disk",
+    "0x102d2": "umount_file_disk",
+    "0x102d3": "__close",
+    "0x102d4": "__commit",
+    "0x102d5": "__creat",
+    "0x102d6": "__dup",
+    "0x102d7": "__wcreat",
+    "0x102d8": "__eof",
+    "0x102d9": "__get_errno",
+    "0x102da": "__lseek",
+    "0x102db": "__lseeki64",
+    "0x102dc": "__open",
+    "0x102dd": "__wopen",
+    "0x102de": "__read",
+    "0x102df": "__set_errno",
+    "0x102e0": "__tell",
+    "0x102e1": "__telli64",
+    "0x102e2": "__truncate",
+    "0x102e3": "__write",
+    "0x102e4": "_MultiByteToWideChar",
+    "0x102e5": "_WideCharToMultiByte"
+}
