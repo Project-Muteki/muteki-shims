@@ -31,7 +31,7 @@ def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument('-t', '--assembler-type', choices=HEADERS.keys(), default='gas', help='Assembler type.')
     p.add_argument('-s', '--standalone', action='store_true', default=False, help='Generate standalone object (i.e. with empty DllMainCRTStartup included).')
-    p.add_argument('-S', '--split', action='store_true', default=False, help='Split each shim into its own file. (Implies -s)')
+    p.add_argument('-S', '--split', action='store_true', default=False, help='Split each shim into its own file. (Ignores -s)')
     p.add_argument('-d', '--scandeps', action='store_true', default=False, help='Scan dependencies for meson. (Only makes sense when running with -S)')
     p.add_argument('-p', '--scandeps-prefix', help='Prefix added to results of -d.')
     p.add_argument('-o', '--output', help='Path to output.')
