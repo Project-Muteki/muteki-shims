@@ -5,4 +5,4 @@
 
 extern bool _aremove(const char *pathname);
 
-#endif
+#endif // __MUTEKI_FS_H__

@@ -5,4 +5,4 @@
 
 extern void OSSleep(int32_t ms);
 
-#endif
+#endif // __MUTEKI_THREADING_H__

@@ -4,4 +4,4 @@
 #include <muteki/common.h>
 
 
-#endif
+#endif // __MUTEKI_MEMORY_H__

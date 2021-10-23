@@ -10,9 +10,9 @@ enum {
 
 extern void *LoadProgramA(const char *pathname);
 extern void *LoadProgramW(const char16_t *pathname);
-extern int ExecuteProgram(void *prog, int invoke_subroutine, const char *args, int app_arg3);
+extern int ExecuteProgram(void *prog, int invoke_subroutine, const void *app_arg1, const void *app_arg2);
 extern int FreeProgram(void *prog);
 extern char *GetCurrentPathA();
 extern char16_t *GetCurrentPathW();
 
-#endif
+#endif // __MUTEKI_LOADER_H__

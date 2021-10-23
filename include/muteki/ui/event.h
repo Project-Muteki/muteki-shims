@@ -1,5 +1,5 @@
-#ifndef __MUTEKI_EVENT_H__
-#define __MUTEKI_EVENT_H__
+#ifndef __MUTEKI_UI_EVENT_H__
+#define __MUTEKI_UI_EVENT_H__
 
 #include <muteki/common.h>
 
@@ -114,4 +114,4 @@ extern bool TestPendEvent(ui_event_t *event);
 extern bool TestKeyEvent(ui_event_t *event);
 extern int32_t GetEvent(ui_event_t *event);
 
-#endif
+#endif // __MUTEKI_UI_EVENT_H__

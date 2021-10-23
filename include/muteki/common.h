@@ -11,4 +11,4 @@
 typedef uint16_t char16_t;
 #endif
 
-#endif
+#endif // __MUTEKI_COMMON_H__
