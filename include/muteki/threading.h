@@ -3,6 +3,6 @@
 
 #include <muteki/common.h>
 
-extern void OSSleep(int32_t ms);
+extern void OSSleep(short millis);
 
 #endif // __MUTEKI_THREADING_H__
