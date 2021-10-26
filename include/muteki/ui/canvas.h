@@ -51,7 +51,7 @@ extern void WriteAlignString(short x, short y, const char *msg, uint16_t max_wid
  * @param font_type The font type.
  * @return The width in pixels of that character.
  */
-extern short GetCharWidth(char16_t c, uint8_t font_type);
+extern short GetCharWidth(UTF16 c, uint8_t font_type);
 
 /**
  * @brief Get the height of the font @p font_type.
@@ -86,7 +86,7 @@ extern void SetFontType(int8_t type);
  * @param c UTF-16 codepoint of the character.
  * @param invert Whether or not to invert the color for that character.
  */
-extern void WriteChar(short x, short y, char16_t c, bool invert);
+extern void WriteChar(short x, short y, UTF16 c, bool invert);
 
 /**
  * @brief Draw a UTF-16 string @p s aligned to the top left corner at (@p x, @p y) px.
@@ -97,7 +97,7 @@ extern void WriteChar(short x, short y, char16_t c, bool invert);
  * @param invert Whether or not to invert the color for that character.
  * @see WriteChar Similar function that displays single characters instead.
  */
-extern void WriteString(short x, short y, const char16_t *s, bool invert);
+extern void WriteString(short x, short y, const UTF16 *s, bool invert);
 
 /**
  * @brief Get X coordinate of the rightmost visible pixels on the current canvas.

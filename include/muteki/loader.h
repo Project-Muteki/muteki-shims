@@ -42,7 +42,7 @@ extern void *LoadProgramA(const char *pathname);
  * @see LoadProgramA
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
  */
-extern void *LoadProgramW(const char16_t *pathname);
+extern void *LoadProgramW(const UTF16 *pathname);
 
 /**
  * @brief Invoke a specific subroutine of the loaded app with arguments.
@@ -83,6 +83,6 @@ extern char *GetCurrentPathA();
  *
  * @return The UTF-16 encoded DOS 8.3 path to the current running executable.
  */
-extern char16_t *GetCurrentPathW();
+extern UTF16 *GetCurrentPathW();
 
 #endif // __MUTEKI_LOADER_H__

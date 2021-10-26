@@ -12,10 +12,11 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-#ifdef UCHAR_H_PROVIDED
-#include <uchar.h>
-#else
-typedef uint16_t char16_t;
-#endif
+/**
+ * @brief "Portable" UTF-16 type used by other headers.
+ *
+ * This is guaranteed to be 16-bit wide, unlike wchar_t (normally 32-bit wide) or char16_t (new C11 addition, can be >16-bit depending on the toolchain).
+ */
+typedef uint16_t UTF16;
 
 #endif // __MUTEKI_COMMON_H__
