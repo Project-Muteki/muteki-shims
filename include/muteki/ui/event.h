@@ -1,9 +1,17 @@
+/**
+ * @file event.h
+ * @brief Low-level UI event handing API.
+ */
+
 #ifndef __MUTEKI_UI_EVENT_H__
 #define __MUTEKI_UI_EVENT_H__
 
 #include <muteki/common.h>
 
-enum {
+/**
+ * @brief List of available keycodes.
+ */
+enum keycode_e {
     /* 0x00 */
     KEY_ESC = 0x01,
     KEY_LEFT,
@@ -92,6 +100,7 @@ enum {
     KEY_SEARCH = 0xf6,
     KEY_BACKLIGHT = 0xf8,
     KEY_VOL = 0xfa,
+    KEY_USB_INSERTION = 0xfe,
     KEY_REPEAT = 0xff,
     /* 0x100+ */
     KEY_INS = 0x101,
@@ -99,19 +108,77 @@ enum {
     KEY_SHIFT_PGDN = 0xe04f,
 };
 
+/**
+ * @brief Structure for low level UI events
+ */
 typedef struct {
+    /**
+     * Purpose unknown.
+     */
     void *unk0; // 0-4 sometimes a pointer especially on unstable USB connection? junk data?
+    /**
+     * Seems to be the type of event (0x10 being key event)
+     */
     int event_type; // 4-8 16: key (?).
+    /**
+     * Keycode for the first pressed key.
+     */
     short key_code0; // 8-10
+    /**
+     * Keycode for the second pressed key.
+     *
+     * Note that depending on the exact keys pressed simultaneously, this is not always accurate.
+     */
     short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
+    /**
+     * Set along with a @p KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
+     */
     void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+    /**
+     * Purpose unknown.
+     */
     void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
+    /**
+     * Purpose unknown.
+     */
     void *unk20; // 20-24 seems to be always 0. Unused?
 } ui_event_t;
 
+/**
+ * @brief Discard all unprocessed UI events.
+ */
 extern short ClearAllEvents();
+
+/**
+ * @brief Process pending events.
+ *
+ * Exact purpose of this function is currently unclear.
+ *
+ * @param event pointer to a @p ui_event_t struct.
+ * @return @p true if events were processed, @p false otherwise.
+ * @see TestKeyEvent Related function that specifically processes key events.
+ */
 extern bool TestPendEvent(ui_event_t *event);
+
+/**
+ * @brief Process pending key events.
+ *
+ * Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses, etc.
+ *
+ * @param event pointer to a @p ui_event_t struct.
+ * @return @p true if events were processed, @p false otherwise.
+ * @see TestPendEvent
+ */
 extern bool TestKeyEvent(ui_event_t *event);
+
+/**
+ * @brief Get event.
+ *
+ * Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the @p ui_event_t struct.
+ *
+ * @param event pointer to a @p ui_event_t struct.
+ * @return @p 1 if successful.
+ */
 extern int32_t GetEvent(ui_event_t *event);
 
 #endif // __MUTEKI_UI_EVENT_H__
