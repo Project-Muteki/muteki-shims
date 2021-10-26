@@ -8,7 +8,11 @@
 
 #include <muteki/common.h>
 
-enum {
+/**
+ * Defines the default subroutine identifiers to be used with @a ExecuteProgram.
+ * @see ExecuteProgram
+ */
+enum app_subroutine_e {
     /**
      * Run the main subroutine.
      */
@@ -22,7 +26,7 @@ enum {
 /**
  * @brief Load an app executable.
  *
- * The \p pathname specified must be a DOS 8.3 name.
+ * The @p pathname specified must be a DOS 8.3 name.
  *
  * @param pathname Path to executable.
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
@@ -32,7 +36,7 @@ extern void *LoadProgramA(const char *pathname);
 /**
  * @brief Load an app executable. (UTF-16 variant)
  *
- * The \p pathname specified must be a DOS 8.3 name.
+ * The @p pathname specified must be a DOS 8.3 name.
  *
  * @param pathname UTF-16 encoded path to executable.
  * @see LoadProgramA
