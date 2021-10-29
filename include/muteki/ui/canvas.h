@@ -8,6 +8,60 @@
 
 #include <muteki/common.h>
 
+/**
+ * @brief Font types.
+ *
+ * The naming follows the following format, joined with underscores (_):
+ *
+ * <style> [variant] [size] <cjk> [cjkvariant] [cjksize] [index]
+ *
+ * Where
+ * - @p style is one of @p SANS, @p SERIF or @p MONOSPACE.
+ * - @p variant or @p cjkvariant is one of @p BOLD (equivalent to @p REGULAR for CJK), @p ITALIC, @p BOLDITALIC (equivalent to @p ITALIC for CJK) or @p REGULAR (omitted for @p variant). For @p cjkvariant, if it is the same as @p variant, it will be omitted.
+ * - @p size or @p cjksize is one of @p TINY (8px height, not available for CJK), SMALL (12px), NORMAL (16px, omitted for @p size), LARGE (20px) or HUGE (22px, not available for CJK). For @p cjksize, if it is the same as @p size, it will be omitted.
+ * - @p cjk is either @p CJK (supports CJK character rendering) or @p NOCJK (does not support CJK character rendering).
+ * - @p index is the current index (only used when all the above fields collide).
+ */
+enum font_type_e {
+    SANS_TINY_CJK_NORMAL = 0,
+    SANS_BOLD_TINY_CJK_NORMAL,
+    SANS_ITALIC_TINY_CJK_REGULAR_NORMAL,
+    SANS_BOLDITALIC_TINY_CJK_REGULAR_NORMAL,
+    SERIF_SMALL_CJK,
+    SERIF_BOLD_SMALL_CJK,
+    SERIF_ITALIC_SMALL_CJK_REGULAR,
+    SERIF_BOLDITALIC_SMALL_CJK_REGULAR,
+    SERIF_CJK,
+    SERIF_BOLD_CJK,
+    SERIF_ITALIC_CJK_REGULAR,
+    SERIF_BOLDITALIC_CJK_REGULAR,
+    SERIF_LARGE_CJK,
+    SERIF_BOLD_LARGE_CJK,
+    SERIF_ITALIC_LARGE_CJK,
+    SERIF_BOLDITALIC_LARGE_CJK,
+    MONOSPACE_CJK,
+    MONOSPACE_TINY_NOCJK,
+    SERIF_CJK_18,
+    SERIF_BOLD_CJK_19,
+    SERIF_SMALL_CJK_20,
+    SANS_TINY_NOCJK,
+    SANS_BOLD_TINY_NOCJK,
+    SANS_ITALIC_TINY_NOCJK,
+    SANS_BOLDITALIC_TINY_NOCJK,
+    SERIF_SMALL_CJK_25,
+    SERIF_BOLD_SMALL_CJK_26,
+    SERIF_ITALIC_SMALL_CJK_REGULAR_27,
+    SERIF_BOLDITALIC_SMALL_CJK_REGULAR_28,
+    SERIF_CJK_29,
+    SERIF_BOLD_CJK_30,
+    SERIF_ITALIC_CJK_REGULAR_31,
+    SERIF_BOLDITALIC_CJK_REGULAR_32,
+    SERIF_HUGE_CJK_LARGE,
+    SANS_HUGE_CJK_LARGE,
+    SERIF_ITALIC_HUGE_CJK_LARGE,
+    SANS_ITALIC_HUGE_CJK_LARGE,
+};
+
 // TODO verify this on a color screen device
 /**
  * @brief Convert separate RGB values to integer RGB representation

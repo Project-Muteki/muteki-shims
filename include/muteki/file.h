@@ -54,5 +54,4 @@ extern bool _fwrite(const void *ptr, size_t size, size_t nmemb, void *stream);
  * @return Unclear. Could be similar to POSIX fclose().
  */
 extern int _fclose(void *stream);
-
 #endif // __MUTEKI_FILE_H__
