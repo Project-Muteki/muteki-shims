@@ -92,6 +92,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8f71293c4cba373e738bcfc0721901e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a8f71293c4cba373e738bcfc0721901e6">_lfree</a> (void *ptr)</td></tr>
 <tr class="memdesc:a8f71293c4cba373e738bcfc0721901e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free previously allocated memory.  <a href="memory_8h.html#a8f71293c4cba373e738bcfc0721901e6">More...</a><br /></td></tr>
 <tr class="separator:a8f71293c4cba373e738bcfc0721901e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e993980c4031eb09cafad85ddeb952"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a11e993980c4031eb09cafad85ddeb952">GetFreeMemory</a> ()</td></tr>
+<tr class="memdesc:a11e993980c4031eb09cafad85ddeb952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of available memory.  <a href="memory_8h.html#a11e993980c4031eb09cafad85ddeb952">More...</a><br /></td></tr>
+<tr class="separator:a11e993980c4031eb09cafad85ddeb952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Memory management API. </p>
@@ -121,6 +124,27 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a11e993980c4031eb09cafad85ddeb952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11e993980c4031eb09cafad85ddeb952">&#9670;&nbsp;</a></span>GetFreeMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t GetFreeMemory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the size of available memory. </p>
+<p>Requires <code>-lkrnllib</code> when dynamically linking with the shims.</p>
+<dl class="section return"><dt>Returns</dt><dd>Size of available memory. </dd></dl>
 
 </div>
 </div>

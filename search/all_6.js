@@ -5,7 +5,8 @@ var searchData=
   ['getcurrentpathw_45',['GetCurrentPathW',['../loader_8h.html#acf0d5e4856f9354a8efa1dc2a8b74c49',1,'loader.h']]],
   ['getevent_46',['GetEvent',['../event_8h.html#afa4eabdb16241c67349313776269703a',1,'event.h']]],
   ['getfontheight_47',['GetFontHeight',['../canvas_8h.html#a009e14c23044791c4250d8242ec811c4',1,'canvas.h']]],
-  ['getmaxscrx_48',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
-  ['getmaxscry_49',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
-  ['getsystime_50',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]]
+  ['getfreememory_48',['GetFreeMemory',['../memory_8h.html#a11e993980c4031eb09cafad85ddeb952',1,'memory.h']]],
+  ['getmaxscrx_49',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
+  ['getmaxscry_50',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
+  ['getsystime_51',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]]
 ];
