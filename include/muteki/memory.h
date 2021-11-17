@@ -51,4 +51,14 @@ extern void *lrealloc(void *ptr, size_t size);
  */
 extern void _lfree(void *ptr);
 
+
+/**
+ * @brief Return the size of available memory.
+ *
+ * Requires @p -lkrnllib when dynamically linking with the shims.
+ *
+ * @return Size of available memory.
+ */
+extern size_t GetFreeMemory();
+
 #endif // __MUTEKI_MEMORY_H__
