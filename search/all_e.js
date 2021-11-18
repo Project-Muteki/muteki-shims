@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['scrolldown_72',['ScrollDown',['../canvas_8h.html#a67466ab247cac07728916e19b5e60dde',1,'canvas.h']]],
-  ['scrollleft_73',['ScrollLeft',['../canvas_8h.html#ad73ff8fc68cb4aa0a67ef824ad679498',1,'canvas.h']]],
-  ['scrollright_74',['ScrollRight',['../canvas_8h.html#afacb044524d273f84760b74ae0910179',1,'canvas.h']]],
-  ['scrollup_75',['ScrollUp',['../canvas_8h.html#a502ba629582f39f4301680052db48620',1,'canvas.h']]],
-  ['second_76',['second',['../structdatetime__t.html#a6e882ba06a6047a1e494203e9e09594b',1,'datetime_t']]],
-  ['setfonttype_77',['SetFontType',['../canvas_8h.html#a5970eb790f1aba8578b1220ed4aa9740',1,'canvas.h']]],
-  ['size_78',['size',['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t']]]
+  ['rgb_5ffrom_5fu8_75',['RGB_FROM_U8',['../canvas_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf',1,'canvas.h']]],
+  ['rgbsetbkcolor_76',['rgbSetBkColor',['../canvas_8h.html#a98681ae3b53fbaff32dc184a11aa559e',1,'canvas.h']]],
+  ['rgbsetcolor_77',['rgbSetColor',['../canvas_8h.html#a61c187a73000a33c2ca53d8df7fe5ab0',1,'canvas.h']]]
 ];

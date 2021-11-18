@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['printfxy_68',['PrintfXY',['../canvas_8h.html#ae2bce93898870fbfd4541135b418c85c',1,'canvas.h']]]
+  ['ossleep_72',['OSSleep',['../threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573',1,'threading.h']]]
 ];

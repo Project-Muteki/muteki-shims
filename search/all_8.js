@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['key_5fcode0_53',['key_code0',['../structui__event__t.html#a02411c9ca81b9c41c59921674836cb30',1,'ui_event_t']]],
-  ['key_5fcode1_54',['key_code1',['../structui__event__t.html#a51b48a48839bd67d596cd24780e5fd20',1,'ui_event_t']]],
-  ['keycode_5fe_55',['keycode_e',['../event_8h.html#af7cc0af385a79f99f5634d7050ad9920',1,'event.h']]]
+  ['height_55',['height',['../structvram__descriptor__t.html#abf40e9fea97245d474484912e1909c0f',1,'vram_descriptor_t']]],
+  ['hour_56',['hour',['../structdatetime__t.html#a3752afc6ff3c16e564fa284dbfc33847',1,'datetime_t']]]
 ];

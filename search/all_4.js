@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['event_2eh_29',['event.h',['../event_8h.html',1,'']]],
-  ['event_5ftype_30',['event_type',['../structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca',1,'ui_event_t']]],
-  ['executeprogram_31',['ExecuteProgram',['../loader_8h.html#adabf90909cd694f5101617f49c28b344',1,'loader.h']]]
+  ['datetime_2eh_25',['datetime.h',['../datetime_8h.html',1,'']]],
+  ['datetime_5ft_26',['datetime_t',['../structdatetime__t.html',1,'']]],
+  ['day_27',['day',['../structdatetime__t.html#a2b25f6300e01d6b9eb926a4236102dab',1,'datetime_t']]],
+  ['depth_28',['depth',['../structvram__descriptor__t.html#ad49f14bfad86e2501a72aa1bf519b577',1,'vram_descriptor_t']]],
+  ['deviceiocontrol_29',['DeviceIoControl',['../devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b',1,'devio.h']]],
+  ['devio_2eh_30',['devio.h',['../devio_8h.html',1,'']]]
 ];

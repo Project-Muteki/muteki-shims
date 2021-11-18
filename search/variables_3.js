@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['event_5ftype_155',['event_type',['../structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca',1,'ui_event_t']]]
+  ['day_168',['day',['../structdatetime__t.html#a2b25f6300e01d6b9eb926a4236102dab',1,'datetime_t']]],
+  ['depth_169',['depth',['../structvram__descriptor__t.html#ad49f14bfad86e2501a72aa1bf519b577',1,'vram_descriptor_t']]]
 ];

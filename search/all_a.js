@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['memory_2eh_62',['memory.h',['../memory_8h.html',1,'']]],
-  ['millis_63',['millis',['../structdatetime__t.html#a0835307538b39b1b9b8d0cb86d1ec366',1,'datetime_t']]],
-  ['minute_64',['minute',['../structdatetime__t.html#a83983f81b68d05438751579020fa0982',1,'datetime_t']]],
-  ['month_65',['month',['../structdatetime__t.html#a5d2ac4cfe4155d71e613dc9a6c8b0ece',1,'datetime_t']]],
-  ['mtime_5fkey_66',['mtime_key',['../structfind__context__t.html#a664c0501bac2491c1e44f162758674f2',1,'find_context_t']]]
+  ['lcalloc_60',['lcalloc',['../memory_8h.html#a29f0b67ae504ae036f6bbe1dea3d586f',1,'memory.h']]],
+  ['lmalloc_61',['lmalloc',['../memory_8h.html#a2dae27cf36bebc1be460ed2441b898cf',1,'memory.h']]],
+  ['loader_2eh_62',['loader.h',['../loader_8h.html',1,'']]],
+  ['loadprograma_63',['LoadProgramA',['../loader_8h.html#a2ee44a94b63bb284bee545147a4f966a',1,'loader.h']]],
+  ['loadprogramw_64',['LoadProgramW',['../loader_8h.html#a71f218eb1a142fe20db1179e7f4f6416',1,'loader.h']]],
+  ['lrealloc_65',['lrealloc',['../memory_8h.html#aa4bc3b3fe60cd084536c6431416c67e2',1,'memory.h']]]
 ];

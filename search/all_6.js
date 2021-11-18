@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['getcharwidth_43',['GetCharWidth',['../canvas_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b',1,'canvas.h']]],
-  ['getcurrentpatha_44',['GetCurrentPathA',['../loader_8h.html#a39b6cf2809e162633a1ff88ae1bebb17',1,'loader.h']]],
-  ['getcurrentpathw_45',['GetCurrentPathW',['../loader_8h.html#acf0d5e4856f9354a8efa1dc2a8b74c49',1,'loader.h']]],
-  ['getevent_46',['GetEvent',['../event_8h.html#afa4eabdb16241c67349313776269703a',1,'event.h']]],
-  ['getfontheight_47',['GetFontHeight',['../canvas_8h.html#a009e14c23044791c4250d8242ec811c4',1,'canvas.h']]],
-  ['getfreememory_48',['GetFreeMemory',['../memory_8h.html#a11e993980c4031eb09cafad85ddeb952',1,'memory.h']]],
-  ['getmaxscrx_49',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
-  ['getmaxscry_50',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
-  ['getsystime_51',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]]
+  ['fat_5fadate_34',['fat_adate',['../structfind__context__t.html#ae9fa8cb17325f1adf57d4cea634ea70a',1,'find_context_t']]],
+  ['fat_5fcdate_35',['fat_cdate',['../structfind__context__t.html#a5561086913e6247b4fa1f27b14e40888',1,'find_context_t']]],
+  ['fat_5fmdate_36',['fat_mdate',['../structfind__context__t.html#ac671232a93b2ade9413842449630d6dc',1,'find_context_t']]],
+  ['file_2eh_37',['file.h',['../file_8h.html',1,'']]],
+  ['filename_38',['filename',['../structfind__context__t.html#a920e9dfaeb3ee32ddf69f9ac4de9a4d5',1,'find_context_t']]],
+  ['filename2_5falt_39',['filename2_alt',['../structfind__context__t.html#a3c1a604f767ad3f3bbe80836182ce25a',1,'find_context_t']]],
+  ['filename_5flfn_40',['filename_lfn',['../structfind__context__t.html#aa6ee44165fe3d8c2770ee8131734f774',1,'find_context_t']]],
+  ['find_5fcontext_5ft_41',['find_context_t',['../structfind__context__t.html',1,'']]],
+  ['font_5ftype_5fe_42',['font_type_e',['../canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171',1,'canvas.h']]],
+  ['freeprogram_43',['FreeProgram',['../loader_8h.html#a33c58ebe30082278157831d17eaa8e86',1,'loader.h']]],
+  ['fs_2eh_44',['fs.h',['../fs_8h.html',1,'']]]
 ];
