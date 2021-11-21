@@ -6,8 +6,10 @@ import os
 import sys
 
 HEADER_GAS = r'''
+    .cpu arm7tdmi
     .section .text
     .macro define_syscall num, name
+    .arm
 \name:
     push {r0}
     push {lr}

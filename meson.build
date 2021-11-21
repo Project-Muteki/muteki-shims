@@ -14,13 +14,13 @@ python_interp = import('python').find_installation('python3')
 syscalls_krnl = custom_target(
     'syscalls_krnl.s',
     output : 'syscalls_krnl.s',
-    input : ['syscall_def/gen_syscall_shim.py', syscall_files_sdk],
+    input : ['syscall_def/gen_syscall_shim.py', syscall_files_krnl],
     command: [python_interp, '@INPUT0@', '-o', '@OUTPUT@', '@INPUT1@', '@INPUT2@'],
 )
 
 syscalls_sdk = custom_target('syscalls_sdk.s',
     output : 'syscalls_sdk.s',
-    input : ['syscall_def/gen_syscall_shim.py', syscall_files_krnl],
+    input : ['syscall_def/gen_syscall_shim.py', syscall_files_sdk],
     command: [python_interp, '@INPUT0@', '-o', '@OUTPUT@', '@INPUT1@', '@INPUT2@'],)
 
 _syscall_table = run_command([python_interp, 'syscall_def/gen_syscall_shim.py',
