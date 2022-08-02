@@ -68,8 +68,7 @@ $(function() {
   <div class="summary">
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">errno.h File Reference</div>  </div>
 </div><!--header-->
@@ -98,6 +97,18 @@ Enumerations</h2></td></tr>
 <b>ERRNO_NS_KERNEL_OVERRIDE_DEFAULT</b> = 0x20000000
  }</td></tr>
 <tr class="separator:a2a5f5cf0247fb920e87e95fd487aefb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c9085e0bdd5a9b0b159fb117161c32"><td class="memItemLeft" align="right" valign="top"><a id="ad8c9085e0bdd5a9b0b159fb117161c32"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>errno_exec_e</b> { <br />
+&#160;&#160;<b>EXEC_UNSUPPORTED</b> = 0x0001, 
+<b>EXEC_INVALID</b>, 
+<b>EXEC_OPEN_FAILED</b>, 
+<b>EXEC_LOADER_FAILURE</b>, 
+<br />
+&#160;&#160;<b>EXEC_MALLOC_FAILED</b>, 
+<b>EXEC_DECOMPRESSION_FAILED</b>, 
+<b>EXEC_MP3_PLAYER_IS_RUNNING</b>
+<br />
+ }</td></tr>
+<tr class="separator:ad8c9085e0bdd5a9b0b159fb117161c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf282c7663bd0455f40aadcdcd2bf73"><td class="memItemLeft" align="right" valign="top"><a id="abcf282c7663bd0455f40aadcdcd2bf73"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>errno_kernel_e</b> { <br />
 &#160;&#160;<b>PERIPHERAL_COMM_FAILED</b> = 0x0003, 
 <b>GENERAL_HW_ERROR</b>, 
@@ -176,30 +187,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a4360e0717880afcd84b032f85a7dd374"><td class="memItemLeft" align="right" valign="top">muteki_errno_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a4360e0717880afcd84b032f85a7dd374">_GetLastError</a> (void)</td></tr>
 <tr class="memdesc:a4360e0717880afcd84b032f85a7dd374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get errno.  <a href="errno_8h.html#a4360e0717880afcd84b032f85a7dd374">More...</a><br /></td></tr>
 <tr class="separator:a4360e0717880afcd84b032f85a7dd374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:afeeef2c0629e537522424beab0634a4b"><td class="memItemLeft" align="right" valign="top"><a id="afeeef2c0629e537522424beab0634a4b"></a>
-enum errno_ns_flag_e&#160;</td><td class="memItemRight" valign="bottom"><b>EXEC_UNSUPPORTED</b> = 0x0001</td></tr>
-<tr class="separator:afeeef2c0629e537522424beab0634a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e78e76bc994841b361cc30e964e7244"><td class="memItemLeft" align="right" valign="top"><a id="a1e78e76bc994841b361cc30e964e7244"></a>
-enum errno_ns_flag_e&#160;</td><td class="memItemRight" valign="bottom"><b>EXEC_INVALID</b> = 0x0001</td></tr>
-<tr class="separator:a1e78e76bc994841b361cc30e964e7244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02482171345d74d704d9c7f2d4cff49e"><td class="memItemLeft" align="right" valign="top"><a id="a02482171345d74d704d9c7f2d4cff49e"></a>
-enum errno_ns_flag_e&#160;</td><td class="memItemRight" valign="bottom"><b>EXEC_OPEN_FAILED</b> = 0x0001</td></tr>
-<tr class="separator:a02482171345d74d704d9c7f2d4cff49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69bf59c61cac48f92f001408e0450381"><td class="memItemLeft" align="right" valign="top"><a id="a69bf59c61cac48f92f001408e0450381"></a>
-enum errno_ns_flag_e&#160;</td><td class="memItemRight" valign="bottom"><b>EXEC_LOADER_FAILURE</b> = 0x0001</td></tr>
-<tr class="separator:a69bf59c61cac48f92f001408e0450381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06804602be096cd6572b0d723da55df1"><td class="memItemLeft" align="right" valign="top"><a id="a06804602be096cd6572b0d723da55df1"></a>
-enum errno_ns_flag_e&#160;</td><td class="memItemRight" valign="bottom"><b>EXEC_MALLOC_FAILED</b> = 0x0001</td></tr>
-<tr class="separator:a06804602be096cd6572b0d723da55df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8429b2fb51ce477bb4a1334fbb481bdd"><td class="memItemLeft" align="right" valign="top"><a id="a8429b2fb51ce477bb4a1334fbb481bdd"></a>
-enum errno_ns_flag_e&#160;</td><td class="memItemRight" valign="bottom"><b>EXEC_DECOMPRESSION_FAILED</b> = 0x0001</td></tr>
-<tr class="separator:a8429b2fb51ce477bb4a1334fbb481bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69c806d31fc5a92bc6c8b4dc970b4397"><td class="memItemLeft" align="right" valign="top"><a id="a69c806d31fc5a92bc6c8b4dc970b4397"></a>
-enum errno_ns_flag_e&#160;</td><td class="memItemRight" valign="bottom"><b>EXEC_MP3_PLAYER_IS_RUNNING</b> = 0x0001</td></tr>
-<tr class="separator:a69c806d31fc5a92bc6c8b4dc970b4397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Besta error code constants and functions. </p>
