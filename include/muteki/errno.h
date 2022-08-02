@@ -20,7 +20,7 @@ enum errno_ns_flag_e {
     ERRNO_NS_USER = 0x20000,
     ERRNO_NS_KERNEL = 0x40000,
     ERRNO_NS_KERNEL_OVERRIDE_DEFAULT = 0x20000000,
-}
+};
 
 enum errno_exec_e {
     EXEC_UNSUPPORTED = 0x0001,
