@@ -9,7 +9,9 @@ var searchData=
   ['_5ffindclose_6',['_findclose',['../fs_8h.html#ad652522d592b9c474449cc2be25cb767',1,'fs.h']]],
   ['_5ffread_7',['_fread',['../file_8h.html#ab24b184e9def357500c162861bd4e109',1,'file.h']]],
   ['_5ffwrite_8',['_fwrite',['../file_8h.html#a72b350dd548be38f33c80ffb5961a549',1,'file.h']]],
-  ['_5flfree_9',['_lfree',['../memory_8h.html#a8f71293c4cba373e738bcfc0721901e6',1,'memory.h']]],
-  ['_5fwfindfirst_10',['_wfindfirst',['../fs_8h.html#a7efdbf1a65ef0ceddc20d1e1f555bafa',1,'fs.h']]],
-  ['_5fwfindnext_11',['_wfindnext',['../fs_8h.html#aef5083c03b650e7ac798bbff9955b313',1,'fs.h']]]
+  ['_5fgetlasterror_9',['_GetLastError',['../errno_8h.html#a4360e0717880afcd84b032f85a7dd374',1,'errno.h']]],
+  ['_5flfree_10',['_lfree',['../memory_8h.html#a8f71293c4cba373e738bcfc0721901e6',1,'memory.h']]],
+  ['_5fsetlasterror_11',['_SetLastError',['../errno_8h.html#a4c72865ed1e0823a50184806b6b38707',1,'errno.h']]],
+  ['_5fwfindfirst_12',['_wfindfirst',['../fs_8h.html#a7efdbf1a65ef0ceddc20d1e1f555bafa',1,'fs.h']]],
+  ['_5fwfindnext_13',['_wfindnext',['../fs_8h.html#aef5083c03b650e7ac798bbff9955b313',1,'fs.h']]]
 ];
