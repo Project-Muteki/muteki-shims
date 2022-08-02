@@ -16,6 +16,12 @@ enum message_flags_e {
     FORMAT_MESSAGE_FROM_SYSTEM = 0x1000,
 };
 
+enum errno_ns_flag_e {
+    ERRNO_NS_USER = 0x20000,
+    ERRNO_NS_KERNEL = 0x40000,
+    ERRNO_NS_KERNEL_OVERRIDE_DEFAULT = 0x20000000,
+}
+
 enum errno_exec_e {
     EXEC_UNSUPPORTED = 0x0001,
     EXEC_INVALID,
@@ -26,53 +32,59 @@ enum errno_exec_e {
     EXEC_MP3_PLAYER_IS_RUNNING,
 };
 
-enum errno_general_e {
+enum errno_kernel_e {
     PERIPHERAL_COMM_FAILED = 0x0003,
     GENERAL_HW_ERROR,
-    DATA_CORRUPTED = 0x0010,
-    ECC_FAILED,
-    ECC_TRIGGERED = 0x0018,
-    INVALID_LBA = 0x0021,
+
+    FTL_DATA_CORRUPTED = 0x0010,
+    FTL_ECC_FAILED,
+    FTL_ECC_TRIGGERED = 0x0018,
+    FTL_INVALID_LBA = 0x0021,
     MEDIUM_WP_ENABLED = 0x0027,
-    MEDIUM_CHANGED = 0x0028,
+    MEDIUM_CHANGED,
     MEDIUM_INCOMPATIBLE = 0x0030,
-    MEDIUM_ERROR = 0x0031,
-    NO_MEDIUM = 0x003a,
-    STORAGE_DEVICE_NOT_FOUND = 0x0060,
-    ERASE_FAILED = 0x0061,
-    OUT_OF_MEMORY = 0x0062,
-    LOW_BATTERY = 0x0063,
-    LOCK_SWITCH_ENABLED = 0x0064,
-    
-    MEDIUM_FORMAT_PROMPT = 0x0102,
-    MEDIUM_FORMAT_UNSUPPORTED,
-    NO_SPACE,
-    FS_ERROR,
-    FS_CORRUPTED,
-    INVALID_DRIVE_LETTER = 0x0113,
-    INVALID_FILENAME = 0x0140,
-    FILE_OPERATION_ERROR,
-    FILE_EXISTS,
-    DIR_FULL,
-    NO_SUCH_ENTRY,
-    FILE_UNAVAILABLE,
-    FILE_OOB_ACCESS,
-    CONFLICTING_ATTR,
-    TOO_MANY_OPEN_FILES,
-    FILE_LOCKED,
-    FILE_ATTR_ERROR,
-    NO_SPACE_LEFT,
-    NO_SUCH_ENTRY_ALT = 0x0154,
-    READ_ONLY_FILE = 0x0158,
-    PATH_TOO_LONG = 0x0162,
-    DIR_FULL_ALT1 = 0x0165,
-    DIR_FULL_ALT2 = 0x0166,
+    MEDIUM_ERROR,
+    MEDIUM_UNLOADED = 0x003a,
+
+    SYS_STORAGE_DEVICE_NOT_FOUND = 0x0060,
+    SYS_ERASE_FAILED,
+    SYS_OUT_OF_MEMORY,
+    SYS_LOW_BATTERY,
+    SYS_LOCK_SWITCH_ENABLED,
+
+    MKFS_PROMPT = 0x0102,
+    MKFS_UNSUPPORTED,
+    MKFS_NO_SPACE_LEFT,
+    MKFS_MODE_ERROR,
+    MKFS_IO_ERROR,
+
+    FS_INVALID_DRIVE_LETTER = 0x0113,
+
+    FS_INVALID_FILENAME = 0x0140,
+    FS_OPERATION_ERROR,
+    FS_ENTRY_EXISTS,
+    FS_DIR_FULL,
+    FS_NO_SUCH_ENTRY,
+    FS_FILE_UNAVAILABLE,
+    FS_FILE_OOB_ACCESS,
+    FS_CONFLICTING_ATTR,
+    FS_TOO_MANY_OPEN_FILES,
+    FS_FILE_LOCKED,
+    FS_FILE_ATTR_ERROR,
+    FS_NO_SPACE_LEFT,
+
+    FS_NO_SUCH_ENTRY_ALT = 0x0154,
+    FS_READ_ONLY_FILE = 0x0158,
+    FS_PATH_TOO_LONG = 0x0162,
+    FS_DIR_FULL_ALT1 = 0x0165,
+    FS_DIR_FULL_ALT2,
+
     DB_CORRUPTED = 0x0200,
     DB_OPEN_FAILED,
     DB_INDEX_FULL_DELETE = 0x0203,
     DB_FULL,
     DB_INDEX_FULL_SYNC,
-    TOO_MANY_OPEN_FILES_ALT,
+    DB_TOO_MANY_OPEN_FILES,
 };
 
 /**
@@ -90,10 +102,42 @@ enum errno_general_e {
  */
 size_t FormatMessage(int32_t flags, int32_t _sbz0, int32_t _sbz1, int32_t _sbz2, void *outbuf, size_t outlen);
 
+/**
+ * @brief Set the global errno.
+ *
+ * @param err New errno value.
+ */
 void OSSetLastError(muteki_errno_t err);
+
+/**
+ * @brief Get errno value from the global errno variable.
+ *
+ * @return The current errno value.
+ */
 muteki_errno_t OSGetLastError(void);
 
+/**
+ * @brief Set errno.
+ *
+ * Unlike @p OSSetLastError, this also clears the kernel errno before calling @p OSSetLastError.
+ *
+ * If the errno namespace is unset, it will also automatically set @p ERRNO_NS_KERNEL_OVERRIDE_DEFAULT before passing it to @p OSSetLastError.
+ *
+ * Requires @p -lkrnllib when dynamically linking with the shims.
+ *
+ * @param err New errno value.
+ */
 void _SetLastError(muteki_errno_t err);
+
+/**
+ * @brief Get errno.
+ *
+ * If kernel errno is set, the errno is returned with @p ERRNO_NS_KERNEL bit set. Otherwise it will return the result from @p OSSetLastError with @p ERRNO_NS_USER bit set.
+ *
+ * Requires @p -lkrnllib when dynamically linking with the shims.
+ *
+ * @return The current errno value from either kernel or @p OSSetLastError.
+ */
 muteki_errno_t _GetLastError(void);
 
 #endif
