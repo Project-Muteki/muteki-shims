@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['datetime_5ft_109',['datetime_t',['../structdatetime__t.html',1,'']]]
+  ['critical_5fsection_5ft_114',['critical_section_t',['../structcritical__section__t.html',1,'']]]
 ];

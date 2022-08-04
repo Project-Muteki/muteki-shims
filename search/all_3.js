@@ -6,5 +6,6 @@ var searchData=
   ['closehandle_23',['CloseHandle',['../devio_8h.html#afd675a81da99d1a03d218aa08caf16a6',1,'devio.h']]],
   ['common_2eh_24',['common.h',['../common_8h.html',1,'']]],
   ['createfile_25',['CreateFile',['../devio_8h.html#a666a9814a588ce2a98895b0ae9b03929',1,'devio.h']]],
-  ['ctime_5fkey_26',['ctime_key',['../structfind__context__t.html#a610875fac7216fd0bd30277157f39e71',1,'find_context_t']]]
+  ['critical_5fsection_5ft_26',['critical_section_t',['../structcritical__section__t.html',1,'']]],
+  ['ctime_5fkey_27',['ctime_key',['../structfind__context__t.html#a610875fac7216fd0bd30277157f39e71',1,'find_context_t']]]
 ];

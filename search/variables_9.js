@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['palette_200',['palette',['../structvram__descriptor__t.html#a482d5eb9feeeb74270520d15150f34a1',1,'vram_descriptor_t']]]
+  ['palette_210',['palette',['../structvram__descriptor__t.html#a482d5eb9feeeb74270520d15150f34a1',1,'vram_descriptor_t']]]
 ];

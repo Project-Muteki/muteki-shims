@@ -66,6 +66,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -79,6 +80,11 @@ $(function() {
 </div>
 <p><a href="threading_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcritical__section__t.html">critical_section_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a6a192ac07cc5baa990ea11d151f52de5"><td class="memItemLeft" align="right" valign="top"><a id="a6a192ac07cc5baa990ea11d151f52de5"></a>
@@ -96,6 +102,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a26d3d1e3502eb1bc707254879fed211d"><td class="memItemLeft" align="right" valign="top">thread_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a26d3d1e3502eb1bc707254879fed211d">OSCreateThread</a> (thread_func_t func, int unk2, size_t stack_size, int unk4)</td></tr>
 <tr class="memdesc:a26d3d1e3502eb1bc707254879fed211d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new thread.  <a href="threading_8h.html#a26d3d1e3502eb1bc707254879fed211d">More...</a><br /></td></tr>
 <tr class="separator:a26d3d1e3502eb1bc707254879fed211d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73612b6ec4676c415bf74e23ea2b29c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a73612b6ec4676c415bf74e23ea2b29c8">OSInitCriticalSection</a> (<a class="el" href="structcritical__section__t.html">critical_section_t</a> *mutex)</td></tr>
+<tr class="memdesc:a73612b6ec4676c415bf74e23ea2b29c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a critical section (recursive mutex) context.  <a href="threading_8h.html#a73612b6ec4676c415bf74e23ea2b29c8">More...</a><br /></td></tr>
+<tr class="separator:a73612b6ec4676c415bf74e23ea2b29c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2599d951d59c95d3350112f4c629d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#adc2599d951d59c95d3350112f4c629d6">OSEnterCriticalSection</a> (<a class="el" href="structcritical__section__t.html">critical_section_t</a> *mutex)</td></tr>
+<tr class="memdesc:adc2599d951d59c95d3350112f4c629d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter/aquire a critical section (recursive mutex) context.  <a href="threading_8h.html#adc2599d951d59c95d3350112f4c629d6">More...</a><br /></td></tr>
+<tr class="separator:adc2599d951d59c95d3350112f4c629d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad04795e186d7f6a45b46850c2f472c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#afad04795e186d7f6a45b46850c2f472c">OSLeaveCriticalSection</a> (<a class="el" href="structcritical__section__t.html">critical_section_t</a> *mutex)</td></tr>
+<tr class="memdesc:afad04795e186d7f6a45b46850c2f472c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leave/release a critical section (recursive mutex) context.  <a href="threading_8h.html#afad04795e186d7f6a45b46850c2f472c">More...</a><br /></td></tr>
+<tr class="separator:afad04795e186d7f6a45b46850c2f472c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a030db07f842dadfa140db8a26904e7cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a030db07f842dadfa140db8a26904e7cd">OSDeleteCriticalSection</a> (<a class="el" href="structcritical__section__t.html">critical_section_t</a> *mutex)</td></tr>
+<tr class="memdesc:a030db07f842dadfa140db8a26904e7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a critical section (recursive mutex) context after use.  <a href="threading_8h.html#a030db07f842dadfa140db8a26904e7cd">More...</a><br /></td></tr>
+<tr class="separator:a030db07f842dadfa140db8a26904e7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Native threading API. </p>
@@ -150,6 +168,111 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The thread object. </dd></dl>
+
+</div>
+</div>
+<a id="a030db07f842dadfa140db8a26904e7cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a030db07f842dadfa140db8a26904e7cd">&#9670;&nbsp;</a></span>OSDeleteCriticalSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSDeleteCriticalSection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcritical__section__t.html">critical_section_t</a> *&#160;</td>
+          <td class="paramname"><em>mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy a critical section (recursive mutex) context after use. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mutex</td><td>The critical section/mutex context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adc2599d951d59c95d3350112f4c629d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc2599d951d59c95d3350112f4c629d6">&#9670;&nbsp;</a></span>OSEnterCriticalSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSEnterCriticalSection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcritical__section__t.html">critical_section_t</a> *&#160;</td>
+          <td class="paramname"><em>mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enter/aquire a critical section (recursive mutex) context. </p>
+<p>This will block when multiple threads are trying to enter the same context, but it will let repeated entries initiated by the same thread to pass through. The context is released when all of the entries are reverted by a <code>OSLeaveCriticalSection</code> call.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mutex</td><td>The critical section/mutex context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73612b6ec4676c415bf74e23ea2b29c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73612b6ec4676c415bf74e23ea2b29c8">&#9670;&nbsp;</a></span>OSInitCriticalSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSInitCriticalSection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcritical__section__t.html">critical_section_t</a> *&#160;</td>
+          <td class="paramname"><em>mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a critical section (recursive mutex) context. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mutex</td><td>The critical section/mutex context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afad04795e186d7f6a45b46850c2f472c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad04795e186d7f6a45b46850c2f472c">&#9670;&nbsp;</a></span>OSLeaveCriticalSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSLeaveCriticalSection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcritical__section__t.html">critical_section_t</a> *&#160;</td>
+          <td class="paramname"><em>mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Leave/release a critical section (recursive mutex) context. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mutex</td><td>The critical section/mutex context. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
