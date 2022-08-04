@@ -11,6 +11,13 @@
 typedef void (*thread_func_t)(void);
 typedef void thread_t;
 
+typedef struct {
+    int magic; // 0x00000202
+    void *reent; // 0x58 bytes, possibly related to threads
+    short refcount;
+    int unk[0xa];
+} critical_section_t; // 0x14
+
 /**
  * @brief Sleep for \p millis milliseconds.
  *
@@ -30,5 +37,35 @@ extern void OSSleep(short millis);
  * @return The thread object.
  */
 extern thread_t *OSCreateThread(thread_func_t func, int unk2, size_t stack_size, int unk4);
+
+/**
+ * @brief Initialize a critical section (recursive mutex) context.
+ *
+ * @param mutex The critical section/mutex context.
+ */
+extern void OSInitCriticalSection(critical_section_t *mutex);
+
+/**
+ * @brief Enter/aquire a critical section (recursive mutex) context.
+ *
+ * This will block when multiple threads are trying to enter the same context, but it will let repeated entries initiated by the same thread to pass through. The context is released when all of the entries are reverted by a @p OSLeaveCriticalSection call.
+ *
+ * @param mutex The critical section/mutex context.
+ */
+extern void OSEnterCriticalSection(critical_section_t *mutex);
+
+/**
+ * @brief Leave/release a critical section (recursive mutex) context.
+ *
+ * @param mutex The critical section/mutex context.
+ */
+extern void OSLeaveCriticalSection(critical_section_t *mutex);
+
+/**
+ * @brief Destroy a critical section (recursive mutex) context after use.
+ *
+ * @param mutex The critical section/mutex context.
+ */
+extern void OSDeleteCriticalSection(critical_section_t *mutex);
 
 #endif // __MUTEKI_THREADING_H__

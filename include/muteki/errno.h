@@ -100,21 +100,21 @@ enum errno_kernel_e {
  * @param outlen When not using @p FORMAT_MESSAGE_ALLOCATE_BUFFER, this is the length of the message buffer. Otherwise this is the minimum size of the buffer allocated for the message by the function.
  * @return Length of the message written, or 0 if fails.
  */
-size_t FormatMessage(int32_t flags, int32_t _sbz0, int32_t _sbz1, int32_t _sbz2, void *outbuf, size_t outlen);
+extern size_t FormatMessage(int32_t flags, int32_t _sbz0, int32_t _sbz1, int32_t _sbz2, void *outbuf, size_t outlen);
 
 /**
  * @brief Set the global errno.
  *
  * @param err New errno value.
  */
-void OSSetLastError(muteki_errno_t err);
+extern void OSSetLastError(muteki_errno_t err);
 
 /**
  * @brief Get errno value from the global errno variable.
  *
  * @return The current errno value.
  */
-muteki_errno_t OSGetLastError(void);
+extern muteki_errno_t OSGetLastError(void);
 
 /**
  * @brief Set errno.
@@ -127,7 +127,7 @@ muteki_errno_t OSGetLastError(void);
  *
  * @param err New errno value.
  */
-void _SetLastError(muteki_errno_t err);
+extern void _SetLastError(muteki_errno_t err);
 
 /**
  * @brief Get errno.
@@ -138,6 +138,6 @@ void _SetLastError(muteki_errno_t err);
  *
  * @return The current errno value from either kernel or @p OSSetLastError.
  */
-muteki_errno_t _GetLastError(void);
+extern muteki_errno_t _GetLastError(void);
 
 #endif

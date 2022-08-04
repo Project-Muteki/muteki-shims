@@ -61,6 +61,6 @@ typedef struct {
  *
  * @return The framebuffer descriptor.
  */ 
-vram_descriptor_t *GetActiveVRamAddress();
+extern vram_descriptor_t *GetActiveVRamAddress();
 
 #endif // __MUTEKI_UTILS_H__
