@@ -6,6 +6,8 @@
 #ifndef __MUTEKI_DATETIME_H__
 #define __MUTEKI_DATETIME_H__
 
+#include <muteki/common.h>
+
 /**
  * @brief The datetime struct used by GetSysTime and SetSysTime.
  */

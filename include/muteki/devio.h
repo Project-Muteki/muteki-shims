@@ -5,6 +5,9 @@
 
 #ifndef __MUTEKI_DEVIO_H__
 #define __MUTEKI_DEVIO_H__
+
+#include <muteki/common.h>
+
 /**
  * @brief Open or create a file/device by its @p pathname.
  *
