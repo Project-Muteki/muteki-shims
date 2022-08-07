@@ -19,7 +19,8 @@ enum message_flags_e {
 enum errno_ns_flag_e {
     ERRNO_NS_USER = 0x20000,
     ERRNO_NS_KERNEL = 0x40000,
-    ERRNO_NS_KERNEL_OVERRIDE_DEFAULT = 0x20000000,
+    ERRNO_NS_EXEC = 0x80000,
+    ERRNO_NS_APPLET_SPECIFIC = 0x20000000,
 };
 
 enum errno_exec_e {
@@ -30,6 +31,7 @@ enum errno_exec_e {
     EXEC_MALLOC_FAILED,
     EXEC_DECOMPRESSION_FAILED,
     EXEC_MP3_PLAYER_IS_RUNNING,
+    EXEC_UNKNOWN_FORMAT = 0x000a,
 };
 
 enum errno_kernel_e {

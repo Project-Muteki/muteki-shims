@@ -12,10 +12,11 @@ typedef void (*thread_func_t)(void);
 typedef void thread_t;
 
 typedef struct {
-    int magic; // 0x00000202
+    int32_t magic; // 0x00000202
     void *reent; // 0x58 bytes, possibly related to threads
-    short refcount;
-    int unk[0xa];
+    uint16_t refcount;
+    uint8_t unk_idx;
+    uint8_t unk[0x9];
 } critical_section_t; // 0x14
 
 /**
