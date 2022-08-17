@@ -39,9 +39,9 @@ extern void *__wfopen(const UTF16 *pathname, const UTF16 *mode);
  * @param size Size of individual data unit.
  * @param nmemb Number of data units to read.
  * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
- * @return Whether or not the operation succeeded.
+ * @return Number of data units read.
  */
-extern bool _fread(void *ptr, size_t size, size_t nmemb, void *stream);
+extern size_t _fread(void *ptr, size_t size, size_t nmemb, void *stream);
 
 /**
  * @brief Write @p nmemb data units of size @p size to a file.
@@ -52,9 +52,9 @@ extern bool _fread(void *ptr, size_t size, size_t nmemb, void *stream);
  * @param size Size of individual data unit.
  * @param nmemb Number of data units to write.
  * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
- * @return Whether or not the operation succeeded.
+ * @return Number of data units written.
  */
-extern bool _fwrite(const void *ptr, size_t size, size_t nmemb, void *stream);
+extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, void *stream);
 
 /**
  * @brief Close a file.
