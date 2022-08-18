@@ -68,6 +68,28 @@ typedef struct {
 } find_context_t;
 
 /**
+ * @brief File/directory attributes.
+ *
+ * Just the attributes in FAT32.
+ * @see https://docs.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants
+ */
+enum fs_attribute_e {
+    /** Entry is read only. */
+    ATTR_READONLY = 0x1,
+    /** Entry is hidden. */
+    ATTR_HIDDEN = 0x2,
+    /** Entry is a system file/directory. */
+    ATTR_SYSTEM = 0x4,
+    /** Entry is a directory. */
+    ATTR_DIR = 0x10,
+    /** Entry is archived. */
+    ATTR_ARCHIVE = 0x20,
+    ATTR_DEVICE = 0x40,
+    /** Entry does not have any other attribute. */
+    ATTR_NONE = 0x80,
+};
+
+/**
  * @brief Delete a file.
  *
  * @param pathname DOS 8.3 path to the file being removed.
@@ -126,5 +148,51 @@ extern short _wfindnext(find_context_t *ctx);
  * @return 0 on success.
  */
 extern int _findclose(find_context_t *ctx);
+
+/**
+ * @brief Get attributes of specific path.
+ *
+ * Similar to GetFileAttributeW() in Windows.
+ *
+ * @param path UTF-16 LFN path.
+ * @return The attribute, or -1 on error.
+ * @see fs_attribute_e
+ */
+extern short _wfgetattr(UTF16 *path);
+
+/**
+ * @brief Set attributes of specific path.
+ *
+ * Similar to SetFileAttributeW() in Windows.
+ *
+ * @param path UTF-16 LFN path.
+ * @param attrs The new attribute.
+ * @return The new attribute, or -1 on error.
+ * @see fs_attribute_e
+ */
+extern short _wfsetattr(UTF16 *path, short attrs);
+
+/**
+ * @brief Get attributes of specific path.
+ *
+ * Similar to GetFileAttributeA() in Windows.
+ *
+ * @param path DOS 8.3 path.
+ * @return The attribute, or -1 on error.
+ * @see fs_attribute_e
+ */
+extern short _afgetattr(char *path);
+
+/**
+ * @brief Set attributes of specific path.
+ *
+ * Similar to SetFileAttributeA() in Windows.
+ *
+ * @param path DOS 8.3 path.
+ * @param attrs The new attribute.
+ * @return The new attribute, or -1 on error.
+ * @see fs_attribute_e
+ */
+extern short _afsetattr(char *path, short attrs);
 
 #endif // __MUTEKI_FS_H__
