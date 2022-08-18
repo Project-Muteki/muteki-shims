@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">fs.h File Reference</div>  </div>
@@ -83,6 +84,22 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfind__context__t.html">find_context_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ace1ad2f8a5bced52258703097c71e8d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4">fs_attribute_e</a> { <br />
+&#160;&#160;<a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4a1f203c5ea7f1e20ecfcc74768344e7f3">ATTR_READONLY</a> = 0x1, 
+<a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4adba6b13cf372c3604ae08f82d1cec0cf">ATTR_HIDDEN</a> = 0x2, 
+<a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4a042322e39228b60dba114d89308f6f79">ATTR_SYSTEM</a> = 0x4, 
+<a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4abab43db981f0814ea03ff697b57d4357">ATTR_DIR</a> = 0x10, 
+<br />
+&#160;&#160;<a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4ae175dcdcbee800b5a346fc5c4365315b">ATTR_ARCHIVE</a> = 0x20, 
+<b>ATTR_DEVICE</b> = 0x40, 
+<a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4ab27212240b03ce5a23837658b63a31e7">ATTR_NONE</a> = 0x80
+<br />
+ }</td></tr>
+<tr class="memdesc:ace1ad2f8a5bced52258703097c71e8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">File/directory attributes.  <a href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4">More...</a><br /></td></tr>
+<tr class="separator:ace1ad2f8a5bced52258703097c71e8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -104,10 +121,83 @@ Functions</h2></td></tr>
 <tr class="memitem:ad652522d592b9c474449cc2be25cb767"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767">_findclose</a> (<a class="el" href="structfind__context__t.html">find_context_t</a> *ctx)</td></tr>
 <tr class="memdesc:ad652522d592b9c474449cc2be25cb767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate a file/directory search.  <a href="fs_8h.html#ad652522d592b9c474449cc2be25cb767">More...</a><br /></td></tr>
 <tr class="separator:ad652522d592b9c474449cc2be25cb767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147c31513a78bf1bd65f9d7463f1e453"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a147c31513a78bf1bd65f9d7463f1e453">_wfgetattr</a> (<a class="el" href="common_8h.html#a45a79648589fedf7ca56db3c1aabad7b">UTF16</a> *path)</td></tr>
+<tr class="memdesc:a147c31513a78bf1bd65f9d7463f1e453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get attributes of specific path.  <a href="fs_8h.html#a147c31513a78bf1bd65f9d7463f1e453">More...</a><br /></td></tr>
+<tr class="separator:a147c31513a78bf1bd65f9d7463f1e453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12752b0b708a28a1f75e57e188f5edd2"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a12752b0b708a28a1f75e57e188f5edd2">_wfsetattr</a> (<a class="el" href="common_8h.html#a45a79648589fedf7ca56db3c1aabad7b">UTF16</a> *path, short attrs)</td></tr>
+<tr class="memdesc:a12752b0b708a28a1f75e57e188f5edd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set attributes of specific path.  <a href="fs_8h.html#a12752b0b708a28a1f75e57e188f5edd2">More...</a><br /></td></tr>
+<tr class="separator:a12752b0b708a28a1f75e57e188f5edd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e77f04fc2fb88b29f4f94da9ad8ce1"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a90e77f04fc2fb88b29f4f94da9ad8ce1">_afgetattr</a> (char *path)</td></tr>
+<tr class="memdesc:a90e77f04fc2fb88b29f4f94da9ad8ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get attributes of specific path.  <a href="fs_8h.html#a90e77f04fc2fb88b29f4f94da9ad8ce1">More...</a><br /></td></tr>
+<tr class="separator:a90e77f04fc2fb88b29f4f94da9ad8ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b27424395516d5ba825f3f9715ba6bb"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a8b27424395516d5ba825f3f9715ba6bb">_afsetattr</a> (char *path, short attrs)</td></tr>
+<tr class="memdesc:a8b27424395516d5ba825f3f9715ba6bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set attributes of specific path.  <a href="fs_8h.html#a8b27424395516d5ba825f3f9715ba6bb">More...</a><br /></td></tr>
+<tr class="separator:a8b27424395516d5ba825f3f9715ba6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Filesystem access API. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ace1ad2f8a5bced52258703097c71e8d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1ad2f8a5bced52258703097c71e8d4">&#9670;&nbsp;</a></span>fs_attribute_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4">fs_attribute_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>File/directory attributes. </p>
+<p>Just the attributes in FAT32. </p><dl class="section see"><dt>See also</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants">https://docs.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants</a> </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ace1ad2f8a5bced52258703097c71e8d4a1f203c5ea7f1e20ecfcc74768344e7f3"></a>ATTR_READONLY&#160;</td><td class="fielddoc"><p>Entry is read only. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ace1ad2f8a5bced52258703097c71e8d4adba6b13cf372c3604ae08f82d1cec0cf"></a>ATTR_HIDDEN&#160;</td><td class="fielddoc"><p>Entry is hidden. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ace1ad2f8a5bced52258703097c71e8d4a042322e39228b60dba114d89308f6f79"></a>ATTR_SYSTEM&#160;</td><td class="fielddoc"><p>Entry is a system file/directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ace1ad2f8a5bced52258703097c71e8d4abab43db981f0814ea03ff697b57d4357"></a>ATTR_DIR&#160;</td><td class="fielddoc"><p>Entry is a directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ace1ad2f8a5bced52258703097c71e8d4ae175dcdcbee800b5a346fc5c4365315b"></a>ATTR_ARCHIVE&#160;</td><td class="fielddoc"><p>Entry is archived. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ace1ad2f8a5bced52258703097c71e8d4ab27212240b03ce5a23837658b63a31e7"></a>ATTR_NONE&#160;</td><td class="fielddoc"><p>Entry does not have any other attribute. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a90e77f04fc2fb88b29f4f94da9ad8ce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e77f04fc2fb88b29f4f94da9ad8ce1">&#9670;&nbsp;</a></span>_afgetattr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _afgetattr </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get attributes of specific path. </p>
+<p>Similar to GetFileAttributeA() in Windows.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>DOS 8.3 path. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The attribute, or -1 on error. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4" title="File/directory attributes.">fs_attribute_e</a> </dd></dl>
+
+</div>
+</div>
 <a id="a2a3a81be9d83a40b83476cb9d845c743"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a3a81be9d83a40b83476cb9d845c743">&#9670;&nbsp;</a></span>_afindfirst()</h2>
 
@@ -175,6 +265,46 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a8b27424395516d5ba825f3f9715ba6bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b27424395516d5ba825f3f9715ba6bb">&#9670;&nbsp;</a></span>_afsetattr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _afsetattr </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set attributes of specific path. </p>
+<p>Similar to SetFileAttributeA() in Windows.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>DOS 8.3 path. </td></tr>
+    <tr><td class="paramname">attrs</td><td>The new attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new attribute, or -1 on error. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4" title="File/directory attributes.">fs_attribute_e</a> </dd></dl>
+
+</div>
+</div>
 <a id="a28c103bca80270e96121bf61ce1194bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28c103bca80270e96121bf61ce1194bb">&#9670;&nbsp;</a></span>_aremove()</h2>
 
@@ -226,6 +356,35 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success. </dd></dl>
+
+</div>
+</div>
+<a id="a147c31513a78bf1bd65f9d7463f1e453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147c31513a78bf1bd65f9d7463f1e453">&#9670;&nbsp;</a></span>_wfgetattr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _wfgetattr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a45a79648589fedf7ca56db3c1aabad7b">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get attributes of specific path. </p>
+<p>Similar to GetFileAttributeW() in Windows.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>UTF-16 LFN path. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The attribute, or -1 on error. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4" title="File/directory attributes.">fs_attribute_e</a> </dd></dl>
 
 </div>
 </div>
@@ -294,6 +453,46 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if there is a match. -1 when no more match was found. </dd></dl>
+
+</div>
+</div>
+<a id="a12752b0b708a28a1f75e57e188f5edd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12752b0b708a28a1f75e57e188f5edd2">&#9670;&nbsp;</a></span>_wfsetattr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _wfsetattr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a45a79648589fedf7ca56db3c1aabad7b">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set attributes of specific path. </p>
+<p>Similar to SetFileAttributeW() in Windows.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>UTF-16 LFN path. </td></tr>
+    <tr><td class="paramname">attrs</td><td>The new attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new attribute, or -1 on error. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4" title="File/directory attributes.">fs_attribute_e</a> </dd></dl>
 
 </div>
 </div>
