@@ -9,7 +9,7 @@
 
 #include <muteki/common.h>
 
-typedef int32_t muteki_errno_t;
+typedef int32_t kerrno_t;
 
 enum message_flags_e {
     FORMAT_MESSAGE_ALLOCATE_BUFFER = 0x100,
@@ -17,10 +17,10 @@ enum message_flags_e {
 };
 
 enum errno_ns_flag_e {
-    ERRNO_NS_USER = 0x20000,
-    ERRNO_NS_KERNEL = 0x40000,
-    ERRNO_NS_EXEC = 0x80000,
-    ERRNO_NS_APPLET_SPECIFIC = 0x20000000,
+    ERRNO_NS_USER = 0x2,
+    ERRNO_NS_KERNEL = 0x4,
+    ERRNO_NS_EXEC = 0x8,
+    ERRNO_NS_APPLET_SPECIFIC = 0x2000,
 };
 
 enum errno_exec_e {
@@ -89,6 +89,14 @@ enum errno_kernel_e {
     DB_TOO_MANY_OPEN_FILES,
 };
 
+static inline unsigned short KERRNO_NS(kerrno_t kerrno) {
+    return kerrno >> 16;
+}
+
+static inline unsigned short KERRNO_ERR(kerrno_t kerrno) {
+    return kerrno & 0xffff;
+}
+
 /**
  * @brief Fetch an error message.
  *
@@ -109,14 +117,14 @@ extern size_t FormatMessage(int32_t flags, int32_t _sbz0, int32_t _sbz1, int32_t
  *
  * @param err New errno value.
  */
-extern void OSSetLastError(muteki_errno_t err);
+extern void OSSetLastError(kerrno_t err);
 
 /**
  * @brief Get errno value from the global errno variable.
  *
  * @return The current errno value.
  */
-extern muteki_errno_t OSGetLastError(void);
+extern kerrno_t OSGetLastError(void);
 
 /**
  * @brief Set errno.
@@ -129,7 +137,7 @@ extern muteki_errno_t OSGetLastError(void);
  *
  * @param err New errno value.
  */
-extern void _SetLastError(muteki_errno_t err);
+extern void _SetLastError(kerrno_t err);
 
 /**
  * @brief Get errno.
@@ -140,6 +148,6 @@ extern void _SetLastError(muteki_errno_t err);
  *
  * @return The current errno value from either kernel or @p OSSetLastError.
  */
-extern muteki_errno_t _GetLastError(void);
+extern kerrno_t _GetLastError(void);
 
 #endif
