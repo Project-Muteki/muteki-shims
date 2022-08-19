@@ -66,7 +66,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">common.h File Reference</div>  </div>
 </div><!--header-->
@@ -80,29 +80,33 @@ $(function() {
 </div>
 <p><a href="common_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a45a79648589fedf7ca56db3c1aabad7b"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a45a79648589fedf7ca56db3c1aabad7b">UTF16</a></td></tr>
-<tr class="memdesc:a45a79648589fedf7ca56db3c1aabad7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Portable" UTF-16 type used by other headers.  <a href="common_8h.html#a45a79648589fedf7ca56db3c1aabad7b">More...</a><br /></td></tr>
-<tr class="separator:a45a79648589fedf7ca56db3c1aabad7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a11673b324737202065319b55ec126bec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a>&#160;&#160;&#160;__BESTA_UTF_TYPE</td></tr>
+<tr class="memdesc:a11673b324737202065319b55ec126bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Portable" Besta UTF-16 type used by other headers.  <a href="common_8h.html#a11673b324737202065319b55ec126bec">More...</a><br /></td></tr>
+<tr class="separator:a11673b324737202065319b55ec126bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2319b35fdcf33e9544b53a14371156"><td class="memItemLeft" align="right" valign="top"><a id="a1f2319b35fdcf33e9544b53a14371156"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(x)&#160;&#160;&#160;__BESTA_UTF_LITERAL(x)</td></tr>
+<tr class="memdesc:a1f2319b35fdcf33e9544b53a14371156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Besta UTF-16 string literal. <br /></td></tr>
+<tr class="separator:a1f2319b35fdcf33e9544b53a14371156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common include file for all muteki-shims headers. </p>
 <p>Includes several headers that provide standard C features used by each header (e.g. stdint for ?int*_t and stdbool for bool type). </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a45a79648589fedf7ca56db3c1aabad7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45a79648589fedf7ca56db3c1aabad7b">&#9670;&nbsp;</a></span>UTF16</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a11673b324737202065319b55ec126bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11673b324737202065319b55ec126bec">&#9670;&nbsp;</a></span>UTF16</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef uint16_t <a class="el" href="common_8h.html#a45a79648589fedf7ca56db3c1aabad7b">UTF16</a></td>
+          <td class="memname">#define UTF16&#160;&#160;&#160;__BESTA_UTF_TYPE</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>"Portable" UTF-16 type used by other headers. </p>
+<p>"Portable" Besta UTF-16 type used by other headers. </p>
 <p>This is guaranteed to be 16-bit wide, unlike wchar_t (normally 32-bit wide) or char16_t (new C11 addition, can be &gt;16-bit depending on the toolchain). </p>
 
 </div>
