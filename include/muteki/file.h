@@ -8,6 +8,12 @@
 
 #include <muteki/common.h>
 
+enum sys_seek_whence_e {
+    _SYS_SEEK_SET = 0,
+    _SYS_SEEK_CUR,
+    _SYS_SEEK_END,
+};
+
 /**
  * @brief Open a file located at @p pathname.
  *
@@ -55,6 +61,38 @@ extern size_t _fread(void *ptr, size_t size, size_t nmemb, void *stream);
  * @return Number of data units written.
  */
 extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, void *stream);
+
+/**
+ * @brief Seek to a specific position in an opened file.
+ *
+ * Analogous to the fseek() function in POSIX.
+ *
+ * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @param offset Seek offset.
+ * @param whence Treat offset as relative to start of file/current offset/end of file.
+ * @return 0 when successful, -1 when there's an error.
+ */
+extern int __fseek(void *stream, long offset, int whence);
+
+/**
+ * @brief Return the current position of the file.
+ *
+ * Analogous to the ftell() function in POSIX.
+ *
+ * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @return Current position when successful, -1 when there's an error.
+ */
+extern long _ftell(void *stream);
+
+/**
+ * @brief Flush the cached writes to the file.
+ *
+ * Analogous to the fflush() function in POSIX.
+ *
+ * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @return 0 when successful, -1 when there's an error.
+ */
+extern int __fflush(void *stream);
 
 /**
  * @brief Close a file.
