@@ -12,12 +12,16 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-// This only supports GCC and LLVM at the moment.
+// This only supports GCC, LLVM and probably also MSVC at the moment.
 #if defined(__CHAR16_TYPE__) && (__CHAR16_MAX__ < 0x10000)
 typedef __CHAR16_TYPE__ __BESTA_UTF_TYPE;
 #define __BESTA_UTF_LITERAL(x) (u ## x)
 #elif defined(__WCHAR_TYPE__) && (__WCHAR_MAX__ < 0x10000)
 typedef __WCHAR_TYPE__ __BESTA_UTF_TYPE;
+#define __BESTA_UTF_LITERAL(x) (L ## x)
+#elif defined(_MSC_VER) && _MSC_VER > 0
+#include <wchar.h>
+typedef wchar_t __BESTA_UTF_TYPE;
 #define __BESTA_UTF_LITERAL(x) (L ## x)
 #else
 #error "Compiler does not support any 2 bytes wide string literal."
@@ -32,6 +36,8 @@ typedef __WCHAR_TYPE__ __BESTA_UTF_TYPE;
 
 /**
  * @brief Besta UTF-16 string literal.
+ *
+ * This will map to either u string or L string depending on availability of <b>compiler support</b> for char16_t and wchar_t's size.
  */
 #define _BUL(x) __BESTA_UTF_LITERAL(x)
 
