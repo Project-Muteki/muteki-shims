@@ -106,6 +106,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a28c103bca80270e96121bf61ce1194bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a28c103bca80270e96121bf61ce1194bb">_aremove</a> (const char *pathname)</td></tr>
 <tr class="memdesc:a28c103bca80270e96121bf61ce1194bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a file.  <a href="fs_8h.html#a28c103bca80270e96121bf61ce1194bb">More...</a><br /></td></tr>
 <tr class="separator:a28c103bca80270e96121bf61ce1194bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2183b80d4564f97ce33d040f5213c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a2c2183b80d4564f97ce33d040f5213c6">_wremove</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname)</td></tr>
+<tr class="memdesc:a2c2183b80d4564f97ce33d040f5213c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a file.  <a href="fs_8h.html#a2c2183b80d4564f97ce33d040f5213c6">More...</a><br /></td></tr>
+<tr class="separator:a2c2183b80d4564f97ce33d040f5213c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a3a81be9d83a40b83476cb9d845c743"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a2a3a81be9d83a40b83476cb9d845c743">_afindfirst</a> (const char *fnmatch, <a class="el" href="structfind__context__t.html">find_context_t</a> *ctx)</td></tr>
 <tr class="memdesc:a2a3a81be9d83a40b83476cb9d845c743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin a file/directory search.  <a href="fs_8h.html#a2a3a81be9d83a40b83476cb9d845c743">More...</a><br /></td></tr>
 <tr class="separator:a2a3a81be9d83a40b83476cb9d845c743"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -493,6 +496,33 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new attribute, or -1 on error. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4" title="File/directory attributes.">fs_attribute_e</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2c2183b80d4564f97ce33d040f5213c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2183b80d4564f97ce33d040f5213c6">&#9670;&nbsp;</a></span>_wremove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool _wremove </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>pathname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathname</td><td>UTF-16 LFN path to the file being removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the operation was successful. </dd></dl>
 
 </div>
 </div>
