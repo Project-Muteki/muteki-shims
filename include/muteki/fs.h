@@ -103,7 +103,7 @@ extern bool _aremove(const char *pathname);
  * @param pathname UTF-16 LFN path to the file being removed.
  * @return Whether or not the operation was successful.
  */
-extern bool _wremove(const UTF16 *pathname);
+extern bool __wremove(const UTF16 *pathname);
 
 /**
  * @brief Begin a file/directory search.
