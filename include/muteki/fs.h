@@ -41,15 +41,15 @@ typedef struct {
      */
     unsigned short mtime_key; // 0x1a
     /**
-     * @brief Create datestamp in FAT datestamp format.
+     * @brief Create/birth datestamp in FAT datestamp format.
      * @see fat_mdate
      */
-    unsigned short fat_cdate; // 0x1c
+    unsigned short fat_bdate; // 0x1c
     /**
-     * @brief Might be a sorting key based on ctime.
+     * @brief Might be a sorting key based on btime.
      * @see mtime_key
      */
-    unsigned short ctime_key; // 0x1e
+    unsigned short btime_key; // 0x1e
     /**
      * @brief Access datestamp in FAT datestamp format.
      * @see fat_mdate
