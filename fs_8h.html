@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -84,6 +85,33 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfind__context__t.html">find_context_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2c2cfbb03e319776b36d0b1169a83f54"><td class="memItemLeft" align="right" valign="top"><a id="a2c2cfbb03e319776b36d0b1169a83f54"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a2c2cfbb03e319776b36d0b1169a83f54">FIND_TS_YEAR</a>(ts)&#160;&#160;&#160;((ts &gt;&gt; 25) + 1980)</td></tr>
+<tr class="memdesc:a2c2cfbb03e319776b36d0b1169a83f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read year from find timestamp. <br /></td></tr>
+<tr class="separator:a2c2cfbb03e319776b36d0b1169a83f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a970833b60ebeda6c9791c8167546e8"><td class="memItemLeft" align="right" valign="top"><a id="a6a970833b60ebeda6c9791c8167546e8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a6a970833b60ebeda6c9791c8167546e8">FIND_TS_MONTH</a>(ts)&#160;&#160;&#160;((ts &gt;&gt; 21) &amp; 0xf)</td></tr>
+<tr class="memdesc:a6a970833b60ebeda6c9791c8167546e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read month from find timestamp. <br /></td></tr>
+<tr class="separator:a6a970833b60ebeda6c9791c8167546e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a14a0c1912146f7750a367521a9ca72"><td class="memItemLeft" align="right" valign="top"><a id="a0a14a0c1912146f7750a367521a9ca72"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a0a14a0c1912146f7750a367521a9ca72">FIND_TS_DAY</a>(ts)&#160;&#160;&#160;((ts &gt;&gt; 16) &amp; 0x1f)</td></tr>
+<tr class="memdesc:a0a14a0c1912146f7750a367521a9ca72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read day from find timestamp. <br /></td></tr>
+<tr class="separator:a0a14a0c1912146f7750a367521a9ca72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a116f2aa0a82a027d75019085986cd"><td class="memItemLeft" align="right" valign="top"><a id="a79a116f2aa0a82a027d75019085986cd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a79a116f2aa0a82a027d75019085986cd">FIND_TS_HOUR</a>(ts)&#160;&#160;&#160;((ts &gt;&gt; 11) &amp; 0x1f)</td></tr>
+<tr class="memdesc:a79a116f2aa0a82a027d75019085986cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read hour from find timestamp. <br /></td></tr>
+<tr class="separator:a79a116f2aa0a82a027d75019085986cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23d085a5b7bd67057e0d35fd61d17c1b"><td class="memItemLeft" align="right" valign="top"><a id="a23d085a5b7bd67057e0d35fd61d17c1b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a23d085a5b7bd67057e0d35fd61d17c1b">FIND_TS_MINUTE</a>(ts)&#160;&#160;&#160;((ts &gt;&gt; 5) &amp; 0x3f)</td></tr>
+<tr class="memdesc:a23d085a5b7bd67057e0d35fd61d17c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read minute from find timestamp. <br /></td></tr>
+<tr class="separator:a23d085a5b7bd67057e0d35fd61d17c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a214672671b2f6a1bca9481f25b07b65a"><td class="memItemLeft" align="right" valign="top"><a id="a214672671b2f6a1bca9481f25b07b65a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a214672671b2f6a1bca9481f25b07b65a">FIND_TS_SECOND</a>(ts)&#160;&#160;&#160;((ts &amp; 0xf) * 4)</td></tr>
+<tr class="memdesc:a214672671b2f6a1bca9481f25b07b65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read second from find timestamp. <br /></td></tr>
+<tr class="separator:a214672671b2f6a1bca9481f25b07b65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
