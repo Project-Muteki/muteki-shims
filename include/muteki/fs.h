@@ -98,6 +98,14 @@ enum fs_attribute_e {
 extern bool _aremove(const char *pathname);
 
 /**
+ * @brief Delete a file.
+ *
+ * @param pathname UTF-16 LFN path to the file being removed.
+ * @return Whether or not the operation was successful.
+ */
+extern bool _wremove(const UTF16 *pathname);
+
+/**
  * @brief Begin a file/directory search.
  *
  * Matches the first file/directory based on fnmatch pattern @p fnmatch. Saves context at @p ctx, which can be used later with @p _afindnext and @p _findclose.
