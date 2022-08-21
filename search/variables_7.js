@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['key_5fcode0_228',['key_code0',['../structui__event__t.html#a02411c9ca81b9c41c59921674836cb30',1,'ui_event_t']]],
-  ['key_5fcode1_229',['key_code1',['../structui__event__t.html#a51b48a48839bd67d596cd24780e5fd20',1,'ui_event_t']]]
+  ['magic_230',['magic',['../structvram__descriptor__t.html#a5520d0482b26fbebffdf32e4da0fbcad',1,'vram_descriptor_t']]],
+  ['millis_231',['millis',['../structdatetime__t.html#a0835307538b39b1b9b8d0cb86d1ec366',1,'datetime_t']]],
+  ['minute_232',['minute',['../structdatetime__t.html#a83983f81b68d05438751579020fa0982',1,'datetime_t']]],
+  ['month_233',['month',['../structdatetime__t.html#a5d2ac4cfe4155d71e613dc9a6c8b0ece',1,'datetime_t']]],
+  ['mtime_5fkey_234',['mtime_key',['../structfind__context__t.html#a664c0501bac2491c1e44f162758674f2',1,'find_context_t']]]
 ];

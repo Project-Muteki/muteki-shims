@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['unk_238',['unk',['../structvram__descriptor__t.html#aa344b7276f564cdf66915f1c41c99ade',1,'vram_descriptor_t']]],
-  ['unk0_239',['unk0',['../structui__event__t.html#a9e9e52b6d4cc42417738d7fdf8ae13f8',1,'ui_event_t']]],
-  ['unk16_240',['unk16',['../structui__event__t.html#a855a075d199dafd41a8224a45057573f',1,'ui_event_t']]],
-  ['unk20_241',['unk20',['../structui__event__t.html#a54f924d5ee83def24cfba17853fd1ea9',1,'ui_event_t']]],
-  ['usb_5fdata_242',['usb_data',['../structui__event__t.html#a6000b75d1c3e06a203b823ae4a735fab',1,'ui_event_t']]]
+  ['weekday_243',['weekday',['../structdatetime__t.html#a65486e7763660a3e2787b334f941c1ae',1,'datetime_t']]],
+  ['width_244',['width',['../structvram__descriptor__t.html#a1a62980f1a1ed74e28f76aba3f552c6b',1,'vram_descriptor_t']]]
 ];

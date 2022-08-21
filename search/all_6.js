@@ -1,7 +1,7 @@
 var searchData=
 [
   ['fat_5fadate_53',['fat_adate',['../structfind__context__t.html#ae9fa8cb17325f1adf57d4cea634ea70a',1,'find_context_t']]],
-  ['fat_5fcdate_54',['fat_cdate',['../structfind__context__t.html#a5561086913e6247b4fa1f27b14e40888',1,'find_context_t']]],
+  ['fat_5fbdate_54',['fat_bdate',['../structfind__context__t.html#a21d9174b3ac2631f336de67e69f02a05',1,'find_context_t']]],
   ['fat_5fmdate_55',['fat_mdate',['../structfind__context__t.html#ac671232a93b2ade9413842449630d6dc',1,'find_context_t']]],
   ['file_2eh_56',['file.h',['../file_8h.html',1,'']]],
   ['filename_57',['filename',['../structfind__context__t.html#a920e9dfaeb3ee32ddf69f9ac4de9a4d5',1,'find_context_t']]],
