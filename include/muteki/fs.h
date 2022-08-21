@@ -29,43 +29,58 @@ typedef struct {
      */
     size_t size; // 0x14
     /**
-     * @brief Modify datestamp in FAT datestamp format.
-     *
-     * See https://en.wikipedia.org/wiki/Design_of_the_FAT_file_system#DIR_OFS_10h for the exact format.
+     * @brief Modify timestamp.
+     * @see FIND_TS_YEAR
+     * @see FIND_TS_MONTH
+     * @see FIND_TS_DAY
+     * @see FIND_TS_HOUR
+     * @see FIND_TS_MINUTE
+     * @see FIND_TS_SECOND
      */
-    unsigned short fat_mdate; // 0x18
+    unsigned int mtime; // 0x18
     /**
-     * @brief Might be a sorting key based on mtime.
-     *
-     * Seems to be based on the actual timestamp with precision down to 4 seconds. However there are bit flips that don't make sense. Therefore recovering the exact timestamp might not be possible.
+     * @brief Create/birth timestamp.
+     * The format of this field seems to be similar to mtime, but seems to be corrupted somehow.
+     * @see mtime
      */
-    unsigned short mtime_key; // 0x1a
+    unsigned int btime; // 0x1c
     /**
-     * @brief Create/birth datestamp in FAT datestamp format.
-     * @see fat_mdate
+     * @brief Access timestamp.
+     * @see mtime
      */
-    unsigned short fat_bdate; // 0x1c
-    /**
-     * @brief Might be a sorting key based on btime.
-     * @see mtime_key
-     */
-    unsigned short btime_key; // 0x1e
-    /**
-     * @brief Access datestamp in FAT datestamp format.
-     * @see fat_mdate
-     */
-    unsigned short fat_adate; // 0x20
-    /**
-     * @brief Might be a sorting key based on atime.
-     * @see mtime_key
-     */
-    unsigned short atime_key; // 0x22
+    unsigned int atime; // 0x20
     uint8_t unk36; // 0x24
     /**
      * @brief FAT filesystem file attributes.
      */
     uint8_t attrib; // 0x25
 } find_context_t;
+
+/**
+ * @brief Read year from find timestamp.
+ */
+#define FIND_TS_YEAR(ts) ((ts >> 25) + 1980)
+/**
+ * @brief Read month from find timestamp.
+ */
+#define FIND_TS_MONTH(ts) ((ts >> 21) & 0xf)
+/**
+ * @brief Read day from find timestamp.
+ */
+#define FIND_TS_DAY(ts) ((ts >> 16) & 0x1f)
+
+/**
+ * @brief Read hour from find timestamp.
+ */
+#define FIND_TS_HOUR(ts) ((ts >> 11) & 0x1f)
+/**
+ * @brief Read minute from find timestamp.
+ */
+#define FIND_TS_MINUTE(ts) ((ts >> 5) & 0x3f)
+/**
+ * @brief Read second from find timestamp.
+ */
+#define FIND_TS_SECOND(ts) ((ts & 0xf) * 4)
 
 /**
  * @brief File/directory attributes.
