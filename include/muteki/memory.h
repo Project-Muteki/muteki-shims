@@ -1,3 +1,8 @@
+/*
+ * Copyright 2021-present dogtopus
+ * SPDX-License-Identifier: MIT
+ */
+
 /**
  * @file memory.h
  * @brief Memory management API.

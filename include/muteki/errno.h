@@ -1,3 +1,8 @@
+/*
+ * Copyright 2021-present dogtopus
+ * SPDX-License-Identifier: MIT
+ */
+
 /**
  * @file errno.h
  * @brief Besta error code constants and functions.

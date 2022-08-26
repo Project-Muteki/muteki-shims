@@ -1,3 +1,8 @@
+/*
+ * Copyright 2021-present dogtopus
+ * SPDX-License-Identifier: MIT
+ */
+
 /**
  * @file file.h
  * @brief Low-level and built-in high-level file operation API.

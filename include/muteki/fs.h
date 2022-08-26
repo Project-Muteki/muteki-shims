@@ -1,3 +1,8 @@
+/*
+ * Copyright 2021-present dogtopus
+ * SPDX-License-Identifier: MIT
+ */
+
 /**
  * @file fs.h
  * @brief Filesystem access API.

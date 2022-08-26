@@ -1,3 +1,8 @@
+/*
+ * Copyright 2021-present dogtopus
+ * SPDX-License-Identifier: MIT
+ */
+
 /**
  * @file common.h
  * @brief Common include file for all muteki-shims headers.

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright 2021-present dogtopus
+# SPDX-License-Identifier: MIT
 
 import argparse
 import json
