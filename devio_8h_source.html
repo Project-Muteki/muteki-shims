@@ -69,19 +69,23 @@ $(function() {
 <div class="title">devio.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="devio_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __MUTEKI_DEVIO_H__</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __MUTEKI_DEVIO_H__</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="common_8h.html">muteki/common.h</a>&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> *<a class="code" href="devio_8h.html#a666a9814a588ce2a98895b0ae9b03929">CreateFile</a>(<span class="keywordtype">char</span> *pathname, <span class="keywordtype">int</span> access, <span class="keywordtype">int</span> shmode, <span class="keywordtype">void</span> *secattr, <span class="keywordtype">int</span> on_noentry, <span class="keywordtype">int</span> flags, <span class="keywordtype">void</span> *template_file);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="devio_8h.html#afd675a81da99d1a03d218aa08caf16a6">CloseHandle</a>(<span class="keywordtype">void</span> *h);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b">DeviceIoControl</a>(<span class="keywordtype">void</span> *h, <span class="keywordtype">int</span> request, <span class="keyword">const</span> <span class="keywordtype">void</span> *in, <span class="keywordtype">int</span> inlen, <span class="keywordtype">void</span> *out, <span class="keywordtype">int</span> outlen, <span class="keywordtype">int</span> *retlen, <span class="keywordtype">void</span> *overlapped);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // __MUTEKI_DEVIO_H__</span></div>
+<a href="devio_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2021-present dogtopus</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * SPDX-License-Identifier: MIT</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef __MUTEKI_DEVIO_H__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define __MUTEKI_DEVIO_H__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="common_8h.html">muteki/common.h</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> *<a class="code" href="devio_8h.html#a666a9814a588ce2a98895b0ae9b03929">CreateFile</a>(<span class="keywordtype">char</span> *pathname, <span class="keywordtype">int</span> access, <span class="keywordtype">int</span> shmode, <span class="keywordtype">void</span> *secattr, <span class="keywordtype">int</span> on_noentry, <span class="keywordtype">int</span> flags, <span class="keywordtype">void</span> *template_file);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="devio_8h.html#afd675a81da99d1a03d218aa08caf16a6">CloseHandle</a>(<span class="keywordtype">void</span> *h);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code" href="devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b">DeviceIoControl</a>(<span class="keywordtype">void</span> *h, <span class="keywordtype">int</span> request, <span class="keyword">const</span> <span class="keywordtype">void</span> *in, <span class="keywordtype">int</span> inlen, <span class="keywordtype">void</span> *out, <span class="keywordtype">int</span> outlen, <span class="keywordtype">int</span> *retlen, <span class="keywordtype">void</span> *overlapped);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // __MUTEKI_DEVIO_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="adevio_8h_html_a681a3c6f9e35869e66a83b5a4dab284b"><div class="ttname"><a href="devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b">DeviceIoControl</a></div><div class="ttdeci">bool DeviceIoControl(void *h, int request, const void *in, int inlen, void *out, int outlen, int *retlen, void *overlapped)</div><div class="ttdoc">Send an IOCTL request to a device handle h.</div></div>
 <div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div><div class="ttdoc">Common include file for all muteki-shims headers.</div></div>

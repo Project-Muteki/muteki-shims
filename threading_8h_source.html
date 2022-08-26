@@ -69,42 +69,46 @@ $(function() {
 <div class="title">threading.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="threading_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __MUTEKI_THREADING_H__</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __MUTEKI_THREADING_H__</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="common_8h.html">muteki/common.h</a>&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">typedef</span> void (*thread_func_t)(void);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> thread_t;</div>
+<a href="threading_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2021-present dogtopus</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * SPDX-License-Identifier: MIT</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef __MUTEKI_THREADING_H__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define __MUTEKI_THREADING_H__</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structcritical__section__t.html">   14</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    int32_t magic; <span class="comment">// 0x00000202</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> *reent; <span class="comment">// 0x58 bytes, possibly related to threads</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    uint16_t refcount;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    uint8_t unk_idx;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    uint8_t unk[0x9];</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} <a class="code" href="structcritical__section__t.html">critical_section_t</a>; <span class="comment">// 0x14</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573">OSSleep</a>(<span class="keywordtype">short</span> millis);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">extern</span> thread_t *<a class="code" href="threading_8h.html#a26d3d1e3502eb1bc707254879fed211d">OSCreateThread</a>(thread_func_t func, <span class="keywordtype">int</span> unk2, <span class="keywordtype">size_t</span> stack_size, <span class="keywordtype">int</span> unk4);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#a73612b6ec4676c415bf74e23ea2b29c8">OSInitCriticalSection</a>(<a class="code" href="structcritical__section__t.html">critical_section_t</a> *mutex);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#adc2599d951d59c95d3350112f4c629d6">OSEnterCriticalSection</a>(<a class="code" href="structcritical__section__t.html">critical_section_t</a> *mutex);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#afad04795e186d7f6a45b46850c2f472c">OSLeaveCriticalSection</a>(<a class="code" href="structcritical__section__t.html">critical_section_t</a> *mutex);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#a030db07f842dadfa140db8a26904e7cd">OSDeleteCriticalSection</a>(<a class="code" href="structcritical__section__t.html">critical_section_t</a> *mutex);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // __MUTEKI_THREADING_H__</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="common_8h.html">muteki/common.h</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> void (*thread_func_t)(void);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> thread_t;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structcritical__section__t.html">   19</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    int32_t magic; <span class="comment">// 0x00000202</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> *reent; <span class="comment">// 0x58 bytes, possibly related to threads</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    uint16_t refcount;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    uint8_t unk_idx;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    uint8_t unk[0x9];</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;} <a class="code" href="structcritical__section__t.html">critical_section_t</a>; <span class="comment">// 0x14</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573">OSSleep</a>(<span class="keywordtype">short</span> millis);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">extern</span> thread_t *<a class="code" href="threading_8h.html#a26d3d1e3502eb1bc707254879fed211d">OSCreateThread</a>(thread_func_t func, <span class="keywordtype">int</span> unk2, <span class="keywordtype">size_t</span> stack_size, <span class="keywordtype">int</span> unk4);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#a73612b6ec4676c415bf74e23ea2b29c8">OSInitCriticalSection</a>(<a class="code" href="structcritical__section__t.html">critical_section_t</a> *mutex);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#adc2599d951d59c95d3350112f4c629d6">OSEnterCriticalSection</a>(<a class="code" href="structcritical__section__t.html">critical_section_t</a> *mutex);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#afad04795e186d7f6a45b46850c2f472c">OSLeaveCriticalSection</a>(<a class="code" href="structcritical__section__t.html">critical_section_t</a> *mutex);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="threading_8h.html#a030db07f842dadfa140db8a26904e7cd">OSDeleteCriticalSection</a>(<a class="code" href="structcritical__section__t.html">critical_section_t</a> *mutex);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif // __MUTEKI_THREADING_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="athreading_8h_html_adc2599d951d59c95d3350112f4c629d6"><div class="ttname"><a href="threading_8h.html#adc2599d951d59c95d3350112f4c629d6">OSEnterCriticalSection</a></div><div class="ttdeci">void OSEnterCriticalSection(critical_section_t *mutex)</div><div class="ttdoc">Enter/aquire a critical section (recursive mutex) context.</div></div>
 <div class="ttc" id="athreading_8h_html_a030db07f842dadfa140db8a26904e7cd"><div class="ttname"><a href="threading_8h.html#a030db07f842dadfa140db8a26904e7cd">OSDeleteCriticalSection</a></div><div class="ttdeci">void OSDeleteCriticalSection(critical_section_t *mutex)</div><div class="ttdoc">Destroy a critical section (recursive mutex) context after use.</div></div>
 <div class="ttc" id="athreading_8h_html_aa6ebd195673c9f5c88b2c58bc5ee3573"><div class="ttname"><a href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573">OSSleep</a></div><div class="ttdeci">void OSSleep(short millis)</div><div class="ttdoc">Sleep for millis milliseconds.</div></div>
 <div class="ttc" id="athreading_8h_html_a73612b6ec4676c415bf74e23ea2b29c8"><div class="ttname"><a href="threading_8h.html#a73612b6ec4676c415bf74e23ea2b29c8">OSInitCriticalSection</a></div><div class="ttdeci">void OSInitCriticalSection(critical_section_t *mutex)</div><div class="ttdoc">Initialize a critical section (recursive mutex) context.</div></div>
-<div class="ttc" id="astructcritical__section__t_html"><div class="ttname"><a href="structcritical__section__t.html">critical_section_t</a></div><div class="ttdef"><b>Definition:</b> threading.h:14</div></div>
+<div class="ttc" id="astructcritical__section__t_html"><div class="ttname"><a href="structcritical__section__t.html">critical_section_t</a></div><div class="ttdef"><b>Definition:</b> threading.h:19</div></div>
 <div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div><div class="ttdoc">Common include file for all muteki-shims headers.</div></div>
 <div class="ttc" id="athreading_8h_html_a26d3d1e3502eb1bc707254879fed211d"><div class="ttname"><a href="threading_8h.html#a26d3d1e3502eb1bc707254879fed211d">OSCreateThread</a></div><div class="ttdeci">thread_t * OSCreateThread(thread_func_t func, int unk2, size_t stack_size, int unk4)</div><div class="ttdoc">Create a new thread.</div></div>
 <div class="ttc" id="athreading_8h_html_afad04795e186d7f6a45b46850c2f472c"><div class="ttname"><a href="threading_8h.html#afad04795e186d7f6a45b46850c2f472c">OSLeaveCriticalSection</a></div><div class="ttdeci">void OSLeaveCriticalSection(critical_section_t *mutex)</div><div class="ttdoc">Leave/release a critical section (recursive mutex) context.</div></div>
