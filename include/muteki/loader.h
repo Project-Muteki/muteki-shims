@@ -12,16 +12,32 @@
  * Defines the default subroutine identifiers to be used with @a ExecuteProgram.
  * @see ExecuteProgram
  */
-enum app_subroutine_e {
+enum applet_subroutine_e {
     /**
      * Run the main subroutine.
      */
-    APP_SUBROUTINE_MAIN = 0,
+    APPLET_SUBROUTINE_MAIN = 0,
     /**
-     * Run a subroutine that clears the persistent states of the app.
+     * Run a subroutine that clears the persistent states of the applet.
      */
-    APP_SUBROUTINE_RESET_STATES = 5,
+    APPLET_SUBROUTINE_RESET_STATES = 5,
 };
+
+/**
+ * @brief Applet argument passing V4 struct.
+ * Mirrors the parameter set by the parent ExecuteProgram() call.
+ * @see ExecuteProgram
+ */
+typedef struct {
+    /** DOS 8.3 path to executable. */
+    char *dospath;
+    /** Subroutine to invoke. */
+    int *subroutine;
+    /** User argument 1. */
+    void **applet_arg1;
+    /** User argument 2. */
+    void **applet_arg2;
+} applet_args_v4_t;
 
 /**
  * @brief Load an app executable.
@@ -34,7 +50,7 @@ enum app_subroutine_e {
 extern void *LoadProgramA(const char *pathname);
 
 /**
- * @brief Load an app executable. (UTF-16 variant)
+ * @brief Load an applet executable. (UTF-16 variant)
  *
  * The @p pathname specified must be a DOS 8.3 name.
  *
@@ -45,25 +61,25 @@ extern void *LoadProgramA(const char *pathname);
 extern void *LoadProgramW(const UTF16 *pathname);
 
 /**
- * @brief Invoke a specific subroutine of the loaded app with arguments.
+ * @brief Invoke a specific subroutine of the loaded applet with arguments.
  *
- * Once called, the control is fully transfered to the loaded app and this function will block until the invoked subroutine fully exits.
+ * Once called, the control is fully transferred to the loaded applet and this function will block until the invoked subroutine fully exits.
  *
- * Actual format of arguments seem to be app-specific.
+ * Actual format of arguments seem to be applet-specific.
  *
  * @param prog The loaded executable description returned by LoadProgramA or LoadProgramW.
- * @param invoke_subroutine Subroutine to invoke.
- * @param app_arg1 Argument 1. Can either be a pointer to some data or an integer.
- * @param app_arg2 Argument 2. Can either be a pointer to some data or an integer.
+ * @param subroutine Subroutine to invoke.
+ * @param applet_arg1 Argument 1. Can either be a pointer to some data or an integer.
+ * @param applet_arg2 Argument 2. Can either be a pointer to some data or an integer.
  * @return The return value of the subroutine
  * @see LoadProgramA
  * @see LoadProgramW
  * 
  */
-extern int ExecuteProgram(void *prog, int invoke_subroutine, const void *app_arg1, const void *app_arg2);
+extern int ExecuteProgram(void *prog, int subroutine, const void *applet_arg1, const void *applet_arg2);
 
 /**
- * @brief Unload a loaded app.
+ * @brief Unload a loaded applet.
  *
  * @param prog The loaded executable description returned by LoadProgramA or LoadProgramW.
  * @see LoadProgramA
