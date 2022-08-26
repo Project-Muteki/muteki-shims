@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['weekday_129',['weekday',['../structdatetime__t.html#a65486e7763660a3e2787b334f941c1ae',1,'datetime_t']]],
-  ['width_130',['width',['../structvram__descriptor__t.html#a1a62980f1a1ed74e28f76aba3f552c6b',1,'vram_descriptor_t']]],
-  ['writechar_131',['WriteChar',['../canvas_8h.html#a29721495a341c1aec1cec64333d59f51',1,'canvas.h']]],
-  ['writestring_132',['WriteString',['../canvas_8h.html#a9594c405b36da04349925bd88810c240',1,'canvas.h']]]
+  ['weekday_134',['weekday',['../structdatetime__t.html#a65486e7763660a3e2787b334f941c1ae',1,'datetime_t']]],
+  ['width_135',['width',['../structvram__descriptor__t.html#a1a62980f1a1ed74e28f76aba3f552c6b',1,'vram_descriptor_t']]],
+  ['writechar_136',['WriteChar',['../canvas_8h.html#a29721495a341c1aec1cec64333d59f51',1,'canvas.h']]],
+  ['writestring_137',['WriteString',['../canvas_8h.html#a9594c405b36da04349925bd88810c240',1,'canvas.h']]]
 ];
