@@ -136,7 +136,7 @@ extern kerrno_t OSGetLastError(void);
  *
  * Unlike @p OSSetLastError, this also clears the kernel errno before calling @p OSSetLastError.
  *
- * If the errno namespace is unset, it will also automatically set @p ERRNO_NS_KERNEL_OVERRIDE_DEFAULT before passing it to @p OSSetLastError.
+ * If the errno namespace is unset, it will also automatically set @p ERRNO_NS_APPLET_SPECIFIC before passing it to @p OSSetLastError.
  *
  * Requires @p -lkrnllib when dynamically linking with the shims.
  *
