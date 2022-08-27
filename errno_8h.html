@@ -234,7 +234,7 @@ Functions</h2></td></tr>
 
 <p>Set errno. </p>
 <p>Unlike <code>OSSetLastError</code>, this also clears the kernel errno before calling <code>OSSetLastError</code>.</p>
-<p>If the errno namespace is unset, it will also automatically set <code>ERRNO_NS_KERNEL_OVERRIDE_DEFAULT</code> before passing it to <code>OSSetLastError</code>.</p>
+<p>If the errno namespace is unset, it will also automatically set <code>ERRNO_NS_APPLET_SPECIFIC</code> before passing it to <code>OSSetLastError</code>.</p>
 <p>Requires <code>-lkrnllib</code> when dynamically linking with the shims.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
