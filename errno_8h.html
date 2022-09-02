@@ -389,7 +389,7 @@ Functions</h2></td></tr>
 <p>Get errno. </p>
 <p>If kernel errno is set, the errno is returned with <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a> bit set. Otherwise it will return the result from <a class="el" href="errno_8h.html#aeaa5fa918b295c79d957f225a271dd13" title="Set the global errno.">OSSetLastError()</a> with <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7">ERRNO_NS_USER</a> bit set.</p>
 <p>Requires <code>-lkrnllib</code> when dynamically linking with the shims.</p>
-<dl class="section return"><dt>Returns</dt><dd>The current errno value from either kernel or <code>OSSetLastError</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The current errno value from either kernel or <a class="el" href="errno_8h.html#aeaa5fa918b295c79d957f225a271dd13" title="Set the global errno.">OSSetLastError()</a>. </dd></dl>
 
 </div>
 </div>
@@ -473,15 +473,15 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fetch an error message. </p>
-<p>Fetch error descriptions (encoded in <code>UTF16</code>) for last set error in a similar manner to FormatMessage API in Windows.</p>
+<p>Fetch error descriptions (encoded in <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec" title="&quot;Portable&quot; Besta UTF-16 type used by other headers.">UTF16</a>) for last set error in a similar manner to FormatMessage API in Windows.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">flags</td><td>Flags. Only <code>FORMAT_MESSAGE_FROM_SYSTEM</code> and <code>FORMAT_MESSAGE_ALLOCATE_BUFFER</code> are supported. In addition, <code>FORMAT_MESSAGE_FROM_SYSTEM</code> must be set. </td></tr>
+    <tr><td class="paramname">flags</td><td>Flags. Only <a class="el" href="errno_8h.html#a4bae49c902f4defacf7ee87d5795c63ead54ca142029e50123af573e07a0bc3b9">FORMAT_MESSAGE_FROM_SYSTEM</a> and <a class="el" href="errno_8h.html#a4bae49c902f4defacf7ee87d5795c63eaed3a296c165725958259bdd1a05837c1">FORMAT_MESSAGE_ALLOCATE_BUFFER</a> are supported. In addition, <code>FORMAT_MESSAGE_FROM_SYSTEM</code> must be set. </td></tr>
     <tr><td class="paramname">_sbz0</td><td>Ignored. Should be set to 0. </td></tr>
     <tr><td class="paramname">_sbz1</td><td>Ignored. Should be set to 0. </td></tr>
     <tr><td class="paramname">_sbz2</td><td>Ignored. Should be set to 0. </td></tr>
-    <tr><td class="paramname">outbuf</td><td>The output buffer. If using <code>FORMAT_MESSAGE_ALLOCATE_BUFFER</code>, the pointer to the allocated buffer will be placed at this location. Otherwise the message will be written directly to this location. It's caller's responsibility to free any buffer allocated by <code>FORMAT_MESSAGE_ALLOCATE_BUFFER</code>. </td></tr>
-    <tr><td class="paramname">outlen</td><td>When not using <code>FORMAT_MESSAGE_ALLOCATE_BUFFER</code>, this is the length of the message buffer. Otherwise this is the minimum size of the buffer allocated for the message by the function. </td></tr>
+    <tr><td class="paramname">outbuf</td><td>The output buffer. If using <a class="el" href="errno_8h.html#a4bae49c902f4defacf7ee87d5795c63eaed3a296c165725958259bdd1a05837c1">FORMAT_MESSAGE_ALLOCATE_BUFFER</a>, the pointer to the allocated buffer will be placed at this location. Otherwise the message will be written directly to this location. It's caller's responsibility to free any buffer allocated by <a class="el" href="errno_8h.html#a4bae49c902f4defacf7ee87d5795c63eaed3a296c165725958259bdd1a05837c1">FORMAT_MESSAGE_ALLOCATE_BUFFER</a>. </td></tr>
+    <tr><td class="paramname">outlen</td><td>When not using <a class="el" href="errno_8h.html#a4bae49c902f4defacf7ee87d5795c63eaed3a296c165725958259bdd1a05837c1">FORMAT_MESSAGE_ALLOCATE_BUFFER</a>, this is the length of the message buffer. Otherwise this is the minimum size of the buffer allocated for the message by the function. </td></tr>
   </table>
   </dd>
 </dl>

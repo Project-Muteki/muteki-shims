@@ -81,10 +81,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a9e681ad97b1d973134148a35e64b5d51"><td class="memItemLeft" align="right" valign="top"><a id="a9e681ad97b1d973134148a35e64b5d51"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>sys_seek_whence_e</b> { <b>_SYS_SEEK_SET</b> = 0, 
-<b>_SYS_SEEK_CUR</b>, 
-<b>_SYS_SEEK_END</b>
+<tr class="memitem:a9e681ad97b1d973134148a35e64b5d51"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51">sys_seek_whence_e</a> { <a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51ad78be8894e0857edfb7f4d1601c5025d">_SYS_SEEK_SET</a> = 0, 
+<a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51a213e666a4cfa6170bc49dcd2169da944">_SYS_SEEK_CUR</a>, 
+<a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51a61aea510d114606570fe74928a85a85c">_SYS_SEEK_END</a>
  }</td></tr>
+<tr class="memdesc:a9e681ad97b1d973134148a35e64b5d51"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>whence</code> values for <a class="el" href="file_8h.html#a5165cd2a2f7acd0756eeaa9b6700d5b0" title="Seek to a specific position in an opened file.">__fseek()</a>.  <a href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51">More...</a><br /></td></tr>
 <tr class="separator:a9e681ad97b1d973134148a35e64b5d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -116,7 +117,32 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Low-level and built-in high-level file operation API. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a9e681ad97b1d973134148a35e64b5d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e681ad97b1d973134148a35e64b5d51">&#9670;&nbsp;</a></span>sys_seek_whence_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51">sys_seek_whence_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>whence</code> values for <a class="el" href="file_8h.html#a5165cd2a2f7acd0756eeaa9b6700d5b0" title="Seek to a specific position in an opened file.">__fseek()</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9e681ad97b1d973134148a35e64b5d51ad78be8894e0857edfb7f4d1601c5025d"></a>_SYS_SEEK_SET&#160;</td><td class="fielddoc"><p>Seek from the beginning of file. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9e681ad97b1d973134148a35e64b5d51a213e666a4cfa6170bc49dcd2169da944"></a>_SYS_SEEK_CUR&#160;</td><td class="fielddoc"><p>Seek from current offset. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9e681ad97b1d973134148a35e64b5d51a61aea510d114606570fe74928a85a85c"></a>_SYS_SEEK_END&#160;</td><td class="fielddoc"><p>Seek from the end of file. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a477554b5db4cf6db20eb2245087525cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a477554b5db4cf6db20eb2245087525cc">&#9670;&nbsp;</a></span>__fflush()</h2>
 
@@ -137,7 +163,7 @@ Functions</h2></td></tr>
 <p>Analogous to the fflush() function in POSIX.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <code>_afopen</code> or <code>_wfopen</code>. </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
@@ -181,13 +207,14 @@ Functions</h2></td></tr>
 <p>Analogous to the fseek() function in POSIX.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <code>_afopen</code> or <code>_wfopen</code>. </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
     <tr><td class="paramname">offset</td><td>Seek offset. </td></tr>
     <tr><td class="paramname">whence</td><td>Treat offset as relative to start of file/current offset/end of file. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 when successful, -1 when there's an error. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51" title="whence values for __fseek().">sys_seek_whence_e</a> </dd></dl>
 
 </div>
 </div>
@@ -222,7 +249,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>Path to the file to be opened. LFN (long filename) is supported. </td></tr>
-    <tr><td class="paramname">mode</td><td>Mode. Tested modes are <code>u"rb"</code> and <code>u"wb+"</code>. </td></tr>
+    <tr><td class="paramname">mode</td><td>Mode. Tested modes are <code>_BUL</code>("rb") and <code>_BUL</code>("wb+"). </td></tr>
   </table>
   </dd>
 </dl>
@@ -289,7 +316,7 @@ Functions</h2></td></tr>
 <p>Analogous to the fclose() function in POSIX.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <code>_afopen</code> or <code>_wfopen</code>. </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
@@ -342,7 +369,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">ptr</td><td>Pointer reference to a buffer that will hold the data read from the file. </td></tr>
     <tr><td class="paramname">size</td><td>Size of individual data unit. </td></tr>
     <tr><td class="paramname">nmemb</td><td>Number of data units to read. </td></tr>
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <code>_afopen</code> or <code>_wfopen</code>. </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
@@ -370,7 +397,7 @@ Functions</h2></td></tr>
 <p>Analogous to the ftell() function in POSIX.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <code>_afopen</code> or <code>_wfopen</code>. </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
@@ -423,7 +450,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">ptr</td><td>Pointer reference to data that will be written to the file. </td></tr>
     <tr><td class="paramname">size</td><td>Size of individual data unit. </td></tr>
     <tr><td class="paramname">nmemb</td><td>Number of data units to write. </td></tr>
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <code>_afopen</code> or <code>_wfopen</code>. </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>

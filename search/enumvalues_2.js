@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['errno_5fns_5fapplet_5fspecific_343',['ERRNO_NS_APPLET_SPECIFIC',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a05a5ebcb4b1ef8ca5ef3cf5b2f6f7e07',1,'errno.h']]],
-  ['errno_5fns_5fexec_344',['ERRNO_NS_EXEC',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a42a7a9000abfbd639e750f5d124bfdfa',1,'errno.h']]],
-  ['errno_5fns_5fkernel_345',['ERRNO_NS_KERNEL',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60',1,'errno.h']]],
-  ['errno_5fns_5fuser_346',['ERRNO_NS_USER',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7',1,'errno.h']]]
+  ['db_5fcorrupted_351',['DB_CORRUPTED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4bb96a0cea4da7dfc4fac08d6c9fa9bc',1,'errno.h']]],
+  ['db_5ffull_352',['DB_FULL',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aac765a6820ebfb3898d963e8a6fd38b4',1,'errno.h']]],
+  ['db_5findex_5ffull_5fdelete_353',['DB_INDEX_FULL_DELETE',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a59e9093a53bfe2eb483523435641b0dc',1,'errno.h']]],
+  ['db_5findex_5ffull_5fsync_354',['DB_INDEX_FULL_SYNC',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a12b9675338923bfaa19bd892942b4a6e',1,'errno.h']]],
+  ['db_5fopen_5ffailed_355',['DB_OPEN_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a7555d9e53b2829fecb6402b95f5087d4',1,'errno.h']]],
+  ['db_5ftoo_5fmany_5fopen_5ffiles_356',['DB_TOO_MANY_OPEN_FILES',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a99f23a399ca10332ef65938521c7e638',1,'errno.h']]]
 ];

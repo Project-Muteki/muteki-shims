@@ -214,7 +214,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enter/aquire a critical section (recursive mutex) context. </p>
-<p>This will block when multiple threads are trying to enter the same context, but it will let repeated entries initiated by the same thread to pass through. The context is released when all of the entries are reverted by a <code>OSLeaveCriticalSection</code> call.</p>
+<p>This will block when multiple threads are trying to enter the same context, but it will let repeated entries initiated by the same thread to pass through. The context is released when all of the entries are reverted by a <a class="el" href="threading_8h.html#afad04795e186d7f6a45b46850c2f472c" title="Leave/release a critical section (recursive mutex) context.">OSLeaveCriticalSection()</a> call.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mutex</td><td>The critical section/mutex context. </td></tr>

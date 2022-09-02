@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['second_309',['second',['../structdatetime__t.html#a6e882ba06a6047a1e494203e9e09594b',1,'datetime_t']]],
-  ['size_310',['size',['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t']]],
-  ['subroutine_311',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]]
+  ['reent_316',['reent',['../structcritical__section__t.html#a73549e0f34549a90c958e4d5c8cea862',1,'critical_section_t']]],
+  ['refcount_317',['refcount',['../structcritical__section__t.html#a5ecf7008c99604073d723ae6f0127bec',1,'critical_section_t']]]
 ];
