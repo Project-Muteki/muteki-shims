@@ -132,7 +132,7 @@ extern bool __wremove(const UTF16 *pathname);
  *
  * @param fnmatch The pattern.
  * @param ctx The context object.
- * @param attrib_mask Attribution mask (use 0 to match everything regardless of attributions).
+ * @param attrib_mask Attribute mask (use 0 to match everything regardless of attributes).
  * @return 0 if there is a match. -1 when no match was found.
  */
 extern short _afindfirst(const char *fnmatch, find_context_t *ctx, int attrib_mask);
@@ -154,7 +154,7 @@ extern short _afindnext(find_context_t *ctx);
  *
  * @param fnmatch The pattern (encoded in UTF-16).
  * @param ctx The context object.
- * @param attrib_mask Attribution mask (use 0 to match everything regardless of attributions).
+ * @param attrib_mask Attribute mask (use 0 to match everything regardless of attributes).
  * @return 0 if there is a match. -1 when no match was found.
  */
 extern short _wfindfirst(const UTF16 *fnmatch, find_context_t *ctx, int attrib_mask);
