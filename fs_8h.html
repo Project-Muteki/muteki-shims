@@ -164,6 +164,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a8b27424395516d5ba825f3f9715ba6bb"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a8b27424395516d5ba825f3f9715ba6bb">_afsetattr</a> (char *path, short attrs)</td></tr>
 <tr class="memdesc:a8b27424395516d5ba825f3f9715ba6bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set attributes of specific path.  <a href="fs_8h.html#a8b27424395516d5ba825f3f9715ba6bb">More...</a><br /></td></tr>
 <tr class="separator:a8b27424395516d5ba825f3f9715ba6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde53dd449140b0070f57c2292541631"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#afde53dd449140b0070f57c2292541631">_wmkdir</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *path)</td></tr>
+<tr class="memdesc:afde53dd449140b0070f57c2292541631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new directory.  <a href="fs_8h.html#afde53dd449140b0070f57c2292541631">More...</a><br /></td></tr>
+<tr class="separator:afde53dd449140b0070f57c2292541631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a35c4f93dc06cd34a7bc692142b7b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a46a35c4f93dc06cd34a7bc692142b7b0">_amkdir</a> (char *path)</td></tr>
+<tr class="memdesc:a46a35c4f93dc06cd34a7bc692142b7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new directory.  <a href="fs_8h.html#a46a35c4f93dc06cd34a7bc692142b7b0">More...</a><br /></td></tr>
+<tr class="separator:a46a35c4f93dc06cd34a7bc692142b7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1641e4e7a2afa173f0dc7f3b594fe9f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a1641e4e7a2afa173f0dc7f3b594fe9f2">_wrmdir</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *path)</td></tr>
+<tr class="memdesc:a1641e4e7a2afa173f0dc7f3b594fe9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a directory.  <a href="fs_8h.html#a1641e4e7a2afa173f0dc7f3b594fe9f2">More...</a><br /></td></tr>
+<tr class="separator:a1641e4e7a2afa173f0dc7f3b594fe9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76962f6f21477b01bb29dd36d5e34b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#ae76962f6f21477b01bb29dd36d5e34b9">_armdir</a> (char *path)</td></tr>
+<tr class="memdesc:ae76962f6f21477b01bb29dd36d5e34b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a directory.  <a href="fs_8h.html#ae76962f6f21477b01bb29dd36d5e34b9">More...</a><br /></td></tr>
+<tr class="separator:ae76962f6f21477b01bb29dd36d5e34b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Filesystem access API. </p>
@@ -370,6 +382,33 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a46a35c4f93dc06cd34a7bc692142b7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a35c4f93dc06cd34a7bc692142b7b0">&#9670;&nbsp;</a></span>_amkdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _amkdir </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>DOS 8.3 path to the new directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+
+</div>
+</div>
 <a id="a28c103bca80270e96121bf61ce1194bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28c103bca80270e96121bf61ce1194bb">&#9670;&nbsp;</a></span>_aremove()</h2>
 
@@ -394,6 +433,34 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the operation was successful. </dd></dl>
+
+</div>
+</div>
+<a id="ae76962f6f21477b01bb29dd36d5e34b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76962f6f21477b01bb29dd36d5e34b9">&#9670;&nbsp;</a></span>_armdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _armdir </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a directory. </p>
+<p>Sets kerrno namespace to ::ERRNO_NS_KERNEL and error code to <code>0xffff</code> when directory is not empty.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>DOS 8.3 path to the directory being removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
 
 </div>
 </div>
@@ -565,6 +632,61 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new attribute, or -1 on error. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4" title="File/directory attributes.">fs_attribute_e</a> </dd></dl>
+
+</div>
+</div>
+<a id="afde53dd449140b0070f57c2292541631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde53dd449140b0070f57c2292541631">&#9670;&nbsp;</a></span>_wmkdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _wmkdir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>UTF-16 LFN path to the new directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+
+</div>
+</div>
+<a id="a1641e4e7a2afa173f0dc7f3b594fe9f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1641e4e7a2afa173f0dc7f3b594fe9f2">&#9670;&nbsp;</a></span>_wrmdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _wrmdir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a directory. </p>
+<p>Sets kerrno namespace to ::ERRNO_NS_KERNEL and error code to <code>0xffff</code> when directory is not empty.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>UTF-16 LFN path to the directory being removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
 
 </div>
 </div>
