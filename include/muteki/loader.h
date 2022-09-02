@@ -18,13 +18,9 @@
  * @see ExecuteProgram
  */
 enum applet_subroutine_e {
-    /**
-     * Run the main subroutine.
-     */
+    /** Run the main subroutine. */
     APPLET_SUBROUTINE_MAIN = 0,
-    /**
-     * Run a subroutine that clears the persistent states of the applet.
-     */
+    /** Run a subroutine that clears the persistent states of the applet. */
     APPLET_SUBROUTINE_RESET_STATES = 5,
 };
 

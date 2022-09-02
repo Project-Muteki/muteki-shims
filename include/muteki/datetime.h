@@ -14,40 +14,24 @@
 #include <muteki/common.h>
 
 /**
- * @brief The datetime struct used by GetSysTime and SetSysTime.
+ * @brief The datetime struct used by GetSysTime() and SetSysTime().
  */
 typedef struct {
-    /**
-     * @brief Year.
-     */
+    /** Year. */
     short year;
-    /**
-     * @brief Month of year.
-     */
+    /** Month of year. */
     short month;
-    /**
-     * @brief Day of week (0..6). 0 is Sunday.
-     */
+    /** Day of week (0..6). 0 is Sunday. */
     short weekday;
-    /**
-     * @brief Day of month.
-     */
+    /** Day of month. */
     short day;
-    /**
-     * @brief Number of hours past midnight.
-     */
+    /** Number of hours past midnight. */
     short hour;
-    /**
-     * @brief Number of minutes after the hour.
-     */
+    /** Number of minutes after the hour. */
     short minute;
-    /**
-     * @brief Number of seconds after the minute.
-     */
+    /** Number of seconds after the minute. */
     short second;
-    /**
-     * @brief Number of milliseconds after the second.
-     */
+    /** Number of milliseconds after the second. */
     short millis;
 } datetime_t;
 

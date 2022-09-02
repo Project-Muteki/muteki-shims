@@ -183,14 +183,14 @@ static inline unsigned short KERRNO_ERR(kerrno_t kerrno) {
 /**
  * @brief Fetch an error message.
  *
- * Fetch error descriptions (encoded in @p UTF16) for last set error in a similar manner to FormatMessage API in Windows.
+ * Fetch error descriptions (encoded in ::UTF16) for last set error in a similar manner to FormatMessage API in Windows.
  *
- * @param flags Flags. Only @p FORMAT_MESSAGE_FROM_SYSTEM and @p FORMAT_MESSAGE_ALLOCATE_BUFFER are supported. In addition, @p FORMAT_MESSAGE_FROM_SYSTEM must be set.
+ * @param flags Flags. Only ::FORMAT_MESSAGE_FROM_SYSTEM and ::FORMAT_MESSAGE_ALLOCATE_BUFFER are supported. In addition, @p FORMAT_MESSAGE_FROM_SYSTEM must be set.
  * @param _sbz0 Ignored. Should be set to 0.
  * @param _sbz1 Ignored. Should be set to 0.
  * @param _sbz2 Ignored. Should be set to 0.
- * @param outbuf The output buffer. If using @p FORMAT_MESSAGE_ALLOCATE_BUFFER, the pointer to the allocated buffer will be placed at this location. Otherwise the message will be written directly to this location. It's caller's responsibility to free any buffer allocated by @p FORMAT_MESSAGE_ALLOCATE_BUFFER.
- * @param outlen When not using @p FORMAT_MESSAGE_ALLOCATE_BUFFER, this is the length of the message buffer. Otherwise this is the minimum size of the buffer allocated for the message by the function.
+ * @param outbuf The output buffer. If using ::FORMAT_MESSAGE_ALLOCATE_BUFFER, the pointer to the allocated buffer will be placed at this location. Otherwise the message will be written directly to this location. It's caller's responsibility to free any buffer allocated by ::FORMAT_MESSAGE_ALLOCATE_BUFFER.
+ * @param outlen When not using ::FORMAT_MESSAGE_ALLOCATE_BUFFER, this is the length of the message buffer. Otherwise this is the minimum size of the buffer allocated for the message by the function.
  * @return Length of the message written, or 0 if fails.
  */
 extern size_t FormatMessage(int32_t flags, int32_t _sbz0, int32_t _sbz1, int32_t _sbz2, void *outbuf, size_t outlen);
@@ -230,7 +230,7 @@ extern void _SetLastError(kerrno_t err);
  *
  * Requires @p -lkrnllib when dynamically linking with the shims.
  *
- * @return The current errno value from either kernel or @p OSSetLastError.
+ * @return The current errno value from either kernel or OSSetLastError().
  */
 extern kerrno_t _GetLastError(void);
 

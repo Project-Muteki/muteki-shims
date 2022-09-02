@@ -16,16 +16,22 @@
 typedef void (*thread_func_t)(void);
 typedef void thread_t;
 
+/** Critical section struct. */
 typedef struct {
+    /** Magic */
     int32_t magic; // 0x00000202
+    /** Kernel reentrant struct for this thread. */
     void *reent; // 0x58 bytes, possibly related to threads
+    /** Reference counter. */
     uint16_t refcount;
+    /** Unknown. */
     uint8_t unk_idx;
+    /** Unknown. */
     uint8_t unk[0x9];
 } critical_section_t; // 0x14
 
 /**
- * @brief Sleep for \p millis milliseconds.
+ * @brief Sleep for @p millis milliseconds.
  *
  * @param millis Time to sleep in milliseconds.
  */
@@ -54,7 +60,7 @@ extern void OSInitCriticalSection(critical_section_t *mutex);
 /**
  * @brief Enter/aquire a critical section (recursive mutex) context.
  *
- * This will block when multiple threads are trying to enter the same context, but it will let repeated entries initiated by the same thread to pass through. The context is released when all of the entries are reverted by a @p OSLeaveCriticalSection call.
+ * This will block when multiple threads are trying to enter the same context, but it will let repeated entries initiated by the same thread to pass through. The context is released when all of the entries are reverted by a OSLeaveCriticalSection() call.
  *
  * @param mutex The critical section/mutex context.
  */

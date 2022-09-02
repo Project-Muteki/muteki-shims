@@ -25,7 +25,7 @@ typedef struct {
      */
     char *filename; // 0xc
     /**
-     * @brief Seems to be a mirror of @p filename
+     * @brief Seems to be a mirror of #filename
      * @see filename
      */
     char *filename2_alt; // 0x10
@@ -128,7 +128,7 @@ extern bool __wremove(const UTF16 *pathname);
 /**
  * @brief Begin a file/directory search.
  *
- * Matches the first file/directory based on fnmatch pattern @p fnmatch and attribute mask @p attrib_mask. Saves context at @p ctx, which can be used later with @p _afindnext and @p _findclose.
+ * Matches the first file/directory based on fnmatch pattern @p fnmatch and attribute mask @p attrib_mask. Saves context at @p ctx, which can be used later with _afindnext() and _findclose().
  *
  * @param fnmatch The pattern.
  * @param ctx The context object.
@@ -150,7 +150,7 @@ extern short _afindnext(find_context_t *ctx);
 /**
  * @brief Begin a file/directory search (LFN support).
  *
- * Matches the first file/directory based on fnmatch pattern @p fnmatch and attribute mask @p attrib_mask. Saves context at @p ctx, which can be used later with @p _afindnext and @p _findclose.
+ * Matches the first file/directory based on fnmatch pattern @p fnmatch and attribute mask @p attrib_mask. Saves context at @p ctx, which can be used later with _afindnext() and _findclose().
  *
  * @param fnmatch The pattern (encoded in UTF-16).
  * @param ctx The context object.

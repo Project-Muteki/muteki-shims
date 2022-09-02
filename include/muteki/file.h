@@ -13,9 +13,15 @@
 
 #include <muteki/common.h>
 
+/**
+ * @brief @p whence values for __fseek().
+ */
 enum sys_seek_whence_e {
+    /** Seek from the beginning of file. */
     _SYS_SEEK_SET = 0,
+    /** Seek from current offset. */
     _SYS_SEEK_CUR,
+    /** Seek from the end of file. */
     _SYS_SEEK_END,
 };
 
@@ -36,7 +42,7 @@ extern void *_afopen(const char *pathname, const char *mode);
  * Analogous to the _wfopen() function in Windows.
  *
  * @param pathname Path to the file to be opened. LFN (long filename) is supported.
- * @param mode Mode. Tested modes are @p u"rb" and @p u"wb+".
+ * @param mode Mode. Tested modes are @p _BUL("rb") and @p _BUL("wb+").
  * @return Pointer reference to the opened file.
  */
 extern void *__wfopen(const UTF16 *pathname, const UTF16 *mode);
@@ -49,7 +55,7 @@ extern void *__wfopen(const UTF16 *pathname, const UTF16 *mode);
  * @param ptr Pointer reference to a buffer that will hold the data read from the file.
  * @param size Size of individual data unit.
  * @param nmemb Number of data units to read.
- * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Number of data units read.
  */
 extern size_t _fread(void *ptr, size_t size, size_t nmemb, void *stream);
@@ -62,7 +68,7 @@ extern size_t _fread(void *ptr, size_t size, size_t nmemb, void *stream);
  * @param ptr Pointer reference to data that will be written to the file.
  * @param size Size of individual data unit.
  * @param nmemb Number of data units to write.
- * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Number of data units written.
  */
 extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, void *stream);
@@ -72,10 +78,11 @@ extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, void *stream);
  *
  * Analogous to the fseek() function in POSIX.
  *
- * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @param offset Seek offset.
  * @param whence Treat offset as relative to start of file/current offset/end of file.
  * @return 0 when successful, -1 when there's an error.
+ * @see sys_seek_whence_e
  */
 extern int __fseek(void *stream, long offset, int whence);
 
@@ -84,7 +91,7 @@ extern int __fseek(void *stream, long offset, int whence);
  *
  * Analogous to the ftell() function in POSIX.
  *
- * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Current position when successful, -1 when there's an error.
  */
 extern long _ftell(void *stream);
@@ -94,7 +101,7 @@ extern long _ftell(void *stream);
  *
  * Analogous to the fflush() function in POSIX.
  *
- * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return 0 when successful, -1 when there's an error.
  */
 extern int __fflush(void *stream);
@@ -104,7 +111,7 @@ extern int __fflush(void *stream);
  *
  * Analogous to the fclose() function in POSIX.
  *
- * @param stream Pointer reference returned by @p _afopen or @p _wfopen.
+ * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Unclear. Could be similar to POSIX fclose().
  */
 extern int _fclose(void *stream);
