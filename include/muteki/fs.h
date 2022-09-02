@@ -225,4 +225,39 @@ extern short _afgetattr(char *path);
  */
 extern short _afsetattr(char *path, short attrs);
 
+/**
+ * @brief Create a new directory.
+ *
+ * @param path UTF-16 LFN path to the new directory.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern int _wmkdir(UTF16 *path);
+
+/**
+ * @brief Create a new directory.
+ *
+ * @param path DOS 8.3 path to the new directory.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern int _amkdir(char *path);
+
+/**
+ * @brief Remove a directory.
+ *
+ * Sets kerrno namespace to ::ERRNO_NS_KERNEL and error code to @p 0xffff when directory is not empty.
+ *
+ * @param path UTF-16 LFN path to the directory being removed.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern int _wrmdir(UTF16 *path);
+
+/**
+ * @brief Remove a directory.
+ *
+ * Sets kerrno namespace to ::ERRNO_NS_KERNEL and error code to @p 0xffff when directory is not empty.
+ *
+ * @param path DOS 8.3 path to the directory being removed.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern int _armdir(char *path);
 #endif // __MUTEKI_FS_H__
