@@ -89,7 +89,8 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memItemLeft" align="right" valign="top"><a id="a9f8d8fd8933220f6f35209cdb65d7cfb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_PATH_MAX_CU</b>&#160;&#160;&#160;256</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb">SYS_PATH_MAX_CU</a>&#160;&#160;&#160;256</td></tr>
+<tr class="memdesc:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max code units (ASCII or UTF-16) a path can contain. This includes the NUL terminator. Note that this can differ from libc definitions due to possible encoding differences (e.g. newlib-muteki uses UTF-8 as the "ANSI" encoding by default). <br /></td></tr>
 <tr class="separator:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2cfbb03e319776b36d0b1169a83f54"><td class="memItemLeft" align="right" valign="top"><a id="a2c2cfbb03e319776b36d0b1169a83f54"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a2c2cfbb03e319776b36d0b1169a83f54">FIND_TS_YEAR</a>(ts)&#160;&#160;&#160;((ts &gt;&gt; 25) + 1980)</td></tr>
@@ -454,7 +455,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
-    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a DOS8.3 path. Must be at least ::SYS_PATH_MAX_CU bytes long. </td></tr>
+    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a DOS8.3 path. Must be at least <a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb" title="Max code units (ASCII or UTF-16) a path can contain. This includes the NUL terminator....">SYS_PATH_MAX_CU</a> bytes long. </td></tr>
   </table>
   </dd>
 </dl>
@@ -772,7 +773,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
-    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a UTF-16 LFN path. Must be at least ::SYS_PATH_MAX_CU units long. </td></tr>
+    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a UTF-16 LFN path. Must be at least <a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb" title="Max code units (ASCII or UTF-16) a path can contain. This includes the NUL terminator....">SYS_PATH_MAX_CU</a> units long. </td></tr>
   </table>
   </dd>
 </dl>

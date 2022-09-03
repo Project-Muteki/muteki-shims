@@ -12,6 +12,7 @@ var searchData=
   ['sys_5flock_5fswitch_5fenabled_187',['SYS_LOCK_SWITCH_ENABLED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aef656c2d75c8bd9ec763b63cf71b43c2',1,'errno.h']]],
   ['sys_5flow_5fbattery_188',['SYS_LOW_BATTERY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4caeb4c37ddfa450dad5b16c51ad6e73',1,'errno.h']]],
   ['sys_5fout_5fof_5fmemory_189',['SYS_OUT_OF_MEMORY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ae664d39bd61bb26eb69c92c3051c29b4',1,'errno.h']]],
-  ['sys_5fseek_5fwhence_5fe_190',['sys_seek_whence_e',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51',1,'file.h']]],
-  ['sys_5fstorage_5fdevice_5fnot_5ffound_191',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1',1,'errno.h']]]
+  ['sys_5fpath_5fmax_5fcu_190',['SYS_PATH_MAX_CU',['../fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb',1,'fs.h']]],
+  ['sys_5fseek_5fwhence_5fe_191',['sys_seek_whence_e',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51',1,'file.h']]],
+  ['sys_5fstorage_5fdevice_5fnot_5ffound_192',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1',1,'errno.h']]]
 ];
