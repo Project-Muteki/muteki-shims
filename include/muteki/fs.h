@@ -13,6 +13,8 @@
 
 #include <muteki/common.h>
 
+#define SYS_PATH_MAX_CU 256
+
 typedef struct {
     uint8_t *unk0; // 0x0
     uint8_t *unk4; // 0x4
@@ -260,4 +262,38 @@ extern int _wrmdir(UTF16 *path);
  * @return 0 if the operation is successful, -1 if there's an error.
  */
 extern int _armdir(char *path);
+
+/**
+ * @brief Get system CWD value.
+ *
+ * @param unk Some context object, format unknown. Use NULL to get the CWD of current applet.
+ * @param buf Buffer large enough to contain a DOS8.3 path. Must be at least ::SYS_PATH_MAX_CU bytes long.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern short _agetcurdir(void *unk, char *buf);
+
+/**
+ * @brief Get system CWD value.
+ *
+ * @param unk Some context object, format unknown. Use NULL to get the CWD of current applet.
+ * @param buf Buffer large enough to contain a UTF-16 LFN path. Must be at least ::SYS_PATH_MAX_CU units long.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern short _wgetcurdir(void *unk, UTF16 *buf);
+
+/**
+ * @brief Change system working directory to a new path.
+ *
+ * @param path DOS 8.3 path.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern short _achdir(const char *path);
+
+/**
+ * @brief Change system working directory to a new path.
+ *
+ * @param path UTF-16 LFN path.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern short _wchdir(const UTF16 *path);
 #endif // __MUTEKI_FS_H__
