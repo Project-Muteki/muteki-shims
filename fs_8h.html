@@ -88,6 +88,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memItemLeft" align="right" valign="top"><a id="a9f8d8fd8933220f6f35209cdb65d7cfb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_PATH_MAX_CU</b>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2cfbb03e319776b36d0b1169a83f54"><td class="memItemLeft" align="right" valign="top"><a id="a2c2cfbb03e319776b36d0b1169a83f54"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a2c2cfbb03e319776b36d0b1169a83f54">FIND_TS_YEAR</a>(ts)&#160;&#160;&#160;((ts &gt;&gt; 25) + 1980)</td></tr>
 <tr class="memdesc:a2c2cfbb03e319776b36d0b1169a83f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read year from find timestamp. <br /></td></tr>
@@ -176,6 +179,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ae76962f6f21477b01bb29dd36d5e34b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#ae76962f6f21477b01bb29dd36d5e34b9">_armdir</a> (char *path)</td></tr>
 <tr class="memdesc:ae76962f6f21477b01bb29dd36d5e34b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a directory.  <a href="fs_8h.html#ae76962f6f21477b01bb29dd36d5e34b9">More...</a><br /></td></tr>
 <tr class="separator:ae76962f6f21477b01bb29dd36d5e34b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc2f066c601a0db48d0b7e80e79fbb86"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#acc2f066c601a0db48d0b7e80e79fbb86">_agetcurdir</a> (void *unk, char *buf)</td></tr>
+<tr class="memdesc:acc2f066c601a0db48d0b7e80e79fbb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get system CWD value.  <a href="fs_8h.html#acc2f066c601a0db48d0b7e80e79fbb86">More...</a><br /></td></tr>
+<tr class="separator:acc2f066c601a0db48d0b7e80e79fbb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35253fa405a95a85c4041ba54154d9e7"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a35253fa405a95a85c4041ba54154d9e7">_wgetcurdir</a> (void *unk, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *buf)</td></tr>
+<tr class="memdesc:a35253fa405a95a85c4041ba54154d9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get system CWD value.  <a href="fs_8h.html#a35253fa405a95a85c4041ba54154d9e7">More...</a><br /></td></tr>
+<tr class="separator:a35253fa405a95a85c4041ba54154d9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5ecf7ca9b07ea6f8a237f13c611489"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#aca5ecf7ca9b07ea6f8a237f13c611489">_achdir</a> (const char *path)</td></tr>
+<tr class="memdesc:aca5ecf7ca9b07ea6f8a237f13c611489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change system working directory to a new path.  <a href="fs_8h.html#aca5ecf7ca9b07ea6f8a237f13c611489">More...</a><br /></td></tr>
+<tr class="separator:aca5ecf7ca9b07ea6f8a237f13c611489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa810145128b50a15ab78ac1e10a79d49"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#aa810145128b50a15ab78ac1e10a79d49">_wchdir</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *path)</td></tr>
+<tr class="memdesc:aa810145128b50a15ab78ac1e10a79d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change system working directory to a new path.  <a href="fs_8h.html#aa810145128b50a15ab78ac1e10a79d49">More...</a><br /></td></tr>
+<tr class="separator:aa810145128b50a15ab78ac1e10a79d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Filesystem access API. </p>
@@ -236,6 +251,33 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the operation was successful. </dd></dl>
+
+</div>
+</div>
+<a id="aca5ecf7ca9b07ea6f8a237f13c611489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca5ecf7ca9b07ea6f8a237f13c611489">&#9670;&nbsp;</a></span>_achdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _achdir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change system working directory to a new path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>DOS 8.3 path. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
 
 </div>
 </div>
@@ -382,6 +424,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="acc2f066c601a0db48d0b7e80e79fbb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc2f066c601a0db48d0b7e80e79fbb86">&#9670;&nbsp;</a></span>_agetcurdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _agetcurdir </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>unk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get system CWD value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
+    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a DOS8.3 path. Must be at least ::SYS_PATH_MAX_CU bytes long. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+
+</div>
+</div>
 <a id="a46a35c4f93dc06cd34a7bc692142b7b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46a35c4f93dc06cd34a7bc692142b7b0">&#9670;&nbsp;</a></span>_amkdir()</h2>
 
@@ -488,6 +568,33 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success. </dd></dl>
+
+</div>
+</div>
+<a id="aa810145128b50a15ab78ac1e10a79d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa810145128b50a15ab78ac1e10a79d49">&#9670;&nbsp;</a></span>_wchdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _wchdir </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change system working directory to a new path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>UTF-16 LFN path. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
 
 </div>
 </div>
@@ -632,6 +739,44 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new attribute, or -1 on error. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4" title="File/directory attributes.">fs_attribute_e</a> </dd></dl>
+
+</div>
+</div>
+<a id="a35253fa405a95a85c4041ba54154d9e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35253fa405a95a85c4041ba54154d9e7">&#9670;&nbsp;</a></span>_wgetcurdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _wgetcurdir </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>unk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get system CWD value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
+    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a UTF-16 LFN path. Must be at least ::SYS_PATH_MAX_CU units long. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
 
 </div>
 </div>
