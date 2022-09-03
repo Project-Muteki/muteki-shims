@@ -13,6 +13,10 @@
 
 #include <muteki/common.h>
 
+/**
+ * @brief Max code units (ASCII or UTF-16) a path can contain.
+ * This includes the NUL terminator. Note that this can differ from libc definitions due to possible encoding differences (e.g. newlib-muteki uses UTF-8 as the "ANSI" encoding by default).
+ */
 #define SYS_PATH_MAX_CU 256
 
 typedef struct {
