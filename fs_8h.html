@@ -192,6 +192,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aa810145128b50a15ab78ac1e10a79d49"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#aa810145128b50a15ab78ac1e10a79d49">_wchdir</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *path)</td></tr>
 <tr class="memdesc:aa810145128b50a15ab78ac1e10a79d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change system working directory to a new path.  <a href="fs_8h.html#aa810145128b50a15ab78ac1e10a79d49">More...</a><br /></td></tr>
 <tr class="separator:aa810145128b50a15ab78ac1e10a79d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b9b7db9accfb6f95ce52610b48ed2e"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#ad8b9b7db9accfb6f95ce52610b48ed2e">_arename</a> (const char *old_path, const char *new_path)</td></tr>
+<tr class="memdesc:ad8b9b7db9accfb6f95ce52610b48ed2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename/move a file.  <a href="fs_8h.html#ad8b9b7db9accfb6f95ce52610b48ed2e">More...</a><br /></td></tr>
+<tr class="separator:ad8b9b7db9accfb6f95ce52610b48ed2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a0f6d38300668689ccac39168c5fe4"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#aa8a0f6d38300668689ccac39168c5fe4">_wrename</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *old_path, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *new_path)</td></tr>
+<tr class="memdesc:aa8a0f6d38300668689ccac39168c5fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename/move a file.  <a href="fs_8h.html#aa8a0f6d38300668689ccac39168c5fe4">More...</a><br /></td></tr>
+<tr class="separator:aa8a0f6d38300668689ccac39168c5fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Filesystem access API. </p>
@@ -517,6 +523,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad8b9b7db9accfb6f95ce52610b48ed2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b9b7db9accfb6f95ce52610b48ed2e">&#9670;&nbsp;</a></span>_arename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _arename </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>old_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>new_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rename/move a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">old_path</td><td>Old DOS 8.3 path. </td></tr>
+    <tr><td class="paramname">new_path</td><td>New DOS 8.3 path. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+
+</div>
+</div>
 <a id="ae76962f6f21477b01bb29dd36d5e34b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae76962f6f21477b01bb29dd36d5e34b9">&#9670;&nbsp;</a></span>_armdir()</h2>
 
@@ -801,6 +845,44 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path to the new directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+
+</div>
+</div>
+<a id="aa8a0f6d38300668689ccac39168c5fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a0f6d38300668689ccac39168c5fe4">&#9670;&nbsp;</a></span>_wrename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short _wrename </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>old_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>new_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rename/move a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">old_path</td><td>Old UTF-16 LFN path. </td></tr>
+    <tr><td class="paramname">new_path</td><td>New UTF-16 LFN path. </td></tr>
   </table>
   </dd>
 </dl>
