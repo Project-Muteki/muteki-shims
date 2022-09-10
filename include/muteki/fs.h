@@ -300,4 +300,23 @@ extern short _achdir(const char *path);
  * @return 0 if the operation is successful, -1 if there's an error.
  */
 extern short _wchdir(const UTF16 *path);
+
+/**
+ * @brief Rename/move a file.
+ *
+ * @param old_path Old DOS 8.3 path.
+ * @param new_path New DOS 8.3 path.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern short _arename(const char *old_path, const char *new_path);
+
+/**
+ * @brief Rename/move a file.
+ *
+ * @param old_path Old UTF-16 LFN path.
+ * @param new_path New UTF-16 LFN path.
+ * @return 0 if the operation is successful, -1 if there's an error.
+ */
+extern short _wrename(const UTF16 *old_path, const UTF16 *new_path);
+
 #endif // __MUTEKI_FS_H__
