@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['testkeyevent_302',['TestKeyEvent',['../event_8h.html#a03c5ca44c93c14b5360bab9555abe754',1,'event.h']]],
-  ['testpendevent_303',['TestPendEvent',['../event_8h.html#adcc9c2898ac3580bcdc8e4557b794f9c',1,'event.h']]]
+  ['scrolldown_300',['ScrollDown',['../canvas_8h.html#a67466ab247cac07728916e19b5e60dde',1,'canvas.h']]],
+  ['scrollleft_301',['ScrollLeft',['../canvas_8h.html#ad73ff8fc68cb4aa0a67ef824ad679498',1,'canvas.h']]],
+  ['scrollright_302',['ScrollRight',['../canvas_8h.html#afacb044524d273f84760b74ae0910179',1,'canvas.h']]],
+  ['scrollup_303',['ScrollUp',['../canvas_8h.html#a502ba629582f39f4301680052db48620',1,'canvas.h']]],
+  ['setfonttype_304',['SetFontType',['../canvas_8h.html#a5970eb790f1aba8578b1220ed4aa9740',1,'canvas.h']]]
 ];

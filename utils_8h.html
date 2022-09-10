@@ -90,11 +90,55 @@ Functions</h2></td></tr>
 <tr class="memitem:ac4d2062355dec698128f8049434b4129"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvram__descriptor__t.html">vram_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ac4d2062355dec698128f8049434b4129">GetActiveVRamAddress</a> ()</td></tr>
 <tr class="memdesc:ac4d2062355dec698128f8049434b4129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor for the currently active framebuffer.  <a href="utils_8h.html#ac4d2062355dec698128f8049434b4129">More...</a><br /></td></tr>
 <tr class="separator:ac4d2062355dec698128f8049434b4129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44d9cafd7ec96afc1bed4b654711e8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#af44d9cafd7ec96afc1bed4b654711e8d">Buzzer</a> (int frequency, unsigned short duration)</td></tr>
+<tr class="memdesc:af44d9cafd7ec96afc1bed4b654711e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a tone using the built in piezo speaker. This will block the execution.  <a href="utils_8h.html#af44d9cafd7ec96afc1bed4b654711e8d">More...</a><br /></td></tr>
+<tr class="separator:af44d9cafd7ec96afc1bed4b654711e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212a842a05302253aae6192eaa1ec53f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">WarningBeep</a> ()</td></tr>
+<tr class="memdesc:a212a842a05302253aae6192eaa1ec53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker. This usually plays a 4000Hz tone for 10ms.  <a href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">More...</a><br /></td></tr>
+<tr class="separator:a212a842a05302253aae6192eaa1ec53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Miscellaneous utility syscalls. </p>
 <p>Contains syscalls that cannot be easily grouped with other syscalls. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="af44d9cafd7ec96afc1bed4b654711e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af44d9cafd7ec96afc1bed4b654711e8d">&#9670;&nbsp;</a></span>Buzzer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Buzzer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Play a tone using the built in piezo speaker. This will block the execution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>Frequency of the tone in Hz. </td></tr>
+    <tr><td class="paramname">duration</td><td>Duration of the tone in milliseconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. </dd></dl>
+
+</div>
+</div>
 <a id="ac4d2062355dec698128f8049434b4129"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4d2062355dec698128f8049434b4129">&#9670;&nbsp;</a></span>GetActiveVRamAddress()</h2>
 
@@ -112,6 +156,26 @@ Functions</h2></td></tr>
 
 <p>Get the descriptor for the currently active framebuffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The framebuffer descriptor. </dd></dl>
+
+</div>
+</div>
+<a id="a212a842a05302253aae6192eaa1ec53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a212a842a05302253aae6192eaa1ec53f">&#9670;&nbsp;</a></span>WarningBeep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WarningBeep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Play a beep using the built in piezo speaker. This usually plays a 4000Hz tone for 10ms. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. </dd></dl>
 
 </div>
 </div>

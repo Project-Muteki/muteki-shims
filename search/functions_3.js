@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['executeprogram_268',['ExecuteProgram',['../loader_8h.html#a02dd228d313ebb256fe4ced9425f274c',1,'loader.h']]]
+  ['deviceiocontrol_270',['DeviceIoControl',['../devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b',1,'devio.h']]]
 ];

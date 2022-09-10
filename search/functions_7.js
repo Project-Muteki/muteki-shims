@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['oscreatethread_286',['OSCreateThread',['../threading_8h.html#a26d3d1e3502eb1bc707254879fed211d',1,'threading.h']]],
-  ['osdeletecriticalsection_287',['OSDeleteCriticalSection',['../threading_8h.html#a030db07f842dadfa140db8a26904e7cd',1,'threading.h']]],
-  ['osentercriticalsection_288',['OSEnterCriticalSection',['../threading_8h.html#adc2599d951d59c95d3350112f4c629d6',1,'threading.h']]],
-  ['osgetlasterror_289',['OSGetLastError',['../errno_8h.html#ad18c4185692b2c3c69c7fc7612bca683',1,'errno.h']]],
-  ['osinitcriticalsection_290',['OSInitCriticalSection',['../threading_8h.html#a73612b6ec4676c415bf74e23ea2b29c8',1,'threading.h']]],
-  ['osleavecriticalsection_291',['OSLeaveCriticalSection',['../threading_8h.html#afad04795e186d7f6a45b46850c2f472c',1,'threading.h']]],
-  ['ossetlasterror_292',['OSSetLastError',['../errno_8h.html#aeaa5fa918b295c79d957f225a271dd13',1,'errno.h']]],
-  ['ossleep_293',['OSSleep',['../threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573',1,'threading.h']]]
+  ['lcalloc_284',['lcalloc',['../memory_8h.html#a29f0b67ae504ae036f6bbe1dea3d586f',1,'memory.h']]],
+  ['lmalloc_285',['lmalloc',['../memory_8h.html#a2dae27cf36bebc1be460ed2441b898cf',1,'memory.h']]],
+  ['loadprograma_286',['LoadProgramA',['../loader_8h.html#a2ee44a94b63bb284bee545147a4f966a',1,'loader.h']]],
+  ['loadprogramw_287',['LoadProgramW',['../loader_8h.html#a71f218eb1a142fe20db1179e7f4f6416',1,'loader.h']]],
+  ['lrealloc_288',['lrealloc',['../memory_8h.html#aa4bc3b3fe60cd084536c6431416c67e2',1,'memory.h']]]
 ];
