@@ -19,6 +19,9 @@
  */
 #define SYS_PATH_MAX_CU 256
 
+/**
+ * @brief Structure for find context.
+ */
 typedef struct {
     uint8_t *unk0; // 0x0
     uint8_t *unk4; // 0x4
@@ -66,6 +69,32 @@ typedef struct {
      */
     uint8_t attrib; // 0x25
 } find_context_t;
+
+/**
+ * @brief Filesystem usage statistics.
+ */
+typedef struct {
+    /** Filesystem size in KiB. */
+    size_t size_kb;
+    /** Seems to be the same as fs_stat_t::size_kb. */
+    size_t size2_kb;
+    /** Seems to be the same as fs_stat_t::size_kb. */
+    size_t size3_kb;
+    /** Used space in KiB. */
+    size_t used_kb;
+    /** Available space in KiB. */
+    size_t free_kb;
+    /** Filesystem size in bytes. */
+    unsigned long long SYS_DWORD size;
+    /** Seems to be the same as fs_stat_t::size. */
+    unsigned long long SYS_DWORD size2;
+    /** Seems to be the same as fs_stat_t::size. */
+    unsigned long long SYS_DWORD size3;
+    /** Used space in bytes. */
+    unsigned long long SYS_DWORD used;
+    /** Available space in bytes. */
+    unsigned long long SYS_DWORD free;
+} fs_stat_t;
 
 /**
  * @brief Read year from find timestamp.
@@ -318,5 +347,14 @@ extern short _arename(const char *old_path, const char *new_path);
  * @return 0 if the operation is successful, -1 if there's an error.
  */
 extern short _wrename(const UTF16 *old_path, const UTF16 *new_path);
+
+/**
+ * @brief Get filesystem usage stats.
+ *
+ * @param fsid Filesystem ID.
+ * @param fs_stat Target to store filesystem usage stats.
+ * @return 0 on success.
+ */
+int FSGetDiskRoomState(int fsid, fs_stat_t *fs_stat);
 
 #endif // __MUTEKI_FS_H__
