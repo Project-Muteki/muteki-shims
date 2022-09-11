@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['getactivevramaddress_274',['GetActiveVRamAddress',['../utils_8h.html#ac4d2062355dec698128f8049434b4129',1,'utils.h']]],
-  ['getcharwidth_275',['GetCharWidth',['../canvas_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b',1,'canvas.h']]],
-  ['getcurrentpatha_276',['GetCurrentPathA',['../loader_8h.html#a39b6cf2809e162633a1ff88ae1bebb17',1,'loader.h']]],
-  ['getcurrentpathw_277',['GetCurrentPathW',['../loader_8h.html#acf0d5e4856f9354a8efa1dc2a8b74c49',1,'loader.h']]],
-  ['getevent_278',['GetEvent',['../event_8h.html#afa4eabdb16241c67349313776269703a',1,'event.h']]],
-  ['getfontheight_279',['GetFontHeight',['../canvas_8h.html#a009e14c23044791c4250d8242ec811c4',1,'canvas.h']]],
-  ['getfreememory_280',['GetFreeMemory',['../memory_8h.html#a11e993980c4031eb09cafad85ddeb952',1,'memory.h']]],
-  ['getmaxscrx_281',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
-  ['getmaxscry_282',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
-  ['getsystime_283',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]]
+  ['getactivevramaddress_275',['GetActiveVRamAddress',['../utils_8h.html#ac4d2062355dec698128f8049434b4129',1,'utils.h']]],
+  ['getcharwidth_276',['GetCharWidth',['../canvas_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b',1,'canvas.h']]],
+  ['getcurrentpatha_277',['GetCurrentPathA',['../loader_8h.html#a39b6cf2809e162633a1ff88ae1bebb17',1,'loader.h']]],
+  ['getcurrentpathw_278',['GetCurrentPathW',['../loader_8h.html#acf0d5e4856f9354a8efa1dc2a8b74c49',1,'loader.h']]],
+  ['getevent_279',['GetEvent',['../event_8h.html#afa4eabdb16241c67349313776269703a',1,'event.h']]],
+  ['getfontheight_280',['GetFontHeight',['../canvas_8h.html#a009e14c23044791c4250d8242ec811c4',1,'canvas.h']]],
+  ['getfreememory_281',['GetFreeMemory',['../memory_8h.html#a11e993980c4031eb09cafad85ddeb952',1,'memory.h']]],
+  ['getmaxscrx_282',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
+  ['getmaxscry_283',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
+  ['getsystime_284',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]]
 ];

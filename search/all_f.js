@@ -8,11 +8,12 @@ var searchData=
   ['setfonttype_186',['SetFontType',['../canvas_8h.html#a5970eb790f1aba8578b1220ed4aa9740',1,'canvas.h']]],
   ['size_187',['size',['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t']]],
   ['subroutine_188',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
-  ['sys_5ferase_5ffailed_189',['SYS_ERASE_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1a4bb2b630005160e7d9781e280e7011',1,'errno.h']]],
-  ['sys_5flock_5fswitch_5fenabled_190',['SYS_LOCK_SWITCH_ENABLED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aef656c2d75c8bd9ec763b63cf71b43c2',1,'errno.h']]],
-  ['sys_5flow_5fbattery_191',['SYS_LOW_BATTERY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4caeb4c37ddfa450dad5b16c51ad6e73',1,'errno.h']]],
-  ['sys_5fout_5fof_5fmemory_192',['SYS_OUT_OF_MEMORY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ae664d39bd61bb26eb69c92c3051c29b4',1,'errno.h']]],
-  ['sys_5fpath_5fmax_5fcu_193',['SYS_PATH_MAX_CU',['../fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb',1,'fs.h']]],
-  ['sys_5fseek_5fwhence_5fe_194',['sys_seek_whence_e',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51',1,'file.h']]],
-  ['sys_5fstorage_5fdevice_5fnot_5ffound_195',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1',1,'errno.h']]]
+  ['sys_5fdword_189',['SYS_DWORD',['../common_8h.html#a88f7ac10e602e1a35668915d9edd1030',1,'common.h']]],
+  ['sys_5ferase_5ffailed_190',['SYS_ERASE_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1a4bb2b630005160e7d9781e280e7011',1,'errno.h']]],
+  ['sys_5flock_5fswitch_5fenabled_191',['SYS_LOCK_SWITCH_ENABLED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aef656c2d75c8bd9ec763b63cf71b43c2',1,'errno.h']]],
+  ['sys_5flow_5fbattery_192',['SYS_LOW_BATTERY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4caeb4c37ddfa450dad5b16c51ad6e73',1,'errno.h']]],
+  ['sys_5fout_5fof_5fmemory_193',['SYS_OUT_OF_MEMORY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ae664d39bd61bb26eb69c92c3051c29b4',1,'errno.h']]],
+  ['sys_5fpath_5fmax_5fcu_194',['SYS_PATH_MAX_CU',['../fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb',1,'fs.h']]],
+  ['sys_5fseek_5fwhence_5fe_195',['sys_seek_whence_e',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51',1,'file.h']]],
+  ['sys_5fstorage_5fdevice_5fnot_5ffound_196',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1',1,'errno.h']]]
 ];
