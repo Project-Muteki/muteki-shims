@@ -18,6 +18,14 @@
  * @brief Thread function type
  */
 typedef void (*thread_func_t)(void *user_data);
+
+/**
+ * @brief Thread state enum.
+ */
+enum thread_state_e {
+    THREAD_SUSPENDED = 0x8;
+};
+
 /**
  * @brief Thread descriptor type.
  */
@@ -45,8 +53,8 @@ struct thread_s {
     short unk_0x1c;
     /** Unknown. */
     short unk_0x1e;
-    /** Unknown. */
-    short unk_0x20;
+    /** Current state of the thread. */
+    short state; // 0x20
     /** Slot number. */
     short slot; // 0x22
     /** Lower 3 bit of the slot number. */
@@ -94,10 +102,10 @@ extern void OSSleep(short millis);
  * @param func Function to execute in the new thread.
  * @param user_data User data for the thread.
  * @param stack_size The size of the thread stack.
- * @param arg4 Purpose unknown.
+ * @param defer_start Do not immediately schedule this thread and create it as suspended.
  * @return The thread descriptor.
  */
-extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stack_size, bool arg4);
+extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stack_size, bool defer_start);
 
 /**
  * @brief Get the thread slot number.
