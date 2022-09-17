@@ -19,13 +19,14 @@ var searchData=
   ['slot_5flow3b_5fbit_205',['slot_low3b_bit',['../structthread__s.html#a5583dd9998ebf5151fd6566dc179a07b',1,'thread_s']]],
   ['sp_206',['sp',['../structthread__s.html#af62f74539c792d26ec5c2a38189211b5',1,'thread_s']]],
   ['stack_207',['stack',['../structthread__s.html#a28d2fca44aaeb67e49ba4003631d62ad',1,'thread_s']]],
-  ['subroutine_208',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
-  ['sys_5fdword_209',['SYS_DWORD',['../common_8h.html#a88f7ac10e602e1a35668915d9edd1030',1,'common.h']]],
-  ['sys_5ferase_5ffailed_210',['SYS_ERASE_FAILED',['../errno_8h.html#a18c5f6c9bfb273dcb9f782c1ec783b4a',1,'errno.h']]],
-  ['sys_5flock_5fswitch_5fenabled_211',['SYS_LOCK_SWITCH_ENABLED',['../errno_8h.html#ab61662d41d811063717e21bf3ce8a66b',1,'errno.h']]],
-  ['sys_5flow_5fbattery_212',['SYS_LOW_BATTERY',['../errno_8h.html#ac6d788d21b642e7b6fabf6406cd8f7d9',1,'errno.h']]],
-  ['sys_5fout_5fof_5fmemory_213',['SYS_OUT_OF_MEMORY',['../errno_8h.html#a53a261569c98672aac354ab5baabb5b2',1,'errno.h']]],
-  ['sys_5fpath_5fmax_5fcu_214',['SYS_PATH_MAX_CU',['../fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb',1,'fs.h']]],
-  ['sys_5fseek_5fwhence_5fe_215',['sys_seek_whence_e',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51',1,'file.h']]],
-  ['sys_5fstorage_5fdevice_5fnot_5ffound_216',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#a4749baefbc0b5a5ea24c5000d7fce6f1',1,'errno.h']]]
+  ['state_208',['state',['../structthread__s.html#abebd7c4ae6e27c58cc3b9af2bfaa1cc9',1,'thread_s']]],
+  ['subroutine_209',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
+  ['sys_5fdword_210',['SYS_DWORD',['../common_8h.html#a88f7ac10e602e1a35668915d9edd1030',1,'common.h']]],
+  ['sys_5ferase_5ffailed_211',['SYS_ERASE_FAILED',['../errno_8h.html#a18c5f6c9bfb273dcb9f782c1ec783b4a',1,'errno.h']]],
+  ['sys_5flock_5fswitch_5fenabled_212',['SYS_LOCK_SWITCH_ENABLED',['../errno_8h.html#ab61662d41d811063717e21bf3ce8a66b',1,'errno.h']]],
+  ['sys_5flow_5fbattery_213',['SYS_LOW_BATTERY',['../errno_8h.html#ac6d788d21b642e7b6fabf6406cd8f7d9',1,'errno.h']]],
+  ['sys_5fout_5fof_5fmemory_214',['SYS_OUT_OF_MEMORY',['../errno_8h.html#a53a261569c98672aac354ab5baabb5b2',1,'errno.h']]],
+  ['sys_5fpath_5fmax_5fcu_215',['SYS_PATH_MAX_CU',['../fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb',1,'fs.h']]],
+  ['sys_5fseek_5fwhence_5fe_216',['sys_seek_whence_e',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51',1,'file.h']]],
+  ['sys_5fstorage_5fdevice_5fnot_5ffound_217',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#a4749baefbc0b5a5ea24c5000d7fce6f1',1,'errno.h']]]
 ];
