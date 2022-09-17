@@ -101,6 +101,7 @@ extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stac
 
 /**
  * @brief Get the thread slot number.
+ *
  * On Besta RTOS there is no explicit way to specify thread priority. Priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with OSCreateThread(). User can move threads to these reserved slots by calling the OSSetThreadPriority() function.
  * @param thr The thread descriptor.
  * @return The slot number of the thread.
