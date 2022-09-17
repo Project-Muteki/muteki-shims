@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['ui_5fevent_5ft_209',['ui_event_t',['../structui__event__t.html',1,'']]],
-  ['unk_210',['unk',['../structcritical__section__t.html#a3a547006f3bcee864ba2d57d3a1b2dcc',1,'critical_section_t::unk()'],['../structvram__descriptor__t.html#aa344b7276f564cdf66915f1c41c99ade',1,'vram_descriptor_t::unk()']]],
-  ['unk0_211',['unk0',['../structui__event__t.html#a9e9e52b6d4cc42417738d7fdf8ae13f8',1,'ui_event_t']]],
-  ['unk16_212',['unk16',['../structui__event__t.html#a855a075d199dafd41a8224a45057573f',1,'ui_event_t']]],
-  ['unk20_213',['unk20',['../structui__event__t.html#a54f924d5ee83def24cfba17853fd1ea9',1,'ui_event_t']]],
-  ['unk_5fidx_214',['unk_idx',['../structcritical__section__t.html#aedaa70dad9c8327ad1a55398a50f4560',1,'critical_section_t']]],
-  ['usb_5fdata_215',['usb_data',['../structui__event__t.html#a6000b75d1c3e06a203b823ae4a735fab',1,'ui_event_t']]],
-  ['used_216',['used',['../structfs__stat__t.html#a4a2cd7a7c290cd106bf50e3d02e50547',1,'fs_stat_t']]],
-  ['used_5fkb_217',['used_kb',['../structfs__stat__t.html#abb1cfe3d6ce071d624477adde47a223a',1,'fs_stat_t']]],
-  ['utf16_218',['UTF16',['../common_8h.html#a11673b324737202065319b55ec126bec',1,'common.h']]],
-  ['utils_2eh_219',['utils.h',['../utils_8h.html',1,'']]]
+  ['testkeyevent_217',['TestKeyEvent',['../event_8h.html#a03c5ca44c93c14b5360bab9555abe754',1,'event.h']]],
+  ['testpendevent_218',['TestPendEvent',['../event_8h.html#adcc9c2898ac3580bcdc8e4557b794f9c',1,'event.h']]],
+  ['thr_219',['thr',['../structcritical__section__t.html#adaad734f9d785413734f5ea311f60ef9',1,'critical_section_t']]],
+  ['thread_5ffunc_220',['thread_func',['../structthread__s.html#a7e566c519bffa2fadfa01f0ea71c41d3',1,'thread_s']]],
+  ['thread_5ffunc_5ft_221',['thread_func_t',['../threading_8h.html#a81a1ca79ed325f3c61420e8d30531b55',1,'threading.h']]],
+  ['thread_5finvalid_5fdescriptor_222',['THREAD_INVALID_DESCRIPTOR',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6afbc02cd98cf4039c3d040191b01ee2',1,'errno.h']]],
+  ['thread_5fs_223',['thread_s',['../structthread__s.html',1,'']]],
+  ['thread_5fslot_5ffull_224',['THREAD_SLOT_FULL',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ab3d015479d143e79b5a9a28f6e386d5b',1,'errno.h']]],
+  ['thread_5fstack_5fmalloc_5ffailed_225',['THREAD_STACK_MALLOC_FAILED',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a70f0ad4a707f5bd24b5f62f7a63a3c69',1,'errno.h']]],
+  ['thread_5fstruct_5fmalloc_5ffailed_226',['THREAD_STRUCT_MALLOC_FAILED',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a77c640413619238486abbeafee4a9066',1,'errno.h']]],
+  ['thread_5ft_227',['thread_t',['../threading_8h.html#a2be49e4dddf107b380ba10748317741d',1,'threading.h']]],
+  ['threading_2eh_228',['threading.h',['../threading_8h.html',1,'']]]
 ];

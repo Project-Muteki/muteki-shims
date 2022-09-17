@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['errno_5fns_5fapplet_5fspecific_397',['ERRNO_NS_APPLET_SPECIFIC',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a05a5ebcb4b1ef8ca5ef3cf5b2f6f7e07',1,'errno.h']]],
-  ['errno_5fns_5fexec_398',['ERRNO_NS_EXEC',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a42a7a9000abfbd639e750f5d124bfdfa',1,'errno.h']]],
-  ['errno_5fns_5fkernel_399',['ERRNO_NS_KERNEL',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60',1,'errno.h']]],
-  ['errno_5fns_5fuser_400',['ERRNO_NS_USER',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7',1,'errno.h']]]
+  ['format_5fmessage_5fallocate_5fbuffer_490',['FORMAT_MESSAGE_ALLOCATE_BUFFER',['../errno_8h.html#a4bae49c902f4defacf7ee87d5795c63eaed3a296c165725958259bdd1a05837c1',1,'errno.h']]],
+  ['format_5fmessage_5ffrom_5fsystem_491',['FORMAT_MESSAGE_FROM_SYSTEM',['../errno_8h.html#a4bae49c902f4defacf7ee87d5795c63ead54ca142029e50123af573e07a0bc3b9',1,'errno.h']]]
 ];

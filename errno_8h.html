@@ -68,7 +68,8 @@ $(function() {
   <div class="summary">
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">errno.h File Reference</div>  </div>
 </div><!--header-->
@@ -113,67 +114,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ad8c9085e0bdd5a9b0b159fb117161c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a42a7a9000abfbd639e750f5d124bfdfa">ERRNO_NS_EXEC</a>. <br /></td></tr>
 <tr class="separator:ad8c9085e0bdd5a9b0b159fb117161c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcf282c7663bd0455f40aadcdcd2bf73"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73">errno_kernel_e</a> { <br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a3e7f505e5c40405b66475bbdec7bdad1">PERIPHERAL_COMM_FAILED</a> = 0x0003, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73abd4774fb9bb495819378bba9152090af">GENERAL_HW_ERROR</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4216fadfb49f3a73f0e33b2785d59f7e">FTL_DATA_CORRUPTED</a> = 0x0010, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aa38c1fb061edc52a44e085f21ce3b564">FTL_ECC_FAILED</a>, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ad38c3244c24ae07136a008a3cc3581ce">FTL_ECC_TRIGGERED</a> = 0x0018, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a540609a19a3cae437a66a70cb0473184">FTL_INVALID_LBA</a> = 0x0021, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a29b64c4df5539d6b9d7c48167a547e04">MEDIUM_WP_ENABLED</a> = 0x0027, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a41cd550f1c50dbb33e869acfa6a04aef">MEDIUM_CHANGED</a>, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a73fcbdda1c5e34791592fd651bc8b5e2">MEDIUM_INCOMPATIBLE</a> = 0x0030, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a2f50285586e8f4a425b66d665c7af7ce">MEDIUM_ERROR</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a507616c12f4d34067d840ab7a8a5b2a0">MEDIUM_UNLOADED</a> = 0x003a, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1">SYS_STORAGE_DEVICE_NOT_FOUND</a> = 0x0060, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1a4bb2b630005160e7d9781e280e7011">SYS_ERASE_FAILED</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ae664d39bd61bb26eb69c92c3051c29b4">SYS_OUT_OF_MEMORY</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4caeb4c37ddfa450dad5b16c51ad6e73">SYS_LOW_BATTERY</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aef656c2d75c8bd9ec763b63cf71b43c2">SYS_LOCK_SWITCH_ENABLED</a>, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a5bd85d72489c426e763e0bef0aab4d1f">MKFS_PROMPT</a> = 0x0102, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1351c2e286691222603122d92288fcc4">MKFS_UNSUPPORTED</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a60be8f32c7aaa175053bde79072ab9c8">MKFS_NO_SPACE_LEFT</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a2fba26e57348cab188bded7b80bf83ec">MKFS_MODE_ERROR</a>, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aa623ab6f85a3a072a5cd2436721ecb4b">MKFS_IO_ERROR</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a6216998859f4d106daba5df63995d240">FS_INVALID_DRIVE_LETTER</a> = 0x0113, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a02d08333a73ed724b6bffba1ec9f96a1">FS_INVALID_FILENAME</a> = 0x0140, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a53d74ea81919958b19a5f9a9af825ee0">FS_OPERATION_ERROR</a>, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aeb42dca21b6afb1db9d6ffe7389a7a76">FS_ENTRY_EXISTS</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aa7d76a6880197d363ec0680a20dc6bd5">FS_DIR_FULL</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73af748da39eeab6d2f4359118c40c74596">FS_NO_SUCH_ENTRY</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a7ca75083a470bd45594660077eb23486">FS_FILE_UNAVAILABLE</a>, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a8206fbc2e5a818a0ed99100fead5af15">FS_FILE_OOB_ACCESS</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aec7d92c73c7f72378e94d5dd4016d625">FS_CONFLICTING_ATTR</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a68b3de842e6b6507313a2459251e2f82">FS_TOO_MANY_OPEN_FILES</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a0316bf4c0fe63e2e2408a80a5ab2213f">FS_FILE_LOCKED</a>, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a11ae50fe20efd8f8c14bc464fad570fc">FS_FILE_ATTR_ERROR</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1279d9a807472f2d27d88068eeb03066">FS_NO_SPACE_LEFT</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73af23b08ac650892a82a09d1e6b93694bc">FS_NO_SUCH_ENTRY_ALT</a> = 0x0154, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a36f65a3b5e20cb67d64ed8ed25058aef">FS_READ_ONLY_FILE</a> = 0x0158, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a134aa1230863f0e7f124e9ff504e045c">FS_PATH_TOO_LONG</a> = 0x0162, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a35973a57f7fe59f5d81754022bd8c737">FS_DIR_FULL_ALT1</a> = 0x0165, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ac8b7c338f2af6aefe7128da1c62d8f16">FS_DIR_FULL_ALT2</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4bb96a0cea4da7dfc4fac08d6c9fa9bc">DB_CORRUPTED</a> = 0x0200, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a7555d9e53b2829fecb6402b95f5087d4">DB_OPEN_FAILED</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a59e9093a53bfe2eb483523435641b0dc">DB_INDEX_FULL_DELETE</a> = 0x0203, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aac765a6820ebfb3898d963e8a6fd38b4">DB_FULL</a>, 
-<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a12b9675338923bfaa19bd892942b4a6e">DB_INDEX_FULL_SYNC</a>, 
-<br />
-&#160;&#160;<a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a99f23a399ca10332ef65938521c7e638">DB_TOO_MANY_OPEN_FILES</a>
-<br />
+<tr class="memitem:a36f8929d56bd487eb91b68bdc2cb2455"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> { <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ab3d015479d143e79b5a9a28f6e386d5b">THREAD_SLOT_FULL</a> = 0x002b, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a77c640413619238486abbeafee4a9066">THREAD_STRUCT_MALLOC_FAILED</a> = 0x0046, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a70f0ad4a707f5bd24b5f62f7a63a3c69">THREAD_STACK_MALLOC_FAILED</a> = 0x0066, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6afbc02cd98cf4039c3d040191b01ee2">THREAD_INVALID_DESCRIPTOR</a> = 0x006e
  }</td></tr>
-<tr class="memdesc:abcf282c7663bd0455f40aadcdcd2bf73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a>.  <a href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73">More...</a><br /></td></tr>
-<tr class="separator:abcf282c7663bd0455f40aadcdcd2bf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a36f8929d56bd487eb91b68bdc2cb2455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7">ERRNO_NS_USER</a>.  <a href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">More...</a><br /></td></tr>
+<tr class="separator:a36f8929d56bd487eb91b68bdc2cb2455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -192,6 +139,100 @@ Functions</h2></td></tr>
 <tr class="memitem:a3e86bca27cfb284b8afb25762cc4f372"><td class="memItemLeft" align="right" valign="top"><a class="el" href="errno_8h.html#a10935ed5a8e001707b2cc7bfc07cdfc6">kerrno_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a3e86bca27cfb284b8afb25762cc4f372">_GetLastError</a> (void)</td></tr>
 <tr class="memdesc:a3e86bca27cfb284b8afb25762cc4f372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get errno.  <a href="errno_8h.html#a3e86bca27cfb284b8afb25762cc4f372">More...</a><br /></td></tr>
 <tr class="separator:a3e86bca27cfb284b8afb25762cc4f372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a78e3598f1212ee515c512e80e71753fa"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a78e3598f1212ee515c512e80e71753fa">PERIPHERAL_COMM_FAILED</a> = 0x0003</td></tr>
+<tr class="memdesc:a78e3598f1212ee515c512e80e71753fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a>.  <a href="errno_8h.html#a78e3598f1212ee515c512e80e71753fa">More...</a><br /></td></tr>
+<tr class="separator:a78e3598f1212ee515c512e80e71753fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0bdb4fd5041dbc48ffb71058ab9f5a"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a3a0bdb4fd5041dbc48ffb71058ab9f5a">GENERAL_HW_ERROR</a> = 0x0003</td></tr>
+<tr class="separator:a3a0bdb4fd5041dbc48ffb71058ab9f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f86755dce0fd56486998e5fed2728d"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ac3f86755dce0fd56486998e5fed2728d">FTL_DATA_CORRUPTED</a> = 0x0010</td></tr>
+<tr class="separator:ac3f86755dce0fd56486998e5fed2728d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb37ae7d79dc6cc9010b37fcc2b4df0a"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#aeb37ae7d79dc6cc9010b37fcc2b4df0a">FTL_ECC_FAILED</a> = 0x0010</td></tr>
+<tr class="separator:aeb37ae7d79dc6cc9010b37fcc2b4df0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0856d6f475396927ff4e9651ae12be04"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a0856d6f475396927ff4e9651ae12be04">FTL_ECC_TRIGGERED</a> = 0x0018</td></tr>
+<tr class="separator:a0856d6f475396927ff4e9651ae12be04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4b43406ecc41cb9c08e9c6cdb4b506"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a6d4b43406ecc41cb9c08e9c6cdb4b506">FTL_INVALID_LBA</a> = 0x0021</td></tr>
+<tr class="separator:a6d4b43406ecc41cb9c08e9c6cdb4b506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c6aec8d613c0c44524ac53f68884ef"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a44c6aec8d613c0c44524ac53f68884ef">MEDIUM_WP_ENABLED</a> = 0x0027</td></tr>
+<tr class="separator:a44c6aec8d613c0c44524ac53f68884ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ae7a459ca3a201bf482e29f4439ccb4"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a9ae7a459ca3a201bf482e29f4439ccb4">MEDIUM_CHANGED</a> = 0x0027</td></tr>
+<tr class="separator:a9ae7a459ca3a201bf482e29f4439ccb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047d047f866d971f675904f1638e9f4c"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a047d047f866d971f675904f1638e9f4c">MEDIUM_INCOMPATIBLE</a> = 0x0030</td></tr>
+<tr class="separator:a047d047f866d971f675904f1638e9f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7504acf8d09c12dd4c0d92a9504adc"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#aec7504acf8d09c12dd4c0d92a9504adc">MEDIUM_ERROR</a> = 0x0030</td></tr>
+<tr class="separator:aec7504acf8d09c12dd4c0d92a9504adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa583ff3126b63b8316d6750ed378776f"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#aa583ff3126b63b8316d6750ed378776f">MEDIUM_UNLOADED</a> = 0x003a</td></tr>
+<tr class="separator:aa583ff3126b63b8316d6750ed378776f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4749baefbc0b5a5ea24c5000d7fce6f1"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a4749baefbc0b5a5ea24c5000d7fce6f1">SYS_STORAGE_DEVICE_NOT_FOUND</a> = 0x0060</td></tr>
+<tr class="separator:a4749baefbc0b5a5ea24c5000d7fce6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c5f6c9bfb273dcb9f782c1ec783b4a"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a18c5f6c9bfb273dcb9f782c1ec783b4a">SYS_ERASE_FAILED</a> = 0x0060</td></tr>
+<tr class="separator:a18c5f6c9bfb273dcb9f782c1ec783b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a261569c98672aac354ab5baabb5b2"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a53a261569c98672aac354ab5baabb5b2">SYS_OUT_OF_MEMORY</a> = 0x0060</td></tr>
+<tr class="separator:a53a261569c98672aac354ab5baabb5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d788d21b642e7b6fabf6406cd8f7d9"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ac6d788d21b642e7b6fabf6406cd8f7d9">SYS_LOW_BATTERY</a> = 0x0060</td></tr>
+<tr class="separator:ac6d788d21b642e7b6fabf6406cd8f7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61662d41d811063717e21bf3ce8a66b"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ab61662d41d811063717e21bf3ce8a66b">SYS_LOCK_SWITCH_ENABLED</a> = 0x0060</td></tr>
+<tr class="separator:ab61662d41d811063717e21bf3ce8a66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385b9fe20a0b77e8e39718daecc64d91"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a385b9fe20a0b77e8e39718daecc64d91">MKFS_PROMPT</a> = 0x0102</td></tr>
+<tr class="separator:a385b9fe20a0b77e8e39718daecc64d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4dbc6793843e0201c61f63ca541dbf"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#aed4dbc6793843e0201c61f63ca541dbf">MKFS_UNSUPPORTED</a> = 0x0102</td></tr>
+<tr class="separator:aed4dbc6793843e0201c61f63ca541dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cea099d7cf7fd84ea0e2067f34ab9d2"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a3cea099d7cf7fd84ea0e2067f34ab9d2">MKFS_NO_SPACE_LEFT</a> = 0x0102</td></tr>
+<tr class="separator:a3cea099d7cf7fd84ea0e2067f34ab9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62c943db69a36632f1c1f3c5e9fd2b8"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ab62c943db69a36632f1c1f3c5e9fd2b8">MKFS_MODE_ERROR</a> = 0x0102</td></tr>
+<tr class="separator:ab62c943db69a36632f1c1f3c5e9fd2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f42fa8de0b339659316b4540da4fd8e"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a4f42fa8de0b339659316b4540da4fd8e">MKFS_IO_ERROR</a> = 0x0102</td></tr>
+<tr class="separator:a4f42fa8de0b339659316b4540da4fd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9e3cfa6ccc60e831101c9856ecd9c9"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a8d9e3cfa6ccc60e831101c9856ecd9c9">FS_INVALID_DRIVE_LETTER</a> = 0x0113</td></tr>
+<tr class="separator:a8d9e3cfa6ccc60e831101c9856ecd9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75f001d8d3ce6a8f38f639ae491e6951"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a75f001d8d3ce6a8f38f639ae491e6951">FS_INVALID_FILENAME</a> = 0x0140</td></tr>
+<tr class="separator:a75f001d8d3ce6a8f38f639ae491e6951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8ac117d46b10936257d2f9bd8bc9a2"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ade8ac117d46b10936257d2f9bd8bc9a2">FS_OPERATION_ERROR</a> = 0x0140</td></tr>
+<tr class="separator:ade8ac117d46b10936257d2f9bd8bc9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab1c3ec6a46bda8d109b4aa277fef39"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a0ab1c3ec6a46bda8d109b4aa277fef39">FS_ENTRY_EXISTS</a> = 0x0140</td></tr>
+<tr class="separator:a0ab1c3ec6a46bda8d109b4aa277fef39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5eea0a7997565192e493fccf358416"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a6e5eea0a7997565192e493fccf358416">FS_DIR_FULL</a> = 0x0140</td></tr>
+<tr class="separator:a6e5eea0a7997565192e493fccf358416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9575f2e55b487a0d466f5ef0f04e2af"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ad9575f2e55b487a0d466f5ef0f04e2af">FS_NO_SUCH_ENTRY</a> = 0x0140</td></tr>
+<tr class="separator:ad9575f2e55b487a0d466f5ef0f04e2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6eb448dd7087107afe8a1bfa00f7996"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ae6eb448dd7087107afe8a1bfa00f7996">FS_FILE_UNAVAILABLE</a> = 0x0140</td></tr>
+<tr class="separator:ae6eb448dd7087107afe8a1bfa00f7996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7f9e5726ad9accef589c6545e423cc"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#aed7f9e5726ad9accef589c6545e423cc">FS_FILE_OOB_ACCESS</a> = 0x0140</td></tr>
+<tr class="separator:aed7f9e5726ad9accef589c6545e423cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9827c16d2a5ad2b88a694a9c4f33ff2a"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a9827c16d2a5ad2b88a694a9c4f33ff2a">FS_CONFLICTING_ATTR</a> = 0x0140</td></tr>
+<tr class="separator:a9827c16d2a5ad2b88a694a9c4f33ff2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ed67d784ce635491c31f25150aad4e8"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a3ed67d784ce635491c31f25150aad4e8">FS_TOO_MANY_OPEN_FILES</a> = 0x0140</td></tr>
+<tr class="separator:a3ed67d784ce635491c31f25150aad4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c244136fb9e2c20ad7f3ac606645dc"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ac1c244136fb9e2c20ad7f3ac606645dc">FS_FILE_LOCKED</a> = 0x0140</td></tr>
+<tr class="separator:ac1c244136fb9e2c20ad7f3ac606645dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb16be6adbe7b8f4ea57778e2c5007c"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a8cb16be6adbe7b8f4ea57778e2c5007c">FS_FILE_ATTR_ERROR</a> = 0x0140</td></tr>
+<tr class="separator:a8cb16be6adbe7b8f4ea57778e2c5007c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae663f7b4ddd318c45e65a3b19014f964"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ae663f7b4ddd318c45e65a3b19014f964">FS_NO_SPACE_LEFT</a> = 0x0140</td></tr>
+<tr class="separator:ae663f7b4ddd318c45e65a3b19014f964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc57e03ec081cbfdf41637be356182a"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a8bc57e03ec081cbfdf41637be356182a">FS_NO_SUCH_ENTRY_ALT</a> = 0x0154</td></tr>
+<tr class="separator:a8bc57e03ec081cbfdf41637be356182a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5333fea246b3e1b10adb0e387023de"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#aaa5333fea246b3e1b10adb0e387023de">FS_READ_ONLY_FILE</a> = 0x0158</td></tr>
+<tr class="separator:aaa5333fea246b3e1b10adb0e387023de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3219695537bccfc6dfbff25a78f37009"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a3219695537bccfc6dfbff25a78f37009">FS_PATH_TOO_LONG</a> = 0x0162</td></tr>
+<tr class="separator:a3219695537bccfc6dfbff25a78f37009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10fb25504206bc2335bd9dd1889f7a82"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a10fb25504206bc2335bd9dd1889f7a82">FS_DIR_FULL_ALT1</a> = 0x0165</td></tr>
+<tr class="separator:a10fb25504206bc2335bd9dd1889f7a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3d4f45ed4526835e4a6c83ef4143ac"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a6f3d4f45ed4526835e4a6c83ef4143ac">FS_DIR_FULL_ALT2</a> = 0x0165</td></tr>
+<tr class="separator:a6f3d4f45ed4526835e4a6c83ef4143ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b48cf22314fc228f7295e45fa0714df"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a0b48cf22314fc228f7295e45fa0714df">DB_CORRUPTED</a> = 0x0200</td></tr>
+<tr class="separator:a0b48cf22314fc228f7295e45fa0714df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae1711b9bfb93cbea7e3e33d0162cb3f"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#aae1711b9bfb93cbea7e3e33d0162cb3f">DB_OPEN_FAILED</a> = 0x0200</td></tr>
+<tr class="separator:aae1711b9bfb93cbea7e3e33d0162cb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1fb8c60268d246ca4fa786dc538b7c1"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ad1fb8c60268d246ca4fa786dc538b7c1">DB_INDEX_FULL_DELETE</a> = 0x0203</td></tr>
+<tr class="separator:ad1fb8c60268d246ca4fa786dc538b7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4676cc92d4f1c08f138a8ad7ed94b7"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a1f4676cc92d4f1c08f138a8ad7ed94b7">DB_FULL</a> = 0x0203</td></tr>
+<tr class="separator:a1f4676cc92d4f1c08f138a8ad7ed94b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae283c814f284352da842aa68627e47f1"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#ae283c814f284352da842aa68627e47f1">DB_INDEX_FULL_SYNC</a> = 0x0203</td></tr>
+<tr class="separator:ae283c814f284352da842aa68627e47f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db7e01a7cc0ca8e76982f473c09585a"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a9db7e01a7cc0ca8e76982f473c09585a">DB_TOO_MANY_OPEN_FILES</a> = 0x0203</td></tr>
+<tr class="separator:a9db7e01a7cc0ca8e76982f473c09585a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Besta error code constants and functions. </p>
@@ -212,114 +253,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="abcf282c7663bd0455f40aadcdcd2bf73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcf282c7663bd0455f40aadcdcd2bf73">&#9670;&nbsp;</a></span>errno_kernel_e</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73">errno_kernel_e</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a>. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a3e7f505e5c40405b66475bbdec7bdad1"></a>PERIPHERAL_COMM_FAILED&#160;</td><td class="fielddoc"><p>Peripheral communication failed. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73abd4774fb9bb495819378bba9152090af"></a>GENERAL_HW_ERROR&#160;</td><td class="fielddoc"><p>General hardware error. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a4216fadfb49f3a73f0e33b2785d59f7e"></a>FTL_DATA_CORRUPTED&#160;</td><td class="fielddoc"><p>FTL: Data corruption detected. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73aa38c1fb061edc52a44e085f21ce3b564"></a>FTL_ECC_FAILED&#160;</td><td class="fielddoc"><p>FTL: Data corruption detected and error correction attempt failed. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73ad38c3244c24ae07136a008a3cc3581ce"></a>FTL_ECC_TRIGGERED&#160;</td><td class="fielddoc"><p>FTL: Data corruption detected and error correction attempt succeeded. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a540609a19a3cae437a66a70cb0473184"></a>FTL_INVALID_LBA&#160;</td><td class="fielddoc"><p>FTL: Invalid Logical Block Address. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a29b64c4df5539d6b9d7c48167a547e04"></a>MEDIUM_WP_ENABLED&#160;</td><td class="fielddoc"><p>Medium is write protected. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a41cd550f1c50dbb33e869acfa6a04aef"></a>MEDIUM_CHANGED&#160;</td><td class="fielddoc"><p>Medium changed </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a73fcbdda1c5e34791592fd651bc8b5e2"></a>MEDIUM_INCOMPATIBLE&#160;</td><td class="fielddoc"><p>Medium is of an incompatible type. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a2f50285586e8f4a425b66d665c7af7ce"></a>MEDIUM_ERROR&#160;</td><td class="fielddoc"><p>Medium I/O error. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a507616c12f4d34067d840ab7a8a5b2a0"></a>MEDIUM_UNLOADED&#160;</td><td class="fielddoc"><p>Medium is not loaded. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1"></a>SYS_STORAGE_DEVICE_NOT_FOUND&#160;</td><td class="fielddoc"><p>Storage device not found. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a1a4bb2b630005160e7d9781e280e7011"></a>SYS_ERASE_FAILED&#160;</td><td class="fielddoc"><p>Erase of storage device failed. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73ae664d39bd61bb26eb69c92c3051c29b4"></a>SYS_OUT_OF_MEMORY&#160;</td><td class="fielddoc"><p>Out of memory. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a4caeb4c37ddfa450dad5b16c51ad6e73"></a>SYS_LOW_BATTERY&#160;</td><td class="fielddoc"><p>Low battery. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73aef656c2d75c8bd9ec763b63cf71b43c2"></a>SYS_LOCK_SWITCH_ENABLED&#160;</td><td class="fielddoc"><p>Lock switch is on. System is locked. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a5bd85d72489c426e763e0bef0aab4d1f"></a>MKFS_PROMPT&#160;</td><td class="fielddoc"><p>Block device format prompt. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a1351c2e286691222603122d92288fcc4"></a>MKFS_UNSUPPORTED&#160;</td><td class="fielddoc"><p>Block device needs formatting. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a60be8f32c7aaa175053bde79072ab9c8"></a>MKFS_NO_SPACE_LEFT&#160;</td><td class="fielddoc"><p>mkfs: No space left for device. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a2fba26e57348cab188bded7b80bf83ec"></a>MKFS_MODE_ERROR&#160;</td><td class="fielddoc"><p>mkfs: Mode error. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73aa623ab6f85a3a072a5cd2436721ecb4b"></a>MKFS_IO_ERROR&#160;</td><td class="fielddoc"><p>mkfs: I/O error. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a6216998859f4d106daba5df63995d240"></a>FS_INVALID_DRIVE_LETTER&#160;</td><td class="fielddoc"><p>Invalid drive letter </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a02d08333a73ed724b6bffba1ec9f96a1"></a>FS_INVALID_FILENAME&#160;</td><td class="fielddoc"><p>Filename contains invalid characters. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a53d74ea81919958b19a5f9a9af825ee0"></a>FS_OPERATION_ERROR&#160;</td><td class="fielddoc"><p>General filesystem I/O error. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73aeb42dca21b6afb1db9d6ffe7389a7a76"></a>FS_ENTRY_EXISTS&#160;</td><td class="fielddoc"><p>File or directory exists. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73aa7d76a6880197d363ec0680a20dc6bd5"></a>FS_DIR_FULL&#160;</td><td class="fielddoc"><p>Too many files in this directory. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73af748da39eeab6d2f4359118c40c74596"></a>FS_NO_SUCH_ENTRY&#160;</td><td class="fielddoc"><p>No such file or directory. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a7ca75083a470bd45594660077eb23486"></a>FS_FILE_UNAVAILABLE&#160;</td><td class="fielddoc"><p>File/directory is not available. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a8206fbc2e5a818a0ed99100fead5af15"></a>FS_FILE_OOB_ACCESS&#160;</td><td class="fielddoc"><p>Accessing file out of bound. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73aec7d92c73c7f72378e94d5dd4016d625"></a>FS_CONFLICTING_ATTR&#160;</td><td class="fielddoc"><p>Conflicting file/directory attributes </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a68b3de842e6b6507313a2459251e2f82"></a>FS_TOO_MANY_OPEN_FILES&#160;</td><td class="fielddoc"><p>Too many open files. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a0316bf4c0fe63e2e2408a80a5ab2213f"></a>FS_FILE_LOCKED&#160;</td><td class="fielddoc"><p>File/directory is locked for exclusive access. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a11ae50fe20efd8f8c14bc464fad570fc"></a>FS_FILE_ATTR_ERROR&#160;</td><td class="fielddoc"><p>Attribute error. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a1279d9a807472f2d27d88068eeb03066"></a>FS_NO_SPACE_LEFT&#160;</td><td class="fielddoc"><p>No space left for device. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73af23b08ac650892a82a09d1e6b93694bc"></a>FS_NO_SUCH_ENTRY_ALT&#160;</td><td class="fielddoc"><p>No such file or directory (alternative). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a36f65a3b5e20cb67d64ed8ed25058aef"></a>FS_READ_ONLY_FILE&#160;</td><td class="fielddoc"><p>File is read-only. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a134aa1230863f0e7f124e9ff504e045c"></a>FS_PATH_TOO_LONG&#160;</td><td class="fielddoc"><p>Path too long. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a35973a57f7fe59f5d81754022bd8c737"></a>FS_DIR_FULL_ALT1&#160;</td><td class="fielddoc"><p>Too many files in this directory (alternative). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73ac8b7c338f2af6aefe7128da1c62d8f16"></a>FS_DIR_FULL_ALT2&#160;</td><td class="fielddoc"><p>Too many files in this directory (alternative). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a4bb96a0cea4da7dfc4fac08d6c9fa9bc"></a>DB_CORRUPTED&#160;</td><td class="fielddoc"><p>Database is corrupted. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a7555d9e53b2829fecb6402b95f5087d4"></a>DB_OPEN_FAILED&#160;</td><td class="fielddoc"><p>Failed to open database. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a59e9093a53bfe2eb483523435641b0dc"></a>DB_INDEX_FULL_DELETE&#160;</td><td class="fielddoc"><p>Database index is full. Suggesting entry cleanup. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73aac765a6820ebfb3898d963e8a6fd38b4"></a>DB_FULL&#160;</td><td class="fielddoc"><p>Database is full. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a12b9675338923bfaa19bd892942b4a6e"></a>DB_INDEX_FULL_SYNC&#160;</td><td class="fielddoc"><p>Database index is full. Suggesting sync with PC. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="abcf282c7663bd0455f40aadcdcd2bf73a99f23a399ca10332ef65938521c7e638"></a>DB_TOO_MANY_OPEN_FILES&#160;</td><td class="fielddoc"><p>Database: too many open files. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <a id="a2a5f5cf0247fb920e87e95fd487aefb5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a5f5cf0247fb920e87e95fd487aefb5">&#9670;&nbsp;</a></span>errno_ns_flag_e</h2>
 
@@ -341,6 +274,32 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a2a5f5cf0247fb920e87e95fd487aefb5a42a7a9000abfbd639e750f5d124bfdfa"></a>ERRNO_NS_EXEC&#160;</td><td class="fielddoc"><p>Executable loader. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a2a5f5cf0247fb920e87e95fd487aefb5a05a5ebcb4b1ef8ca5ef3cf5b2f6f7e07"></a>ERRNO_NS_APPLET_SPECIFIC&#160;</td><td class="fielddoc"><p>Applet specific (errors set by <a class="el" href="errno_8h.html#a445cee9577bc3d31d4b41b7d2f47d28f" title="Set errno.">_SetLastError()</a>). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a36f8929d56bd487eb91b68bdc2cb2455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f8929d56bd487eb91b68bdc2cb2455">&#9670;&nbsp;</a></span>errno_user_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7">ERRNO_NS_USER</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455ab3d015479d143e79b5a9a28f6e386d5b"></a>THREAD_SLOT_FULL&#160;</td><td class="fielddoc"><p>Non-reserved slots are full. Cannot create thread. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a77c640413619238486abbeafee4a9066"></a>THREAD_STRUCT_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread struct. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a70f0ad4a707f5bd24b5f62f7a63a3c69"></a>THREAD_STACK_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread stack. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a6afbc02cd98cf4039c3d040191b01ee2"></a>THREAD_INVALID_DESCRIPTOR&#160;</td><td class="fielddoc"><p>Invalid thread descriptor magic. </p>
 </td></tr>
 </table>
 
@@ -533,6 +492,684 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a0b48cf22314fc228f7295e45fa0714df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b48cf22314fc228f7295e45fa0714df">&#9670;&nbsp;</a></span>DB_CORRUPTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> DB_CORRUPTED = 0x0200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Database is corrupted. </p>
+
+</div>
+</div>
+<a id="a1f4676cc92d4f1c08f138a8ad7ed94b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4676cc92d4f1c08f138a8ad7ed94b7">&#9670;&nbsp;</a></span>DB_FULL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> DB_FULL = 0x0203</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Database is full. </p>
+
+</div>
+</div>
+<a id="ad1fb8c60268d246ca4fa786dc538b7c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1fb8c60268d246ca4fa786dc538b7c1">&#9670;&nbsp;</a></span>DB_INDEX_FULL_DELETE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> DB_INDEX_FULL_DELETE = 0x0203</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Database index is full. Suggesting entry cleanup. </p>
+
+</div>
+</div>
+<a id="ae283c814f284352da842aa68627e47f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae283c814f284352da842aa68627e47f1">&#9670;&nbsp;</a></span>DB_INDEX_FULL_SYNC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> DB_INDEX_FULL_SYNC = 0x0203</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Database index is full. Suggesting sync with PC. </p>
+
+</div>
+</div>
+<a id="aae1711b9bfb93cbea7e3e33d0162cb3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae1711b9bfb93cbea7e3e33d0162cb3f">&#9670;&nbsp;</a></span>DB_OPEN_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> DB_OPEN_FAILED = 0x0200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Failed to open database. </p>
+
+</div>
+</div>
+<a id="a9db7e01a7cc0ca8e76982f473c09585a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db7e01a7cc0ca8e76982f473c09585a">&#9670;&nbsp;</a></span>DB_TOO_MANY_OPEN_FILES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> DB_TOO_MANY_OPEN_FILES = 0x0203</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Database: too many open files. </p>
+
+</div>
+</div>
+<a id="a9827c16d2a5ad2b88a694a9c4f33ff2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9827c16d2a5ad2b88a694a9c4f33ff2a">&#9670;&nbsp;</a></span>FS_CONFLICTING_ATTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_CONFLICTING_ATTR = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Conflicting file/directory attributes </p>
+
+</div>
+</div>
+<a id="a6e5eea0a7997565192e493fccf358416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5eea0a7997565192e493fccf358416">&#9670;&nbsp;</a></span>FS_DIR_FULL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_DIR_FULL = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Too many files in this directory. </p>
+
+</div>
+</div>
+<a id="a10fb25504206bc2335bd9dd1889f7a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10fb25504206bc2335bd9dd1889f7a82">&#9670;&nbsp;</a></span>FS_DIR_FULL_ALT1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_DIR_FULL_ALT1 = 0x0165</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Too many files in this directory (alternative). </p>
+
+</div>
+</div>
+<a id="a6f3d4f45ed4526835e4a6c83ef4143ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3d4f45ed4526835e4a6c83ef4143ac">&#9670;&nbsp;</a></span>FS_DIR_FULL_ALT2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_DIR_FULL_ALT2 = 0x0165</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Too many files in this directory (alternative). </p>
+
+</div>
+</div>
+<a id="a0ab1c3ec6a46bda8d109b4aa277fef39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab1c3ec6a46bda8d109b4aa277fef39">&#9670;&nbsp;</a></span>FS_ENTRY_EXISTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_ENTRY_EXISTS = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>File or directory exists. </p>
+
+</div>
+</div>
+<a id="a8cb16be6adbe7b8f4ea57778e2c5007c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb16be6adbe7b8f4ea57778e2c5007c">&#9670;&nbsp;</a></span>FS_FILE_ATTR_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_FILE_ATTR_ERROR = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Attribute error. </p>
+
+</div>
+</div>
+<a id="ac1c244136fb9e2c20ad7f3ac606645dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c244136fb9e2c20ad7f3ac606645dc">&#9670;&nbsp;</a></span>FS_FILE_LOCKED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_FILE_LOCKED = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>File/directory is locked for exclusive access. </p>
+
+</div>
+</div>
+<a id="aed7f9e5726ad9accef589c6545e423cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7f9e5726ad9accef589c6545e423cc">&#9670;&nbsp;</a></span>FS_FILE_OOB_ACCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_FILE_OOB_ACCESS = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Accessing file out of bound. </p>
+
+</div>
+</div>
+<a id="ae6eb448dd7087107afe8a1bfa00f7996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6eb448dd7087107afe8a1bfa00f7996">&#9670;&nbsp;</a></span>FS_FILE_UNAVAILABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_FILE_UNAVAILABLE = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>File/directory is not available. </p>
+
+</div>
+</div>
+<a id="a8d9e3cfa6ccc60e831101c9856ecd9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9e3cfa6ccc60e831101c9856ecd9c9">&#9670;&nbsp;</a></span>FS_INVALID_DRIVE_LETTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_INVALID_DRIVE_LETTER = 0x0113</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Invalid drive letter </p>
+
+</div>
+</div>
+<a id="a75f001d8d3ce6a8f38f639ae491e6951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75f001d8d3ce6a8f38f639ae491e6951">&#9670;&nbsp;</a></span>FS_INVALID_FILENAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_INVALID_FILENAME = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Filename contains invalid characters. </p>
+
+</div>
+</div>
+<a id="ae663f7b4ddd318c45e65a3b19014f964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae663f7b4ddd318c45e65a3b19014f964">&#9670;&nbsp;</a></span>FS_NO_SPACE_LEFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_NO_SPACE_LEFT = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>No space left for device. </p>
+
+</div>
+</div>
+<a id="ad9575f2e55b487a0d466f5ef0f04e2af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9575f2e55b487a0d466f5ef0f04e2af">&#9670;&nbsp;</a></span>FS_NO_SUCH_ENTRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_NO_SUCH_ENTRY = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>No such file or directory. </p>
+
+</div>
+</div>
+<a id="a8bc57e03ec081cbfdf41637be356182a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bc57e03ec081cbfdf41637be356182a">&#9670;&nbsp;</a></span>FS_NO_SUCH_ENTRY_ALT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_NO_SUCH_ENTRY_ALT = 0x0154</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>No such file or directory (alternative). </p>
+
+</div>
+</div>
+<a id="ade8ac117d46b10936257d2f9bd8bc9a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8ac117d46b10936257d2f9bd8bc9a2">&#9670;&nbsp;</a></span>FS_OPERATION_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_OPERATION_ERROR = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>General filesystem I/O error. </p>
+
+</div>
+</div>
+<a id="a3219695537bccfc6dfbff25a78f37009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3219695537bccfc6dfbff25a78f37009">&#9670;&nbsp;</a></span>FS_PATH_TOO_LONG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_PATH_TOO_LONG = 0x0162</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Path too long. </p>
+
+</div>
+</div>
+<a id="aaa5333fea246b3e1b10adb0e387023de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5333fea246b3e1b10adb0e387023de">&#9670;&nbsp;</a></span>FS_READ_ONLY_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_READ_ONLY_FILE = 0x0158</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>File is read-only. </p>
+
+</div>
+</div>
+<a id="a3ed67d784ce635491c31f25150aad4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed67d784ce635491c31f25150aad4e8">&#9670;&nbsp;</a></span>FS_TOO_MANY_OPEN_FILES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FS_TOO_MANY_OPEN_FILES = 0x0140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Too many open files. </p>
+
+</div>
+</div>
+<a id="ac3f86755dce0fd56486998e5fed2728d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f86755dce0fd56486998e5fed2728d">&#9670;&nbsp;</a></span>FTL_DATA_CORRUPTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FTL_DATA_CORRUPTED = 0x0010</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>FTL: Data corruption detected. </p>
+
+</div>
+</div>
+<a id="aeb37ae7d79dc6cc9010b37fcc2b4df0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb37ae7d79dc6cc9010b37fcc2b4df0a">&#9670;&nbsp;</a></span>FTL_ECC_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FTL_ECC_FAILED = 0x0010</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>FTL: Data corruption detected and error correction attempt failed. </p>
+
+</div>
+</div>
+<a id="a0856d6f475396927ff4e9651ae12be04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0856d6f475396927ff4e9651ae12be04">&#9670;&nbsp;</a></span>FTL_ECC_TRIGGERED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FTL_ECC_TRIGGERED = 0x0018</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>FTL: Data corruption detected and error correction attempt succeeded. </p>
+
+</div>
+</div>
+<a id="a6d4b43406ecc41cb9c08e9c6cdb4b506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d4b43406ecc41cb9c08e9c6cdb4b506">&#9670;&nbsp;</a></span>FTL_INVALID_LBA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> FTL_INVALID_LBA = 0x0021</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>FTL: Invalid Logical Block Address. </p>
+
+</div>
+</div>
+<a id="a3a0bdb4fd5041dbc48ffb71058ab9f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0bdb4fd5041dbc48ffb71058ab9f5a">&#9670;&nbsp;</a></span>GENERAL_HW_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> GENERAL_HW_ERROR = 0x0003</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>General hardware error. </p>
+
+</div>
+</div>
+<a id="a9ae7a459ca3a201bf482e29f4439ccb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae7a459ca3a201bf482e29f4439ccb4">&#9670;&nbsp;</a></span>MEDIUM_CHANGED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MEDIUM_CHANGED = 0x0027</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medium changed </p>
+
+</div>
+</div>
+<a id="aec7504acf8d09c12dd4c0d92a9504adc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7504acf8d09c12dd4c0d92a9504adc">&#9670;&nbsp;</a></span>MEDIUM_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MEDIUM_ERROR = 0x0030</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medium I/O error. </p>
+
+</div>
+</div>
+<a id="a047d047f866d971f675904f1638e9f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047d047f866d971f675904f1638e9f4c">&#9670;&nbsp;</a></span>MEDIUM_INCOMPATIBLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MEDIUM_INCOMPATIBLE = 0x0030</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medium is of an incompatible type. </p>
+
+</div>
+</div>
+<a id="aa583ff3126b63b8316d6750ed378776f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa583ff3126b63b8316d6750ed378776f">&#9670;&nbsp;</a></span>MEDIUM_UNLOADED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MEDIUM_UNLOADED = 0x003a</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medium is not loaded. </p>
+
+</div>
+</div>
+<a id="a44c6aec8d613c0c44524ac53f68884ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44c6aec8d613c0c44524ac53f68884ef">&#9670;&nbsp;</a></span>MEDIUM_WP_ENABLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MEDIUM_WP_ENABLED = 0x0027</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medium is write protected. </p>
+
+</div>
+</div>
+<a id="a4f42fa8de0b339659316b4540da4fd8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f42fa8de0b339659316b4540da4fd8e">&#9670;&nbsp;</a></span>MKFS_IO_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MKFS_IO_ERROR = 0x0102</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mkfs: I/O error. </p>
+
+</div>
+</div>
+<a id="ab62c943db69a36632f1c1f3c5e9fd2b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62c943db69a36632f1c1f3c5e9fd2b8">&#9670;&nbsp;</a></span>MKFS_MODE_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MKFS_MODE_ERROR = 0x0102</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mkfs: Mode error. </p>
+
+</div>
+</div>
+<a id="a3cea099d7cf7fd84ea0e2067f34ab9d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cea099d7cf7fd84ea0e2067f34ab9d2">&#9670;&nbsp;</a></span>MKFS_NO_SPACE_LEFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MKFS_NO_SPACE_LEFT = 0x0102</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mkfs: No space left for device. </p>
+
+</div>
+</div>
+<a id="a385b9fe20a0b77e8e39718daecc64d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385b9fe20a0b77e8e39718daecc64d91">&#9670;&nbsp;</a></span>MKFS_PROMPT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MKFS_PROMPT = 0x0102</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Block device format prompt. </p>
+
+</div>
+</div>
+<a id="aed4dbc6793843e0201c61f63ca541dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed4dbc6793843e0201c61f63ca541dbf">&#9670;&nbsp;</a></span>MKFS_UNSUPPORTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> MKFS_UNSUPPORTED = 0x0102</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Block device needs formatting. </p>
+
+</div>
+</div>
+<a id="a78e3598f1212ee515c512e80e71753fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e3598f1212ee515c512e80e71753fa">&#9670;&nbsp;</a></span>PERIPHERAL_COMM_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> PERIPHERAL_COMM_FAILED = 0x0003</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a>. </p>
+<p>Peripheral communication failed. </p>
+
+</div>
+</div>
+<a id="a18c5f6c9bfb273dcb9f782c1ec783b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c5f6c9bfb273dcb9f782c1ec783b4a">&#9670;&nbsp;</a></span>SYS_ERASE_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> SYS_ERASE_FAILED = 0x0060</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Erase of storage device failed. </p>
+
+</div>
+</div>
+<a id="ab61662d41d811063717e21bf3ce8a66b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61662d41d811063717e21bf3ce8a66b">&#9670;&nbsp;</a></span>SYS_LOCK_SWITCH_ENABLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> SYS_LOCK_SWITCH_ENABLED = 0x0060</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Lock switch is on. System is locked. </p>
+
+</div>
+</div>
+<a id="ac6d788d21b642e7b6fabf6406cd8f7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6d788d21b642e7b6fabf6406cd8f7d9">&#9670;&nbsp;</a></span>SYS_LOW_BATTERY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> SYS_LOW_BATTERY = 0x0060</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Low battery. </p>
+
+</div>
+</div>
+<a id="a53a261569c98672aac354ab5baabb5b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a261569c98672aac354ab5baabb5b2">&#9670;&nbsp;</a></span>SYS_OUT_OF_MEMORY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> SYS_OUT_OF_MEMORY = 0x0060</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Out of memory. </p>
+
+</div>
+</div>
+<a id="a4749baefbc0b5a5ea24c5000d7fce6f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4749baefbc0b5a5ea24c5000d7fce6f1">&#9670;&nbsp;</a></span>SYS_STORAGE_DEVICE_NOT_FOUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> SYS_STORAGE_DEVICE_NOT_FOUND = 0x0060</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Storage device not found. </p>
 
 </div>
 </div>

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['reent_180',['reent',['../structcritical__section__t.html#a73549e0f34549a90c958e4d5c8cea862',1,'critical_section_t']]],
-  ['refcount_181',['refcount',['../structcritical__section__t.html#a5ecf7008c99604073d723ae6f0127bec',1,'critical_section_t']]],
-  ['rgb_5ffrom_5fu8_182',['RGB_FROM_U8',['../canvas_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf',1,'canvas.h']]],
-  ['rgbsetbkcolor_183',['rgbSetBkColor',['../canvas_8h.html#a98681ae3b53fbaff32dc184a11aa559e',1,'canvas.h']]],
-  ['rgbsetcolor_184',['rgbSetColor',['../canvas_8h.html#a61c187a73000a33c2ca53d8df7fe5ab0',1,'canvas.h']]]
+  ['palette_181',['palette',['../structvram__descriptor__t.html#a482d5eb9feeeb74270520d15150f34a1',1,'vram_descriptor_t']]],
+  ['peripheral_5fcomm_5ffailed_182',['PERIPHERAL_COMM_FAILED',['../errno_8h.html#a78e3598f1212ee515c512e80e71753fa',1,'errno.h']]],
+  ['prev_183',['prev',['../structthread__s.html#ad222a518be35c3a59f8378c575a96da2',1,'thread_s']]],
+  ['printfxy_184',['PrintfXY',['../canvas_8h.html#ae2bce93898870fbfd4541135b418c85c',1,'canvas.h']]]
 ];
