@@ -12,16 +12,67 @@
 #define __MUTEKI_THREADING_H__
 
 #include <muteki/common.h>
+#include <muteki/errno.h>
 
-typedef void (*thread_func_t)(void);
-typedef void thread_t;
+/**
+ * @brief Thread function type
+ */
+typedef void (*thread_func_t)(void *user_data);
+/**
+ * @brief Thread descriptor type.
+ */
+typedef struct thread_s thread_t;
+
+/**
+ * @brief Thread descriptor structure.
+ */
+struct thread_s {
+    /** Magic. Always @p 0x100. */
+    int magic; // always 0x100
+    /** Stack pointer. */
+    uintptr_t *sp;
+    /** Allocated stack memory. */
+    void *stack;
+    /** Unknown. Initializes to 0. */
+    int unk_0xc; // init to 0
+    /** Error code. */
+    kerrno_t kerrno; // init to 0
+    /** Unknown. Initializes to 0x80000000. */
+    uintptr_t unk_0x14; // init to 0x80000000
+    /** Thread function entrypoint. */
+    thread_func_t thread_func;
+    /** Unknown. */
+    short unk_0x1c;
+    /** Unknown. */
+    short unk_0x1e;
+    /** Unknown. */
+    short unk_0x20;
+    /** Slot number. */
+    short slot; // 0x22
+    /** Lower 3 bit of the slot number. */
+    char slot_low3b;
+    /** Upper 3 bit of the slot number. */
+    char slot_high3b;
+    /** Lower 3 bit bitmask of the slot number. */
+    char slot_low3b_bit;
+    /** Upper 3 bit bitmask of the slot number. */
+    char slot_high3b_bit;
+    /** Unknown. */
+    int unk_0x28;
+    /** Previous thread descriptor. */
+    thread_t *prev;
+    /** Next thread descriptor. */
+    thread_t *next;
+    /** Unknown and seems to be uninitialized. */
+    char unk_0x34[0x20];
+};
 
 /** Critical section struct. */
 typedef struct {
     /** Magic */
     int32_t magic; // 0x00000202
-    /** Kernel reentrant struct for this thread. */
-    void *reent; // 0x58 bytes, possibly related to threads
+    /** Thread descriptor for this thread. */
+    thread_t *thr; // 0x58 bytes, possibly related to threads
     /** Reference counter. */
     uint16_t refcount;
     /** Unknown. */
@@ -40,15 +91,31 @@ extern void OSSleep(short millis);
 /**
  * @brief Create a new thread.
  *
- * TODO: Incomplete and not working yet.
- *
  * @param func Function to execute in the new thread.
- * @param unk2 Unknown. Set to 0.
- * @param stack_size Seems to be the size of the thread stack.
- * @param unk4 Unknown. Set to 0.
- * @return The thread object.
+ * @param user_data User data for the thread.
+ * @param stack_size The size of the thread stack.
+ * @param arg4 Purpose unknown.
+ * @return The thread descriptor.
  */
-extern thread_t *OSCreateThread(thread_func_t func, int unk2, size_t stack_size, int unk4);
+extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stack_size, bool arg4);
+
+/**
+ * @brief Get the thread slot number.
+ * On Besta RTOS there is no explicit way to specify thread priority. Priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with OSCreateThread(). User can move threads to these reserved slots by calling the OSSetThreadPriority() function.
+ * @param thr The thread descriptor.
+ * @return The slot number of the thread.
+ */
+extern short OSGetThreadPriority(thread_t *thr);
+
+/**
+ * @brief Set the thread slot number.
+ *
+ * @param thr The thread descriptor.
+ * @param new_slot The new slot number.
+ * @return true if successful.
+ * @see OSGetThreadPriority
+ */
+extern bool OSSetThreadPriority(thread_t *thr, short new_slot);
 
 /**
  * @brief Initialize a critical section (recursive mutex) context.

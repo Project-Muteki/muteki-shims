@@ -355,6 +355,6 @@ extern short _wrename(const UTF16 *old_path, const UTF16 *new_path);
  * @param fs_stat Target to store filesystem usage stats.
  * @return 0 on success.
  */
-int FSGetDiskRoomState(int fsid, fs_stat_t *fs_stat);
+extern int FSGetDiskRoomState(int fsid, fs_stat_t *fs_stat);
 
 #endif // __MUTEKI_FS_H__

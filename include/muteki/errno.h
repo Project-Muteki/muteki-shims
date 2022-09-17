@@ -57,6 +57,20 @@ enum errno_exec_e {
 };
 
 /**
+ * @brief Error code for ::ERRNO_NS_USER.
+ */
+enum errno_user_e {
+    /** Non-reserved slots are full. Cannot create thread. */
+    THREAD_SLOT_FULL = 0x002b,
+    /** Failed to allocate thread struct. */
+    THREAD_STRUCT_MALLOC_FAILED = 0x0046,
+    /** Failed to allocate thread stack. */
+    THREAD_STACK_MALLOC_FAILED = 0x0066,
+    /** Invalid thread descriptor magic. */
+    THREAD_INVALID_DESCRIPTOR = 0x006e,
+}
+
+/**
  * @brief Error code for ::ERRNO_NS_KERNEL.
  */
 enum errno_kernel_e {
