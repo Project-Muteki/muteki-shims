@@ -109,7 +109,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ada39c7d40f29132b547e6aa9a9540903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new thread.  <a href="threading_8h.html#ada39c7d40f29132b547e6aa9a9540903">More...</a><br /></td></tr>
 <tr class="separator:ada39c7d40f29132b547e6aa9a9540903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab275a73337d748fdf9eb651e5f031569"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">OSGetThreadPriority</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr)</td></tr>
-<tr class="memdesc:ab275a73337d748fdf9eb651e5f031569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread slot number. On Besta RTOS there is no explicit way to specify thread priority. Priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with <a class="el" href="threading_8h.html#ada39c7d40f29132b547e6aa9a9540903" title="Create a new thread.">OSCreateThread()</a>. User can move threads to these reserved slots by calling the <a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5" title="Set the thread slot number.">OSSetThreadPriority()</a> function.  <a href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">More...</a><br /></td></tr>
+<tr class="memdesc:ab275a73337d748fdf9eb651e5f031569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread slot number.  <a href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">More...</a><br /></td></tr>
 <tr class="separator:ab275a73337d748fdf9eb651e5f031569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc4f2020e4309e651190748c818dff5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5">OSSetThreadPriority</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr, short new_slot)</td></tr>
 <tr class="memdesc:adcc4f2020e4309e651190748c818dff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the thread slot number.  <a href="threading_8h.html#adcc4f2020e4309e651190748c818dff5">More...</a><br /></td></tr>
@@ -251,8 +251,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the thread slot number. On Besta RTOS there is no explicit way to specify thread priority. Priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with <a class="el" href="threading_8h.html#ada39c7d40f29132b547e6aa9a9540903" title="Create a new thread.">OSCreateThread()</a>. User can move threads to these reserved slots by calling the <a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5" title="Set the thread slot number.">OSSetThreadPriority()</a> function. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Get the thread slot number. </p>
+<p>On Besta RTOS there is no explicit way to specify thread priority. Priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with <a class="el" href="threading_8h.html#ada39c7d40f29132b547e6aa9a9540903" title="Create a new thread.">OSCreateThread()</a>. User can move threads to these reserved slots by calling the <a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5" title="Set the thread slot number.">OSSetThreadPriority()</a> function. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thr</td><td>The thread descriptor. </td></tr>
   </table>
@@ -349,7 +349,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569" title="Get the thread slot number. On Besta RTOS there is no explicit way to specify thread priority....">OSGetThreadPriority</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569" title="Get the thread slot number.">OSGetThreadPriority</a> </dd></dl>
 
 </div>
 </div>
