@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki-shims: critical_section_t Struct Reference</title>
+<title>muteki-shims: event_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,86 +63,89 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structcritical__section__t-members.html">List of all members</a>  </div>
+<a href="structevent__t-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">critical_section_t Struct Reference</div>  </div>
+<div class="title">event_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Critical section descriptor.  
- <a href="structcritical__section__t.html#details">More...</a></p>
+<p>Event descriptor type.  
+ <a href="structevent__t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="threading_8h_source.html">threading.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa42600cb736a43950133e9e3bbf0af78"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcritical__section__t.html#aa42600cb736a43950133e9e3bbf0af78">magic</a></td></tr>
-<tr class="separator:aa42600cb736a43950133e9e3bbf0af78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaad734f9d785413734f5ea311f60ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcritical__section__t.html#adaad734f9d785413734f5ea311f60ef9">thr</a></td></tr>
-<tr class="separator:adaad734f9d785413734f5ea311f60ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ecf7008c99604073d723ae6f0127bec"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcritical__section__t.html#a5ecf7008c99604073d723ae6f0127bec">refcount</a></td></tr>
-<tr class="separator:a5ecf7008c99604073d723ae6f0127bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedaa70dad9c8327ad1a55398a50f4560"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcritical__section__t.html#aedaa70dad9c8327ad1a55398a50f4560">unk_idx</a></td></tr>
-<tr class="separator:aedaa70dad9c8327ad1a55398a50f4560"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a547006f3bcee864ba2d57d3a1b2dcc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcritical__section__t.html#a3a547006f3bcee864ba2d57d3a1b2dcc">unk</a> [0x9]</td></tr>
-<tr class="separator:a3a547006f3bcee864ba2d57d3a1b2dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49228cb7c7840507a14a62231e262ed0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__t.html#a49228cb7c7840507a14a62231e262ed0">magic</a></td></tr>
+<tr class="separator:a49228cb7c7840507a14a62231e262ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8e2a33443e70b7329776bc652097b7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__t.html#a3a8e2a33443e70b7329776bc652097b7">unk_0x4</a></td></tr>
+<tr class="separator:a3a8e2a33443e70b7329776bc652097b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae18a89f7b8e30cced273e9714794f660"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__t.html#ae18a89f7b8e30cced273e9714794f660">unk_0x8</a></td></tr>
+<tr class="separator:ae18a89f7b8e30cced273e9714794f660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b08a22cddb700ea8e79c46abe5b5f0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__t.html#a78b08a22cddb700ea8e79c46abe5b5f0">unk_0xa</a></td></tr>
+<tr class="separator:a78b08a22cddb700ea8e79c46abe5b5f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f65f65ddd9185d2a0162c97d70f17a"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__t.html#ac5f65f65ddd9185d2a0162c97d70f17a">unk_0xb</a> [8]</td></tr>
+<tr class="separator:ac5f65f65ddd9185d2a0162c97d70f17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38d1ef5cb91dc00bb3b67542c2e34ad"><td class="memItemLeft" align="right" valign="top"><a id="ae38d1ef5cb91dc00bb3b67542c2e34ad"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>_padding_0x13</b></td></tr>
+<tr class="separator:ae38d1ef5cb91dc00bb3b67542c2e34ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Critical section descriptor. </p>
+<div class="textblock"><p>Event descriptor type. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa42600cb736a43950133e9e3bbf0af78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa42600cb736a43950133e9e3bbf0af78">&#9670;&nbsp;</a></span>magic</h2>
+<a id="a49228cb7c7840507a14a62231e262ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49228cb7c7840507a14a62231e262ed0">&#9670;&nbsp;</a></span>magic</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t critical_section_t::magic</td>
+          <td class="memname">int event_t::magic</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Magic </p>
+<p>Magic. Always <code>0x201</code> </p>
 
 </div>
 </div>
-<a id="a5ecf7008c99604073d723ae6f0127bec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ecf7008c99604073d723ae6f0127bec">&#9670;&nbsp;</a></span>refcount</h2>
+<a id="a3a8e2a33443e70b7329776bc652097b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8e2a33443e70b7329776bc652097b7">&#9670;&nbsp;</a></span>unk_0x4</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t critical_section_t::refcount</td>
+          <td class="memname">void* event_t::unk_0x4</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Reference counter. </p>
+<p>TODO OSCreateEvent arg2 </p>
 
 </div>
 </div>
-<a id="adaad734f9d785413734f5ea311f60ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaad734f9d785413734f5ea311f60ef9">&#9670;&nbsp;</a></span>thr</h2>
+<a id="ae18a89f7b8e30cced273e9714794f660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18a89f7b8e30cced273e9714794f660">&#9670;&nbsp;</a></span>unk_0x8</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a>* critical_section_t::thr</td>
+          <td class="memname">short event_t::unk_0x8</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Thread descriptor for this thread. </p>
+<p>TODO OSCreateEvent arg1 </p>
 
 </div>
 </div>
-<a id="a3a547006f3bcee864ba2d57d3a1b2dcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a547006f3bcee864ba2d57d3a1b2dcc">&#9670;&nbsp;</a></span>unk</h2>
+<a id="a78b08a22cddb700ea8e79c46abe5b5f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b08a22cddb700ea8e79c46abe5b5f0">&#9670;&nbsp;</a></span>unk_0xa</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t critical_section_t::unk[0x9]</td>
+          <td class="memname">char event_t::unk_0xa</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -150,14 +153,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aedaa70dad9c8327ad1a55398a50f4560"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedaa70dad9c8327ad1a55398a50f4560">&#9670;&nbsp;</a></span>unk_idx</h2>
+<a id="ac5f65f65ddd9185d2a0162c97d70f17a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f65f65ddd9185d2a0162c97d70f17a">&#9670;&nbsp;</a></span>unk_0xb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t critical_section_t::unk_idx</td>
+          <td class="memname">char event_t::unk_0xb[8]</td>
         </tr>
       </table>
 </div><div class="memdoc">

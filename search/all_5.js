@@ -9,8 +9,9 @@ var searchData=
   ['errno_5fns_5fkernel_79',['ERRNO_NS_KERNEL',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60',1,'errno.h']]],
   ['errno_5fns_5fuser_80',['ERRNO_NS_USER',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7',1,'errno.h']]],
   ['errno_5fuser_5fe_81',['errno_user_e',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455',1,'errno.h']]],
-  ['event_82',['event',['../structthread__s.html#a255d500cb7aadd47f090090a291f77b3',1,'thread_s']]],
+  ['event_82',['event',['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s']]],
   ['event_2eh_83',['event.h',['../event_8h.html',1,'']]],
-  ['event_5ftype_84',['event_type',['../structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca',1,'ui_event_t']]],
-  ['executeprogram_85',['ExecuteProgram',['../loader_8h.html#a02dd228d313ebb256fe4ced9425f274c',1,'loader.h']]]
+  ['event_5ft_84',['event_t',['../structevent__t.html',1,'']]],
+  ['event_5ftype_85',['event_type',['../structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca',1,'ui_event_t']]],
+  ['executeprogram_86',['ExecuteProgram',['../loader_8h.html#a02dd228d313ebb256fe4ced9425f274c',1,'loader.h']]]
 ];

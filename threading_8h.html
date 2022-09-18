@@ -87,7 +87,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html">thread_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread descriptor structure.  <a href="structthread__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__t.html">event_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event descriptor type.  <a href="structevent__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcritical__section__t.html">critical_section_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Critical section descriptor.  <a href="structcritical__section__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -103,7 +107,15 @@ typedef struct <a class="el" href="structthread__s.html">thread_s</a>&#160;</td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a2ebb0866fd3be1d03bd9045ed804408d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d">thread_wait_reason_e</a> { <a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408da898f43758d097453fe54e55587b1f89f">WAIT_ON_SUSPEND</a> = 0x8
+<tr class="memitem:a2ebb0866fd3be1d03bd9045ed804408d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d">thread_wait_reason_e</a> { <br />
+&#160;&#160;<a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daf13ae2f4b979b592a368e230abddcf7a">WAIT_ON_NONE</a> = 0x0, 
+<a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daee78b08ea95882a528a8e36cf58fa2ae">WAIT_ON_SEMAPHORE</a> = 0x1, 
+<a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daf662d2a0b40c190527dd0e254be01dff">WAIT_ON_EVENT</a> = 0x2, 
+<a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408da654f84d53c59e1a92590a59f2c385269">WAIT_ON_QUEUE</a> = 0x4, 
+<br />
+&#160;&#160;<a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408da898f43758d097453fe54e55587b1f89f">WAIT_ON_SUSPEND</a> = 0x8, 
+<a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daf3ba3101003e0c63ae80d40e89670289">WAIT_ON_CRITICAL_SECTION</a> = 0x10
+<br />
  }</td></tr>
 <tr class="memdesc:a2ebb0866fd3be1d03bd9045ed804408d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread wait reason enum.  <a href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d">More...</a><br /></td></tr>
 <tr class="separator:a2ebb0866fd3be1d03bd9045ed804408d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,7 +164,17 @@ Functions</h2></td></tr>
 
 <p>Thread wait reason enum. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2ebb0866fd3be1d03bd9045ed804408da898f43758d097453fe54e55587b1f89f"></a>WAIT_ON_SUSPEND&#160;</td><td class="fielddoc"><p>Nothing Waiting to be unsuspended by OSResumeThread(). </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2ebb0866fd3be1d03bd9045ed804408daf13ae2f4b979b592a368e230abddcf7a"></a>WAIT_ON_NONE&#160;</td><td class="fielddoc"><p>Nothing </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2ebb0866fd3be1d03bd9045ed804408daee78b08ea95882a528a8e36cf58fa2ae"></a>WAIT_ON_SEMAPHORE&#160;</td><td class="fielddoc"><p>Waiting on a semaphore. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2ebb0866fd3be1d03bd9045ed804408daf662d2a0b40c190527dd0e254be01dff"></a>WAIT_ON_EVENT&#160;</td><td class="fielddoc"><p>Waiting on an event/mailbox message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2ebb0866fd3be1d03bd9045ed804408da654f84d53c59e1a92590a59f2c385269"></a>WAIT_ON_QUEUE&#160;</td><td class="fielddoc"><p>Waiting on a message queue push. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2ebb0866fd3be1d03bd9045ed804408da898f43758d097453fe54e55587b1f89f"></a>WAIT_ON_SUSPEND&#160;</td><td class="fielddoc"><p>Waiting to be unsuspended by OSResumeThread(). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2ebb0866fd3be1d03bd9045ed804408daf3ba3101003e0c63ae80d40e89670289"></a>WAIT_ON_CRITICAL_SECTION&#160;</td><td class="fielddoc"><p>Waiting on a critical section to be released. </p>
 </td></tr>
 </table>
 
