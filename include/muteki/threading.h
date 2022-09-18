@@ -15,11 +15,6 @@
 #include <muteki/errno.h>
 
 /**
- * @brief Thread function type
- */
-typedef void (*thread_func_t)(void *user_data);
-
-/**
  * @brief Thread wait reason enum.
  */
 enum thread_wait_reason_e {
@@ -29,18 +24,45 @@ enum thread_wait_reason_e {
     WAIT_ON_SEMAPHORE = 0x1,
     /** Waiting on an event/mailbox message. */
     WAIT_ON_EVENT = 0x2,
-    /** Waiting on a message queue push. */
+    /** Waiting for a message queue push. */
     WAIT_ON_QUEUE = 0x4,
     /** Waiting to be unsuspended by OSResumeThread(). */
     WAIT_ON_SUSPEND = 0x8,
-    /** Waiting on a critical section to be released. */
+    /** Waiting for a critical section to be released. */
     WAIT_ON_CRITICAL_SECTION = 0x10,
+    /** Waiting for sleep counter to expire. */
+    WAIT_ON_SLEEP = 0x20,
 };
+
+/**
+ * @brief Thread function type
+ */
+typedef void (*thread_func_t)(void *user_data);
+
+/**
+ * @brief Common data structure for waitables.
+ *
+ * Once requested, waitables are able to let a currently running thread to pause execution and wait for a specific event to happen. This is pretty much the same as event group and event table in uC/OS-II.
+ */
+typedef struct {
+    /** Bitfield that indicates which waiting_by bytes are currently active. */
+    unsigned char active_bytes;
+    /** Bitfield that tracks threads that are waiting for this waitable. Indexed by <tt>byte offset * 8 + bit offset</tt> */
+    unsigned char waiting_by[8];
+} threading_waitable_t;
 
 /**
  * @brief Thread descriptor type.
  */
 typedef struct thread_s thread_t;
+/**
+ * @brief Event descriptor type.
+ */
+typedef struct event_s event_t;
+/**
+ * @brief Critical section descriptor type.
+ */
+typedef struct critical_section_s critical_section_t;
 
 /**
  * @brief Thread descriptor structure.
@@ -52,7 +74,7 @@ struct thread_s {
     uintptr_t *sp;
     /** Allocated stack memory. */
     void *stack;
-    /** Unknown. Initializes to 0. */
+    /** Unknown. Related to thread termination. Initializes to 0. */
     int unk_0xc; // init to 0
     /** Error code. */
     kerrno_t kerrno; // init to 0
@@ -62,8 +84,8 @@ struct thread_s {
     thread_func_t thread_func;
     /** Unknown. */
     short unk_0x1c;
-    /** Unknown. */
-    short unk_0x1e;
+    /** Milliseconds left to sleep. */
+    unsigned short sleep_counter;
     /**
      * Current wait reason of the thread.
      * @see thread_wait_reason_e
@@ -90,37 +112,40 @@ struct thread_s {
 };
 
 /**
- * @brief Event descriptor type.
+ * @brief Event descriptor structure.
  */
-typedef struct {
+struct event_s {
     /** Magic. Always @p 0x201 */
     int magic;
-    /** TODO OSCreateEvent arg2 */
-    void *unk_0x4;
+    /** User data attached to the event. */
+    void *user_data;
     /** TODO OSCreateEvent arg1 */
     short unk_0x8;
-    /** TODO */
-    char unk_0xa;
-    /** TODO */
-    char unk_0xb[8];
+    /**
+     * @brief Wait state of the current event.
+     * @see threading_waitable_t
+     */
+    threading_waitable_t wait_state;
     char _padding_0x13;
-} event_t;
+};
 
 /**
- * @brief Critical section descriptor.
+ * @brief Critical section descriptor structure.
  */
-typedef struct {
-    /** Magic */
-    int32_t magic; // 0x00000202
+struct critical_section_s {
+    /** Magic. Always @p 0x202. */
+    int magic; // 0x00000202
     /** Thread descriptor for this thread. */
-    thread_t *thr; // 0x58 bytes, possibly related to threads
+    thread_t *thr;
     /** Reference counter. */
-    uint16_t refcount;
-    /** TODO */
-    uint8_t unk_idx;
-    /** TODO */
-    uint8_t unk[0x9];
-} critical_section_t; // 0x14
+    unsigned short refcount;
+    /**
+     * @brief Wait state of the current critical section.
+     * @see threading_waitable_t
+     */
+    threading_waitable_t wait_state;
+    char _padding_0x13;
+}; // 0x14
 
 /**
  * @brief Sleep for @p millis milliseconds.
@@ -139,6 +164,25 @@ extern void OSSleep(short millis);
  * @return The thread descriptor.
  */
 extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stack_size, bool defer_start);
+
+/**
+ * @brief Terminate a thread.
+ *
+ * @param thr Thread to terminate.
+ * @param arg2 Unknown. thread_t::unk_0xc will be set to this.
+ * @return 0 if successful.
+ */
+extern int OSTerminateThread(thread_t thr, int arg2);
+
+/**
+ * @brief Terminate current thread.
+ *
+ * This calls OSTerminateThread() with the descriptor of current thread as @p thr.
+ *
+ * @param arg1 Unknown. thread_t::unk_0xc will be set to this.
+ * @return 0 if successful.
+ */
+extern int OSExitThread(thread_t thr, int arg2);
 
 /**
  * @brief Get the thread slot number.
