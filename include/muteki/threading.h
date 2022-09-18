@@ -20,10 +20,13 @@
 typedef void (*thread_func_t)(void *user_data);
 
 /**
- * @brief Thread state enum.
+ * @brief Thread wait reason enum.
  */
-enum thread_state_e {
-    THREAD_SUSPENDED = 0x8;
+enum thread_wait_reason_e {
+    /** Nothing */
+    WAIT_ON_NONE = 0x0;
+    /** Waiting to be unsuspended by OSResumeThread(). */
+    WAIT_ON_SUSPEND = 0x8;
 };
 
 /**
@@ -53,20 +56,23 @@ struct thread_s {
     short unk_0x1c;
     /** Unknown. */
     short unk_0x1e;
-    /** Current state of the thread. */
-    short state; // 0x20
-    /** Slot number. */
+    /**
+     * Current wait reason of the thread.
+     * @see thread_wait_reason_e
+     */
+    short wait_reason; // 0x20
+    /** Slot number. For scheduler. */
     short slot; // 0x22
-    /** Lower 3 bit of the slot number. */
+    /** Lower 3 bit of the slot number. For scheduler. */
     char slot_low3b;
-    /** Upper 3 bit of the slot number. */
+    /** Upper 3 bit of the slot number. For scheduler. */
     char slot_high3b;
-    /** Lower 3 bit bitmask of the slot number. */
+    /** Lower 3 bit bitmask of the slot number. For scheduler. */
     char slot_low3b_bit;
-    /** Upper 3 bit bitmask of the slot number. */
+    /** Upper 3 bit bitmask of the slot number. For scheduler. */
     char slot_high3b_bit;
-    /** Unknown. */
-    int unk_0x28;
+    /** Event descriptor (?). */
+    void *event;
     /** Previous thread descriptor. */
     thread_t *prev;
     /** Next thread descriptor. */

@@ -60,6 +60,8 @@ enum errno_exec_e {
  * @brief Error code for ::ERRNO_NS_USER.
  */
 enum errno_user_e {
+    /** Thread slot is in use. */
+    THREAD_SLOT_IN_USE = 0x0028,
     /** Non-reserved slots are full. Cannot create thread. */
     THREAD_SLOT_FULL = 0x002b,
     /** Failed to allocate thread struct. */
@@ -68,7 +70,7 @@ enum errno_user_e {
     THREAD_STACK_MALLOC_FAILED = 0x0066,
     /** Invalid thread descriptor magic. */
     THREAD_INVALID_DESCRIPTOR = 0x006e,
-}
+};
 
 /**
  * @brief Error code for ::ERRNO_NS_KERNEL.
