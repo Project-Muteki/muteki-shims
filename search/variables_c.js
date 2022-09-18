@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['thr_414',['thr',['../structcritical__section__t.html#adaad734f9d785413734f5ea311f60ef9',1,'critical_section_t']]],
-  ['thread_5ffunc_415',['thread_func',['../structthread__s.html#a7e566c519bffa2fadfa01f0ea71c41d3',1,'thread_s']]]
+  ['thr_425',['thr',['../structcritical__section__s.html#a85bf4924ddc10b7d9bdf04bfc8ee95ab',1,'critical_section_s']]],
+  ['thread_5ffunc_426',['thread_func',['../structthread__s.html#a7e566c519bffa2fadfa01f0ea71c41d3',1,'thread_s']]]
 ];

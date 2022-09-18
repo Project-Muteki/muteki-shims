@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['thread_5fs_274',['thread_s',['../structthread__s.html',1,'']]]
+  ['thread_5fs_280',['thread_s',['../structthread__s.html',1,'']]],
+  ['threading_5fwaitable_5ft_281',['threading_waitable_t',['../structthreading__waitable__t.html',1,'']]]
 ];

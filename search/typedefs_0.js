@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kerrno_5ft_437',['kerrno_t',['../errno_8h.html#a10935ed5a8e001707b2cc7bfc07cdfc6',1,'errno.h']]]
+  ['critical_5fsection_5ft_446',['critical_section_t',['../threading_8h.html#a07c0d1458ed0f242cff7024401856fdc',1,'threading.h']]]
 ];

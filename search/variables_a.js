@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['refcount_398',['refcount',['../structcritical__section__t.html#a5ecf7008c99604073d723ae6f0127bec',1,'critical_section_t']]]
+  ['refcount_408',['refcount',['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s']]]
 ];
