@@ -172,7 +172,7 @@ extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stac
  * @param arg2 Unknown. thread_t::unk_0xc will be set to this.
  * @return 0 if successful.
  */
-extern int OSTerminateThread(thread_t thr, int arg2);
+extern int OSTerminateThread(thread_t *thr, int arg2);
 
 /**
  * @brief Terminate current thread.
@@ -182,7 +182,7 @@ extern int OSTerminateThread(thread_t thr, int arg2);
  * @param arg1 Unknown. thread_t::unk_0xc will be set to this.
  * @return 0 if successful.
  */
-extern int OSExitThread(thread_t thr, int arg2);
+extern int OSExitThread(int arg1);
 
 /**
  * @brief Get the thread slot number.
