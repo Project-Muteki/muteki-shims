@@ -24,9 +24,17 @@ typedef void (*thread_func_t)(void *user_data);
  */
 enum thread_wait_reason_e {
     /** Nothing */
-    WAIT_ON_NONE = 0x0;
+    WAIT_ON_NONE = 0x0,
+    /** Waiting on a semaphore. */
+    WAIT_ON_SEMAPHORE = 0x1,
+    /** Waiting on an event/mailbox message. */
+    WAIT_ON_EVENT = 0x2,
+    /** Waiting on a message queue push. */
+    WAIT_ON_QUEUE = 0x4,
     /** Waiting to be unsuspended by OSResumeThread(). */
-    WAIT_ON_SUSPEND = 0x8;
+    WAIT_ON_SUSPEND = 0x8,
+    /** Waiting on a critical section to be released. */
+    WAIT_ON_CRITICAL_SECTION = 0x10,
 };
 
 /**
@@ -71,8 +79,8 @@ struct thread_s {
     char slot_low3b_bit;
     /** Upper 3 bit bitmask of the slot number. For scheduler. */
     char slot_high3b_bit;
-    /** Event descriptor (?). */
-    void *event;
+    /** Event descriptor that belongs to the event the thread is currently waiting for. */
+    event_t *event;
     /** Previous thread descriptor. */
     thread_t *prev;
     /** Next thread descriptor. */
@@ -81,7 +89,26 @@ struct thread_s {
     char unk_0x34[0x20];
 };
 
-/** Critical section struct. */
+/**
+ * @brief Event descriptor type.
+ */
+typedef struct {
+    /** Magic. Always @p 0x201 */
+    int magic;
+    /** TODO OSCreateEvent arg2 */
+    void *unk_0x4;
+    /** TODO OSCreateEvent arg1 */
+    short unk_0x8;
+    /** TODO */
+    char unk_0xa;
+    /** TODO */
+    char unk_0xb[8];
+    char _padding_0x13;
+} event_t;
+
+/**
+ * @brief Critical section descriptor.
+ */
 typedef struct {
     /** Magic */
     int32_t magic; // 0x00000202
@@ -89,9 +116,9 @@ typedef struct {
     thread_t *thr; // 0x58 bytes, possibly related to threads
     /** Reference counter. */
     uint16_t refcount;
-    /** Unknown. */
+    /** TODO */
     uint8_t unk_idx;
-    /** Unknown. */
+    /** TODO */
     uint8_t unk[0x9];
 } critical_section_t; // 0x14
 
