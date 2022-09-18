@@ -103,10 +103,10 @@ typedef struct <a class="el" href="structthread__s.html">thread_s</a>&#160;</td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:abc615ace4508cf6e697f95370de29c3c"><td class="memItemLeft" align="right" valign="top"><a id="abc615ace4508cf6e697f95370de29c3c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#abc615ace4508cf6e697f95370de29c3c">thread_state_e</a> { <b>THREAD_SUSPENDED</b> = 0x8
+<tr class="memitem:a2ebb0866fd3be1d03bd9045ed804408d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d">thread_wait_reason_e</a> { <a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408da898f43758d097453fe54e55587b1f89f">WAIT_ON_SUSPEND</a> = 0x8
  }</td></tr>
-<tr class="memdesc:abc615ace4508cf6e697f95370de29c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread state enum. <br /></td></tr>
-<tr class="separator:abc615ace4508cf6e697f95370de29c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a2ebb0866fd3be1d03bd9045ed804408d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread wait reason enum.  <a href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d">More...</a><br /></td></tr>
+<tr class="separator:a2ebb0866fd3be1d03bd9045ed804408d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -137,7 +137,28 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Native threading API. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a2ebb0866fd3be1d03bd9045ed804408d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ebb0866fd3be1d03bd9045ed804408d">&#9670;&nbsp;</a></span>thread_wait_reason_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d">thread_wait_reason_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thread wait reason enum. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2ebb0866fd3be1d03bd9045ed804408da898f43758d097453fe54e55587b1f89f"></a>WAIT_ON_SUSPEND&#160;</td><td class="fielddoc"><p>Nothing Waiting to be unsuspended by OSResumeThread(). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="aef0b4f3a0ab1da7ac20d463607b4ac2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef0b4f3a0ab1da7ac20d463607b4ac2f">&#9670;&nbsp;</a></span>OSCreateThread()</h2>
 

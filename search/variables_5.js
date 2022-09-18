@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['general_5fhw_5ferror_398',['GENERAL_HW_ERROR',['../errno_8h.html#a3a0bdb4fd5041dbc48ffb71058ab9f5a',1,'errno.h']]]
+  ['height_374',['height',['../structvram__descriptor__t.html#abf40e9fea97245d474484912e1909c0f',1,'vram_descriptor_t']]],
+  ['hour_375',['hour',['../structdatetime__t.html#a3752afc6ff3c16e564fa284dbfc33847',1,'datetime_t']]]
 ];

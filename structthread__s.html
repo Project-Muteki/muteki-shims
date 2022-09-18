@@ -94,8 +94,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a79e8823dae931b1f1222c2119d6c2515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a77654e72acb6305a596f75e89b104b"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#a5a77654e72acb6305a596f75e89b104b">unk_0x1e</a></td></tr>
 <tr class="separator:a5a77654e72acb6305a596f75e89b104b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abebd7c4ae6e27c58cc3b9af2bfaa1cc9"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#abebd7c4ae6e27c58cc3b9af2bfaa1cc9">state</a></td></tr>
-<tr class="separator:abebd7c4ae6e27c58cc3b9af2bfaa1cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bde1f5ace30798a4edccbc6469ddb42"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#a2bde1f5ace30798a4edccbc6469ddb42">wait_reason</a></td></tr>
+<tr class="separator:a2bde1f5ace30798a4edccbc6469ddb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d547d65fcc718091bd0b85f2de691bb"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#a3d547d65fcc718091bd0b85f2de691bb">slot</a></td></tr>
 <tr class="separator:a3d547d65fcc718091bd0b85f2de691bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcee399615d6d0c65029eb1d3fe5e70b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#abcee399615d6d0c65029eb1d3fe5e70b">slot_low3b</a></td></tr>
@@ -106,8 +106,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5583dd9998ebf5151fd6566dc179a07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08e63efa56c6983f308487329ba20ba2"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#a08e63efa56c6983f308487329ba20ba2">slot_high3b_bit</a></td></tr>
 <tr class="separator:a08e63efa56c6983f308487329ba20ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a831bba67f86ad03722ed907d02fb64ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#a831bba67f86ad03722ed907d02fb64ad">unk_0x28</a></td></tr>
-<tr class="separator:a831bba67f86ad03722ed907d02fb64ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255d500cb7aadd47f090090a291f77b3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#a255d500cb7aadd47f090090a291f77b3">event</a></td></tr>
+<tr class="separator:a255d500cb7aadd47f090090a291f77b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad222a518be35c3a59f8378c575a96da2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#ad222a518be35c3a59f8378c575a96da2">prev</a></td></tr>
 <tr class="separator:ad222a518be35c3a59f8378c575a96da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91a5ec60bf6c739683397da137fe3f9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structthread__s.html#a91a5ec60bf6c739683397da137fe3f9f">next</a></td></tr>
@@ -118,6 +118,21 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Thread descriptor structure. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a255d500cb7aadd47f090090a291f77b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255d500cb7aadd47f090090a291f77b3">&#9670;&nbsp;</a></span>event</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* thread_s::event</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Event descriptor (?). </p>
+
+</div>
+</div>
 <a id="a14b7c85dfa24c97be5e24bde3b8293af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a14b7c85dfa24c97be5e24bde3b8293af">&#9670;&nbsp;</a></span>kerrno</h2>
 
@@ -189,7 +204,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Slot number. </p>
+<p>Slot number. For scheduler. </p>
 
 </div>
 </div>
@@ -204,7 +219,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Upper 3 bit of the slot number. </p>
+<p>Upper 3 bit of the slot number. For scheduler. </p>
 
 </div>
 </div>
@@ -219,7 +234,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Upper 3 bit bitmask of the slot number. </p>
+<p>Upper 3 bit bitmask of the slot number. For scheduler. </p>
 
 </div>
 </div>
@@ -234,7 +249,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Lower 3 bit of the slot number. </p>
+<p>Lower 3 bit of the slot number. For scheduler. </p>
 
 </div>
 </div>
@@ -249,7 +264,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Lower 3 bit bitmask of the slot number. </p>
+<p>Lower 3 bit bitmask of the slot number. For scheduler. </p>
 
 </div>
 </div>
@@ -280,21 +295,6 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Allocated stack memory. </p>
-
-</div>
-</div>
-<a id="abebd7c4ae6e27c58cc3b9af2bfaa1cc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abebd7c4ae6e27c58cc3b9af2bfaa1cc9">&#9670;&nbsp;</a></span>state</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short thread_s::state</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Current state of the thread. </p>
 
 </div>
 </div>
@@ -358,21 +358,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a831bba67f86ad03722ed907d02fb64ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a831bba67f86ad03722ed907d02fb64ad">&#9670;&nbsp;</a></span>unk_0x28</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int thread_s::unk_0x28</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Unknown. </p>
-
-</div>
-</div>
 <a id="af70416da6706e851c0542acab94197d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af70416da6706e851c0542acab94197d9">&#9670;&nbsp;</a></span>unk_0x34</h2>
 
@@ -400,6 +385,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Unknown. Initializes to 0. </p>
+
+</div>
+</div>
+<a id="a2bde1f5ace30798a4edccbc6469ddb42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bde1f5ace30798a4edccbc6469ddb42">&#9670;&nbsp;</a></span>wait_reason</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short thread_s::wait_reason</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Current wait reason of the thread. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d" title="Thread wait reason enum.">thread_wait_reason_e</a> </dd></dl>
 
 </div>
 </div>
