@@ -53,9 +53,7 @@ extern void *LoadProgramA(const char *pathname);
 /**
  * @brief Load an applet executable. (UTF-16 variant)
  *
- * The @p pathname specified must be a DOS 8.3 name.
- *
- * @param pathname UTF-16 encoded path to executable.
+ * @param pathname UTF-16 LFN path to executable.
  * @see LoadProgramA
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
  */
@@ -98,7 +96,7 @@ extern char *GetCurrentPathA();
 /**
  * @brief Get the path to the current running executable (argv[0]). (UTF-16 variant)
  *
- * @return The UTF-16 encoded DOS 8.3 path to the current running executable.
+ * @return The UTF-16 LFN path to the current running executable.
  */
 extern UTF16 *GetCurrentPathW();
 
