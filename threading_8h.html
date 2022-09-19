@@ -281,7 +281,7 @@ Functions</h2></td></tr>
 <p>Destroy a critical section descriptor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mutex</td><td>The critical section descriptor. </td></tr>
+    <tr><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -308,7 +308,7 @@ Functions</h2></td></tr>
 <p>Besta critical sections behave like recursive mutexes. Therefore this will block when multiple threads are trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass through. The context is released when all of the entries are reverted by a <a class="el" href="threading_8h.html#a6b5dae43115fec492f081445ff3b8aa9" title="Leave/release a critical section.">OSLeaveCriticalSection()</a> call.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mutex</td><td>The critical section descriptor. </td></tr>
+    <tr><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -389,7 +389,7 @@ Functions</h2></td></tr>
 <p>Initialize a critical section descriptor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mutex</td><td>The critical section descriptor. </td></tr>
+    <tr><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -415,7 +415,7 @@ Functions</h2></td></tr>
 <p>Leave/release a critical section. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mutex</td><td>The critical section descriptor. </td></tr>
+    <tr><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
   </table>
   </dd>
 </dl>
