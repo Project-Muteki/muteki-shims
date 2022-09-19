@@ -169,8 +169,8 @@ extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stac
  * @brief Terminate a thread.
  *
  * @param thr Thread to terminate.
- * @param arg2 Unknown. thread_t::unk_0xc will be set to this.
- * @return 0 if successful.
+ * @param arg2 TODO Unknown. thread_t::unk_0xc will be set to this.
+ * @return Always 0.
  */
 extern int OSTerminateThread(thread_t *thr, int arg2);
 
@@ -179,8 +179,8 @@ extern int OSTerminateThread(thread_t *thr, int arg2);
  *
  * This calls OSTerminateThread() with the descriptor of current thread as @p thr.
  *
- * @param arg1 Unknown. thread_t::unk_0xc will be set to this.
- * @return 0 if successful.
+ * @param arg1 TODO Unknown. thread_t::unk_0xc will be set to this.
+ * @return Always 0.
  */
 extern int OSExitThread(int arg1);
 
@@ -204,33 +204,59 @@ extern short OSGetThreadPriority(thread_t *thr);
 extern bool OSSetThreadPriority(thread_t *thr, short new_slot);
 
 /**
- * @brief Initialize a critical section (recursive mutex) context.
+ * @brief Suspend a thread from outside of that thread.
  *
- * @param mutex The critical section/mutex context.
+ * @param thr The thread descriptor.
+ * @return true if successful.
  */
-extern void OSInitCriticalSection(critical_section_t *mutex);
+extern bool OSSuspendThread(thread_t *thr);
 
 /**
- * @brief Enter/aquire a critical section (recursive mutex) context.
+ * @brief Start/restart a previously suspended thread.
  *
- * This will block when multiple threads are trying to enter the same context, but it will let repeated entries initiated by the same thread to pass through. The context is released when all of the entries are reverted by a OSLeaveCriticalSection() call.
- *
- * @param mutex The critical section/mutex context.
+ * @param thr The thread descriptor.
+ * @return true if successful.
  */
-extern void OSEnterCriticalSection(critical_section_t *mutex);
+extern bool OSResumeThread(thread_t *thr);
 
 /**
- * @brief Leave/release a critical section (recursive mutex) context.
+ * @brief Force wake up a sleeping thread
  *
- * @param mutex The critical section/mutex context.
+ * This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended.
+ *
+ * @param thr The thread descriptor.
+ * @return true if successful.
  */
-extern void OSLeaveCriticalSection(critical_section_t *mutex);
+extern OSWakeUpThread(thread_t *thr);
 
 /**
- * @brief Destroy a critical section (recursive mutex) context after use.
+ * @brief Initialize a critical section descriptor.
  *
- * @param mutex The critical section/mutex context.
+ * @param mutex The critical section descriptor.
  */
-extern void OSDeleteCriticalSection(critical_section_t *mutex);
+extern void OSInitCriticalSection(critical_section_t *cs);
+
+/**
+ * @brief Enter/aquire a critical section.
+ *
+ * Besta critical sections behave like recursive mutexes. Therefore this will block when multiple threads are trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass through. The context is released when all of the entries are reverted by a OSLeaveCriticalSection() call.
+ *
+ * @param mutex The critical section descriptor.
+ */
+extern void OSEnterCriticalSection(critical_section_t *cs);
+
+/**
+ * @brief Leave/release a critical section.
+ *
+ * @param mutex The critical section descriptor.
+ */
+extern void OSLeaveCriticalSection(critical_section_t *cs);
+
+/**
+ * @brief Destroy a critical section descriptor.
+ *
+ * @param mutex The critical section descriptor.
+ */
+extern void OSDeleteCriticalSection(critical_section_t *cs);
 
 #endif // __MUTEKI_THREADING_H__
