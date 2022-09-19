@@ -232,7 +232,7 @@ extern OSWakeUpThread(thread_t *thr);
 /**
  * @brief Initialize a critical section descriptor.
  *
- * @param mutex The critical section descriptor.
+ * @param cs The critical section descriptor.
  */
 extern void OSInitCriticalSection(critical_section_t *cs);
 
@@ -241,21 +241,21 @@ extern void OSInitCriticalSection(critical_section_t *cs);
  *
  * Besta critical sections behave like recursive mutexes. Therefore this will block when multiple threads are trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass through. The context is released when all of the entries are reverted by a OSLeaveCriticalSection() call.
  *
- * @param mutex The critical section descriptor.
+ * @param cs The critical section descriptor.
  */
 extern void OSEnterCriticalSection(critical_section_t *cs);
 
 /**
  * @brief Leave/release a critical section.
  *
- * @param mutex The critical section descriptor.
+ * @param cs The critical section descriptor.
  */
 extern void OSLeaveCriticalSection(critical_section_t *cs);
 
 /**
  * @brief Destroy a critical section descriptor.
  *
- * @param mutex The critical section descriptor.
+ * @param cs The critical section descriptor.
  */
 extern void OSDeleteCriticalSection(critical_section_t *cs);
 
