@@ -34,7 +34,7 @@ _syscall_split_files = _syscall_table.stdout().strip().split('\n')
 syscalls_split = custom_target('syscalls_split',
     output : _syscall_split_files,
     input : ['syscall_def/gen_syscall_shim.py', syscall_files_sdk, syscall_files_krnl],
-    command: [python_interp, '@INPUT0@', '-So', '@BUILD_ROOT@', '@INPUT1@', '@INPUT2@', '@INPUT3@', '@INPUT4@'],)
+    command: [python_interp, '@INPUT0@', '-t', 'gas-eabi', '-So', '@BUILD_ROOT@', '@INPUT1@', '@INPUT2@', '@INPUT3@', '@INPUT4@'],)
 
 # Static library that bundles both sdk and krnl shims.
 static_library(

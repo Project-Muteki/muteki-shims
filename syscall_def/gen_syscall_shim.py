@@ -21,6 +21,21 @@ HEADER_GAS = r'''
     .endm
 '''.strip('\n')
 
+HEADER_GAS_EABI = r'''
+    .cpu arm7tdmi
+    .section .text
+    .macro define_syscall num, name
+    .arm
+    .type	\name, %function
+\name:
+    push {r0}
+    push {lr}
+    svc \num
+
+    .global \name
+    .endm
+'''.strip('\n')
+
 CRT_STUB_GAS = r'''
     .global DllMainCRTStartup
 DllMainCRTStartup:
@@ -29,6 +44,7 @@ DllMainCRTStartup:
 
 HEADERS = {
     'gas': (HEADER_GAS, CRT_STUB_GAS),
+    'gas-eabi': (HEADER_GAS_EABI, CRT_STUB_GAS),
 }
 
 def parse_args():
