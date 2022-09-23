@@ -34,6 +34,16 @@ enum thread_wait_reason_e {
     WAIT_ON_SLEEP = 0x20,
 };
 
+/** Result of OSWaitForEvent() */
+typedef enum event_result_e {
+    /** Timeout before the event is set. */
+    EVENT_RESULT_TIMEOUT = 0x82,
+    /** The event is set. */
+    EVENT_RESULT_RESOLVED,
+    /** An error occurred. */
+    EVENT_RESULT_ERROR,
+} event_result_t;
+
 /**
  * @brief Thread function type
  */
@@ -70,7 +80,7 @@ typedef struct critical_section_s critical_section_t;
 struct thread_s {
     /** Magic. Always @p 0x100. */
     int magic; // always 0x100
-    /** Stack pointer. */
+    /** Stack pointer. When the thread is suspended this will point to the CPU context saved on thread stack. */
     uintptr_t *sp;
     /** Allocated stack memory. */
     void *stack;
@@ -117,10 +127,10 @@ struct thread_s {
 struct event_s {
     /** Magic. Always @p 0x201 */
     int magic;
-    /** User data attached to the event. */
-    void *user_data;
-    /** TODO OSCreateEvent arg1 */
-    short unk_0x8;
+    /** Flag value. 1 is set and 0 is clear. */
+    int flag;
+    /** Set to non-0 will inhibit the event from getting cleared after a OSWaitForEvent() is resolved. */
+    short latch_on;
     /**
      * @brief Wait state of the current event.
      * @see threading_waitable_t
@@ -227,7 +237,53 @@ extern bool OSResumeThread(thread_t *thr);
  * @param thr The thread descriptor.
  * @return true if successful.
  */
-extern OSWakeUpThread(thread_t *thr);
+extern bool OSWakeUpThread(thread_t *thr);
+
+/**
+ * @brief Create an event descriptor.
+ *
+ * Events are simple binary flags that can be used to block/unblock threads.
+ * @param latch_on Set to non-0 will inhibit the event from getting cleared after a OSWaitForEvent() is resolved.
+ * @param flag The initial flag value. Can be either 0 or 1.
+ * @return The event descriptor.
+ */
+extern event_t *OSCreateEvent(short latch_on, int flag);
+
+/**
+ * @brief Wait for an event.
+ *
+ * @param event The event context.
+ * @param timeout Timeout in OSSleep() units.
+ * @return The result.
+ * @see event_result_t
+ */
+extern event_result_t *OSWaitForEvent(event_t *event, short timeout);
+
+/**
+ * @brief Set the event flag.
+ *
+ * This sets the event_t::flag to 1.
+ * @param event The event context.
+ * @return true if successful.
+ */
+extern bool OSSetEvent(event_t *event);
+
+/**
+ * @brief Reset the event flag.
+ *
+ * This sets the event_t::flag to 0.
+ * @param event The event context.
+ * @return true if successful.
+ */
+extern bool OSResetEvent(event_t *event);
+
+/**
+ * @brief Destroy the event descriptor.
+ *
+ * @param event The event context.
+ * @return true if successful.
+ */
+extern bool OSCloseEvent(event_t *event);
 
 /**
  * @brief Initialize a critical section descriptor.

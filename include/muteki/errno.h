@@ -70,6 +70,8 @@ enum errno_user_e {
     THREAD_STACK_MALLOC_FAILED = 0x0066,
     /** Invalid thread descriptor magic. */
     THREAD_INVALID_DESCRIPTOR = 0x006e,
+    /** Descriptor is busy. Seen on event descriptors when some threads are waiting on the event. */
+    THREAD_DESCRIPTOR_BUSY = 0x008c,
 };
 
 /**
