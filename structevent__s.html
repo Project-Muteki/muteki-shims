@@ -78,10 +78,10 @@ $(function() {
 Public Attributes</h2></td></tr>
 <tr class="memitem:a8f852906872e66494a69f688c1bee050"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__s.html#a8f852906872e66494a69f688c1bee050">magic</a></td></tr>
 <tr class="separator:a8f852906872e66494a69f688c1bee050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81e227ee198dfe4a46fa41d90eff3270"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__s.html#a81e227ee198dfe4a46fa41d90eff3270">user_data</a></td></tr>
-<tr class="separator:a81e227ee198dfe4a46fa41d90eff3270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa28de47e78b17ebe0fb878da2508559b"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__s.html#aa28de47e78b17ebe0fb878da2508559b">unk_0x8</a></td></tr>
-<tr class="separator:aa28de47e78b17ebe0fb878da2508559b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53643386d8c1a657984760eca581503c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__s.html#a53643386d8c1a657984760eca581503c">flag</a></td></tr>
+<tr class="separator:a53643386d8c1a657984760eca581503c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaba0e5d74e1c9713db4201129358ecc"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__s.html#aeaba0e5d74e1c9713db4201129358ecc">latch_on</a></td></tr>
+<tr class="separator:aeaba0e5d74e1c9713db4201129358ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55d268f3d1ddaa8226c06d54f4193bdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structthreading__waitable__t.html">threading_waitable_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structevent__s.html#a55d268f3d1ddaa8226c06d54f4193bdb">wait_state</a></td></tr>
 <tr class="memdesc:a55d268f3d1ddaa8226c06d54f4193bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait state of the current event.  <a href="structevent__s.html#a55d268f3d1ddaa8226c06d54f4193bdb">More...</a><br /></td></tr>
 <tr class="separator:a55d268f3d1ddaa8226c06d54f4193bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,6 +92,36 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>_padding_0x13</b></td
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Event descriptor structure. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a53643386d8c1a657984760eca581503c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53643386d8c1a657984760eca581503c">&#9670;&nbsp;</a></span>flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int event_s::flag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flag value. 1 is set and 0 is clear. </p>
+
+</div>
+</div>
+<a id="aeaba0e5d74e1c9713db4201129358ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaba0e5d74e1c9713db4201129358ecc">&#9670;&nbsp;</a></span>latch_on</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short event_s::latch_on</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set to non-0 will inhibit the event from getting cleared after a <a class="el" href="threading_8h.html#a833b77409e16baaf28b847866023b682" title="Wait for an event.">OSWaitForEvent()</a> is resolved. </p>
+
+</div>
+</div>
 <a id="a8f852906872e66494a69f688c1bee050"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f852906872e66494a69f688c1bee050">&#9670;&nbsp;</a></span>magic</h2>
 
@@ -104,36 +134,6 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>_padding_0x13</b></td
       </table>
 </div><div class="memdoc">
 <p>Magic. Always <code>0x201</code> </p>
-
-</div>
-</div>
-<a id="aa28de47e78b17ebe0fb878da2508559b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa28de47e78b17ebe0fb878da2508559b">&#9670;&nbsp;</a></span>unk_0x8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short event_s::unk_0x8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>TODO OSCreateEvent arg1 </p>
-
-</div>
-</div>
-<a id="a81e227ee198dfe4a46fa41d90eff3270"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81e227ee198dfe4a46fa41d90eff3270">&#9670;&nbsp;</a></span>user_data</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* event_s::user_data</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>User data attached to the event. </p>
 
 </div>
 </div>

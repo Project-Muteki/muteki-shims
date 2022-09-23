@@ -99,6 +99,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a4be287b403ffb7f245f2d8718171c264"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="threading_8h.html#a8913802f71d55216958b6f397c84da83">event_result_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a4be287b403ffb7f245f2d8718171c264">event_result_t</a></td></tr>
+<tr class="separator:a4be287b403ffb7f245f2d8718171c264"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81a1ca79ed325f3c61420e8d30531b55"><td class="memItemLeft" align="right" valign="top"><a id="a81a1ca79ed325f3c61420e8d30531b55"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a81a1ca79ed325f3c61420e8d30531b55">thread_func_t</a>) (void *user_data)</td></tr>
 <tr class="memdesc:a81a1ca79ed325f3c61420e8d30531b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread function type. <br /></td></tr>
@@ -131,6 +133,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a2ebb0866fd3be1d03bd9045ed804408d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread wait reason enum.  <a href="threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d">More...</a><br /></td></tr>
 <tr class="separator:a2ebb0866fd3be1d03bd9045ed804408d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8913802f71d55216958b6f397c84da83"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a8913802f71d55216958b6f397c84da83">event_result_e</a> { <a class="el" href="threading_8h.html#a8913802f71d55216958b6f397c84da83a7c0d498d28c6d3f9ad21abb5d94a8b70">EVENT_RESULT_TIMEOUT</a> = 0x82, 
+<a class="el" href="threading_8h.html#a8913802f71d55216958b6f397c84da83ab8ccbd6d4bd1e54d2d8f60d2f8b96e4d">EVENT_RESULT_RESOLVED</a>, 
+<a class="el" href="threading_8h.html#a8913802f71d55216958b6f397c84da83aca3c1ecefd67bd88693fbc6a187153a6">EVENT_RESULT_ERROR</a>
+ }</td></tr>
+<tr class="separator:a8913802f71d55216958b6f397c84da83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -158,9 +165,24 @@ Functions</h2></td></tr>
 <tr class="memitem:aee6dd5e0de314b74db1f728cd3de09eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aee6dd5e0de314b74db1f728cd3de09eb">OSResumeThread</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr)</td></tr>
 <tr class="memdesc:aee6dd5e0de314b74db1f728cd3de09eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start/restart a previously suspended thread.  <a href="threading_8h.html#aee6dd5e0de314b74db1f728cd3de09eb">More...</a><br /></td></tr>
 <tr class="separator:aee6dd5e0de314b74db1f728cd3de09eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7297ccce010c091f91b20cdcc9a28377"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a7297ccce010c091f91b20cdcc9a28377">OSWakeUpThread</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr)</td></tr>
-<tr class="memdesc:a7297ccce010c091f91b20cdcc9a28377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force wake up a sleeping thread.  <a href="threading_8h.html#a7297ccce010c091f91b20cdcc9a28377">More...</a><br /></td></tr>
-<tr class="separator:a7297ccce010c091f91b20cdcc9a28377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f04845ce0de664c4620ef60a8a5ea7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#ac9f04845ce0de664c4620ef60a8a5ea7">OSWakeUpThread</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr)</td></tr>
+<tr class="memdesc:ac9f04845ce0de664c4620ef60a8a5ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force wake up a sleeping thread.  <a href="threading_8h.html#ac9f04845ce0de664c4620ef60a8a5ea7">More...</a><br /></td></tr>
+<tr class="separator:ac9f04845ce0de664c4620ef60a8a5ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678330c23d3730b902c078ffbd82ed1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a678330c23d3730b902c078ffbd82ed1e">OSCreateEvent</a> (short latch_on, int flag)</td></tr>
+<tr class="memdesc:a678330c23d3730b902c078ffbd82ed1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an event descriptor.  <a href="threading_8h.html#a678330c23d3730b902c078ffbd82ed1e">More...</a><br /></td></tr>
+<tr class="separator:a678330c23d3730b902c078ffbd82ed1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a833b77409e16baaf28b847866023b682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a4be287b403ffb7f245f2d8718171c264">event_result_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a833b77409e16baaf28b847866023b682">OSWaitForEvent</a> (<a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *event, short timeout)</td></tr>
+<tr class="memdesc:a833b77409e16baaf28b847866023b682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for an event.  <a href="threading_8h.html#a833b77409e16baaf28b847866023b682">More...</a><br /></td></tr>
+<tr class="separator:a833b77409e16baaf28b847866023b682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af312408ba9f92e3c22b3b67bd2cc6109"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#af312408ba9f92e3c22b3b67bd2cc6109">OSSetEvent</a> (<a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *event)</td></tr>
+<tr class="memdesc:af312408ba9f92e3c22b3b67bd2cc6109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the event flag.  <a href="threading_8h.html#af312408ba9f92e3c22b3b67bd2cc6109">More...</a><br /></td></tr>
+<tr class="separator:af312408ba9f92e3c22b3b67bd2cc6109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87186678fd748ff8d911bb2482de346a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a87186678fd748ff8d911bb2482de346a">OSResetEvent</a> (<a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *event)</td></tr>
+<tr class="memdesc:a87186678fd748ff8d911bb2482de346a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the event flag.  <a href="threading_8h.html#a87186678fd748ff8d911bb2482de346a">More...</a><br /></td></tr>
+<tr class="separator:a87186678fd748ff8d911bb2482de346a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48f0926fc24496f03e6a94385a0d6de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#ad48f0926fc24496f03e6a94385a0d6de">OSCloseEvent</a> (<a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *event)</td></tr>
+<tr class="memdesc:ad48f0926fc24496f03e6a94385a0d6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the event descriptor.  <a href="threading_8h.html#ad48f0926fc24496f03e6a94385a0d6de">More...</a><br /></td></tr>
+<tr class="separator:ad48f0926fc24496f03e6a94385a0d6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab114633e9c60a49f7cc11b7ce5e0f7e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#ab114633e9c60a49f7cc11b7ce5e0f7e0">OSInitCriticalSection</a> (<a class="el" href="threading_8h.html#a07c0d1458ed0f242cff7024401856fdc">critical_section_t</a> *cs)</td></tr>
 <tr class="memdesc:ab114633e9c60a49f7cc11b7ce5e0f7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a critical section descriptor.  <a href="threading_8h.html#ab114633e9c60a49f7cc11b7ce5e0f7e0">More...</a><br /></td></tr>
 <tr class="separator:ab114633e9c60a49f7cc11b7ce5e0f7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,7 +198,46 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Native threading API. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a4be287b403ffb7f245f2d8718171c264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be287b403ffb7f245f2d8718171c264">&#9670;&nbsp;</a></span>event_result_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="threading_8h.html#a8913802f71d55216958b6f397c84da83">event_result_e</a> <a class="el" href="threading_8h.html#a4be287b403ffb7f245f2d8718171c264">event_result_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Result of <a class="el" href="threading_8h.html#a833b77409e16baaf28b847866023b682" title="Wait for an event.">OSWaitForEvent()</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a8913802f71d55216958b6f397c84da83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8913802f71d55216958b6f397c84da83">&#9670;&nbsp;</a></span>event_result_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="threading_8h.html#a8913802f71d55216958b6f397c84da83">event_result_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Result of <a class="el" href="threading_8h.html#a833b77409e16baaf28b847866023b682" title="Wait for an event.">OSWaitForEvent()</a> </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8913802f71d55216958b6f397c84da83a7c0d498d28c6d3f9ad21abb5d94a8b70"></a>EVENT_RESULT_TIMEOUT&#160;</td><td class="fielddoc"><p>Timeout before the event is set. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8913802f71d55216958b6f397c84da83ab8ccbd6d4bd1e54d2d8f60d2f8b96e4d"></a>EVENT_RESULT_RESOLVED&#160;</td><td class="fielddoc"><p>The event is set. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8913802f71d55216958b6f397c84da83aca3c1ecefd67bd88693fbc6a187153a6"></a>EVENT_RESULT_ERROR&#160;</td><td class="fielddoc"><p>An error occurred. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a2ebb0866fd3be1d03bd9045ed804408d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ebb0866fd3be1d03bd9045ed804408d">&#9670;&nbsp;</a></span>thread_wait_reason_e</h2>
 
@@ -210,6 +271,71 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ad48f0926fc24496f03e6a94385a0d6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48f0926fc24496f03e6a94385a0d6de">&#9670;&nbsp;</a></span>OSCloseEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OSCloseEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy the event descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event context. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+
+</div>
+</div>
+<a id="a678330c23d3730b902c078ffbd82ed1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678330c23d3730b902c078ffbd82ed1e">&#9670;&nbsp;</a></span>OSCreateEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a>* OSCreateEvent </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>latch_on</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create an event descriptor. </p>
+<p>Events are simple binary flags that can be used to block/unblock threads. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latch_on</td><td>Set to non-0 will inhibit the event from getting cleared after a <a class="el" href="threading_8h.html#a833b77409e16baaf28b847866023b682" title="Wait for an event.">OSWaitForEvent()</a> is resolved. </td></tr>
+    <tr><td class="paramname">flag</td><td>The initial flag value. Can be either 0 or 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The event descriptor. </dd></dl>
+
+</div>
+</div>
 <a id="aef0b4f3a0ab1da7ac20d463607b4ac2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef0b4f3a0ab1da7ac20d463607b4ac2f">&#9670;&nbsp;</a></span>OSCreateThread()</h2>
 
@@ -422,6 +548,33 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a87186678fd748ff8d911bb2482de346a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87186678fd748ff8d911bb2482de346a">&#9670;&nbsp;</a></span>OSResetEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OSResetEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the event flag. </p>
+<p>This sets the <a class="el" href="structevent__s.html#a53643386d8c1a657984760eca581503c">event_t::flag</a> to 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event context. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+
+</div>
+</div>
 <a id="aee6dd5e0de314b74db1f728cd3de09eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee6dd5e0de314b74db1f728cd3de09eb">&#9670;&nbsp;</a></span>OSResumeThread()</h2>
 
@@ -442,6 +595,33 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thr</td><td>The thread descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+
+</div>
+</div>
+<a id="af312408ba9f92e3c22b3b67bd2cc6109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af312408ba9f92e3c22b3b67bd2cc6109">&#9670;&nbsp;</a></span>OSSetEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OSSetEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the event flag. </p>
+<p>This sets the <a class="el" href="structevent__s.html#a53643386d8c1a657984760eca581503c">event_t::flag</a> to 1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event context. </td></tr>
   </table>
   </dd>
 </dl>
@@ -579,14 +759,53 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7297ccce010c091f91b20cdcc9a28377"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7297ccce010c091f91b20cdcc9a28377">&#9670;&nbsp;</a></span>OSWakeUpThread()</h2>
+<a id="a833b77409e16baaf28b847866023b682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a833b77409e16baaf28b847866023b682">&#9670;&nbsp;</a></span>OSWaitForEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">OSWakeUpThread </td>
+          <td class="memname"><a class="el" href="threading_8h.html#a4be287b403ffb7f245f2d8718171c264">event_result_t</a>* OSWaitForEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wait for an event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The event context. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573" title="Sleep for millis milliseconds.">OSSleep()</a> units. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#a4be287b403ffb7f245f2d8718171c264">event_result_t</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac9f04845ce0de664c4620ef60a8a5ea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f04845ce0de664c4620ef60a8a5ea7">&#9670;&nbsp;</a></span>OSWakeUpThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OSWakeUpThread </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td>
           <td class="paramname"><em>thr</em></td><td>)</td>

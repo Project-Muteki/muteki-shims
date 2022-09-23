@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['refcount_414',['refcount',['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s']]]
+  ['palette_430',['palette',['../structvram__descriptor__t.html#a482d5eb9feeeb74270520d15150f34a1',1,'vram_descriptor_t']]],
+  ['prev_431',['prev',['../structthread__s.html#ad222a518be35c3a59f8378c575a96da2',1,'thread_s']]]
 ];

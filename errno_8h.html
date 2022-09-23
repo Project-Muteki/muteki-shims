@@ -119,7 +119,8 @@ Enumerations</h2></td></tr>
 <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a77c640413619238486abbeafee4a9066">THREAD_STRUCT_MALLOC_FAILED</a> = 0x0046, 
 <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a70f0ad4a707f5bd24b5f62f7a63a3c69">THREAD_STACK_MALLOC_FAILED</a> = 0x0066, 
 <br />
-&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6afbc02cd98cf4039c3d040191b01ee2">THREAD_INVALID_DESCRIPTOR</a> = 0x006e
+&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6afbc02cd98cf4039c3d040191b01ee2">THREAD_INVALID_DESCRIPTOR</a> = 0x006e, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ad58d981fc9c7ea8d0b09ad23c3104e31">THREAD_DESCRIPTOR_BUSY</a> = 0x008c
 <br />
  }</td></tr>
 <tr class="memdesc:a36f8929d56bd487eb91b68bdc2cb2455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7">ERRNO_NS_USER</a>.  <a href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">More...</a><br /></td></tr>
@@ -380,6 +381,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a70f0ad4a707f5bd24b5f62f7a63a3c69"></a>THREAD_STACK_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread stack. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a6afbc02cd98cf4039c3d040191b01ee2"></a>THREAD_INVALID_DESCRIPTOR&#160;</td><td class="fielddoc"><p>Invalid thread descriptor magic. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455ad58d981fc9c7ea8d0b09ad23c3104e31"></a>THREAD_DESCRIPTOR_BUSY&#160;</td><td class="fielddoc"><p>Descriptor is busy. Seen on event descriptors when some threads are waiting on the event. </p>
 </td></tr>
 </table>
 

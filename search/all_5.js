@@ -11,8 +11,13 @@ var searchData=
   ['errno_5fuser_5fe_83',['errno_user_e',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455',1,'errno.h']]],
   ['event_84',['event',['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s']]],
   ['event_2eh_85',['event.h',['../event_8h.html',1,'']]],
-  ['event_5fs_86',['event_s',['../structevent__s.html',1,'']]],
-  ['event_5ft_87',['event_t',['../threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb',1,'threading.h']]],
-  ['event_5ftype_88',['event_type',['../structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca',1,'ui_event_t']]],
-  ['executeprogram_89',['ExecuteProgram',['../loader_8h.html#a02dd228d313ebb256fe4ced9425f274c',1,'loader.h']]]
+  ['event_5fresult_5fe_86',['event_result_e',['../threading_8h.html#a8913802f71d55216958b6f397c84da83',1,'threading.h']]],
+  ['event_5fresult_5ferror_87',['EVENT_RESULT_ERROR',['../threading_8h.html#a8913802f71d55216958b6f397c84da83aca3c1ecefd67bd88693fbc6a187153a6',1,'threading.h']]],
+  ['event_5fresult_5fresolved_88',['EVENT_RESULT_RESOLVED',['../threading_8h.html#a8913802f71d55216958b6f397c84da83ab8ccbd6d4bd1e54d2d8f60d2f8b96e4d',1,'threading.h']]],
+  ['event_5fresult_5ft_89',['event_result_t',['../threading_8h.html#a4be287b403ffb7f245f2d8718171c264',1,'threading.h']]],
+  ['event_5fresult_5ftimeout_90',['EVENT_RESULT_TIMEOUT',['../threading_8h.html#a8913802f71d55216958b6f397c84da83a7c0d498d28c6d3f9ad21abb5d94a8b70',1,'threading.h']]],
+  ['event_5fs_91',['event_s',['../structevent__s.html',1,'']]],
+  ['event_5ft_92',['event_t',['../threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb',1,'threading.h']]],
+  ['event_5ftype_93',['event_type',['../structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca',1,'ui_event_t']]],
+  ['executeprogram_94',['ExecuteProgram',['../loader_8h.html#a02dd228d313ebb256fe4ced9425f274c',1,'loader.h']]]
 ];
