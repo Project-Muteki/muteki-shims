@@ -22,7 +22,7 @@ enum thread_wait_reason_e {
     WAIT_ON_NONE = 0x0,
     /** Waiting on a semaphore. */
     WAIT_ON_SEMAPHORE = 0x1,
-    /** Waiting on an event/mailbox message. */
+    /** Waiting on an event. */
     WAIT_ON_EVENT = 0x2,
     /** Waiting for a message queue push. */
     WAIT_ON_QUEUE = 0x4,
@@ -34,15 +34,15 @@ enum thread_wait_reason_e {
     WAIT_ON_SLEEP = 0x20,
 };
 
-/** Result of OSWaitForEvent() */
-typedef enum event_result_e {
+/** Result of waitables. */
+typedef enum wait_result_e {
     /** Timeout before the event is set. */
-    EVENT_RESULT_TIMEOUT = 0x82,
+    WAIT_RESULT_TIMEOUT = 0x82,
     /** The event is set. */
-    EVENT_RESULT_RESOLVED,
+    WAIT_RESULT_RESOLVED,
     /** An error occurred. */
-    EVENT_RESULT_ERROR,
-} event_result_t;
+    WAIT_RESULT_ERROR,
+} wait_result_t;
 
 /**
  * @brief Thread function type
@@ -61,10 +61,33 @@ typedef struct {
     unsigned char waiting_by[8];
 } threading_waitable_t;
 
+typedef char message_queue_message_t[16]; 
+
+/** 
+ * @brief Nonatomic backend storage for message queues.
+ *
+ * Simple ring-buffer-based FIFO queue data structure used internally by message queues.
+ */
+typedef struct {
+    /** Message body. */
+    message_queue_message_t *messages;
+    /** Number of chunks. */
+    unsigned short size;
+    /** Pop index. */
+    short pop_idx;
+    /** Push index. */
+    short push_idx;
+    short _padding_0xa;
+} message_queue_nonatomic_t;
+
 /**
  * @brief Thread descriptor type.
  */
 typedef struct thread_s thread_t;
+/**
+ * @brief Semaphore descriptor type.
+ */
+typedef struct semaphore_s semaphore_t;
 /**
  * @brief Event descriptor type.
  */
@@ -73,6 +96,10 @@ typedef struct event_s event_t;
  * @brief Critical section descriptor type.
  */
 typedef struct critical_section_s critical_section_t;
+/**
+ * @brief Message queue descriptor type.
+ */
+typedef struct message_queue_s message_queue_t;
 
 /**
  * @brief Thread descriptor structure.
@@ -122,6 +149,23 @@ struct thread_s {
 };
 
 /**
+ * @brief Semaphore descriptor structure.
+ */
+struct semaphore_s {
+    /** Magic. Always @p 0x200. */
+    int magic;
+    int _padding_0x4;
+    /** Counter. */
+    short ctr;
+    /**
+     * @brief Wait state of the current semaphore.
+     * @see threading_waitable_t
+     */
+    threading_waitable_t wait_state;
+    char _padding_0x13;
+};
+
+/**
  * @brief Event descriptor structure.
  */
 struct event_s {
@@ -143,7 +187,7 @@ struct event_s {
  * @brief Critical section descriptor structure.
  */
 struct critical_section_s {
-    /** Magic. Always @p 0x202. */
+    /** Magic. Always @p 0x202. Note that for some reason this is the same as ::message_queue_t. */
     int magic; // 0x00000202
     /** Thread descriptor for this thread. */
     thread_t *thr;
@@ -156,6 +200,23 @@ struct critical_section_s {
     threading_waitable_t wait_state;
     char _padding_0x13;
 }; // 0x14
+
+/**
+ * @brief Message queue descriptor structure.
+ */
+struct message_queue_s {
+    /** Magic. Always @p 0x202. Note that for some reason this is the same as ::critical_section_t. */
+    int magic;
+    /** Storage structure i.e. the actual queue part of the queue. */
+    message_queue_nonatomic_t *storage;
+    short _padding_0x8;
+    /**
+     * @brief Wait state of the current event.
+     * @see threading_waitable_t
+     */
+    threading_waitable_t wait_state;
+    char _padding_0x13;
+};
 
 /**
  * @brief Sleep for @p millis milliseconds.
@@ -240,9 +301,42 @@ extern bool OSResumeThread(thread_t *thr);
 extern bool OSWakeUpThread(thread_t *thr);
 
 /**
+ * @brief Create an semaphore descriptor.
+ *
+ * @param init_ctr Initial counter value.
+ * @return The semaphore descriptor.
+ */
+extern semaphore_t *OSCreateSemaphore(short init_ctr);
+
+/**
+ * @brief Wait and acquire a semaphore.
+ *
+ * @param semaphore The semaphore context.
+ * @param timeout Timeout in OSSleep() units.
+ * @return The result.
+ * @see wait_result_t
+ */
+extern wait_result_t OSWaitForSemaphore(semaphore_t *semaphore, short timeout);
+
+/**
+ * @brief Release a semaphore.
+ *
+ * @param semaphore The semaphore context.
+ * @return true if successful.
+ */
+extern bool OSReleaseSemaphore(semaphore_t *semaphore);
+
+/**
+ * @brief Destroy a semaphore.
+ *
+ * @param semaphore The semaphore context.
+ * @return true if successful.
+ */
+extern bool OSCloseSemaphore(semaphore_t *semaphore);
+
+/**
  * @brief Create an event descriptor.
  *
- * Events are simple binary flags that can be used to block/unblock threads.
  * @param latch_on Set to non-0 will inhibit the event from getting cleared after a OSWaitForEvent() is resolved.
  * @param flag The initial flag value. Can be either 0 or 1.
  * @return The event descriptor.
@@ -255,9 +349,9 @@ extern event_t *OSCreateEvent(short latch_on, int flag);
  * @param event The event context.
  * @param timeout Timeout in OSSleep() units.
  * @return The result.
- * @see event_result_t
+ * @see wait_result_t
  */
-extern event_result_t *OSWaitForEvent(event_t *event, short timeout);
+extern wait_result_t *OSWaitForEvent(event_t *event, short timeout);
 
 /**
  * @brief Set the event flag.
@@ -314,5 +408,57 @@ extern void OSLeaveCriticalSection(critical_section_t *cs);
  * @param cs The critical section descriptor.
  */
 extern void OSDeleteCriticalSection(critical_section_t *cs);
+
+/**
+ * @brief Create a message queue descriptor.
+ *
+ * @param size Size of the queue in number of messages (will use sizeof(::message_queue_message_t) * size bytes of memory).
+ * @return The message queue descriptor.
+ */
+extern message_queue_t *OSCreateMsgQue(unsigned short size);
+
+/**
+ * @brief Push a message into the queue.
+ *
+ * @param queue The message queue descriptor.
+ * @param message The message being pushed.
+ * @return true if successful.
+ */
+extern bool OSPostMsgQue(message_queue_t *queue, const message_queue_message_t *message);
+
+/**
+ * @brief Push a message into the queue and reschedule immediately.
+ *
+ * @param queue The message queue descriptor.
+ * @param message The message being pushed.
+ * @return true if successful.
+ */
+extern bool OSSendMsgQue(message_queue_t *queue, const message_queue_message_t *message);
+
+/**
+ * @brief Peek the bottom of the queue without popping the message.
+ *
+ * @param queue The message queue descriptor.
+ * @param message The result message.
+ * @return true if successful.
+ */
+extern bool OSPeekMsgQue(message_queue_t *queue, message_queue_message_t *message);
+
+/**
+ * @brief Pop a message from the queue.
+ *
+ * @param queue The message queue descriptor.
+ * @param message The result message.
+ * @return true if successful.
+ */
+extern bool OSGetMsgQue(message_queue_t *queue, message_queue_message_t *message);
+
+/**
+ * @brief Destroy a message queue descriptor.
+ *
+ * @param queue The message queue descriptor.
+ * @return true if successful.
+ */
+extern bool OSCloseMsgQue(message_queue_t *queue);
 
 #endif // __MUTEKI_THREADING_H__

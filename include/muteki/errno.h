@@ -60,18 +60,24 @@ enum errno_exec_e {
  * @brief Error code for ::ERRNO_NS_USER.
  */
 enum errno_user_e {
+    /** Message queue is busy. */
+    THREADING_QUEUE_BUSY = 0x000a,
+    /** Message queue is full. */
+    THREADING_QUEUE_FULL = 0x001e,
+    /** Message queue is empty. */
+    THREADING_QUEUE_EMPTY = 0x001f,
     /** Thread slot is in use. */
-    THREAD_SLOT_IN_USE = 0x0028,
+    THREADING_SLOT_IN_USE = 0x0028,
     /** Non-reserved slots are full. Cannot create thread. */
-    THREAD_SLOT_FULL = 0x002b,
+    THREADING_SLOT_FULL = 0x002b,
     /** Failed to allocate thread struct. */
-    THREAD_STRUCT_MALLOC_FAILED = 0x0046,
+    THREADING_STRUCT_MALLOC_FAILED = 0x0046,
     /** Failed to allocate thread stack. */
-    THREAD_STACK_MALLOC_FAILED = 0x0066,
+    THREADING_STACK_MALLOC_FAILED = 0x0066,
     /** Invalid thread descriptor magic. */
-    THREAD_INVALID_DESCRIPTOR = 0x006e,
+    THREADING_INVALID_DESCRIPTOR = 0x006e,
     /** Descriptor is busy. Seen on event descriptors when some threads are waiting on the event. */
-    THREAD_DESCRIPTOR_BUSY = 0x008c,
+    THREADING_DESCRIPTOR_BUSY = 0x008c,
 };
 
 /**

@@ -1,5 +1,5 @@
 project('muteki-shims', 'c',
-    version : '3.1.0',
+    version : '4.0.0',
     default_options : ['warning_level=3'])
 
 as_flags = ['-mcpu=arm7tdmi']
