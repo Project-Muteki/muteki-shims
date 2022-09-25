@@ -61,9 +61,14 @@ typedef struct {
     unsigned char waiting_by[8];
 } threading_waitable_t;
 
-typedef char message_queue_message_t[16]; 
+/**
+ * @brief Message type for message queues.
+ *
+ * This needs to be 4 byte aligned since the inline memcpy in the internal FIFO queue routines use hardcoded ldm/stm.
+ */
+typedef char message_queue_message_t[16] __attribute__((aligned(4)));
 
-/** 
+/**
  * @brief Nonatomic backend storage for message queues.
  *
  * Simple ring-buffer-based FIFO queue data structure used internally by message queues.

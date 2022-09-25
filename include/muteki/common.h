@@ -52,6 +52,8 @@ typedef wchar_t __BESTA_UTF_TYPE;
  * This will align the struct fields to 4 bytes so ldr/str can still work as normal while all 64-bit values are retrieved with 2 ldr/str instructions instead of 1 ldrd/strd instruction (when compiling the program for armv5 and up) or emulated counterpart (when compiling the program for armv4). This is needed because Besta RTOS uses 4-byte alignment for 64-bit fields by default and ldrd/strd will not work on those fields.
  *
  * For single variable this is not necessary since 8-byte aligned variables can be understood by code that uses 4-byte alignment.
+ *
+ * TODO MSVC support (is it possible?)
  */
 #define SYS_DWORD __attribute__((packed, aligned(4)))
 
