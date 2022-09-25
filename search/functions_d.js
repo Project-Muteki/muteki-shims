@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['warningbeep_397',['WarningBeep',['../utils_8h.html#a212a842a05302253aae6192eaa1ec53f',1,'utils.h']]],
-  ['writechar_398',['WriteChar',['../canvas_8h.html#a29721495a341c1aec1cec64333d59f51',1,'canvas.h']]],
-  ['writestring_399',['WriteString',['../canvas_8h.html#a9594c405b36da04349925bd88810c240',1,'canvas.h']]]
+  ['warningbeep_433',['WarningBeep',['../utils_8h.html#a212a842a05302253aae6192eaa1ec53f',1,'utils.h']]],
+  ['writechar_434',['WriteChar',['../canvas_8h.html#a29721495a341c1aec1cec64333d59f51',1,'canvas.h']]],
+  ['writestring_435',['WriteString',['../canvas_8h.html#a9594c405b36da04349925bd88810c240',1,'canvas.h']]]
 ];

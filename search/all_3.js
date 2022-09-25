@@ -7,5 +7,6 @@ var searchData=
   ['common_2eh_58',['common.h',['../common_8h.html',1,'']]],
   ['createfile_59',['CreateFile',['../devio_8h.html#a666a9814a588ce2a98895b0ae9b03929',1,'devio.h']]],
   ['critical_5fsection_5fs_60',['critical_section_s',['../structcritical__section__s.html',1,'']]],
-  ['critical_5fsection_5ft_61',['critical_section_t',['../threading_8h.html#a07c0d1458ed0f242cff7024401856fdc',1,'threading.h']]]
+  ['critical_5fsection_5ft_61',['critical_section_t',['../threading_8h.html#a07c0d1458ed0f242cff7024401856fdc',1,'threading.h']]],
+  ['ctr_62',['ctr',['../structsemaphore__s.html#a063ba0ee7ba3e28d83b8320240439860',1,'semaphore_s']]]
 ];

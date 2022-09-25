@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ui_5fevent_5ft_296',['ui_event_t',['../structui__event__t.html',1,'']]]
+  ['semaphore_5fs_319',['semaphore_s',['../structsemaphore__s.html',1,'']]]
 ];

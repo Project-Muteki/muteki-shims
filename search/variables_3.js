@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['event_410',['event',['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s']]],
-  ['event_5ftype_411',['event_type',['../structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca',1,'ui_event_t']]]
+  ['day_444',['day',['../structdatetime__t.html#a2b25f6300e01d6b9eb926a4236102dab',1,'datetime_t']]],
+  ['depth_445',['depth',['../structvram__descriptor__t.html#ad49f14bfad86e2501a72aa1bf519b577',1,'vram_descriptor_t']]],
+  ['dospath_446',['dospath',['../structapplet__args__v4__t.html#a76884adfcb7c6da9e0a94f40b3f0d932',1,'applet_args_v4_t']]]
 ];

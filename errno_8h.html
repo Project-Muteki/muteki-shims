@@ -114,13 +114,17 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ad8c9085e0bdd5a9b0b159fb117161c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a42a7a9000abfbd639e750f5d124bfdfa">ERRNO_NS_EXEC</a>. <br /></td></tr>
 <tr class="separator:ad8c9085e0bdd5a9b0b159fb117161c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36f8929d56bd487eb91b68bdc2cb2455"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">errno_user_e</a> { <br />
-&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a39f7c71c62c9f9b6fa5ad2f604a717ce">THREAD_SLOT_IN_USE</a> = 0x0028, 
-<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ab3d015479d143e79b5a9a28f6e386d5b">THREAD_SLOT_FULL</a> = 0x002b, 
-<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a77c640413619238486abbeafee4a9066">THREAD_STRUCT_MALLOC_FAILED</a> = 0x0046, 
-<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a70f0ad4a707f5bd24b5f62f7a63a3c69">THREAD_STACK_MALLOC_FAILED</a> = 0x0066, 
+&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a92ea17a1eca301d4fbb5a79e2249449f">THREADING_QUEUE_BUSY</a> = 0x000a, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a1e42ea41590869b3050eaacb75d70a7e">THREADING_QUEUE_FULL</a> = 0x001e, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ad11575c0dfb1c63f8a21bc31e077faf8">THREADING_QUEUE_EMPTY</a> = 0x001f, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a2f4f0ea7fa012fdea30ba42bdb50f2ab">THREADING_SLOT_IN_USE</a> = 0x0028, 
 <br />
-&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6afbc02cd98cf4039c3d040191b01ee2">THREAD_INVALID_DESCRIPTOR</a> = 0x006e, 
-<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ad58d981fc9c7ea8d0b09ad23c3104e31">THREAD_DESCRIPTOR_BUSY</a> = 0x008c
+&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3c0372437a9960bbbc77c3849b163732">THREADING_SLOT_FULL</a> = 0x002b, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6b324986a35e51118e9aeea698f43d55">THREADING_STRUCT_MALLOC_FAILED</a> = 0x0046, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a4f15405cfc8204dca0c8230d74ac2092">THREADING_STACK_MALLOC_FAILED</a> = 0x0066, 
+<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3a10bf19b6d2ce0d4c484d7d1ef301ad">THREADING_INVALID_DESCRIPTOR</a> = 0x006e, 
+<br />
+&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a733173708113bcaf847d273318026a6e">THREADING_DESCRIPTOR_BUSY</a> = 0x008c
 <br />
  }</td></tr>
 <tr class="memdesc:a36f8929d56bd487eb91b68bdc2cb2455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7">ERRNO_NS_USER</a>.  <a href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">More...</a><br /></td></tr>
@@ -372,17 +376,23 @@ Functions</h2></td></tr>
 
 <p>Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7">ERRNO_NS_USER</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a39f7c71c62c9f9b6fa5ad2f604a717ce"></a>THREAD_SLOT_IN_USE&#160;</td><td class="fielddoc"><p>Thread slot is in use. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a92ea17a1eca301d4fbb5a79e2249449f"></a>THREADING_QUEUE_BUSY&#160;</td><td class="fielddoc"><p>Message queue is busy. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455ab3d015479d143e79b5a9a28f6e386d5b"></a>THREAD_SLOT_FULL&#160;</td><td class="fielddoc"><p>Non-reserved slots are full. Cannot create thread. </p>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a1e42ea41590869b3050eaacb75d70a7e"></a>THREADING_QUEUE_FULL&#160;</td><td class="fielddoc"><p>Message queue is full. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a77c640413619238486abbeafee4a9066"></a>THREAD_STRUCT_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread struct. </p>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455ad11575c0dfb1c63f8a21bc31e077faf8"></a>THREADING_QUEUE_EMPTY&#160;</td><td class="fielddoc"><p>Message queue is empty. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a70f0ad4a707f5bd24b5f62f7a63a3c69"></a>THREAD_STACK_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread stack. </p>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a2f4f0ea7fa012fdea30ba42bdb50f2ab"></a>THREADING_SLOT_IN_USE&#160;</td><td class="fielddoc"><p>Thread slot is in use. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a6afbc02cd98cf4039c3d040191b01ee2"></a>THREAD_INVALID_DESCRIPTOR&#160;</td><td class="fielddoc"><p>Invalid thread descriptor magic. </p>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a3c0372437a9960bbbc77c3849b163732"></a>THREADING_SLOT_FULL&#160;</td><td class="fielddoc"><p>Non-reserved slots are full. Cannot create thread. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455ad58d981fc9c7ea8d0b09ad23c3104e31"></a>THREAD_DESCRIPTOR_BUSY&#160;</td><td class="fielddoc"><p>Descriptor is busy. Seen on event descriptors when some threads are waiting on the event. </p>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a6b324986a35e51118e9aeea698f43d55"></a>THREADING_STRUCT_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread struct. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a4f15405cfc8204dca0c8230d74ac2092"></a>THREADING_STACK_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread stack. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a3a10bf19b6d2ce0d4c484d7d1ef301ad"></a>THREADING_INVALID_DESCRIPTOR&#160;</td><td class="fielddoc"><p>Invalid thread descriptor magic. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a733173708113bcaf847d273318026a6e"></a>THREADING_DESCRIPTOR_BUSY&#160;</td><td class="fielddoc"><p>Descriptor is busy. Seen on event descriptors when some threads are waiting on the event. </p>
 </td></tr>
 </table>
 
