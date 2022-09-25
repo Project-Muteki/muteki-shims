@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['event_5ft_510',['event_t',['../threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb',1,'threading.h']]]
+  ['critical_5fsection_5ft_511',['critical_section_t',['../threading_8h.html#a07c0d1458ed0f242cff7024401856fdc',1,'threading.h']]]
 ];

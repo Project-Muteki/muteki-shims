@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['thread_5ffunc_5ft_514',['thread_func_t',['../threading_8h.html#a81a1ca79ed325f3c61420e8d30531b55',1,'threading.h']]],
-  ['thread_5ft_515',['thread_t',['../threading_8h.html#a2be49e4dddf107b380ba10748317741d',1,'threading.h']]]
+  ['semaphore_5ft_515',['semaphore_t',['../threading_8h.html#a37e4075b8f630bcb49b25435a1af5c4b',1,'threading.h']]]
 ];
