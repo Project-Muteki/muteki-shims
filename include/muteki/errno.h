@@ -14,6 +14,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** Kernel error code type */
 typedef int32_t kerrno_t;
 
@@ -257,5 +261,9 @@ extern void _SetLastError(kerrno_t err);
  * @return The current errno value from either kernel or OSSetLastError().
  */
 extern kerrno_t _GetLastError(void);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif

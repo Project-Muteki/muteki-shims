@@ -15,6 +15,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief The framebuffer descriptor.
  *
@@ -83,5 +87,9 @@ extern bool Buzzer(int frequency, unsigned short duration);
  * @return @p true on success.
  */
 extern bool WarningBeep();
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_UTILS_H__

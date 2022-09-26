@@ -13,6 +13,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief Max code units (ASCII or UTF-16) a path can contain.
  * This includes the NUL terminator. Note that this can differ from libc definitions due to possible encoding differences (e.g. newlib-muteki uses UTF-8 as the "ANSI" encoding by default).
@@ -356,5 +360,9 @@ extern short _wrename(const UTF16 *old_path, const UTF16 *new_path);
  * @return 0 on success.
  */
 extern int FSGetDiskRoomState(int fsid, fs_stat_t *fs_stat);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_FS_H__

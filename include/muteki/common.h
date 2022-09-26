@@ -13,6 +13,10 @@
 #ifndef __MUTEKI_COMMON_H__
 #define __MUTEKI_COMMON_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
@@ -56,5 +60,9 @@ typedef wchar_t __BESTA_UTF_TYPE;
  * TODO MSVC support (is it possible?)
  */
 #define SYS_DWORD __attribute__((packed, aligned(4)))
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_COMMON_H__

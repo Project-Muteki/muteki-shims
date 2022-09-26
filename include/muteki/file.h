@@ -13,6 +13,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief @p whence values for __fseek().
  */
@@ -115,4 +119,9 @@ extern int __fflush(void *stream);
  * @return Unclear. Could be similar to POSIX fclose().
  */
 extern int _fclose(void *stream);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
+
 #endif // __MUTEKI_FILE_H__

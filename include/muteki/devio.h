@@ -13,6 +13,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief Open or create a file/device by its @p pathname.
  *
@@ -57,5 +61,9 @@ extern bool CloseHandle(void *h);
  * @return Whether the operation was successful.
  */
 extern bool DeviceIoControl(void *h, int request, const void *in, int inlen, void *out, int outlen, int *retlen, void *overlapped);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_DEVIO_H__

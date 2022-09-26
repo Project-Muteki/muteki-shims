@@ -13,6 +13,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief The datetime struct used by GetSysTime() and SetSysTime().
  */
@@ -41,5 +45,9 @@ typedef struct {
  * @param dt Pointer to an empty datetime struct.
  */
 extern void GetSysTime(datetime_t *dt);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_DATETIME_H__

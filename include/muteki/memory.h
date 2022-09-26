@@ -23,6 +23,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief Allocate heap memory.
  *
@@ -65,5 +69,9 @@ extern void _lfree(void *ptr);
  * @return Size of available memory.
  */
 extern size_t GetFreeMemory();
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_MEMORY_H__

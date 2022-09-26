@@ -13,6 +13,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief List of available keycodes.
  */
@@ -185,5 +189,9 @@ extern bool TestKeyEvent(ui_event_t *event);
  * @return @p 1 if successful.
  */
 extern int32_t GetEvent(ui_event_t *event);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_UI_EVENT_H__

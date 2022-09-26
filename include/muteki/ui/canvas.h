@@ -13,6 +13,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief Font types.
  *
@@ -221,5 +225,9 @@ void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
  * @param amount Amount of pixels to move.
  */
 void ScrollRight(short x0, short y0, short x1, short y1, short amount);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_UI_CANVAS_H__

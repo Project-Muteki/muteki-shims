@@ -14,6 +14,10 @@
 #include <muteki/common.h>
 #include <muteki/errno.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief Thread wait reason enum.
  */
@@ -465,5 +469,9 @@ extern bool OSGetMsgQue(message_queue_t *queue, message_queue_message_t *message
  * @return true if successful.
  */
 extern bool OSCloseMsgQue(message_queue_t *queue);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_THREADING_H__

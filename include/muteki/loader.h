@@ -13,6 +13,10 @@
 
 #include <muteki/common.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * Defines the default subroutine identifiers to be used with @a ExecuteProgram.
  * @see ExecuteProgram
@@ -99,5 +103,9 @@ extern char *GetCurrentPathA();
  * @return The UTF-16 LFN path to the current running executable.
  */
 extern UTF16 *GetCurrentPathW();
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif // __MUTEKI_LOADER_H__
