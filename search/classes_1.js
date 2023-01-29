@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['critical_5fsection_5fs_313',['critical_section_s',['../structcritical__section__s.html',1,'']]]
+  ['critical_5fsection_5fs_316',['critical_section_s',['../structcritical__section__s.html',1,'']]]
 ];

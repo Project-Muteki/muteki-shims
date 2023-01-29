@@ -41,8 +41,11 @@ var searchData=
   ['fs_5fstat_5ft_130',['fs_stat_t',['../structfs__stat__t.html',1,'']]],
   ['fs_5ftoo_5fmany_5fopen_5ffiles_131',['FS_TOO_MANY_OPEN_FILES',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a68b3de842e6b6507313a2459251e2f82',1,'errno.h']]],
   ['fsgetdiskroomstate_132',['FSGetDiskRoomState',['../fs_8h.html#addc301eb3ca382ad5dc5de8e0dca892c',1,'fs.h']]],
-  ['ftl_5fdata_5fcorrupted_133',['FTL_DATA_CORRUPTED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4216fadfb49f3a73f0e33b2785d59f7e',1,'errno.h']]],
-  ['ftl_5fecc_5ffailed_134',['FTL_ECC_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aa38c1fb061edc52a44e085f21ce3b564',1,'errno.h']]],
-  ['ftl_5fecc_5ftriggered_135',['FTL_ECC_TRIGGERED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ad38c3244c24ae07136a008a3cc3581ce',1,'errno.h']]],
-  ['ftl_5finvalid_5flba_136',['FTL_INVALID_LBA',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a540609a19a3cae437a66a70cb0473184',1,'errno.h']]]
+  ['ftl_2eh_133',['ftl.h',['../ftl_8h.html',1,'']]],
+  ['ftl_5fdata_5fcorrupted_134',['FTL_DATA_CORRUPTED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4216fadfb49f3a73f0e33b2785d59f7e',1,'errno.h']]],
+  ['ftl_5fecc_5ffailed_135',['FTL_ECC_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aa38c1fb061edc52a44e085f21ce3b564',1,'errno.h']]],
+  ['ftl_5fecc_5ftriggered_136',['FTL_ECC_TRIGGERED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ad38c3244c24ae07136a008a3cc3581ce',1,'errno.h']]],
+  ['ftl_5fgetcurdisksize_137',['FTL_GetCurDiskSize',['../ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615',1,'ftl.h']]],
+  ['ftl_5finvalid_5flba_138',['FTL_INVALID_LBA',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a540609a19a3cae437a66a70cb0473184',1,'errno.h']]],
+  ['ftl_5freadsector_139',['FTL_ReadSector',['../ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90',1,'ftl.h']]]
 ];

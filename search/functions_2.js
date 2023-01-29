@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['clearallevents_370',['ClearAllEvents',['../event_8h.html#a0d28c08b9ef5fb9b2877c547f433d1ed',1,'event.h']]],
-  ['clearscreen_371',['ClearScreen',['../canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692',1,'canvas.h']]],
-  ['closehandle_372',['CloseHandle',['../devio_8h.html#afd675a81da99d1a03d218aa08caf16a6',1,'devio.h']]],
-  ['createfile_373',['CreateFile',['../devio_8h.html#a666a9814a588ce2a98895b0ae9b03929',1,'devio.h']]]
+  ['clearallevents_374',['ClearAllEvents',['../event_8h.html#a0d28c08b9ef5fb9b2877c547f433d1ed',1,'event.h']]],
+  ['clearscreen_375',['ClearScreen',['../canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692',1,'canvas.h']]],
+  ['closehandle_376',['CloseHandle',['../devio_8h.html#afd675a81da99d1a03d218aa08caf16a6',1,'devio.h']]],
+  ['createfile_377',['CreateFile',['../devio_8h.html#a666a9814a588ce2a98895b0ae9b03929',1,'devio.h']]]
 ];
