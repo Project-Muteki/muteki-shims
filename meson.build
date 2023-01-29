@@ -2,8 +2,8 @@ project('muteki-shims', 'c',
     version : '4.0.0',
     default_options : ['warning_level=3'])
 
-as_flags = ['-mcpu=arm7tdmi']
-ld_flags = [as_flags, '-nostdlib', '-nostdinc']
+c_flags = ['-mcpu=arm7tdmi', '-nostdlib', '-nostdinc']
+ld_flags = c_flags
 
 syscall_files_sdk = ['syscall_def/syscalls_sdk.json', 'syscall_def/syscalls_sdk_hpprime.json']
 syscall_files_krnl = ['syscall_def/syscalls_krnl.json', 'syscall_def/syscalls_krnl_hpprime.json']
@@ -41,8 +41,9 @@ static_library(
     'mutekishims',
     syscalls_split,
     install : true,
-    c_args : as_flags,
+    c_args : c_flags,
     link_args : ld_flags,
+    pic: false,
 )
 
 if get_option('generate_dll_replicas')
@@ -57,10 +58,11 @@ shared_library(
     'src/dll_entry_stub.s',
     syscalls_sdk,
     install : true,
-    c_args : as_flags,
+    c_args : c_flags,
     link_args : ld_flags,
     name_suffix : lib_suffix_override,
     name_prefix : lib_prefix_override,
+    pic: false,
 )
 
 # krnllib replica
@@ -69,10 +71,11 @@ shared_library(
     'src/dll_entry_stub.s',
     syscalls_krnl,
     install : true,
-    c_args : as_flags,
+    c_args : c_flags,
     link_args : ld_flags,
     name_suffix : lib_suffix_override,
     name_prefix : lib_prefix_override,
+    pic: false,
 )
 
 endif # get_option('generate_dll_replicas')
