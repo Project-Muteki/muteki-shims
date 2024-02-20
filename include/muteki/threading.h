@@ -51,7 +51,7 @@ typedef enum wait_result_e {
 /**
  * @brief Thread function type
  */
-typedef void (*thread_func_t)(void *user_data);
+typedef int (*thread_func_t)(void *user_data);
 
 /**
  * @brief Common data structure for waitables.
@@ -120,8 +120,8 @@ struct thread_s {
     uintptr_t *sp;
     /** Allocated stack memory. */
     void *stack;
-    /** Unknown. Related to thread termination. Initializes to 0. */
-    int unk_0xc; // init to 0
+    /** Exit code of the thread. Initializes to 0. */
+    int exit_code; // init to 0
     /** Error code. */
     kerrno_t kerrno; // init to 0
     /** Unknown. Initializes to 0x80000000. */
@@ -144,9 +144,9 @@ struct thread_s {
     /** Upper 3 bit of the slot number. For scheduler. */
     char slot_high3b;
     /** Lower 3 bit bitmask of the slot number. For scheduler. */
-    char slot_low3b_bit;
+    unsigned char slot_low3b_bit;
     /** Upper 3 bit bitmask of the slot number. For scheduler. */
-    char slot_high3b_bit;
+    unsigned char slot_high3b_bit;
     /** Event descriptor that belongs to the event the thread is currently waiting for. */
     event_t *event;
     /** Previous thread descriptor. */
@@ -249,25 +249,25 @@ extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stac
  * @brief Terminate a thread.
  *
  * @param thr Thread to terminate.
- * @param arg2 TODO Unknown. thread_t::unk_0xc will be set to this.
+ * @param exit_code The exit code.
  * @return Always 0.
  */
-extern int OSTerminateThread(thread_t *thr, int arg2);
+extern int OSTerminateThread(thread_t *thr, int exit_code);
 
 /**
  * @brief Terminate current thread.
  *
  * This calls OSTerminateThread() with the descriptor of current thread as @p thr.
  *
- * @param arg1 TODO Unknown. thread_t::unk_0xc will be set to this.
+ * @param exit_code The exit code.
  * @return Always 0.
  */
-extern int OSExitThread(int arg1);
+extern int OSExitThread(int exit_code);
 
 /**
  * @brief Get the thread slot number.
  *
- * On Besta RTOS there is no explicit way to specify thread priority. Priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with OSCreateThread(). User can move threads to these reserved slots by calling the OSSetThreadPriority() function.
+ * On Besta RTOS, priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with OSCreateThread(). User can move threads to these reserved slots by calling the OSSetThreadPriority() function.
  * @param thr The thread descriptor.
  * @return The slot number of the thread.
  */
