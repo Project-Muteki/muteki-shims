@@ -110,10 +110,10 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a4726bf81387f879f3c5f66660a6bd3d5"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="threading_8h.html#a9272387198be11dfc77e13b4b65854b4">wait_result_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a></td></tr>
 <tr class="separator:a4726bf81387f879f3c5f66660a6bd3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81a1ca79ed325f3c61420e8d30531b55"><td class="memItemLeft" align="right" valign="top"><a id="a81a1ca79ed325f3c61420e8d30531b55"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a81a1ca79ed325f3c61420e8d30531b55">thread_func_t</a>) (void *user_data)</td></tr>
-<tr class="memdesc:a81a1ca79ed325f3c61420e8d30531b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread function type. <br /></td></tr>
-<tr class="separator:a81a1ca79ed325f3c61420e8d30531b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324e4123c9e5b076cd1afa3562e38244"><td class="memItemLeft" align="right" valign="top"><a id="a324e4123c9e5b076cd1afa3562e38244"></a>
+typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a324e4123c9e5b076cd1afa3562e38244">thread_func_t</a>) (void *user_data)</td></tr>
+<tr class="memdesc:a324e4123c9e5b076cd1afa3562e38244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread function type. <br /></td></tr>
+<tr class="separator:a324e4123c9e5b076cd1afa3562e38244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a859b9e9b5e965b79791871ec7338f77c"><td class="memItemLeft" align="right" valign="top">typedef char message_queue_message_t[16]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a859b9e9b5e965b79791871ec7338f77c">__attribute__</a>((aligned(4)))</td></tr>
 <tr class="memdesc:a859b9e9b5e965b79791871ec7338f77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message type for message queues.  <a href="threading_8h.html#a859b9e9b5e965b79791871ec7338f77c">More...</a><br /></td></tr>
 <tr class="separator:a859b9e9b5e965b79791871ec7338f77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,15 +164,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aa6ebd195673c9f5c88b2c58bc5ee3573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573">OSSleep</a> (short millis)</td></tr>
 <tr class="memdesc:aa6ebd195673c9f5c88b2c58bc5ee3573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for <code>millis</code> milliseconds.  <a href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573">More...</a><br /></td></tr>
 <tr class="separator:aa6ebd195673c9f5c88b2c58bc5ee3573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef0b4f3a0ab1da7ac20d463607b4ac2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aef0b4f3a0ab1da7ac20d463607b4ac2f">OSCreateThread</a> (<a class="el" href="threading_8h.html#a81a1ca79ed325f3c61420e8d30531b55">thread_func_t</a> func, void *user_data, size_t stack_size, bool defer_start)</td></tr>
+<tr class="memitem:aef0b4f3a0ab1da7ac20d463607b4ac2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aef0b4f3a0ab1da7ac20d463607b4ac2f">OSCreateThread</a> (<a class="el" href="threading_8h.html#a324e4123c9e5b076cd1afa3562e38244">thread_func_t</a> func, void *user_data, size_t stack_size, bool defer_start)</td></tr>
 <tr class="memdesc:aef0b4f3a0ab1da7ac20d463607b4ac2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new thread.  <a href="threading_8h.html#aef0b4f3a0ab1da7ac20d463607b4ac2f">More...</a><br /></td></tr>
 <tr class="separator:aef0b4f3a0ab1da7ac20d463607b4ac2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa57c01c21bb617bc78a6fef08b6e18d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aa57c01c21bb617bc78a6fef08b6e18d1">OSTerminateThread</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr, int arg2)</td></tr>
-<tr class="memdesc:aa57c01c21bb617bc78a6fef08b6e18d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate a thread.  <a href="threading_8h.html#aa57c01c21bb617bc78a6fef08b6e18d1">More...</a><br /></td></tr>
-<tr class="separator:aa57c01c21bb617bc78a6fef08b6e18d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb6a08f40bdfd06a3f6aaae9441593d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#afb6a08f40bdfd06a3f6aaae9441593d8">OSExitThread</a> (int arg1)</td></tr>
-<tr class="memdesc:afb6a08f40bdfd06a3f6aaae9441593d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate current thread.  <a href="threading_8h.html#afb6a08f40bdfd06a3f6aaae9441593d8">More...</a><br /></td></tr>
-<tr class="separator:afb6a08f40bdfd06a3f6aaae9441593d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a501631f9151a55beb4d2a83970719908"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a501631f9151a55beb4d2a83970719908">OSTerminateThread</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr, int exit_code)</td></tr>
+<tr class="memdesc:a501631f9151a55beb4d2a83970719908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate a thread.  <a href="threading_8h.html#a501631f9151a55beb4d2a83970719908">More...</a><br /></td></tr>
+<tr class="separator:a501631f9151a55beb4d2a83970719908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11dbf56f12f0f049d6d1dc061bf7e83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#af11dbf56f12f0f049d6d1dc061bf7e83">OSExitThread</a> (int exit_code)</td></tr>
+<tr class="memdesc:af11dbf56f12f0f049d6d1dc061bf7e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate current thread.  <a href="threading_8h.html#af11dbf56f12f0f049d6d1dc061bf7e83">More...</a><br /></td></tr>
+<tr class="separator:af11dbf56f12f0f049d6d1dc061bf7e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab275a73337d748fdf9eb651e5f031569"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">OSGetThreadPriority</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr)</td></tr>
 <tr class="memdesc:ab275a73337d748fdf9eb651e5f031569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread slot number.  <a href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">More...</a><br /></td></tr>
 <tr class="separator:ab275a73337d748fdf9eb651e5f031569"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -520,7 +520,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a>* OSCreateThread </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="threading_8h.html#a81a1ca79ed325f3c61420e8d30531b55">thread_func_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="threading_8h.html#a324e4123c9e5b076cd1afa3562e38244">thread_func_t</a>&#160;</td>
           <td class="paramname"><em>func</em>, </td>
         </tr>
         <tr>
@@ -616,8 +616,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afb6a08f40bdfd06a3f6aaae9441593d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb6a08f40bdfd06a3f6aaae9441593d8">&#9670;&nbsp;</a></span>OSExitThread()</h2>
+<a id="af11dbf56f12f0f049d6d1dc061bf7e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11dbf56f12f0f049d6d1dc061bf7e83">&#9670;&nbsp;</a></span>OSExitThread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -626,17 +626,17 @@ Functions</h2></td></tr>
           <td class="memname">int OSExitThread </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>arg1</em></td><td>)</td>
+          <td class="paramname"><em>exit_code</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Terminate current thread. </p>
-<p>This calls <a class="el" href="threading_8h.html#aa57c01c21bb617bc78a6fef08b6e18d1" title="Terminate a thread.">OSTerminateThread()</a> with the descriptor of current thread as <code>thr</code>.</p>
+<p>This calls <a class="el" href="threading_8h.html#a501631f9151a55beb4d2a83970719908" title="Terminate a thread.">OSTerminateThread()</a> with the descriptor of current thread as <code>thr</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arg1</td><td>TODO Unknown. <a class="el" href="structthread__s.html#aa9ce7fa1b0aa06b202923801021d0ff4">thread_t::unk_0xc</a> will be set to this. </td></tr>
+    <tr><td class="paramname">exit_code</td><td>The exit code. </td></tr>
   </table>
   </dd>
 </dl>
@@ -699,7 +699,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the thread slot number. </p>
-<p>On Besta RTOS there is no explicit way to specify thread priority. Priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with <a class="el" href="threading_8h.html#aef0b4f3a0ab1da7ac20d463607b4ac2f" title="Create a new thread.">OSCreateThread()</a>. User can move threads to these reserved slots by calling the <a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5" title="Set the thread slot number.">OSSetThreadPriority()</a> function. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>On Besta RTOS, priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with <a class="el" href="threading_8h.html#aef0b4f3a0ab1da7ac20d463607b4ac2f" title="Create a new thread.">OSCreateThread()</a>. User can move threads to these reserved slots by calling the <a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5" title="Set the thread slot number.">OSSetThreadPriority()</a> function. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thr</td><td>The thread descriptor. </td></tr>
   </table>
@@ -1075,8 +1075,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa57c01c21bb617bc78a6fef08b6e18d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa57c01c21bb617bc78a6fef08b6e18d1">&#9670;&nbsp;</a></span>OSTerminateThread()</h2>
+<a id="a501631f9151a55beb4d2a83970719908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a501631f9151a55beb4d2a83970719908">&#9670;&nbsp;</a></span>OSTerminateThread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1091,7 +1091,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>arg2</em>&#160;</td>
+          <td class="paramname"><em>exit_code</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1105,7 +1105,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thr</td><td>Thread to terminate. </td></tr>
-    <tr><td class="paramname">arg2</td><td>TODO Unknown. <a class="el" href="structthread__s.html#aa9ce7fa1b0aa06b202923801021d0ff4">thread_t::unk_0xc</a> will be set to this. </td></tr>
+    <tr><td class="paramname">exit_code</td><td>The exit code. </td></tr>
   </table>
   </dd>
 </dl>

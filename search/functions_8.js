@@ -9,7 +9,7 @@ var searchData=
   ['oscreatethread_406',['OSCreateThread',['../threading_8h.html#aef0b4f3a0ab1da7ac20d463607b4ac2f',1,'threading.h']]],
   ['osdeletecriticalsection_407',['OSDeleteCriticalSection',['../threading_8h.html#ac14aa1981ef8fc2e005953d87682ddf9',1,'threading.h']]],
   ['osentercriticalsection_408',['OSEnterCriticalSection',['../threading_8h.html#aaf193d4994c1a9097fc193880d801190',1,'threading.h']]],
-  ['osexitthread_409',['OSExitThread',['../threading_8h.html#afb6a08f40bdfd06a3f6aaae9441593d8',1,'threading.h']]],
+  ['osexitthread_409',['OSExitThread',['../threading_8h.html#af11dbf56f12f0f049d6d1dc061bf7e83',1,'threading.h']]],
   ['osgetlasterror_410',['OSGetLastError',['../errno_8h.html#ad18c4185692b2c3c69c7fc7612bca683',1,'errno.h']]],
   ['osgetmsgque_411',['OSGetMsgQue',['../threading_8h.html#adf5aef3bc2a84991243a3e5aa86f6047',1,'threading.h']]],
   ['osgetthreadpriority_412',['OSGetThreadPriority',['../threading_8h.html#ab275a73337d748fdf9eb651e5f031569',1,'threading.h']]],
@@ -26,7 +26,7 @@ var searchData=
   ['ossetthreadpriority_423',['OSSetThreadPriority',['../threading_8h.html#adcc4f2020e4309e651190748c818dff5',1,'threading.h']]],
   ['ossleep_424',['OSSleep',['../threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573',1,'threading.h']]],
   ['ossuspendthread_425',['OSSuspendThread',['../threading_8h.html#a68f7f1d664f59e44a053e3315d535149',1,'threading.h']]],
-  ['osterminatethread_426',['OSTerminateThread',['../threading_8h.html#aa57c01c21bb617bc78a6fef08b6e18d1',1,'threading.h']]],
+  ['osterminatethread_426',['OSTerminateThread',['../threading_8h.html#a501631f9151a55beb4d2a83970719908',1,'threading.h']]],
   ['oswaitforevent_427',['OSWaitForEvent',['../threading_8h.html#a43fca23c4f43f50b233cb496c4132865',1,'threading.h']]],
   ['oswaitforsemaphore_428',['OSWaitForSemaphore',['../threading_8h.html#a5705850a45b85e46c7cfb47664e96af2',1,'threading.h']]],
   ['oswakeupthread_429',['OSWakeUpThread',['../threading_8h.html#ac9f04845ce0de664c4620ef60a8a5ea7',1,'threading.h']]]
