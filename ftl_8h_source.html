@@ -87,14 +87,20 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90">   45</a></span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90">FTL_ReadSector</a>(<span class="keywordtype">size_t</span> sector, <span class="keywordtype">void</span> *ptr, <span class="keywordtype">size_t</span> count);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// extern &quot;C&quot;</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_FTL_H__</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="ftl_8h.html#af641b186facc7ee474d06ddda52bfefc">   56</a></span>&#160;<span class="keyword">extern</span> <span class="keywordtype">short</span> <a class="code" href="ftl_8h.html#af641b186facc7ee474d06ddda52bfefc">FTL_CreateRamDisk</a>(<span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="ftl_8h.html#aac9f27ca1c858abe49d42e9ac008ce91">   61</a></span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="ftl_8h.html#aac9f27ca1c858abe49d42e9ac008ce91">FTL_DestroyRamDisk</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_FTL_H__</span></div>
 <div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div><div class="ttdoc">Common include file for all muteki-shims headers.</div></div>
 <div class="ttc" id="aftl_8h_html_a16fb1f63c4e0d1e321cc1acfba680f90"><div class="ttname"><a href="ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90">FTL_ReadSector</a></div><div class="ttdeci">int FTL_ReadSector(size_t sector, void *ptr, size_t count)</div><div class="ttdoc">Read sectors from the block device the current active drive belongs to.</div></div>
 <div class="ttc" id="aftl_8h_html_a65b2c998ef7d819d0487b1be42a38615"><div class="ttname"><a href="ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615">FTL_GetCurDiskSize</a></div><div class="ttdeci">size_t FTL_GetCurDiskSize(size_t *size_hi)</div><div class="ttdoc">Get the size of block device the current active drive belongs to.</div></div>
+<div class="ttc" id="aftl_8h_html_aac9f27ca1c858abe49d42e9ac008ce91"><div class="ttname"><a href="ftl_8h.html#aac9f27ca1c858abe49d42e9ac008ce91">FTL_DestroyRamDisk</a></div><div class="ttdeci">void FTL_DestroyRamDisk()</div><div class="ttdoc">Close the previously allocated RAM disk.</div></div>
+<div class="ttc" id="aftl_8h_html_af641b186facc7ee474d06ddda52bfefc"><div class="ttname"><a href="ftl_8h.html#af641b186facc7ee474d06ddda52bfefc">FTL_CreateRamDisk</a></div><div class="ttdeci">short FTL_CreateRamDisk(size_t size)</div><div class="ttdoc">Allocate a RAM disk.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
