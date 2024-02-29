@@ -44,6 +44,22 @@ extern size_t FTL_GetCurDiskSize(size_t *size_hi);
  */
 extern int FTL_ReadSector(size_t sector, void *ptr, size_t count);
 
+/**
+ * @brief Allocate a RAM disk.
+ *
+ * This may be used internally to buffer file writes under circumstances when low latency I/O is
+ * required, such as when streaming audio data from on-board NAND flash.
+ *
+ * @param size Size of the RAM disk in bytes.
+ * @return The drive ID of the allocated RAM disk, or -1 if the creation was unsuccessful.
+ */
+extern short FTL_CreateRamDisk(size_t size);
+
+/**
+ * @brief Close the previously allocated RAM disk.
+ */
+extern void FTL_DestroyRamDisk();
+
 #ifdef __cplusplus
 } // extern "C"
 #endif

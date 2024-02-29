@@ -71,7 +71,6 @@ enum font_type_e {
     SANS_ITALIC_HUGE_CJK_LARGE,
 };
 
-// TODO verify this on a color screen device
 /**
  * @brief Convert separate RGB values to integer RGB representation
  *
