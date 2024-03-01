@@ -10,5 +10,6 @@ var searchData=
   ['getfreememory_150',['GetFreeMemory',['../memory_8h.html#a11e993980c4031eb09cafad85ddeb952',1,'memory.h']]],
   ['getmaxscrx_151',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
   ['getmaxscry_152',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
-  ['getsystime_153',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]]
+  ['getsystime_153',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]],
+  ['gettimer1inthandler_154',['GetTimer1IntHandler',['../utils_8h.html#a77c18dab7a63ff188e452878d5907582',1,'utils.h']]]
 ];
