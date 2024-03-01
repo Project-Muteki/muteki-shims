@@ -72,13 +72,13 @@ typedef void (*timer1_callback_t)(void);
 
 /**
  * @brief Get the descriptor for the currently active framebuffer.
- *
  * @return The framebuffer descriptor.
  */ 
 extern vram_descriptor_t *GetActiveVRamAddress();
 
 /**
  * @brief Play a tone using the built in piezo speaker.
+ *
  * This will block the execution.
  * @param frequency Frequency of the tone in Hz.
  * @param duration Duration of the tone in milliseconds.
@@ -88,6 +88,7 @@ extern bool Buzzer(int frequency, unsigned short duration);
 
 /**
  * @brief Play a beep using the built in piezo speaker.
+ *
  * This usually plays a 4000Hz tone for 10ms.
  * @return @p true on success.
  */
@@ -95,6 +96,7 @@ extern bool WarningBeep();
 
 /**
  * @brief Set Timer1 interrupt handler.
+ *
  * The callback function passed to this will be called once every time the timer fires. The exact interval can be
  * manually specified.
  * @param callback The callback function called when timer fires.
