@@ -99,13 +99,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac4d2062355dec698128f8049434b4129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor for the currently active framebuffer.  <a href="utils_8h.html#ac4d2062355dec698128f8049434b4129">More...</a><br /></td></tr>
 <tr class="separator:ac4d2062355dec698128f8049434b4129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af44d9cafd7ec96afc1bed4b654711e8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#af44d9cafd7ec96afc1bed4b654711e8d">Buzzer</a> (int frequency, unsigned short duration)</td></tr>
-<tr class="memdesc:af44d9cafd7ec96afc1bed4b654711e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a tone using the built in piezo speaker. This will block the execution.  <a href="utils_8h.html#af44d9cafd7ec96afc1bed4b654711e8d">More...</a><br /></td></tr>
+<tr class="memdesc:af44d9cafd7ec96afc1bed4b654711e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a tone using the built in piezo speaker.  <a href="utils_8h.html#af44d9cafd7ec96afc1bed4b654711e8d">More...</a><br /></td></tr>
 <tr class="separator:af44d9cafd7ec96afc1bed4b654711e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a212a842a05302253aae6192eaa1ec53f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">WarningBeep</a> ()</td></tr>
-<tr class="memdesc:a212a842a05302253aae6192eaa1ec53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker. This usually plays a 4000Hz tone for 10ms.  <a href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">More...</a><br /></td></tr>
+<tr class="memdesc:a212a842a05302253aae6192eaa1ec53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker.  <a href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">More...</a><br /></td></tr>
 <tr class="separator:a212a842a05302253aae6192eaa1ec53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1810c29cbd2e6d63a9c7f2c123dd2b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30">SetTimer1IntHandler</a> (<a class="el" href="utils_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a> callback, short interval)</td></tr>
-<tr class="memdesc:a1810c29cbd2e6d63a9c7f2c123dd2b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Timer1 interrupt handler. The callback function passed to this will be called once every time the timer fires. The exact interval can be manually specified.  <a href="utils_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30">More...</a><br /></td></tr>
+<tr class="memdesc:a1810c29cbd2e6d63a9c7f2c123dd2b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Timer1 interrupt handler.  <a href="utils_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30">More...</a><br /></td></tr>
 <tr class="separator:a1810c29cbd2e6d63a9c7f2c123dd2b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c18dab7a63ff188e452878d5907582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a77c18dab7a63ff188e452878d5907582">GetTimer1IntHandler</a> (short *interval)</td></tr>
 <tr class="memdesc:a77c18dab7a63ff188e452878d5907582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Timer1 interrupt handler and custom interval.  <a href="utils_8h.html#a77c18dab7a63ff188e452878d5907582">More...</a><br /></td></tr>
@@ -141,8 +141,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Play a tone using the built in piezo speaker. This will block the execution. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Play a tone using the built in piezo speaker. </p>
+<p>This will block the execution. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frequency</td><td>Frequency of the tone in Hz. </td></tr>
     <tr><td class="paramname">duration</td><td>Duration of the tone in milliseconds. </td></tr>
@@ -196,7 +196,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The callback function previously registered with <a class="el" href="utils_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30" title="Set Timer1 interrupt handler. The callback function passed to this will be called once every time the...">SetTimer1IntHandler()</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The callback function previously registered with <a class="el" href="utils_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30" title="Set Timer1 interrupt handler.">SetTimer1IntHandler()</a>. </dd></dl>
 
 </div>
 </div>
@@ -226,8 +226,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set Timer1 interrupt handler. The callback function passed to this will be called once every time the timer fires. The exact interval can be manually specified. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Set Timer1 interrupt handler. </p>
+<p>The callback function passed to this will be called once every time the timer fires. The exact interval can be manually specified. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">callback</td><td>The callback function called when timer fires. </td></tr>
     <tr><td class="paramname">interval</td><td>An interval value in <a class="el" href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573" title="Sleep for millis milliseconds.">OSSleep()</a> unit, or defaulting to 10 when set to 0. </td></tr>
@@ -252,8 +252,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Play a beep using the built in piezo speaker. This usually plays a 4000Hz tone for 10ms. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. </dd></dl>
+<p>Play a beep using the built in piezo speaker. </p>
+<p>This usually plays a 4000Hz tone for 10ms. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. </dd></dl>
 
 </div>
 </div>
