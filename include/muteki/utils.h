@@ -66,6 +66,11 @@ typedef struct {
 } vram_descriptor_t; // 20 bytes
 
 /**
+ * @brief Callback type for Timer1 interrupt
+ */
+typedef void (*timer1_callback_t)(void);
+
+/**
  * @brief Get the descriptor for the currently active framebuffer.
  *
  * @return The framebuffer descriptor.
@@ -87,6 +92,22 @@ extern bool Buzzer(int frequency, unsigned short duration);
  * @return @p true on success.
  */
 extern bool WarningBeep();
+
+/**
+ * @brief Set Timer1 interrupt handler.
+ * The callback function passed to this will be called once every time the timer fires. The exact interval can be
+ * manually specified.
+ * @param callback The callback function called when timer fires.
+ * @param interval An interval value in OSSleep() unit, or defaulting to 10 when set to 0.
+ */
+extern void SetTimer1IntHandler(timer1_callback_t callback, short interval);
+
+/**
+ * @brief Get the Timer1 interrupt handler and custom interval.
+ * @param interval A pointer to a variable that will hold the timer interval. Must not be NULL.
+ * @return The callback function previously registered with SetTimer1IntHandler().
+ */
+extern timer1_callback_t GetTimer1IntHandler(short *interval);
 
 #ifdef __cplusplus
 } // extern "C"
