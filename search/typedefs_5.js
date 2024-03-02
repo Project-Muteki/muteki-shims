@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['semaphore_5ft_530',['semaphore_t',['../threading_8h.html#a37e4075b8f630bcb49b25435a1af5c4b',1,'threading.h']]]
+  ['thread_5ffunc_5ft_559',['thread_func_t',['../threading_8h.html#a324e4123c9e5b076cd1afa3562e38244',1,'threading.h']]],
+  ['thread_5ft_560',['thread_t',['../threading_8h.html#a2be49e4dddf107b380ba10748317741d',1,'threading.h']]],
+  ['timer1_5fcallback_5ft_561',['timer1_callback_t',['../utils_8h.html#aa7a435c8a2cda84eaef92144c9ba0798',1,'utils.h']]]
 ];

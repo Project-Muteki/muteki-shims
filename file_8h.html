@@ -160,14 +160,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flush the cached writes to the file. </p>
-<p>Analogous to the fflush() function in POSIX.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the fflush() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 when successful, -1 when there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -204,8 +209,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Seek to a specific position in an opened file. </p>
-<p>Analogous to the fseek() function in POSIX.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the fseek() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
     <tr><td class="paramname">offset</td><td>Seek offset. </td></tr>
@@ -213,7 +217,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 when successful, -1 when there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51" title="whence values for __fseek().">sys_seek_whence_e</a> </dd></dl>
 
 </div>
@@ -245,8 +255,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open a file located at UTF-16-encoded <code>pathname</code>. </p>
-<p>Analogous to the _wfopen() function in Windows.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the _wfopen() function in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>Path to the file to be opened. LFN (long filename) is supported. </td></tr>
     <tr><td class="paramname">mode</td><td>Mode. Tested modes are <code>_BUL</code>("rb") and <code>_BUL</code>("wb+"). </td></tr>
@@ -284,8 +293,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open a file located at <code>pathname</code>. </p>
-<p>Analogous to the fopen() function in POSIX and Windows.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the fopen() function in POSIX and Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>DOS 8.3 path to the file to be opened. </td></tr>
     <tr><td class="paramname">mode</td><td>Mode. Tested modes are <code>"rb"</code> and <code>"wb+"</code>. </td></tr>
@@ -313,8 +321,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close a file. </p>
-<p>Analogous to the fclose() function in POSIX.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the fclose() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
@@ -363,8 +370,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read <code>nmemb</code> data units of size <code>size</code> from a file. </p>
-<p>Analogous to the POSIX fread() function.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the POSIX fread() function. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer reference to a buffer that will hold the data read from the file. </td></tr>
     <tr><td class="paramname">size</td><td>Size of individual data unit. </td></tr>
@@ -394,8 +400,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the current position of the file. </p>
-<p>Analogous to the ftell() function in POSIX.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the ftell() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a2fac65320e7f09d503fcebb05ed172d8" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
@@ -444,8 +449,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Write <code>nmemb</code> data units of size <code>size</code> to a file. </p>
-<p>Analogous to the fwrite() function in POSIX.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the fwrite() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer reference to data that will be written to the file. </td></tr>
     <tr><td class="paramname">size</td><td>Size of individual data unit. </td></tr>

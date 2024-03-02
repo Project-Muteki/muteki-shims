@@ -234,14 +234,18 @@ short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eve
 </div><div class="memdoc">
 
 <p>Get event. </p>
-<p>Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the <code><a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a></code> struct.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>pointer to a <code><a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a></code> struct. </td></tr>
+    <tr><td class="paramname">event</td><td>pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>1</code> if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">1</td><td>The operation was completed successfully. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -262,14 +266,19 @@ short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eve
 </div><div class="memdoc">
 
 <p>Process pending key events. </p>
-<p>Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses, etc.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses, etc. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>pointer to a <code><a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a></code> struct. </td></tr>
+    <tr><td class="paramname">event</td><td>pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if events were processed, <code>false</code> otherwise. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Some events were processed. </td></tr>
+    <tr><td class="paramname">false</td><td>No event was processed. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#adcc9c2898ac3580bcdc8e4557b794f9c" title="Process pending events.">TestPendEvent</a> </dd></dl>
 
 </div>
@@ -291,14 +300,19 @@ short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eve
 </div><div class="memdoc">
 
 <p>Process pending events. </p>
-<p>Exact purpose of this function is currently unclear.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Exact purpose of this function is currently unclear. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>pointer to a <code><a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a></code> struct. </td></tr>
+    <tr><td class="paramname">event</td><td>pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if events were processed, <code>false</code> otherwise. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Some events were processed. </td></tr>
+    <tr><td class="paramname">false</td><td>No event was processed. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#a03c5ca44c93c14b5360bab9555abe754" title="Process pending key events.">TestKeyEvent</a> Related function that specifically processes key events. </dd></dl>
 
 </div>

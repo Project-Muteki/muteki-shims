@@ -66,6 +66,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ftl.h File Reference</div>  </div>
@@ -78,6 +79,12 @@ $(function() {
 </div>
 <p><a href="ftl_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnand__params__t.html">nand_params_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NAND flash parameter.  <a href="structnand__params__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a65b2c998ef7d819d0487b1be42a38615"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615">FTL_GetCurDiskSize</a> (size_t *size_hi)</td></tr>
@@ -93,9 +100,16 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ftl_8h.html#aac9f27ca1c858abe49d42e9ac008ce91">FTL_DestroyRamDisk</a> ()</td></tr>
 <tr class="memdesc:aac9f27ca1c858abe49d42e9ac008ce91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the previously allocated RAM disk. <br /></td></tr>
 <tr class="separator:aac9f27ca1c858abe49d42e9ac008ce91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25716d0faad96ba43fee1c2c42390bb6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ftl_8h.html#a25716d0faad96ba43fee1c2c42390bb6">nand_get_params</a> (int sbz, <a class="el" href="structnand__params__t.html">nand_params_t</a> *params)</td></tr>
+<tr class="memdesc:a25716d0faad96ba43fee1c2c42390bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get NAND flash parameters.  <a href="ftl_8h.html#a25716d0faad96ba43fee1c2c42390bb6">More...</a><br /></td></tr>
+<tr class="separator:a25716d0faad96ba43fee1c2c42390bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700fbb5979ba6e2fe260d324a34710a5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ftl_8h.html#a700fbb5979ba6e2fe260d324a34710a5">nand_read_page</a> (int sbz, size_t page, void *ptr, size_t count, short arg5)</td></tr>
+<tr class="memdesc:a700fbb5979ba6e2fe260d324a34710a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read NAND flash pages at a specific page number.  <a href="ftl_8h.html#a700fbb5979ba6e2fe260d324a34710a5">More...</a><br /></td></tr>
+<tr class="separator:a700fbb5979ba6e2fe260d324a34710a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Flash Translation Layer (FTL) and block device API. </p>
+<p>Requires `-lkrnllib` when dynamically linking with the shims. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="af641b186facc7ee474d06ddda52bfefc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af641b186facc7ee474d06ddda52bfefc">&#9670;&nbsp;</a></span>FTL_CreateRamDisk()</h2>
@@ -114,8 +128,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ftl_
 </div><div class="memdoc">
 
 <p>Allocate a RAM disk. </p>
-<p>This may be used internally to buffer file writes under circumstances when low latency I/O is required, such as when streaming audio data from on-board NAND flash.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This may be used internally to buffer file writes under circumstances when low latency I/O is required, such as when streaming audio data from on-board NAND flash. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>Size of the RAM disk in bytes. </td></tr>
   </table>
@@ -146,7 +159,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ftl_
 <div class="line"><span class="keywordtype">size_t</span> size_lo = <a class="code" href="ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615">FTL_GetCurDiskSize</a>(&amp;size_hi);</div>
 <div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> actual_size = (((<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long) size_hi) &lt;&lt; 32) | size_lo;</div>
 <div class="ttc" id="aftl_8h_html_a65b2c998ef7d819d0487b1be42a38615"><div class="ttname"><a href="ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615">FTL_GetCurDiskSize</a></div><div class="ttdeci">size_t FTL_GetCurDiskSize(size_t *size_hi)</div><div class="ttdoc">Get the size of block device the current active drive belongs to.</div></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size_hi</td><td>The high 32-bit of the size. </td></tr>
   </table>
@@ -189,8 +202,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ftl_
 </div><div class="memdoc">
 
 <p>Read sectors from the block device the current active drive belongs to. </p>
-<p>Sector size seems to be constant 512 bytes.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Sector size seems to be constant 512 bytes. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sector</td><td>Start sector number. </td></tr>
     <tr><td class="paramname">ptr</td><td>Target pointer. The size must be multiple of 512 bytes. </td></tr>
@@ -198,7 +210,122 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ftl_
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if successful, negative if failed. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25716d0faad96ba43fee1c2c42390bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25716d0faad96ba43fee1c2c42390bb6">&#9670;&nbsp;</a></span>nand_get_params()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int nand_get_params </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sbz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnand__params__t.html">nand_params_t</a> *&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get NAND flash parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sbz</td><td>Reserved. Should be set to 0. </td></tr>
+    <tr><td class="paramname">params</td><td>Parameter structure to write to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a700fbb5979ba6e2fe260d324a34710a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700fbb5979ba6e2fe260d324a34710a5">&#9670;&nbsp;</a></span>nand_read_page()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int nand_read_page </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sbz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>page</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>arg5</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read NAND flash pages at a specific page number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sbz</td><td>Reserved. Should be set to 0. </td></tr>
+    <tr><td class="paramname">page</td><td>Page number where the read should start. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Buffer where the page content will be stored. </td></tr>
+    <tr><td class="paramname">count</td><td>Number of pages to read. </td></tr>
+    <tr><td class="paramname">arg5</td><td>Unknown. May be related to reading spare sector? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

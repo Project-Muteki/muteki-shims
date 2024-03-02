@@ -163,9 +163,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:ae2bce93898870fbfd4541135b418c85c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae2bce93898870fbfd4541135b418c85c">PrintfXY</a> (short x, short y, const char *format,...)</td></tr>
 <tr class="memdesc:ae2bce93898870fbfd4541135b418c85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string aligned to the top left corner at (<code>x</code>, <code>y</code>) px.  <a href="canvas_8h.html#ae2bce93898870fbfd4541135b418c85c">More...</a><br /></td></tr>
 <tr class="separator:ae2bce93898870fbfd4541135b418c85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5970eb790f1aba8578b1220ed4aa9740"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a5970eb790f1aba8578b1220ed4aa9740">SetFontType</a> (int8_t type)</td></tr>
-<tr class="memdesc:a5970eb790f1aba8578b1220ed4aa9740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current font type to <code>font_type</code>.  <a href="canvas_8h.html#a5970eb790f1aba8578b1220ed4aa9740">More...</a><br /></td></tr>
-<tr class="separator:a5970eb790f1aba8578b1220ed4aa9740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0afef972be2eba019a7f69f3670fd3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa0afef972be2eba019a7f69f3670fd3d">SetFontType</a> (int8_t font_type)</td></tr>
+<tr class="memdesc:aa0afef972be2eba019a7f69f3670fd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current font type to <code>font_type</code>.  <a href="canvas_8h.html#aa0afef972be2eba019a7f69f3670fd3d">More...</a><br /></td></tr>
+<tr class="separator:aa0afef972be2eba019a7f69f3670fd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29721495a341c1aec1cec64333d59f51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a29721495a341c1aec1cec64333d59f51">WriteChar</a> (short x, short y, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, bool invert)</td></tr>
 <tr class="memdesc:a29721495a341c1aec1cec64333d59f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a character <code>c</code> aligned to the top left corner at (<code>x</code>, <code>y</code>) px.  <a href="canvas_8h.html#a29721495a341c1aec1cec64333d59f51">More...</a><br /></td></tr>
 <tr class="separator:a29721495a341c1aec1cec64333d59f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,11 +253,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <p>Font types. </p>
 <p>The naming follows the following format, joined with underscores (_):</p>
-<p>&lt;style&gt; [variant] [size] &lt;cjk&gt; [cjkvariant] [cjksize] [index]</p>
+<p><code>&lt;style&gt;_[variant]_[size]_&lt;cjk&gt;_[cjkvariant]_[cjksize]_[index]</code></p>
 <p>Where</p><ul>
 <li><code>style</code> is one of <code>SANS</code>, <code>SERIF</code> or <code>MONOSPACE</code>.</li>
 <li><code>variant</code> or <code>cjkvariant</code> is one of <code>BOLD</code> (equivalent to <code>REGULAR</code> for CJK), <code>ITALIC</code>, <code>BOLDITALIC</code> (equivalent to <code>ITALIC</code> for CJK) or <code>REGULAR</code> (omitted for <code>variant</code>). For <code>cjkvariant</code>, if it is the same as <code>variant</code>, it will be omitted.</li>
-<li><code>size</code> or <code>cjksize</code> is one of <code>TINY</code> (8px height, not available for CJK), SMALL (12px), NORMAL (16px, omitted for <code>size</code>), LARGE (20px) or HUGE (22px, not available for CJK). For <code>cjksize</code>, if it is the same as <code>size</code>, it will be omitted.</li>
+<li><code>size</code> or <code>cjksize</code> is one of <code>TINY</code> (8px height, not available for CJK), <code>SMALL</code> (12px), <code>NORMAL</code> (16px, omitted for <code>size</code>), <code>LARGE</code> (20px) or <code>HUGE</code> (22px, not available for CJK). For <code>cjksize</code>, if it is the same as <code>size</code>, it will be omitted.</li>
 <li><code>cjk</code> is either <code>CJK</code> (supports CJK character rendering) or <code>NOCJK</code> (does not support CJK character rendering).</li>
 <li><code>index</code> is the current index (only used when all the above fields collide). </li>
 </ul>
@@ -372,8 +372,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Get X coordinate of the rightmost visible pixels on the current canvas. </p>
-<p>This is usually tied to the physical resolution of the display. Therefore it can be used to determine the display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls.</p>
-<dl class="section return"><dt>Returns</dt><dd>The X coordinate of the rightmost visible pixels. </dd></dl>
+<p>This is usually tied to the physical resolution of the display. Therefore it can be used to determine the display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls. </p><dl class="section return"><dt>Returns</dt><dd>The X coordinate of the rightmost visible pixels. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37" title="Get Y coordinate of the bottom-most visible pixels on the current canvas.">GetMaxScrY</a> Returns the Y boundary instead. </dd></dl>
 
 </div>
@@ -394,8 +393,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Get Y coordinate of the bottom-most visible pixels on the current canvas. </p>
-<p>This is usually tied to the physical resolution of the display. Therefore it can be used to determine the display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls.</p>
-<dl class="section return"><dt>Returns</dt><dd>The Y coordinate of the bottom-most visible pixels. </dd></dl>
+<p>This is usually tied to the physical resolution of the display. Therefore it can be used to determine the display size. The display size can be calculated by adding 1 to the return values of both <code>GetMaxScr*</code> calls. </p><dl class="section return"><dt>Returns</dt><dd>The Y coordinate of the bottom-most visible pixels. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3" title="Get X coordinate of the rightmost visible pixels on the current canvas.">GetMaxScrX</a> Returns the X boundary instead. </dd></dl>
 
 </div>
@@ -735,8 +733,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
-<a id="a5970eb790f1aba8578b1220ed4aa9740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5970eb790f1aba8578b1220ed4aa9740">&#9670;&nbsp;</a></span>SetFontType()</h2>
+<a id="aa0afef972be2eba019a7f69f3670fd3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0afef972be2eba019a7f69f3670fd3d">&#9670;&nbsp;</a></span>SetFontType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -745,7 +743,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td class="memname">void SetFontType </td>
           <td>(</td>
           <td class="paramtype">int8_t&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
+          <td class="paramname"><em>font_type</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

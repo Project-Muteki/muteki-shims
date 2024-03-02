@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['latch_5fon_477',['latch_on',['../structevent__s.html#aeaba0e5d74e1c9713db4201129358ecc',1,'event_s']]]
+  ['latch_5fon_497',['latch_on',['../structevent__s.html#aeaba0e5d74e1c9713db4201129358ecc',1,'event_s']]]
 ];

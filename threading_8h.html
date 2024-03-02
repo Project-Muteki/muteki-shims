@@ -108,15 +108,17 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a4726bf81387f879f3c5f66660a6bd3d5"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="threading_8h.html#a9272387198be11dfc77e13b4b65854b4">wait_result_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a></td></tr>
+<tr class="memitem:a4726bf81387f879f3c5f66660a6bd3d5"><td class="memItemLeft" align="right" valign="top"><a id="a4726bf81387f879f3c5f66660a6bd3d5"></a>
+typedef enum <a class="el" href="threading_8h.html#a9272387198be11dfc77e13b4b65854b4">wait_result_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a></td></tr>
+<tr class="memdesc:a4726bf81387f879f3c5f66660a6bd3d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of waitables. <br /></td></tr>
 <tr class="separator:a4726bf81387f879f3c5f66660a6bd3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a324e4123c9e5b076cd1afa3562e38244"><td class="memItemLeft" align="right" valign="top"><a id="a324e4123c9e5b076cd1afa3562e38244"></a>
 typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a324e4123c9e5b076cd1afa3562e38244">thread_func_t</a>) (void *user_data)</td></tr>
 <tr class="memdesc:a324e4123c9e5b076cd1afa3562e38244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread function type. <br /></td></tr>
 <tr class="separator:a324e4123c9e5b076cd1afa3562e38244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a859b9e9b5e965b79791871ec7338f77c"><td class="memItemLeft" align="right" valign="top">typedef char message_queue_message_t[16]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a859b9e9b5e965b79791871ec7338f77c">__attribute__</a>((aligned(4)))</td></tr>
-<tr class="memdesc:a859b9e9b5e965b79791871ec7338f77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message type for message queues.  <a href="threading_8h.html#a859b9e9b5e965b79791871ec7338f77c">More...</a><br /></td></tr>
-<tr class="separator:a859b9e9b5e965b79791871ec7338f77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bedc19d94648cfb8acdb46e4aca3d2e"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a>[16]</td></tr>
+<tr class="memdesc:a8bedc19d94648cfb8acdb46e4aca3d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message type for message queues.  <a href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">More...</a><br /></td></tr>
+<tr class="separator:a8bedc19d94648cfb8acdb46e4aca3d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2be49e4dddf107b380ba10748317741d"><td class="memItemLeft" align="right" valign="top"><a id="a2be49e4dddf107b380ba10748317741d"></a>
 typedef struct <a class="el" href="structthread__s.html">thread_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a></td></tr>
 <tr class="memdesc:a2be49e4dddf107b380ba10748317741d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread descriptor type. <br /></td></tr>
@@ -157,6 +159,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="threading_8h.html#a9272387198be11dfc77e13b4b65854b4a6281bd9cb9dbaf6aa70e639fea8f6b60">WAIT_RESULT_RESOLVED</a>
 , <a class="el" href="threading_8h.html#a9272387198be11dfc77e13b4b65854b4a0e70f73cab830c899ab53ad3ba93a273">WAIT_RESULT_ERROR</a>
  }</td></tr>
+<tr class="memdesc:a9272387198be11dfc77e13b4b65854b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of waitables.  <a href="threading_8h.html#a9272387198be11dfc77e13b4b65854b4">More...</a><br /></td></tr>
 <tr class="separator:a9272387198be11dfc77e13b4b65854b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -174,10 +177,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:af11dbf56f12f0f049d6d1dc061bf7e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate current thread.  <a href="threading_8h.html#af11dbf56f12f0f049d6d1dc061bf7e83">More...</a><br /></td></tr>
 <tr class="separator:af11dbf56f12f0f049d6d1dc061bf7e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab275a73337d748fdf9eb651e5f031569"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">OSGetThreadPriority</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr)</td></tr>
-<tr class="memdesc:ab275a73337d748fdf9eb651e5f031569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread slot number.  <a href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">More...</a><br /></td></tr>
+<tr class="memdesc:ab275a73337d748fdf9eb651e5f031569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread priority (slot number).  <a href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">More...</a><br /></td></tr>
 <tr class="separator:ab275a73337d748fdf9eb651e5f031569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc4f2020e4309e651190748c818dff5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5">OSSetThreadPriority</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr, short new_slot)</td></tr>
-<tr class="memdesc:adcc4f2020e4309e651190748c818dff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the thread slot number.  <a href="threading_8h.html#adcc4f2020e4309e651190748c818dff5">More...</a><br /></td></tr>
+<tr class="memdesc:adcc4f2020e4309e651190748c818dff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the thread priority (slot number).  <a href="threading_8h.html#adcc4f2020e4309e651190748c818dff5">More...</a><br /></td></tr>
 <tr class="separator:adcc4f2020e4309e651190748c818dff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68f7f1d664f59e44a053e3315d535149"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a68f7f1d664f59e44a053e3315d535149">OSSuspendThread</a> (<a class="el" href="threading_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thr)</td></tr>
 <tr class="memdesc:a68f7f1d664f59e44a053e3315d535149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend a thread from outside of that thread.  <a href="threading_8h.html#a68f7f1d664f59e44a053e3315d535149">More...</a><br /></td></tr>
@@ -230,16 +233,16 @@ Functions</h2></td></tr>
 <tr class="memitem:aa738848a02b8445fac1954dae105f9d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aa738848a02b8445fac1954dae105f9d1">OSCreateMsgQue</a> (unsigned short size)</td></tr>
 <tr class="memdesc:aa738848a02b8445fac1954dae105f9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a message queue descriptor.  <a href="threading_8h.html#aa738848a02b8445fac1954dae105f9d1">More...</a><br /></td></tr>
 <tr class="separator:aa738848a02b8445fac1954dae105f9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f2f24ad02a6973445899ab742c89264"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a0f2f24ad02a6973445899ab742c89264">OSPostMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue, const message_queue_message_t *message)</td></tr>
+<tr class="memitem:a0f2f24ad02a6973445899ab742c89264"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a0f2f24ad02a6973445899ab742c89264">OSPostMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue, const <a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a> *message)</td></tr>
 <tr class="memdesc:a0f2f24ad02a6973445899ab742c89264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a message into the queue.  <a href="threading_8h.html#a0f2f24ad02a6973445899ab742c89264">More...</a><br /></td></tr>
 <tr class="separator:a0f2f24ad02a6973445899ab742c89264"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa56cc8b53ff214201bd9b7d7eed525df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aa56cc8b53ff214201bd9b7d7eed525df">OSSendMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue, const message_queue_message_t *message)</td></tr>
+<tr class="memitem:aa56cc8b53ff214201bd9b7d7eed525df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aa56cc8b53ff214201bd9b7d7eed525df">OSSendMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue, const <a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a> *message)</td></tr>
 <tr class="memdesc:aa56cc8b53ff214201bd9b7d7eed525df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a message into the queue and reschedule immediately.  <a href="threading_8h.html#aa56cc8b53ff214201bd9b7d7eed525df">More...</a><br /></td></tr>
 <tr class="separator:aa56cc8b53ff214201bd9b7d7eed525df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a692d55915081bb676a770e70cc1b449b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a692d55915081bb676a770e70cc1b449b">OSPeekMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue, message_queue_message_t *message)</td></tr>
+<tr class="memitem:a692d55915081bb676a770e70cc1b449b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a692d55915081bb676a770e70cc1b449b">OSPeekMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue, <a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a> *message)</td></tr>
 <tr class="memdesc:a692d55915081bb676a770e70cc1b449b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peek the bottom of the queue without popping the message.  <a href="threading_8h.html#a692d55915081bb676a770e70cc1b449b">More...</a><br /></td></tr>
 <tr class="separator:a692d55915081bb676a770e70cc1b449b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf5aef3bc2a84991243a3e5aa86f6047"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#adf5aef3bc2a84991243a3e5aa86f6047">OSGetMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue, message_queue_message_t *message)</td></tr>
+<tr class="memitem:adf5aef3bc2a84991243a3e5aa86f6047"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#adf5aef3bc2a84991243a3e5aa86f6047">OSGetMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue, <a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a> *message)</td></tr>
 <tr class="memdesc:adf5aef3bc2a84991243a3e5aa86f6047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop a message from the queue.  <a href="threading_8h.html#adf5aef3bc2a84991243a3e5aa86f6047">More...</a><br /></td></tr>
 <tr class="separator:adf5aef3bc2a84991243a3e5aa86f6047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fc9a0fc505ff2a9317fcf65c5fd8d46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a8fc9a0fc505ff2a9317fcf65c5fd8d46">OSCloseMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue)</td></tr>
@@ -249,35 +252,20 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Native threading API. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a859b9e9b5e965b79791871ec7338f77c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a859b9e9b5e965b79791871ec7338f77c">&#9670;&nbsp;</a></span>__attribute__</h2>
+<a id="a8bedc19d94648cfb8acdb46e4aca3d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bedc19d94648cfb8acdb46e4aca3d2e">&#9670;&nbsp;</a></span>message_queue_message_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef char message_queue_message_t [16] __attribute__((aligned(4)))</td>
+          <td class="memname">typedef char message_queue_message_t[16]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Message type for message queues. </p>
 <p>This needs to be 4 byte aligned since the inline memcpy in the internal FIFO queue routines use hardcoded ldm/stm. </p>
-
-</div>
-</div>
-<a id="a4726bf81387f879f3c5f66660a6bd3d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4726bf81387f879f3c5f66660a6bd3d5">&#9670;&nbsp;</a></span>wait_result_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef enum <a class="el" href="threading_8h.html#a9272387198be11dfc77e13b4b65854b4">wait_result_e</a> <a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Result of waitables. </p>
 
 </div>
 </div>
@@ -325,6 +313,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Result of waitables. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9272387198be11dfc77e13b4b65854b4a04538de14f6be13101cc38f87a39f07d"></a>WAIT_RESULT_TIMEOUT&#160;</td><td class="fielddoc"><p>Timeout before the event is set. </p>
@@ -361,7 +350,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -388,7 +383,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -415,7 +416,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -476,7 +483,7 @@ Functions</h2></td></tr>
 <p>Create a message queue descriptor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>Size of the queue in number of messages (will use sizeof(::message_queue_message_t) * size bytes of memory). </td></tr>
+    <tr><td class="paramname">size</td><td>Size of the queue in number of messages (will use <code>sizeof(</code><a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e" title="Message type for message queues.">message_queue_message_t&lt;tt&gt;</a>) * size bytes of memory). </td></tr>
   </table>
   </dd>
 </dl>
@@ -582,7 +589,7 @@ Functions</h2></td></tr>
 <p>Destroy a critical section descriptor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -606,10 +613,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enter/aquire a critical section. </p>
-<p>Besta critical sections behave like recursive mutexes. Therefore this will block when multiple threads are trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass through. The context is released when all of the entries are reverted by a <a class="el" href="threading_8h.html#a6b5dae43115fec492f081445ff3b8aa9" title="Leave/release a critical section.">OSLeaveCriticalSection()</a> call.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Besta critical sections behave like recursive mutexes. Therefore this will block when multiple threads are trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass through. The context is released when all of the entries are reverted by a <a class="el" href="threading_8h.html#a6b5dae43115fec492f081445ff3b8aa9" title="Leave/release a critical section.">OSLeaveCriticalSection()</a> call. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -633,14 +639,18 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Terminate current thread. </p>
-<p>This calls <a class="el" href="threading_8h.html#a501631f9151a55beb4d2a83970719908" title="Terminate a thread.">OSTerminateThread()</a> with the descriptor of current thread as <code>thr</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This calls <a class="el" href="threading_8h.html#a501631f9151a55beb4d2a83970719908" title="Terminate a thread.">OSTerminateThread()</a> with the descriptor of current thread as <code>thr</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">exit_code</td><td>The exit code. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Always 0. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -659,7 +669,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">message_queue_message_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a> *&#160;</td>
           <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
@@ -678,7 +688,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -698,8 +714,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the thread slot number. </p>
-<p>On Besta RTOS, priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with <a class="el" href="threading_8h.html#aef0b4f3a0ab1da7ac20d463607b4ac2f" title="Create a new thread.">OSCreateThread()</a>. User can move threads to these reserved slots by calling the <a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5" title="Set the thread slot number.">OSSetThreadPriority()</a> function. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Get the thread priority (slot number). </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thr</td><td>The thread descriptor. </td></tr>
   </table>
@@ -728,7 +744,7 @@ Functions</h2></td></tr>
 <p>Initialize a critical section descriptor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -754,7 +770,7 @@ Functions</h2></td></tr>
 <p>Leave/release a critical section. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cs</td><td>The critical section descriptor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -776,7 +792,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">message_queue_message_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a> *&#160;</td>
           <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
@@ -795,7 +811,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -814,7 +836,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const message_queue_message_t *&#160;</td>
+          <td class="paramtype">const <a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a> *&#160;</td>
           <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
@@ -833,7 +855,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -860,7 +888,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -887,7 +921,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -914,7 +954,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -933,7 +979,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const message_queue_message_t *&#160;</td>
+          <td class="paramtype">const <a class="el" href="threading_8h.html#a8bedc19d94648cfb8acdb46e4aca3d2e">message_queue_message_t</a> *&#160;</td>
           <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
@@ -952,7 +998,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -979,7 +1031,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1009,16 +1067,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the thread slot number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Set the thread priority (slot number). </p>
+<p>On Besta RTOS, priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with <a class="el" href="threading_8h.html#aef0b4f3a0ab1da7ac20d463607b4ac2f" title="Create a new thread.">OSCreateThread()</a>. User can move threads to these reserved slots by calling the <a class="el" href="threading_8h.html#adcc4f2020e4309e651190748c818dff5" title="Set the thread priority (slot number).">OSSetThreadPriority()</a> function. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thr</td><td>The thread descriptor. </td></tr>
     <tr><td class="paramname">new_slot</td><td>The new slot number. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569" title="Get the thread slot number.">OSGetThreadPriority</a> </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569" title="Get the thread priority (slot number).">OSGetThreadPriority</a> </dd></dl>
 
 </div>
 </div>
@@ -1071,7 +1135,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1109,7 +1179,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Always 0. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1148,7 +1223,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5" title="Result of waitables.">wait_result_t</a> </dd></dl>
 
 </div>
 </div>
@@ -1187,7 +1262,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5" title="Result of waitables.">wait_result_t</a> </dd></dl>
 
 </div>
 </div>
@@ -1208,14 +1283,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Force wake up a sleeping thread. </p>
-<p>This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thr</td><td>The thread descriptor. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

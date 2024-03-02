@@ -92,9 +92,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memItemLeft" align="right" valign="top"><a id="a9f8d8fd8933220f6f35209cdb65d7cfb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb">SYS_PATH_MAX_CU</a>&#160;&#160;&#160;256</td></tr>
-<tr class="memdesc:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max code units (ASCII or UTF-16) a path can contain. This includes the NUL terminator. Note that this can differ from libc definitions due to possible encoding differences (e.g. newlib-muteki uses UTF-8 as the "ANSI" encoding by default). <br /></td></tr>
+<tr class="memitem:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb">SYS_PATH_MAX_CU</a>&#160;&#160;&#160;256</td></tr>
+<tr class="memdesc:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max code units (ASCII or UTF-16) a path can contain.  <a href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb">More...</a><br /></td></tr>
 <tr class="separator:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2cfbb03e319776b36d0b1169a83f54"><td class="memItemLeft" align="right" valign="top"><a id="a2c2cfbb03e319776b36d0b1169a83f54"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a2c2cfbb03e319776b36d0b1169a83f54">FIND_TS_YEAR</a>(ts)&#160;&#160;&#160;((ts &gt;&gt; 25) + 1980)</td></tr>
@@ -208,7 +207,25 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Filesystem access API. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a9f8d8fd8933220f6f35209cdb65d7cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8d8fd8933220f6f35209cdb65d7cfb">&#9670;&nbsp;</a></span>SYS_PATH_MAX_CU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYS_PATH_MAX_CU&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Max code units (ASCII or UTF-16) a path can contain. </p>
+<p>This includes the NUL terminator. Note that this can differ from libc definitions due to possible encoding differences (e.g. newlib-muteki uses UTF-8 as the "ANSI" encoding by default). </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="ace1ad2f8a5bced52258703097c71e8d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace1ad2f8a5bced52258703097c71e8d4">&#9670;&nbsp;</a></span>fs_attribute_e</h2>
 
@@ -264,7 +281,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Whether or not the operation was successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -291,7 +314,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -312,8 +341,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get attributes of specific path. </p>
-<p>Similar to GetFileAttributeA() in Windows.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Similar to GetFileAttributeA() in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>DOS 8.3 path. </td></tr>
   </table>
@@ -357,8 +385,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Begin a file/directory search. </p>
-<p>Matches the first file/directory based on fnmatch pattern <code>fnmatch</code> and attribute mask <code>attrib_mask</code>. Saves context at <code>ctx</code>, which can be used later with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> and <a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767" title="Terminate a file/directory search.">_findclose()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Matches the first file/directory based on fnmatch pattern <code>fnmatch</code> and attribute mask <code>attrib_mask</code>. Saves context at <code>ctx</code>, which can be used later with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> and <a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767" title="Terminate a file/directory search.">_findclose()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fnmatch</td><td>The pattern. </td></tr>
     <tr><td class="paramname">ctx</td><td>The context object. </td></tr>
@@ -366,7 +393,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if there is a match. -1 when no match was found. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>There is a match. </td></tr>
+    <tr><td class="paramname">-1</td><td>No more match was found. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -387,14 +420,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Continue a previously started file/directory search. </p>
-<p>Matches the next file/directory.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Matches the next file/directory. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ctx</td><td>The context object. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if there is a match. -1 when no more match was found. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>There is a match. </td></tr>
+    <tr><td class="paramname">-1</td><td>No more match was found. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -425,8 +463,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set attributes of specific path. </p>
-<p>Similar to SetFileAttributeA() in Windows.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Similar to SetFileAttributeA() in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>DOS 8.3 path. </td></tr>
     <tr><td class="paramname">attrs</td><td>The new attribute. </td></tr>
@@ -468,11 +505,17 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
-    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a DOS8.3 path. Must be at least <a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb" title="Max code units (ASCII or UTF-16) a path can contain. This includes the NUL terminator....">SYS_PATH_MAX_CU</a> bytes long. </td></tr>
+    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a DOS8.3 path. Must be at least <a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb" title="Max code units (ASCII or UTF-16) a path can contain.">SYS_PATH_MAX_CU</a> bytes long. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -499,7 +542,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -526,7 +575,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Whether or not the operation was successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -564,7 +619,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -585,14 +646,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove a directory. </p>
-<p>Sets kerrno namespace to <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a> and error code to <code>0xffff</code> when directory is not empty.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Sets kerrno namespace to <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a> and error code to <code>0xffff</code> when directory is not empty. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>DOS 8.3 path to the directory being removed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -619,7 +685,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -646,7 +717,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -667,8 +744,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get attributes of specific path. </p>
-<p>Similar to GetFileAttributeW() in Windows.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Similar to GetFileAttributeW() in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path. </td></tr>
   </table>
@@ -712,8 +788,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Begin a file/directory search (LFN support). </p>
-<p>Matches the first file/directory based on fnmatch pattern <code>fnmatch</code> and attribute mask <code>attrib_mask</code>. Saves context at <code>ctx</code>, which can be used later with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> and <a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767" title="Terminate a file/directory search.">_findclose()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Matches the first file/directory based on fnmatch pattern <code>fnmatch</code> and attribute mask <code>attrib_mask</code>. Saves context at <code>ctx</code>, which can be used later with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> and <a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767" title="Terminate a file/directory search.">_findclose()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fnmatch</td><td>The pattern (encoded in UTF-16). </td></tr>
     <tr><td class="paramname">ctx</td><td>The context object. </td></tr>
@@ -721,7 +796,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if there is a match. -1 when no match was found. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>There is a match. </td></tr>
+    <tr><td class="paramname">-1</td><td>No more match was found. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -750,7 +831,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if there is a match. -1 when no more match was found. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>There is a match. </td></tr>
+    <tr><td class="paramname">-1</td><td>No more match was found. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -781,8 +868,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set attributes of specific path. </p>
-<p>Similar to SetFileAttributeW() in Windows.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Similar to SetFileAttributeW() in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path. </td></tr>
     <tr><td class="paramname">attrs</td><td>The new attribute. </td></tr>
@@ -824,11 +910,17 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
-    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a UTF-16 LFN path. Must be at least <a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb" title="Max code units (ASCII or UTF-16) a path can contain. This includes the NUL terminator....">SYS_PATH_MAX_CU</a> units long. </td></tr>
+    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a UTF-16 LFN path. Must be at least <a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb" title="Max code units (ASCII or UTF-16) a path can contain.">SYS_PATH_MAX_CU</a> units long. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -855,7 +947,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -893,7 +991,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -914,14 +1018,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove a directory. </p>
-<p>Sets kerrno namespace to <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a> and error code to <code>0xffff</code> when directory is not empty.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Sets kerrno namespace to <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a> and error code to <code>0xffff</code> when directory is not empty. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path to the directory being removed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the operation is successful, -1 if there's an error. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -959,7 +1068,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -110,14 +110,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close a handle. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#afd675a81da99d1a03d218aa08caf16a6" title="Close a handle.">CloseHandle()</a> API.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#afd675a81da99d1a03d218aa08caf16a6" title="Close a handle.">CloseHandle()</a> API. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">h</td><td>Handle to close. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Whether the operation was successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -178,8 +183,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open or create a file/device by its <code>pathname</code>. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#a666a9814a588ce2a98895b0ae9b03929" title="Open or create a file/device by its pathname.">CreateFile()</a> API. Seems to wrap the internal _af* series syscalls.</p>
-<p>TODO: Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed.</p>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#a666a9814a588ce2a98895b0ae9b03929" title="Open or create a file/device by its pathname.">CreateFile()</a> API. Seems to wrap the internal _af* series syscalls. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>DOS 8.3 path to the file to be opened. </td></tr>
@@ -259,8 +263,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Send an IOCTL request to a device handle <code>h</code>. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b" title="Send an IOCTL request to a device handle h.">DeviceIoControl()</a> API.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b" title="Send an IOCTL request to a device handle h.">DeviceIoControl()</a> API. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">h</td><td>Device handle. </td></tr>
     <tr><td class="paramname">request</td><td>IOCTL request type. </td></tr>
@@ -273,7 +276,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Whether the operation was successful. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

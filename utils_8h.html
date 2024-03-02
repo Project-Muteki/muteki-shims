@@ -98,9 +98,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac4d2062355dec698128f8049434b4129"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvram__descriptor__t.html">vram_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ac4d2062355dec698128f8049434b4129">GetActiveVRamAddress</a> ()</td></tr>
 <tr class="memdesc:ac4d2062355dec698128f8049434b4129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor for the currently active framebuffer.  <a href="utils_8h.html#ac4d2062355dec698128f8049434b4129">More...</a><br /></td></tr>
 <tr class="separator:ac4d2062355dec698128f8049434b4129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af44d9cafd7ec96afc1bed4b654711e8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#af44d9cafd7ec96afc1bed4b654711e8d">Buzzer</a> (int frequency, unsigned short duration)</td></tr>
-<tr class="memdesc:af44d9cafd7ec96afc1bed4b654711e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a tone using the built in piezo speaker.  <a href="utils_8h.html#af44d9cafd7ec96afc1bed4b654711e8d">More...</a><br /></td></tr>
-<tr class="separator:af44d9cafd7ec96afc1bed4b654711e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1cc89349e8bbf4146fdf74097c882f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aef1cc89349e8bbf4146fdf74097c882f">Buzzer</a> (int frequency, short duration)</td></tr>
+<tr class="memdesc:aef1cc89349e8bbf4146fdf74097c882f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a tone using the built in piezo speaker.  <a href="utils_8h.html#aef1cc89349e8bbf4146fdf74097c882f">More...</a><br /></td></tr>
+<tr class="separator:aef1cc89349e8bbf4146fdf74097c882f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a212a842a05302253aae6192eaa1ec53f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">WarningBeep</a> ()</td></tr>
 <tr class="memdesc:a212a842a05302253aae6192eaa1ec53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker.  <a href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">More...</a><br /></td></tr>
 <tr class="separator:a212a842a05302253aae6192eaa1ec53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,8 +115,8 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Miscellaneous utility syscalls. </p>
 <p>Contains syscalls that cannot be easily grouped with other syscalls. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="af44d9cafd7ec96afc1bed4b654711e8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af44d9cafd7ec96afc1bed4b654711e8d">&#9670;&nbsp;</a></span>Buzzer()</h2>
+<a id="aef1cc89349e8bbf4146fdf74097c882f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef1cc89349e8bbf4146fdf74097c882f">&#9670;&nbsp;</a></span>Buzzer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,7 +130,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramtype">short&#160;</td>
           <td class="paramname"><em>duration</em>&#160;</td>
         </tr>
         <tr>
@@ -149,7 +149,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -192,7 +197,7 @@ Functions</h2></td></tr>
 <p>Get the Timer1 interrupt handler and custom interval. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">interval</td><td>A pointer to a variable that will hold the timer interval. Must not be NULL. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">interval</td><td>A pointer to a variable that will hold the timer interval. Must not be NULL. </td></tr>
   </table>
   </dd>
 </dl>
@@ -253,7 +258,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Play a beep using the built in piezo speaker. </p>
-<p>This usually plays a 4000Hz tone for 10ms. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. </dd></dl>
+<p>This usually plays a 4000Hz tone for 10ms. </p><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

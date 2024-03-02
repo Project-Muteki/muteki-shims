@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rgbsetbkcolor_439',['rgbSetBkColor',['../canvas_8h.html#a98681ae3b53fbaff32dc184a11aa559e',1,'canvas.h']]],
-  ['rgbsetcolor_440',['rgbSetColor',['../canvas_8h.html#a61c187a73000a33c2ca53d8df7fe5ab0',1,'canvas.h']]]
+  ['printfxy_456',['PrintfXY',['../canvas_8h.html#ae2bce93898870fbfd4541135b418c85c',1,'canvas.h']]]
 ];
