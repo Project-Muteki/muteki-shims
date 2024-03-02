@@ -1,0 +1,23 @@
+// This file defines several common terms as documentation fragments so they don't have to be typed out multiple times.
+// Include terms defined here in the documentation with the custom command
+// @x_term ( term_id )
+
+//! [require-krnllib]
+Requires `-lkrnllib` when dynamically linking with the shims.
+//! [require-krnllib]
+
+//! [sbz]
+Reserved. Should be set to 0.
+//! [sbz]
+
+//! [padding]
+Manual padding. Should not be set.
+//! [padding]
+
+//! [ok]
+The operation was completed successfully.
+//! [ok]
+
+//! [ng]
+The operation failed with error. 
+//! [ng]

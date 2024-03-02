@@ -99,7 +99,7 @@ enum keycode_e {
     KEY_F5,
     KEY_SHIFT = 0x8b,
     KEY_IME = 0x8e,
-    /* 0x91 */
+    /* 0x90 */
     KEY_SYMBOL = 0x91,
     KEY_HOME = 0x93,
     KEY_HELP = 0x95,
@@ -121,35 +121,22 @@ enum keycode_e {
  * @brief Structure for low level UI events
  */
 typedef struct {
-    /**
-     * Purpose unknown.
-     */
+    /** Unknown. */
     void *unk0; // 0-4 sometimes a pointer especially on unstable USB connection? junk data?
-    /**
-     * Seems to be the type of event (0x10 being key event)
-     */
+    /** Seems to be the type of event (0x10 being key event) */
     int event_type; // 4-8 16: key (?).
-    /**
-     * Keycode for the first pressed key.
-     */
+    /** Keycode for the first pressed key. */
     short key_code0; // 8-10
     /**
-     * Keycode for the second pressed key.
-     *
-     * Note that depending on the exact keys pressed simultaneously, this is not always accurate.
+     * @brief Keycode for the second pressed key.
+     * @details Note that depending on the exact keys pressed simultaneously, this is not always accurate.
      */
     short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
-    /**
-     * Set along with a @p KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
-     */
+    /** Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown. */
     void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
-    /**
-     * Purpose unknown.
-     */
+    /** Unknown. */
     void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
-    /**
-     * Purpose unknown.
-     */
+    /** Unknown. */
     void *unk20; // 20-24 seems to be always 0. Unused?
 } ui_event_t;
 
@@ -160,33 +147,31 @@ extern short ClearAllEvents();
 
 /**
  * @brief Process pending events.
- *
- * Exact purpose of this function is currently unclear.
- *
- * @param event pointer to a @p ui_event_t struct.
- * @return @p true if events were processed, @p false otherwise.
+ * @details Exact purpose of this function is currently unclear.
+ * @param event pointer to a ::ui_event_t struct.
+ * @retval true Some events were processed.
+ * @retval false No event was processed.
  * @see TestKeyEvent Related function that specifically processes key events.
  */
 extern bool TestPendEvent(ui_event_t *event);
 
 /**
  * @brief Process pending key events.
- *
- * Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses, etc.
- *
- * @param event pointer to a @p ui_event_t struct.
- * @return @p true if events were processed, @p false otherwise.
+ * @details Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses,
+ * etc.
+ * @param event pointer to a ::ui_event_t struct.
+ * @retval true Some events were processed.
+ * @retval false No event was processed.
  * @see TestPendEvent
  */
 extern bool TestKeyEvent(ui_event_t *event);
 
 /**
  * @brief Get event.
- *
- * Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the @p ui_event_t struct.
- *
- * @param event pointer to a @p ui_event_t struct.
- * @return @p 1 if successful.
+ * @details Exact purpose of this function is currently unclear. It may be responsible for setting some fields in
+ * the ::ui_event_t struct.
+ * @param event pointer to a ::ui_event_t struct.
+ * @retval 1 @x_term ok
  */
 extern int32_t GetEvent(ui_event_t *event);
 

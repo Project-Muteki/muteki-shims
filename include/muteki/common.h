@@ -6,8 +6,8 @@
 /**
  * @file common.h
  * @brief Common include file for all muteki-shims headers.
- *
- * Includes several headers that provide standard C features used by each header (e.g. stdint for ?int*_t and stdbool for bool type).
+ * @details Includes several headers that provide standard C features used by each header (e.g. `stdint.h` for
+ * `?int*_t` and `stdbool.h` for `bool` type).
  */
 
 #ifndef __MUTEKI_COMMON_H__
@@ -15,6 +15,10 @@
 
 #ifdef __cplusplus
 extern "C" {
+#endif
+
+#if defined(_MSC_VER) && _MSC_VER > 0
+#error "MSVC is not yet supported."
 #endif
 
 #include <stdint.h>
@@ -38,28 +42,41 @@ typedef wchar_t __BESTA_UTF_TYPE;
 
 /**
  * @brief "Portable" Besta UTF-16 type used by other headers.
- *
- * This is guaranteed to be 16-bit wide, unlike wchar_t (normally 32-bit wide) or char16_t (new C11 addition, can be >16-bit depending on the toolchain).
+ * @details This is guaranteed to be 16-bit wide, unlike wchar_t (normally 32-bit wide) or char16_t (new C11 addition,
+ * can be >16-bit depending on the toolchain).
  */
 #define UTF16 __BESTA_UTF_TYPE
 
 /**
  * @brief Besta UTF-16 string literal.
- *
- * This will map to either u string or L string depending on availability of <b>compiler support</b> for char16_t and wchar_t's size.
+ * @details This will map to either u string or L string depending on availability of <b>compiler support</b> for
+ * char16_t and wchar_t's size.
  */
 #define _BUL(x) __BESTA_UTF_LITERAL(x)
 
+#define __SYS_DWORD __attribute__((packed, aligned(4)))
+#define __SYS_ALIGN(n) __attribute__((aligned(n)))
+
 /**
  * @brief Attribute for structure fields that are DWORD (64-bit), that are used by system calls.
+ * @details
+ * This will align the struct fields to 4 bytes so ldr/str can still work as normal while all 64-bit values
+ * are retrieved with 2 ldr/str instructions instead of 1 ldrd/strd instruction (when compiling the program for armv5
+ * and up) or emulated counterpart (when compiling the program for armv4). This is needed because Besta RTOS uses
+ * 4-byte alignment for 64-bit fields by default and ldrd/strd will not work on those fields.
  *
- * This will align the struct fields to 4 bytes so ldr/str can still work as normal while all 64-bit values are retrieved with 2 ldr/str instructions instead of 1 ldrd/strd instruction (when compiling the program for armv5 and up) or emulated counterpart (when compiling the program for armv4). This is needed because Besta RTOS uses 4-byte alignment for 64-bit fields by default and ldrd/strd will not work on those fields.
+ * For single variable this is not necessary since 8-byte aligned variables can be understood by code that uses 4-byte
+ * alignment.
  *
- * For single variable this is not necessary since 8-byte aligned variables can be understood by code that uses 4-byte alignment.
- *
- * TODO MSVC support (is it possible?)
+ * @todo MSVC support (is it possible?)
  */
-#define SYS_DWORD __attribute__((packed, aligned(4)))
+#define SYS_DWORD __SYS_DWORD
+
+/**
+ * @brief Attribute for forcing alignment.
+ * @todo MSVC support
+ */
+#define SYS_ALIGN(n) __SYS_ALIGN(n)
 
 #ifdef __cplusplus
 } // extern "C"

@@ -38,7 +38,9 @@ enum thread_wait_reason_e {
     WAIT_ON_SLEEP = 0x20,
 };
 
-/** Result of waitables. */
+/**
+ * @brief Result of waitables.
+ */
 typedef enum wait_result_e {
     /** Timeout before the event is set. */
     WAIT_RESULT_TIMEOUT = 0x82,
@@ -61,21 +63,20 @@ typedef int (*thread_func_t)(void *user_data);
 typedef struct {
     /** Bitfield that indicates which waiting_by bytes are currently active. */
     unsigned char active_bytes;
-    /** Bitfield that tracks threads that are waiting for this waitable. Indexed by <tt>byte offset * 8 + bit offset</tt> */
+    /** Bitfield that tracks threads that are waiting for this waitable. Indexed by `byte offset * 8 + bit offset` */
     unsigned char waiting_by[8];
 } threading_waitable_t;
 
 /**
  * @brief Message type for message queues.
- *
- * This needs to be 4 byte aligned since the inline memcpy in the internal FIFO queue routines use hardcoded ldm/stm.
+ * @details This needs to be 4 byte aligned since the inline memcpy in the internal FIFO queue routines use hardcoded
+ * ldm/stm.
  */
-typedef char message_queue_message_t[16] __attribute__((aligned(4)));
+typedef char message_queue_message_t[16] SYS_ALIGN(4);
 
 /**
  * @brief Nonatomic backend storage for message queues.
- *
- * Simple ring-buffer-based FIFO queue data structure used internally by message queues.
+ * @details Simple ring-buffer-based FIFO queue data structure used internally by message queues.
  */
 typedef struct {
     /** Message body. */
@@ -114,7 +115,7 @@ typedef struct message_queue_s message_queue_t;
  * @brief Thread descriptor structure.
  */
 struct thread_s {
-    /** Magic. Always @p 0x100. */
+    /** Magic. Always `0x100`. */
     int magic; // always 0x100
     /** Stack pointer. When the thread is suspended this will point to the CPU context saved on thread stack. */
     uintptr_t *sp;
@@ -161,7 +162,7 @@ struct thread_s {
  * @brief Semaphore descriptor structure.
  */
 struct semaphore_s {
-    /** Magic. Always @p 0x200. */
+    /** Magic. Always `0x200`. */
     int magic;
     int _padding_0x4;
     /** Counter. */
@@ -178,7 +179,7 @@ struct semaphore_s {
  * @brief Event descriptor structure.
  */
 struct event_s {
-    /** Magic. Always @p 0x201 */
+    /** Magic. Always `0x201`. */
     int magic;
     /** Flag value. 1 is set and 0 is clear. */
     int flag;
@@ -196,7 +197,7 @@ struct event_s {
  * @brief Critical section descriptor structure.
  */
 struct critical_section_s {
-    /** Magic. Always @p 0x202. Note that for some reason this is the same as ::message_queue_t. */
+    /** Magic. Always `0x202`. Note that for some reason this is the same as ::message_queue_t. */
     int magic; // 0x00000202
     /** Thread descriptor for this thread. */
     thread_t *thr;
@@ -214,7 +215,7 @@ struct critical_section_s {
  * @brief Message queue descriptor structure.
  */
 struct message_queue_s {
-    /** Magic. Always @p 0x202. Note that for some reason this is the same as ::critical_section_t. */
+    /** Magic. Always `0x202`. Note that for some reason this is the same as ::critical_section_t. */
     int magic;
     /** Storage structure i.e. the actual queue part of the queue. */
     message_queue_nonatomic_t *storage;
@@ -228,15 +229,13 @@ struct message_queue_s {
 };
 
 /**
- * @brief Sleep for @p millis milliseconds.
- *
+ * @brief Sleep for `millis` milliseconds.
  * @param millis Time to sleep in milliseconds.
  */
 extern void OSSleep(short millis);
 
 /**
  * @brief Create a new thread.
- *
  * @param func Function to execute in the new thread.
  * @param user_data User data for the thread.
  * @param stack_size The size of the thread stack.
@@ -247,71 +246,68 @@ extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stac
 
 /**
  * @brief Terminate a thread.
- *
  * @param thr Thread to terminate.
  * @param exit_code The exit code.
- * @return Always 0.
+ * @retval 0 @x_term ok
  */
 extern int OSTerminateThread(thread_t *thr, int exit_code);
 
 /**
  * @brief Terminate current thread.
- *
- * This calls OSTerminateThread() with the descriptor of current thread as @p thr.
- *
+ * @details This calls OSTerminateThread() with the descriptor of current thread as `thr`.
  * @param exit_code The exit code.
- * @return Always 0.
+ * @retval 0 @x_term ok
  */
 extern int OSExitThread(int exit_code);
 
 /**
- * @brief Get the thread slot number.
- *
- * On Besta RTOS, priority is implied in the natural order of the threads in the global thread table. Some slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just allocating the thread with OSCreateThread(). User can move threads to these reserved slots by calling the OSSetThreadPriority() function.
+ * @brief Get the thread priority (slot number).
  * @param thr The thread descriptor.
  * @return The slot number of the thread.
  */
 extern short OSGetThreadPriority(thread_t *thr);
 
 /**
- * @brief Set the thread slot number.
- *
+ * @brief Set the thread priority (slot number).
+ * @details On Besta RTOS, priority is implied in the natural order of the threads in the global thread table. Some
+ * slots in the table seem to be reserved (8 for the top and 18 for the bottom) and are not accessible by just
+ * allocating the thread with OSCreateThread(). User can move threads to these reserved slots by calling the
+ * OSSetThreadPriority() function.
  * @param thr The thread descriptor.
  * @param new_slot The new slot number.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  * @see OSGetThreadPriority
  */
 extern bool OSSetThreadPriority(thread_t *thr, short new_slot);
 
 /**
  * @brief Suspend a thread from outside of that thread.
- *
  * @param thr The thread descriptor.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSSuspendThread(thread_t *thr);
 
 /**
  * @brief Start/restart a previously suspended thread.
- *
  * @param thr The thread descriptor.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSResumeThread(thread_t *thr);
 
 /**
  * @brief Force wake up a sleeping thread
- *
- * This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended.
- *
+ * @details This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended.
  * @param thr The thread descriptor.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSWakeUpThread(thread_t *thr);
 
 /**
  * @brief Create an semaphore descriptor.
- *
  * @param init_ctr Initial counter value.
  * @return The semaphore descriptor.
  */
@@ -319,7 +315,6 @@ extern semaphore_t *OSCreateSemaphore(short init_ctr);
 
 /**
  * @brief Wait and acquire a semaphore.
- *
  * @param semaphore The semaphore context.
  * @param timeout Timeout in OSSleep() units.
  * @return The result.
@@ -329,23 +324,22 @@ extern wait_result_t OSWaitForSemaphore(semaphore_t *semaphore, short timeout);
 
 /**
  * @brief Release a semaphore.
- *
  * @param semaphore The semaphore context.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSReleaseSemaphore(semaphore_t *semaphore);
 
 /**
  * @brief Destroy a semaphore.
- *
  * @param semaphore The semaphore context.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSCloseSemaphore(semaphore_t *semaphore);
 
 /**
  * @brief Create an event descriptor.
- *
  * @param latch_on Set to non-0 will inhibit the event from getting cleared after a OSWaitForEvent() is resolved.
  * @param flag The initial flag value. Can be either 0 or 1.
  * @return The event descriptor.
@@ -354,7 +348,6 @@ extern event_t *OSCreateEvent(short latch_on, int flag);
 
 /**
  * @brief Wait for an event.
- *
  * @param event The event context.
  * @param timeout Timeout in OSSleep() units.
  * @return The result.
@@ -364,109 +357,106 @@ extern wait_result_t *OSWaitForEvent(event_t *event, short timeout);
 
 /**
  * @brief Set the event flag.
- *
- * This sets the event_t::flag to 1.
+ * @details This sets the event_t::flag to 1.
  * @param event The event context.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSSetEvent(event_t *event);
 
 /**
  * @brief Reset the event flag.
- *
- * This sets the event_t::flag to 0.
+ * @details This sets the event_t::flag to 0.
  * @param event The event context.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSResetEvent(event_t *event);
 
 /**
  * @brief Destroy the event descriptor.
- *
  * @param event The event context.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSCloseEvent(event_t *event);
 
 /**
  * @brief Initialize a critical section descriptor.
- *
- * @param cs The critical section descriptor.
+ * @param[out] cs The critical section descriptor.
  */
 extern void OSInitCriticalSection(critical_section_t *cs);
 
 /**
  * @brief Enter/aquire a critical section.
- *
- * Besta critical sections behave like recursive mutexes. Therefore this will block when multiple threads are trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass through. The context is released when all of the entries are reverted by a OSLeaveCriticalSection() call.
- *
- * @param cs The critical section descriptor.
+ * @details Besta critical sections behave like recursive mutexes. Therefore this will block when multiple threads are
+ * trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass
+ * through. The context is released when all of the entries are reverted by a OSLeaveCriticalSection() call.
+ * @param[in, out] cs The critical section descriptor.
  */
 extern void OSEnterCriticalSection(critical_section_t *cs);
 
 /**
  * @brief Leave/release a critical section.
- *
- * @param cs The critical section descriptor.
+ * @param[in, out] cs The critical section descriptor.
  */
 extern void OSLeaveCriticalSection(critical_section_t *cs);
 
 /**
  * @brief Destroy a critical section descriptor.
- *
- * @param cs The critical section descriptor.
+ * @param[in, out] cs The critical section descriptor.
  */
 extern void OSDeleteCriticalSection(critical_section_t *cs);
 
 /**
  * @brief Create a message queue descriptor.
- *
- * @param size Size of the queue in number of messages (will use sizeof(::message_queue_message_t) * size bytes of memory).
+ * @param size Size of the queue in number of messages (will use `sizeof(`::message_queue_message_t`) * size` bytes of
+ * memory).
  * @return The message queue descriptor.
  */
 extern message_queue_t *OSCreateMsgQue(unsigned short size);
 
 /**
  * @brief Push a message into the queue.
- *
  * @param queue The message queue descriptor.
  * @param message The message being pushed.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSPostMsgQue(message_queue_t *queue, const message_queue_message_t *message);
 
 /**
  * @brief Push a message into the queue and reschedule immediately.
- *
  * @param queue The message queue descriptor.
  * @param message The message being pushed.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSSendMsgQue(message_queue_t *queue, const message_queue_message_t *message);
 
 /**
  * @brief Peek the bottom of the queue without popping the message.
- *
  * @param queue The message queue descriptor.
  * @param message The result message.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSPeekMsgQue(message_queue_t *queue, message_queue_message_t *message);
 
 /**
  * @brief Pop a message from the queue.
- *
  * @param queue The message queue descriptor.
  * @param message The result message.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSGetMsgQue(message_queue_t *queue, message_queue_message_t *message);
 
 /**
  * @brief Destroy a message queue descriptor.
- *
  * @param queue The message queue descriptor.
- * @return true if successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool OSCloseMsgQue(message_queue_t *queue);
 

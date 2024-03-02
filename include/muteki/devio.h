@@ -18,12 +18,10 @@ extern "C" {
 #endif
 
 /**
- * @brief Open or create a file/device by its @p pathname.
- *
- * Analogous to the Windows CreateFile() API. Seems to wrap the internal _af* series syscalls.
- *
- * TODO: Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed.
- *
+ * @brief Open or create a file/device by its `pathname`.
+ * @details Analogous to the Windows CreateFile() API. Seems to wrap the internal _af* series syscalls.
+ * @todo Documentation on accepted arguments are mostly based on speculations at this moment. More details and through
+ * verifications needed.
  * @param pathname DOS 8.3 path to the file to be opened.
  * @param access Access flags.
  * @param shmode File sharing mode. (?)
@@ -31,25 +29,23 @@ extern "C" {
  * @param on_noentry Behavior when entry does not exist. (?)
  * @param flags Flags and attributes of the file. (?)
  * @param template_file Seems to be ignored.
- * @return File handle. Depending on the type of the handle it could either be a pointer reference to a file struct or a device descriptor.
+ * @return File handle. Depending on the type of the handle it could either be a pointer reference to a file struct or
+ * a device descriptor.
  */
 extern void *CreateFile(char *pathname, int access, int shmode, void *secattr, int on_noentry, int flags, void *template_file);
 
 /**
  * @brief Close a handle.
- *
- * Analogous to the Windows CloseHandle() API.
- *
+ * @details Analogous to the Windows CloseHandle() API.
  * @param h Handle to close.
- * @return Whether the operation was successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool CloseHandle(void *h);
 
 /**
- * @brief Send an IOCTL request to a device handle @p h.
- *
- * Analogous to the Windows DeviceIoControl() API.
- *
+ * @brief Send an IOCTL request to a device handle `h`.
+ * @details Analogous to the Windows DeviceIoControl() API.
  * @param h Device handle.
  * @param request IOCTL request type.
  * @param in The input buffer, or NULL if not applicable.
@@ -58,7 +54,8 @@ extern bool CloseHandle(void *h);
  * @param outlen The size of the output buffer in bytes.
  * @param retlen The size of returned data (if applicable).
  * @param overlapped Probably ignored.
- * @return Whether the operation was successful.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
  */
 extern bool DeviceIoControl(void *h, int request, const void *in, int inlen, void *out, int outlen, int *retlen, void *overlapped);
 
@@ -66,4 +63,4 @@ extern bool DeviceIoControl(void *h, int request, const void *in, int inlen, voi
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_DEVIO_H__
+#endif // __MUTEKI_DEVIO_H__urn Whether the operation was successful.

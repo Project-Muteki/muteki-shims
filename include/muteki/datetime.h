@@ -40,8 +40,7 @@ typedef struct {
 } datetime_t;
 
 /**
- * @brief Read current time of the day and store it in @p dt.
- *
+ * @brief Read current time of the day and store it in `dt`.
  * @param dt Pointer to an empty datetime struct.
  */
 extern void GetSysTime(datetime_t *dt);

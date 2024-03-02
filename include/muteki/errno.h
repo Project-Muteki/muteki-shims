@@ -210,42 +210,44 @@ static inline unsigned short KERRNO_ERR(kerrno_t kerrno) {
 
 /**
  * @brief Fetch an error message.
- *
- * Fetch error descriptions (encoded in ::UTF16) for last set error in a similar manner to FormatMessage API in Windows.
- *
- * @param flags Flags. Only ::FORMAT_MESSAGE_FROM_SYSTEM and ::FORMAT_MESSAGE_ALLOCATE_BUFFER are supported. In addition, @p FORMAT_MESSAGE_FROM_SYSTEM must be set.
- * @param _sbz0 Ignored. Should be set to 0.
- * @param _sbz1 Ignored. Should be set to 0.
- * @param _sbz2 Ignored. Should be set to 0.
- * @param outbuf The output buffer. If using ::FORMAT_MESSAGE_ALLOCATE_BUFFER, the pointer to the allocated buffer will be placed at this location. Otherwise the message will be written directly to this location. It's caller's responsibility to free any buffer allocated by ::FORMAT_MESSAGE_ALLOCATE_BUFFER.
- * @param outlen When not using ::FORMAT_MESSAGE_ALLOCATE_BUFFER, this is the length of the message buffer. Otherwise this is the minimum size of the buffer allocated for the message by the function.
+ * @details Fetch error descriptions (encoded in ::UTF16) for last set error in a similar manner to `FormatMessage`
+ * API in Windows.
+ * @param flags Flags. Only ::FORMAT_MESSAGE_FROM_SYSTEM and ::FORMAT_MESSAGE_ALLOCATE_BUFFER are supported.
+ * In addition, ::FORMAT_MESSAGE_FROM_SYSTEM must be set.
+ * @param _sbz0 @x_term sbz
+ * @param _sbz1 @x_term sbz
+ * @param _sbz2 @x_term sbz
+ * @param outbuf The output buffer.
+ * If using ::FORMAT_MESSAGE_ALLOCATE_BUFFER, the pointer to the allocated buffer will be placed at this location.
+ * Otherwise the message will be written directly to this location. It's caller's responsibility to free any buffer
+ * allocated by ::FORMAT_MESSAGE_ALLOCATE_BUFFER.
+ * @param outlen When not using ::FORMAT_MESSAGE_ALLOCATE_BUFFER, this is the length of the message buffer. Otherwise
+ * this is the minimum size of the buffer allocated for the message by the function.
  * @return Length of the message written, or 0 if fails.
  */
 extern size_t FormatMessage(int32_t flags, int32_t _sbz0, int32_t _sbz1, int32_t _sbz2, void *outbuf, size_t outlen);
 
 /**
  * @brief Set the global errno.
- *
  * @param err New errno value.
  */
 extern void OSSetLastError(kerrno_t err);
 
 /**
  * @brief Get errno value from the global errno variable.
- *
  * @return The current errno value.
  */
 extern kerrno_t OSGetLastError(void);
 
 /**
  * @brief Set errno.
- *
+ * @details
  * Unlike OSSetLastError(), this also clears the kernel errno before calling OSSetLastError().
  *
  * If the errno namespace is unset, it will also automatically set ::ERRNO_NS_APPLET_SPECIFIC before passing it to
  * OSSetLastError().
  *
- * Requires @p -lkrnllib when dynamically linking with the shims.
+ * @x_term require-krnllib
  *
  * @param err New errno value.
  */
@@ -253,10 +255,11 @@ extern void _SetLastError(kerrno_t err);
 
 /**
  * @brief Get errno.
+ * @details
+ * If kernel errno is set, the errno is returned with ::ERRNO_NS_KERNEL bit set. Otherwise it will return
+ * the result from OSSetLastError() with ::ERRNO_NS_USER bit set.
  *
- * If kernel errno is set, the errno is returned with ::ERRNO_NS_KERNEL bit set. Otherwise it will return the result from OSSetLastError() with ::ERRNO_NS_USER bit set.
- *
- * Requires @p -lkrnllib when dynamically linking with the shims.
+ * @x_term require-krnllib
  *
  * @return The current errno value from either kernel or OSSetLastError().
  */

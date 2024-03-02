@@ -18,7 +18,7 @@ extern "C" {
 #endif
 
 /**
- * Defines the default subroutine identifiers to be used with @a ExecuteProgram.
+ * Defines the default subroutine identifiers to be used with ExecuteProgram().
  * @see ExecuteProgram
  */
 enum applet_subroutine_e {
@@ -30,7 +30,7 @@ enum applet_subroutine_e {
 
 /**
  * @brief Applet argument passing V4 struct.
- * Mirrors the parameter set by the parent ExecuteProgram() call.
+ * @details Mirrors the parameter set by the parent ExecuteProgram() call.
  * @see ExecuteProgram
  */
 typedef struct {
@@ -46,9 +46,7 @@ typedef struct {
 
 /**
  * @brief Load an app executable.
- *
- * The @p pathname specified must be a DOS 8.3 name.
- *
+ * @details The `pathname` specified must be a DOS 8.3 name.
  * @param pathname Path to executable.
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
  */
@@ -56,7 +54,6 @@ extern void *LoadProgramA(const char *pathname);
 
 /**
  * @brief Load an applet executable. (UTF-16 variant)
- *
  * @param pathname UTF-16 LFN path to executable.
  * @see LoadProgramA
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
@@ -65,7 +62,7 @@ extern void *LoadProgramW(const UTF16 *pathname);
 
 /**
  * @brief Invoke a specific subroutine of the loaded applet with arguments.
- *
+ * @details
  * Once called, the control is fully transferred to the loaded applet and this function will block until the invoked subroutine fully exits.
  *
  * Actual format of arguments seem to be applet-specific.
@@ -83,8 +80,7 @@ extern int ExecuteProgram(void *prog, int subroutine, const void *applet_arg1, c
 
 /**
  * @brief Unload a loaded applet.
- *
- * @param prog The loaded executable description returned by LoadProgramA or LoadProgramW.
+ * @param prog The loaded executable description returned by LoadProgramA() or LoadProgramW().
  * @see LoadProgramA
  * @see LoadProgramW
  */
@@ -92,14 +88,12 @@ extern int FreeProgram(void *prog);
 
 /**
  * @brief Get the path to the current running executable (argv[0]).
- *
  * @return The DOS 8.3 path to the current running executable.
  */
 extern char *GetCurrentPathA();
 
 /**
  * @brief Get the path to the current running executable (argv[0]). (UTF-16 variant)
- *
  * @return The UTF-16 LFN path to the current running executable.
  */
 extern UTF16 *GetCurrentPathW();

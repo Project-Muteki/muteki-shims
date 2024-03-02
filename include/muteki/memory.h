@@ -6,7 +6,7 @@
 /**
  * @file memory.h
  * @brief Memory management API.
- *
+ * @details
  * In Besta RTOS, heap memory management is entirely done in the OS kernel.
  * All applications share a single heap managed by the OS and can be accessed
  * through the malloc series API. Conventional address-space based heap memory
@@ -29,33 +29,29 @@ extern "C" {
 
 /**
  * @brief Allocate heap memory.
- *
  * @param size Size of the allocation in bytes.
- * @return Pointer to allocated memory, or @p NULL if allocation fails.
+ * @return Pointer to allocated memory, or `NULL` if allocation fails.
  */
 extern void *lmalloc(size_t size);
 
 /**
  * @brief Allocate and clear data units on the heap.
- *
  * @param nmemb Number of data units to allocate.
  * @param size Size of each data unit.
- * @return Pointer to allocated memory, or @p NULL if allocation fails.
+ * @return Pointer to allocated memory, or `NULL` if allocation fails.
  */
 extern void *lcalloc(size_t nmemb, size_t size);
 
 /**
  * @brief Resize or reallocate memory.
- *
  * @param ptr Pointer to previously allocated memory.
  * @param size New size in bytes.
- * @return Pointer to the newly allocated memory, or @p NULL if allocation fails.
+ * @return Pointer to the newly allocated memory, or `NULL` if allocation fails.
  */
 extern void *lrealloc(void *ptr, size_t size);
 
 /**
  * @brief Free previously allocated memory.
- *
  * @param ptr Pointer to previously allocated memory.
  */
 extern void _lfree(void *ptr);
@@ -63,9 +59,7 @@ extern void _lfree(void *ptr);
 
 /**
  * @brief Return the size of available memory.
- *
- * Requires @p -lkrnllib when dynamically linking with the shims.
- *
+ * @details @x_term require-krnllib
  * @return Size of available memory.
  */
 extern size_t GetFreeMemory();
