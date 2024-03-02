@@ -89,7 +89,7 @@ extern void FTL_DestroyRamDisk();
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */
-unsigned int nand_get_params(int sbz, nand_params_t *params);
+int nand_get_params(int sbz, nand_params_t *params);
 
 /**
  * @brief Read NAND flash pages at a specific page number.
@@ -101,7 +101,7 @@ unsigned int nand_get_params(int sbz, nand_params_t *params);
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */
-unsigned int nand_read_page(int sbz, size_t page, void *ptr, size_t count, short arg5);
+int nand_read_page(int sbz, size_t page, void *ptr, size_t count, short arg5);
 
 #ifdef __cplusplus
 } // extern "C"
