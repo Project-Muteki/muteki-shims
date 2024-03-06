@@ -21,3 +21,13 @@ The operation was completed successfully.
 //! [ng]
 The operation failed with error. 
 //! [ng]
+
+//! [void-param]
+@par Parameters
+    None.
+//! [void-param]
+
+//! [void-return]
+@par Returns
+    None.
+//! [void-return]
