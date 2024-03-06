@@ -7,7 +7,7 @@ var searchData=
   ['getcursorposition_461',['GetCursorPosition',['../canvas_8h.html#a1b44760495067590b0823c6dff8aed2b',1,'canvas.h']]],
   ['getcursorsize_462',['GetCursorSize',['../canvas_8h.html#ac281e215d0abacde88ce42f04f9b08ad',1,'canvas.h']]],
   ['getcursortype_463',['GetCursorType',['../canvas_8h.html#a3d961c1c3c7a87e1ccd0873e2aa5e262',1,'canvas.h']]],
-  ['getevent_464',['GetEvent',['../event_8h.html#afa4eabdb16241c67349313776269703a',1,'event.h']]],
+  ['getevent_464',['GetEvent',['../event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de',1,'event.h']]],
   ['getfontheight_465',['GetFontHeight',['../canvas_8h.html#a009e14c23044791c4250d8242ec811c4',1,'canvas.h']]],
   ['getfreememory_466',['GetFreeMemory',['../memory_8h.html#a11e993980c4031eb09cafad85ddeb952',1,'memory.h']]],
   ['getmaxscrx_467',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['canvas_2eh_55',['canvas.h',['../canvas_8h.html',1,'']]],
-  ['clearallevents_56',['ClearAllEvents',['../event_8h.html#a0d28c08b9ef5fb9b2877c547f433d1ed',1,'event.h']]],
+  ['clearallevents_56',['ClearAllEvents',['../event_8h.html#a2ffd8f47dae072b34d94f6ec43dde598',1,'event.h']]],
   ['clearscreen_57',['ClearScreen',['../canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692',1,'canvas.h']]],
   ['closehandle_58',['CloseHandle',['../devio_8h.html#afd675a81da99d1a03d218aa08caf16a6',1,'devio.h']]],
   ['common_2eh_59',['common.h',['../common_8h.html',1,'']]],
