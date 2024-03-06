@@ -412,7 +412,7 @@ void CursorUnock();
  * @param width_bytes If set to a value larger than the value calculated from `width`, the pixel buffer will be
  * allocated according to this value instead (i.e. `width_bytes * height`).
  */
-lcd_t *CreateVirtualLCD(short width, short height, short width_bytes)
+lcd_t *CreateVirtualLCD(short width, short height, short width_bytes);
 
 #ifdef __cplusplus
 } // extern "C"
