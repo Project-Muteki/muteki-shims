@@ -142,11 +142,9 @@ typedef struct {
 
 /**
  * @brief Discard all unprocessed UI events.
- * @todo Is there actually a return value?
- * @x_void_param
- * @retval 0 @x_term ok
+ * @x_void
  */
-extern short ClearAllEvents();
+extern void ClearAllEvents();
 
 /**
  * @brief Process pending events.
@@ -173,10 +171,11 @@ extern bool TestKeyEvent(ui_event_t *event);
  * @brief Get event.
  * @details Exact purpose of this function is currently unclear. It may be responsible for setting some fields in
  * the ::ui_event_t struct.
- * @param event pointer to a ::ui_event_t struct.
- * @retval 1 @x_term ok
+ * @param[out] event pointer to a ::ui_event_t struct.
+ * @retval true Some events were returned.
+ * @retval false No event was returned.
  */
-extern int32_t GetEvent(ui_event_t *event);
+extern bool GetEvent(ui_event_t *event);
 
 #ifdef __cplusplus
 } // extern "C"
