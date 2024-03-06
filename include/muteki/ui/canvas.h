@@ -212,6 +212,58 @@ void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
  */
 void ScrollRight(short x0, short y0, short x1, short y1, short amount);
 
+/**
+ * @brief Get the cursor position on the current canvas.
+ * @param[out] x The x coordinate of the cursor.
+ * @param[out] y The y coordinate of the cursor.
+ */
+void GetCursorPosition(short *x, short *y);
+
+/**
+ * @brief Move the cursor position on the current canvas to the specified coordinate.
+ * @param x The new x coordinate of the cursor.
+ * @param y The new y coordinate of the cursor.
+ */
+void SetCursorPosition(short x, short y);
+
+/**
+ * @brief Get the type of the cursor on the current canvas.
+ * @todo Document the actual type as an enum.
+ * @return The cursor type.
+ */
+short GetCursorType();
+
+/**
+ * @brief Set the type of the cursor on the current canvas.
+ * @todo Document the actual type as an enum.
+ * @param new_type The new cursor type.
+ * @return The previous cursor type.
+ */
+short SetCursorType(short new_type);
+
+/**
+ * @brief Get the size of the cursor on the current canvas.
+ * @return The cursor size.
+ */
+unsigned int GetCursorSize();
+
+/**
+ * @brief Set the size of the cursor on the current canvas.
+ * @param new_size The new cursor size.
+ * @return The previous cursor size.
+ */
+unsigned int SetCursorSize(unsigned int new_size);
+
+/**
+ * @brief Lock the cursor on the current canvas.
+ */
+void CursorLock();
+
+/**
+ * @brief Unlock the cursor on the current canvas.
+ */
+void CursorUnock();
+
 #ifdef __cplusplus
 } // extern "C"
 #endif
