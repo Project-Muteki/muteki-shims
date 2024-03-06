@@ -1,8 +1,27 @@
 var searchData=
 [
-  ['wait_5freason_563',['wait_reason',['../structthread__s.html#a2bde1f5ace30798a4edccbc6469ddb42',1,'thread_s']]],
-  ['wait_5fstate_564',['wait_state',['../structsemaphore__s.html#a97cb5a2da761eed482ebcd28b8fadf54',1,'semaphore_s::wait_state()'],['../structevent__s.html#a55d268f3d1ddaa8226c06d54f4193bdb',1,'event_s::wait_state()'],['../structcritical__section__s.html#a7f5372482763b84d38dcf5298a894446',1,'critical_section_s::wait_state()'],['../structmessage__queue__s.html#a5194fc5f00d5f972c861f8149661e7cf',1,'message_queue_s::wait_state()']]],
-  ['waiting_5fby_565',['waiting_by',['../structthreading__waitable__t.html#a224dc7dc25c5440ed48e54d2183926b8',1,'threading_waitable_t']]],
-  ['weekday_566',['weekday',['../structdatetime__t.html#a65486e7763660a3e2787b334f941c1ae',1,'datetime_t']]],
-  ['width_567',['width',['../structvram__descriptor__t.html#a1a62980f1a1ed74e28f76aba3f552c6b',1,'vram_descriptor_t']]]
+  ['unk0_598',['unk0',['../structui__event__t.html#a9e9e52b6d4cc42417738d7fdf8ae13f8',1,'ui_event_t']]],
+  ['unk16_599',['unk16',['../structui__event__t.html#a855a075d199dafd41a8224a45057573f',1,'ui_event_t']]],
+  ['unk20_600',['unk20',['../structui__event__t.html#a54f924d5ee83def24cfba17853fd1ea9',1,'ui_event_t']]],
+  ['unk36_601',['unk36',['../structfind__context__t.html#a027e6c3dc1602d37f6ea7a16f2ae160c',1,'find_context_t']]],
+  ['unk_5f0x10_602',['unk_0x10',['../structlcd__t.html#a37649d63513953d0101cd1150baf9057',1,'lcd_t']]],
+  ['unk_5f0x14_603',['unk_0x14',['../structthread__s.html#afa1c767efa9a73cc5cd5d46bdcefdd2d',1,'thread_s::unk_0x14()'],['../structlcd__t.html#afc1d3c0faa84366da35f3c410abfcc91',1,'lcd_t::unk_0x14()']]],
+  ['unk_5f0x1c_604',['unk_0x1c',['../structnand__params__t.html#a9a22833df756b5a869d0e1dbbe4e1c37',1,'nand_params_t::unk_0x1c()'],['../structthread__s.html#a79e8823dae931b1f1222c2119d6c2515',1,'thread_s::unk_0x1c()'],['../structlcd__t.html#ac27a59ad96adf6b23ee34717e2ac10a5',1,'lcd_t::unk_0x1c()']]],
+  ['unk_5f0x20_605',['unk_0x20',['../structlcd__t.html#a9f26c6c42746d6c421fbc00782c836e5',1,'lcd_t']]],
+  ['unk_5f0x24_606',['unk_0x24',['../structlcd__t.html#a12a5b614b48315bef4d146382b077c85',1,'lcd_t']]],
+  ['unk_5f0x28_607',['unk_0x28',['../structlcd__t.html#a907f77af6ae70181b03f6149e17fa45c',1,'lcd_t']]],
+  ['unk_5f0x2c_608',['unk_0x2c',['../structlcd__t.html#aea53c9a054cd75470b0fa05556dcbfd0',1,'lcd_t']]],
+  ['unk_5f0x30_609',['unk_0x30',['../structlcd__t.html#ab083332977ab2c8ce95db197972a232a',1,'lcd_t']]],
+  ['unk_5f0x34_610',['unk_0x34',['../structthread__s.html#af70416da6706e851c0542acab94197d9',1,'thread_s::unk_0x34()'],['../structlcd__t.html#abbbe7e6c8dc71229c74ac05333365635',1,'lcd_t::unk_0x34()']]],
+  ['unk_5f0x40_611',['unk_0x40',['../structnand__params__t.html#a9921e8774e63116450ab16e6a218c1f4',1,'nand_params_t']]],
+  ['unk_5f0x74_612',['unk_0x74',['../structlcd__t.html#a6352a83285a7557fbf7cccd5925dad3f',1,'lcd_t']]],
+  ['unk_5f0x88_613',['unk_0x88',['../structlcd__t.html#ac3d90968943d47e3aa5b2c3802f4530e',1,'lcd_t']]],
+  ['unk_5f0x9c_614',['unk_0x9c',['../structlcd__t.html#a4a61700fb949fb63f4d378f36c890571',1,'lcd_t']]],
+  ['unk_5f0xa_615',['unk_0xa',['../structlcd__surface__t.html#aa539c0d85a61de4ad39b3ec3a677a86c',1,'lcd_surface_t::unk_0xa()'],['../structlcd__cursor__t.html#a2ba196e6982fa19404327b920dbe422e',1,'lcd_cursor_t::unk_0xa()']]],
+  ['unk_5f0xa0_616',['unk_0xa0',['../structlcd__t.html#a5b81899997c34e612426548fc044a172',1,'lcd_t']]],
+  ['unk_5f0xa4_617',['unk_0xa4',['../structlcd__t.html#a1609fa6e9fcbef2cd2aae140f47e4781',1,'lcd_t']]],
+  ['unk_5f0xe_618',['unk_0xe',['../structlcd__cursor__t.html#a7d07318d2e0787578dd06de018486176',1,'lcd_cursor_t']]],
+  ['usb_5fdata_619',['usb_data',['../structui__event__t.html#a6000b75d1c3e06a203b823ae4a735fab',1,'ui_event_t']]],
+  ['used_620',['used',['../structfs__stat__t.html#a96946b8114ed6bc26aed76733b82b703',1,'fs_stat_t']]],
+  ['used_5fkb_621',['used_kb',['../structfs__stat__t.html#abb1cfe3d6ce071d624477adde47a223a',1,'fs_stat_t']]]
 ];

@@ -75,8 +75,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a3ea4701d803ca0f080c0f3f5e32f7d52"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnand__params__t.html#a3ea4701d803ca0f080c0f3f5e32f7d52">unk_0x0</a></td></tr>
-<tr class="separator:a3ea4701d803ca0f080c0f3f5e32f7d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8bd4407970629b300858e9ac6b38083"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnand__params__t.html#ad8bd4407970629b300858e9ac6b38083">magic</a></td></tr>
+<tr class="separator:ad8bd4407970629b300858e9ac6b38083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36880ad8a1ada4e2d921043e0a47a56d"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnand__params__t.html#a36880ad8a1ada4e2d921043e0a47a56d">nand_id_length</a></td></tr>
 <tr class="separator:a36880ad8a1ada4e2d921043e0a47a56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a7c140fc3e2a8f707b6069ce96e250d"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnand__params__t.html#a4a7c140fc3e2a8f707b6069ce96e250d">nand_id</a> [8]</td></tr>
@@ -126,6 +126,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>NAND block erase size in bytes. </p>
+
+</div>
+</div>
+<a id="ad8bd4407970629b300858e9ac6b38083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8bd4407970629b300858e9ac6b38083">&#9670;&nbsp;</a></span>magic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short nand_params_t::magic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Magic. Needs to be set to <code>0x44</code>. </p>
 
 </div>
 </div>
@@ -201,21 +216,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>NAND spare (OOB) page size in bytes. </p>
-
-</div>
-</div>
-<a id="a3ea4701d803ca0f080c0f3f5e32f7d52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ea4701d803ca0f080c0f3f5e32f7d52">&#9670;&nbsp;</a></span>unk_0x0</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short nand_params_t::unk_0x0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Unknown. Set to 0x44 on BA110L. </p>
 
 </div>
 </div>

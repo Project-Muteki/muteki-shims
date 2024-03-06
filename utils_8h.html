@@ -66,8 +66,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">utils.h File Reference</div>  </div>
@@ -77,95 +75,31 @@ $(function() {
 <p>Miscellaneous utility syscalls.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="canvas_8h_source.html">muteki/ui/canvas.h</a>&gt;</code><br />
 </div>
 <p><a href="utils_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvram__descriptor__t.html">vram_descriptor_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The framebuffer descriptor.  <a href="structvram__descriptor__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:aa7a435c8a2cda84eaef92144c9ba0798"><td class="memItemLeft" align="right" valign="top"><a id="aa7a435c8a2cda84eaef92144c9ba0798"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a>) (void)</td></tr>
-<tr class="memdesc:aa7a435c8a2cda84eaef92144c9ba0798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback type for Timer1 interrupt. <br /></td></tr>
-<tr class="separator:aa7a435c8a2cda84eaef92144c9ba0798"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac4d2062355dec698128f8049434b4129"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvram__descriptor__t.html">vram_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ac4d2062355dec698128f8049434b4129">GetActiveVRamAddress</a> ()</td></tr>
-<tr class="memdesc:ac4d2062355dec698128f8049434b4129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor for the currently active framebuffer.  <a href="utils_8h.html#ac4d2062355dec698128f8049434b4129">More...</a><br /></td></tr>
-<tr class="separator:ac4d2062355dec698128f8049434b4129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef1cc89349e8bbf4146fdf74097c882f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aef1cc89349e8bbf4146fdf74097c882f">Buzzer</a> (int frequency, short duration)</td></tr>
-<tr class="memdesc:aef1cc89349e8bbf4146fdf74097c882f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a tone using the built in piezo speaker.  <a href="utils_8h.html#aef1cc89349e8bbf4146fdf74097c882f">More...</a><br /></td></tr>
-<tr class="separator:aef1cc89349e8bbf4146fdf74097c882f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2d53f8c84fda26516ccc5119e1e594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a8c2d53f8c84fda26516ccc5119e1e594">GetActiveVRamAddress</a> ()</td></tr>
+<tr class="memdesc:a8c2d53f8c84fda26516ccc5119e1e594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor for the currently active framebuffer.  <a href="utils_8h.html#a8c2d53f8c84fda26516ccc5119e1e594">More...</a><br /></td></tr>
+<tr class="separator:a8c2d53f8c84fda26516ccc5119e1e594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a212a842a05302253aae6192eaa1ec53f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">WarningBeep</a> ()</td></tr>
 <tr class="memdesc:a212a842a05302253aae6192eaa1ec53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker.  <a href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">More...</a><br /></td></tr>
 <tr class="separator:a212a842a05302253aae6192eaa1ec53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1810c29cbd2e6d63a9c7f2c123dd2b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30">SetTimer1IntHandler</a> (<a class="el" href="utils_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a> callback, short interval)</td></tr>
-<tr class="memdesc:a1810c29cbd2e6d63a9c7f2c123dd2b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Timer1 interrupt handler.  <a href="utils_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30">More...</a><br /></td></tr>
-<tr class="separator:a1810c29cbd2e6d63a9c7f2c123dd2b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77c18dab7a63ff188e452878d5907582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a77c18dab7a63ff188e452878d5907582">GetTimer1IntHandler</a> (short *interval)</td></tr>
-<tr class="memdesc:a77c18dab7a63ff188e452878d5907582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Timer1 interrupt handler and custom interval.  <a href="utils_8h.html#a77c18dab7a63ff188e452878d5907582">More...</a><br /></td></tr>
-<tr class="separator:a77c18dab7a63ff188e452878d5907582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Miscellaneous utility syscalls. </p>
 <p>Contains syscalls that cannot be easily grouped with other syscalls. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aef1cc89349e8bbf4146fdf74097c882f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef1cc89349e8bbf4146fdf74097c882f">&#9670;&nbsp;</a></span>Buzzer()</h2>
+<a id="a8c2d53f8c84fda26516ccc5119e1e594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2d53f8c84fda26516ccc5119e1e594">&#9670;&nbsp;</a></span>GetActiveVRamAddress()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Buzzer </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>frequency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>duration</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Play a tone using the built in piezo speaker. </p>
-<p>This will block the execution. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">frequency</td><td>Frequency of the tone in Hz. </td></tr>
-    <tr><td class="paramname">duration</td><td>Duration of the tone in milliseconds. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>The operation was completed successfully. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac4d2062355dec698128f8049434b4129"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4d2062355dec698128f8049434b4129">&#9670;&nbsp;</a></span>GetActiveVRamAddress()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structvram__descriptor__t.html">vram_descriptor_t</a>* GetActiveVRamAddress </td>
+          <td class="memname"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a>* GetActiveVRamAddress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -175,70 +109,6 @@ Functions</h2></td></tr>
 
 <p>Get the descriptor for the currently active framebuffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The framebuffer descriptor. </dd></dl>
-
-</div>
-</div>
-<a id="a77c18dab7a63ff188e452878d5907582"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77c18dab7a63ff188e452878d5907582">&#9670;&nbsp;</a></span>GetTimer1IntHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="utils_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a> GetTimer1IntHandler </td>
-          <td>(</td>
-          <td class="paramtype">short *&#160;</td>
-          <td class="paramname"><em>interval</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the Timer1 interrupt handler and custom interval. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">interval</td><td>A pointer to a variable that will hold the timer interval. Must not be NULL. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The callback function previously registered with <a class="el" href="utils_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30" title="Set Timer1 interrupt handler.">SetTimer1IntHandler()</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a1810c29cbd2e6d63a9c7f2c123dd2b30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1810c29cbd2e6d63a9c7f2c123dd2b30">&#9670;&nbsp;</a></span>SetTimer1IntHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetTimer1IntHandler </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="utils_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a>&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>interval</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set Timer1 interrupt handler. </p>
-<p>The callback function passed to this will be called once every time the timer fires. The exact interval can be manually specified. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">callback</td><td>The callback function called when timer fires. </td></tr>
-    <tr><td class="paramname">interval</td><td>An interval value in <a class="el" href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573" title="Sleep for millis milliseconds.">OSSleep()</a> unit, or defaulting to 10 when set to 0. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

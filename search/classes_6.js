@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nand_5fparams_5ft_351',['nand_params_t',['../structnand__params__t.html',1,'']]]
+  ['message_5fqueue_5fnonatomic_5ft_386',['message_queue_nonatomic_t',['../structmessage__queue__nonatomic__t.html',1,'']]],
+  ['message_5fqueue_5fs_387',['message_queue_s',['../structmessage__queue__s.html',1,'']]]
 ];
