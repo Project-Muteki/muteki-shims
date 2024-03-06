@@ -222,13 +222,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:aea877b097cd19dff1122cce9f01ac7db"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aea877b097cd19dff1122cce9f01ac7db">SetCursorSize</a> (unsigned int new_size)</td></tr>
 <tr class="memdesc:aea877b097cd19dff1122cce9f01ac7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the cursor on the current canvas.  <a href="canvas_8h.html#aea877b097cd19dff1122cce9f01ac7db">More...</a><br /></td></tr>
 <tr class="separator:aea877b097cd19dff1122cce9f01ac7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b82197758044bd6b4f728adadb1e481"><td class="memItemLeft" align="right" valign="top"><a id="a6b82197758044bd6b4f728adadb1e481"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a6b82197758044bd6b4f728adadb1e481">CursorLock</a> ()</td></tr>
-<tr class="memdesc:a6b82197758044bd6b4f728adadb1e481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the cursor on the current canvas. <br /></td></tr>
+<tr class="memitem:a6b82197758044bd6b4f728adadb1e481"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a6b82197758044bd6b4f728adadb1e481">CursorLock</a> ()</td></tr>
+<tr class="memdesc:a6b82197758044bd6b4f728adadb1e481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the cursor on the current canvas.  <a href="canvas_8h.html#a6b82197758044bd6b4f728adadb1e481">More...</a><br /></td></tr>
 <tr class="separator:a6b82197758044bd6b4f728adadb1e481"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83fb9bd1df11fb75ad36fd154c76dcaa"><td class="memItemLeft" align="right" valign="top"><a id="a83fb9bd1df11fb75ad36fd154c76dcaa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a83fb9bd1df11fb75ad36fd154c76dcaa">CursorUnock</a> ()</td></tr>
-<tr class="memdesc:a83fb9bd1df11fb75ad36fd154c76dcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the cursor on the current canvas. <br /></td></tr>
+<tr class="memitem:a83fb9bd1df11fb75ad36fd154c76dcaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a83fb9bd1df11fb75ad36fd154c76dcaa">CursorUnock</a> ()</td></tr>
+<tr class="memdesc:a83fb9bd1df11fb75ad36fd154c76dcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the cursor on the current canvas.  <a href="canvas_8h.html#a83fb9bd1df11fb75ad36fd154c76dcaa">More...</a><br /></td></tr>
 <tr class="separator:a83fb9bd1df11fb75ad36fd154c76dcaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17c9b2388f2996c3e66dd2e44dfaff77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a17c9b2388f2996c3e66dd2e44dfaff77">CreateVirtualLCD</a> (short width, short height, short width_bytes)</td></tr>
 <tr class="memdesc:a17c9b2388f2996c3e66dd2e44dfaff77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a virtual LCD descriptor.  <a href="canvas_8h.html#a17c9b2388f2996c3e66dd2e44dfaff77">More...</a><br /></td></tr>
@@ -328,10 +326,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 <p>Fill the current display canvas with background color, effectively clearing it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fill_with_fg</td><td>Fill with foreground color instead of background color. </td></tr>
+    <tr><td class="paramname">fill_with_fg</td><td>Fill with foreground color instead of background color.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -368,7 +368,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 </div><div class="memdoc">
 
 <p>Create a virtual LCD descriptor. </p>
-<p>Virtual LCDs allow the program to draw using the LCD/canvas API without flipping the content to the screen immediately. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Virtual LCDs allow the program to draw using the LCD/canvas API without committing the pixels to the screen immediately. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">width</td><td>Width of the virtual LCD. </td></tr>
     <tr><td class="paramname">height</td><td>Height of the virtual LCD. </td></tr>
@@ -376,6 +376,51 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The virtual LCD descriptor. </dd></dl>
+
+</div>
+</div>
+<a id="a6b82197758044bd6b4f728adadb1e481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b82197758044bd6b4f728adadb1e481">&#9670;&nbsp;</a></span>CursorLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CursorLock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lock the cursor on the current canvas. </p>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
+
+</div>
+</div>
+<a id="a83fb9bd1df11fb75ad36fd154c76dcaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fb9bd1df11fb75ad36fd154c76dcaa">&#9670;&nbsp;</a></span>CursorUnock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CursorUnock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unlock the cursor on the current canvas. </p>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -447,10 +492,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">x</td><td>The x coordinate of the cursor. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>The y coordinate of the cursor. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>The y coordinate of the cursor.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -470,7 +517,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 </div><div class="memdoc">
 
 <p>Get the size of the cursor on the current canvas. </p>
-<dl class="section return"><dt>Returns</dt><dd>The cursor size. </dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+</p><dl class="section return"><dt>Returns</dt><dd>The cursor size. </dd></dl>
 
 </div>
 </div>
@@ -490,8 +538,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 </div><div class="memdoc">
 
 <p>Get the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+</p><dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
 
 </div>
 </div>
@@ -538,7 +587,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 </div><div class="memdoc">
 
 <p>Get X coordinate of the rightmost visible pixels on the current canvas. </p>
-<p>This is usually tied to the physical resolution of the display. Therefore it can be used to determine the display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls. </p><dl class="section return"><dt>Returns</dt><dd>The X coordinate of the rightmost visible pixels. </dd></dl>
+<p>This is usually tied to the physical resolution of the display. Therefore it can be used to determine the display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls.</p>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+</p><dl class="section return"><dt>Returns</dt><dd>The X coordinate of the rightmost visible pixels. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37" title="Get Y coordinate of the bottom-most visible pixels on the current canvas.">GetMaxScrY</a> Returns the Y boundary instead. </dd></dl>
 
 </div>
@@ -559,7 +610,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 </div><div class="memdoc">
 
 <p>Get Y coordinate of the bottom-most visible pixels on the current canvas. </p>
-<p>This is usually tied to the physical resolution of the display. Therefore it can be used to determine the display size. The display size can be calculated by adding 1 to the return values of both <code>GetMaxScr*</code> calls. </p><dl class="section return"><dt>Returns</dt><dd>The Y coordinate of the bottom-most visible pixels. </dd></dl>
+<p>This is usually tied to the physical resolution of the display. Therefore it can be used to determine the display size. The display size can be calculated by adding 1 to the return values of both <code>GetMaxScr*</code> calls.</p>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+</p><dl class="section return"><dt>Returns</dt><dd>The Y coordinate of the bottom-most visible pixels. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3" title="Get X coordinate of the rightmost visible pixels on the current canvas.">GetMaxScrX</a> Returns the X boundary instead. </dd></dl>
 
 </div>
@@ -608,10 +661,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
     <tr><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
     <tr><td class="paramname">y</td><td>Y coordinate of the corner. </td></tr>
     <tr><td class="paramname">format</td><td>The format string passed to the built-in sprintf(). </td></tr>
-    <tr><td class="paramname">...</td><td>Any subsequent values passed to the built-in sprintf(). </td></tr>
+    <tr><td class="paramname">...</td><td>Any subsequent values passed to the built-in sprintf().</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -634,10 +689,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 <p>Set display canvas background fill color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rgb</td><td>The integer RGB value. </td></tr>
+    <tr><td class="paramname">rgb</td><td>The integer RGB value.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -660,10 +717,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 <p>Set display canvas foreground fill color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rgb</td><td>The integer RGB value. </td></tr>
+    <tr><td class="paramname">rgb</td><td>The integer RGB value.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -718,10 +777,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
     <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels. </td></tr>
     <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels. </td></tr>
     <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
-    <tr><td class="paramname">amount</td><td>Amount of pixels to move. </td></tr>
+    <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -776,10 +837,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
     <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels. </td></tr>
     <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels. </td></tr>
     <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
-    <tr><td class="paramname">amount</td><td>Amount of pixels to move. </td></tr>
+    <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -834,10 +897,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
     <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels. </td></tr>
     <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels. </td></tr>
     <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
-    <tr><td class="paramname">amount</td><td>Amount of pixels to move. </td></tr>
+    <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -892,10 +957,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
     <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels. </td></tr>
     <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels. </td></tr>
     <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
-    <tr><td class="paramname">amount</td><td>Amount of pixels to move. </td></tr>
+    <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -929,10 +996,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The new x coordinate of the cursor. </td></tr>
-    <tr><td class="paramname">y</td><td>The new y coordinate of the cursor. </td></tr>
+    <tr><td class="paramname">y</td><td>The new y coordinate of the cursor.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -1010,10 +1079,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
 <p>Set the current font type to <code>font_type</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">font_type</td><td>The font type. </td></tr>
+    <tr><td class="paramname">font_type</td><td>The font type.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -1061,10 +1132,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
     <tr><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
     <tr><td class="paramname">y</td><td>Y coordinate of the corner. </td></tr>
     <tr><td class="paramname">c</td><td>UTF-16 codepoint of the character. </td></tr>
-    <tr><td class="paramname">invert</td><td>Whether or not to invert the color for that character. </td></tr>
+    <tr><td class="paramname">invert</td><td>Whether or not to invert the color for that character.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -1112,11 +1185,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canv
     <tr><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
     <tr><td class="paramname">y</td><td>Y coordinate of the corner. </td></tr>
     <tr><td class="paramname">s</td><td>UTF-16 encoded string to be drawn. </td></tr>
-    <tr><td class="paramname">invert</td><td>Whether or not to invert the color for that character. </td></tr>
+    <tr><td class="paramname">invert</td><td>Whether or not to invert the color for that character.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a29721495a341c1aec1cec64333d59f51" title="Draw a character c aligned to the top left corner at (x, y) px.">WriteChar</a> Similar function that displays single characters instead. </dd></dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a29721495a341c1aec1cec64333d59f51" title="Draw a character c aligned to the top left corner at (x, y) px.">WriteChar</a> Similar function that displays single characters instead. </dd></dl>
 
 </div>
 </div>

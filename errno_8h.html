@@ -440,7 +440,9 @@ Functions</h2></td></tr>
 
 <p>Get errno. </p>
 <p>If kernel errno is set, the errno is returned with <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a> bit set. Otherwise it will return the result from <a class="el" href="errno_8h.html#aeaa5fa918b295c79d957f225a271dd13" title="Set the global errno.">OSSetLastError()</a> with <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7">ERRNO_NS_USER</a> bit set.</p>
-<p>Requires `-lkrnllib` when dynamically linking with the shims.  </p><dl class="section return"><dt>Returns</dt><dd>The current errno value from either kernel or <a class="el" href="errno_8h.html#aeaa5fa918b295c79d957f225a271dd13" title="Set the global errno.">OSSetLastError()</a>. </dd></dl>
+<p>Requires `-lkrnllib` when dynamically linking with the shims. </p>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+</p><dl class="section return"><dt>Returns</dt><dd>The current errno value from either kernel or <a class="el" href="errno_8h.html#aeaa5fa918b295c79d957f225a271dd13" title="Set the global errno.">OSSetLastError()</a>. </dd></dl>
 
 </div>
 </div>
@@ -465,10 +467,12 @@ Functions</h2></td></tr>
 <p>If the errno namespace is unset, it will also automatically set <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a05a5ebcb4b1ef8ca5ef3cf5b2f6f7e07">ERRNO_NS_APPLET_SPECIFIC</a> before passing it to <a class="el" href="errno_8h.html#aeaa5fa918b295c79d957f225a271dd13" title="Set the global errno.">OSSetLastError()</a>.</p>
 <p>Requires `-lkrnllib` when dynamically linking with the shims.  </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">err</td><td>New errno value. </td></tr>
+    <tr><td class="paramname">err</td><td>New errno value.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
@@ -555,7 +559,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get errno value from the global errno variable. </p>
-<dl class="section return"><dt>Returns</dt><dd>The current errno value. </dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+</p><dl class="section return"><dt>Returns</dt><dd>The current errno value. </dd></dl>
 
 </div>
 </div>
@@ -578,10 +583,12 @@ Functions</h2></td></tr>
 <p>Set the global errno. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">err</td><td>New errno value. </td></tr>
+    <tr><td class="paramname">err</td><td>New errno value.</td></tr>
   </table>
   </dd>
 </dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+</p>
 
 </div>
 </div>
