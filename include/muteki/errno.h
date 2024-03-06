@@ -230,11 +230,13 @@ extern size_t FormatMessage(int32_t flags, int32_t _sbz0, int32_t _sbz1, int32_t
 /**
  * @brief Set the global errno.
  * @param err New errno value.
+ * @x_void_return
  */
 extern void OSSetLastError(kerrno_t err);
 
 /**
  * @brief Get errno value from the global errno variable.
+ * @x_void_param
  * @return The current errno value.
  */
 extern kerrno_t OSGetLastError(void);
@@ -250,6 +252,7 @@ extern kerrno_t OSGetLastError(void);
  * @x_term require-krnllib
  *
  * @param err New errno value.
+ * @x_void_return
  */
 extern void _SetLastError(kerrno_t err);
 
@@ -261,6 +264,7 @@ extern void _SetLastError(kerrno_t err);
  *
  * @x_term require-krnllib
  *
+ * @x_void_param
  * @return The current errno value from either kernel or OSSetLastError().
  */
 extern kerrno_t _GetLastError(void);

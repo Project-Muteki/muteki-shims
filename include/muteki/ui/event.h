@@ -142,6 +142,9 @@ typedef struct {
 
 /**
  * @brief Discard all unprocessed UI events.
+ * @todo Is there actually a return value?
+ * @x_void_param
+ * @retval 0 @x_term ok
  */
 extern short ClearAllEvents();
 

@@ -21,6 +21,7 @@ extern "C" {
 
 /**
  * @brief Get the descriptor for the currently active framebuffer.
+ * @x_void_param
  * @return The framebuffer descriptor.
  */ 
 extern lcd_surface_t *GetActiveVRamAddress();
@@ -28,6 +29,7 @@ extern lcd_surface_t *GetActiveVRamAddress();
 /**
  * @brief Play a beep using the built in piezo speaker.
  * @details This usually plays a 4000Hz tone for 10ms.
+ * @x_void_param
  * @retval true @x_term ok
  */
 extern bool WarningBeep();

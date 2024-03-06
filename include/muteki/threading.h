@@ -231,6 +231,7 @@ struct message_queue_s {
 /**
  * @brief Sleep for `millis` milliseconds.
  * @param millis Time to sleep in milliseconds.
+ * @x_void_return
  */
 extern void OSSleep(short millis);
 
@@ -384,6 +385,7 @@ extern bool OSCloseEvent(event_t *event);
 /**
  * @brief Initialize a critical section descriptor.
  * @param[out] cs The critical section descriptor.
+ * @x_void_return
  */
 extern void OSInitCriticalSection(critical_section_t *cs);
 
@@ -393,18 +395,21 @@ extern void OSInitCriticalSection(critical_section_t *cs);
  * trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass
  * through. The context is released when all of the entries are reverted by a OSLeaveCriticalSection() call.
  * @param[in, out] cs The critical section descriptor.
+ * @x_void_return
  */
 extern void OSEnterCriticalSection(critical_section_t *cs);
 
 /**
  * @brief Leave/release a critical section.
  * @param[in, out] cs The critical section descriptor.
+ * @x_void_return
  */
 extern void OSLeaveCriticalSection(critical_section_t *cs);
 
 /**
  * @brief Destroy a critical section descriptor.
  * @param[in, out] cs The critical section descriptor.
+ * @x_void_return
  */
 extern void OSDeleteCriticalSection(critical_section_t *cs);
 

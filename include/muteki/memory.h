@@ -53,6 +53,7 @@ extern void *lrealloc(void *ptr, size_t size);
 /**
  * @brief Free previously allocated memory.
  * @param ptr Pointer to previously allocated memory.
+ * @x_void_return
  */
 extern void _lfree(void *ptr);
 
@@ -60,6 +61,7 @@ extern void _lfree(void *ptr);
 /**
  * @brief Return the size of available memory.
  * @details @x_term require-krnllib
+ * @x_void_param
  * @return Size of available memory.
  */
 extern size_t GetFreeMemory();

@@ -224,18 +224,21 @@ enum font_type_e {
 /**
  * @brief Set display canvas background fill color.
  * @param rgb The integer RGB value.
+ * @x_void_return
  */
 extern void rgbSetBkColor(int rgb);
 
 /**
  * @brief Set display canvas foreground fill color.
  * @param rgb The integer RGB value.
+ * @x_void_return
  */
 extern void rgbSetColor(int rgb);
 
 /**
  * @brief Fill the current display canvas with background color, effectively clearing it.
  * @param fill_with_fg Fill with foreground color instead of background color.
+ * @x_void_return
  */
 extern void ClearScreen(bool fill_with_fg);
 
@@ -265,12 +268,14 @@ extern int GetFontHeight(uint8_t font_type);
  * @param y Y coordinate of the corner.
  * @param format The format string passed to the built-in sprintf().
  * @param ... Any subsequent values passed to the built-in sprintf().
+ * @x_void_return
  */
 extern void PrintfXY(short x, short y, const char *format, ...);
 
 /**
  * @brief Set the current font type to @p font_type.
  * @param font_type The font type.
+ * @x_void_return
  */
 extern void SetFontType(int8_t font_type);
 
@@ -280,6 +285,7 @@ extern void SetFontType(int8_t font_type);
  * @param y Y coordinate of the corner.
  * @param c UTF-16 codepoint of the character.
  * @param invert Whether or not to invert the color for that character.
+ * @x_void_return
  */
 extern void WriteChar(short x, short y, UTF16 c, bool invert);
 
@@ -289,6 +295,7 @@ extern void WriteChar(short x, short y, UTF16 c, bool invert);
  * @param y Y coordinate of the corner.
  * @param s UTF-16 encoded string to be drawn.
  * @param invert Whether or not to invert the color for that character.
+ * @x_void_return
  * @see WriteChar Similar function that displays single characters instead.
  */
 extern void WriteString(short x, short y, const UTF16 *s, bool invert);
@@ -297,6 +304,7 @@ extern void WriteString(short x, short y, const UTF16 *s, bool invert);
  * @brief Get X coordinate of the rightmost visible pixels on the current canvas.
  * @details This is usually tied to the physical resolution of the display. Therefore it can be used to determine the
  * display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls.
+ * @x_void_param
  * @return The X coordinate of the rightmost visible pixels.
  * @see GetMaxScrY Returns the Y boundary instead.
  */
@@ -306,6 +314,7 @@ extern short GetMaxScrX();
  * @brief Get Y coordinate of the bottom-most visible pixels on the current canvas.
  * @details This is usually tied to the physical resolution of the display. Therefore it can be used to determine the
  * display size. The display size can be calculated by adding 1 to the return values of both `GetMaxScr*` calls.
+ * @x_void_param
  * @return The Y coordinate of the bottom-most visible pixels.
  * @see GetMaxScrX Returns the X boundary instead.
  */
@@ -318,6 +327,7 @@ extern short GetMaxScrY();
  * @param x1 X coordinate of the bottom-right corner, in pixels.
  * @param y1 Y coordinate of the bottom-right corner, in pixels.
  * @param amount Amount of pixels to move.
+ * @x_void_return
  */
 void ScrollUp(short x0, short y0, short x1, short y1, short amount);
 
@@ -328,6 +338,7 @@ void ScrollUp(short x0, short y0, short x1, short y1, short amount);
  * @param x1 X coordinate of the bottom-right corner, in pixels.
  * @param y1 Y coordinate of the bottom-right corner, in pixels.
  * @param amount Amount of pixels to move.
+ * @x_void_return
  */
 void ScrollDown(short x0, short y0, short x1, short y1, short amount);
 
@@ -338,6 +349,7 @@ void ScrollDown(short x0, short y0, short x1, short y1, short amount);
  * @param x1 X coordinate of the bottom-right corner, in pixels.
  * @param y1 Y coordinate of the bottom-right corner, in pixels.
  * @param amount Amount of pixels to move.
+ * @x_void_return
  */
 void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
 
@@ -348,6 +360,7 @@ void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
  * @param x1 X coordinate of the bottom-right corner, in pixels.
  * @param y1 Y coordinate of the bottom-right corner, in pixels.
  * @param amount Amount of pixels to move.
+ * @x_void_return
  */
 void ScrollRight(short x0, short y0, short x1, short y1, short amount);
 
@@ -355,6 +368,7 @@ void ScrollRight(short x0, short y0, short x1, short y1, short amount);
  * @brief Get the cursor position on the current canvas.
  * @param[out] x The x coordinate of the cursor.
  * @param[out] y The y coordinate of the cursor.
+ * @x_void_return
  */
 void GetCursorPosition(short *x, short *y);
 
@@ -362,12 +376,14 @@ void GetCursorPosition(short *x, short *y);
  * @brief Move the cursor position on the current canvas to the specified coordinate.
  * @param x The new x coordinate of the cursor.
  * @param y The new y coordinate of the cursor.
+ * @x_void_return
  */
 void SetCursorPosition(short x, short y);
 
 /**
  * @brief Get the type of the cursor on the current canvas.
  * @todo Document the actual type as an enum.
+ * @x_void_param
  * @return The cursor type.
  */
 short GetCursorType();
@@ -382,6 +398,7 @@ short SetCursorType(short new_type);
 
 /**
  * @brief Get the size of the cursor on the current canvas.
+ * @x_void_param
  * @return The cursor size.
  */
 unsigned int GetCursorSize();
@@ -395,22 +412,25 @@ unsigned int SetCursorSize(unsigned int new_size);
 
 /**
  * @brief Lock the cursor on the current canvas.
+ * @x_void
  */
 void CursorLock();
 
 /**
  * @brief Unlock the cursor on the current canvas.
+ * @x_void
  */
 void CursorUnock();
 
 /**
  * @brief Create a virtual LCD descriptor.
- * @details Virtual LCDs allow the program to draw using the LCD/canvas API without flipping the content to the screen
+ * @details Virtual LCDs allow the program to draw using the LCD/canvas API without committing the pixels to the screen
  * immediately.
  * @param width Width of the virtual LCD.
  * @param height Height of the virtual LCD.
  * @param width_bytes If set to a value larger than the value calculated from `width`, the pixel buffer will be
  * allocated according to this value instead (i.e. `width_bytes * height`).
+ * @return The virtual LCD descriptor.
  */
 lcd_t *CreateVirtualLCD(short width, short height, short width_bytes);
 

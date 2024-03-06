@@ -88,12 +88,14 @@ extern int FreeProgram(void *prog);
 
 /**
  * @brief Get the path to the current running executable (argv[0]).
+ * @x_void_param
  * @return The DOS 8.3 path to the current running executable.
  */
 extern char *GetCurrentPathA();
 
 /**
  * @brief Get the path to the current running executable (argv[0]). (UTF-16 variant)
+ * @x_void_param
  * @return The UTF-16 LFN path to the current running executable.
  */
 extern UTF16 *GetCurrentPathW();

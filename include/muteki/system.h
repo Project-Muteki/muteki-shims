@@ -37,6 +37,7 @@ extern bool Buzzer(int frequency, short duration);
  * can be manually specified.
  * @param callback The callback function called when timer fires.
  * @param interval An interval value in OSSleep() unit, or defaulting to 10 when set to 0.
+ * @x_void_param
  */
 extern void SetTimer1IntHandler(timer1_callback_t callback, short interval);
 
