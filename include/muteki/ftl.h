@@ -22,8 +22,8 @@ extern "C" {
  * @brief NAND flash parameter.
  */
 typedef struct {
-    /** Unknown. Set to 0x44 on BA110L. */
-    short unk_0x0;
+    /** Magic. Needs to be set to `0x44`. */
+    short magic;
     /** Length of NAND flash ID. */
     short nand_id_length;
     /** NAND flash ID. */

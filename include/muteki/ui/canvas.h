@@ -5,7 +5,9 @@
 
 /**
  * @file canvas.h
- * @brief Display canvas API.
+ * @brief Display canvas (LCD) API.
+ * @details Note that the term "display canvas", "canvas" and "LCD" may be used interchangeably below. This may get
+ * rectified in a future release.
  */
 
 #ifndef __MUTEKI_UI_CANVAS_H__
@@ -16,6 +18,143 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+/**
+ * @brief Descriptor of an LCD drawing surface or hardware framebuffer.
+ * @details This contains format description of the pixel/framebuffer and a pointer to the actual buffer.
+ */
+typedef struct {
+    /**
+     * @brief Header magic.
+     * @details Always @p "PX" without NUL.
+     */
+    char magic[2]; // 0:2
+    /**
+     * @brief Width of the framebuffer.
+     */
+    unsigned short width; // 2:4
+    /**
+     * @brief Height of the framebuffer.
+     */
+    unsigned short height; // 4:6
+    /**
+     * @brief Depth of the color in bits.
+     * @details 32 for RGBA, 4 for 16 color grayscale. Could be other values depending on the platform and the display
+     * it uses.
+     */
+    unsigned short depth; // 6:8
+    /**
+     * @brief Pixel row size in bytes.
+     * @details This is usually 4-bytes aligned.
+     */
+    unsigned short xsize; // 8:10
+    /**
+     * @brief Purpose unknown.
+     * @details Seems to be always 0x2.
+     */
+    unsigned short unk_0xa; // 10:12
+    /**
+     * @brief Palette used to pack RGBA color into pixels.
+     * @details Probably only make sense when using pixfmt other than RGBA (i.e. depth of 32). It should be NULL in
+     * that case.
+     */
+    int *palette; // 12:16
+    /**
+     * @brief The actual framebuffer/VRAM region.
+     * @details The actual format varies and depends on the parameters provided above.
+     */
+    void *buffer; // 16:20
+} lcd_surface_t; // 20 bytes
+
+/** Cursor struct usually embedded in LCD descriptor. */
+typedef struct SYS_ALIGN(2) {
+    /** X coordinate of the cursor. */
+    short x; // 0x0:0x2
+    /** Y coordinate of the cursor. */
+    short y; // 0x2:0x4
+    /** Size of the cursor. */
+    unsigned int size; // 0x4:0x8
+    /**
+     * @brief Type of the cursor.
+     * @todo Document the actual meaning of this.
+     */
+    short type; // 0x8:0xa
+    /** Unknown. */
+    short unk_0xa; // 0xa:0xc
+    /** Number of times this cursor has been locked/grabbed by other code. */
+    short grab_count; // 0xc:0xe
+    /** Unknown. */
+    short unk_0xe; // 0xe:0x10
+} lcd_cursor_t; // 0x10 bytes
+
+/** Rectangle used to represent usable drawing area in an LCD descriptor. */
+typedef struct {
+    /** Minimum X coordinate. */
+    short xmin;
+    /** Minimum Y coordinate. */
+    short ymin;
+    /** Maximum X coordinate. */
+    short xmax;
+    /** Maximum Y coordinate. */
+    short ymax;
+} lcd_rect_t;
+
+/**
+ * @brief The LCD descriptor.
+ */
+typedef struct {
+    /** Surface linked to the LCD. */
+    lcd_surface_t *surface; // 0x0:0x4
+    /** End address of the pixel/framebuffer. */
+    void *pixel_end; // 0x4:0x8
+    /** Total size of the pixel/framebuffer in bytes. */
+    size_t pixel_size; // 0x8:0xc
+    /** Current background color. */
+    int bg_color; // 0xc:0x10
+    /** Unknown. */
+    int unk_0x10; // 0x10:0x14
+    /** Unknown. */
+    int unk_0x14; // 0x14:0x18
+    /** Current foreground color. */
+    int fg_color; // 0x18:0x1c
+    /** Unknown. */
+    int unk_0x1c; // 0x1c:0x20
+    /** Unknown. */
+    int unk_0x20; // 0x20:0x24
+    /** Unknown. */
+    int unk_0x24; // 0x24:0x28
+    /** Unknown. */
+    int unk_0x28; // 0x28:0x2c
+    /** Unknown. */
+    int unk_0x2c; // 0x2c:0x30
+    /** Unknown. */
+    int unk_0x30; // 0x30:0x34
+    /** Unknown. */
+    int unk_0x34[10]; // 0x34:0x5c
+    /** A copy of the cursor states when the LCD descriptor was created. */
+    lcd_cursor_t saved_cursor; // 0x5c:0x6c
+    /** Usable drawing area of the LCD. */
+    lcd_rect_t rect; // 0x6c:0x74
+    /** Unknown. */
+    int unk_0x74[3]; // 0x74:0x80
+    /** Cursor states. */
+    lcd_cursor_t *cursor; // 0x80:0x84
+    /** Width of the LCD in pixels. */
+    short width; // 0x84:0x86
+    /** Height of the LCD in pixels. */
+    short height; // 0x86:0x88
+    // ...a version-specific section starts somewhere after this...
+    /** Unknown. */
+    int unk_0x88[4]; // 0x88:0x98
+    /** A critical section descriptor. It's unclear where it is used. */
+    critical_section_t *cs; // 0x98:0x9c
+    /** Unknown. */
+    int unk_0x9c; // 0x9c:0xa0
+    /** Unknown. */
+    int unk_0xa0; // 0xa0:0xa4
+    /** Unknown. */
+    int unk_0xa4[23]; // 0xa4:0x100
+} lcd_t; // 0x100 bytes
 
 /**
  * @brief Font types.
@@ -263,6 +402,17 @@ void CursorLock();
  * @brief Unlock the cursor on the current canvas.
  */
 void CursorUnock();
+
+/**
+ * @brief Create a virtual LCD descriptor.
+ * @details Virtual LCDs allow the program to draw using the LCD/canvas API without flipping the content to the screen
+ * immediately.
+ * @param width Width of the virtual LCD.
+ * @param height Height of the virtual LCD.
+ * @param width_bytes If set to a value larger than the value calculated from `width`, the pixel buffer will be
+ * allocated according to this value instead (i.e. `width_bytes * height`).
+ */
+lcd_t *CreateVirtualLCD(short width, short height, short width_bytes)
 
 #ifdef __cplusplus
 } // extern "C"
