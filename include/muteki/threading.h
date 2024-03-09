@@ -132,7 +132,7 @@ struct thread_s {
     /** Unknown. */
     short unk_0x1c;
     /** Milliseconds left to sleep. */
-    unsigned short sleep_counter;
+    short sleep_counter;
     /**
      * Current wait reason of the thread.
      * @see thread_wait_reason_e

@@ -55,8 +55,8 @@ extern void *LoadProgramA(const char *pathname);
 /**
  * @brief Load an applet executable. (UTF-16 variant)
  * @param pathname UTF-16 LFN path to executable.
- * @see LoadProgramA
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
+ * @see LoadProgramA
  */
 extern void *LoadProgramW(const UTF16 *pathname);
 
