@@ -12,7 +12,8 @@ on:
   workflow_dispatch:
 
 env:
-  DOXYGEN_VER: '1.10.0'
+  DOXYGEN_VER: '1.9.8'
+  DOXYGEN_RELEASE_TAG: 'Release_1_9_8'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,11 +34,12 @@ jobs:
           path: ${{ runner.temp }}/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz
           key: ${{ runner.os }}-doxygen-package
 
+      # TODO maybe use GitHub API for this?
       - name: Download Doxygen
         if: steps.cache-doxygen-package.outputs.cache-hit != 'true'
         run: |
           cd ${{ runner.temp }} && \
-          wget -q 'https://www.doxygen.nl/files/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz'
+          wget -q 'https://github.com/doxygen/doxygen/releases/download/${{ env.DOXYGEN_RELEASE_TAG }}/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz'
 
       - name: Install Doxygen
         run: |
