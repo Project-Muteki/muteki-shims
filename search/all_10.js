@@ -21,7 +21,7 @@ var searchData=
   ['size3_5fkb_18',['size3_kb',['../structfs__stat__t.html#a6f58d3d54c60c843e1d4aad386564dfa',1,'fs_stat_t']]],
   ['size_5fkb_19',['size_kb',['../structfs__stat__t.html#aa1258524872869be947b2df681796d10',1,'fs_stat_t']]],
   ['size_5fmib_20',['size_mib',['../structnand__params__t.html#a099b79c523ffbd951af4ed326436d00f',1,'nand_params_t']]],
-  ['sleep_5fcounter_21',['sleep_counter',['../structthread__s.html#adfd5d7949cb9dc2a04d436e6a2582bb2',1,'thread_s']]],
+  ['sleep_5fcounter_21',['sleep_counter',['../structthread__s.html#abaabe02bab6986011ad51e659d6ca6c9',1,'thread_s']]],
   ['slot_22',['slot',['../structthread__s.html#a3d547d65fcc718091bd0b85f2de691bb',1,'thread_s']]],
   ['slot_5fhigh3b_23',['slot_high3b',['../structthread__s.html#ae14f522a6ee859f6b15ad680fdcf529b',1,'thread_s']]],
   ['slot_5fhigh3b_5fbit_24',['slot_high3b_bit',['../structthread__s.html#a391a98a9bf0d47a33f752755b934fea8',1,'thread_s']]],
