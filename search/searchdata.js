@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "aefkmstw",
   7: "_adefgmpstw",
   8: "_frsu",
-  9: "mt"
+  9: "lmst"
 };
 
 var indexSectionNames =
