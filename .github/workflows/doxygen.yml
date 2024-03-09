@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ runner.temp }}/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz
-          key: ${{ runner.os }}-doxygen-package
+          key: ${{ runner.os }}-doxygen-package-${{ env.DOXYGEN_VER }}
 
       # TODO maybe use GitHub API for this?
       - name: Download Doxygen
