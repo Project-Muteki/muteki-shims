@@ -13,6 +13,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  DOXYGEN_VER: '1.10.0'
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -23,10 +26,29 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - name: Cache Doxygen package
+        id: cache-doxygen-package
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz
+          key: ${{ runner.os }}-doxygen-package
+
+      - name: Download Doxygen
+        if: steps.cache-doxygen-package.outputs.cache-hit != 'true'
+        run: |
+          cd ${{ runner.temp }} && \
+          wget 'https://www.doxygen.nl/files/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz'
 
       - name: Install Doxygen
-        run: sudo apt-get install doxygen
+        run: |
+          cd ${{ runner.temp }} && \
+          mkdir doxygen && \
+          tar xzf doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz -Cdoxygen && \
+          cd doxygen/doxygen-${{ env.DOXYGEN_VER }} && \
+          sudo make install && \
+          cd ${GITHUB_WORKSPACE}
 
       - name: Run Doxygen
         run: doxygen
