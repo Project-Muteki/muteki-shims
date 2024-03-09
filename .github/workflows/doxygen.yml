@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -39,7 +37,7 @@ jobs:
         if: steps.cache-doxygen-package.outputs.cache-hit != 'true'
         run: |
           cd ${{ runner.temp }} && \
-          wget 'https://www.doxygen.nl/files/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz'
+          wget -q 'https://www.doxygen.nl/files/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz'
 
       - name: Install Doxygen
         run: |
