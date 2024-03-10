@@ -85,6 +85,7 @@ $(function() {
 <p>Display canvas (LCD) API.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="threading_8h_source.html">muteki/threading.h</a>&gt;</code><br />
 </div>
 <p><a href="canvas_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -94,8 +95,16 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor of an LCD drawing surface or hardware framebuffer.  <a href="structlcd__surface__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__cursor__t.html">lcd_cursor_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor struct usually embedded in LCD descriptor.  <a href="structlcd__cursor__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__rect__t.html">lcd_rect_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectangle used to represent usable drawing area in an LCD descriptor.  <a href="structlcd__rect__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__draw__t.html">lcd_draw_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing routine common states.  <a href="structlcd__draw__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__font__t.html">lcd_font_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font rendering routine common states.  <a href="structlcd__font__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__t.html">lcd_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LCD descriptor.  <a href="structlcd__t.html#details">More...</a><br /></td></tr>
@@ -163,12 +172,15 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a98681ae3b53fbaff32dc184a11aa559e" id="r_a98681ae3b53fbaff32dc184a11aa559e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a98681ae3b53fbaff32dc184a11aa559e">rgbSetBkColor</a> (int rgb)</td></tr>
-<tr class="memdesc:a98681ae3b53fbaff32dc184a11aa559e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set display canvas background fill color.  <br /></td></tr>
-<tr class="separator:a98681ae3b53fbaff32dc184a11aa559e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61c187a73000a33c2ca53d8df7fe5ab0" id="r_a61c187a73000a33c2ca53d8df7fe5ab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a61c187a73000a33c2ca53d8df7fe5ab0">rgbSetColor</a> (int rgb)</td></tr>
-<tr class="memdesc:a61c187a73000a33c2ca53d8df7fe5ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set display canvas foreground fill color.  <br /></td></tr>
-<tr class="separator:a61c187a73000a33c2ca53d8df7fe5ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17969255790b1f018336f0c959dba82" id="r_ad17969255790b1f018336f0c959dba82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ad17969255790b1f018336f0c959dba82">SetTransparentColor</a> (int color)</td></tr>
+<tr class="memdesc:ad17969255790b1f018336f0c959dba82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set display canvas transparent color.  <br /></td></tr>
+<tr class="separator:ad17969255790b1f018336f0c959dba82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7333109cd5c46ab957287b7722a1f77" id="r_aa7333109cd5c46ab957287b7722a1f77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa7333109cd5c46ab957287b7722a1f77">rgbSetBkColor</a> (int color)</td></tr>
+<tr class="memdesc:aa7333109cd5c46ab957287b7722a1f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set display canvas background fill color.  <br /></td></tr>
+<tr class="separator:aa7333109cd5c46ab957287b7722a1f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40fa1f62900939b0b578f94dc44d8db4" id="r_a40fa1f62900939b0b578f94dc44d8db4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a40fa1f62900939b0b578f94dc44d8db4">rgbSetColor</a> (int color)</td></tr>
+<tr class="memdesc:a40fa1f62900939b0b578f94dc44d8db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set display canvas foreground fill color.  <br /></td></tr>
+<tr class="separator:a40fa1f62900939b0b578f94dc44d8db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac98bb3e2b7bdb7654679de8a70fc9692" id="r_ac98bb3e2b7bdb7654679de8a70fc9692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692">ClearScreen</a> (bool fill_with_fg)</td></tr>
 <tr class="memdesc:ac98bb3e2b7bdb7654679de8a70fc9692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the current display canvas with background color, effectively clearing it.  <br /></td></tr>
 <tr class="separator:ac98bb3e2b7bdb7654679de8a70fc9692"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,6 +193,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:a009e14c23044791c4250d8242ec811c4" id="r_a009e14c23044791c4250d8242ec811c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a009e14c23044791c4250d8242ec811c4">GetFontHeight</a> (uint8_t font_type)</td></tr>
 <tr class="memdesc:a009e14c23044791c4250d8242ec811c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of the font <code>font_type</code>.  <br /></td></tr>
 <tr class="separator:a009e14c23044791c4250d8242ec811c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc499fc724de87725ee7dc60ed1d106" id="r_a4bc499fc724de87725ee7dc60ed1d106"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a4bc499fc724de87725ee7dc60ed1d106">Printf</a> (char *format,...)</td></tr>
+<tr class="memdesc:a4bc499fc724de87725ee7dc60ed1d106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string.  <br /></td></tr>
+<tr class="separator:a4bc499fc724de87725ee7dc60ed1d106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2bce93898870fbfd4541135b418c85c" id="r_ae2bce93898870fbfd4541135b418c85c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae2bce93898870fbfd4541135b418c85c">PrintfXY</a> (short x, short y, const char *format,...)</td></tr>
 <tr class="memdesc:ae2bce93898870fbfd4541135b418c85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string aligned to the top left corner at (<code>x</code>, <code>y</code>) px.  <br /></td></tr>
 <tr class="separator:ae2bce93898870fbfd4541135b418c85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,6 +253,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:ab3b6119a8df2456843fc8e1a41030011" id="r_ab3b6119a8df2456843fc8e1a41030011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011">CreateVirtualLCD</a> (short width, short height, short width_bytes)</td></tr>
 <tr class="memdesc:ab3b6119a8df2456843fc8e1a41030011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a virtual LCD descriptor.  <br /></td></tr>
 <tr class="separator:ab3b6119a8df2456843fc8e1a41030011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca965f3a7d9d1fceb2543b96a52dac2" id="r_adca965f3a7d9d1fceb2543b96a52dac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2">DeleteVirtualLCD</a> (<a class="el" href="structlcd__t.html">lcd_t</a> *lcd)</td></tr>
+<tr class="memdesc:adca965f3a7d9d1fceb2543b96a52dac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose a previously created virtual LCD descriptor.  <br /></td></tr>
+<tr class="separator:adca965f3a7d9d1fceb2543b96a52dac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2442aa53fb420d155f16e717ad5c221" id="r_aa2442aa53fb420d155f16e717ad5c221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa2442aa53fb420d155f16e717ad5c221">SetActiveLCD</a> (<a class="el" href="structlcd__t.html">lcd_t</a> *new_lcd)</td></tr>
+<tr class="memdesc:aa2442aa53fb420d155f16e717ad5c221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an LCD descriptor as active.  <br /></td></tr>
+<tr class="separator:aa2442aa53fb420d155f16e717ad5c221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38aa2abfb190ac0a0a12249df8020ed7" id="r_a38aa2abfb190ac0a0a12249df8020ed7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a> ()</td></tr>
+<tr class="memdesc:a38aa2abfb190ac0a0a12249df8020ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current active LCD descriptor.  <br /></td></tr>
+<tr class="separator:a38aa2abfb190ac0a0a12249df8020ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d78d4e6fbdfd69a372ca29c697c0f8" id="r_a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a31d78d4e6fbdfd69a372ca29c697c0f8">SetDrawArea</a> (short x0, short y0, short x1, short y1)</td></tr>
+<tr class="memdesc:a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the drawing area of the current active LCD.  <br /></td></tr>
+<tr class="separator:a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73f5af6932e361f5ecb50e9a6648fd9" id="r_ae73f5af6932e361f5ecb50e9a6648fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae73f5af6932e361f5ecb50e9a6648fd9">GetDrawArea</a> (short *x0, short *y0, short *x1, short *y1)</td></tr>
+<tr class="memdesc:ae73f5af6932e361f5ecb50e9a6648fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the drawing area of the current active LCD.  <br /></td></tr>
+<tr class="separator:ae73f5af6932e361f5ecb50e9a6648fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Display canvas (LCD) API. </p>
@@ -355,6 +385,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structlcd__t.html">lcd_t</a> * CreateVirtualLCD </td>
@@ -380,10 +413,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Create a virtual LCD descriptor. </p>
-<p>Virtual LCDs allow the program to draw using the LCD/canvas API without committing the pixels to the screen immediately. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Virtual LCDs allow the program to draw using the LCD/canvas API without committing the pixels to the screen immediately. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10087</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">width</td><td>Width of the virtual LCD. </td></tr>
     <tr><td class="paramname">height</td><td>Height of the virtual LCD. </td></tr>
@@ -400,6 +439,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void CursorLock </td>
@@ -408,6 +450,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Lock the cursor on the current canvas. </p>
@@ -422,6 +469,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void CursorUnock </td>
@@ -430,12 +480,84 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Unlock the cursor on the current canvas. </p>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
+
+</div>
+</div>
+<a id="adca965f3a7d9d1fceb2543b96a52dac2" name="adca965f3a7d9d1fceb2543b96a52dac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca965f3a7d9d1fceb2543b96a52dac2">&#9670;&#160;</a></span>DeleteVirtualLCD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeleteVirtualLCD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td>
+          <td class="paramname"><em>lcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dispose a previously created virtual LCD descriptor. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10088</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcd</td><td>Pointer to a virtual LCD descriptor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="a38aa2abfb190ac0a0a12249df8020ed7" name="a38aa2abfb190ac0a0a12249df8020ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38aa2abfb190ac0a0a12249df8020ed7">&#9670;&#160;</a></span>GetActiveLCD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlcd__t.html">lcd_t</a> * GetActiveLCD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current active LCD descriptor. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1008d</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The current active LCD descriptor. </dd></dl>
 
 </div>
 </div>
@@ -490,6 +612,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void GetCursorPosition </td>
@@ -509,6 +634,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the cursor position on the current canvas. </p>
@@ -529,6 +659,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int GetCursorSize </td>
@@ -537,6 +670,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the size of the cursor on the current canvas. </p>
@@ -550,6 +688,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">short GetCursorType </td>
@@ -558,12 +699,79 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the type of the cursor on the current canvas. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
+
+</div>
+</div>
+<a id="ae73f5af6932e361f5ecb50e9a6648fd9" name="ae73f5af6932e361f5ecb50e9a6648fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73f5af6932e361f5ecb50e9a6648fd9">&#9670;&#160;</a></span>GetDrawArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetDrawArea </td>
+          <td>(</td>
+          <td class="paramtype">short *&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short *&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short *&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short *&#160;</td>
+          <td class="paramname"><em>y1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the drawing area of the current active LCD. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10074</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
 
 </div>
 </div>
@@ -664,6 +872,53 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
+<a id="a4bc499fc724de87725ee7dc60ed1d106" name="a4bc499fc724de87725ee7dc60ed1d106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc499fc724de87725ee7dc60ed1d106">&#9670;&#160;</a></span>Printf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Printf </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format and draw a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>The format string. </td></tr>
+    <tr><td class="paramname">...</td><td>Any subsequent values.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
 <a id="ae2bce93898870fbfd4541135b418c85c" name="ae2bce93898870fbfd4541135b418c85c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2bce93898870fbfd4541135b418c85c">&#9670;&#160;</a></span>PrintfXY()</h2>
 
@@ -725,8 +980,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
-<a id="a98681ae3b53fbaff32dc184a11aa559e" name="a98681ae3b53fbaff32dc184a11aa559e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98681ae3b53fbaff32dc184a11aa559e">&#9670;&#160;</a></span>rgbSetBkColor()</h2>
+<a id="aa7333109cd5c46ab957287b7722a1f77" name="aa7333109cd5c46ab957287b7722a1f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7333109cd5c46ab957287b7722a1f77">&#9670;&#160;</a></span>rgbSetBkColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -735,10 +990,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void rgbSetBkColor </td>
+          <td class="memname">int rgbSetBkColor </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>rgb</em></td><td>)</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -750,19 +1005,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Set display canvas background fill color. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10067</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rgb</td><td>The integer RGB value.</td></tr>
+    <tr><td class="paramname">color</td><td>The integer RGB value representing a new color. </td></tr>
   </table>
   </dd>
 </dl>
-<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p>
+<dl class="section return"><dt>Returns</dt><dd>The integer RGB value representing the old color. </dd></dl>
 
 </div>
 </div>
-<a id="a61c187a73000a33c2ca53d8df7fe5ab0" name="a61c187a73000a33c2ca53d8df7fe5ab0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61c187a73000a33c2ca53d8df7fe5ab0">&#9670;&#160;</a></span>rgbSetColor()</h2>
+<a id="a40fa1f62900939b0b578f94dc44d8db4" name="a40fa1f62900939b0b578f94dc44d8db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40fa1f62900939b0b578f94dc44d8db4">&#9670;&#160;</a></span>rgbSetColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -771,10 +1026,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void rgbSetColor </td>
+          <td class="memname">int rgbSetColor </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>rgb</em></td><td>)</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -786,14 +1041,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Set display canvas foreground fill color. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10068</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rgb</td><td>The integer RGB value.</td></tr>
+    <tr><td class="paramname">color</td><td>The integer RGB value representing a new color. </td></tr>
   </table>
   </dd>
 </dl>
-<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p>
+<dl class="section return"><dt>Returns</dt><dd>The integer RGB value representing the old color. </dd></dl>
 
 </div>
 </div>
@@ -802,6 +1057,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ScrollDown </td>
@@ -839,15 +1097,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Move a rectangle down by <code>amount</code> pixels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels. </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels. </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels. </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels.  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -862,6 +1125,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ScrollLeft </td>
@@ -899,15 +1165,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Move a rectangle left by <code>amount</code> pixels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels. </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels. </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels. </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels.  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -922,6 +1193,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ScrollRight </td>
@@ -959,15 +1233,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Move a rectangle right by <code>amount</code> pixels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels. </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels. </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels. </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels.  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -982,6 +1261,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ScrollUp </td>
@@ -1019,15 +1301,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Move a rectangle up by <code>amount</code> pixels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels. </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels. </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels. </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels.  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -1037,11 +1324,50 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
+<a id="aa2442aa53fb420d155f16e717ad5c221" name="aa2442aa53fb420d155f16e717ad5c221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2442aa53fb420d155f16e717ad5c221">&#9670;&#160;</a></span>SetActiveLCD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlcd__t.html">lcd_t</a> * SetActiveLCD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td>
+          <td class="paramname"><em>new_lcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set an LCD descriptor as active. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1008b</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_lcd</td><td>Pointer to the new LCD descriptor. If <code>NULL</code>, only return the current active LCD descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The active LCD descriptor before <code>new_lcd</code> replaced it. </dd></dl>
+
+</div>
+</div>
 <a id="acf7d03e578762205cc22de994c368b86" name="acf7d03e578762205cc22de994c368b86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf7d03e578762205cc22de994c368b86">&#9670;&#160;</a></span>SetCursorPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SetCursorPosition </td>
@@ -1061,6 +1387,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Move the cursor position on the current canvas to the specified coordinate. </p>
@@ -1081,6 +1412,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int SetCursorSize </td>
@@ -1090,6 +1424,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the size of the cursor on the current canvas. </p>
@@ -1108,6 +1447,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">short SetCursorType </td>
@@ -1117,6 +1459,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the type of the cursor on the current canvas. </p>
@@ -1128,6 +1475,68 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The previous cursor type. </dd></dl>
+
+</div>
+</div>
+<a id="a31d78d4e6fbdfd69a372ca29c697c0f8" name="a31d78d4e6fbdfd69a372ca29c697c0f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d78d4e6fbdfd69a372ca29c697c0f8">&#9670;&#160;</a></span>SetDrawArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDrawArea </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the drawing area of the current active LCD. </p>
+<p>The new values will be rejected if they are out of bounds (specifically when <code>x0</code> or <code>x1</code> are negative or <code>x1</code> or <code>y1</code> are less than <code>x0</code> and <code>y0</code> respectively), although <code>x1</code> and <code>y1</code> will be automatically capped at the <em>physical</em> display size if they are larger than that instead of failing outright. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10073</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
 
 </div>
 </div>
@@ -1158,12 +1567,49 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Set the current font type to <code>font_type</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">font_type</td><td>The font type.</td></tr>
+    <tr><td class="paramname">font_type</td><td>The font type. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171" title="Font types.">font_type_e</a> Valid values for <code>font_type</code>.</dd></dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
+
+</div>
+</div>
+<a id="ad17969255790b1f018336f0c959dba82" name="ad17969255790b1f018336f0c959dba82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad17969255790b1f018336f0c959dba82">&#9670;&#160;</a></span>SetTransparentColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SetTransparentColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set display canvas transparent color. </p>
+<p>This color will be removed from the image and replaced with transparency effect. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10065</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The integer RGB value representing a new color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The integer RGB value representing the old color. </dd></dl>
 
 </div>
 </div>

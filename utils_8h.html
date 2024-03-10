@@ -89,11 +89,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7ca12229db87d9d2a5431f9059e304d0" id="r_a7ca12229db87d9d2a5431f9059e304d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a> ()</td></tr>
-<tr class="memdesc:a7ca12229db87d9d2a5431f9059e304d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor for the currently active framebuffer.  <br /></td></tr>
+<tr class="memdesc:a7ca12229db87d9d2a5431f9059e304d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor of the currently active LCD surface.  <br /></td></tr>
 <tr class="separator:a7ca12229db87d9d2a5431f9059e304d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a212a842a05302253aae6192eaa1ec53f" id="r_a212a842a05302253aae6192eaa1ec53f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">WarningBeep</a> ()</td></tr>
 <tr class="memdesc:a212a842a05302253aae6192eaa1ec53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker.  <br /></td></tr>
 <tr class="separator:a212a842a05302253aae6192eaa1ec53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0177719e2182806b0224224bd7a12ba" id="r_ac0177719e2182806b0224224bd7a12ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ac0177719e2182806b0224224bd7a12ba">WriteComDebugMsg</a> (char *format,...)</td></tr>
+<tr class="memdesc:ac0177719e2182806b0224224bd7a12ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and send a message to debug UART port.  <br /></td></tr>
+<tr class="separator:ac0177719e2182806b0224224bd7a12ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Miscellaneous utility syscalls. </p>
@@ -122,9 +125,17 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the descriptor for the currently active framebuffer. </p>
+<p>Get the descriptor of the currently active LCD surface. </p>
+<p>This is functionally equivalent to the following: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structlcd__surface__t.html">lcd_surface_t</a> *<a class="code hl_function" href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a>() {</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a>()-&gt;<a class="code hl_variable" href="structlcd__t.html#ac915bc7005f71b72e777cff2f722cb5d">surface</a>;</div>
+<div class="line">}</div>
+<div class="ttc" id="acanvas_8h_html_a38aa2abfb190ac0a0a12249df8020ed7"><div class="ttname"><a href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a></div><div class="ttdeci">lcd_t * GetActiveLCD()</div><div class="ttdoc">Get the current active LCD descriptor.</div></div>
+<div class="ttc" id="astructlcd__surface__t_html"><div class="ttname"><a href="structlcd__surface__t.html">lcd_surface_t</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:27</div></div>
+<div class="ttc" id="astructlcd__t_html_ac915bc7005f71b72e777cff2f722cb5d"><div class="ttname"><a href="structlcd__t.html#ac915bc7005f71b72e777cff2f722cb5d">lcd_t::surface</a></div><div class="ttdeci">lcd_surface_t * surface</div><div class="ttdoc">Surface linked to the LCD.</div><div class="ttdef"><b>Definition</b> canvas.h:167</div></div>
+<div class="ttc" id="autils_8h_html_a7ca12229db87d9d2a5431f9059e304d0"><div class="ttname"><a href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a></div><div class="ttdeci">lcd_surface_t * GetActiveVRamAddress()</div><div class="ttdoc">Get the descriptor of the currently active LCD surface.</div></div>
+</div><!-- fragment --><p> Requires <code>-lkrnllib</code> when dynamically linking with the shims.  </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x20022</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
- </p><dl class="section return"><dt>Returns</dt><dd>The framebuffer descriptor. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The LCD surface descriptor. </dd></dl>
 
 </div>
 </div>
@@ -152,7 +163,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Play a beep using the built in piezo speaker. </p>
-<p>This usually plays a 4000Hz tone for 10ms.</p>
+<p>This usually plays a 4000Hz tone for 10ms. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1009e</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -160,6 +171,55 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac0177719e2182806b0224224bd7a12ba" name="ac0177719e2182806b0224224bd7a12ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0177719e2182806b0224224bd7a12ba">&#9670;&#160;</a></span>WriteComDebugMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WriteComDebugMsg </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format and send a message to debug UART port. </p>
+<p>Supports all conversion specifiers <a class="el" href="canvas_8h.html#a4bc499fc724de87725ee7dc60ed1d106" title="Format and draw a string.">Printf()</a> and <a class="el" href="canvas_8h.html#ae2bce93898870fbfd4541135b418c85c" title="Format and draw a string aligned to the top left corner at (x, y) px.">PrintfXY()</a> supports. This internally calls an implementation of <code>vsnprintf()</code> to generate the final message. </p><dl class="section note"><dt>Note</dt><dd>This function may be stubbed on some devices and UART test point availability vary between devices. Moreover, the size of the internal buffer used by <code>vsnprintf()</code> to save formatted message might also be device-specific. On BA742 this buffer is <code>0x800</code> bytes long, with <code>0x7ff</code> bytes actually available to the formatted message. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x102a1</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>The format string. </td></tr>
+    <tr><td class="paramname">...</td><td>Any subsequent values.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
 
 </div>
 </div>

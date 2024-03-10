@@ -10,8 +10,10 @@ var searchData=
   ['db_5findex_5ffull_5fsync_7',['DB_INDEX_FULL_SYNC',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a12b9675338923bfaa19bd892942b4a6e',1,'errno.h']]],
   ['db_5fopen_5ffailed_8',['DB_OPEN_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a7555d9e53b2829fecb6402b95f5087d4',1,'errno.h']]],
   ['db_5ftoo_5fmany_5fopen_5ffiles_9',['DB_TOO_MANY_OPEN_FILES',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a99f23a399ca10332ef65938521c7e638',1,'errno.h']]],
-  ['depth_10',['depth',['../structlcd__surface__t.html#a3160429fb5ad2a65fba6418b7700b269',1,'lcd_surface_t']]],
-  ['deviceiocontrol_11',['DeviceIoControl',['../devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b',1,'devio.h']]],
-  ['devio_2eh_12',['devio.h',['../devio_8h.html',1,'']]],
-  ['dospath_13',['dospath',['../structapplet__args__v4__t.html#a76884adfcb7c6da9e0a94f40b3f0d932',1,'applet_args_v4_t']]]
+  ['deletevirtuallcd_10',['DeleteVirtualLCD',['../canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2',1,'canvas.h']]],
+  ['depth_11',['depth',['../structlcd__surface__t.html#a3160429fb5ad2a65fba6418b7700b269',1,'lcd_surface_t']]],
+  ['deviceiocontrol_12',['DeviceIoControl',['../devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b',1,'devio.h']]],
+  ['devio_2eh_13',['devio.h',['../devio_8h.html',1,'']]],
+  ['dospath_14',['dospath',['../structapplet__args__v4__t.html#a76884adfcb7c6da9e0a94f40b3f0d932',1,'applet_args_v4_t']]],
+  ['draw_15',['draw',['../structlcd__t.html#a1278f27284c7da6a6b8f88f9dba08f1c',1,'lcd_t']]]
 ];

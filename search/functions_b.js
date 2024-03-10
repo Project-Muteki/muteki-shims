@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rgbsetbkcolor_0',['rgbSetBkColor',['../canvas_8h.html#a98681ae3b53fbaff32dc184a11aa559e',1,'canvas.h']]],
-  ['rgbsetcolor_1',['rgbSetColor',['../canvas_8h.html#a61c187a73000a33c2ca53d8df7fe5ab0',1,'canvas.h']]]
+  ['rgbsetbkcolor_0',['rgbSetBkColor',['../canvas_8h.html#aa7333109cd5c46ab957287b7722a1f77',1,'canvas.h']]],
+  ['rgbsetcolor_1',['rgbSetColor',['../canvas_8h.html#a40fa1f62900939b0b578f94dc44d8db4',1,'canvas.h']]]
 ];

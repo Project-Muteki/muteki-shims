@@ -19,5 +19,6 @@ var searchData=
   ['weekday_16',['weekday',['../structdatetime__t.html#a65486e7763660a3e2787b334f941c1ae',1,'datetime_t']]],
   ['width_17',['width',['../structlcd__t.html#a4d39645c26b391f458791344d9d01004',1,'lcd_t::width'],['../structlcd__surface__t.html#a5a4ec91906c43df7ddc2d9a05b2b461c',1,'lcd_surface_t::width']]],
   ['writechar_18',['WriteChar',['../canvas_8h.html#a29721495a341c1aec1cec64333d59f51',1,'canvas.h']]],
-  ['writestring_19',['WriteString',['../canvas_8h.html#a9594c405b36da04349925bd88810c240',1,'canvas.h']]]
+  ['writecomdebugmsg_19',['WriteComDebugMsg',['../utils_8h.html#ac0177719e2182806b0224224bd7a12ba',1,'utils.h']]],
+  ['writestring_20',['WriteString',['../canvas_8h.html#a9594c405b36da04349925bd88810c240',1,'canvas.h']]]
 ];
