@@ -287,6 +287,7 @@ ALIASES                = "x_term=@snippet{doc} glossary.txt"
 ALIASES               += "x_void_param=^^@snippet{doc} glossary.txt void-param^^"
 ALIASES               += "x_void_return=^^@snippet{doc} glossary.txt void-return^^"
 ALIASES               += "x_void=^^@snippet{doc} glossary.txt void-param^^@snippet{doc} glossary.txt void-return^^"
+ALIASES               += "x_syscall_num=@par Syscall Number^^"
 
 # Set the OPTIMIZE_OUTPUT_FOR_C tag to YES if your project consists of C sources
 # only. Doxygen will then generate output that is more tailored for C. For

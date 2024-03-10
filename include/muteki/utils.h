@@ -34,6 +34,21 @@ extern lcd_surface_t *GetActiveVRamAddress();
  */
 extern bool WarningBeep();
 
+/**
+ * @brief Format and send a message to debug UART port.
+ * @details Supports all conversion specifiers Printf() and PrintfXY() supports. This internally calls an
+ * implementation of `vsnprintf()` to generate the final message.
+ * @note This function may be stubbed on some devices and UART test point availability vary between devices.
+ * Moreover, the size of the internal buffer used by `vsnprintf()` to save formatted message might also be
+ * device-specific. On BA742 this buffer is `0x800` bytes long, with `0x7ff` bytes actually available to the
+ * formatted message.
+ * @x_syscall_num `0x102a1`
+ * @param format The format string.
+ * @param ... Any subsequent values.
+ * @x_void_return
+ */
+extern void WriteComDebugMsg(char *format, ...);
+
 #ifdef __cplusplus
 } // extern "C"
 #endif
