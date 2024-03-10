@@ -222,18 +222,29 @@ enum font_type_e {
 #define RGB_FROM_U8(r, g, b) ((r & 0xff) << 16 | ((g & 0xff) << 8) | (b & 0xff))
 
 /**
- * @brief Set display canvas background fill color.
- * @param rgb The integer RGB value.
- * @x_void_return
+ * @brief Set display canvas transparent color.
+ * @details This color will be removed from the image and replaced with transparency effect.
+ * @x_syscall_num `0x10065`
+ * @param color The integer RGB value representing a new color.
+ * @return The integer RGB value representing the old color.
  */
-extern void rgbSetBkColor(int rgb);
+extern int SetTransparentColor(int color);
+
+/**
+ * @brief Set display canvas background fill color.
+ * @x_syscall_num `0x10067`
+ * @param color The integer RGB value representing a new color.
+ * @return The integer RGB value representing the old color.
+ */
+extern int rgbSetBkColor(int color);
 
 /**
  * @brief Set display canvas foreground fill color.
- * @param rgb The integer RGB value.
- * @x_void_return
+ * @x_syscall_num `0x10068`
+ * @param color The integer RGB value representing a new color.
+ * @return The integer RGB value representing the old color.
  */
-extern void rgbSetColor(int rgb);
+extern int rgbSetColor(int color);
 
 /**
  * @brief Fill the current display canvas with background color, effectively clearing it.

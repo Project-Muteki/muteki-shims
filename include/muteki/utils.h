@@ -20,15 +20,24 @@ extern "C" {
 #endif
 
 /**
- * @brief Get the descriptor for the currently active framebuffer.
+ * @brief Get the descriptor of the currently active LCD surface.
+ * @details This is functionally equivalent to the following:
+ * @code{.c}
+ * lcd_surface_t *GetActiveVRamAddress() {
+ *     return GetActiveLCD()->surface;
+ * }
+ * @endcode
+ * @x_term require-krnllib
+ * @x_syscall_num `0x20022`
  * @x_void_param
- * @return The framebuffer descriptor.
+ * @return The LCD surface descriptor.
  */ 
 extern lcd_surface_t *GetActiveVRamAddress();
 
 /**
  * @brief Play a beep using the built in piezo speaker.
  * @details This usually plays a 4000Hz tone for 10ms.
+ * @x_syscall_num `0x1009e`
  * @x_void_param
  * @retval true @x_term ok
  */
