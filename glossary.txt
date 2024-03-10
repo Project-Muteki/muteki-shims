@@ -22,6 +22,22 @@ The operation was completed successfully.
 The operation failed with error. 
 //! [ng]
 
+//! [x0]
+X coordinate of the top-left corner, in pixels.
+//! [x0]
+
+//! [x1]
+X coordinate of the bottom-right corner, in pixels.
+//! [x1]
+
+//! [y0]
+Y coordinate of the top-left corner, in pixels.
+//! [y0]
+
+//! [y1]
+Y coordinate of the bottom-right corner, in pixels.
+//! [y1]
+
 //! [void-param]
 @par Parameters
     None.

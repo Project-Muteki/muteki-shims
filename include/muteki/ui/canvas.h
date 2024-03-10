@@ -14,6 +14,7 @@
 #define __MUTEKI_UI_CANVAS_H__
 
 #include <muteki/common.h>
+#include <muteki/threading.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -66,93 +67,138 @@ typedef struct {
     void *buffer; // 16:20
 } lcd_surface_t; // 20 bytes
 
-/** Cursor struct usually embedded in LCD descriptor. */
+/**
+ * @brief Cursor struct usually embedded in LCD descriptor.
+ */
 typedef struct SYS_ALIGN(2) {
-    /** X coordinate of the cursor. */
-    short x; // 0x0:0x2
-    /** Y coordinate of the cursor. */
-    short y; // 0x2:0x4
-    /** Size of the cursor. */
-    unsigned int size; // 0x4:0x8
+    /** @brief X coordinate of the cursor. */
+    short x; // 0x0:0x2 (lcd_t[0x5c:0x5e])
+    /** @brief Y coordinate of the cursor. */
+    short y; // 0x2:0x4 (lcd_t[0x5e:0x60])
+    /** @brief Size of the cursor. */
+    unsigned int size; // 0x4:0x8 (lcd_t[0x60:0x64])
     /**
      * @brief Type of the cursor.
      * @todo Document the actual meaning of this.
      */
-    short type; // 0x8:0xa
-    /** Unknown. */
-    short unk_0xa; // 0xa:0xc
-    /** Number of times this cursor has been locked/grabbed by other code. */
-    short grab_count; // 0xc:0xe
-    /** Unknown. */
-    short unk_0xe; // 0xe:0x10
+    short type; // 0x8:0xa (lcd_t[0x64:0x66])
+    /** @brief Unknown. */
+    short unk_0xa; // 0xa:0xc (lcd_t[0x66:0x68])
+    /** @brief Number of times this cursor has been locked/grabbed by other code. */
+    short grab_count; // 0xc:0xe (lcd_t[0x68:0x6a])
+    /** @brief Unknown. */
+    short unk_0xe; // 0xe:0x10 (lcd_t[0x6a:0x6c])
 } lcd_cursor_t; // 0x10 bytes
 
-/** Rectangle used to represent usable drawing area in an LCD descriptor. */
+/**
+ * @brief Rectangle used to represent usable drawing area in an LCD descriptor.
+ */
 typedef struct {
-    /** Minimum X coordinate. */
-    short xmin;
-    /** Minimum Y coordinate. */
-    short ymin;
-    /** Maximum X coordinate. */
-    short xmax;
-    /** Maximum Y coordinate. */
-    short ymax;
-} lcd_rect_t;
+    /** @brief @x_term x0 */
+    short x0; // (lcd_t[0x6c:0x6e])
+    /** @brief @x_term y0 */
+    short y0; // (lcd_t[0x6e:0x70])
+    /** @brief @x_term x1 */
+    short x1; // (lcd_t[0x70:0x72])
+    /** @brief @x_term y1 */
+    short y1; // (lcd_t[0x72:0x74])
+} lcd_rect_t; // 0x8 bytes
+
+/**
+ * @brief Drawing routine common states.
+ */
+typedef struct {
+    /** @brief Unknown. */
+    int unk_0x0; // 0x0:0x4 (lcd_t[0x14:0x18])
+    /** @brief Current foreground color. */
+    int fg_color; // 0x4:0x8 (lcd_t[0x18:0x1c])
+    /** @brief Unknown. */
+    int unk_0x8; // 0x8:0xc (lcd_t[0x1c:0x20])
+    /** @brief Unknown. */
+    int unk_0xc; // 0xc:0x10 (lcd_t[0x20:0x24])
+    /** @brief Unknown. */
+    int unk_0x10; // 0x10:0x14 (lcd_t[0x24:0x28])
+    /** @brief Unknown. */
+    int unk_0x14; // 0x14:0x18 (lcd_t[0x28:0x2c])
+    /** @brief Unknown. */
+    int unk_0x18; // 0x18:0x1c (lcd_t[0x2c:0x30])
+    /** @brief Unknown. */
+    int unk_0x1c; // 0x1c:0x20 (lcd_t[0x30:0x34])
+} lcd_draw_t; // 0x20 bytes
+
+/**
+ * @brief Font rendering routine common states.
+ */
+typedef struct {
+    /**
+     * @brief Font type.
+     * @see font_type_e
+     */
+    short type; // 0x0:0x2 (lcd[0x34:0x36])
+    /** @brief Height of the font. */
+    short height; // 0x2:0x4 (lcd[0x36:0x38])
+    /**
+     * @brief Unknown.
+     * @details Normally the same as `height` but sometimes can be a different value. Touched by SetFontType().
+     */
+    short unk_0x4; // 0x4:0x6 (lcd[0x38:0x3a])
+    /** @brief Unknown. */
+    short unk_0x6; // 0x6:0x8 (lcd[0x3a:0x3c])
+    /** @brief Unknown. */
+    short unk_0x8; // 0x8:0xa (lcd[0x3c:0x3e])
+    /**
+     * @brief Unknown.
+     * @details Seems to be always `0x100`. Touched by SetFontType().
+     */
+    short unk_0xa; // 0xa:0xc (lcd[0x3e:0x40])
+    /**
+     * @brief Unknown.
+     * @details Seems to be always `0x801`. Touched by SetFontType().
+     */
+    short unk_0xc; // 0xc:0xe (lcd[0x40:0x42])
+    short unk_0xe[13]; // 0xe:0x28 (lcd[0x42:0x5c])
+} lcd_font_t; // 0x28 bytes
 
 /**
  * @brief The LCD descriptor.
  */
 typedef struct {
-    /** Surface linked to the LCD. */
+    /** @brief Surface linked to the LCD. */
     lcd_surface_t *surface; // 0x0:0x4
-    /** End address of the pixel/framebuffer. */
+    /** @brief End address of the pixel/framebuffer. */
     void *pixel_end; // 0x4:0x8
-    /** Total size of the pixel/framebuffer in bytes. */
+    /** @brief Total size of the pixel/framebuffer in bytes. */
     size_t pixel_size; // 0x8:0xc
-    /** Current background color. */
+    /** @brief Current background color. */
     int bg_color; // 0xc:0x10
-    /** Unknown. */
-    int unk_0x10; // 0x10:0x14
-    /** Unknown. */
-    int unk_0x14; // 0x14:0x18
-    /** Current foreground color. */
-    int fg_color; // 0x18:0x1c
-    /** Unknown. */
-    int unk_0x1c; // 0x1c:0x20
-    /** Unknown. */
-    int unk_0x20; // 0x20:0x24
-    /** Unknown. */
-    int unk_0x24; // 0x24:0x28
-    /** Unknown. */
-    int unk_0x28; // 0x28:0x2c
-    /** Unknown. */
-    int unk_0x2c; // 0x2c:0x30
-    /** Unknown. */
-    int unk_0x30; // 0x30:0x34
-    /** Unknown. */
-    int unk_0x34[10]; // 0x34:0x5c
-    /** A copy of the cursor states when the LCD descriptor was created. */
+    /** @brief Current transparent color. */
+    int transparent_color; // 0x10:0x14
+    /** @brief Per-LCD states shared by drawing routines. */
+    lcd_draw_t draw; // 0x14:0x34
+    /** @brief Per-LCD states shared by specifically font rendering routines. */
+    lcd_font_t font; // 0x34:0x5c
+    /** @brief A copy of the cursor states when the LCD descriptor was created. */
     lcd_cursor_t saved_cursor; // 0x5c:0x6c
-    /** Usable drawing area of the LCD. */
+    /** @brief Usable drawing area of the LCD. */
     lcd_rect_t rect; // 0x6c:0x74
-    /** Unknown. */
+    /** @brief Unknown. */
     int unk_0x74[3]; // 0x74:0x80
-    /** Cursor states. */
+    /** @brief Cursor states. */
     lcd_cursor_t *cursor; // 0x80:0x84
-    /** Width of the LCD in pixels. */
+    /** @brief Width of the LCD in pixels. */
     short width; // 0x84:0x86
-    /** Height of the LCD in pixels. */
+    /** @brief Height of the LCD in pixels. */
     short height; // 0x86:0x88
     // ...a version-specific section starts somewhere after this...
-    /** Unknown. */
+    /** @brief Unknown. */
     int unk_0x88[4]; // 0x88:0x98
-    /** A critical section descriptor. It's unclear where it is used. */
+    /** @brief A critical section descriptor. It's unclear where it is used. */
     critical_section_t *cs; // 0x98:0x9c
-    /** Unknown. */
+    /** @brief Unknown. */
     int unk_0x9c; // 0x9c:0xa0
-    /** Unknown. */
+    /** @brief Unknown. */
     int unk_0xa0; // 0xa0:0xa4
-    /** Unknown. */
+    /** @brief Unknown. */
     int unk_0xa4[23]; // 0xa4:0x100
 } lcd_t; // 0x100 bytes
 
@@ -274,6 +320,14 @@ extern short GetCharWidth(UTF16 c, uint8_t font_type);
 extern int GetFontHeight(uint8_t font_type);
 
 /**
+ * @brief Format and draw a string.
+ * @param format The format string.
+ * @param ... Any subsequent values.
+ * @x_void_return
+ */
+extern void Printf(char *format, ...);
+
+/**
  * @brief Format and draw a string aligned to the top left corner at (@p x, @p y) px.
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
@@ -286,6 +340,7 @@ extern void PrintfXY(short x, short y, const char *format, ...);
 /**
  * @brief Set the current font type to @p font_type.
  * @param font_type The font type.
+ * @see font_type_e Valid values for `font_type`.
  * @x_void_return
  */
 extern void SetFontType(int8_t font_type);
@@ -333,47 +388,47 @@ extern short GetMaxScrY();
 
 /**
  * @brief Move a rectangle up by `amount` pixels.
- * @param x0 X coordinate of the top-left corner, in pixels.
- * @param y0 Y coordinate of the top-left corner, in pixels.
- * @param x1 X coordinate of the bottom-right corner, in pixels.
- * @param y1 Y coordinate of the bottom-right corner, in pixels.
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
  * @param amount Amount of pixels to move.
  * @x_void_return
  */
-void ScrollUp(short x0, short y0, short x1, short y1, short amount);
+extern void ScrollUp(short x0, short y0, short x1, short y1, short amount);
 
 /**
  * @brief Move a rectangle down by `amount` pixels.
- * @param x0 X coordinate of the top-left corner, in pixels.
- * @param y0 Y coordinate of the top-left corner, in pixels.
- * @param x1 X coordinate of the bottom-right corner, in pixels.
- * @param y1 Y coordinate of the bottom-right corner, in pixels.
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
  * @param amount Amount of pixels to move.
  * @x_void_return
  */
-void ScrollDown(short x0, short y0, short x1, short y1, short amount);
+extern void ScrollDown(short x0, short y0, short x1, short y1, short amount);
 
 /**
  * @brief Move a rectangle left by `amount` pixels.
- * @param x0 X coordinate of the top-left corner, in pixels.
- * @param y0 Y coordinate of the top-left corner, in pixels.
- * @param x1 X coordinate of the bottom-right corner, in pixels.
- * @param y1 Y coordinate of the bottom-right corner, in pixels.
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
  * @param amount Amount of pixels to move.
  * @x_void_return
  */
-void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
+extern void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
 
 /**
  * @brief Move a rectangle right by `amount` pixels.
- * @param x0 X coordinate of the top-left corner, in pixels.
- * @param y0 Y coordinate of the top-left corner, in pixels.
- * @param x1 X coordinate of the bottom-right corner, in pixels.
- * @param y1 Y coordinate of the bottom-right corner, in pixels.
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
  * @param amount Amount of pixels to move.
  * @x_void_return
  */
-void ScrollRight(short x0, short y0, short x1, short y1, short amount);
+extern void ScrollRight(short x0, short y0, short x1, short y1, short amount);
 
 /**
  * @brief Get the cursor position on the current canvas.
@@ -381,7 +436,7 @@ void ScrollRight(short x0, short y0, short x1, short y1, short amount);
  * @param[out] y The y coordinate of the cursor.
  * @x_void_return
  */
-void GetCursorPosition(short *x, short *y);
+extern void GetCursorPosition(short *x, short *y);
 
 /**
  * @brief Move the cursor position on the current canvas to the specified coordinate.
@@ -389,7 +444,7 @@ void GetCursorPosition(short *x, short *y);
  * @param y The new y coordinate of the cursor.
  * @x_void_return
  */
-void SetCursorPosition(short x, short y);
+extern void SetCursorPosition(short x, short y);
 
 /**
  * @brief Get the type of the cursor on the current canvas.
@@ -397,7 +452,7 @@ void SetCursorPosition(short x, short y);
  * @x_void_param
  * @return The cursor type.
  */
-short GetCursorType();
+extern short GetCursorType();
 
 /**
  * @brief Set the type of the cursor on the current canvas.
@@ -405,45 +460,95 @@ short GetCursorType();
  * @param new_type The new cursor type.
  * @return The previous cursor type.
  */
-short SetCursorType(short new_type);
+extern short SetCursorType(short new_type);
 
 /**
  * @brief Get the size of the cursor on the current canvas.
  * @x_void_param
  * @return The cursor size.
  */
-unsigned int GetCursorSize();
+extern unsigned int GetCursorSize();
 
 /**
  * @brief Set the size of the cursor on the current canvas.
  * @param new_size The new cursor size.
  * @return The previous cursor size.
  */
-unsigned int SetCursorSize(unsigned int new_size);
+extern unsigned int SetCursorSize(unsigned int new_size);
 
 /**
  * @brief Lock the cursor on the current canvas.
  * @x_void
  */
-void CursorLock();
+extern void CursorLock();
 
 /**
  * @brief Unlock the cursor on the current canvas.
  * @x_void
  */
-void CursorUnock();
+extern void CursorUnock();
 
 /**
  * @brief Create a virtual LCD descriptor.
  * @details Virtual LCDs allow the program to draw using the LCD/canvas API without committing the pixels to the screen
  * immediately.
+ * @x_syscall_num `0x10087`
  * @param width Width of the virtual LCD.
  * @param height Height of the virtual LCD.
  * @param width_bytes If set to a value larger than the value calculated from `width`, the pixel buffer will be
  * allocated according to this value instead (i.e. `width_bytes * height`).
  * @return The virtual LCD descriptor.
  */
-lcd_t *CreateVirtualLCD(short width, short height, short width_bytes);
+extern lcd_t *CreateVirtualLCD(short width, short height, short width_bytes);
+
+/**
+ * @brief Dispose a previously created virtual LCD descriptor.
+ * @x_syscall_num `0x10088`
+ * @param lcd Pointer to a virtual LCD descriptor.
+ * @x_void_return
+ */
+extern void DeleteVirtualLCD(lcd_t *lcd);
+
+/**
+ * @brief Set an LCD descriptor as active.
+ * @x_syscall_num `0x1008b`
+ * @param new_lcd Pointer to the new LCD descriptor. If `NULL`, only return the current active LCD descriptor.
+ * @return The active LCD descriptor before `new_lcd` replaced it.
+ */
+extern lcd_t *SetActiveLCD(lcd_t *new_lcd);
+
+/**
+ * @brief Get the current active LCD descriptor.
+ * @x_syscall_num `0x1008d`
+ * @x_void_param
+ * @return The current active LCD descriptor.
+ */
+extern lcd_t *GetActiveLCD();
+
+/**
+ * @brief Set the drawing area of the current active LCD.
+ * @details The new values will be rejected if they are out of bounds (specifically when `x0` or `x1` are negative or
+ * `x1` or `y1` are less than `x0` and `y0` respectively), although `x1` and `y1` will be automatically capped at the
+ * *physical* display size if they are larger than that instead of failing outright.
+ * @x_syscall_num `0x10073`
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
+ * @x_void_return
+ */
+extern void SetDrawArea(short x0, short y0, short x1, short y1);
+
+/**
+ * @brief Get the drawing area of the current active LCD.
+ * @x_syscall_num `0x10074`
+ * @param[out] x0 @x_term x0
+ * @param[out] y0 @x_term y0
+ * @param[out] x1 @x_term x1
+ * @param[out] y1 @x_term y1
+ * @x_void_return
+ */
+extern void GetDrawArea(short *x0, short *y0, short *x1, short *y1);
 
 #ifdef __cplusplus
 } // extern "C"
