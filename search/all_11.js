@@ -21,6 +21,6 @@ var searchData=
   ['threading_5fwaitable_5ft_18',['threading_waitable_t',['../structthreading__waitable__t.html',1,'']]],
   ['timer1_5fcallback_5ft_19',['timer1_callback_t',['../system_8h.html#aa7a435c8a2cda84eaef92144c9ba0798',1,'system.h']]],
   ['todo_20list_20',['Todo List',['../todo.html',1,'']]],
-  ['transparent_5fcolor_21',['transparent_color',['../structlcd__t.html#a429d0c78d2b1254b64030c574c838974',1,'lcd_t']]],
+  ['transparent_5fcolor_21',['transparent_color',['../structlcd__s.html#a00bab978e256b2a17e96820a130087af',1,'lcd_s']]],
   ['type_22',['type',['../structlcd__font__t.html#a97495f197e07c2495766ef63726f5c45',1,'lcd_font_t::type'],['../structlcd__cursor__t.html#ae740d44314e5aafa4e544803268bc115',1,'lcd_cursor_t::type']]]
 ];

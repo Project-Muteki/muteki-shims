@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki-shims: Globals</title>
+<title>muteki-shims: lcd_thread_safe_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,19 +67,35 @@ $(function() {
 </div>
 </div>
 
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">lcd_thread_safe_t Struct Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented functions, variables, defines, enums, and typedefs with links to the documentation:</div>
 
-<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
-<li>ClearAllEvents()&#160;:&#160;<a class="el" href="event_8h.html#a2ffd8f47dae072b34d94f6ec43dde598">event.h</a></li>
-<li>ClearScreen()&#160;:&#160;<a class="el" href="canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692">canvas.h</a></li>
-<li>CloseHandle()&#160;:&#160;<a class="el" href="devio_8h.html#afd675a81da99d1a03d218aa08caf16a6">devio.h</a></li>
-<li>CreateCompatibleLCD()&#160;:&#160;<a class="el" href="canvas_8h.html#ae8d53e141ab966cba778a9b9be545331">canvas.h</a></li>
-<li>CreateFile()&#160;:&#160;<a class="el" href="devio_8h.html#a6122359c7991a099f3e30c92338affb8">devio.h</a></li>
-<li>CreateVirtualLCD()&#160;:&#160;<a class="el" href="canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011">canvas.h</a></li>
-<li>critical_section_t&#160;:&#160;<a class="el" href="threading_8h.html#a07c0d1458ed0f242cff7024401856fdc">threading.h</a></li>
-<li>CursorLock()&#160;:&#160;<a class="el" href="canvas_8h.html#a6b82197758044bd6b4f728adadb1e481">canvas.h</a></li>
-<li>CursorUnock()&#160;:&#160;<a class="el" href="canvas_8h.html#a83fb9bd1df11fb75ad36fd154c76dcaa">canvas.h</a></li>
+<p>A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.  
+ <a href="structlcd__thread__safe__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="canvas_8h_source.html">canvas.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a8bf394554afd9c5ddcd82471c3e7ccbe" id="r_a8bf394554afd9c5ddcd82471c3e7ccbe"><td class="memItemLeft" align="right" valign="top"><a id="a8bf394554afd9c5ddcd82471c3e7ccbe" name="a8bf394554afd9c5ddcd82471c3e7ccbe"></a>
+<a class="el" href="structlcd__s.html">lcd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd</b></td></tr>
+<tr class="memdesc:a8bf394554afd9c5ddcd82471c3e7ccbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The common part of the original LCD descriptor. <br /></td></tr>
+<tr class="separator:a8bf394554afd9c5ddcd82471c3e7ccbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ecbd1cae3a2bc3466637ea3abb6708" id="r_af6ecbd1cae3a2bc3466637ea3abb6708"><td class="memItemLeft" align="right" valign="top"><a id="af6ecbd1cae3a2bc3466637ea3abb6708" name="af6ecbd1cae3a2bc3466637ea3abb6708"></a>
+<a class="el" href="structlcd__lock__t.html">lcd_lock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lock</b></td></tr>
+<tr class="memdesc:af6ecbd1cae3a2bc3466637ea3abb6708"><td class="mdescLeft">&#160;</td><td class="mdescRight">The added part. <br /></td></tr>
+<tr class="separator:af6ecbd1cae3a2bc3466637ea3abb6708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS. </p>
+<p>Cast lcd_t to this to access the extra fields if the data exists. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/muteki/ui/<a class="el" href="canvas_8h_source.html">canvas.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

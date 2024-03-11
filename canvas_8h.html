@@ -76,6 +76,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">canvas.h File Reference</div></div>
@@ -95,7 +96,7 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor of an LCD drawing surface or hardware framebuffer.  <a href="structlcd__surface__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__cursor__t.html">lcd_cursor_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor struct usually embedded in LCD descriptor.  <a href="structlcd__cursor__t.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor states usually linked to an LCD descriptor.  <a href="structlcd__cursor__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__rect__t.html">lcd_rect_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectangle used to represent usable drawing area in an LCD descriptor.  <a href="structlcd__rect__t.html#details">More...</a><br /></td></tr>
@@ -106,8 +107,14 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__font__t.html">lcd_font_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font rendering routine common states.  <a href="structlcd__font__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__t.html">lcd_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LCD descriptor.  <a href="structlcd__t.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__lock__t.html">lcd_lock_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An extended part of the LCD descriptor that implements descriptor locking.  <a href="structlcd__lock__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__s.html">lcd_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LCD descriptor.  <a href="structlcd__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__thread__safe__t.html">lcd_thread_safe_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.  <a href="structlcd__thread__safe__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -115,6 +122,15 @@ Macros</h2></td></tr>
 <tr class="memitem:a1d12e70227ae6a8e9e465d42a4de14bf" id="r_a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf">RGB_FROM_U8</a>(r,  g,  b)&#160;&#160;&#160;((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</td></tr>
 <tr class="memdesc:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert separate RGB values to integer RGB representation.  <br /></td></tr>
 <tr class="separator:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ab5d59276663ba11284c84cb7dcc915cf" id="r_ab5d59276663ba11284c84cb7dcc915cf"><td class="memItemLeft" align="right" valign="top"><a id="ab5d59276663ba11284c84cb7dcc915cf" name="ab5d59276663ba11284c84cb7dcc915cf"></a>
+typedef struct <a class="el" href="structlcd__s.html">lcd_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_t</b></td></tr>
+<tr class="separator:ab5d59276663ba11284c84cb7dcc915cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef9e48cde5ff06441262c36e162fba5" id="r_a7ef9e48cde5ff06441262c36e162fba5"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a7ef9e48cde5ff06441262c36e162fba5">lcd_rotate_callback_t</a>) (<a class="el" href="structlcd__s.html">lcd_t</a> *self, int rotation)</td></tr>
+<tr class="memdesc:a7ef9e48cde5ff06441262c36e162fba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback type for handling canvas rotation.  <br /></td></tr>
+<tr class="separator:a7ef9e48cde5ff06441262c36e162fba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -250,16 +266,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:a83fb9bd1df11fb75ad36fd154c76dcaa" id="r_a83fb9bd1df11fb75ad36fd154c76dcaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a83fb9bd1df11fb75ad36fd154c76dcaa">CursorUnock</a> ()</td></tr>
 <tr class="memdesc:a83fb9bd1df11fb75ad36fd154c76dcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the cursor on the current canvas.  <br /></td></tr>
 <tr class="separator:a83fb9bd1df11fb75ad36fd154c76dcaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3b6119a8df2456843fc8e1a41030011" id="r_ab3b6119a8df2456843fc8e1a41030011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011">CreateVirtualLCD</a> (short width, short height, short width_bytes)</td></tr>
+<tr class="memitem:ab3b6119a8df2456843fc8e1a41030011" id="r_ab3b6119a8df2456843fc8e1a41030011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011">CreateVirtualLCD</a> (short width, short height, short width_bytes)</td></tr>
 <tr class="memdesc:ab3b6119a8df2456843fc8e1a41030011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a virtual LCD descriptor.  <br /></td></tr>
 <tr class="separator:ab3b6119a8df2456843fc8e1a41030011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca965f3a7d9d1fceb2543b96a52dac2" id="r_adca965f3a7d9d1fceb2543b96a52dac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2">DeleteVirtualLCD</a> (<a class="el" href="structlcd__t.html">lcd_t</a> *lcd)</td></tr>
+<tr class="memitem:adca965f3a7d9d1fceb2543b96a52dac2" id="r_adca965f3a7d9d1fceb2543b96a52dac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2">DeleteVirtualLCD</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *lcd)</td></tr>
 <tr class="memdesc:adca965f3a7d9d1fceb2543b96a52dac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose a previously created virtual LCD descriptor.  <br /></td></tr>
 <tr class="separator:adca965f3a7d9d1fceb2543b96a52dac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2442aa53fb420d155f16e717ad5c221" id="r_aa2442aa53fb420d155f16e717ad5c221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa2442aa53fb420d155f16e717ad5c221">SetActiveLCD</a> (<a class="el" href="structlcd__t.html">lcd_t</a> *new_lcd)</td></tr>
+<tr class="memitem:aa2442aa53fb420d155f16e717ad5c221" id="r_aa2442aa53fb420d155f16e717ad5c221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa2442aa53fb420d155f16e717ad5c221">SetActiveLCD</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *new_lcd)</td></tr>
 <tr class="memdesc:aa2442aa53fb420d155f16e717ad5c221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an LCD descriptor as active.  <br /></td></tr>
 <tr class="separator:aa2442aa53fb420d155f16e717ad5c221"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38aa2abfb190ac0a0a12249df8020ed7" id="r_a38aa2abfb190ac0a0a12249df8020ed7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a> ()</td></tr>
+<tr class="memitem:a38aa2abfb190ac0a0a12249df8020ed7" id="r_a38aa2abfb190ac0a0a12249df8020ed7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a> ()</td></tr>
 <tr class="memdesc:a38aa2abfb190ac0a0a12249df8020ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current active LCD descriptor.  <br /></td></tr>
 <tr class="separator:a38aa2abfb190ac0a0a12249df8020ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31d78d4e6fbdfd69a372ca29c697c0f8" id="r_a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a31d78d4e6fbdfd69a372ca29c697c0f8">SetDrawArea</a> (short x0, short y0, short x1, short y1)</td></tr>
@@ -268,6 +284,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:ae73f5af6932e361f5ecb50e9a6648fd9" id="r_ae73f5af6932e361f5ecb50e9a6648fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae73f5af6932e361f5ecb50e9a6648fd9">GetDrawArea</a> (short *x0, short *y0, short *x1, short *y1)</td></tr>
 <tr class="memdesc:ae73f5af6932e361f5ecb50e9a6648fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the drawing area of the current active LCD.  <br /></td></tr>
 <tr class="separator:ae73f5af6932e361f5ecb50e9a6648fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d53e141ab966cba778a9b9be545331" id="r_ae8d53e141ab966cba778a9b9be545331"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae8d53e141ab966cba778a9b9be545331">CreateCompatibleLCD</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *source)</td></tr>
+<tr class="memdesc:ae8d53e141ab966cba778a9b9be545331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an LCD descriptor (excluding surface).  <br /></td></tr>
+<tr class="separator:ae8d53e141ab966cba778a9b9be545331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea8e6ecb6c78f8721e204851174f7ba" id="r_a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba">SetDCObject</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *lcd, <a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *new_surface)</td></tr>
+<tr class="memdesc:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link a surface (device context) to an LCD descriptor.  <br /></td></tr>
+<tr class="separator:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Display canvas (LCD) API. </p>
@@ -314,6 +336,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a7ef9e48cde5ff06441262c36e162fba5" name="a7ef9e48cde5ff06441262c36e162fba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef9e48cde5ff06441262c36e162fba5">&#9670;&#160;</a></span>lcd_rotate_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* lcd_rotate_callback_t) (<a class="el" href="structlcd__s.html">lcd_t</a> *self, int rotation)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback type for handling canvas rotation. </p>
+<p>When <code>rotation</code> is set to <code>0xfe</code>, the current rotation value will be returned with no side effect. When <code>rotation</code> is set to <code>0xff</code>, the canvas will rotate based on <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>The LCD descriptor this was called from. </td></tr>
+    <tr><td class="paramname">rotation</td><td>New rotation. This value will be written to <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> and this callback will be called recursively with <code>0xff</code> as the rotation value to actually apply the change. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Current rotation value in effect. This will be the same as <code>rotation</code> when no magic value documented above was used. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> </dd></dl>
 
 </div>
 </div>
@@ -380,6 +428,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
+<a id="ae8d53e141ab966cba778a9b9be545331" name="ae8d53e141ab966cba778a9b9be545331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d53e141ab966cba778a9b9be545331">&#9670;&#160;</a></span>CreateCompatibleLCD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlcd__s.html">lcd_t</a> * CreateCompatibleLCD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy an LCD descriptor (excluding surface). </p>
+<p>This function allocates a new LCD descriptor and copies everything from the source descriptor to the new one. The new descriptor will not be linked to the source descriptor's <a class="el" href="structlcd__s.html#ade3b9e5707e643ab6496affe332b1989" title="Surface linked to the LCD.">lcd_t::surface</a>, and <a class="el" href="structlcd__s.html#aa7295b5df6abae8fefdbcc25d363b034" title="A copy of the cursor states when the LCD descriptor was created.">lcd_t::saved_cursor</a> will be updated to the latest cursor states assigned to the current active LCD descriptor. If the target platform supports LCD descriptor locking, a new critical section object will be created for the new descriptor. </p><dl class="section warning"><dt>Warning</dt><dd>The new descriptor will not have any surface linked to it by default. It is required to manually link a surface to it with e.g. <a class="el" href="canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba" title="Link a surface (device context) to an LCD descriptor.">SetDCObject()</a> before using it to draw or things will break! </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1008e</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The source LCD descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new LCD descriptor copied from the source descriptor. </dd></dl>
+
+</div>
+</div>
 <a id="ab3b6119a8df2456843fc8e1a41030011" name="ab3b6119a8df2456843fc8e1a41030011"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3b6119a8df2456843fc8e1a41030011">&#9670;&#160;</a></span>CreateVirtualLCD()</h2>
 
@@ -390,7 +475,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structlcd__t.html">lcd_t</a> * CreateVirtualLCD </td>
+          <td class="memname"><a class="el" href="structlcd__s.html">lcd_t</a> * CreateVirtualLCD </td>
           <td>(</td>
           <td class="paramtype">short&#160;</td>
           <td class="paramname"><em>width</em>, </td>
@@ -506,7 +591,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
         <tr>
           <td class="memname">void DeleteVirtualLCD </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td>
           <td class="paramname"><em>lcd</em></td><td>)</td>
           <td></td>
         </tr>
@@ -541,7 +626,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structlcd__t.html">lcd_t</a> * GetActiveLCD </td>
+          <td class="memname"><a class="el" href="structlcd__s.html">lcd_t</a> * GetActiveLCD </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -707,7 +792,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Get the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
 
@@ -1334,9 +1419,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structlcd__t.html">lcd_t</a> * SetActiveLCD </td>
+          <td class="memname"><a class="el" href="structlcd__s.html">lcd_t</a> * SetActiveLCD </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structlcd__t.html">lcd_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td>
           <td class="paramname"><em>new_lcd</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1467,7 +1552,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Set the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_type</td><td>The new cursor type. </td></tr>
@@ -1475,6 +1560,55 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The previous cursor type. </dd></dl>
+
+</div>
+</div>
+<a id="a8ea8e6ecb6c78f8721e204851174f7ba" name="a8ea8e6ecb6c78f8721e204851174f7ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea8e6ecb6c78f8721e204851174f7ba">&#9670;&#160;</a></span>SetDCObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> * SetDCObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td>
+          <td class="paramname"><em>lcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
+          <td class="paramname"><em>new_surface</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Link a surface (device context) to an LCD descriptor. </p>
+<p>The drawing area <a class="el" href="structlcd__s.html#ae05b7cc55813d8b9724a26af9621e8b3" title="Usable drawing area of the LCD.">lcd_t::drawing_area</a> will also be reset to cover the entire surface.</p>
+<p>If the display is portrait as indicated by the <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> value, the LCD descriptor's width/height fields will be updated to reflect the dimension shown to the user (i.e. swap width and height).</p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10093</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcd</td><td>The LCD descriptor. </td></tr>
+    <tr><td class="paramname">new_surface</td><td>The descriptor of the new surface to be linked to <code>lcd</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The descriptor of the surface previously linked to <code>lcd</code>. </dd></dl>
 
 </div>
 </div>

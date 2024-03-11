@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['saved_5fcursor_0',['saved_cursor',['../structlcd__t.html#ae6751d1983d43ec776e75e50489fe24e',1,'lcd_t']]],
+  ['saved_5fcursor_0',['saved_cursor',['../structlcd__s.html#aa7295b5df6abae8fefdbcc25d363b034',1,'lcd_s']]],
   ['second_1',['second',['../structdatetime__t.html#a6e882ba06a6047a1e494203e9e09594b',1,'datetime_t']]],
   ['size_2',['size',['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t::size'],['../structfs__stat__t.html#a1cf64bba642348e5eb10305141d5931b',1,'fs_stat_t::size'],['../structmessage__queue__nonatomic__t.html#a7b448a0c95fa58f12b0acf0ab41d2f32',1,'message_queue_nonatomic_t::size'],['../structlcd__cursor__t.html#aba3d4fd0071c9529e14e155343c882ae',1,'lcd_cursor_t::size']]],
   ['size2_3',['size2',['../structfs__stat__t.html#ab03c03a62dae55ba0473e33937d84701',1,'fs_stat_t']]],
@@ -20,5 +20,5 @@ var searchData=
   ['stack_17',['stack',['../structthread__s.html#a28d2fca44aaeb67e49ba4003631d62ad',1,'thread_s']]],
   ['storage_18',['storage',['../structmessage__queue__s.html#a81f660bf62dff23628c6887e9161e303',1,'message_queue_s']]],
   ['subroutine_19',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
-  ['surface_20',['surface',['../structlcd__t.html#ac915bc7005f71b72e777cff2f722cb5d',1,'lcd_t']]]
+  ['surface_20',['surface',['../structlcd__s.html#ade3b9e5707e643ab6496affe332b1989',1,'lcd_s']]]
 ];

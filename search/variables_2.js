@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cs_0',['cs',['../structlcd__t.html#a336d606c2a02d2922087e7f9800520de',1,'lcd_t']]],
+  ['cs_0',['cs',['../structlcd__lock__t.html#a51fb701eb3ffb335c5746ab45adf9978',1,'lcd_lock_t']]],
   ['ctr_1',['ctr',['../structsemaphore__s.html#a063ba0ee7ba3e28d83b8320240439860',1,'semaphore_s']]],
-  ['cursor_2',['cursor',['../structlcd__t.html#a803dda20b1e49d1cb48215aa5135bb9b',1,'lcd_t']]]
+  ['cursor_2',['cursor',['../structlcd__s.html#a94f82e769e382d51df9b20fce275034a',1,'lcd_s']]]
 ];

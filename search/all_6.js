@@ -13,7 +13,7 @@ var searchData=
   ['find_5fts_5fsecond_10',['FIND_TS_SECOND',['../fs_8h.html#a214672671b2f6a1bca9481f25b07b65a',1,'fs.h']]],
   ['find_5fts_5fyear_11',['FIND_TS_YEAR',['../fs_8h.html#a2c2cfbb03e319776b36d0b1169a83f54',1,'fs.h']]],
   ['flag_12',['flag',['../structevent__s.html#a53643386d8c1a657984760eca581503c',1,'event_s']]],
-  ['font_13',['font',['../structlcd__t.html#ae3c8e7f7af2deb2cffd2621d5bd2d25c',1,'lcd_t']]],
+  ['font_13',['font',['../structlcd__s.html#a8a29c336b0f07856e827df7ce77895ac',1,'lcd_s']]],
   ['font_5ftype_5fe_14',['font_type_e',['../canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171',1,'canvas.h']]],
   ['format_5fmessage_5fallocate_5fbuffer_15',['FORMAT_MESSAGE_ALLOCATE_BUFFER',['../errno_8h.html#a4bae49c902f4defacf7ee87d5795c63eaed3a296c165725958259bdd1a05837c1',1,'errno.h']]],
   ['format_5fmessage_5ffrom_5fsystem_16',['FORMAT_MESSAGE_FROM_SYSTEM',['../errno_8h.html#a4bae49c902f4defacf7ee87d5795c63ead54ca142029e50123af573e07a0bc3b9',1,'errno.h']]],
