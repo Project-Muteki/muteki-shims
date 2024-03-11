@@ -33,27 +33,27 @@ typedef struct {
     /**
      * @brief Width of the framebuffer.
      */
-    unsigned short width; // 2:4
+    short width; // 2:4
     /**
      * @brief Height of the framebuffer.
      */
-    unsigned short height; // 4:6
+    short height; // 4:6
     /**
      * @brief Depth of the color in bits.
      * @details 32 for RGBA, 4 for 16 color grayscale. Could be other values depending on the platform and the display
      * it uses.
      */
-    unsigned short depth; // 6:8
+    short depth; // 6:8
     /**
      * @brief Pixel row size in bytes.
      * @details This is usually 4-bytes aligned.
      */
-    unsigned short xsize; // 8:10
+    short xsize; // 8:10
     /**
      * @brief Purpose unknown.
      * @details Seems to be always 0x2.
      */
-    unsigned short unk_0xa; // 10:12
+    short unk_0xa; // 10:12
     /**
      * @brief Palette used to pack RGBA color into pixels.
      * @details Probably only make sense when using pixfmt other than RGBA (i.e. depth of 32). It should be NULL in
@@ -68,7 +68,7 @@ typedef struct {
 } lcd_surface_t; // 20 bytes
 
 /**
- * @brief Cursor struct usually embedded in LCD descriptor.
+ * @brief Cursor states usually linked to an LCD descriptor.
  */
 typedef struct SYS_ALIGN(2) {
     /** @brief X coordinate of the cursor. */
@@ -160,9 +160,43 @@ typedef struct {
 } lcd_font_t; // 0x28 bytes
 
 /**
- * @brief The LCD descriptor.
+ * @brief An extended part of the LCD descriptor that implements descriptor locking.
+ * @details This may not be present on all versions of Besta RTOS. It's confirmed to exist on BA742 but not BA110.
+ * @todo Get a better picture of which systems have this and which do not.
  */
 typedef struct {
+    /** @brief Unknown. */
+    int unk_0x0; // 0x0:0x4 (lcd_thread_safe_t[0x94:0x98])
+    /** @brief A critical section descriptor. It's unclear where it is used. */
+    critical_section_t *cs; // 0x4:0x8 (lcd_thread_safe_t[0x98:0x9c])
+    /** @brief Shortcut to lock the descriptor. */
+    void (*lock)(); // 0x8:0xc (lcd_thread_safe_t[0x9c:0xa0])
+     /** @brief Shortcut to unlock the descriptor. */
+    void (*unlock)(); // 0xc:0x10 (lcd_thread_safe_t[0xa0:0xa4])
+    /** @brief Unknown. */
+    int unk_0xa4[23]; // 0x10:0x6c (lcd_thread_safe_t[0xa4:0x100])
+} lcd_lock_t; // 0x6c bytes
+
+struct lcd_s;
+typedef struct lcd_s lcd_t;
+
+/**
+ * @brief Callback type for handling canvas rotation.
+ * @details When `rotation` is set to `0xfe`, the current rotation value will be returned with no side effect.
+ * When `rotation` is set to `0xff`, the canvas will rotate based on lcd_t::rotation.
+ * @param self The LCD descriptor this was called from.
+ * @param rotation New rotation. This value will be written to lcd_t::rotation and this callback will be called
+ * recursively with `0xff` as the rotation value to actually apply the change.
+ * @return Current rotation value in effect. This will be the same as `rotation` when no magic value documented above
+ * was used.
+ * @see lcd_t::rotation
+ */
+typedef int (*lcd_rotate_callback_t)(lcd_t *self, int rotation);
+
+/**
+ * @brief The LCD descriptor.
+ */
+struct lcd_s {
     /** @brief Surface linked to the LCD. */
     lcd_surface_t *surface; // 0x0:0x4
     /** @brief End address of the pixel/framebuffer. */
@@ -180,7 +214,7 @@ typedef struct {
     /** @brief A copy of the cursor states when the LCD descriptor was created. */
     lcd_cursor_t saved_cursor; // 0x5c:0x6c
     /** @brief Usable drawing area of the LCD. */
-    lcd_rect_t rect; // 0x6c:0x74
+    lcd_rect_t drawing_area; // 0x6c:0x74
     /** @brief Unknown. */
     int unk_0x74[3]; // 0x74:0x80
     /** @brief Cursor states. */
@@ -189,18 +223,39 @@ typedef struct {
     short width; // 0x84:0x86
     /** @brief Height of the LCD in pixels. */
     short height; // 0x86:0x88
-    // ...a version-specific section starts somewhere after this...
-    /** @brief Unknown. */
-    int unk_0x88[4]; // 0x88:0x98
-    /** @brief A critical section descriptor. It's unclear where it is used. */
-    critical_section_t *cs; // 0x98:0x9c
-    /** @brief Unknown. */
-    int unk_0x9c; // 0x9c:0xa0
-    /** @brief Unknown. */
-    int unk_0xa0; // 0xa0:0xa4
-    /** @brief Unknown. */
-    int unk_0xa4[23]; // 0xa4:0x100
-} lcd_t; // 0x100 bytes
+    /**
+     * @brief Current canvas rotation.
+     * @details The value is `90deg * rotation` **counter-clockwise**.
+     */
+    int rotation; // 0x88:0x8c
+    /**
+     * @brief Integer size of each pixel in bytes.
+     * @note This will be 0 when a pixel takes less than a byte.
+     * @todo Verify.
+     */
+    short depth_bytes; // 0x8c:0x8e
+    /**
+     * @brief Pixel row size in bytes.
+     * @todo Verify.
+     */
+    short xsize; // 0x8e:0x90
+    /**
+     * @brief Rotation callback.
+     * @see lcd_rotate_callback_t
+     */
+    lcd_rotate_callback_t rotate; // 0x90:0x94
+}; // 0x94 bytes
+
+/**
+ * @brief A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.
+ * @details Cast lcd_t to this to access the extra fields if the data exists.
+ */
+typedef struct {
+    /** @brief The common part of the original LCD descriptor. */
+    lcd_t lcd; // 0x0:0x94
+    /** @brief The added part. */
+    lcd_lock_t lock; // 0x94:0x100
+} lcd_thread_safe_t; // 0x100 bytes
 
 /**
  * @brief Font types.
@@ -549,6 +604,35 @@ extern void SetDrawArea(short x0, short y0, short x1, short y1);
  * @x_void_return
  */
 extern void GetDrawArea(short *x0, short *y0, short *x1, short *y1);
+
+/**
+ * @brief Copy an LCD descriptor (excluding surface).
+ * @details This function allocates a new LCD descriptor and copies everything from the source descriptor to the new
+ * one. The new descriptor will not be linked to the source descriptor's lcd_t::surface, and lcd_t::saved_cursor
+ * will be updated to the latest cursor states assigned to the current active LCD descriptor. If the target platform
+ * supports LCD descriptor locking, a new critical section object will be created for the new descriptor.
+ * @warning The new descriptor will not have any surface linked to it by default. It is required to manually link a
+ * surface to it with e.g. SetDCObject() before using it to draw or things will break!
+ * @x_syscall_num `0x1008e`
+ * @param source The source LCD descriptor.
+ * @return The new LCD descriptor copied from the source descriptor.
+ */
+extern lcd_t *CreateCompatibleLCD(lcd_t *source);
+
+/**
+ * @brief Link a surface (device context) to an LCD descriptor.
+ * @details
+ * The drawing area lcd_t::drawing_area will also be reset to cover the entire surface.
+ *
+ * If the display is portrait as indicated by the lcd_t::rotation value, the LCD descriptor's width/height fields will
+ * be updated to reflect the dimension shown to the user (i.e. swap width and height).
+ *
+ * @x_syscall_num `0x10093`
+ * @param lcd The LCD descriptor.
+ * @param new_surface The descriptor of the new surface to be linked to `lcd`.
+ * @return The descriptor of the surface previously linked to `lcd`.
+ */
+extern lcd_surface_t *SetDCObject(lcd_t *lcd, lcd_surface_t *new_surface);
 
 #ifdef __cplusplus
 } // extern "C"
