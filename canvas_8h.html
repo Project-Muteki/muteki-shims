@@ -200,9 +200,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac98bb3e2b7bdb7654679de8a70fc9692" id="r_ac98bb3e2b7bdb7654679de8a70fc9692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692">ClearScreen</a> (bool fill_with_fg)</td></tr>
 <tr class="memdesc:ac98bb3e2b7bdb7654679de8a70fc9692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the current display canvas with background color, effectively clearing it.  <br /></td></tr>
 <tr class="separator:ac98bb3e2b7bdb7654679de8a70fc9692"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdee011bb342aea883b9c175278d0865" id="r_acdee011bb342aea883b9c175278d0865"><td class="memItemLeft" align="right" valign="top"><a id="acdee011bb342aea883b9c175278d0865" name="acdee011bb342aea883b9c175278d0865"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> (short x, short y, const char *msg, uint16_t max_width)</td></tr>
-<tr class="separator:acdee011bb342aea883b9c175278d0865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe57214ec5e5a287abeb1c5be82f8765" id="r_afe57214ec5e5a287abeb1c5be82f8765"><td class="memItemLeft" align="right" valign="top"><a id="afe57214ec5e5a287abeb1c5be82f8765" name="afe57214ec5e5a287abeb1c5be82f8765"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> (short x, short y, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *msg, short max_width)</td></tr>
+<tr class="separator:afe57214ec5e5a287abeb1c5be82f8765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eddaf1d5fdc62b53e63bf3fcb53c09b" id="r_a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b">GetCharWidth</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, uint8_t font_type)</td></tr>
 <tr class="memdesc:a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the character <code>c</code> used in <code>font_type</code>.  <br /></td></tr>
 <tr class="separator:a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,16 +213,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memdesc:a4bc499fc724de87725ee7dc60ed1d106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string.  <br /></td></tr>
 <tr class="separator:a4bc499fc724de87725ee7dc60ed1d106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2bce93898870fbfd4541135b418c85c" id="r_ae2bce93898870fbfd4541135b418c85c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae2bce93898870fbfd4541135b418c85c">PrintfXY</a> (short x, short y, const char *format,...)</td></tr>
-<tr class="memdesc:ae2bce93898870fbfd4541135b418c85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string aligned to the top left corner at (<code>x</code>, <code>y</code>) px.  <br /></td></tr>
+<tr class="memdesc:ae2bce93898870fbfd4541135b418c85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string aligned to the top left corner at <code>(x, y)</code> px.  <br /></td></tr>
 <tr class="separator:ae2bce93898870fbfd4541135b418c85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04239638c97cb1c6a52bb11f22223862" id="r_a04239638c97cb1c6a52bb11f22223862"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a04239638c97cb1c6a52bb11f22223862">SizeofGraphic</a> (<a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface)</td></tr>
+<tr class="memdesc:a04239638c97cb1c6a52bb11f22223862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the total on-memory size of a surface (including descriptor).  <br /></td></tr>
+<tr class="separator:a04239638c97cb1c6a52bb11f22223862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae983d7fa372d0a7612b98b400aae8bfc" id="r_ae983d7fa372d0a7612b98b400aae8bfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae983d7fa372d0a7612b98b400aae8bfc">InitGraphic</a> (<a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface, short width, short height, short depth)</td></tr>
+<tr class="memdesc:ae983d7fa372d0a7612b98b400aae8bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a buffer as an all-in-one surface.  <br /></td></tr>
+<tr class="separator:ae983d7fa372d0a7612b98b400aae8bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0afef972be2eba019a7f69f3670fd3d" id="r_aa0afef972be2eba019a7f69f3670fd3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa0afef972be2eba019a7f69f3670fd3d">SetFontType</a> (int8_t font_type)</td></tr>
 <tr class="memdesc:aa0afef972be2eba019a7f69f3670fd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current font type to <code>font_type</code>.  <br /></td></tr>
 <tr class="separator:aa0afef972be2eba019a7f69f3670fd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29721495a341c1aec1cec64333d59f51" id="r_a29721495a341c1aec1cec64333d59f51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a29721495a341c1aec1cec64333d59f51">WriteChar</a> (short x, short y, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, bool invert)</td></tr>
-<tr class="memdesc:a29721495a341c1aec1cec64333d59f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a character <code>c</code> aligned to the top left corner at (<code>x</code>, <code>y</code>) px.  <br /></td></tr>
+<tr class="memdesc:a29721495a341c1aec1cec64333d59f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a character <code>c</code> aligned to the top left corner at <code>(x, y)</code> px.  <br /></td></tr>
 <tr class="separator:a29721495a341c1aec1cec64333d59f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9594c405b36da04349925bd88810c240" id="r_a9594c405b36da04349925bd88810c240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a9594c405b36da04349925bd88810c240">WriteString</a> (short x, short y, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *s, bool invert)</td></tr>
-<tr class="memdesc:a9594c405b36da04349925bd88810c240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a UTF-16 string <code>s</code> aligned to the top left corner at (<code>x</code>, <code>y</code>) px.  <br /></td></tr>
+<tr class="memdesc:a9594c405b36da04349925bd88810c240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a UTF-16 string <code>s</code> aligned to the top left corner at <code>(x, y)</code> px.  <br /></td></tr>
 <tr class="separator:a9594c405b36da04349925bd88810c240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875cb08909fdf45af6fcb743e26e20b3" id="r_a875cb08909fdf45af6fcb743e26e20b3"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3">GetMaxScrX</a> ()</td></tr>
 <tr class="memdesc:a875cb08909fdf45af6fcb743e26e20b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get X coordinate of the rightmost visible pixels on the current canvas.  <br /></td></tr>
@@ -290,6 +296,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:a8ea8e6ecb6c78f8721e204851174f7ba" id="r_a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba">SetDCObject</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *lcd, <a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *new_surface)</td></tr>
 <tr class="memdesc:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link a surface (device context) to an LCD descriptor.  <br /></td></tr>
 <tr class="separator:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ababbf47f56c76a835a04e8709859bca0" id="r_ababbf47f56c76a835a04e8709859bca0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0">GetImageSize</a> (short width, short height)</td></tr>
+<tr class="memdesc:ababbf47f56c76a835a04e8709859bca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the buffer size required for an all-in-one surface of a specific size.  <br /></td></tr>
+<tr class="separator:ababbf47f56c76a835a04e8709859bca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6657b1c8003221140be603fc3c696150" id="r_a6657b1c8003221140be603fc3c696150"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a6657b1c8003221140be603fc3c696150">GetImageSizeExt</a> (short width, short height, short depth)</td></tr>
+<tr class="memdesc:a6657b1c8003221140be603fc3c696150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the buffer size required for an all-in-one surface of a specific pixel format and size.  <br /></td></tr>
+<tr class="separator:a6657b1c8003221140be603fc3c696150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Display canvas (LCD) API. </p>
@@ -895,6 +907,108 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
+<a id="ababbf47f56c76a835a04e8709859bca0" name="ababbf47f56c76a835a04e8709859bca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ababbf47f56c76a835a04e8709859bca0">&#9670;&#160;</a></span>GetImageSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t GetImageSize </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the buffer size required for an all-in-one surface of a specific size. </p>
+<p>This assumes the surface will be in the same format as the surface linked to the current active LCD. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10095</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The width of the desired surface. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the desired surface. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The buffer size required to contain the entire surface. </dd></dl>
+
+</div>
+</div>
+<a id="a6657b1c8003221140be603fc3c696150" name="a6657b1c8003221140be603fc3c696150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6657b1c8003221140be603fc3c696150">&#9670;&#160;</a></span>GetImageSizeExt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t GetImageSizeExt </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the buffer size required for an all-in-one surface of a specific pixel format and size. </p>
+<p>This is similar to <a class="el" href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0" title="Calculate the buffer size required for an all-in-one surface of a specific size.">GetImageSize()</a> but it allows arbitrary pixel bit depth. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10096</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The width of the desired surface. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the desired surface. </td></tr>
+    <tr><td class="paramname">depth</td><td>The pixel bit depth of the desired surface. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The buffer size required to contain the entire surface. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#ae983d7fa372d0a7612b98b400aae8bfc" title="Initialize a buffer as an all-in-one surface.">InitGraphic</a> For some assumptions made for an all-in-one surface format. </dd></dl>
+
+</div>
+</div>
 <a id="a875cb08909fdf45af6fcb743e26e20b3" name="a875cb08909fdf45af6fcb743e26e20b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a875cb08909fdf45af6fcb743e26e20b3">&#9670;&#160;</a></span>GetMaxScrX()</h2>
 
@@ -957,6 +1071,69 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
+<a id="ae983d7fa372d0a7612b98b400aae8bfc" name="ae983d7fa372d0a7612b98b400aae8bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae983d7fa372d0a7612b98b400aae8bfc">&#9670;&#160;</a></span>InitGraphic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> * InitGraphic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
+          <td class="paramname"><em>surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize a buffer as an all-in-one surface. </p>
+<p>If a palette is required (<code>depth</code> is 8-bit or less), the palette is assumed to follow the descriptor immediately, then the pixel buffer is assumed to start immediately after the palette. Otherwise the pixel buffer is assumed to follow the descriptor immediately (i.e. palette size is 0) and <a class="el" href="structlcd__surface__t.html#ac61a6181ba9c1ff5b5148436dc66eed8" title="Palette used to pack RGBA color into pixels.">lcd_surface_t::palette</a> will be set to NULL. </p><dl class="section note"><dt>Note</dt><dd>This function does not allocate any memory. The caller is responsible for allocating a buffer that is large enough to hold the descriptor, the palette (if required) and the pixel buffer. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1005b</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">surface</td><td>A buffer that will hold the data. </td></tr>
+    <tr><td class="paramname">width</td><td>Width of the surface in pixels. </td></tr>
+    <tr><td class="paramname">height</td><td>Height of the surface in pixels. </td></tr>
+    <tr><td class="paramname">depth</td><td>The pixel bit depth. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The same buffer. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a6657b1c8003221140be603fc3c696150" title="Calculate the buffer size required for an all-in-one surface of a specific pixel format and size.">GetImageSizeExt</a> A function that can be used to estimate the required size of the <code>surface</code> buffer, based on the same parameters that will be passed to this function. </dd></dl>
+
+</div>
+</div>
 <a id="a4bc499fc724de87725ee7dc60ed1d106" name="a4bc499fc724de87725ee7dc60ed1d106"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bc499fc724de87725ee7dc60ed1d106">&#9670;&#160;</a></span>Printf()</h2>
 
@@ -992,7 +1169,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Format and draw a string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Handles line wraps and screen scrolling automatically. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">format</td><td>The format string. </td></tr>
     <tr><td class="paramname">...</td><td>Any subsequent values.</td></tr>
@@ -1050,7 +1227,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </table>
 </div><div class="memdoc">
 
-<p>Format and draw a string aligned to the top left corner at (<code>x</code>, <code>y</code>) px. </p>
+<p>Format and draw a string aligned to the top left corner at <code>(x, y)</code> px. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
@@ -1747,6 +1924,41 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
+<a id="a04239638c97cb1c6a52bb11f22223862" name="a04239638c97cb1c6a52bb11f22223862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04239638c97cb1c6a52bb11f22223862">&#9670;&#160;</a></span>SizeofGraphic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t SizeofGraphic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
+          <td class="paramname"><em>surface</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the total on-memory size of a surface (including descriptor). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">surface</td><td>The surface descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total on-memory size of this surface in bytes. </dd></dl>
+
+</div>
+</div>
 <a id="a29721495a341c1aec1cec64333d59f51" name="a29721495a341c1aec1cec64333d59f51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29721495a341c1aec1cec64333d59f51">&#9670;&#160;</a></span>WriteChar()</h2>
 
@@ -1793,7 +2005,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </table>
 </div><div class="memdoc">
 
-<p>Draw a character <code>c</code> aligned to the top left corner at (<code>x</code>, <code>y</code>) px. </p>
+<p>Draw a character <code>c</code> aligned to the top left corner at <code>(x, y)</code> px. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
@@ -1854,13 +2066,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </table>
 </div><div class="memdoc">
 
-<p>Draw a UTF-16 string <code>s</code> aligned to the top left corner at (<code>x</code>, <code>y</code>) px. </p>
+<p>Draw a UTF-16 string <code>s</code> aligned to the top left corner at <code>(x, y)</code> px. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
-    <tr><td class="paramname">y</td><td>Y coordinate of the corner. </td></tr>
-    <tr><td class="paramname">s</td><td>UTF-16 encoded string to be drawn. </td></tr>
-    <tr><td class="paramname">invert</td><td>Whether or not to invert the color for that character.</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">y</td><td>Y coordinate of the corner. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>UTF-16 encoded string to be drawn. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">invert</td><td>Whether or not to invert the color for that character.</td></tr>
   </table>
   </dd>
 </dl>
