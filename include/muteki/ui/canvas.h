@@ -355,12 +355,12 @@ extern int rgbSetColor(int color);
 extern void ClearScreen(bool fill_with_fg);
 
 // TODO this does not work properly. Figure out why
-extern void WriteAlignString(short x, short y, const char *msg, uint16_t max_width);
+extern void WriteAlignString(short x, short y, const UTF16 *msg, short max_width);
 
 //extern int GetFontWidth(int32_t type);
 
 /**
- * @brief Get the width of the character @p c used in @p font_type.
+ * @brief Get the width of the character `c` used in `font_type`.
  * @param c UTF-16 codepoint of the character.
  * @param font_type The font type.
  * @return The width in pixels of that character.
@@ -368,7 +368,7 @@ extern void WriteAlignString(short x, short y, const char *msg, uint16_t max_wid
 extern short GetCharWidth(UTF16 c, uint8_t font_type);
 
 /**
- * @brief Get the height of the font @p font_type.
+ * @brief Get the height of the font `font_type`.
  * @param font_type The font type.
  * @return The height in pixels of that font.
  */
@@ -376,6 +376,7 @@ extern int GetFontHeight(uint8_t font_type);
 
 /**
  * @brief Format and draw a string.
+ * @details Handles line wraps and screen scrolling automatically.
  * @param format The format string.
  * @param ... Any subsequent values.
  * @x_void_return
@@ -383,7 +384,7 @@ extern int GetFontHeight(uint8_t font_type);
 extern void Printf(char *format, ...);
 
 /**
- * @brief Format and draw a string aligned to the top left corner at (@p x, @p y) px.
+ * @brief Format and draw a string aligned to the top left corner at `(x, y)` px.
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
  * @param format The format string passed to the built-in sprintf().
@@ -393,7 +394,33 @@ extern void Printf(char *format, ...);
 extern void PrintfXY(short x, short y, const char *format, ...);
 
 /**
- * @brief Set the current font type to @p font_type.
+ * @brief Calculate the total on-memory size of a surface (including descriptor).
+ * @param surface The surface descriptor.
+ * @return The total on-memory size of this surface in bytes.
+ */
+extern size_t SizeofGraphic(lcd_surface_t *surface);
+
+/**
+ * @brief Initialize a buffer as an all-in-one surface.
+ * @details If a palette is required (`depth` is 8-bit or less), the palette is assumed to follow the descriptor
+ * immediately, then the pixel buffer is assumed to start immediately after the palette. Otherwise the pixel buffer is
+ * assumed to follow the descriptor immediately (i.e. palette size is 0) and lcd_surface_t::palette will be set to
+ * NULL.
+ * @note This function does not allocate any memory. The caller is responsible for allocating a buffer that is large
+ * enough to hold the descriptor, the palette (if required) and the pixel buffer.
+ * @x_syscall_num `0x1005b`
+ * @param surface A buffer that will hold the data.
+ * @param width Width of the surface in pixels.
+ * @param height Height of the surface in pixels.
+ * @param depth The pixel bit depth.
+ * @return The same buffer.
+ * @see GetImageSizeExt A function that can be used to estimate the required size of the `surface` buffer, based on the
+ * same parameters that will be passed to this function.
+ */
+extern lcd_surface_t *InitGraphic(lcd_surface_t *surface, short width, short height, short depth);
+
+/**
+ * @brief Set the current font type to `font_type`.
  * @param font_type The font type.
  * @see font_type_e Valid values for `font_type`.
  * @x_void_return
@@ -401,7 +428,7 @@ extern void PrintfXY(short x, short y, const char *format, ...);
 extern void SetFontType(int8_t font_type);
 
 /**
- * @brief Draw a character @p c aligned to the top left corner at (@p x, @p y) px.
+ * @brief Draw a character `c` aligned to the top left corner at `(x, y)` px.
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
  * @param c UTF-16 codepoint of the character.
@@ -411,10 +438,10 @@ extern void SetFontType(int8_t font_type);
 extern void WriteChar(short x, short y, UTF16 c, bool invert);
 
 /**
- * @brief Draw a UTF-16 string @p s aligned to the top left corner at (@p x, @p y) px.
+ * @brief Draw a UTF-16 string `s` aligned to the top left corner at `(x, y)` px.
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
- * @param s UTF-16 encoded string to be drawn.
+ * @param[in] s UTF-16 encoded string to be drawn.
  * @param invert Whether or not to invert the color for that character.
  * @x_void_return
  * @see WriteChar Similar function that displays single characters instead.
@@ -633,6 +660,28 @@ extern lcd_t *CreateCompatibleLCD(lcd_t *source);
  * @return The descriptor of the surface previously linked to `lcd`.
  */
 extern lcd_surface_t *SetDCObject(lcd_t *lcd, lcd_surface_t *new_surface);
+
+/**
+ * @brief Calculate the buffer size required for an all-in-one surface of a specific size.
+ * @details This assumes the surface will be in the same format as the surface linked to the current active LCD.
+ * @x_syscall_num `0x10095`
+ * @param width The width of the desired surface.
+ * @param height The height of the desired surface.
+ * @return The buffer size required to contain the entire surface.
+ */
+extern size_t GetImageSize(short width, short height);
+
+/**
+ * @brief Calculate the buffer size required for an all-in-one surface of a specific pixel format and size.
+ * @details This is similar to GetImageSize() but it allows arbitrary pixel bit depth.
+ * @x_syscall_num `0x10096`
+ * @param width The width of the desired surface.
+ * @param height The height of the desired surface.
+ * @param depth The pixel bit depth of the desired surface.
+ * @return The buffer size required to contain the entire surface.
+ * @see InitGraphic For some assumptions made for an all-in-one surface format.
+ */
+extern size_t GetImageSizeExt(short width, short height, short depth);
 
 #ifdef __cplusplus
 } // extern "C"
