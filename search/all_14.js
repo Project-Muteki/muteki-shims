@@ -18,7 +18,7 @@ var searchData=
   ['warningbeep_15',['WarningBeep',['../utils_8h.html#a212a842a05302253aae6192eaa1ec53f',1,'utils.h']]],
   ['weekday_16',['weekday',['../structdatetime__t.html#a65486e7763660a3e2787b334f941c1ae',1,'datetime_t']]],
   ['width_17',['width',['../structlcd__s.html#acb6a41f9196c6ce38618d4d43639cf76',1,'lcd_s::width'],['../structlcd__surface__t.html#a3ae8e51b2e20761f1bc6dbf1541b4642',1,'lcd_surface_t::width']]],
-  ['writechar_18',['WriteChar',['../canvas_8h.html#aaf8fb29ffd2229ea95f107a2227112b4',1,'canvas.h']]],
+  ['writechar_18',['WriteChar',['../canvas_8h.html#aa8759b123224e598b231e6c871632c4b',1,'canvas.h']]],
   ['writecomdebugmsg_19',['WriteComDebugMsg',['../utils_8h.html#ac0177719e2182806b0224224bd7a12ba',1,'utils.h']]],
   ['writestring_20',['WriteString',['../canvas_8h.html#a453e0e54d4003711d33a1c0ccdb64e29',1,'canvas.h']]]
 ];

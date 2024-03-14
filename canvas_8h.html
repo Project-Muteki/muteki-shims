@@ -134,19 +134,19 @@ typedef struct <a class="el" href="structlcd__s.html">lcd_s</a>&#160;</td><td cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a1f54f589f151bdd540c978eba5161591" id="r_a1f54f589f151bdd540c978eba5161591"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591">print_flag_e</a> { <br />
-&#160;&#160;<a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf">PRINT_NONE</a> = 0
+<tr class="memitem:a1f54f589f151bdd540c978eba5161591" id="r_a1f54f589f151bdd540c978eba5161591"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591">print_flag_e</a> { <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf">PRINT_NONE</a> = 0
 , <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591af6ea821e1d64905d021e49ec74f498f1">PRINT_INVERT</a> = 0x1
 , <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224">PRINT_INVERT_ALT</a> = 0x4
 , <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c">PRINT_UNDERSCORE_ONLY</a> = 0x40
-, <br />
-&#160;&#160;<a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591a278b8effbb6988b53e83f7e21f13724c">PRINT_ENCODING_BIG5</a> = 0x100
-, <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591a86e541cf0387f35b67304fc0344e77b7">PRINT_ENCODING_GB18030</a> = 0x200
-, <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591ade24a62f3a09c71f7a938ffad7e129d3">PRINT_ENCODING_TIS_620</a> = 0x400
-<br />
  }</td></tr>
 <tr class="memdesc:a1f54f589f151bdd540c978eba5161591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for string and character printing.  <a href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591">More...</a><br /></td></tr>
 <tr class="separator:a1f54f589f151bdd540c978eba5161591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdd9c950c7c047ddd0979f457a09579" id="r_a5cdd9c950c7c047ddd0979f457a09579"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579">print_str_flag_e</a> { <a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752">PRINT_STR_ENCODING_BIG5</a> = 0x100
+, <a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6">PRINT_STR_ENCODING_GB18030</a> = 0x200
+, <a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579a413b73fb9378fcaa73f745607d800abe">PRINT_STR_ENCODING_TIS_620</a> = 0x400
+ }</td></tr>
+<tr class="memdesc:a5cdd9c950c7c047ddd0979f457a09579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for string printing only.  <a href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579">More...</a><br /></td></tr>
+<tr class="separator:a5cdd9c950c7c047ddd0979f457a09579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -237,11 +237,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:aa0afef972be2eba019a7f69f3670fd3d" id="r_aa0afef972be2eba019a7f69f3670fd3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa0afef972be2eba019a7f69f3670fd3d">SetFontType</a> (int8_t font_type)</td></tr>
 <tr class="memdesc:aa0afef972be2eba019a7f69f3670fd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current font type to <code>font_type</code>.  <br /></td></tr>
 <tr class="separator:aa0afef972be2eba019a7f69f3670fd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf8fb29ffd2229ea95f107a2227112b4" id="r_aaf8fb29ffd2229ea95f107a2227112b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aaf8fb29ffd2229ea95f107a2227112b4">WriteChar</a> (short x, short y, int c, unsigned int flags)</td></tr>
-<tr class="memdesc:aaf8fb29ffd2229ea95f107a2227112b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a character <code>c</code> aligned to the top left corner at <code>(x, y)</code> px.  <br /></td></tr>
-<tr class="separator:aaf8fb29ffd2229ea95f107a2227112b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8759b123224e598b231e6c871632c4b" id="r_aa8759b123224e598b231e6c871632c4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa8759b123224e598b231e6c871632c4b">WriteChar</a> (short x, short y, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, unsigned int flags)</td></tr>
+<tr class="memdesc:aa8759b123224e598b231e6c871632c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a UTF-16 character <code>c</code> aligned to the top left corner at <code>(x, y)</code> px.  <br /></td></tr>
+<tr class="separator:aa8759b123224e598b231e6c871632c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a453e0e54d4003711d33a1c0ccdb64e29" id="r_a453e0e54d4003711d33a1c0ccdb64e29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a453e0e54d4003711d33a1c0ccdb64e29">WriteString</a> (short x, short y, const void *s, unsigned int flags)</td></tr>
-<tr class="memdesc:a453e0e54d4003711d33a1c0ccdb64e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a UTF-16 string <code>s</code> aligned to the top left corner at <code>(x, y)</code> px.  <br /></td></tr>
+<tr class="memdesc:a453e0e54d4003711d33a1c0ccdb64e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a string <code>s</code> aligned to the top left corner at <code>(x, y)</code> px.  <br /></td></tr>
 <tr class="separator:a453e0e54d4003711d33a1c0ccdb64e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875cb08909fdf45af6fcb743e26e20b3" id="r_a875cb08909fdf45af6fcb743e26e20b3"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3">GetMaxScrX</a> ()</td></tr>
 <tr class="memdesc:a875cb08909fdf45af6fcb743e26e20b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get X coordinate of the rightmost visible pixels on the current canvas.  <br /></td></tr>
@@ -441,12 +441,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c" name="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c"></a>PRINT_UNDERSCORE_ONLY&#160;</td><td class="fielddoc"><p>Draw underscores only. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
 </td></tr>
-<tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a278b8effbb6988b53e83f7e21f13724c" name="a1f54f589f151bdd540c978eba5161591a278b8effbb6988b53e83f7e21f13724c"></a>PRINT_ENCODING_BIG5&#160;</td><td class="fielddoc"><p>Assume text encoding to be BIG5 instead of UTF-16. </p>
+</table>
+
+</div>
+</div>
+<a id="a5cdd9c950c7c047ddd0979f457a09579" name="a5cdd9c950c7c047ddd0979f457a09579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdd9c950c7c047ddd0979f457a09579">&#9670;&#160;</a></span>print_str_flag_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579">print_str_flag_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Process flags for string printing only. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752" name="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752"></a>PRINT_STR_ENCODING_BIG5&#160;</td><td class="fielddoc"><p>Assume text encoding to be BIG5 instead of UTF-16. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
 </td></tr>
-<tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a86e541cf0387f35b67304fc0344e77b7" name="a1f54f589f151bdd540c978eba5161591a86e541cf0387f35b67304fc0344e77b7"></a>PRINT_ENCODING_GB18030&#160;</td><td class="fielddoc"><p>Assume text encoding to be GB18030 instead of UTF-16. </p>
+<tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6" name="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6"></a>PRINT_STR_ENCODING_GB18030&#160;</td><td class="fielddoc"><p>Assume text encoding to be GB18030 instead of UTF-16. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591ade24a62f3a09c71f7a938ffad7e129d3" name="a1f54f589f151bdd540c978eba5161591ade24a62f3a09c71f7a938ffad7e129d3"></a>PRINT_ENCODING_TIS_620&#160;</td><td class="fielddoc"><p>Assume text encoding to be TIS-620 instead of UTF-16. </p>
+<tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a413b73fb9378fcaa73f745607d800abe" name="a5cdd9c950c7c047ddd0979f457a09579a413b73fb9378fcaa73f745607d800abe"></a>PRINT_STR_ENCODING_TIS_620&#160;</td><td class="fielddoc"><p>Assume text encoding to be TIS-620 instead of UTF-16. </p>
 </td></tr>
 </table>
 
@@ -2008,8 +2026,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
-<a id="aaf8fb29ffd2229ea95f107a2227112b4" name="aaf8fb29ffd2229ea95f107a2227112b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf8fb29ffd2229ea95f107a2227112b4">&#9670;&#160;</a></span>WriteChar()</h2>
+<a id="aa8759b123224e598b231e6c871632c4b" name="aa8759b123224e598b231e6c871632c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8759b123224e598b231e6c871632c4b">&#9670;&#160;</a></span>WriteChar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2032,7 +2050,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>
@@ -2054,12 +2072,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </table>
 </div><div class="memdoc">
 
-<p>Draw a character <code>c</code> aligned to the top left corner at <code>(x, y)</code> px. </p>
+<p>Draw a UTF-16 character <code>c</code> aligned to the top left corner at <code>(x, y)</code> px. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
     <tr><td class="paramname">y</td><td>Y coordinate of the corner. </td></tr>
-    <tr><td class="paramname">c</td><td>Codepoint of the character. Exact encoding depends on the process flags being used. </td></tr>
+    <tr><td class="paramname">c</td><td>UTF-16 codepoint of the character. </td></tr>
     <tr><td class="paramname">flags</td><td>Process flags.</td></tr>
   </table>
   </dd>
@@ -2115,7 +2133,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </table>
 </div><div class="memdoc">
 
-<p>Draw a UTF-16 string <code>s</code> aligned to the top left corner at <code>(x, y)</code> px. </p>
+<p>Draw a string <code>s</code> aligned to the top left corner at <code>(x, y)</code> px. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">x</td><td>X coordinate of the corner. </td></tr>
@@ -2126,9 +2144,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   </dd>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#aaf8fb29ffd2229ea95f107a2227112b4" title="Draw a character c aligned to the top left corner at (x, y) px.">WriteChar</a> Similar function that displays single characters instead. </dd>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#aa8759b123224e598b231e6c871632c4b" title="Draw a UTF-16 character c aligned to the top left corner at (x, y) px.">WriteChar</a> Similar function that displays single characters instead. </dd>
 <dd>
-<a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd></dl>
+<a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd>
+<dd>
+<a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579" title="Process flags for string printing only.">print_str_flag_e</a> Encoding conversion flags. </dd></dl>
 
 </div>
 </div>
