@@ -44,19 +44,25 @@ enum print_flag_e {
      * @todo Speculation based on behavior. Seems to be very broken with >16px fonts.
      */
     PRINT_UNDERSCORE_ONLY = 0x40,
+};
+
+/**
+ * @brief Process flags for string printing only.
+ */
+enum print_str_flag_e {
     /**
      * @brief Assume text encoding to be BIG5 instead of UTF-16.
      * @todo Seems to be some unknown extension? Limited mojibake test doesn't match iconv result.
      */
-    PRINT_ENCODING_BIG5 = 0x100,
+    PRINT_STR_ENCODING_BIG5 = 0x100,
     /**
      * @brief Assume text encoding to be GB18030 instead of UTF-16.
      */
-    PRINT_ENCODING_GB18030 = 0x200,
+    PRINT_STR_ENCODING_GB18030 = 0x200,
     /**
      * @brief Assume text encoding to be TIS-620 instead of UTF-16.
      */
-    PRINT_ENCODING_TIS_620 = 0x400,
+    PRINT_STR_ENCODING_TIS_620 = 0x400,
 };
 
 /**
@@ -467,18 +473,18 @@ extern lcd_surface_t *InitGraphic(lcd_surface_t *surface, short width, short hei
 extern void SetFontType(int8_t font_type);
 
 /**
- * @brief Draw a character `c` aligned to the top left corner at `(x, y)` px.
+ * @brief Draw a UTF-16 character `c` aligned to the top left corner at `(x, y)` px.
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
- * @param c Codepoint of the character. Exact encoding depends on the process flags being used.
+ * @param c UTF-16 codepoint of the character.
  * @param flags Process flags.
  * @x_void_return
  * @see print_flag_e Valid process flags.
  */
-extern void WriteChar(short x, short y, int c, unsigned int flags);
+extern void WriteChar(short x, short y, UTF16 c, unsigned int flags);
 
 /**
- * @brief Draw a UTF-16 string `s` aligned to the top left corner at `(x, y)` px.
+ * @brief Draw a string `s` aligned to the top left corner at `(x, y)` px.
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
  * @param[in] s String to be drawn. Exact encoding depends on the process flags being used.
@@ -486,6 +492,7 @@ extern void WriteChar(short x, short y, int c, unsigned int flags);
  * @x_void_return
  * @see WriteChar Similar function that displays single characters instead.
  * @see print_flag_e Valid process flags.
+ * @see print_str_flag_e Encoding conversion flags.
  */
 extern void WriteString(short x, short y, const void *s, unsigned int flags);
 
