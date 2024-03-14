@@ -21,13 +21,52 @@ extern "C" {
 #endif
 
 /**
+ * @brief Process flags for string and character printing.
+ * @todo A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!).
+ */
+enum print_flag_e {
+    /**
+     * @brief No extra process.
+     */
+    PRINT_NONE = 0,
+    /**
+     * @brief Invert colors.
+     * @details Within the bounding box of the glyphs to be rendered, the background and foreground color will be
+     * swapped.
+     */
+    PRINT_INVERT = 0x1,
+    /**
+     * @brief Seems to be an alternative version of `PRINT_INVERT`.
+     */
+    PRINT_INVERT_ALT = 0x4,
+    /**
+     * @brief Draw underscores only.
+     * @todo Speculation based on behavior. Seems to be very broken with >16px fonts.
+     */
+    PRINT_UNDERSCORE_ONLY = 0x40,
+    /**
+     * @brief Assume text encoding to be BIG5 instead of UTF-16.
+     * @todo Seems to be some unknown extension? Limited mojibake test doesn't match iconv result.
+     */
+    PRINT_ENCODING_BIG5 = 0x100,
+    /**
+     * @brief Assume text encoding to be GB18030 instead of UTF-16.
+     */
+    PRINT_ENCODING_GB18030 = 0x200,
+    /**
+     * @brief Assume text encoding to be TIS-620 instead of UTF-16.
+     */
+    PRINT_ENCODING_TIS_620 = 0x400,
+};
+
+/**
  * @brief Descriptor of an LCD drawing surface or hardware framebuffer.
  * @details This contains format description of the pixel/framebuffer and a pointer to the actual buffer.
  */
 typedef struct {
     /**
      * @brief Header magic.
-     * @details Always @p "PX" without NUL.
+     * @details Always `"PX"` without NUL.
      */
     char magic[2]; // 0:2
     /**
@@ -355,7 +394,7 @@ extern int rgbSetColor(int color);
 extern void ClearScreen(bool fill_with_fg);
 
 // TODO this does not work properly. Figure out why
-extern void WriteAlignString(short x, short y, const UTF16 *msg, short max_width);
+extern void WriteAlignString(short x, short y, const UTF16 *msg, int arg4, int arg5, unsigned int flags);
 
 //extern int GetFontWidth(int32_t type);
 
@@ -431,22 +470,24 @@ extern void SetFontType(int8_t font_type);
  * @brief Draw a character `c` aligned to the top left corner at `(x, y)` px.
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
- * @param c UTF-16 codepoint of the character.
- * @param invert Whether or not to invert the color for that character.
+ * @param c Codepoint of the character. Exact encoding depends on the process flags being used.
+ * @param flags Process flags.
  * @x_void_return
+ * @see print_flag_e Valid process flags.
  */
-extern void WriteChar(short x, short y, UTF16 c, bool invert);
+extern void WriteChar(short x, short y, int c, unsigned int flags);
 
 /**
  * @brief Draw a UTF-16 string `s` aligned to the top left corner at `(x, y)` px.
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
- * @param[in] s UTF-16 encoded string to be drawn.
- * @param invert Whether or not to invert the color for that character.
+ * @param[in] s String to be drawn. Exact encoding depends on the process flags being used.
+ * @param flags Process flags.
  * @x_void_return
  * @see WriteChar Similar function that displays single characters instead.
+ * @see print_flag_e Valid process flags.
  */
-extern void WriteString(short x, short y, const UTF16 *s, bool invert);
+extern void WriteString(short x, short y, const void *s, unsigned int flags);
 
 /**
  * @brief Get X coordinate of the rightmost visible pixels on the current canvas.
