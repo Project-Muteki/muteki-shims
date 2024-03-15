@@ -439,7 +439,21 @@ extern void Printf(char *format, ...);
 extern void PrintfXY(short x, short y, const char *format, ...);
 
 /**
+ * @brief Draw a surface onto current active LCD.
+ * @todo More details.
+ * @x_syscall_num `0x10059`
+ * @param x X coordinate.
+ * @param y Y coordinate.
+ * @param surface The surface descriptor.
+ * @param flags
+ * @retval 0 @x_term ok
+ * @retval -1 @x_term ng
+ */
+extern int ShowGraphic(short x, short y, lcd_surface_t *surface, unsigned short flags);
+
+/**
  * @brief Calculate the total on-memory size of a surface (including descriptor).
+ * @x_syscall_num `0x1005a`
  * @param surface The surface descriptor.
  * @return The total on-memory size of this surface in bytes.
  */
@@ -465,12 +479,22 @@ extern size_t SizeofGraphic(lcd_surface_t *surface);
 extern lcd_surface_t *InitGraphic(lcd_surface_t *surface, short width, short height, short depth);
 
 /**
- * @brief Set the current font type to `font_type`.
- * @param font_type The font type.
+ * @brief Get the current font type.
+ * @x_syscall_num `0x1004f`
+ * @x_void_param
+ * @return The current font type.
  * @see font_type_e Valid values for `font_type`.
- * @x_void_return
  */
-extern void SetFontType(int8_t font_type);
+extern short GetFontType();
+
+/**
+ * @brief Set the current font type to `font_type`.
+ * @x_syscall_num `0x10051`
+ * @param font_type The font type.
+ * @x_void_return
+ * @see font_type_e Valid values for `font_type`.
+ */
+extern void SetFontType(short font_type);
 
 /**
  * @brief Draw a UTF-16 character `c` aligned to the top left corner at `(x, y)` px.
@@ -638,6 +662,37 @@ extern lcd_t *CreateVirtualLCD(short width, short height, short width_bytes);
  * @x_void_return
  */
 extern void DeleteVirtualLCD(lcd_t *lcd);
+
+/**
+ * @brief Perform blit operation from `src` surface to `dst` surface.
+ * @todo Validate.
+ * @x_syscall_num `0x10089`
+ * @param dst Destination surface.
+ * @param xdstoffset X coordinate of the destination surface that align with the top left corner of the blitted image,
+ * in pixels.
+ * @param ydstoffset Y coordinate of the destination surface that align with the top left corner of the blitted image,
+ * in pixels.
+ * @param xsize Number of pixel columns to copy.
+ * @param ysize Number of pixel rows to copy.
+ * @param src Source surface.
+ * @param xsrcoffset X coordinate of the source surface that align with the top left corner of the blitted image,
+ * in pixels.
+ * @param ysrcoffset Y coordinate of the source surface that align with the top left corner of the blitted image,
+ * in pixels.
+ * @param flags Process flags.
+ * @x_void_return
+ */
+extern void _BitBlt(
+    lcd_surface_t *dst,
+    short xdstoffset,
+    short ydstoffset,
+    short xsize,
+    short ysize,
+    lcd_surface_t *src,
+    int xsrcoffset,
+    int ysrcoffset,
+    unsigned short flags
+);
 
 /**
  * @brief Set an LCD descriptor as active.
