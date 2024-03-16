@@ -31,8 +31,7 @@ enum print_flag_e {
     PRINT_NONE = 0,
     /**
      * @brief Invert colors.
-     * @details Within the bounding box of the glyphs to be rendered, the background and foreground color will be
-     * swapped.
+     * @details Within the bounding box of the glyphs to be rendered, the RGB pixel value is inverted.
      */
     PRINT_INVERT = 0x1,
     /**
@@ -63,6 +62,18 @@ enum print_str_flag_e {
      * @brief Assume text encoding to be TIS-620 instead of UTF-16.
      */
     PRINT_STR_ENCODING_TIS_620 = 0x400,
+};
+
+/**
+ * @brief Process flags for blit operations.
+ * @todo Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when
+ * setting any other flags.
+ */
+enum blit_flag_e {
+    /** @brief Nothing. */
+    BLIT_NONE = 0,
+    /** @brief Color is inverted. */
+    BLIT_INVERT = 0x4,
 };
 
 /**
@@ -448,6 +459,7 @@ extern void PrintfXY(short x, short y, const char *format, ...);
  * @param flags
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
+ * @see blit_flag_e Accepted processing flags.
  */
 extern int ShowGraphic(short x, short y, lcd_surface_t *surface, unsigned short flags);
 
@@ -681,6 +693,7 @@ extern void DeleteVirtualLCD(lcd_t *lcd);
  * in pixels.
  * @param flags Process flags.
  * @x_void_return
+ * @see blit_flag_e Accepted processing flags.
  */
 extern void _BitBlt(
     lcd_surface_t *dst,
