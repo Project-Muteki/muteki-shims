@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['wait_5fon_5fcritical_5fsection_0',['WAIT_ON_CRITICAL_SECTION',['../threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daf3ba3101003e0c63ae80d40e89670289',1,'threading.h']]],
-  ['wait_5fon_5fevent_1',['WAIT_ON_EVENT',['../threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daf662d2a0b40c190527dd0e254be01dff',1,'threading.h']]],
-  ['wait_5fon_5fnone_2',['WAIT_ON_NONE',['../threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daf13ae2f4b979b592a368e230abddcf7a',1,'threading.h']]],
-  ['wait_5fon_5fqueue_3',['WAIT_ON_QUEUE',['../threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408da654f84d53c59e1a92590a59f2c385269',1,'threading.h']]],
-  ['wait_5fon_5fsemaphore_4',['WAIT_ON_SEMAPHORE',['../threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daee78b08ea95882a528a8e36cf58fa2ae',1,'threading.h']]],
-  ['wait_5fon_5fsleep_5',['WAIT_ON_SLEEP',['../threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408daf9bc51f83e823bf3ad31af9e68c9032c',1,'threading.h']]],
-  ['wait_5fon_5fsuspend_6',['WAIT_ON_SUSPEND',['../threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408da898f43758d097453fe54e55587b1f89f',1,'threading.h']]],
-  ['wait_5fresult_5ferror_7',['WAIT_RESULT_ERROR',['../threading_8h.html#a9272387198be11dfc77e13b4b65854b4a0e70f73cab830c899ab53ad3ba93a273',1,'threading.h']]],
-  ['wait_5fresult_5fresolved_8',['WAIT_RESULT_RESOLVED',['../threading_8h.html#a9272387198be11dfc77e13b4b65854b4a6281bd9cb9dbaf6aa70e639fea8f6b60',1,'threading.h']]],
-  ['wait_5fresult_5ftimeout_9',['WAIT_RESULT_TIMEOUT',['../threading_8h.html#a9272387198be11dfc77e13b4b65854b4a04538de14f6be13101cc38f87a39f07d',1,'threading.h']]]
+  ['threading_5fdescriptor_5fbusy_0',['THREADING_DESCRIPTOR_BUSY',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a733173708113bcaf847d273318026a6e',1,'errno.h']]],
+  ['threading_5finvalid_5fdescriptor_1',['THREADING_INVALID_DESCRIPTOR',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3a10bf19b6d2ce0d4c484d7d1ef301ad',1,'errno.h']]],
+  ['threading_5fqueue_5fbusy_2',['THREADING_QUEUE_BUSY',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a92ea17a1eca301d4fbb5a79e2249449f',1,'errno.h']]],
+  ['threading_5fqueue_5fempty_3',['THREADING_QUEUE_EMPTY',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ad11575c0dfb1c63f8a21bc31e077faf8',1,'errno.h']]],
+  ['threading_5fqueue_5ffull_4',['THREADING_QUEUE_FULL',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a1e42ea41590869b3050eaacb75d70a7e',1,'errno.h']]],
+  ['threading_5fslot_5ffull_5',['THREADING_SLOT_FULL',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3c0372437a9960bbbc77c3849b163732',1,'errno.h']]],
+  ['threading_5fslot_5fin_5fuse_6',['THREADING_SLOT_IN_USE',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a2f4f0ea7fa012fdea30ba42bdb50f2ab',1,'errno.h']]],
+  ['threading_5fstack_5fmalloc_5ffailed_7',['THREADING_STACK_MALLOC_FAILED',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a4f15405cfc8204dca0c8230d74ac2092',1,'errno.h']]],
+  ['threading_5fstruct_5fmalloc_5ffailed_8',['THREADING_STRUCT_MALLOC_FAILED',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6b324986a35e51118e9aeea698f43d55',1,'errno.h']]]
 ];

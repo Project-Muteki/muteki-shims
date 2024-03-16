@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['sys_5ferase_5ffailed_0',['SYS_ERASE_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1a4bb2b630005160e7d9781e280e7011',1,'errno.h']]],
-  ['sys_5flock_5fswitch_5fenabled_1',['SYS_LOCK_SWITCH_ENABLED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aef656c2d75c8bd9ec763b63cf71b43c2',1,'errno.h']]],
-  ['sys_5flow_5fbattery_2',['SYS_LOW_BATTERY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4caeb4c37ddfa450dad5b16c51ad6e73',1,'errno.h']]],
-  ['sys_5fout_5fof_5fmemory_3',['SYS_OUT_OF_MEMORY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ae664d39bd61bb26eb69c92c3051c29b4',1,'errno.h']]],
-  ['sys_5fstorage_5fdevice_5fnot_5ffound_4',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1',1,'errno.h']]]
+  ['rotation_5fapply_0',['ROTATION_APPLY',['../canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493',1,'canvas.h']]],
+  ['rotation_5fquery_1',['ROTATION_QUERY',['../canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607',1,'canvas.h']]],
+  ['rotation_5ftop_5fside_5ffacing_5fdown_2',['ROTATION_TOP_SIDE_FACING_DOWN',['../canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03',1,'canvas.h']]],
+  ['rotation_5ftop_5fside_5ffacing_5fleft_3',['ROTATION_TOP_SIDE_FACING_LEFT',['../canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15',1,'canvas.h']]],
+  ['rotation_5ftop_5fside_5ffacing_5fright_4',['ROTATION_TOP_SIDE_FACING_RIGHT',['../canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5',1,'canvas.h']]],
+  ['rotation_5ftop_5fside_5ffacing_5fup_5',['ROTATION_TOP_SIDE_FACING_UP',['../canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa',1,'canvas.h']]]
 ];

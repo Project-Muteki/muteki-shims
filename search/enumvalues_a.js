@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['threading_5fdescriptor_5fbusy_0',['THREADING_DESCRIPTOR_BUSY',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a733173708113bcaf847d273318026a6e',1,'errno.h']]],
-  ['threading_5finvalid_5fdescriptor_1',['THREADING_INVALID_DESCRIPTOR',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3a10bf19b6d2ce0d4c484d7d1ef301ad',1,'errno.h']]],
-  ['threading_5fqueue_5fbusy_2',['THREADING_QUEUE_BUSY',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a92ea17a1eca301d4fbb5a79e2249449f',1,'errno.h']]],
-  ['threading_5fqueue_5fempty_3',['THREADING_QUEUE_EMPTY',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ad11575c0dfb1c63f8a21bc31e077faf8',1,'errno.h']]],
-  ['threading_5fqueue_5ffull_4',['THREADING_QUEUE_FULL',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a1e42ea41590869b3050eaacb75d70a7e',1,'errno.h']]],
-  ['threading_5fslot_5ffull_5',['THREADING_SLOT_FULL',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3c0372437a9960bbbc77c3849b163732',1,'errno.h']]],
-  ['threading_5fslot_5fin_5fuse_6',['THREADING_SLOT_IN_USE',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a2f4f0ea7fa012fdea30ba42bdb50f2ab',1,'errno.h']]],
-  ['threading_5fstack_5fmalloc_5ffailed_7',['THREADING_STACK_MALLOC_FAILED',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a4f15405cfc8204dca0c8230d74ac2092',1,'errno.h']]],
-  ['threading_5fstruct_5fmalloc_5ffailed_8',['THREADING_STRUCT_MALLOC_FAILED',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6b324986a35e51118e9aeea698f43d55',1,'errno.h']]]
+  ['sys_5ferase_5ffailed_0',['SYS_ERASE_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1a4bb2b630005160e7d9781e280e7011',1,'errno.h']]],
+  ['sys_5flock_5fswitch_5fenabled_1',['SYS_LOCK_SWITCH_ENABLED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aef656c2d75c8bd9ec763b63cf71b43c2',1,'errno.h']]],
+  ['sys_5flow_5fbattery_2',['SYS_LOW_BATTERY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4caeb4c37ddfa450dad5b16c51ad6e73',1,'errno.h']]],
+  ['sys_5fout_5fof_5fmemory_3',['SYS_OUT_OF_MEMORY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ae664d39bd61bb26eb69c92c3051c29b4',1,'errno.h']]],
+  ['sys_5fstorage_5fdevice_5fnot_5ffound_4',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1',1,'errno.h']]]
 ];

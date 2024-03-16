@@ -152,6 +152,18 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a41b02fda321c9d1ab9502aa8aa49adcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for blit operations.  <a href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">More...</a><br /></td></tr>
 <tr class="separator:a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3ebca299d07bdf69299b4a5dfb6345" id="r_a7a3ebca299d07bdf69299b4a5dfb6345"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345">rotation_value_e</a> { <br />
+&#160;&#160;<a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa">ROTATION_TOP_SIDE_FACING_UP</a> = 0
+, <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15">ROTATION_TOP_SIDE_FACING_LEFT</a>
+, <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03">ROTATION_TOP_SIDE_FACING_DOWN</a>
+, <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5">ROTATION_TOP_SIDE_FACING_RIGHT</a>
+, <br />
+&#160;&#160;<a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607">ROTATION_QUERY</a> = 0xfe
+, <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493">ROTATION_APPLY</a> = 0xff
+<br />
+ }</td></tr>
+<tr class="memdesc:a7a3ebca299d07bdf69299b4a5dfb6345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation values used by lcd_rotate_callback_t.  <a href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345">More...</a><br /></td></tr>
+<tr class="separator:a7a3ebca299d07bdf69299b4a5dfb6345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -392,15 +404,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Callback type for handling canvas rotation. </p>
-<p>When <code>rotation</code> is set to <code>0xfe</code>, the current rotation value will be returned with no side effect. When <code>rotation</code> is set to <code>0xff</code>, the canvas will rotate based on <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>When <code>rotation</code> is set to rotation_value_e::ROTATION_QUERY, the current rotation value will be returned with no side effect. When <code>rotation</code> is set to rotation_value_e::ROTATION_APPLY, the canvas will rotate based on current value of <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>The LCD descriptor this was called from. </td></tr>
-    <tr><td class="paramname">rotation</td><td>New rotation. This value will be written to <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> and this callback will be called recursively with <code>0xff</code> as the rotation value to actually apply the change. </td></tr>
+    <tr><td class="paramname">rotation</td><td>New rotation. This value will be written to <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> and this callback will be called recursively with rotation_value_e::ROTATION_APPLY as the rotation value to actually apply the change. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Current rotation value in effect. This will be the same as <code>rotation</code> when no magic value documented above was used. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> Where the location value is stored in the LCD descriptor. </dd>
+<dd>
+<a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345" title="Rotation values used by lcd_rotate_callback_t.">rotation_value_e</a> Possible rotation values. </dd></dl>
 
 </div>
 </div>
@@ -507,6 +521,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
+<a id="a7a3ebca299d07bdf69299b4a5dfb6345" name="a7a3ebca299d07bdf69299b4a5dfb6345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3ebca299d07bdf69299b4a5dfb6345">&#9670;&#160;</a></span>rotation_value_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345">rotation_value_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotation values used by lcd_rotate_callback_t. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa" name="a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa"></a>ROTATION_TOP_SIDE_FACING_UP&#160;</td><td class="fielddoc"><p>Set the rotation so the top side of the canvas is facing up. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15" name="a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15"></a>ROTATION_TOP_SIDE_FACING_LEFT&#160;</td><td class="fielddoc"><p>Set the rotation so the top side of the canvas is facing left. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03" name="a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03"></a>ROTATION_TOP_SIDE_FACING_DOWN&#160;</td><td class="fielddoc"><p>Set the rotation so the top side of the canvas is facing down. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5" name="a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5"></a>ROTATION_TOP_SIDE_FACING_RIGHT&#160;</td><td class="fielddoc"><p>Set the rotation so the top side of the canvas is facing right. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607" name="a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607"></a>ROTATION_QUERY&#160;</td><td class="fielddoc"><p>Query the current rotation. Will not change the current location. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" name="a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493"></a>ROTATION_APPLY&#160;</td><td class="fielddoc"><p>Actually rotate the buffer. Used internally. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a1fa6c5c38a95c92f0b5c9e134311d637" name="a1fa6c5c38a95c92f0b5c9e134311d637"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fa6c5c38a95c92f0b5c9e134311d637">&#9670;&#160;</a></span>_BitBlt()</h2>
@@ -585,7 +629,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Perform blit operation from <code>src</code> surface to <code>dst</code> surface. </p>
-<p>This copies a rectangle of size <code>(xsize, ysize)px</code> on the <code>src</code> surface, with its the top left corner located at <code>(xsrcoffset, ysrcoffset)px</code>, to the <code>dst</code> surface. The top left corner of that rectangle will be aligned to a point on the <code>dst</code> surface at <code>(xdstoffset, ydstoffset)px</code>. Optionally one can specify one or more processing <code>flags</code> to let the blitter perform certain pixel operations on-the-fly. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10089</code> </dd></dl>
+<p>This copies a rectangle of size <code>(xsize, ysize)</code> px on the <code>src</code> surface, with its the top left corner located at <code>(xsrcoffset, ysrcoffset)</code> px, to the <code>dst</code> surface. The top left corner of that rectangle will be aligned to a point on the <code>dst</code> surface at <code>(xdstoffset, ydstoffset)</code> px. Optionally one can specify one or more processing <code>flags</code> to let the blitter perform certain pixel operations on-the-fly. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10089</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dst</td><td>Destination surface. </td></tr>
