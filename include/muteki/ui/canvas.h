@@ -78,6 +78,24 @@ enum blit_flag_e {
 };
 
 /**
+ * @brief Rotation values used by lcd_rotate_callback_t.
+ */
+enum rotation_value_e {
+    /** @brief Set the rotation so the top side of the canvas is facing up. */
+    ROTATION_TOP_SIDE_FACING_UP = 0,
+    /** @brief Set the rotation so the top side of the canvas is facing left. */
+    ROTATION_TOP_SIDE_FACING_LEFT,
+    /** @brief Set the rotation so the top side of the canvas is facing down. */
+    ROTATION_TOP_SIDE_FACING_DOWN,
+    /** @brief Set the rotation so the top side of the canvas is facing right. */
+    ROTATION_TOP_SIDE_FACING_RIGHT,
+    /** @brief Query the current rotation. Will not change the current location. */
+    ROTATION_QUERY = 0xfe,
+    /** @brief Actually rotate the buffer. Used internally. */
+    ROTATION_APPLY = 0xff,
+};
+
+/**
  * @brief Descriptor of an LCD drawing surface or hardware framebuffer.
  * @details This contains format description of the pixel/framebuffer and a pointer to the actual buffer.
  */
@@ -239,14 +257,16 @@ typedef struct lcd_s lcd_t;
 
 /**
  * @brief Callback type for handling canvas rotation.
- * @details When `rotation` is set to `0xfe`, the current rotation value will be returned with no side effect.
- * When `rotation` is set to `0xff`, the canvas will rotate based on lcd_t::rotation.
+ * @details When `rotation` is set to rotation_value_e::ROTATION_QUERY, the current rotation value will be returned
+ * with no side effect. When `rotation` is set to rotation_value_e::ROTATION_APPLY, the canvas will rotate based on
+ * current value of lcd_t::rotation.
  * @param self The LCD descriptor this was called from.
  * @param rotation New rotation. This value will be written to lcd_t::rotation and this callback will be called
- * recursively with `0xff` as the rotation value to actually apply the change.
+ * recursively with rotation_value_e::ROTATION_APPLY as the rotation value to actually apply the change.
  * @return Current rotation value in effect. This will be the same as `rotation` when no magic value documented above
  * was used.
- * @see lcd_t::rotation
+ * @see lcd_t::rotation Where the location value is stored in the LCD descriptor.
+ * @see rotation_value_e Possible rotation values.
  */
 typedef int (*lcd_rotate_callback_t)(lcd_t *self, int rotation);
 
@@ -678,9 +698,9 @@ extern void DeleteVirtualLCD(lcd_t *lcd);
 
 /**
  * @brief Perform blit operation from `src` surface to `dst` surface.
- * @details This copies a rectangle of size `(xsize, ysize)px` on the `src` surface, with its the top left corner
- * located at `(xsrcoffset, ysrcoffset)px`, to the `dst` surface. The top left corner of that rectangle will be
- * aligned to a point on the `dst` surface at `(xdstoffset, ydstoffset)px`. Optionally one can specify one or more
+ * @details This copies a rectangle of size `(xsize, ysize)` px on the `src` surface, with its the top left corner
+ * located at `(xsrcoffset, ysrcoffset)` px, to the `dst` surface. The top left corner of that rectangle will be
+ * aligned to a point on the `dst` surface at `(xdstoffset, ydstoffset)` px. Optionally one can specify one or more
  * processing `flags` to let the blitter perform certain pixel operations on-the-fly.
  * @x_syscall_num `0x10089`
  * @param dst Destination surface.
