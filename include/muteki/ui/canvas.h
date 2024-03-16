@@ -67,7 +67,8 @@ enum print_str_flag_e {
 /**
  * @brief Process flags for blit operations.
  * @todo Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when
- * setting any other flags.
+ * setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent
+ * color?)
  */
 enum blit_flag_e {
     /** @brief Nothing. */
@@ -677,7 +678,10 @@ extern void DeleteVirtualLCD(lcd_t *lcd);
 
 /**
  * @brief Perform blit operation from `src` surface to `dst` surface.
- * @todo Validate.
+ * @details This copies a rectangle of size `(xsize, ysize)px` on the `src` surface, with its the top left corner
+ * located at `(xsrcoffset, ysrcoffset)px`, to the `dst` surface. The top left corner of that rectangle will be
+ * aligned to a point on the `dst` surface at `(xdstoffset, ydstoffset)px`. Optionally one can specify one or more
+ * processing `flags` to let the blitter perform certain pixel operations on-the-fly.
  * @x_syscall_num `0x10089`
  * @param dst Destination surface.
  * @param xdstoffset X coordinate of the destination surface that align with the top left corner of the blitted image,
