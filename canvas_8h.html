@@ -147,6 +147,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a5cdd9c950c7c047ddd0979f457a09579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for string printing only.  <a href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579">More...</a><br /></td></tr>
 <tr class="separator:a5cdd9c950c7c047ddd0979f457a09579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b02fda321c9d1ab9502aa8aa49adcd" id="r_a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a> { <a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05">BLIT_NONE</a> = 0
+, <a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462">BLIT_INVERT</a> = 0x4
+ }</td></tr>
+<tr class="memdesc:a41b02fda321c9d1ab9502aa8aa49adcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for blit operations.  <a href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">More...</a><br /></td></tr>
+<tr class="separator:a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -400,6 +405,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a41b02fda321c9d1ab9502aa8aa49adcd" name="a41b02fda321c9d1ab9502aa8aa49adcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b02fda321c9d1ab9502aa8aa49adcd">&#9670;&#160;</a></span>blit_flag_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Process flags for blit operations. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05" name="a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05"></a>BLIT_NONE&#160;</td><td class="fielddoc"><p>Nothing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462" name="a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462"></a>BLIT_INVERT&#160;</td><td class="fielddoc"><p>Color is inverted. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a626b23c6e6f587deeea5e3cc43b10171" name="a626b23c6e6f587deeea5e3cc43b10171"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a626b23c6e6f587deeea5e3cc43b10171">&#9670;&#160;</a></span>font_type_e</h2>
 
@@ -443,12 +471,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf" name="a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf"></a>PRINT_NONE&#160;</td><td class="fielddoc"><p>No extra process. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591af6ea821e1d64905d021e49ec74f498f1" name="a1f54f589f151bdd540c978eba5161591af6ea821e1d64905d021e49ec74f498f1"></a>PRINT_INVERT&#160;</td><td class="fielddoc"><p>Invert colors. </p>
-<p>Within the bounding box of the glyphs to be rendered, the background and foreground color will be swapped. </p>
+<p>Within the bounding box of the glyphs to be rendered, the RGB pixel value is inverted. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224" name="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224"></a>PRINT_INVERT_ALT&#160;</td><td class="fielddoc"><p>Seems to be an alternative version of <code>PRINT_INVERT</code>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c" name="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c"></a>PRINT_UNDERSCORE_ONLY&#160;</td><td class="fielddoc"><p>Draw underscores only. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
 </td></tr>
 </table>
 
@@ -469,7 +497,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Process flags for string printing only. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752" name="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752"></a>PRINT_STR_ENCODING_BIG5&#160;</td><td class="fielddoc"><p>Assume text encoding to be BIG5 instead of UTF-16. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6" name="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6"></a>PRINT_STR_ENCODING_GB18030&#160;</td><td class="fielddoc"><p>Assume text encoding to be GB18030 instead of UTF-16. </p>
 </td></tr>
@@ -557,7 +585,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Perform blit operation from <code>src</code> surface to <code>dst</code> surface. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Validate. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Validate. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10089</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -574,7 +602,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   </dd>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd></dl>
 
 </div>
 </div>
@@ -978,7 +1006,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Get the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
 
@@ -1934,7 +1962,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Set the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_type</td><td>The new cursor type. </td></tr>
@@ -2176,7 +2204,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Draw a surface onto current active LCD. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>More details. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>More details. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10059</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2194,6 +2222,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd></dl>
 
 </div>
 </div>

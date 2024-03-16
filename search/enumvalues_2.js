@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['db_5fcorrupted_0',['DB_CORRUPTED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4bb96a0cea4da7dfc4fac08d6c9fa9bc',1,'errno.h']]],
-  ['db_5ffull_1',['DB_FULL',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aac765a6820ebfb3898d963e8a6fd38b4',1,'errno.h']]],
-  ['db_5findex_5ffull_5fdelete_2',['DB_INDEX_FULL_DELETE',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a59e9093a53bfe2eb483523435641b0dc',1,'errno.h']]],
-  ['db_5findex_5ffull_5fsync_3',['DB_INDEX_FULL_SYNC',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a12b9675338923bfaa19bd892942b4a6e',1,'errno.h']]],
-  ['db_5fopen_5ffailed_4',['DB_OPEN_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a7555d9e53b2829fecb6402b95f5087d4',1,'errno.h']]],
-  ['db_5ftoo_5fmany_5fopen_5ffiles_5',['DB_TOO_MANY_OPEN_FILES',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a99f23a399ca10332ef65938521c7e638',1,'errno.h']]]
+  ['blit_5finvert_0',['BLIT_INVERT',['../canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462',1,'canvas.h']]],
+  ['blit_5fnone_1',['BLIT_NONE',['../canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05',1,'canvas.h']]]
 ];
