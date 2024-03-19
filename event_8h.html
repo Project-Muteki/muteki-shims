@@ -92,6 +92,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__t.html">ui_event_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for low level UI events.  <a href="structui__event__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkey__press__event__config__t.html">key_press_event_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration struct for key press event generator.  <a href="structkey__press__event__config__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -207,6 +210,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a562d456e1940f303308135ac5dac9788" id="r_a562d456e1940f303308135ac5dac9788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a562d456e1940f303308135ac5dac9788">GetSysKeyState</a> (<a class="el" href="structkey__press__event__config__t.html">key_press_event_config_t</a> *config)</td></tr>
+<tr class="memdesc:a562d456e1940f303308135ac5dac9788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read current configuration of key event generator.  <br /></td></tr>
+<tr class="separator:a562d456e1940f303308135ac5dac9788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb561bb43ac9ff3ee25fa3751ae9c83" id="r_aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#aadb561bb43ac9ff3ee25fa3751ae9c83">SetSysKeyState</a> (const <a class="el" href="structkey__press__event__config__t.html">key_press_event_config_t</a> *config)</td></tr>
+<tr class="memdesc:aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure key event generator.  <br /></td></tr>
+<tr class="separator:aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ffd8f47dae072b34d94f6ec43dde598" id="r_a2ffd8f47dae072b34d94f6ec43dde598"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a2ffd8f47dae072b34d94f6ec43dde598">ClearAllEvents</a> ()</td></tr>
 <tr class="memdesc:a2ffd8f47dae072b34d94f6ec43dde598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all unprocessed UI events.  <br /></td></tr>
 <tr class="separator:a2ffd8f47dae072b34d94f6ec43dde598"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,6 +228,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9a41667de6a37b2a6b2c6fa1020197de" id="r_a9a41667de6a37b2a6b2c6fa1020197de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de">GetEvent</a> (<a class="el" href="structui__event__t.html">ui_event_t</a> *event)</td></tr>
 <tr class="memdesc:a9a41667de6a37b2a6b2c6fa1020197de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get event.  <br /></td></tr>
 <tr class="separator:a9a41667de6a37b2a6b2c6fa1020197de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136666b9c0c1ba3629a1e511764ee2a7" id="r_a136666b9c0c1ba3629a1e511764ee2a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a136666b9c0c1ba3629a1e511764ee2a7">ClearEvent</a> (<a class="el" href="structui__event__t.html">ui_event_t</a> *event)</td></tr>
+<tr class="memdesc:a136666b9c0c1ba3629a1e511764ee2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate an event struct.  <br /></td></tr>
+<tr class="separator:a136666b9c0c1ba3629a1e511764ee2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Low-level UI event handing API. </p>
@@ -247,8 +259,38 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Discard all unprocessed UI events. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1004a</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="a136666b9c0c1ba3629a1e511764ee2a7" name="a136666b9c0c1ba3629a1e511764ee2a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a136666b9c0c1ba3629a1e511764ee2a7">&#9670;&#160;</a></span>ClearEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__event__t.html">ui_event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invalidate an event struct. </p>
+<p>This function zeros out <a class="el" href="structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca">ui_event_t::event_type</a> and <a class="el" href="structui__event__t.html#a54f924d5ee83def24cfba17853fd1ea9">ui_event_t::unk20</a>. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10049</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>Pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
 
 </div>
@@ -278,9 +320,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get event. </p>
-<p>Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1003f</code> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function will block when there is currently no event to be processed. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>Pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </td></tr>
   </table>
   </dd>
 </dl>
@@ -291,6 +335,64 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a562d456e1940f303308135ac5dac9788" name="a562d456e1940f303308135ac5dac9788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562d456e1940f303308135ac5dac9788">&#9670;&#160;</a></span>GetSysKeyState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetSysKeyState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structkey__press__event__config__t.html">key_press_event_config_t</a> *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read current configuration of key event generator. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd>0x10032 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>The configuration struct for holding the exported configuration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="structkey__press__event__config__t.html" title="Configuration struct for key press event generator.">key_press_event_config_t</a> The config struct and details on the expected format. </dd></dl>
+
+</div>
+</div>
+<a id="aadb561bb43ac9ff3ee25fa3751ae9c83" name="aadb561bb43ac9ff3ee25fa3751ae9c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadb561bb43ac9ff3ee25fa3751ae9c83">&#9670;&#160;</a></span>SetSysKeyState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSysKeyState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structkey__press__event__config__t.html">key_press_event_config_t</a> *&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure key event generator. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd>0x10033 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>The configuration struct to be imported.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="structkey__press__event__config__t.html" title="Configuration struct for key press event generator.">key_press_event_config_t</a> The config struct and details on the expected format. </dd></dl>
 
 </div>
 </div>
@@ -319,7 +421,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Process pending key events. </p>
-<p>Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses, etc. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses, etc. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1004b</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </td></tr>
   </table>
@@ -361,7 +464,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Process pending events. </p>
-<p>Exact purpose of this function is currently unclear. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Exact purpose of this function is currently unclear. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10046</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </td></tr>
   </table>

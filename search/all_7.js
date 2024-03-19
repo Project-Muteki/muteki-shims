@@ -18,7 +18,8 @@ var searchData=
   ['getimagesizeext_15',['GetImageSizeExt',['../canvas_8h.html#a6657b1c8003221140be603fc3c696150',1,'canvas.h']]],
   ['getmaxscrx_16',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
   ['getmaxscry_17',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
-  ['getsystime_18',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]],
-  ['gettimer1inthandler_19',['GetTimer1IntHandler',['../system_8h.html#a77c18dab7a63ff188e452878d5907582',1,'system.h']]],
-  ['grab_5fcount_20',['grab_count',['../structlcd__cursor__t.html#a066d09edf9fc1b0c52f08fe7d8164fba',1,'lcd_cursor_t']]]
+  ['getsyskeystate_18',['GetSysKeyState',['../event_8h.html#a562d456e1940f303308135ac5dac9788',1,'event.h']]],
+  ['getsystime_19',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]],
+  ['gettimer1inthandler_20',['GetTimer1IntHandler',['../system_8h.html#a77c18dab7a63ff188e452878d5907582',1,'system.h']]],
+  ['grab_5fcount_21',['grab_count',['../structlcd__cursor__t.html#a066d09edf9fc1b0c52f08fe7d8164fba',1,'lcd_cursor_t']]]
 ];

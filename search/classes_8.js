@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['semaphore_5fs_0',['semaphore_s',['../structsemaphore__s.html',1,'']]]
+  ['nand_5fparams_5ft_0',['nand_params_t',['../structnand__params__t.html',1,'']]]
 ];

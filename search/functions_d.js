@@ -11,8 +11,9 @@ var searchData=
   ['setdcobject_8',['SetDCObject',['../canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba',1,'canvas.h']]],
   ['setdrawarea_9',['SetDrawArea',['../canvas_8h.html#a31d78d4e6fbdfd69a372ca29c697c0f8',1,'canvas.h']]],
   ['setfonttype_10',['SetFontType',['../canvas_8h.html#a28a5b49726736ff576401ab01dbb844a',1,'canvas.h']]],
-  ['settimer1inthandler_11',['SetTimer1IntHandler',['../system_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30',1,'system.h']]],
-  ['settransparentcolor_12',['SetTransparentColor',['../canvas_8h.html#ad17969255790b1f018336f0c959dba82',1,'canvas.h']]],
-  ['showgraphic_13',['ShowGraphic',['../canvas_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'canvas.h']]],
-  ['sizeofgraphic_14',['SizeofGraphic',['../canvas_8h.html#a04239638c97cb1c6a52bb11f22223862',1,'canvas.h']]]
+  ['setsyskeystate_11',['SetSysKeyState',['../event_8h.html#aadb561bb43ac9ff3ee25fa3751ae9c83',1,'event.h']]],
+  ['settimer1inthandler_12',['SetTimer1IntHandler',['../system_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30',1,'system.h']]],
+  ['settransparentcolor_13',['SetTransparentColor',['../canvas_8h.html#ad17969255790b1f018336f0c959dba82',1,'canvas.h']]],
+  ['showgraphic_14',['ShowGraphic',['../canvas_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'canvas.h']]],
+  ['sizeofgraphic_15',['SizeofGraphic',['../canvas_8h.html#a04239638c97cb1c6a52bb11f22223862',1,'canvas.h']]]
 ];

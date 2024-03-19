@@ -143,7 +143,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Play a tone using the built in piezo speaker. </p>
-<p>This will block the execution. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This will block the execution. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1002c</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frequency</td><td>Frequency of the tone in Hz. </td></tr>
     <tr><td class="paramname">duration</td><td>Duration of the tone in milliseconds. </td></tr>
@@ -184,6 +185,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the Timer1 interrupt handler and custom interval. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10030</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">interval</td><td>A pointer to a variable that will hold the timer interval. Must not be NULL. </td></tr>
@@ -229,10 +231,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set Timer1 interrupt handler. </p>
-<p>The callback function passed to this will be called once every time the timer fires. The exact interval can be manually specified. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The callback function passed to this will be called once every time the timer fires. The exact interval can be manually specified. </p><dl class="section note"><dt>Note</dt><dd>On all Arm-based machines I tested this is always emulated using a thread instead of using real hardware timers. For TLCS-900-based machines this is likely different and it's unknown whether the callback will be called in a way that's safe to the rest of the OS (e.g. calling the callback directly in timer ISR could break the OS). </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1002e</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">callback</td><td>The callback function called when timer fires. </td></tr>
-    <tr><td class="paramname">interval</td><td>An interval value in <a class="el" href="threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573" title="Sleep for millis milliseconds.">OSSleep()</a> unit, or defaulting to 10 when set to 0.</td></tr>
+    <tr><td class="paramname">callback</td><td>The callback function called when timer fires, or <code>NULL</code> to unset a previously set callback. </td></tr>
+    <tr><td class="paramname">interval</td><td>An interval value in 10 milliseconds increments (1 means 10ms, 2 means 20, etc.), or defaulting to 1 when set to 0.</td></tr>
   </table>
   </dd>
 </dl>
