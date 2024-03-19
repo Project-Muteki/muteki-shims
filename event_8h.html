@@ -179,34 +179,47 @@ Enumerations</h2></td></tr>
 , <b>KEY_LANG_CHN</b> = 0x80
 , <b>KEY_LANG_ENG</b> = 0x82
 , <br />
-&#160;&#160;<b>KEY_F1</b> = 0x84
+&#160;&#160;<b>KEY_POWER</b> = 0x83
+, <b>KEY_F1</b> = 0x84
 , <b>KEY_F2</b>
 , <b>KEY_F3</b>
-, <b>KEY_F4</b>
 , <br />
-&#160;&#160;<b>KEY_F5</b>
+&#160;&#160;<b>KEY_F4</b>
+, <b>KEY_F5</b>
 , <b>KEY_SHIFT</b> = 0x8b
 , <b>KEY_IME</b> = 0x8e
-, <b>KEY_SYMBOL</b> = 0x91
 , <br />
-&#160;&#160;<b>KEY_HOME</b> = 0x93
+&#160;&#160;<b>KEY_SYMBOL</b> = 0x91
+, <b>KEY_HOME</b> = 0x93
 , <b>KEY_HELP</b> = 0x95
 , <b>KEY_SAVE</b> = 0x96
-, <b>KEY_SYLLABLE</b> = 0x9e
 , <br />
-&#160;&#160;<b>KEY_SEARCH</b> = 0xf6
+&#160;&#160;<b>KEY_SYLLABLE</b> = 0x9e
+, <b>KEY_SEARCH</b> = 0xf6
 , <b>KEY_BACKLIGHT</b> = 0xf8
 , <b>KEY_VOL</b> = 0xfa
-, <b>KEY_USB_INSERTION</b> = 0xfe
 , <br />
-&#160;&#160;<b>KEY_REPEAT</b> = 0xff
+&#160;&#160;<b>KEY_USB_INSERTION</b> = 0xfe
+, <b>KEY_REPEAT</b> = 0xff
 , <b>KEY_INS</b> = 0x101
 , <b>KEY_SHIFT_PGUP</b> = 0xe047
-, <b>KEY_SHIFT_PGDN</b> = 0xe04f
+, <br />
+&#160;&#160;<b>KEY_SHIFT_PGDN</b> = 0xe04f
 <br />
  }</td></tr>
 <tr class="memdesc:af7cc0af385a79f99f5634d7050ad9920"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of available keycodes. <br /></td></tr>
 <tr class="separator:af7cc0af385a79f99f5634d7050ad9920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad23e002626a9b8e5b06b32178419966f" id="r_ad23e002626a9b8e5b06b32178419966f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#ad23e002626a9b8e5b06b32178419966f">ui_event_type_e</a> { <br />
+&#160;&#160;<a class="el" href="event_8h.html#ad23e002626a9b8e5b06b32178419966fa5548da93ad18a3bf7e02470f3f0c12b9">UI_EVENT_TYPE_INVALID</a> = 0
+, <a class="el" href="event_8h.html#ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf">UI_EVENT_TYPE_TOUCH_BEGIN</a> = 1
+, <a class="el" href="event_8h.html#ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741">UI_EVENT_TYPE_TOUCH_MOVE</a> = 2
+, <a class="el" href="event_8h.html#ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748">UI_EVENT_TYPE_TOUCH_END</a> = 8
+, <br />
+&#160;&#160;<a class="el" href="event_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86">UI_EVENT_TYPE_KEY</a> = 16
+<br />
+ }</td></tr>
+<tr class="memdesc:ad23e002626a9b8e5b06b32178419966f"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI event types.  <a href="event_8h.html#ad23e002626a9b8e5b06b32178419966f">More...</a><br /></td></tr>
+<tr class="separator:ad23e002626a9b8e5b06b32178419966f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -234,7 +247,36 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Low-level UI event handing API. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad23e002626a9b8e5b06b32178419966f" name="ad23e002626a9b8e5b06b32178419966f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad23e002626a9b8e5b06b32178419966f">&#9670;&#160;</a></span>ui_event_type_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event_8h.html#ad23e002626a9b8e5b06b32178419966f">ui_event_type_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UI event types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa5548da93ad18a3bf7e02470f3f0c12b9" name="ad23e002626a9b8e5b06b32178419966fa5548da93ad18a3bf7e02470f3f0c12b9"></a>UI_EVENT_TYPE_INVALID&#160;</td><td class="fielddoc"><p>Invalid/cleared. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf" name="ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf"></a>UI_EVENT_TYPE_TOUCH_BEGIN&#160;</td><td class="fielddoc"><p>Beginning of touch/pen down event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741" name="ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741"></a>UI_EVENT_TYPE_TOUCH_MOVE&#160;</td><td class="fielddoc"><p>Touch/pen move event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748" name="ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748"></a>UI_EVENT_TYPE_TOUCH_END&#160;</td><td class="fielddoc"><p>End of touch/pen up event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" name="ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86"></a>UI_EVENT_TYPE_KEY&#160;</td><td class="fielddoc"><p>Key(s) pressed. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a2ffd8f47dae072b34d94f6ec43dde598" name="a2ffd8f47dae072b34d94f6ec43dde598"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ffd8f47dae072b34d94f6ec43dde598">&#9670;&#160;</a></span>ClearAllEvents()</h2>
 
@@ -283,7 +325,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Invalidate an event struct. </p>
-<p>This function zeros out <a class="el" href="structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca">ui_event_t::event_type</a> and <a class="el" href="structui__event__t.html#a54f924d5ee83def24cfba17853fd1ea9">ui_event_t::unk20</a>. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10049</code> </dd></dl>
+<p>This function zeros out <a class="el" href="structui__event__t.html#ab98000977754a2d5a2c3a171db03c0ca" title="The type of event (0x10 being key event)">ui_event_t::event_type</a> and <a class="el" href="structui__event__t.html#a54f924d5ee83def24cfba17853fd1ea9" title="Unknown.">ui_event_t::unk20</a>. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10049</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>Pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct.</td></tr>
