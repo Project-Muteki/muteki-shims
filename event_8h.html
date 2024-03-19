@@ -320,8 +320,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get event. </p>
-<p>Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1003f</code> </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function will block when there is currently no event to be processed. </dd></dl>
+<p>Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </p><dl class="section note"><dt>Note</dt><dd>This function will block when there is currently no event to be processed. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1003f</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>Pointer to a <a class="el" href="structui__event__t.html" title="Structure for low level UI events.">ui_event_t</a> struct. </td></tr>
@@ -358,7 +358,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd>0x10032 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">config</td><td>The configuration struct for holding the exported configuration.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">config</td><td>The configuration struct for holding the exported configuration.</td></tr>
   </table>
   </dd>
 </dl>
@@ -387,7 +387,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd>0x10033 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">config</td><td>The configuration struct to be imported.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>The configuration struct to be imported.</td></tr>
   </table>
   </dd>
 </dl>
