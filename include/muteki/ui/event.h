@@ -92,6 +92,7 @@ enum keycode_e {
     /* 0x80 */
     KEY_LANG_CHN = 0x80,
     KEY_LANG_ENG = 0x82,
+    KEY_POWER = 0x83,
     KEY_F1 = 0x84,
     KEY_F2,
     KEY_F3,
@@ -118,25 +119,90 @@ enum keycode_e {
 };
 
 /**
+ * @brief UI event types.
+ */
+enum ui_event_type_e {
+    /**
+     * @brief Invalid/cleared.
+     */
+    UI_EVENT_TYPE_INVALID = 0,
+    /**
+     * @brief Beginning of touch/pen down event.
+     */
+    UI_EVENT_TYPE_TOUCH_BEGIN = 1,
+    /**
+     * @brief Touch/pen move event.
+     */
+    UI_EVENT_TYPE_TOUCH_MOVE = 2,
+    /**
+     * @brief End of touch/pen up event.
+     */
+    UI_EVENT_TYPE_TOUCH_END = 8,
+    /**
+     * @brief Key(s) pressed.
+     */
+    UI_EVENT_TYPE_KEY = 16,
+};
+
+/**
  * @brief Structure for low level UI events
  */
 typedef struct {
-    /** Unknown. */
-    void *unk0; // 0-4 sometimes a pointer especially on unstable USB connection? junk data?
-    /** Seems to be the type of event (0x10 being key event) */
-    int event_type; // 4-8 16: key (?).
-    /** Keycode for the first pressed key. */
-    short key_code0; // 8-10
     /**
-     * @brief Keycode for the second pressed key.
-     * @details Note that depending on the exact keys pressed simultaneously, this is not always accurate.
+     * @brief Unknown.
+     * @details Maybe used on event types other than touch and key press.
      */
-    short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
-    /** Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown. */
+    void *unk0; // 0-4 sometimes a pointer especially on unstable USB connection? junk data?
+    /**
+     * @brief The type of event (0x10 being key event)
+     * @see ui_event_type_e List of event types.
+     */
+    int event_type; // 4-8 16: key (?).
+    union {
+        struct {
+            /** 
+             * @brief Keycode for the first pressed key.
+             * @details Only available when ::event_type is ui_event_type_e::UI_EVENT_TYPE_KEY.
+             */
+            short key_code0; // 8-10
+            /**
+             * @brief Keycode for the second pressed key.
+             * @details Only available when ::event_type is ui_event_type_e::UI_EVENT_TYPE_KEY.
+             * @note Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover,
+             * some devices may lack support of simultaneous key presses.
+             */
+            short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
+        };
+        struct {
+            /**
+             * @brief The X coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::event_type is ui_event_type_e::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ui_event_type_e::UI_EVENT_TYPE_TOUCH_MOVE, or ui_event_type_e::UI_EVENT_TYPE_TOUCH_END.
+             */
+            short touch_x;
+            /**
+             * @brief The Y coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::event_type is ui_event_type_e::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ui_event_type_e::UI_EVENT_TYPE_TOUCH_MOVE, or ui_event_type_e::UI_EVENT_TYPE_TOUCH_END.
+             */
+            short touch_y;
+        };
+    };
+    /**
+     * @brief Unknown.
+     * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
+     */
     void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
-    /** Unknown. */
+    /**
+     * @brief Unknown.
+     * @details Maybe used on event types other than touch and key press.
+     */
     void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
-    /** Unknown. */
+    /**
+     * @brief Unknown.
+     * @details Seems to be always 0, although ClearEvent() explicitly sets this to 0. Maybe used on event types other
+     * than touch and key press.
+     */
     void *unk20; // 20-24 seems to be always 0. Unused?
 } ui_event_t;
 
