@@ -141,7 +141,54 @@ typedef struct {
 } ui_event_t;
 
 /**
+ * @brief Configuration struct for key press event generator.
+ * @details
+ * The generator is responsible for detecting long key presses and sending repeated "pressed" events when such long
+ * presses are detected.
+ *
+ * The intervals below have the resolution of 25ms per step and the actual millisecond value needs to be calculated by
+ * using `milliseconds = 25ms * (interval + 1)`. That is, setting the interval to 0 will give you 25ms of delay,
+ * setting it to 1 will give you 50ms, and so forth.
+ * 
+ * The `beep_on_press` value sets the system configuration variable `0x10` (SYS_CONFIG_BEEP_ON_EVENT) that will reflect
+ * in the settings app. This is, however, temporary and will reset when the user reboots the system.
+ */
+typedef struct {
+    /**
+     * @brief Delay interval before triggering long press repeat.
+     */
+    unsigned short long_press_delay;
+    /**
+     * @brief Repeat rate when long press repeat is triggered.
+     */
+    unsigned short long_press_repeat_rate;
+    /**
+     * @brief Whether or not to beep on key/touchscreen presses.
+     */
+    unsigned short beep_on_press;
+} key_press_event_config_t;
+
+/**
+ * @brief Read current configuration of key event generator.
+ * @x_syscall_num 0x10032
+ * @param config The configuration struct for holding the exported configuration.
+ * @x_void_return
+ * @see key_press_event_config_t The config struct and details on the expected format.
+ */
+void GetSysKeyState(key_press_event_config_t *config);
+
+/**
+ * @brief Configure key event generator.
+ * @x_syscall_num 0x10033
+ * @param config The configuration struct to be imported.
+ * @x_void_return
+ * @see key_press_event_config_t The config struct and details on the expected format.
+ */
+void SetSysKeyState(const key_press_event_config_t *config);
+
+/**
  * @brief Discard all unprocessed UI events.
+ * @x_syscall_num `0x1004a`
  * @x_void
  */
 extern void ClearAllEvents();
@@ -149,6 +196,7 @@ extern void ClearAllEvents();
 /**
  * @brief Process pending events.
  * @details Exact purpose of this function is currently unclear.
+ * @x_syscall_num `0x10046`
  * @param event pointer to a ::ui_event_t struct.
  * @retval true Some events were processed.
  * @retval false No event was processed.
@@ -160,6 +208,7 @@ extern bool TestPendEvent(ui_event_t *event);
  * @brief Process pending key events.
  * @details Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses,
  * etc.
+ * @x_syscall_num `0x1004b`
  * @param event pointer to a ::ui_event_t struct.
  * @retval true Some events were processed.
  * @retval false No event was processed.
@@ -171,11 +220,22 @@ extern bool TestKeyEvent(ui_event_t *event);
  * @brief Get event.
  * @details Exact purpose of this function is currently unclear. It may be responsible for setting some fields in
  * the ::ui_event_t struct.
- * @param[out] event pointer to a ::ui_event_t struct.
+ * @x_syscall_num `0x1003f`
+ * @note This function will block when there is currently no event to be processed.
+ * @param[out] event Pointer to a ::ui_event_t struct.
  * @retval true Some events were returned.
  * @retval false No event was returned.
  */
 extern bool GetEvent(ui_event_t *event);
+
+/**
+ * @brief Invalidate an event struct
+ * @details This function zeros out ui_event_t::event_type and ui_event_t::unk20.
+ * @x_syscall_num `0x10049`
+ * @param[out] event Pointer to a ::ui_event_t struct.
+ * @x_void_return
+ */
+void ClearEvent(ui_event_t *event);
 
 #ifdef __cplusplus
 } // extern "C"

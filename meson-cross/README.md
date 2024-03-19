@@ -16,6 +16,12 @@ For Max Kellermann's CeGCC fork. Compiles in freestanding mode and no Windows CE
 
 Can be used to generate DLL replicas.
 
+## arm-none-bestaeabi
+
+For Muteki-flavored Arm GCC outputting AAELF.
+
+**Cannot** be used to generate DLL replicas, although AAELF shared object to DLL conversion is being looked at.
+
 ## arm-none-eabi
 
 For stock ARM GCC outputting AAELF.
