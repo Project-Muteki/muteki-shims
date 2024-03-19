@@ -171,7 +171,7 @@ typedef struct {
 /**
  * @brief Read current configuration of key event generator.
  * @x_syscall_num 0x10032
- * @param config The configuration struct for holding the exported configuration.
+ * @param[out] config The configuration struct for holding the exported configuration.
  * @x_void_return
  * @see key_press_event_config_t The config struct and details on the expected format.
  */
@@ -180,7 +180,7 @@ void GetSysKeyState(key_press_event_config_t *config);
 /**
  * @brief Configure key event generator.
  * @x_syscall_num 0x10033
- * @param config The configuration struct to be imported.
+ * @param[in] config The configuration struct to be imported.
  * @x_void_return
  * @see key_press_event_config_t The config struct and details on the expected format.
  */
@@ -220,8 +220,8 @@ extern bool TestKeyEvent(ui_event_t *event);
  * @brief Get event.
  * @details Exact purpose of this function is currently unclear. It may be responsible for setting some fields in
  * the ::ui_event_t struct.
- * @x_syscall_num `0x1003f`
  * @note This function will block when there is currently no event to be processed.
+ * @x_syscall_num `0x1003f`
  * @param[out] event Pointer to a ::ui_event_t struct.
  * @retval true Some events were returned.
  * @retval false No event was returned.
