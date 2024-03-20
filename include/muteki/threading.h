@@ -354,7 +354,7 @@ extern event_t *OSCreateEvent(short latch_on, int flag);
  * @return The result.
  * @see wait_result_t
  */
-extern wait_result_t *OSWaitForEvent(event_t *event, short timeout);
+extern wait_result_t OSWaitForEvent(event_t *event, short timeout);
 
 /**
  * @brief Set the event flag.

@@ -145,6 +145,28 @@ enum ui_event_type_e {
 };
 
 /**
+ * @brief Toggle key states.
+ */
+enum toggle_key_state_e {
+    /**
+     * @brief Toggle key is inactive.
+     * @details No event will/should be modified.
+     */
+    TOGGLE_KEY_INACTIVE = 0,
+    /**
+     * @brief Toggle key is active.
+     * @details Events may modified in case of SHIFT, and should be modified by the user in case of CAPS.
+     */
+    TOGGLE_KEY_ACTIVE,
+    /**
+     * @brief Toggle key is triggered and will deactivate itself.
+     * @details This is only seen on SHIFT where once another key is pressed, the toggle state will be set to this
+     * value.
+     */
+    TOGGLE_KEY_TRIGGERED,
+};
+
+/**
  * @brief Structure for low level UI events
  */
 typedef struct {
@@ -302,6 +324,42 @@ extern bool GetEvent(ui_event_t *event);
  * @x_void_return
  */
 void ClearEvent(ui_event_t *event);
+
+/**
+ * @brief Manually set the state of the SHIFT toggle key.
+ * @x_syscall_num `0x100ad`
+ * @param new_state The new state.
+ * @return The previous state.
+ * @see toggle_key_state_e Valid toggle key states.
+ */
+unsigned short SetShiftState(unsigned short new_state);
+
+/**
+ * @brief Manually set the state of the CAPS toggle key.
+ * @x_syscall_num `0x100ae`
+ * @param new_state The new state.
+ * @return The previous state.
+ * @see toggle_key_state_e Valid toggle key states.
+ */
+unsigned short SetCapsState(unsigned short new_state);
+
+/**
+ * @brief Get the state of the SHIFT toggle key.
+ * @x_syscall_num `0x100af`
+ * @x_void_param
+ * @return The current state.
+ * @see toggle_key_state_e Valid toggle key states.
+ */
+unsigned short GetShiftState();
+
+/**
+ * @brief Get the state of the SHIFT toggle key.
+ * @x_syscall_num `0x100af`
+ * @x_void_param
+ * @return The current state.
+ * @see toggle_key_state_e Valid toggle key states.
+ */
+unsigned short GetCapsState();
 
 #ifdef __cplusplus
 } // extern "C"
