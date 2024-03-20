@@ -220,6 +220,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ad23e002626a9b8e5b06b32178419966f"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI event types.  <a href="event_8h.html#ad23e002626a9b8e5b06b32178419966f">More...</a><br /></td></tr>
 <tr class="separator:ad23e002626a9b8e5b06b32178419966f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41db433e298d3572044a6b89993a5541" id="r_a41db433e298d3572044a6b89993a5541"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541">toggle_key_state_e</a> { <a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541a9049a0a8c683abb47b7aad26a9be5c37">TOGGLE_KEY_INACTIVE</a> = 0
+, <a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541a238b66768cfba9955b79267923345ef3">TOGGLE_KEY_ACTIVE</a>
+, <a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541a94931c479ed65c1f84d210e6843d6dc3">TOGGLE_KEY_TRIGGERED</a>
+ }</td></tr>
+<tr class="memdesc:a41db433e298d3572044a6b89993a5541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle key states.  <a href="event_8h.html#a41db433e298d3572044a6b89993a5541">More...</a><br /></td></tr>
+<tr class="separator:a41db433e298d3572044a6b89993a5541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -244,10 +250,49 @@ Functions</h2></td></tr>
 <tr class="memitem:a136666b9c0c1ba3629a1e511764ee2a7" id="r_a136666b9c0c1ba3629a1e511764ee2a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a136666b9c0c1ba3629a1e511764ee2a7">ClearEvent</a> (<a class="el" href="structui__event__t.html">ui_event_t</a> *event)</td></tr>
 <tr class="memdesc:a136666b9c0c1ba3629a1e511764ee2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate an event struct.  <br /></td></tr>
 <tr class="separator:a136666b9c0c1ba3629a1e511764ee2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefcce9b4e5bdb05a2cef5089686823df" id="r_aefcce9b4e5bdb05a2cef5089686823df"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#aefcce9b4e5bdb05a2cef5089686823df">SetShiftState</a> (unsigned short new_state)</td></tr>
+<tr class="memdesc:aefcce9b4e5bdb05a2cef5089686823df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually set the state of the SHIFT toggle key.  <br /></td></tr>
+<tr class="separator:aefcce9b4e5bdb05a2cef5089686823df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2d68be19f405ee8291eeb67703ff5d" id="r_a7c2d68be19f405ee8291eeb67703ff5d"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a7c2d68be19f405ee8291eeb67703ff5d">SetCapsState</a> (unsigned short new_state)</td></tr>
+<tr class="memdesc:a7c2d68be19f405ee8291eeb67703ff5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually set the state of the CAPS toggle key.  <br /></td></tr>
+<tr class="separator:a7c2d68be19f405ee8291eeb67703ff5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c84d1e8e6ae8109a050a2dfd746124" id="r_ab0c84d1e8e6ae8109a050a2dfd746124"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#ab0c84d1e8e6ae8109a050a2dfd746124">GetShiftState</a> ()</td></tr>
+<tr class="memdesc:ab0c84d1e8e6ae8109a050a2dfd746124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the state of the SHIFT toggle key.  <br /></td></tr>
+<tr class="separator:ab0c84d1e8e6ae8109a050a2dfd746124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47dd1a2f208c94df8b326f5bf264e590" id="r_a47dd1a2f208c94df8b326f5bf264e590"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a47dd1a2f208c94df8b326f5bf264e590">GetCapsState</a> ()</td></tr>
+<tr class="memdesc:a47dd1a2f208c94df8b326f5bf264e590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the state of the SHIFT toggle key.  <br /></td></tr>
+<tr class="separator:a47dd1a2f208c94df8b326f5bf264e590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Low-level UI event handing API. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a41db433e298d3572044a6b89993a5541" name="a41db433e298d3572044a6b89993a5541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41db433e298d3572044a6b89993a5541">&#9670;&#160;</a></span>toggle_key_state_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541">toggle_key_state_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Toggle key states. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a41db433e298d3572044a6b89993a5541a9049a0a8c683abb47b7aad26a9be5c37" name="a41db433e298d3572044a6b89993a5541a9049a0a8c683abb47b7aad26a9be5c37"></a>TOGGLE_KEY_INACTIVE&#160;</td><td class="fielddoc"><p>Toggle key is inactive. </p>
+<p>No event will/should be modified. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a41db433e298d3572044a6b89993a5541a238b66768cfba9955b79267923345ef3" name="a41db433e298d3572044a6b89993a5541a238b66768cfba9955b79267923345ef3"></a>TOGGLE_KEY_ACTIVE&#160;</td><td class="fielddoc"><p>Toggle key is active. </p>
+<p>Events may modified in case of SHIFT, and should be modified by the user in case of CAPS. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a41db433e298d3572044a6b89993a5541a94931c479ed65c1f84d210e6843d6dc3" name="a41db433e298d3572044a6b89993a5541a94931c479ed65c1f84d210e6843d6dc3"></a>TOGGLE_KEY_TRIGGERED&#160;</td><td class="fielddoc"><p>Toggle key is triggered and will deactivate itself. </p>
+<p>This is only seen on SHIFT where once another key is pressed, the toggle state will be set to this value. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ad23e002626a9b8e5b06b32178419966f" name="ad23e002626a9b8e5b06b32178419966f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad23e002626a9b8e5b06b32178419966f">&#9670;&#160;</a></span>ui_event_type_e</h2>
 
@@ -337,6 +382,29 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a47dd1a2f208c94df8b326f5bf264e590" name="a47dd1a2f208c94df8b326f5bf264e590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47dd1a2f208c94df8b326f5bf264e590">&#9670;&#160;</a></span>GetCapsState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short GetCapsState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the state of the SHIFT toggle key. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100af</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The current state. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541" title="Toggle key states.">toggle_key_state_e</a> Valid toggle key states. </dd></dl>
+
+</div>
+</div>
 <a id="a9a41667de6a37b2a6b2c6fa1020197de" name="a9a41667de6a37b2a6b2c6fa1020197de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a41667de6a37b2a6b2c6fa1020197de">&#9670;&#160;</a></span>GetEvent()</h2>
 
@@ -380,6 +448,29 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab0c84d1e8e6ae8109a050a2dfd746124" name="ab0c84d1e8e6ae8109a050a2dfd746124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c84d1e8e6ae8109a050a2dfd746124">&#9670;&#160;</a></span>GetShiftState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short GetShiftState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the state of the SHIFT toggle key. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100af</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The current state. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541" title="Toggle key states.">toggle_key_state_e</a> Valid toggle key states. </dd></dl>
+
+</div>
+</div>
 <a id="a562d456e1940f303308135ac5dac9788" name="a562d456e1940f303308135ac5dac9788"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a562d456e1940f303308135ac5dac9788">&#9670;&#160;</a></span>GetSysKeyState()</h2>
 
@@ -406,6 +497,64 @@ Functions</h2></td></tr>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="structkey__press__event__config__t.html" title="Configuration struct for key press event generator.">key_press_event_config_t</a> The config struct and details on the expected format. </dd></dl>
+
+</div>
+</div>
+<a id="a7c2d68be19f405ee8291eeb67703ff5d" name="a7c2d68be19f405ee8291eeb67703ff5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2d68be19f405ee8291eeb67703ff5d">&#9670;&#160;</a></span>SetCapsState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short SetCapsState </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>new_state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Manually set the state of the CAPS toggle key. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100ae</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_state</td><td>The new state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The previous state. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541" title="Toggle key states.">toggle_key_state_e</a> Valid toggle key states. </dd></dl>
+
+</div>
+</div>
+<a id="aefcce9b4e5bdb05a2cef5089686823df" name="aefcce9b4e5bdb05a2cef5089686823df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefcce9b4e5bdb05a2cef5089686823df">&#9670;&#160;</a></span>SetShiftState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short SetShiftState </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>new_state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Manually set the state of the SHIFT toggle key. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100ad</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_state</td><td>The new state. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The previous state. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#a41db433e298d3572044a6b89993a5541" title="Toggle key states.">toggle_key_state_e</a> Valid toggle key states. </dd></dl>
 
 </div>
 </div>

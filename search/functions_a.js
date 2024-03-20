@@ -27,7 +27,7 @@ var searchData=
   ['ossleep_24',['OSSleep',['../threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573',1,'threading.h']]],
   ['ossuspendthread_25',['OSSuspendThread',['../threading_8h.html#a68f7f1d664f59e44a053e3315d535149',1,'threading.h']]],
   ['osterminatethread_26',['OSTerminateThread',['../threading_8h.html#a501631f9151a55beb4d2a83970719908',1,'threading.h']]],
-  ['oswaitforevent_27',['OSWaitForEvent',['../threading_8h.html#ab3725ca9e15fd10816ce4dae7269c9b4',1,'threading.h']]],
+  ['oswaitforevent_27',['OSWaitForEvent',['../threading_8h.html#a34f3cc6c816dacac97833dba8bd6e9aa',1,'threading.h']]],
   ['oswaitforsemaphore_28',['OSWaitForSemaphore',['../threading_8h.html#a5705850a45b85e46c7cfb47664e96af2',1,'threading.h']]],
   ['oswakeupthread_29',['OSWakeUpThread',['../threading_8h.html#ac9f04845ce0de664c4620ef60a8a5ea7',1,'threading.h']]]
 ];

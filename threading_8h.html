@@ -213,9 +213,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a96e36f60487d5facd5fff4acd9e4ee7e" id="r_a96e36f60487d5facd5fff4acd9e4ee7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a96e36f60487d5facd5fff4acd9e4ee7e">OSCreateEvent</a> (short latch_on, int flag)</td></tr>
 <tr class="memdesc:a96e36f60487d5facd5fff4acd9e4ee7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an event descriptor.  <br /></td></tr>
 <tr class="separator:a96e36f60487d5facd5fff4acd9e4ee7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3725ca9e15fd10816ce4dae7269c9b4" id="r_ab3725ca9e15fd10816ce4dae7269c9b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#ab3725ca9e15fd10816ce4dae7269c9b4">OSWaitForEvent</a> (<a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *event, short timeout)</td></tr>
-<tr class="memdesc:ab3725ca9e15fd10816ce4dae7269c9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for an event.  <br /></td></tr>
-<tr class="separator:ab3725ca9e15fd10816ce4dae7269c9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f3cc6c816dacac97833dba8bd6e9aa" id="r_a34f3cc6c816dacac97833dba8bd6e9aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a34f3cc6c816dacac97833dba8bd6e9aa">OSWaitForEvent</a> (<a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *event, short timeout)</td></tr>
+<tr class="memdesc:a34f3cc6c816dacac97833dba8bd6e9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for an event.  <br /></td></tr>
+<tr class="separator:a34f3cc6c816dacac97833dba8bd6e9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af312408ba9f92e3c22b3b67bd2cc6109" id="r_af312408ba9f92e3c22b3b67bd2cc6109"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#af312408ba9f92e3c22b3b67bd2cc6109">OSSetEvent</a> (<a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *event)</td></tr>
 <tr class="memdesc:af312408ba9f92e3c22b3b67bd2cc6109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the event flag.  <br /></td></tr>
 <tr class="separator:af312408ba9f92e3c22b3b67bd2cc6109"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -494,7 +494,7 @@ Functions</h2></td></tr>
 <p>Create an event descriptor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">latch_on</td><td>Set to non-0 will inhibit the event from getting cleared after a <a class="el" href="threading_8h.html#ab3725ca9e15fd10816ce4dae7269c9b4" title="Wait for an event.">OSWaitForEvent()</a> is resolved. </td></tr>
+    <tr><td class="paramname">latch_on</td><td>Set to non-0 will inhibit the event from getting cleared after a <a class="el" href="threading_8h.html#a34f3cc6c816dacac97833dba8bd6e9aa" title="Wait for an event.">OSWaitForEvent()</a> is resolved. </td></tr>
     <tr><td class="paramname">flag</td><td>The initial flag value. Can be either 0 or 1. </td></tr>
   </table>
   </dd>
@@ -1405,8 +1405,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab3725ca9e15fd10816ce4dae7269c9b4" name="ab3725ca9e15fd10816ce4dae7269c9b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3725ca9e15fd10816ce4dae7269c9b4">&#9670;&#160;</a></span>OSWaitForEvent()</h2>
+<a id="a34f3cc6c816dacac97833dba8bd6e9aa" name="a34f3cc6c816dacac97833dba8bd6e9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f3cc6c816dacac97833dba8bd6e9aa">&#9670;&#160;</a></span>OSWaitForEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1415,7 +1415,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a> * OSWaitForEvent </td>
+          <td class="memname"><a class="el" href="threading_8h.html#a4726bf81387f879f3c5f66660a6bd3d5">wait_result_t</a> OSWaitForEvent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb">event_t</a> *&#160;</td>
           <td class="paramname"><em>event</em>, </td>
