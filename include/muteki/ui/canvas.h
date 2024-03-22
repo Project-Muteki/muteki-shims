@@ -458,7 +458,7 @@ extern int GetFontHeight(uint8_t font_type);
  * @param ... Any subsequent values.
  * @x_void_return
  */
-extern void Printf(char *format, ...);
+extern void Printf(const char *format, ...);
 
 /**
  * @brief Format and draw a string aligned to the top left corner at `(x, y)` px.
