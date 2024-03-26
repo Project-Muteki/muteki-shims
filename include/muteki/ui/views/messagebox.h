@@ -107,6 +107,7 @@ enum message_box_result_t {
  * @details Create and show a message box view with the specified `text`, an icon and one or more buttons, and return
  * which button on the message box is pressed when the user dismisses it. The `type` argument controls the icon and
  * buttons shown on the message box view.
+ * @x_syscall_num `0x1013d`
  * @param text UTF-16 encoded text to be displayed on the message box.
  * @param type The message box type.
  * @return Which button is pressed to dismiss the message box.
