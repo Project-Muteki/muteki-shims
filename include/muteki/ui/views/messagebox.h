@@ -77,7 +77,7 @@ enum message_box_type_e {
 /**
  * @brief Results returned by the MessageBox() function after the user dismisses the message box.
  */
-enum message_box_result_t {
+enum message_box_result_e {
     /**
      * @brief The OK button was pressed by the user.
      * @details Pressing `Y` key on the keyboard could also trigger this (specifically when OK button is enabled via
@@ -104,17 +104,28 @@ enum message_box_result_t {
 
 /**
  * @brief High level message box function.
- * @details Create and show a message box view with the specified `text`, an icon and one or more buttons, and return
+ * @details
+ * Create and show a message box view with the specified `text`, an icon and one or more buttons, and return
  * which button on the message box is pressed when the user dismisses it. The `type` argument controls the icon and
  * buttons shown on the message box view.
+ *
+ * Message boxes can be dismissed by 3 ways: Pressing the button on the message box (including selecting them and
+ * pressing Enter), using the key bind (`Y` for OK/Yes, `N` for No and `C` for cancel) or pressing the ESC key when
+ * Cancel-like operations are defined (i.e. Cancel or No, with Cancel taking precedence when both are shown).
+ *
+ * When OK and Yes are both available, what the user has selected takes precedence. That is, if the user selects Yes
+ * button instead of the OK button with TAB or arrow keys, pressing the `Y` key on the keyboard will make the function
+ * return message_box_result_e::MB_RESULT_YES instead of message_box_result_e::MB_RESULT_OK.
+ *
  * @x_syscall_num `0x1013d`
+ *
  * @param text UTF-16 encoded text to be displayed on the message box.
  * @param type The message box type.
  * @return Which button is pressed to dismiss the message box.
  * @see message_box_type_e Valid message box types.
- * @see message_box_result_t Valid return values of this function.
+ * @see message_box_result_e Valid return values of this function.
  */
-int MessageBox(UTF16 *text, unsigned short type);
+extern int MessageBox(UTF16 *text, unsigned short type);
 
 #ifdef __cplusplus
 } // extern "C"
