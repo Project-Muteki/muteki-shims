@@ -221,11 +221,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read a value from an INI file. </p>
-<p>For values, the function will copy at most <code>outsize - 1</code> bytes and the last byte in the <code>out</code> buffer will always be set to <code>'\0'</code>. For listing names, the function will output at most <code>outsize - 2</code> bytes, with the last 2 bytes always set to <code>'\0'</code> with the first one being a string terminator and the second one being a list terminator. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10111</code> </dd></dl>
+<p>For values, the function will copy at most <code>outsize - 1</code> bytes and the last byte in the <code>out</code> buffer will always be set to <code>'\0'</code>. </p><dl class="section warning"><dt>Warning</dt><dd>It is unsafe to use this function as not all systems check <code>outsize</code> and buffer overrun is not preventable on such systems. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The section/key listing behavior as seen in the corresponding Win32 API call is unimplemented and setting <code>section</code> or <code>key</code> to <code>NULL</code> seems to only let the call fail unconditionally. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10111</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">section</td><td>The section where the key is located, or <code>NULL</code> to list all available sections. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">key</td><td>The key, or <code>NULL</code> to list all available keys. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">section</td><td>The section where the key is located. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">key</td><td>The key. </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">default_value</td><td>The default value to be copied to <code>out</code> when the key does not exist in the INI file, or <code>""</code> when set to <code>NULL</code>. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Pointer to the output buffer. </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">outsize</td><td>Maximum size of the output buffer. </td></tr>
