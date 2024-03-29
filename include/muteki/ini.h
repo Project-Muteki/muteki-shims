@@ -34,7 +34,7 @@ extern unsigned int _GetPrivateProfileInt(const char *section, const char *key, 
  * @brief Read a value from an INI file.
  * @details For values, the function will copy at most `outsize - 1` bytes and the last byte in the `out` buffer will
  * always be set to <tt>'\0'</tt>. For listing names, the function will output at most `outsize - 2` bytes, with the
- * last 2 bytes always set to <tt>'\0'<tt> with the first one being a string terminator and the second one being a list
+ * last 2 bytes always set to <tt>'\0'</tt> with the first one being a string terminator and the second one being a list
  * terminator.
  * @x_syscall_num `0x10111`
  * @param section The section where the key is located, or `NULL` to list all available sections.
