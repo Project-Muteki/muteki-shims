@@ -7,10 +7,9 @@
  * @file ini.h
  * @brief INI file operation API.
  * @details The functions in this API have the same names (other than the prefixed underscore) and function signatures
- * as their
- * [Win32 API counterpart](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofileint)
- * . However some behaviors in the original Win32 API were missing or altered, particularly on how these functions
- * handle `NULL`s. Therefore one should not treat them in the same way as treating their Win32 API counterpart.
+ * as their [Win32 API counterpart](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofileint).
+ * However some behaviors seen in the original Win32 API were missing or altered, particularly on how these functions
+ * handle `NULL`s. Therefore one should not treat them the same way as treating their Win32 API counterpart.
  */
 
 #ifndef __MUTEKI_INI_H__
@@ -73,7 +72,6 @@ extern unsigned int _GetPrivateProfileString(
  * @retval false @x_term ng
  */
 extern bool _WritePrivateProfileString(const char *section, const char *key, const char *value, const char *path);
-
 
 #ifdef __cplusplus
 } // extern "C"

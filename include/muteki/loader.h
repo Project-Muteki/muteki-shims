@@ -45,7 +45,7 @@ typedef struct {
 } applet_args_v4_t;
 
 /**
- * @brief Load an app executable.
+ * @brief Load an applet executable.
  * @details The `pathname` specified must be a DOS 8.3 name.
  * @param pathname Path to executable.
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
