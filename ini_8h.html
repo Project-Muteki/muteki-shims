@@ -94,12 +94,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6045044918b022bff70f77a96f5ba636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a value from an INI file.  <br /></td></tr>
 <tr class="separator:a6045044918b022bff70f77a96f5ba636"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefc10dd4aac37ebf36eea922baf0fbbc" id="r_aefc10dd4aac37ebf36eea922baf0fbbc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ini_8h.html#aefc10dd4aac37ebf36eea922baf0fbbc">_WritePrivateProfileString</a> (const char *section, const char *key, const char *value, const char *path)</td></tr>
-<tr class="memdesc:aefc10dd4aac37ebf36eea922baf0fbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a value to or remove a value from an INI file.  <br /></td></tr>
+<tr class="memdesc:aefc10dd4aac37ebf36eea922baf0fbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a value to an INI file.  <br /></td></tr>
 <tr class="separator:aefc10dd4aac37ebf36eea922baf0fbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>INI file operation API. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>This is mostly ripped from MSDN. Verification needed. Specifically some of the behaviors around <code>NULL</code> handling. </dd></dl>
+<p>The functions in this API have the same names (other than the prefixed underscore) and function signatures as their <a href="https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getprivateprofileint">Win32 API counterpart</a> . However some behaviors in the original Win32 API were missing or altered, particularly on how these functions handle <code>NULL</code>s. Therefore one should not treat them in the same way as treating their Win32 API counterpart. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1ae1d7d1b99de0c767955f9e4e13ee29" name="a1ae1d7d1b99de0c767955f9e4e13ee29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ae1d7d1b99de0c767955f9e4e13ee29">&#9670;&#160;</a></span>_GetPrivateProfileInt()</h2>
@@ -154,7 +154,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">section</td><td>The section where the key is located. </td></tr>
     <tr><td class="paramname">key</td><td>The key. </td></tr>
     <tr><td class="paramname">default_value</td><td>The default value to be returned when the key does not exist in the INI file. </td></tr>
-    <tr><td class="paramname">path</td><td>Path to INI file. </td></tr>
+    <tr><td class="paramname">path</td><td>DOS 8.3 path to INI file. </td></tr>
   </table>
   </dd>
 </dl>
@@ -231,7 +231,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir"></td><td class="paramname">default_value</td><td>The default value to be copied to <code>out</code> when the key does not exist in the INI file, or <code>""</code> when set to <code>NULL</code>. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Pointer to the output buffer. </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">outsize</td><td>Maximum size of the output buffer. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">path</td><td>Path to INI file. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">path</td><td>DOS 8.3 path to INI file. </td></tr>
   </table>
   </dd>
 </dl>
@@ -285,14 +285,14 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Write a value to or remove a value from an INI file. </p>
-<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10112</code> </dd></dl>
+<p>Write a value to an INI file. </p>
+<p><code>NULL</code> in <code>section</code>, <code>key</code> or <code>value</code> will be interpreted as the string <code>"&lt;NULL&gt;"</code>. A <code>NULL</code> key but not a <code>NULL</code> section seems to also cause the function to stop using the specified section. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10112</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">section</td><td>The section where the key is located. </td></tr>
-    <tr><td class="paramname">key</td><td>The key, or <code>NULL</code> to remove this section. </td></tr>
-    <tr><td class="paramname">value</td><td>The value, or <code>NULL</code> to remove this key. </td></tr>
-    <tr><td class="paramname">path</td><td>Path to INI file. </td></tr>
+    <tr><td class="paramname">key</td><td>The key. </td></tr>
+    <tr><td class="paramname">value</td><td>The value. </td></tr>
+    <tr><td class="paramname">path</td><td>DOS 8.3 path to INI file. </td></tr>
   </table>
   </dd>
 </dl>

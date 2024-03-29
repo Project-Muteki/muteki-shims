@@ -432,7 +432,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Process flags for blit operations. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?) </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05" name="a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05"></a>BLIT_NONE&#160;</td><td class="fielddoc"><p>Nothing. </p>
 </td></tr>
@@ -480,7 +480,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Process flags for string and character printing. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!). </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf" name="a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf"></a>PRINT_NONE&#160;</td><td class="fielddoc"><p>No extra process. </p>
 </td></tr>
@@ -490,7 +490,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224" name="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224"></a>PRINT_INVERT_ALT&#160;</td><td class="fielddoc"><p>Seems to be an alternative version of <code>PRINT_INVERT</code>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c" name="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c"></a>PRINT_UNDERSCORE_ONLY&#160;</td><td class="fielddoc"><p>Draw underscores only. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
 </td></tr>
 </table>
 
@@ -511,7 +511,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Process flags for string printing only. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752" name="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752"></a>PRINT_STR_ENCODING_BIG5&#160;</td><td class="fielddoc"><p>Assume text encoding to be BIG5 instead of UTF-16. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6" name="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6"></a>PRINT_STR_ENCODING_GB18030&#160;</td><td class="fielddoc"><p>Assume text encoding to be GB18030 instead of UTF-16. </p>
 </td></tr>
@@ -1049,7 +1049,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Get the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
 
@@ -2005,7 +2005,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Set the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_type</td><td>The new cursor type. </td></tr>
@@ -2247,7 +2247,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Draw a surface onto current active LCD. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>More details. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>More details. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10059</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
