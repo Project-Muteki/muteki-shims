@@ -167,6 +167,7 @@ typedef struct SYS_ALIGN(2) {
 
 /**
  * @brief Rectangle used to represent usable drawing area in an LCD descriptor.
+ * @details The area is double-inclusive (i.e. `{0, 0, 479, 271}` represents an area of 480x272 px).
  */
 typedef struct {
     /** @brief @x_term x0 */
@@ -472,15 +473,16 @@ extern void PrintfXY(short x, short y, const char *format, ...);
 
 /**
  * @brief Draw a surface onto current active LCD.
- * @todo More details.
+ * @details If `surface` is set to `NULL` this will fail gracefully.
  * @x_syscall_num `0x10059`
  * @param x X coordinate.
  * @param y Y coordinate.
  * @param surface The surface descriptor.
- * @param flags
+ * @param flags Processing flags.
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  * @see blit_flag_e Accepted processing flags.
+ * @see PutImage A simplified version of this function.
  */
 extern int ShowGraphic(short x, short y, lcd_surface_t *surface, unsigned short flags);
 
@@ -746,6 +748,36 @@ extern lcd_t *SetActiveLCD(lcd_t *new_lcd);
  * @return The current active LCD descriptor.
  */
 extern lcd_t *GetActiveLCD();
+
+/**
+ * @brief Copy a rectangle of pixels from current active LCD and save it to the specified buffer.
+ * @details This is similar to using _BitBlt() on the active LCD surface but with a seemingly different implementation
+ * and a different function signature. Surface initialization is done implicitly by this function although calling
+ * GetImageSize() in user code is still required in order to allocate a buffer of appropriate size.
+ * @x_syscall_num `0x10071`
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
+ * @param surface Target buffer that will hold the surface.
+ * @return Size of the surface.
+ */
+extern size_t GetImage(short x0, short y0, short x1, short y1, lcd_surface_t *surface);
+
+/**
+ * @brief Copy pixels from a surface to current active LCD.
+ * @details This is very similar to ShowGraphic() except that it does not check whether or not `surface` is `NULL` and
+ * there is no indication of whether or not the process was completed successfully.
+ * @x_syscall_num `0x10072`
+ * @param x X coordinate.
+ * @param y Y coordinate.
+ * @param surface The surface descriptor.
+ * @param flags Processing flags.
+ * @x_void_return
+ * @see blit_flag_e Accepted processing flags.
+ * @see ShowGraphic A function that pretty much does the same thing but with `NULL` check and a return value.
+ */
+extern void PutImage(short x, short y, lcd_surface_t *surface, unsigned short flags);
 
 /**
  * @brief Set the drawing area of the current active LCD.
