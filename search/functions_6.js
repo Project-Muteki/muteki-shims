@@ -14,12 +14,13 @@ var searchData=
   ['getfontheight_11',['GetFontHeight',['../canvas_8h.html#a009e14c23044791c4250d8242ec811c4',1,'canvas.h']]],
   ['getfonttype_12',['GetFontType',['../canvas_8h.html#a7078127e59f0a75d66343edf2c7769fd',1,'canvas.h']]],
   ['getfreememory_13',['GetFreeMemory',['../memory_8h.html#a11e993980c4031eb09cafad85ddeb952',1,'memory.h']]],
-  ['getimagesize_14',['GetImageSize',['../canvas_8h.html#ababbf47f56c76a835a04e8709859bca0',1,'canvas.h']]],
-  ['getimagesizeext_15',['GetImageSizeExt',['../canvas_8h.html#a6657b1c8003221140be603fc3c696150',1,'canvas.h']]],
-  ['getmaxscrx_16',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
-  ['getmaxscry_17',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
-  ['getshiftstate_18',['GetShiftState',['../event_8h.html#ab0c84d1e8e6ae8109a050a2dfd746124',1,'event.h']]],
-  ['getsyskeystate_19',['GetSysKeyState',['../event_8h.html#a562d456e1940f303308135ac5dac9788',1,'event.h']]],
-  ['getsystime_20',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]],
-  ['gettimer1inthandler_21',['GetTimer1IntHandler',['../system_8h.html#a77c18dab7a63ff188e452878d5907582',1,'system.h']]]
+  ['getimage_14',['GetImage',['../canvas_8h.html#a9e4671aa490d9de31beb0218ac34e5d8',1,'canvas.h']]],
+  ['getimagesize_15',['GetImageSize',['../canvas_8h.html#ababbf47f56c76a835a04e8709859bca0',1,'canvas.h']]],
+  ['getimagesizeext_16',['GetImageSizeExt',['../canvas_8h.html#a6657b1c8003221140be603fc3c696150',1,'canvas.h']]],
+  ['getmaxscrx_17',['GetMaxScrX',['../canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3',1,'canvas.h']]],
+  ['getmaxscry_18',['GetMaxScrY',['../canvas_8h.html#a2cc461b63c80d037a13699ad36de4c37',1,'canvas.h']]],
+  ['getshiftstate_19',['GetShiftState',['../event_8h.html#ab0c84d1e8e6ae8109a050a2dfd746124',1,'event.h']]],
+  ['getsyskeystate_20',['GetSysKeyState',['../event_8h.html#a562d456e1940f303308135ac5dac9788',1,'event.h']]],
+  ['getsystime_21',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]],
+  ['gettimer1inthandler_22',['GetTimer1IntHandler',['../system_8h.html#a77c18dab7a63ff188e452878d5907582',1,'system.h']]]
 ];

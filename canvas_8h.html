@@ -323,6 +323,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:a38aa2abfb190ac0a0a12249df8020ed7" id="r_a38aa2abfb190ac0a0a12249df8020ed7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a> ()</td></tr>
 <tr class="memdesc:a38aa2abfb190ac0a0a12249df8020ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current active LCD descriptor.  <br /></td></tr>
 <tr class="separator:a38aa2abfb190ac0a0a12249df8020ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e4671aa490d9de31beb0218ac34e5d8" id="r_a9e4671aa490d9de31beb0218ac34e5d8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a9e4671aa490d9de31beb0218ac34e5d8">GetImage</a> (short x0, short y0, short x1, short y1, <a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface)</td></tr>
+<tr class="memdesc:a9e4671aa490d9de31beb0218ac34e5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a rectangle of pixels from current active LCD and save it to the specified buffer.  <br /></td></tr>
+<tr class="separator:a9e4671aa490d9de31beb0218ac34e5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00fcaab305a3c8429dea4f6ff1350c5b" id="r_a00fcaab305a3c8429dea4f6ff1350c5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b">PutImage</a> (short x, short y, <a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface, unsigned short flags)</td></tr>
+<tr class="memdesc:a00fcaab305a3c8429dea4f6ff1350c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy pixels from a surface to current active LCD.  <br /></td></tr>
+<tr class="separator:a00fcaab305a3c8429dea4f6ff1350c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31d78d4e6fbdfd69a372ca29c697c0f8" id="r_a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a31d78d4e6fbdfd69a372ca29c697c0f8">SetDrawArea</a> (short x0, short y0, short x1, short y1)</td></tr>
 <tr class="memdesc:a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the drawing area of the current active LCD.  <br /></td></tr>
 <tr class="separator:a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -490,7 +496,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224" name="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224"></a>PRINT_INVERT_ALT&#160;</td><td class="fielddoc"><p>Seems to be an alternative version of <code>PRINT_INVERT</code>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c" name="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c"></a>PRINT_UNDERSCORE_ONLY&#160;</td><td class="fielddoc"><p>Draw underscores only. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
 </td></tr>
 </table>
 
@@ -511,7 +517,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Process flags for string printing only. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752" name="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752"></a>PRINT_STR_ENCODING_BIG5&#160;</td><td class="fielddoc"><p>Assume text encoding to be BIG5 instead of UTF-16. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6" name="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6"></a>PRINT_STR_ENCODING_GB18030&#160;</td><td class="fielddoc"><p>Assume text encoding to be GB18030 instead of UTF-16. </p>
 </td></tr>
@@ -1049,7 +1055,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Get the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
 
@@ -1105,10 +1111,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10074</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1180,6 +1186,74 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The current font type. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171" title="Font types.">font_type_e</a> Valid values for <code>font_type</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a9e4671aa490d9de31beb0218ac34e5d8" name="a9e4671aa490d9de31beb0218ac34e5d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e4671aa490d9de31beb0218ac34e5d8">&#9670;&#160;</a></span>GetImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t GetImage </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
+          <td class="paramname"><em>surface</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy a rectangle of pixels from current active LCD and save it to the specified buffer. </p>
+<p>This is similar to using <a class="el" href="canvas_8h.html#a1fa6c5c38a95c92f0b5c9e134311d637" title="Perform blit operation from src surface to dst surface.">_BitBlt()</a> on the active LCD surface but with a seemingly different implementation and a different function signature. Surface initialization is done implicitly by this function although calling <a class="el" href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0" title="Calculate the buffer size required for an all-in-one surface of a specific size.">GetImageSize()</a> in user code is still required in order to allocate a buffer of appropriate size. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10071</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">surface</td><td>Target buffer that will hold the surface. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Size of the surface. </dd></dl>
 
 </div>
 </div>
@@ -1518,6 +1592,70 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 
 </div>
 </div>
+<a id="a00fcaab305a3c8429dea4f6ff1350c5b" name="a00fcaab305a3c8429dea4f6ff1350c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00fcaab305a3c8429dea4f6ff1350c5b">&#9670;&#160;</a></span>PutImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PutImage </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
+          <td class="paramname"><em>surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy pixels from a surface to current active LCD. </p>
+<p>This is very similar to <a class="el" href="canvas_8h.html#a229f4c8b8227b91bf454504514feb41d" title="Draw a surface onto current active LCD.">ShowGraphic()</a> except that it does not check whether or not <code>surface</code> is <code>NULL</code> and there is no indication of whether or not the process was completed successfully. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10072</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate. </td></tr>
+    <tr><td class="paramname">surface</td><td>The surface descriptor. </td></tr>
+    <tr><td class="paramname">flags</td><td>Processing flags.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd>
+<dd>
+<a class="el" href="canvas_8h.html#a229f4c8b8227b91bf454504514feb41d" title="Draw a surface onto current active LCD.">ShowGraphic</a> A function that pretty much does the same thing but with <code>NULL</code> check and a return value. </dd></dl>
+
+</div>
+</div>
 <a id="aa7333109cd5c46ab957287b7722a1f77" name="aa7333109cd5c46ab957287b7722a1f77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7333109cd5c46ab957287b7722a1f77">&#9670;&#160;</a></span>rgbSetBkColor()</h2>
 
@@ -1645,10 +1783,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Move a rectangle down by <code>amount</code> pixels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -1713,10 +1851,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Move a rectangle left by <code>amount</code> pixels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -1781,10 +1919,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Move a rectangle right by <code>amount</code> pixels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -1849,10 +1987,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Move a rectangle up by <code>amount</code> pixels. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels.  </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -2005,7 +2143,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Set the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_type</td><td>The new cursor type. </td></tr>
@@ -2115,10 +2253,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>The new values will be rejected if they are out of bounds (specifically when <code>x0</code> or <code>x1</code> are negative or <code>x1</code> or <code>y1</code> are less than <code>x0</code> and <code>y0</code> respectively), although <code>x1</code> and <code>y1</code> will be automatically capped at the <em>physical</em> display size if they are larger than that instead of failing outright. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10073</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels.  </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels.  </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels. </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive). </td></tr>
   </table>
   </dd>
 </dl>
@@ -2247,14 +2385,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Draw a surface onto current active LCD. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>More details. </dd></dl>
-<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10059</code> </dd></dl>
+<p>If <code>surface</code> is set to <code>NULL</code> this will fail gracefully. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10059</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>X coordinate. </td></tr>
     <tr><td class="paramname">y</td><td>Y coordinate. </td></tr>
     <tr><td class="paramname">surface</td><td>The surface descriptor. </td></tr>
-    <tr><td class="paramname">flags</td><td></td></tr>
+    <tr><td class="paramname">flags</td><td>Processing flags. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2265,7 +2402,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd>
+<dd>
+<a class="el" href="canvas_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b" title="Copy pixels from a surface to current active LCD.">PutImage</a> A simplified version of this function. </dd></dl>
 
 </div>
 </div>
