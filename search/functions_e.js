@@ -12,10 +12,13 @@ var searchData=
   ['setdcobject_9',['SetDCObject',['../canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba',1,'canvas.h']]],
   ['setdrawarea_10',['SetDrawArea',['../canvas_8h.html#a31d78d4e6fbdfd69a372ca29c697c0f8',1,'canvas.h']]],
   ['setfonttype_11',['SetFontType',['../canvas_8h.html#a28a5b49726736ff576401ab01dbb844a',1,'canvas.h']]],
-  ['setshiftstate_12',['SetShiftState',['../event_8h.html#aefcce9b4e5bdb05a2cef5089686823df',1,'event.h']]],
-  ['setsyskeystate_13',['SetSysKeyState',['../event_8h.html#aadb561bb43ac9ff3ee25fa3751ae9c83',1,'event.h']]],
-  ['settimer1inthandler_14',['SetTimer1IntHandler',['../system_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30',1,'system.h']]],
-  ['settransparentcolor_15',['SetTransparentColor',['../canvas_8h.html#ad17969255790b1f018336f0c959dba82',1,'canvas.h']]],
-  ['showgraphic_16',['ShowGraphic',['../canvas_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'canvas.h']]],
-  ['sizeofgraphic_17',['SizeofGraphic',['../canvas_8h.html#a04239638c97cb1c6a52bb11f22223862',1,'canvas.h']]]
+  ['setpensize_12',['SetPenSize',['../canvas_8h.html#aac32dc657324d0159fa06fd4e80d7058',1,'canvas.h']]],
+  ['setpenstyle_13',['SetPenStyle',['../canvas_8h.html#afd45e3a5fc15cc28a6e81dc52f78362f',1,'canvas.h']]],
+  ['setpixel_14',['SetPixel',['../canvas_8h.html#a69560b4543015dac7002eaad1b9c3fa5',1,'canvas.h']]],
+  ['setshiftstate_15',['SetShiftState',['../event_8h.html#aefcce9b4e5bdb05a2cef5089686823df',1,'event.h']]],
+  ['setsyskeystate_16',['SetSysKeyState',['../event_8h.html#aadb561bb43ac9ff3ee25fa3751ae9c83',1,'event.h']]],
+  ['settimer1inthandler_17',['SetTimer1IntHandler',['../system_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30',1,'system.h']]],
+  ['settransparentcolor_18',['SetTransparentColor',['../canvas_8h.html#ad17969255790b1f018336f0c959dba82',1,'canvas.h']]],
+  ['showgraphic_19',['ShowGraphic',['../canvas_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'canvas.h']]],
+  ['sizeofgraphic_20',['SizeofGraphic',['../canvas_8h.html#a04239638c97cb1c6a52bb11f22223862',1,'canvas.h']]]
 ];

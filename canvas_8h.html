@@ -164,6 +164,33 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a7a3ebca299d07bdf69299b4a5dfb6345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation values used by lcd_rotate_callback_t.  <a href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345">More...</a><br /></td></tr>
 <tr class="separator:a7a3ebca299d07bdf69299b4a5dfb6345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a3ead8fb0194794e230be112a87d4cb" id="r_a2a3ead8fb0194794e230be112a87d4cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cb">stroke_predefined_dash_e</a> { <br />
+&#160;&#160;<a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3">DASH_NONE</a> = 0
+, <b>DASH_8_8_16_0</b>
+, <b>DASH_4</b>
+, <b>DASH_0_4_16_4_4_4</b>
+, <br />
+&#160;&#160;<b>DASH_12_4_4_4_4_4</b>
+, <b>DASH_1</b>
+, <b>DASH_2</b>
+, <b>DASH_16</b>
+, <br />
+&#160;&#160;<b>DASH_0_1_8_1_8_1_8_1_4_0</b> = 12
+, <b>DASH_4_1_8_1_7_1_9_1</b>
+, <b>DASH_3_1_7_1_7_1_4_8</b>
+, <b>DASH_3_1_7_1_7_1_7_1_4_0</b>
+, <br />
+&#160;&#160;<b>DASH_0_1_6_1_1_1_4_1_3_1_2_1_5_2_3_0</b>
+, <b>DASH_3_2_5_1_2_1_3_1_4_1_1_1_6_1</b>
+, <b>DASH_7_1_6_1_6_1_6_1_3_0</b>
+, <b>DASH_3_1_6_1_6_1_6_1_7_0</b>
+, <br />
+&#160;&#160;<b>DASH_24_8</b> = 22
+, <a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9">DASH_CUSTOM</a> = 0x100
+<br />
+ }</td></tr>
+<tr class="memdesc:a2a3ead8fb0194794e230be112a87d4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined dash patterns.  <a href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cb">More...</a><br /></td></tr>
+<tr class="separator:a2a3ead8fb0194794e230be112a87d4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -323,6 +350,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:a38aa2abfb190ac0a0a12249df8020ed7" id="r_a38aa2abfb190ac0a0a12249df8020ed7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a> ()</td></tr>
 <tr class="memdesc:a38aa2abfb190ac0a0a12249df8020ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current active LCD descriptor.  <br /></td></tr>
 <tr class="separator:a38aa2abfb190ac0a0a12249df8020ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd45e3a5fc15cc28a6e81dc52f78362f" id="r_afd45e3a5fc15cc28a6e81dc52f78362f"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#afd45e3a5fc15cc28a6e81dc52f78362f">SetPenStyle</a> (short dash, unsigned int *dash_pattern)</td></tr>
+<tr class="memdesc:afd45e3a5fc15cc28a6e81dc52f78362f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the stroke dash pattern.  <br /></td></tr>
+<tr class="separator:afd45e3a5fc15cc28a6e81dc52f78362f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acbe28ec925f009ee55bb95ab05d7fa" id="r_a3acbe28ec925f009ee55bb95ab05d7fa"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a3acbe28ec925f009ee55bb95ab05d7fa">GetPenStyle</a> (unsigned int *dash_pattern)</td></tr>
+<tr class="memdesc:a3acbe28ec925f009ee55bb95ab05d7fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stroke dash pattern.  <br /></td></tr>
+<tr class="separator:a3acbe28ec925f009ee55bb95ab05d7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7cd5a65f5a7da278f90506555efa55" id="r_a7a7cd5a65f5a7da278f90506555efa55"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a7a7cd5a65f5a7da278f90506555efa55">GetPenSize</a> ()</td></tr>
+<tr class="memdesc:a7a7cd5a65f5a7da278f90506555efa55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stroke width.  <br /></td></tr>
+<tr class="separator:a7a7cd5a65f5a7da278f90506555efa55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac32dc657324d0159fa06fd4e80d7058" id="r_aac32dc657324d0159fa06fd4e80d7058"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aac32dc657324d0159fa06fd4e80d7058">SetPenSize</a> (short size)</td></tr>
+<tr class="memdesc:aac32dc657324d0159fa06fd4e80d7058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the stroke width.  <br /></td></tr>
+<tr class="separator:aac32dc657324d0159fa06fd4e80d7058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d43ce8054b27206bbfc04a93ae3d49" id="r_af1d43ce8054b27206bbfc04a93ae3d49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#af1d43ce8054b27206bbfc04a93ae3d49">GetPixel</a> (short x, short y)</td></tr>
+<tr class="memdesc:af1d43ce8054b27206bbfc04a93ae3d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the RGB value of a pixel on the current active surface.  <br /></td></tr>
+<tr class="separator:af1d43ce8054b27206bbfc04a93ae3d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69560b4543015dac7002eaad1b9c3fa5" id="r_a69560b4543015dac7002eaad1b9c3fa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a69560b4543015dac7002eaad1b9c3fa5">SetPixel</a> (short x, short y, int color)</td></tr>
+<tr class="memdesc:a69560b4543015dac7002eaad1b9c3fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pixel color on the current active surface with the given pixel.  <br /></td></tr>
+<tr class="separator:a69560b4543015dac7002eaad1b9c3fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e4671aa490d9de31beb0218ac34e5d8" id="r_a9e4671aa490d9de31beb0218ac34e5d8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a9e4671aa490d9de31beb0218ac34e5d8">GetImage</a> (short x0, short y0, short x1, short y1, <a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface)</td></tr>
 <tr class="memdesc:a9e4671aa490d9de31beb0218ac34e5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a rectangle of pixels from current active LCD and save it to the specified buffer.  <br /></td></tr>
 <tr class="separator:a9e4671aa490d9de31beb0218ac34e5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -496,7 +541,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224" name="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224"></a>PRINT_INVERT_ALT&#160;</td><td class="fielddoc"><p>Seems to be an alternative version of <code>PRINT_INVERT</code>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c" name="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c"></a>PRINT_UNDERSCORE_ONLY&#160;</td><td class="fielddoc"><p>Draw underscores only. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
 </td></tr>
 </table>
 
@@ -517,7 +562,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p>Process flags for string printing only. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752" name="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752"></a>PRINT_STR_ENCODING_BIG5&#160;</td><td class="fielddoc"><p>Assume text encoding to be BIG5 instead of UTF-16. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6" name="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6"></a>PRINT_STR_ENCODING_GB18030&#160;</td><td class="fielddoc"><p>Assume text encoding to be GB18030 instead of UTF-16. </p>
 </td></tr>
@@ -552,6 +597,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607" name="a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607"></a>ROTATION_QUERY&#160;</td><td class="fielddoc"><p>Query the current rotation. Will not change the current location. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" name="a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493"></a>ROTATION_APPLY&#160;</td><td class="fielddoc"><p>Actually rotate the buffer. Used internally. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2a3ead8fb0194794e230be112a87d4cb" name="a2a3ead8fb0194794e230be112a87d4cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3ead8fb0194794e230be112a87d4cb">&#9670;&#160;</a></span>stroke_predefined_dash_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cb">stroke_predefined_dash_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Predefined dash patterns. </p>
+<p>The numbers here follows the SVG <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray">stroke-dasharray</a> property format. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Add graphic examples. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3" name="a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3"></a>DASH_NONE&#160;</td><td class="fielddoc"><p>Solid line. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9" name="a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9"></a>DASH_CUSTOM&#160;</td><td class="fielddoc"><p>Custom dash pattern. </p>
 </td></tr>
 </table>
 
@@ -1055,7 +1123,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Get the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
 
@@ -1418,6 +1486,96 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The Y coordinate of the bottom-most visible pixels. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a875cb08909fdf45af6fcb743e26e20b3" title="Get X coordinate of the rightmost visible pixels on the current canvas.">GetMaxScrX</a> Returns the X boundary instead. </dd></dl>
+
+</div>
+</div>
+<a id="a7a7cd5a65f5a7da278f90506555efa55" name="a7a7cd5a65f5a7da278f90506555efa55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7cd5a65f5a7da278f90506555efa55">&#9670;&#160;</a></span>GetPenSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short GetPenSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the stroke width. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1006d</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>Current stroke width in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="a3acbe28ec925f009ee55bb95ab05d7fa" name="a3acbe28ec925f009ee55bb95ab05d7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acbe28ec925f009ee55bb95ab05d7fa">&#9670;&#160;</a></span>GetPenStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short GetPenStyle </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>dash_pattern</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the stroke dash pattern. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1006c</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">dash_pattern</td><td>If not <code>NULL</code>, the current dash bit pattern. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The current predefined dash pattern. </dd></dl>
+
+</div>
+</div>
+<a id="af1d43ce8054b27206bbfc04a93ae3d49" name="af1d43ce8054b27206bbfc04a93ae3d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d43ce8054b27206bbfc04a93ae3d49">&#9670;&#160;</a></span>GetPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPixel </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the RGB value of a pixel on the current active surface. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This does not check for out-of-bound access. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1006f</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The RGB color value </dd></dl>
 
 </div>
 </div>
@@ -2143,7 +2301,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </div><div class="memdoc">
 
 <p>Set the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_type</td><td>The new cursor type. </td></tr>
@@ -2299,6 +2457,120 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171" title="Font types.">font_type_e</a> Valid values for <code>font_type</code>. </dd></dl>
+
+</div>
+</div>
+<a id="aac32dc657324d0159fa06fd4e80d7058" name="aac32dc657324d0159fa06fd4e80d7058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac32dc657324d0159fa06fd4e80d7058">&#9670;&#160;</a></span>SetPenSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short SetPenSize </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the stroke width. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1006e</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>New stroke width in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Previous stroke width in pixels. </dd></dl>
+
+</div>
+</div>
+<a id="afd45e3a5fc15cc28a6e81dc52f78362f" name="afd45e3a5fc15cc28a6e81dc52f78362f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd45e3a5fc15cc28a6e81dc52f78362f">&#9670;&#160;</a></span>SetPenStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short SetPenStyle </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>dash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>dash_pattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the stroke dash pattern. </p>
+<p>The dash bit patterns are simple 32-bit bitfields (in <b>big endian</b>). Each bit <code>1</code> represents a foreground colored pixel and bit <code>0</code> represents a background pixel, from left to right, MSB to LSB. For example, stroke-dasharray <code>1 7 4 4 2 6 4 4</code> can be encoded as <code>10000000111100001100000011110000</code>. With endian swapped, the final <code>dash_pattern</code> would be <code>0xf0c0f080</code>. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1006b</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">dash</td><td>New predefined dash pattern. Set to stroke_predefined_dash_e::DASH_CUSTOM to specify a custom pattern. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dash_pattern</td><td>New dash bit pattern. Will be set to the previous dash bit pattern once this function returns. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Previous predefined dash pattern. </dd></dl>
+
+</div>
+</div>
+<a id="a69560b4543015dac7002eaad1b9c3fa5" name="a69560b4543015dac7002eaad1b9c3fa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69560b4543015dac7002eaad1b9c3fa5">&#9670;&#160;</a></span>SetPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SetPixel </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the pixel color on the current active surface with the given pixel. </p>
+<p>When the surface uses indexed color, the color that is the closest to the palette will be picked. </p><dl class="section warning"><dt>Warning</dt><dd>This does not check for out-of-bound access. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10070</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate. </td></tr>
+    <tr><td class="paramname">color</td><td>The RGB color value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The actual RGB color value being used. </dd></dl>
 
 </div>
 </div>

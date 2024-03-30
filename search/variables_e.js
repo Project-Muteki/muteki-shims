@@ -19,6 +19,9 @@ var searchData=
   ['spare_5fpage_5fsize_16',['spare_page_size',['../structnand__params__t.html#a4e6f91eef2fc70b44efa046aba414018',1,'nand_params_t']]],
   ['stack_17',['stack',['../structthread__s.html#a28d2fca44aaeb67e49ba4003631d62ad',1,'thread_s']]],
   ['storage_18',['storage',['../structmessage__queue__s.html#a81f660bf62dff23628c6887e9161e303',1,'message_queue_s']]],
-  ['subroutine_19',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
-  ['surface_20',['surface',['../structlcd__s.html#ade3b9e5707e643ab6496affe332b1989',1,'lcd_s']]]
+  ['stroke_5fdash_19',['stroke_dash',['../structlcd__draw__t.html#aadca548594cd7ccc3c5f73ab2b10e1ef',1,'lcd_draw_t']]],
+  ['stroke_5fdash_5fpattern_20',['stroke_dash_pattern',['../structlcd__draw__t.html#ab821a54c692611b9baebe4d630145cd6',1,'lcd_draw_t']]],
+  ['stroke_5fsize_21',['stroke_size',['../structlcd__draw__t.html#a212774ed739a3a2403b3ae2299514489',1,'lcd_draw_t']]],
+  ['subroutine_22',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
+  ['surface_23',['surface',['../structlcd__s.html#ade3b9e5707e643ab6496affe332b1989',1,'lcd_s']]]
 ];
