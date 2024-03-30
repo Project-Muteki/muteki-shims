@@ -96,6 +96,40 @@ enum rotation_value_e {
 };
 
 /**
+ * @brief Predefined dash patterns.
+ * @details The numbers here follows the SVG
+ * [stroke-dasharray](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray)
+ * property format.
+ * @todo Add graphic examples.
+ */
+enum stroke_predefined_dash_e {
+    /**
+     * @brief Solid line.
+     */
+    DASH_NONE = 0,
+    DASH_8_8_16_0,
+    DASH_4,
+    DASH_0_4_16_4_4_4,
+    DASH_12_4_4_4_4_4,
+    DASH_1,
+    DASH_2,
+    DASH_16,
+    DASH_0_1_8_1_8_1_8_1_4_0 = 12,
+    DASH_4_1_8_1_7_1_9_1,
+    DASH_3_1_7_1_7_1_4_8,
+    DASH_3_1_7_1_7_1_7_1_4_0,
+    DASH_0_1_6_1_1_1_4_1_3_1_2_1_5_2_3_0,
+    DASH_3_2_5_1_2_1_3_1_4_1_1_1_6_1,
+    DASH_7_1_6_1_6_1_6_1_3_0,
+    DASH_3_1_6_1_6_1_6_1_7_0,
+    DASH_24_8 = 22,
+    /**
+     * @brief Custom dash pattern.
+     */
+    DASH_CUSTOM = 0x100,
+};
+
+/**
  * @brief Descriptor of an LCD drawing surface or hardware framebuffer.
  * @details This contains format description of the pixel/framebuffer and a pointer to the actual buffer.
  */
@@ -188,10 +222,12 @@ typedef struct {
     int unk_0x0; // 0x0:0x4 (lcd_t[0x14:0x18])
     /** @brief Current foreground color. */
     int fg_color; // 0x4:0x8 (lcd_t[0x18:0x1c])
-    /** @brief Unknown. */
-    int unk_0x8; // 0x8:0xc (lcd_t[0x1c:0x20])
-    /** @brief Unknown. */
-    int unk_0xc; // 0xc:0x10 (lcd_t[0x20:0x24])
+    /** @brief Dash bit pattern. */
+    unsigned int stroke_dash_pattern; // 0x8:0xc (lcd_t[0x1c:0x20])
+    /** @brief Size of stroke. */
+    short stroke_size; // 0xc:0xe (lcd_t[0x20:0x22])
+    /** @brief Predefined dash pattern. */
+    short stroke_dash; // 0xe:0x10 (lcd_t[0x22:0x24])
     /** @brief Unknown. */
     int unk_0x10; // 0x10:0x14 (lcd_t[0x24:0x28])
     /** @brief Unknown. */
@@ -748,6 +784,66 @@ extern lcd_t *SetActiveLCD(lcd_t *new_lcd);
  * @return The current active LCD descriptor.
  */
 extern lcd_t *GetActiveLCD();
+
+/**
+ * @brief Set the stroke dash pattern.
+ * @details The dash bit patterns are simple 32-bit bitfields (in **big endian**). Each bit `1` represents a foreground
+ * colored pixel and bit `0` represents a background pixel, from left to right, MSB to LSB. For example,
+ * stroke-dasharray `1 7 4 4 2 6 4 4` can be encoded as `10000000111100001100000011110000`. With endian swapped, the final
+ * `dash_pattern` would be `0xf0c0f080`.
+ * @x_syscall_num `0x1006b`
+ * @param dash New predefined dash pattern. Set to stroke_predefined_dash_e::DASH_CUSTOM to specify a custom pattern.
+ * @param[in, out] dash_pattern New dash bit pattern. Will be set to the previous dash bit pattern once this function
+ * returns.
+ * @return Previous predefined dash pattern.
+ */
+short SetPenStyle(short dash, unsigned int *dash_pattern);
+
+/**
+ * @brief Get the stroke dash pattern.
+ * @x_syscall_num `0x1006c`
+ * @param[out] dash_pattern If not `NULL`, the current dash bit pattern.
+ * @return The current predefined dash pattern.
+ */
+short GetPenStyle(unsigned int *dash_pattern);
+
+/**
+ * @brief Get the stroke width.
+ * @x_syscall_num `0x1006d`
+ * @x_void_param
+ * @return Current stroke width in pixels.
+ */
+short GetPenSize();
+
+/**
+ * @brief Set the stroke width.
+ * @x_syscall_num `0x1006e`
+ * @param size New stroke width in pixels.
+ * @return Previous stroke width in pixels.
+ */
+short SetPenSize(short size);
+
+/**
+ * @brief Get the RGB value of a pixel on the current active surface.
+ * @warning This does not check for out-of-bound access.
+ * @x_syscall_num `0x1006f`
+ * @param x X coordinate.
+ * @param y Y coordinate.
+ * @return The RGB color value
+ */
+int GetPixel(short x, short y);
+
+/**
+ * @brief Set the pixel color on the current active surface with the given pixel.
+ * @details When the surface uses indexed color, the color that is the closest to the palette will be picked.
+ * @warning This does not check for out-of-bound access.
+ * @x_syscall_num `0x10070`
+ * @param x X coordinate.
+ * @param y Y coordinate.
+ * @param color The RGB color value.
+ * @return The actual RGB color value being used.
+ */
+int SetPixel(short x, short y, int color);
 
 /**
  * @brief Copy a rectangle of pixels from current active LCD and save it to the specified buffer.
