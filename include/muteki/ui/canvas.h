@@ -915,10 +915,10 @@ extern void DrawLine(short x0, short y0, short x1, short y1, int flags);
 /**
  * @brief Stroke a rectangle on the current active LCD.
  * @x_syscall_num `0x10076`
- * @param x0 X coordinate of the top-left point.
- * @param y0 Y coordinate of the top-left point.
- * @param x1 X coordinate of the bottom-right point.
- * @param y1 Y coordinate of the bottom-right point.
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
  * @param flags Blit processing flags.
  * @x_void_return
  */
@@ -927,10 +927,10 @@ extern void DrawRect(short x0, short y0, short x1, short y1, int flags);
 /**
  * @brief Fill a rectangle on the current active LCD.
  * @x_syscall_num `0x10077`
- * @param x0 X coordinate of the top-left point.
- * @param y0 Y coordinate of the top-left point.
- * @param x1 X coordinate of the bottom-right point.
- * @param y1 Y coordinate of the bottom-right point.
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
  * @param flags Blit processing flags.
  * @x_void_return
  */
@@ -939,10 +939,10 @@ extern void FillRect(short x0, short y0, short x1, short y1, int flags);
 /**
  * @brief Stroke a rounded corner rectangle on the current active LCD.
  * @x_syscall_num `0x10078`
- * @param x0 X coordinate of the top-left point.
- * @param y0 Y coordinate of the top-left point.
- * @param x1 X coordinate of the bottom-right point.
- * @param y1 Y coordinate of the bottom-right point.
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
  * @param rx Horizontal radius in pixels.
  * @param ry Vertical radius in pixels.
  * @param flags Blit processing flags.
