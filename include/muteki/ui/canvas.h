@@ -901,6 +901,56 @@ extern void SetDrawArea(short x0, short y0, short x1, short y1);
 extern void GetDrawArea(short *x0, short *y0, short *x1, short *y1);
 
 /**
+ * @brief Stroke a line on the current active LCD.
+ * @x_syscall_num `0x10075`
+ * @param x0 X coordinate of the first point.
+ * @param y0 Y coordinate of the first point.
+ * @param x1 X coordinate of the second point.
+ * @param y1 Y coordinate of the second point.
+ * @param flags Blit processing flags.
+ * @x_void_return
+ */
+extern void DrawLine(short x0, short y0, short x1, short y1, int flags);
+
+/**
+ * @brief Stroke a rectangle on the current active LCD.
+ * @x_syscall_num `0x10076`
+ * @param x0 X coordinate of the top-left point.
+ * @param y0 Y coordinate of the top-left point.
+ * @param x1 X coordinate of the bottom-right point.
+ * @param y1 Y coordinate of the bottom-right point.
+ * @param flags Blit processing flags.
+ * @x_void_return
+ */
+extern void DrawRect(short x0, short y0, short x1, short y1, int flags);
+
+/**
+ * @brief Fill a rectangle on the current active LCD.
+ * @x_syscall_num `0x10077`
+ * @param x0 X coordinate of the top-left point.
+ * @param y0 Y coordinate of the top-left point.
+ * @param x1 X coordinate of the bottom-right point.
+ * @param y1 Y coordinate of the bottom-right point.
+ * @param flags Blit processing flags.
+ * @x_void_return
+ */
+extern void FillRect(short x0, short y0, short x1, short y1, int flags);
+
+/**
+ * @brief Stroke a rounded corner rectangle on the current active LCD.
+ * @x_syscall_num `0x10078`
+ * @param x0 X coordinate of the top-left point.
+ * @param y0 Y coordinate of the top-left point.
+ * @param x1 X coordinate of the bottom-right point.
+ * @param y1 Y coordinate of the bottom-right point.
+ * @param rx Horizontal radius in pixels.
+ * @param ry Vertical radius in pixels.
+ * @param flags Blit processing flags.
+ * @x_void_return
+ */
+extern void DrawRoundRect(short x0, short y0, short x1, short y1, short rx, short ry, int flags);
+
+/**
  * @brief Copy an LCD descriptor (excluding surface).
  * @details This function allocates a new LCD descriptor and copies everything from the source descriptor to the new
  * one. The new descriptor will not be linked to the source descriptor's lcd_t::surface, and lcd_t::saved_cursor
