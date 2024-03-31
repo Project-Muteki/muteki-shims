@@ -380,6 +380,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr class="memitem:ae73f5af6932e361f5ecb50e9a6648fd9" id="r_ae73f5af6932e361f5ecb50e9a6648fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae73f5af6932e361f5ecb50e9a6648fd9">GetDrawArea</a> (short *x0, short *y0, short *x1, short *y1)</td></tr>
 <tr class="memdesc:ae73f5af6932e361f5ecb50e9a6648fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the drawing area of the current active LCD.  <br /></td></tr>
 <tr class="separator:ae73f5af6932e361f5ecb50e9a6648fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86e2055057b46240bf715cd56496699" id="r_af86e2055057b46240bf715cd56496699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#af86e2055057b46240bf715cd56496699">DrawLine</a> (short x0, short y0, short x1, short y1, int flags)</td></tr>
+<tr class="memdesc:af86e2055057b46240bf715cd56496699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stroke a line on the current active LCD.  <br /></td></tr>
+<tr class="separator:af86e2055057b46240bf715cd56496699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3ab157afc2b7c28ea0fb9aa0529a94" id="r_afa3ab157afc2b7c28ea0fb9aa0529a94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#afa3ab157afc2b7c28ea0fb9aa0529a94">DrawRect</a> (short x0, short y0, short x1, short y1, int flags)</td></tr>
+<tr class="memdesc:afa3ab157afc2b7c28ea0fb9aa0529a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stroke a rectangle on the current active LCD.  <br /></td></tr>
+<tr class="separator:afa3ab157afc2b7c28ea0fb9aa0529a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061c7faadcc06d7a35572a22a7c9c73f" id="r_a061c7faadcc06d7a35572a22a7c9c73f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a061c7faadcc06d7a35572a22a7c9c73f">FillRect</a> (short x0, short y0, short x1, short y1, int flags)</td></tr>
+<tr class="memdesc:a061c7faadcc06d7a35572a22a7c9c73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill a rectangle on the current active LCD.  <br /></td></tr>
+<tr class="separator:a061c7faadcc06d7a35572a22a7c9c73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92cc4c7b95e3cbd29adf24002348c055" id="r_a92cc4c7b95e3cbd29adf24002348c055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a92cc4c7b95e3cbd29adf24002348c055">DrawRoundRect</a> (short x0, short y0, short x1, short y1, short rx, short ry, int flags)</td></tr>
+<tr class="memdesc:a92cc4c7b95e3cbd29adf24002348c055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stroke a rounded corner rectangle on the current active LCD.  <br /></td></tr>
+<tr class="separator:a92cc4c7b95e3cbd29adf24002348c055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d53e141ab966cba778a9b9be545331" id="r_ae8d53e141ab966cba778a9b9be545331"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae8d53e141ab966cba778a9b9be545331">CreateCompatibleLCD</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *source)</td></tr>
 <tr class="memdesc:ae8d53e141ab966cba778a9b9be545331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an LCD descriptor (excluding surface).  <br /></td></tr>
 <tr class="separator:ae8d53e141ab966cba778a9b9be545331"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -939,6 +951,296 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lcd</td><td>Pointer to a virtual LCD descriptor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="af86e2055057b46240bf715cd56496699" name="af86e2055057b46240bf715cd56496699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af86e2055057b46240bf715cd56496699">&#9670;&#160;</a></span>DrawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawLine </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stroke a line on the current active LCD. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10075</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td>X coordinate of the first point. </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the first point. </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the second point. </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the second point. </td></tr>
+    <tr><td class="paramname">flags</td><td>Blit processing flags.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="afa3ab157afc2b7c28ea0fb9aa0529a94" name="afa3ab157afc2b7c28ea0fb9aa0529a94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa3ab157afc2b7c28ea0fb9aa0529a94">&#9670;&#160;</a></span>DrawRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawRect </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stroke a rectangle on the current active LCD. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10076</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left point. </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left point. </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right point. </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right point. </td></tr>
+    <tr><td class="paramname">flags</td><td>Blit processing flags.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="a92cc4c7b95e3cbd29adf24002348c055" name="a92cc4c7b95e3cbd29adf24002348c055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92cc4c7b95e3cbd29adf24002348c055">&#9670;&#160;</a></span>DrawRoundRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawRoundRect </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>rx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>ry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stroke a rounded corner rectangle on the current active LCD. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10078</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left point. </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left point. </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right point. </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right point. </td></tr>
+    <tr><td class="paramname">rx</td><td>Horizontal radius in pixels. </td></tr>
+    <tr><td class="paramname">ry</td><td>Vertical radius in pixels. </td></tr>
+    <tr><td class="paramname">flags</td><td>Blit processing flags.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="a061c7faadcc06d7a35572a22a7c9c73f" name="a061c7faadcc06d7a35572a22a7c9c73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061c7faadcc06d7a35572a22a7c9c73f">&#9670;&#160;</a></span>FillRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FillRect </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill a rectangle on the current active LCD. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10077</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left point. </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left point. </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right point. </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right point. </td></tr>
+    <tr><td class="paramname">flags</td><td>Blit processing flags.</td></tr>
   </table>
   </dd>
 </dl>

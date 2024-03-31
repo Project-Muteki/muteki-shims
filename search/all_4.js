@@ -19,5 +19,8 @@ var searchData=
   ['devio_2eh_16',['devio.h',['../devio_8h.html',1,'']]],
   ['dospath_17',['dospath',['../structapplet__args__v4__t.html#a76884adfcb7c6da9e0a94f40b3f0d932',1,'applet_args_v4_t']]],
   ['draw_18',['draw',['../structlcd__s.html#ae42dcc88823a09453b3b72eafe354bbc',1,'lcd_s']]],
-  ['drawing_5farea_19',['drawing_area',['../structlcd__s.html#ae05b7cc55813d8b9724a26af9621e8b3',1,'lcd_s']]]
+  ['drawing_5farea_19',['drawing_area',['../structlcd__s.html#ae05b7cc55813d8b9724a26af9621e8b3',1,'lcd_s']]],
+  ['drawline_20',['DrawLine',['../canvas_8h.html#af86e2055057b46240bf715cd56496699',1,'canvas.h']]],
+  ['drawrect_21',['DrawRect',['../canvas_8h.html#afa3ab157afc2b7c28ea0fb9aa0529a94',1,'canvas.h']]],
+  ['drawroundrect_22',['DrawRoundRect',['../canvas_8h.html#a92cc4c7b95e3cbd29adf24002348c055',1,'canvas.h']]]
 ];
