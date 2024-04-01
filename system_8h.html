@@ -104,10 +104,60 @@ Functions</h2></td></tr>
 <tr class="memitem:a77c18dab7a63ff188e452878d5907582" id="r_a77c18dab7a63ff188e452878d5907582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="system_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a77c18dab7a63ff188e452878d5907582">GetTimer1IntHandler</a> (short *interval)</td></tr>
 <tr class="memdesc:a77c18dab7a63ff188e452878d5907582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Timer1 interrupt handler and custom interval.  <br /></td></tr>
 <tr class="separator:a77c18dab7a63ff188e452878d5907582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d61f72896d4508d5264ce173f7a745" id="r_a73d61f72896d4508d5264ce173f7a745"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a73d61f72896d4508d5264ce173f7a745">_GetSystemDirectory</a> (char *buffer, size_t size)</td></tr>
+<tr class="memdesc:a73d61f72896d4508d5264ce173f7a745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the DOS 8.3 path to the system configuration directory on user data partition.  <br /></td></tr>
+<tr class="separator:a73d61f72896d4508d5264ce173f7a745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>System management functions. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a73d61f72896d4508d5264ce173f7a745" name="a73d61f72896d4508d5264ce173f7a745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d61f72896d4508d5264ce173f7a745">&#9670;&#160;</a></span>_GetSystemDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * _GetSystemDirectory </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the DOS 8.3 path to the system configuration directory on user data partition. </p>
+<p>This function will also ensure that the path exists before returning it. Although if the function fails, no directory will be created. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1010e</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>The buffer to hold the path. </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The buffer that now contains the path, or <code>NULL</code> if the function fails. </dd></dl>
+
+</div>
+</div>
 <a id="aef1cc89349e8bbf4146fdf74097c882f" name="aef1cc89349e8bbf4146fdf74097c882f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef1cc89349e8bbf4146fdf74097c882f">&#9670;&#160;</a></span>Buzzer()</h2>
 
