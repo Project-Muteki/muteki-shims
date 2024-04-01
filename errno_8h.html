@@ -128,10 +128,12 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3c0372437a9960bbbc77c3849b163732">THREADING_SLOT_FULL</a> = 0x002b
 , <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a6b324986a35e51118e9aeea698f43d55">THREADING_STRUCT_MALLOC_FAILED</a> = 0x0046
-, <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a4f15405cfc8204dca0c8230d74ac2092">THREADING_STACK_MALLOC_FAILED</a> = 0x0066
-, <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3a10bf19b6d2ce0d4c484d7d1ef301ad">THREADING_INVALID_DESCRIPTOR</a> = 0x006e
+, <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ae7f3021815403320230f18676700e2c0">THREADING_THREAD_NOT_SLEEPING</a> = 0x0050
+, <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455ac1b07e5a5b685fec71a252bbe9961c7b">THREADING_THREAD_NOT_SUSPENDED</a> = 0x0065
 , <br />
-&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a733173708113bcaf847d273318026a6e">THREADING_DESCRIPTOR_BUSY</a> = 0x008c
+&#160;&#160;<a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a4f15405cfc8204dca0c8230d74ac2092">THREADING_STACK_MALLOC_FAILED</a> = 0x0066
+, <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a3a10bf19b6d2ce0d4c484d7d1ef301ad">THREADING_INVALID_DESCRIPTOR</a> = 0x006e
+, <a class="el" href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455a733173708113bcaf847d273318026a6e">THREADING_DESCRIPTOR_BUSY</a> = 0x008c
 <br />
  }</td></tr>
 <tr class="memdesc:a36f8929d56bd487eb91b68bdc2cb2455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7">ERRNO_NS_USER</a>.  <a href="errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455">More...</a><br /></td></tr>
@@ -394,6 +396,10 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a3c0372437a9960bbbc77c3849b163732" name="a36f8929d56bd487eb91b68bdc2cb2455a3c0372437a9960bbbc77c3849b163732"></a>THREADING_SLOT_FULL&#160;</td><td class="fielddoc"><p>Non-reserved slots are full. Cannot create thread. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a6b324986a35e51118e9aeea698f43d55" name="a36f8929d56bd487eb91b68bdc2cb2455a6b324986a35e51118e9aeea698f43d55"></a>THREADING_STRUCT_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread struct. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455ae7f3021815403320230f18676700e2c0" name="a36f8929d56bd487eb91b68bdc2cb2455ae7f3021815403320230f18676700e2c0"></a>THREADING_THREAD_NOT_SLEEPING&#160;</td><td class="fielddoc"><p>Thread is not sleeping. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455ac1b07e5a5b685fec71a252bbe9961c7b" name="a36f8929d56bd487eb91b68bdc2cb2455ac1b07e5a5b685fec71a252bbe9961c7b"></a>THREADING_THREAD_NOT_SUSPENDED&#160;</td><td class="fielddoc"><p>Thread is not suspended. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a36f8929d56bd487eb91b68bdc2cb2455a4f15405cfc8204dca0c8230d74ac2092" name="a36f8929d56bd487eb91b68bdc2cb2455a4f15405cfc8204dca0c8230d74ac2092"></a>THREADING_STACK_MALLOC_FAILED&#160;</td><td class="fielddoc"><p>Failed to allocate thread stack. </p>
 </td></tr>
