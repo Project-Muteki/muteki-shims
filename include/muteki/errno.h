@@ -76,6 +76,10 @@ enum errno_user_e {
     THREADING_SLOT_FULL = 0x002b,
     /** Failed to allocate thread struct. */
     THREADING_STRUCT_MALLOC_FAILED = 0x0046,
+    /** Thread is not sleeping. */
+    THREADING_THREAD_NOT_SLEEPING = 0x0050,
+    /** Thread is not suspended. */
+    THREADING_THREAD_NOT_SUSPENDED = 0x0065,
     /** Failed to allocate thread stack. */
     THREADING_STACK_MALLOC_FAILED = 0x0066,
     /** Invalid thread descriptor magic. */
