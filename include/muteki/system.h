@@ -55,6 +55,17 @@ extern void SetTimer1IntHandler(timer1_callback_t callback, short interval);
  */
 extern timer1_callback_t GetTimer1IntHandler(short *interval);
 
+/**
+ * @brief Get the DOS 8.3 path to the system configuration directory on user data partition.
+ * @details This function will also ensure that the path exists before returning it. Although if the function fails,
+ * no directory will be created.
+ * @x_syscall_num `0x1010e`
+ * @param buffer The buffer to hold the path.
+ * @param size The size of the buffer.
+ * @return The buffer that now contains the path, or `NULL` if the function fails.
+ */
+extern char *_GetSystemDirectory(char *buffer, size_t size);
+
 #ifdef __cplusplus
 } // extern "C"
 #endif

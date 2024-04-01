@@ -170,7 +170,7 @@ typedef struct {
      */
     int *palette; // 12:16
     /**
-     * @brief The actual framebuffer/VRAM region.
+     * @brief The actual framebuffer/surface pixel buffer region.
      * @details The actual format varies and depends on the parameters provided above.
      */
     void *buffer; // 16:20
@@ -791,6 +791,7 @@ extern lcd_t *GetActiveLCD();
  * colored pixel and bit `0` represents a background pixel, from left to right, MSB to LSB. For example,
  * stroke-dasharray `1 7 4 4 2 6 4 4` can be encoded as `10000000111100001100000011110000`. With endian swapped, the final
  * `dash_pattern` would be `0xf0c0f080`.
+ * @note Stroke dash pattern set via this function does not apply to curves.
  * @x_syscall_num `0x1006b`
  * @param dash New predefined dash pattern. Set to stroke_predefined_dash_e::DASH_CUSTOM to specify a custom pattern.
  * @param[in, out] dash_pattern New dash bit pattern. Will be set to the previous dash bit pattern once this function
@@ -951,6 +952,64 @@ extern void FillRect(short x0, short y0, short x1, short y1, int flags);
 extern void DrawRoundRect(short x0, short y0, short x1, short y1, short rx, short ry, int flags);
 
 /**
+ * @brief Stroke a circle on the current active LCD.
+ * @x_syscall_num `0x10079`
+ * @param x X coordinate of the center.
+ * @param y Y coordinate of the center.
+ * @param r Radius of the circle.
+ * @param flags Blit processing flags.
+ * @x_void_return
+ */
+extern void DrawCircle(short x, short y, short r, int flags);
+
+/**
+ * @brief Fill a circle on the current active LCD.
+ * @warning This does not seem to actually fill the circle. Use FillEllipse() instead.
+ * @x_syscall_num `0x1007a`
+ * @param x X coordinate of the center.
+ * @param y Y coordinate of the center.
+ * @param r Radius of the circle.
+ * @param flags Blit processing flags.
+ * @x_void_return
+ */
+extern void FillCircle(short x, short y, short r, int flags);
+
+/**
+ * @brief Stroke an ellipse on the current active LCD.
+ * @x_syscall_num `0x1007b`
+ * @param x X coordinate of the center.
+ * @param y Y coordinate of the center.
+ * @param rx Horizontal radius of the ellipse.
+ * @param ry Vertical radius of the ellipse.
+ * @param flags Blit processing flags.
+ * @x_void_return
+ */
+extern void DrawEllipse(short x, short y, short rx, short ry, int flags);
+
+/**
+ * @brief Fill an ellipse on the current active LCD.
+ * @x_syscall_num `0x1007c`
+ * @param x X coordinate of the center.
+ * @param y Y coordinate of the center.
+ * @param rx Horizontal radius of the ellipse.
+ * @param ry Vertical radius of the ellipse.
+ * @param flags Blit processing flags.
+ * @x_void_return
+ */
+extern void FillEllipse(short x, short y, short rx, short ry, int flags);
+
+/**
+ * @brief Invert color within a rectangle.
+ * @x_syscall_num `0x1007d`
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
+ * @x_void_return
+ */
+extern void InverseSetArea(short x0, short y0, short x1, short y1);
+
+/**
  * @brief Copy an LCD descriptor (excluding surface).
  * @details This function allocates a new LCD descriptor and copies everything from the source descriptor to the new
  * one. The new descriptor will not be linked to the source descriptor's lcd_t::surface, and lcd_t::saved_cursor
@@ -1000,6 +1059,42 @@ extern size_t GetImageSize(short width, short height);
  * @see InitGraphic For some assumptions made for an all-in-one surface format.
  */
 extern size_t GetImageSizeExt(short width, short height, short depth);
+
+/**
+ * @brief Get the palette and bitmap buffer for an all-in-one surface.
+ * @warning The behavior of calling this on a hardware framebuffer backed surface is undefined as those surfaces may
+ * allocate the palette and/or the pixel buffer not immediately after the descriptor. Use ::lcd_surface_t::palette
+ * or ::lcd_surface_t::buffer instead for those surfaces.
+ * @x_syscall_num `0x10097`
+ * @param surface The surface descriptor.
+ * @return Pointer to surface palette buffer when a palette is available, or otherwise pointer to the pixel buffer.
+ */
+extern void *ImageData(lcd_surface_t *surface);
+
+/**
+ * @brief Get the total on-memory size of a surface, in bytes.
+ * @details This is equivalent to
+ * @code{.c}
+ * size_t SizeofImage(lcd_surface_t *surface) {
+ *     return GetImageSize(surface->width, surface->height);
+ * }
+ * @endcode
+ * @x_syscall_num `0x10098`
+ * @param surface Pointer to the surface descriptor.
+ * @return The on-memory size of the surface.
+ */
+extern size_t SizeofImage(lcd_surface_t *surface);
+
+/**
+ * @brief Dispose an all-in-one surface.
+ * @details This is simply a wrapper around _lfree().
+ * @warning Behavior is undefined when not called on a dymically allocated (via lmalloc(), lcalloc() or lrealloc())
+ * all-in-one surface.
+ * @x_syscall_num `0x10099`
+ * @param surface The surface descriptor.
+ * @x_void_return
+ */
+extern void FreeImage(lcd_surface_t *surface);
 
 #ifdef __cplusplus
 } // extern "C"
