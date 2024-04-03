@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">system.h File Reference</div></div>
 </div><!--header-->
@@ -93,6 +94,14 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>timer1_call
 <tr class="memdesc:aa7a435c8a2cda84eaef92144c9ba0798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback type for Timer1 interrupt. <br /></td></tr>
 <tr class="separator:aa7a435c8a2cda84eaef92144c9ba0798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a5277b78fe436c15af3a76ce501ee4c1e" id="r_a5277b78fe436c15af3a76ce501ee4c1e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1e">battery_status_e</a> { <a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1ea089d66a3940c2a9c3f2f483de7bcb7e3">BATTERY_STATUS_DISCHARGING</a> = 1
+, <a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1eadb742fbbd562aba4778378a2fb18efb3">BATTERY_STATUS_CHARGING</a> = 4
+ }</td></tr>
+<tr class="memdesc:a5277b78fe436c15af3a76ce501ee4c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Battery charging status.  <a href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1e">More...</a><br /></td></tr>
+<tr class="separator:a5277b78fe436c15af3a76ce501ee4c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aef1cc89349e8bbf4146fdf74097c882f" id="r_aef1cc89349e8bbf4146fdf74097c882f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#aef1cc89349e8bbf4146fdf74097c882f">Buzzer</a> (int frequency, short duration)</td></tr>
@@ -104,13 +113,43 @@ Functions</h2></td></tr>
 <tr class="memitem:a77c18dab7a63ff188e452878d5907582" id="r_a77c18dab7a63ff188e452878d5907582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="system_8h.html#aa7a435c8a2cda84eaef92144c9ba0798">timer1_callback_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a77c18dab7a63ff188e452878d5907582">GetTimer1IntHandler</a> (short *interval)</td></tr>
 <tr class="memdesc:a77c18dab7a63ff188e452878d5907582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Timer1 interrupt handler and custom interval.  <br /></td></tr>
 <tr class="separator:a77c18dab7a63ff188e452878d5907582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78b6cf2d7a0a6aef82d74b43caf1797" id="r_ae78b6cf2d7a0a6aef82d74b43caf1797"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#ae78b6cf2d7a0a6aef82d74b43caf1797">SysPowerOff</a> ()</td></tr>
+<tr class="memdesc:ae78b6cf2d7a0a6aef82d74b43caf1797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power off the system immediately.  <br /></td></tr>
+<tr class="separator:ae78b6cf2d7a0a6aef82d74b43caf1797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a969fe31c7b2c59119466e82bb428ec54" id="r_a969fe31c7b2c59119466e82bb428ec54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a969fe31c7b2c59119466e82bb428ec54">GetBatteryType</a> ()</td></tr>
+<tr class="memdesc:a969fe31c7b2c59119466e82bb428ec54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the battery status.  <br /></td></tr>
+<tr class="separator:a969fe31c7b2c59119466e82bb428ec54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73d61f72896d4508d5264ce173f7a745" id="r_a73d61f72896d4508d5264ce173f7a745"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a73d61f72896d4508d5264ce173f7a745">_GetSystemDirectory</a> (char *buffer, size_t size)</td></tr>
 <tr class="memdesc:a73d61f72896d4508d5264ce173f7a745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the DOS 8.3 path to the system configuration directory on user data partition.  <br /></td></tr>
 <tr class="separator:a73d61f72896d4508d5264ce173f7a745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>System management functions. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a5277b78fe436c15af3a76ce501ee4c1e" name="a5277b78fe436c15af3a76ce501ee4c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5277b78fe436c15af3a76ce501ee4c1e">&#9670;&#160;</a></span>battery_status_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1e">battery_status_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Battery charging status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5277b78fe436c15af3a76ce501ee4c1ea089d66a3940c2a9c3f2f483de7bcb7e3" name="a5277b78fe436c15af3a76ce501ee4c1ea089d66a3940c2a9c3f2f483de7bcb7e3"></a>BATTERY_STATUS_DISCHARGING&#160;</td><td class="fielddoc"><p>Battery is discharging. </p>
+<p>On systems without a charging circuit this will always be returned. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5277b78fe436c15af3a76ce501ee4c1eadb742fbbd562aba4778378a2fb18efb3" name="a5277b78fe436c15af3a76ce501ee4c1eadb742fbbd562aba4778378a2fb18efb3"></a>BATTERY_STATUS_CHARGING&#160;</td><td class="fielddoc"><p>Battery is charging. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a73d61f72896d4508d5264ce173f7a745" name="a73d61f72896d4508d5264ce173f7a745"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73d61f72896d4508d5264ce173f7a745">&#9670;&#160;</a></span>_GetSystemDirectory()</h2>
 
@@ -210,6 +249,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a969fe31c7b2c59119466e82bb428ec54" name="a969fe31c7b2c59119466e82bb428ec54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a969fe31c7b2c59119466e82bb428ec54">&#9670;&#160;</a></span>GetBatteryType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetBatteryType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the battery status. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10035</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The battery status. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1e" title="Battery charging status.">battery_status_e</a> </dd></dl>
+
+</div>
+</div>
 <a id="a77c18dab7a63ff188e452878d5907582" name="a77c18dab7a63ff188e452878d5907582"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77c18dab7a63ff188e452878d5907582">&#9670;&#160;</a></span>GetTimer1IntHandler()</h2>
 
@@ -291,6 +361,38 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="ae78b6cf2d7a0a6aef82d74b43caf1797" name="ae78b6cf2d7a0a6aef82d74b43caf1797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78b6cf2d7a0a6aef82d74b43caf1797">&#9670;&#160;</a></span>SysPowerOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SysPowerOff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Power off the system immediately. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10032</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+</p>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
 
 </div>

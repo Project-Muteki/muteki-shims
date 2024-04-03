@@ -147,6 +147,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a5cdd9c950c7c047ddd0979f457a09579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for string printing only.  <a href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579">More...</a><br /></td></tr>
 <tr class="separator:a5cdd9c950c7c047ddd0979f457a09579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8edb33a562b4bcc85154e3e2a951650" id="r_af8edb33a562b4bcc85154e3e2a951650"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650">str_align_e</a> { <a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a">STR_ALIGN_LEFT</a> = 0
+, <a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821">STR_ALIGN_RIGHT</a>
+, <a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98">STR_ALIGN_CENTER</a>
+ }</td></tr>
+<tr class="memdesc:af8edb33a562b4bcc85154e3e2a951650"><td class="mdescLeft">&#160;</td><td class="mdescRight">String alignment types.  <a href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650">More...</a><br /></td></tr>
+<tr class="separator:af8edb33a562b4bcc85154e3e2a951650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41b02fda321c9d1ab9502aa8aa49adcd" id="r_a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a> { <a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05">BLIT_NONE</a> = 0
 , <a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462">BLIT_INVERT</a> = 0x4
  }</td></tr>
@@ -257,9 +263,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac98bb3e2b7bdb7654679de8a70fc9692" id="r_ac98bb3e2b7bdb7654679de8a70fc9692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692">ClearScreen</a> (bool fill_with_fg)</td></tr>
 <tr class="memdesc:ac98bb3e2b7bdb7654679de8a70fc9692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the current display canvas with background color, effectively clearing it.  <br /></td></tr>
 <tr class="separator:ac98bb3e2b7bdb7654679de8a70fc9692"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcdf76aa5b5eec5aa5b7d1ac1baf58c0" id="r_adcdf76aa5b5eec5aa5b7d1ac1baf58c0"><td class="memItemLeft" align="right" valign="top"><a id="adcdf76aa5b5eec5aa5b7d1ac1baf58c0" name="adcdf76aa5b5eec5aa5b7d1ac1baf58c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> (short x, short y, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *msg, int arg4, int arg5, unsigned int flags)</td></tr>
-<tr class="separator:adcdf76aa5b5eec5aa5b7d1ac1baf58c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa411d0bb895097a6f63e5b897f7637a8" id="r_aa411d0bb895097a6f63e5b897f7637a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa411d0bb895097a6f63e5b897f7637a8">WriteAlignString</a> (short x, short y, const void *s, short max_length, int align, unsigned int flags)</td></tr>
+<tr class="memdesc:aa411d0bb895097a6f63e5b897f7637a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a string <code>s</code> with specified alignment at <code>(x, y)</code> px.  <br /></td></tr>
+<tr class="separator:aa411d0bb895097a6f63e5b897f7637a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eddaf1d5fdc62b53e63bf3fcb53c09b" id="r_a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b">GetCharWidth</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, uint8_t font_type)</td></tr>
 <tr class="memdesc:a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the character <code>c</code> used in <code>font_type</code>.  <br /></td></tr>
 <tr class="separator:a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -633,6 +639,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607" name="a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607"></a>ROTATION_QUERY&#160;</td><td class="fielddoc"><p>Query the current rotation. Will not change the current location. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" name="a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493"></a>ROTATION_APPLY&#160;</td><td class="fielddoc"><p>Actually rotate the buffer. Used internally. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="af8edb33a562b4bcc85154e3e2a951650" name="af8edb33a562b4bcc85154e3e2a951650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8edb33a562b4bcc85154e3e2a951650">&#9670;&#160;</a></span>str_align_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650">str_align_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>String alignment types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a" name="af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a"></a>STR_ALIGN_LEFT&#160;</td><td class="fielddoc"><p>Align to top-left. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821" name="af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821"></a>STR_ALIGN_RIGHT&#160;</td><td class="fielddoc"><p>Align to top-right. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98" name="af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98"></a>STR_ALIGN_CENTER&#160;</td><td class="fielddoc"><p>Align to top-center. </p>
 </td></tr>
 </table>
 
@@ -3473,9 +3503,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
 <div class="line">}</div>
 <div class="ttc" id="acanvas_8h_html_ababbf47f56c76a835a04e8709859bca0"><div class="ttname"><a href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0">GetImageSize</a></div><div class="ttdeci">size_t GetImageSize(short width, short height)</div><div class="ttdoc">Calculate the buffer size required for an all-in-one surface of a specific size.</div></div>
 <div class="ttc" id="acanvas_8h_html_afaee65f5adc0182e5b96e35bcb222e3f"><div class="ttname"><a href="canvas_8h.html#afaee65f5adc0182e5b96e35bcb222e3f">SizeofImage</a></div><div class="ttdeci">size_t SizeofImage(lcd_surface_t *surface)</div><div class="ttdoc">Get the total on-memory size of a surface, in bytes.</div></div>
-<div class="ttc" id="astructlcd__surface__t_html"><div class="ttname"><a href="structlcd__surface__t.html">lcd_surface_t</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:136</div></div>
-<div class="ttc" id="astructlcd__surface__t_html_a3ae8e51b2e20761f1bc6dbf1541b4642"><div class="ttname"><a href="structlcd__surface__t.html#a3ae8e51b2e20761f1bc6dbf1541b4642">lcd_surface_t::width</a></div><div class="ttdeci">short width</div><div class="ttdoc">Width of the framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:145</div></div>
-<div class="ttc" id="astructlcd__surface__t_html_aa58d32dc40359ee9999b23046b63d983"><div class="ttname"><a href="structlcd__surface__t.html#aa58d32dc40359ee9999b23046b63d983">lcd_surface_t::height</a></div><div class="ttdeci">short height</div><div class="ttdoc">Height of the framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:149</div></div>
+<div class="ttc" id="astructlcd__surface__t_html"><div class="ttname"><a href="structlcd__surface__t.html">lcd_surface_t</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:154</div></div>
+<div class="ttc" id="astructlcd__surface__t_html_a3ae8e51b2e20761f1bc6dbf1541b4642"><div class="ttname"><a href="structlcd__surface__t.html#a3ae8e51b2e20761f1bc6dbf1541b4642">lcd_surface_t::width</a></div><div class="ttdeci">short width</div><div class="ttdoc">Width of the framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:163</div></div>
+<div class="ttc" id="astructlcd__surface__t_html_aa58d32dc40359ee9999b23046b63d983"><div class="ttname"><a href="structlcd__surface__t.html#aa58d32dc40359ee9999b23046b63d983">lcd_surface_t::height</a></div><div class="ttdeci">short height</div><div class="ttdoc">Height of the framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:167</div></div>
 </div><!-- fragment --> <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10098</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3484,6 +3514,85 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteAlignString</b> 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The on-memory size of the surface. </dd></dl>
+
+</div>
+</div>
+<a id="aa411d0bb895097a6f63e5b897f7637a8" name="aa411d0bb895097a6f63e5b897f7637a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa411d0bb895097a6f63e5b897f7637a8">&#9670;&#160;</a></span>WriteAlignString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WriteAlignString </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>max_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>align</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a string <code>s</code> with specified alignment at <code>(x, y)</code> px. </p>
+<p>The anchor point will be located at the top of the string to be drawn. The <code>align</code> parameter then controls whether the anchor point will be at the left, center or right of the string.</p>
+<p>If the string is too long, it will be truncated to <code>max_length</code>. After truncation, the last few characters may get replaced with <code>...</code> depending on the font selection.</p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10052</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X coordinate of the anchor point. </td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate of the anchor point. </td></tr>
+    <tr><td class="paramname">s</td><td>String to be drawn. Exact encoding depends on the process flags being used. </td></tr>
+    <tr><td class="paramname">max_length</td><td>The maximum length of the string in pixels. </td></tr>
+    <tr><td class="paramname">align</td><td>String alignment. </td></tr>
+    <tr><td class="paramname">flags</td><td>String processing flags </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd>
+<dd>
+<a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579" title="Process flags for string printing only.">print_str_flag_e</a> Encoding conversion flags. </dd></dl>
 
 </div>
 </div>
