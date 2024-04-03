@@ -18,6 +18,21 @@ extern "C" {
 #endif
 
 /**
+ * @brief Battery charging status.
+ */
+enum battery_status_e {
+    /**
+     * @brief Battery is discharging.
+     * @details On systems without a charging circuit this will always be returned.
+     */
+    BATTERY_STATUS_DISCHARGING = 1,
+    /**
+     * @brief Battery is charging.
+     */
+    BATTERY_STATUS_CHARGING = 4,
+};
+
+/**
  * @brief Callback type for Timer1 interrupt
  */
 typedef void (*timer1_callback_t)(void);
@@ -54,6 +69,23 @@ extern void SetTimer1IntHandler(timer1_callback_t callback, short interval);
  * @return The callback function previously registered with SetTimer1IntHandler().
  */
 extern timer1_callback_t GetTimer1IntHandler(short *interval);
+
+/**
+ * @brief Power off the system immediately.
+ * @x_syscall_num `0x10032`
+ * @x_void_param
+ * @x_void_return
+ */
+extern void SysPowerOff();
+
+/**
+ * @brief Get the battery status.
+ * @x_syscall_num `0x10035`
+ * @x_void_param
+ * @return The battery status.
+ * @see ::battery_status_e
+ */
+extern int GetBatteryType();
 
 /**
  * @brief Get the DOS 8.3 path to the system configuration directory on user data partition.

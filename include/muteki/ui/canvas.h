@@ -65,6 +65,24 @@ enum print_str_flag_e {
 };
 
 /**
+ * @brief String alignment types.
+ */
+enum str_align_e {
+    /**
+     * @brief Align to top-left.
+     */
+    STR_ALIGN_LEFT = 0,
+    /**
+     * @brief Align to top-right.
+     */
+    STR_ALIGN_RIGHT,
+    /**
+     * @brief Align to top-center.
+     */
+    STR_ALIGN_CENTER,
+};
+
+/**
  * @brief Process flags for blit operations.
  * @todo Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when
  * setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent
@@ -468,8 +486,26 @@ extern int rgbSetColor(int color);
  */
 extern void ClearScreen(bool fill_with_fg);
 
-// TODO this does not work properly. Figure out why
-extern void WriteAlignString(short x, short y, const UTF16 *msg, int arg4, int arg5, unsigned int flags);
+/**
+ * @brief Draw a string `s` with specified alignment at `(x, y)` px.
+ * @details
+ * The anchor point will be located at the top of the string to be drawn. The `align` parameter then controls whether
+ * the anchor point will be at the left, center or right of the string.
+ *
+ * If the string is too long, it will be truncated to `max_length`. After truncation, the last few characters may get
+ * replaced with `...` depending on the font selection.
+ *
+ * @x_syscall_num `0x10052`
+ * @param x X coordinate of the anchor point.
+ * @param y Y coordinate of the anchor point.
+ * @param s String to be drawn. Exact encoding depends on the process flags being used.
+ * @param max_length The maximum length of the string in pixels.
+ * @param align String alignment.
+ * @param flags String processing flags
+ * @see print_flag_e Valid process flags.
+ * @see print_str_flag_e Encoding conversion flags.
+ */
+extern void WriteAlignString(short x, short y, const void *s, short max_length, int align, unsigned int flags);
 
 //extern int GetFontWidth(int32_t type);
 
