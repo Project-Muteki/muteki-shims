@@ -14,16 +14,16 @@ python_interp = import('python').find_installation('python3')
 syscalls_krnl = custom_target(
     'syscalls_krnl.s',
     output : 'syscalls_krnl.s',
-    input : ['syscall_def/gen_syscall_shim.py', syscall_files_krnl],
+    input : ['scripts/gen_syscall_shim.py', syscall_files_krnl],
     command: [python_interp, '@INPUT0@', '-o', '@OUTPUT@', '@INPUT1@', '@INPUT2@'],
 )
 
 syscalls_sdk = custom_target('syscalls_sdk.s',
     output : 'syscalls_sdk.s',
-    input : ['syscall_def/gen_syscall_shim.py', syscall_files_sdk],
+    input : ['scripts/gen_syscall_shim.py', syscall_files_sdk],
     command: [python_interp, '@INPUT0@', '-o', '@OUTPUT@', '@INPUT1@', '@INPUT2@'],)
 
-_syscall_table = run_command([python_interp, 'syscall_def/gen_syscall_shim.py',
+_syscall_table = run_command([python_interp, 'scripts/gen_syscall_shim.py',
     '-Sd',
     'syscall_def/syscalls_sdk.json', 'syscall_def/syscalls_sdk_hpprime.json',
     'syscall_def/syscalls_krnl.json', 'syscall_def/syscalls_krnl_hpprime.json',],
@@ -33,7 +33,7 @@ _syscall_split_files = _syscall_table.stdout().strip().split('\n')
 
 syscalls_split = custom_target('syscalls_split',
     output : _syscall_split_files,
-    input : ['syscall_def/gen_syscall_shim.py', syscall_files_sdk, syscall_files_krnl],
+    input : ['scripts/gen_syscall_shim.py', syscall_files_sdk, syscall_files_krnl],
     command: [python_interp, '@INPUT0@', '-t', 'gas-eabi', '-So', '@BUILD_ROOT@', '@INPUT1@', '@INPUT2@', '@INPUT3@', '@INPUT4@'],)
 
 # Static library that bundles both sdk and krnl shims.

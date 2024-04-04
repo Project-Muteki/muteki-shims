@@ -21,6 +21,7 @@ extern "C" {
 #error "MSVC is not yet supported."
 #endif
 
+#ifndef __GHIDRA__
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
@@ -77,6 +78,23 @@ typedef wchar_t __BESTA_UTF_TYPE;
  * @todo MSVC support
  */
 #define SYS_ALIGN(n) __SYS_ALIGN(n)
+
+#else // defined(__GHIDRA__)
+
+// Type stubs for Ghidra
+
+// TODO get rid of these and find a way to let ghidra use system includes seamlessly
+typedef long int32_t;
+typedef uchar uint8_t;
+typedef ulong size_t;
+typedef ulong uintptr_t;
+
+#define UTF16 wchar16
+#define _BUL(x) x
+#define SYS_DWORD
+#define SYS_ALIGN(n)
+
+#endif // defined(__GHIDRA__)
 
 #ifdef __cplusplus
 } // extern "C"
