@@ -72,7 +72,21 @@ $(function() {
   <div class="headertitle"><div class="title">muteki-shims </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> Unofficial, free as in freedom syscall shims and headers for Besta® RTOS. </p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> Unofficial, free as in freedom syscall shims and headers for Besta® RTOS.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Integrating muteki-shims into a C compiler</h1>
+<blockquote class="doxtable">
+<p>&zwj;[!TIP] When bootstrapping muteki toolchains (e.g. <code>arm-none-bestaeabi</code>), it's advised to build and install the shims using a bootstrap C compiler before building the libc and the final compiler, since libc depends on it. </p>
+</blockquote>
+<div class="fragment"><div class="line">meson setup --cross-file meson-cross/&lt;your desired cross file here&gt; build</div>
+<div class="line">meson compile -C build</div>
+<div class="line">sudo meson install -C build</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
+Integrating muteki-shims into Ghidra</h1>
+<p>Run <code>python scripts/gen_ghidra_prf.py &lt;path-to-your-ghidra-user-dir&gt;/parserprofiles/muteki-shims.prf</code>, and use <code>File -&gt; Parse C Source...</code> to import the header files.</p>
+<blockquote class="doxtable">
+<p>&zwj;[!NOTE] The prf file needs to be regenerated when the file names or layout under <code>include/</code> changes, or the project root directory is moved or renamed. Failure to do so may cause unexpected behaviors during import. </p>
+</blockquote>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

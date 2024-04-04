@@ -40,5 +40,7 @@ var searchData=
   ['mkfs_5funsupported_37',['MKFS_UNSUPPORTED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1351c2e286691222603122d92288fcc4',1,'errno.h']]],
   ['month_38',['month',['../structdatetime__t.html#a5d2ac4cfe4155d71e613dc9a6c8b0ece',1,'datetime_t']]],
   ['mtime_39',['mtime',['../structfind__context__t.html#a8db4ad446253092c6ca188481f352b51',1,'find_context_t']]],
-  ['muteki_20shims_40',['muteki-shims',['../index.html',1,'']]]
+  ['muteki_20shims_40',['muteki-shims',['../index.html',1,'']]],
+  ['muteki_20shims_20into_20a_20c_20compiler_41',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
+  ['muteki_20shims_20into_20ghidra_42',['Integrating muteki-shims into Ghidra',['../index.html#autotoc_md2',1,'']]]
 ];
