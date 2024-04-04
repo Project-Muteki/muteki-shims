@@ -83,9 +83,9 @@ Integrating muteki-shims into a C compiler</h1>
 <div class="line">sudo meson install -C build</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
 Integrating muteki-shims into Ghidra</h1>
-<p>Run <code>python scripts/gen_ghidra_prf.py &lt;path-to-your-ghidra-user-dir&gt;/parserprofiles/muteki-shims.prf</code>, and use <code>File -&gt; Parse C Source...</code> to import the header files.</p>
+<p>Run <code>python scripts/gen_ghidra_prf.py &lt;path-to-your-ghidra-user-dir&gt;/parserprofiles/muteki-shims.prf</code> to generate a parser profile named <code>muteki-shims.prf</code>, and use <code>File -&gt; Parse C Source...</code> to import the header files using that generated parser profile.</p>
 <blockquote class="doxtable">
-<p>&zwj;[!NOTE] The prf file needs to be regenerated when the file names or layout under <code>include/</code> changes, or the project root directory is moved or renamed. Failure to do so may cause unexpected behaviors during import. </p>
+<p>&zwj;[!NOTE] The parser profile needs to be regenerated when the file names or layout under <code>include/</code> changes, or the project root directory is moved or renamed. Failure to do so may cause unexpected behaviors during import. </p>
 </blockquote>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
