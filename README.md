@@ -15,7 +15,7 @@ sudo meson install -C build
 
 ## Integrating muteki-shims into Ghidra
 
-Run `python scripts/gen_ghidra_prf.py <path-to-your-ghidra-user-dir>/parserprofiles/muteki-shims.prf`, and use `File -> Parse C Source...` to import the header files.
+Run `python scripts/gen_ghidra_prf.py <path-to-your-ghidra-user-dir>/parserprofiles/muteki-shims.prf` to generate a parser profile named `muteki-shims.prf`, and use `File -> Parse C Source...` to import the header files using that generated  parser profile.
 
 > [!NOTE]
-> The prf file needs to be regenerated when the file names or layout under `include/` changes, or the project root directory is moved or renamed. Failure to do so may cause unexpected behaviors during import.
+> The parser profile needs to be regenerated when the file names or layout under `include/` changes, or the project root directory is moved or renamed. Failure to do so may cause unexpected behaviors during import.
