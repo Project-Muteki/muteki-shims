@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['deletevirtuallcd_0',['DeleteVirtualLCD',['../canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2',1,'canvas.h']]],
-  ['deviceiocontrol_1',['DeviceIoControl',['../devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b',1,'devio.h']]],
-  ['drawcircle_2',['DrawCircle',['../canvas_8h.html#a3d9a764b417dcf41fc09e1e1ae4dcdc4',1,'canvas.h']]],
-  ['drawellipse_3',['DrawEllipse',['../canvas_8h.html#ad0de766096edcc7773d2136513b139c1',1,'canvas.h']]],
-  ['drawline_4',['DrawLine',['../canvas_8h.html#af86e2055057b46240bf715cd56496699',1,'canvas.h']]],
-  ['drawrect_5',['DrawRect',['../canvas_8h.html#afa3ab157afc2b7c28ea0fb9aa0529a94',1,'canvas.h']]],
-  ['drawroundrect_6',['DrawRoundRect',['../canvas_8h.html#a92cc4c7b95e3cbd29adf24002348c055',1,'canvas.h']]]
+  ['clearallevents_0',['ClearAllEvents',['../event_8h.html#a2ffd8f47dae072b34d94f6ec43dde598',1,'event.h']]],
+  ['clearevent_1',['ClearEvent',['../event_8h.html#a136666b9c0c1ba3629a1e511764ee2a7',1,'event.h']]],
+  ['clearscreen_2',['ClearScreen',['../canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692',1,'canvas.h']]],
+  ['closehandle_3',['CloseHandle',['../devio_8h.html#afd675a81da99d1a03d218aa08caf16a6',1,'devio.h']]],
+  ['createcompatiblelcd_4',['CreateCompatibleLCD',['../canvas_8h.html#ae8d53e141ab966cba778a9b9be545331',1,'canvas.h']]],
+  ['createfile_5',['CreateFile',['../devio_8h.html#a6122359c7991a099f3e30c92338affb8',1,'devio.h']]],
+  ['createvirtuallcd_6',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
+  ['cursorlock_7',['CursorLock',['../canvas_8h.html#a6b82197758044bd6b4f728adadb1e481',1,'canvas.h']]],
+  ['cursorunock_8',['CursorUnock',['../canvas_8h.html#a83fb9bd1df11fb75ad36fd154c76dcaa',1,'canvas.h']]]
 ];
