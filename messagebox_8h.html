@@ -137,13 +137,13 @@ Functions</h2></td></tr>
 <p>Results returned by the <a class="el" href="messagebox_8h.html#ad78c013e2566e007b32d4c78ded0a63d" title="High level message box function.">MessageBox()</a> function after the user dismisses the message box. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abb00ba0ce0413f07101a74085629a5f7a7899324599e9c2e400713172c4291661" name="abb00ba0ce0413f07101a74085629a5f7a7899324599e9c2e400713172c4291661"></a>MB_RESULT_OK&#160;</td><td class="fielddoc"><p>The OK button was pressed by the user. </p>
-<p>Pressing <code>Y</code> key on the keyboard could also trigger this (specifically when OK button is enabled via message_box_type_e::MB_BUTTON_OK). </p>
+<p>Pressing <code>Y</code> key on the keyboard could also trigger this (specifically when OK button is enabled via <a class="el" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7aaaeb146cff843e3ac963d8efcc82a181" title="Provide OK button on the message box.">MB_BUTTON_OK</a>). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="abb00ba0ce0413f07101a74085629a5f7a73c93a27b6bf552ce25f79d905979f4b" name="abb00ba0ce0413f07101a74085629a5f7a73c93a27b6bf552ce25f79d905979f4b"></a>MB_RESULT_CANCEL&#160;</td><td class="fielddoc"><p>The Cancel button was pressed by the user. </p>
 <p>Pressing <code>C</code> key or <code>ESC</code> key on the keyboard could also trigger this. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="abb00ba0ce0413f07101a74085629a5f7ac6782c2ab7c70f0d91a54a7fc5bdc50f" name="abb00ba0ce0413f07101a74085629a5f7ac6782c2ab7c70f0d91a54a7fc5bdc50f"></a>MB_RESULT_YES&#160;</td><td class="fielddoc"><p>The Yes button was pressed by the user. </p>
-<p>Pressing <code>Y</code> key on the keyboard could also trigger this (specifically when Yes button is enabled via message_box_type_e::MB_BUTTON_YES). </p>
+<p>Pressing <code>Y</code> key on the keyboard could also trigger this (specifically when Yes button is enabled via <a class="el" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a596382a0d812d1ae8a2e9d8822e88742" title="Provide Yes button on the message box.">MB_BUTTON_YES</a>). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="abb00ba0ce0413f07101a74085629a5f7a6587e339e749832a44e902ace6139a1e" name="abb00ba0ce0413f07101a74085629a5f7a6587e339e749832a44e902ace6139a1e"></a>MB_RESULT_NO&#160;</td><td class="fielddoc"><p>The No button was pressed by the user. </p>
 <p>Pressing <code>N</code> key or <code>ESC</code> key on the keyboard could also trigger this. </p>
@@ -237,7 +237,7 @@ Functions</h2></td></tr>
 <p>High level message box function. </p>
 <p>Create and show a message box view with the specified <code>text</code>, an icon and one or more buttons, and return which button on the message box is pressed when the user dismisses it. The <code>type</code> argument controls the icon and buttons shown on the message box view.</p>
 <p>Message boxes can be dismissed by 3 ways: Pressing the button on the message box (including selecting them and pressing Enter), using the key bind (<code>Y</code> for OK/Yes, <code>N</code> for No and <code>C</code> for cancel) or pressing the ESC key when Cancel-like operations are defined (i.e. Cancel or No, with Cancel taking precedence when both are shown).</p>
-<p>When OK and Yes are both available, what the user has selected takes precedence. That is, if the user selects Yes button instead of the OK button with TAB or arrow keys, pressing the <code>Y</code> key on the keyboard will make the function return message_box_result_e::MB_RESULT_YES instead of message_box_result_e::MB_RESULT_OK.</p>
+<p>When OK and Yes are both available, what the user has selected takes precedence. That is, if the user selects Yes button instead of the OK button with TAB or arrow keys, pressing the <code>Y</code> key on the keyboard will make the function return <a class="el" href="messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7ac6782c2ab7c70f0d91a54a7fc5bdc50f" title="The Yes button was pressed by the user.">MB_RESULT_YES</a> instead of <a class="el" href="messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7a7899324599e9c2e400713172c4291661" title="The OK button was pressed by the user.">MB_RESULT_OK</a>.</p>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x1013d</code></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
