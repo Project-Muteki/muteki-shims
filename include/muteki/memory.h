@@ -81,6 +81,7 @@ extern void *AllocBlock(size_t size, unsigned short init_0x30, bool new_segment)
 
 /**
  * @brief Free memory previously allocated with AllocBlock().
+ * @details If a segment chunk is freed, everything below it will also be implicitly freed.
  * @x_syscall_num `0x10146`
  * @param ptr Pointer to previously allocated memory.
  * @x_void_return
