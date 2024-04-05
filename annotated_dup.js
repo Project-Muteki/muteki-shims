@@ -1,0 +1,25 @@
+var annotated_dup =
+[
+    [ "applet_args_v4_t", "structapplet__args__v4__t.html", "structapplet__args__v4__t" ],
+    [ "critical_section_s", "structcritical__section__s.html", "structcritical__section__s" ],
+    [ "datetime_t", "structdatetime__t.html", "structdatetime__t" ],
+    [ "event_s", "structevent__s.html", "structevent__s" ],
+    [ "find_context_t", "structfind__context__t.html", "structfind__context__t" ],
+    [ "fs_stat_t", "structfs__stat__t.html", "structfs__stat__t" ],
+    [ "key_press_event_config_t", "structkey__press__event__config__t.html", "structkey__press__event__config__t" ],
+    [ "lcd_cursor_t", "structlcd__cursor__t.html", "structlcd__cursor__t" ],
+    [ "lcd_draw_t", "structlcd__draw__t.html", "structlcd__draw__t" ],
+    [ "lcd_font_t", "structlcd__font__t.html", "structlcd__font__t" ],
+    [ "lcd_lock_t", "structlcd__lock__t.html", "structlcd__lock__t" ],
+    [ "lcd_rect_t", "structlcd__rect__t.html", "structlcd__rect__t" ],
+    [ "lcd_s", "structlcd__s.html", "structlcd__s" ],
+    [ "lcd_surface_t", "structlcd__surface__t.html", "structlcd__surface__t" ],
+    [ "lcd_thread_safe_t", "structlcd__thread__safe__t.html", "structlcd__thread__safe__t" ],
+    [ "message_queue_nonatomic_t", "structmessage__queue__nonatomic__t.html", "structmessage__queue__nonatomic__t" ],
+    [ "message_queue_s", "structmessage__queue__s.html", "structmessage__queue__s" ],
+    [ "nand_params_t", "structnand__params__t.html", "structnand__params__t" ],
+    [ "semaphore_s", "structsemaphore__s.html", "structsemaphore__s" ],
+    [ "thread_s", "structthread__s.html", "structthread__s" ],
+    [ "threading_waitable_t", "structthreading__waitable__t.html", "structthreading__waitable__t" ],
+    [ "ui_event_t", "structui__event__t.html", "structui__event__t" ]
+];
