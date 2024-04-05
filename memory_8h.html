@@ -232,7 +232,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Free memory previously allocated with <a class="el" href="memory_8h.html#a3fd808fc09bb2b87f76a56322b32c5f5" title="Allocate memory on the secondary heap.">AllocBlock()</a>. </p>
-<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10146</code> </dd></dl>
+<p>If a segment chunk is freed, everything below it will also be implicitly freed. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10146</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to previously allocated memory.</td></tr>
