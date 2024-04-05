@@ -312,12 +312,12 @@ typedef struct lcd_s lcd_t;
 
 /**
  * @brief Callback type for handling canvas rotation.
- * @details When `rotation` is set to rotation_value_e::ROTATION_QUERY, the current rotation value will be returned
- * with no side effect. When `rotation` is set to rotation_value_e::ROTATION_APPLY, the canvas will rotate based on
+ * @details When `rotation` is set to ::ROTATION_QUERY, the current rotation value will be returned
+ * with no side effect. When `rotation` is set to ::ROTATION_APPLY, the canvas will rotate based on
  * current value of lcd_t::rotation.
  * @param self The LCD descriptor this was called from.
  * @param rotation New rotation. This value will be written to lcd_t::rotation and this callback will be called
- * recursively with rotation_value_e::ROTATION_APPLY as the rotation value to actually apply the change.
+ * recursively with ::ROTATION_APPLY as the rotation value to actually apply the change.
  * @return Current rotation value in effect. This will be the same as `rotation` when no magic value documented above
  * was used.
  * @see lcd_t::rotation Where the location value is stored in the LCD descriptor.
@@ -829,7 +829,7 @@ extern lcd_t *GetActiveLCD();
  * `dash_pattern` would be `0xf0c0f080`.
  * @note Stroke dash pattern set via this function does not apply to curves.
  * @x_syscall_num `0x1006b`
- * @param dash New predefined dash pattern. Set to stroke_predefined_dash_e::DASH_CUSTOM to specify a custom pattern.
+ * @param dash New predefined dash pattern. Set to ::DASH_CUSTOM to specify a custom pattern.
  * @param[in, out] dash_pattern New dash bit pattern. Will be set to the previous dash bit pattern once this function
  * returns.
  * @return Previous predefined dash pattern.

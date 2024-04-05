@@ -81,7 +81,7 @@ enum message_box_result_e {
     /**
      * @brief The OK button was pressed by the user.
      * @details Pressing `Y` key on the keyboard could also trigger this (specifically when OK button is enabled via
-     * message_box_type_e::MB_BUTTON_OK).
+     * ::MB_BUTTON_OK).
      */
     MB_RESULT_OK = 3,
     /**
@@ -92,7 +92,7 @@ enum message_box_result_e {
     /**
      * @brief The Yes button was pressed by the user.
      * @details Pressing `Y` key on the keyboard could also trigger this (specifically when Yes button is enabled via
-     * message_box_type_e::MB_BUTTON_YES).
+     * ::MB_BUTTON_YES).
      */
     MB_RESULT_YES = 5,
     /**
@@ -115,7 +115,7 @@ enum message_box_result_e {
  *
  * When OK and Yes are both available, what the user has selected takes precedence. That is, if the user selects Yes
  * button instead of the OK button with TAB or arrow keys, pressing the `Y` key on the keyboard will make the function
- * return message_box_result_e::MB_RESULT_YES instead of message_box_result_e::MB_RESULT_OK.
+ * return ::MB_RESULT_YES instead of ::MB_RESULT_OK.
  *
  * @x_syscall_num `0x1013d`
  *

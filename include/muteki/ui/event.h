@@ -184,12 +184,12 @@ typedef struct {
         struct {
             /** 
              * @brief Keycode for the first pressed key.
-             * @details Only available when ::event_type is ui_event_type_e::UI_EVENT_TYPE_KEY.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
              */
             short key_code0; // 8-10
             /**
              * @brief Keycode for the second pressed key.
-             * @details Only available when ::event_type is ui_event_type_e::UI_EVENT_TYPE_KEY.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
              * @note Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover,
              * some devices may lack support of simultaneous key presses.
              */
@@ -198,14 +198,14 @@ typedef struct {
         struct {
             /**
              * @brief The X coordinate of where the touch event is located, in pixels.
-             * @details Only available when ::event_type is ui_event_type_e::UI_EVENT_TYPE_TOUCH_BEGIN,
-             * ui_event_type_e::UI_EVENT_TYPE_TOUCH_MOVE, or ui_event_type_e::UI_EVENT_TYPE_TOUCH_END.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
              */
             short touch_x;
             /**
              * @brief The Y coordinate of where the touch event is located, in pixels.
-             * @details Only available when ::event_type is ui_event_type_e::UI_EVENT_TYPE_TOUCH_BEGIN,
-             * ui_event_type_e::UI_EVENT_TYPE_TOUCH_MOVE, or ui_event_type_e::UI_EVENT_TYPE_TOUCH_END.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
              */
             short touch_y;
         };
