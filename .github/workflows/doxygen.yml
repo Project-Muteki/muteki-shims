@@ -26,8 +26,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-		with:
-		  submodules: recursive
+        with:
+          submodules: recursive
       - name: Cache Doxygen package
         id: cache-doxygen-package
         uses: actions/cache@v4
