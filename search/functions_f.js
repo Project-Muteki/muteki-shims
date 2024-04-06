@@ -19,7 +19,7 @@ var searchData=
   ['setsyskeystate_16',['SetSysKeyState',['../event_8h.html#aadb561bb43ac9ff3ee25fa3751ae9c83',1,'event.h']]],
   ['settimer1inthandler_17',['SetTimer1IntHandler',['../system_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30',1,'system.h']]],
   ['settransparentcolor_18',['SetTransparentColor',['../canvas_8h.html#ad17969255790b1f018336f0c959dba82',1,'canvas.h']]],
-  ['showgraphic_19',['ShowGraphic',['../surface_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'surface.h']]],
+  ['showgraphic_19',['ShowGraphic',['../canvas_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'canvas.h']]],
   ['sizeofgraphic_20',['SizeofGraphic',['../surface_8h.html#a04239638c97cb1c6a52bb11f22223862',1,'surface.h']]],
   ['sizeofimage_21',['SizeofImage',['../surface_8h.html#afaee65f5adc0182e5b96e35bcb222e3f',1,'surface.h']]],
   ['syspoweroff_22',['SysPowerOff',['../system_8h.html#ae78b6cf2d7a0a6aef82d74b43caf1797',1,'system.h']]]

@@ -26,7 +26,7 @@ var searchData=
   ['shims_23',['muteki-shims',['../index.html',1,'']]],
   ['shims_20into_20a_20c_20compiler_24',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
   ['shims_20into_20ghidra_25',['Integrating muteki-shims into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['showgraphic_26',['ShowGraphic',['../surface_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'surface.h']]],
+  ['showgraphic_26',['ShowGraphic',['../canvas_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'canvas.h']]],
   ['size_27',['size',['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t::size'],['../structfs__stat__t.html#a1cf64bba642348e5eb10305141d5931b',1,'fs_stat_t::size'],['../structmessage__queue__nonatomic__t.html#a7b448a0c95fa58f12b0acf0ab41d2f32',1,'message_queue_nonatomic_t::size'],['../structlcd__cursor__t.html#aba3d4fd0071c9529e14e155343c882ae',1,'lcd_cursor_t::size']]],
   ['size2_28',['size2',['../structfs__stat__t.html#ab03c03a62dae55ba0473e33937d84701',1,'fs_stat_t']]],
   ['size2_5fkb_29',['size2_kb',['../structfs__stat__t.html#adccd3ed7fc787d55186473d3fba34758',1,'fs_stat_t']]],

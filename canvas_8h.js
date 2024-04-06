@@ -47,6 +47,7 @@ var canvas_8h =
     [ "SetPenStyle", "canvas_8h.html#afd45e3a5fc15cc28a6e81dc52f78362f", null ],
     [ "SetPixel", "canvas_8h.html#a69560b4543015dac7002eaad1b9c3fa5", null ],
     [ "SetTransparentColor", "canvas_8h.html#ad17969255790b1f018336f0c959dba82", null ],
+    [ "ShowGraphic", "canvas_8h.html#a229f4c8b8227b91bf454504514feb41d", null ],
     [ "WriteAlignString", "canvas_8h.html#aa411d0bb895097a6f63e5b897f7637a8", null ],
     [ "WriteChar", "canvas_8h.html#aa8759b123224e598b231e6c871632c4b", null ],
     [ "WriteString", "canvas_8h.html#a453e0e54d4003711d33a1c0ccdb64e29", null ]
