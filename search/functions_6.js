@@ -5,7 +5,7 @@ var searchData=
   ['fillrect_2',['FillRect',['../canvas_8h.html#a061c7faadcc06d7a35572a22a7c9c73f',1,'canvas.h']]],
   ['formatmessage_3',['FormatMessage',['../errno_8h.html#a30ded332e224f861b7b50f11568f091d',1,'errno.h']]],
   ['freeblock_4',['FreeBlock',['../memory_8h.html#a2902ddabae243afba311b771c36a483c',1,'memory.h']]],
-  ['freeimage_5',['FreeImage',['../canvas_8h.html#ababdb62cafc2718b2e720bc8166157a2',1,'canvas.h']]],
+  ['freeimage_5',['FreeImage',['../surface_8h.html#ababdb62cafc2718b2e720bc8166157a2',1,'surface.h']]],
   ['freeprogram_6',['FreeProgram',['../loader_8h.html#a33c58ebe30082278157831d17eaa8e86',1,'loader.h']]],
   ['fsgetdiskroomstate_7',['FSGetDiskRoomState',['../fs_8h.html#addc301eb3ca382ad5dc5de8e0dca892c',1,'fs.h']]],
   ['ftl_5fcreateramdisk_8',['FTL_CreateRamDisk',['../ftl_8h.html#af641b186facc7ee474d06ddda52bfefc',1,'ftl.h']]],

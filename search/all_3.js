@@ -6,7 +6,7 @@ var searchData=
   ['clearevent_3',['ClearEvent',['../event_8h.html#a136666b9c0c1ba3629a1e511764ee2a7',1,'event.h']]],
   ['clearscreen_4',['ClearScreen',['../canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692',1,'canvas.h']]],
   ['closehandle_5',['CloseHandle',['../devio_8h.html#afd675a81da99d1a03d218aa08caf16a6',1,'devio.h']]],
-  ['common_2eh_6',['common.h',['../common_8h.html',1,'']]],
+  ['common_2eh_6',['common.h',['../common_8h.html',1,'(Global Namespace)'],['../ui_2common_8h.html',1,'(Global Namespace)']]],
   ['compiler_7',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
   ['createcompatiblelcd_8',['CreateCompatibleLCD',['../canvas_8h.html#ae8d53e141ab966cba778a9b9be545331',1,'canvas.h']]],
   ['createfile_9',['CreateFile',['../devio_8h.html#a6122359c7991a099f3e30c92338affb8',1,'devio.h']]],

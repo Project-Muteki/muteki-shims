@@ -15,7 +15,7 @@ var searchData=
   ['_5faremove_12',['_aremove',['../fs_8h.html#a28c103bca80270e96121bf61ce1194bb',1,'fs.h']]],
   ['_5farename_13',['_arename',['../fs_8h.html#ad8b9b7db9accfb6f95ce52610b48ed2e',1,'fs.h']]],
   ['_5farmdir_14',['_armdir',['../fs_8h.html#ae76962f6f21477b01bb29dd36d5e34b9',1,'fs.h']]],
-  ['_5fbitblt_15',['_BitBlt',['../canvas_8h.html#a1fa6c5c38a95c92f0b5c9e134311d637',1,'canvas.h']]],
+  ['_5fbitblt_15',['_BitBlt',['../surface_8h.html#a1fa6c5c38a95c92f0b5c9e134311d637',1,'surface.h']]],
   ['_5ffclose_16',['_fclose',['../file_8h.html#a81aeedfcb44ecd96a23b5bbf9fc42f0b',1,'file.h']]],
   ['_5ffindclose_17',['_findclose',['../fs_8h.html#ad652522d592b9c474449cc2be25cb767',1,'fs.h']]],
   ['_5ffread_18',['_fread',['../file_8h.html#a2a89dab28e61d96151c0d1e3edd555ae',1,'file.h']]],

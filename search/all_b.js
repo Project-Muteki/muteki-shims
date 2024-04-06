@@ -8,7 +8,7 @@ var searchData=
   ['lcd_5ffont_5ft_5',['lcd_font_t',['../structlcd__font__t.html',1,'']]],
   ['lcd_5flock_5ft_6',['lcd_lock_t',['../structlcd__lock__t.html',1,'']]],
   ['lcd_5frect_5ft_7',['lcd_rect_t',['../structlcd__rect__t.html',1,'']]],
-  ['lcd_5frotate_5fcallback_5ft_8',['lcd_rotate_callback_t',['../canvas_8h.html#a7ef9e48cde5ff06441262c36e162fba5',1,'canvas.h']]],
+  ['lcd_5frotate_5fcallback_5ft_8',['lcd_rotate_callback_t',['../ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5',1,'common.h']]],
   ['lcd_5fs_9',['lcd_s',['../structlcd__s.html',1,'']]],
   ['lcd_5fsurface_5ft_10',['lcd_surface_t',['../structlcd__surface__t.html',1,'']]],
   ['lcd_5fthread_5fsafe_5ft_11',['lcd_thread_safe_t',['../structlcd__thread__safe__t.html',1,'']]],

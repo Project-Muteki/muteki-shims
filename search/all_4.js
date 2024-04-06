@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['dash_5fcustom_0',['DASH_CUSTOM',['../canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9',1,'canvas.h']]],
-  ['dash_5fnone_1',['DASH_NONE',['../canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3',1,'canvas.h']]],
+  ['dash_5fcustom_0',['DASH_CUSTOM',['../ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9',1,'common.h']]],
+  ['dash_5fnone_1',['DASH_NONE',['../ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3',1,'common.h']]],
   ['data_5fpage_5fsize_2',['data_page_size',['../structnand__params__t.html#a344d86c5f49785ee244fa2a7d001ca76',1,'nand_params_t']]],
   ['datetime_2eh_3',['datetime.h',['../datetime_8h.html',1,'']]],
   ['datetime_5ft_4',['datetime_t',['../structdatetime__t.html',1,'']]],

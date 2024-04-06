@@ -92,10 +92,6 @@ $(document).ready(function(){initNavTree('canvas_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">canvas.h File Reference</div></div>
 </div><!--header-->
@@ -103,170 +99,10 @@ $(document).ready(function(){initNavTree('canvas_8h.html',''); initResizable(); 
 
 <p>Display canvas (LCD) API.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="threading_8h_source.html">muteki/threading.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="ui_2common_8h_source.html">muteki/ui/common.h</a>&gt;</code><br />
 </div>
 <p><a href="canvas_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor of an LCD drawing surface or hardware framebuffer.  <a href="structlcd__surface__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__cursor__t.html">lcd_cursor_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor states usually linked to an LCD descriptor.  <a href="structlcd__cursor__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__rect__t.html">lcd_rect_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectangle used to represent usable drawing area in an LCD descriptor.  <a href="structlcd__rect__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__draw__t.html">lcd_draw_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing routine common states.  <a href="structlcd__draw__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__font__t.html">lcd_font_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font rendering routine common states.  <a href="structlcd__font__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__lock__t.html">lcd_lock_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An extended part of the LCD descriptor that implements descriptor locking.  <a href="structlcd__lock__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__s.html">lcd_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LCD descriptor.  <a href="structlcd__s.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__thread__safe__t.html">lcd_thread_safe_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.  <a href="structlcd__thread__safe__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a1d12e70227ae6a8e9e465d42a4de14bf" id="r_a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf">RGB_FROM_U8</a>(r,  g,  b)&#160;&#160;&#160;((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</td></tr>
-<tr class="memdesc:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert separate RGB values to integer RGB representation.  <br /></td></tr>
-<tr class="separator:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ab5d59276663ba11284c84cb7dcc915cf" id="r_ab5d59276663ba11284c84cb7dcc915cf"><td class="memItemLeft" align="right" valign="top"><a id="ab5d59276663ba11284c84cb7dcc915cf" name="ab5d59276663ba11284c84cb7dcc915cf"></a>
-typedef struct <a class="el" href="structlcd__s.html">lcd_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_t</b></td></tr>
-<tr class="separator:ab5d59276663ba11284c84cb7dcc915cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ef9e48cde5ff06441262c36e162fba5" id="r_a7ef9e48cde5ff06441262c36e162fba5"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a7ef9e48cde5ff06441262c36e162fba5">lcd_rotate_callback_t</a>) (<a class="el" href="structlcd__s.html">lcd_t</a> *self, int rotation)</td></tr>
-<tr class="memdesc:a7ef9e48cde5ff06441262c36e162fba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback type for handling canvas rotation.  <br /></td></tr>
-<tr class="separator:a7ef9e48cde5ff06441262c36e162fba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a1f54f589f151bdd540c978eba5161591" id="r_a1f54f589f151bdd540c978eba5161591"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591">print_flag_e</a> { <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf">PRINT_NONE</a> = 0
-, <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591af6ea821e1d64905d021e49ec74f498f1">PRINT_INVERT</a> = 0x1
-, <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224">PRINT_INVERT_ALT</a> = 0x4
-, <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c">PRINT_UNDERSCORE_ONLY</a> = 0x40
- }</td></tr>
-<tr class="memdesc:a1f54f589f151bdd540c978eba5161591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for string and character printing.  <a href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591">More...</a><br /></td></tr>
-<tr class="separator:a1f54f589f151bdd540c978eba5161591"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cdd9c950c7c047ddd0979f457a09579" id="r_a5cdd9c950c7c047ddd0979f457a09579"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579">print_str_flag_e</a> { <a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752">PRINT_STR_ENCODING_BIG5</a> = 0x100
-, <a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6">PRINT_STR_ENCODING_GB18030</a> = 0x200
-, <a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579a413b73fb9378fcaa73f745607d800abe">PRINT_STR_ENCODING_TIS_620</a> = 0x400
- }</td></tr>
-<tr class="memdesc:a5cdd9c950c7c047ddd0979f457a09579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for string printing only.  <a href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579">More...</a><br /></td></tr>
-<tr class="separator:a5cdd9c950c7c047ddd0979f457a09579"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8edb33a562b4bcc85154e3e2a951650" id="r_af8edb33a562b4bcc85154e3e2a951650"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650">str_align_e</a> { <a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a">STR_ALIGN_LEFT</a> = 0
-, <a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821">STR_ALIGN_RIGHT</a>
-, <a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98">STR_ALIGN_CENTER</a>
- }</td></tr>
-<tr class="memdesc:af8edb33a562b4bcc85154e3e2a951650"><td class="mdescLeft">&#160;</td><td class="mdescRight">String alignment types.  <a href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650">More...</a><br /></td></tr>
-<tr class="separator:af8edb33a562b4bcc85154e3e2a951650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41b02fda321c9d1ab9502aa8aa49adcd" id="r_a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a> { <a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05">BLIT_NONE</a> = 0
-, <a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462">BLIT_INVERT</a> = 0x4
- }</td></tr>
-<tr class="memdesc:a41b02fda321c9d1ab9502aa8aa49adcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for blit operations.  <a href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">More...</a><br /></td></tr>
-<tr class="separator:a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a3ebca299d07bdf69299b4a5dfb6345" id="r_a7a3ebca299d07bdf69299b4a5dfb6345"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345">rotation_value_e</a> { <br />
-&#160;&#160;<a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa">ROTATION_TOP_SIDE_FACING_UP</a> = 0
-, <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15">ROTATION_TOP_SIDE_FACING_LEFT</a>
-, <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03">ROTATION_TOP_SIDE_FACING_DOWN</a>
-, <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5">ROTATION_TOP_SIDE_FACING_RIGHT</a>
-, <br />
-&#160;&#160;<a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607">ROTATION_QUERY</a> = 0xfe
-, <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493">ROTATION_APPLY</a> = 0xff
-<br />
- }</td></tr>
-<tr class="memdesc:a7a3ebca299d07bdf69299b4a5dfb6345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation values used by lcd_rotate_callback_t.  <a href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345">More...</a><br /></td></tr>
-<tr class="separator:a7a3ebca299d07bdf69299b4a5dfb6345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a3ead8fb0194794e230be112a87d4cb" id="r_a2a3ead8fb0194794e230be112a87d4cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cb">stroke_predefined_dash_e</a> { <br />
-&#160;&#160;<a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3">DASH_NONE</a> = 0
-, <b>DASH_8_8_16_0</b>
-, <b>DASH_4</b>
-, <b>DASH_0_4_16_4_4_4</b>
-, <br />
-&#160;&#160;<b>DASH_12_4_4_4_4_4</b>
-, <b>DASH_1</b>
-, <b>DASH_2</b>
-, <b>DASH_16</b>
-, <br />
-&#160;&#160;<b>DASH_0_1_8_1_8_1_8_1_4_0</b> = 12
-, <b>DASH_4_1_8_1_7_1_9_1</b>
-, <b>DASH_3_1_7_1_7_1_4_8</b>
-, <b>DASH_3_1_7_1_7_1_7_1_4_0</b>
-, <br />
-&#160;&#160;<b>DASH_0_1_6_1_1_1_4_1_3_1_2_1_5_2_3_0</b>
-, <b>DASH_3_2_5_1_2_1_3_1_4_1_1_1_6_1</b>
-, <b>DASH_7_1_6_1_6_1_6_1_3_0</b>
-, <b>DASH_3_1_6_1_6_1_6_1_7_0</b>
-, <br />
-&#160;&#160;<b>DASH_24_8</b> = 22
-, <a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9">DASH_CUSTOM</a> = 0x100
-<br />
- }</td></tr>
-<tr class="memdesc:a2a3ead8fb0194794e230be112a87d4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined dash patterns.  <a href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cb">More...</a><br /></td></tr>
-<tr class="separator:a2a3ead8fb0194794e230be112a87d4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
-&#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
-, <b>SANS_BOLD_TINY_CJK_NORMAL</b>
-, <b>SANS_ITALIC_TINY_CJK_REGULAR_NORMAL</b>
-, <b>SANS_BOLDITALIC_TINY_CJK_REGULAR_NORMAL</b>
-, <br />
-&#160;&#160;<b>SERIF_SMALL_CJK</b>
-, <b>SERIF_BOLD_SMALL_CJK</b>
-, <b>SERIF_ITALIC_SMALL_CJK_REGULAR</b>
-, <b>SERIF_BOLDITALIC_SMALL_CJK_REGULAR</b>
-, <br />
-&#160;&#160;<b>SERIF_CJK</b>
-, <b>SERIF_BOLD_CJK</b>
-, <b>SERIF_ITALIC_CJK_REGULAR</b>
-, <b>SERIF_BOLDITALIC_CJK_REGULAR</b>
-, <br />
-&#160;&#160;<b>SERIF_LARGE_CJK</b>
-, <b>SERIF_BOLD_LARGE_CJK</b>
-, <b>SERIF_ITALIC_LARGE_CJK</b>
-, <b>SERIF_BOLDITALIC_LARGE_CJK</b>
-, <br />
-&#160;&#160;<b>MONOSPACE_CJK</b>
-, <b>MONOSPACE_TINY_NOCJK</b>
-, <b>SERIF_CJK_18</b>
-, <b>SERIF_BOLD_CJK_19</b>
-, <br />
-&#160;&#160;<b>SERIF_SMALL_CJK_20</b>
-, <b>SANS_TINY_NOCJK</b>
-, <b>SANS_BOLD_TINY_NOCJK</b>
-, <b>SANS_ITALIC_TINY_NOCJK</b>
-, <br />
-&#160;&#160;<b>SANS_BOLDITALIC_TINY_NOCJK</b>
-, <b>SERIF_SMALL_CJK_25</b>
-, <b>SERIF_BOLD_SMALL_CJK_26</b>
-, <b>SERIF_ITALIC_SMALL_CJK_REGULAR_27</b>
-, <br />
-&#160;&#160;<b>SERIF_BOLDITALIC_SMALL_CJK_REGULAR_28</b>
-, <b>SERIF_CJK_29</b>
-, <b>SERIF_BOLD_CJK_30</b>
-, <b>SERIF_ITALIC_CJK_REGULAR_31</b>
-, <br />
-&#160;&#160;<b>SERIF_BOLDITALIC_CJK_REGULAR_32</b>
-, <b>SERIF_HUGE_CJK_LARGE</b>
-, <b>SANS_HUGE_CJK_LARGE</b>
-, <b>SERIF_ITALIC_HUGE_CJK_LARGE</b>
-, <br />
-&#160;&#160;<b>SANS_ITALIC_HUGE_CJK_LARGE</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a626b23c6e6f587deeea5e3cc43b10171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font types.  <a href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171">More...</a><br /></td></tr>
-<tr class="separator:a626b23c6e6f587deeea5e3cc43b10171"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad17969255790b1f018336f0c959dba82" id="r_ad17969255790b1f018336f0c959dba82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ad17969255790b1f018336f0c959dba82">SetTransparentColor</a> (int color)</td></tr>
@@ -284,27 +120,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aa411d0bb895097a6f63e5b897f7637a8" id="r_aa411d0bb895097a6f63e5b897f7637a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa411d0bb895097a6f63e5b897f7637a8">WriteAlignString</a> (short x, short y, const void *s, short max_length, int align, unsigned int flags)</td></tr>
 <tr class="memdesc:aa411d0bb895097a6f63e5b897f7637a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a string <code>s</code> with specified alignment at <code>(x, y)</code> px.  <br /></td></tr>
 <tr class="separator:aa411d0bb895097a6f63e5b897f7637a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eddaf1d5fdc62b53e63bf3fcb53c09b" id="r_a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b">GetCharWidth</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, uint8_t font_type)</td></tr>
-<tr class="memdesc:a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the character <code>c</code> used in <code>font_type</code>.  <br /></td></tr>
-<tr class="separator:a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a009e14c23044791c4250d8242ec811c4" id="r_a009e14c23044791c4250d8242ec811c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a009e14c23044791c4250d8242ec811c4">GetFontHeight</a> (uint8_t font_type)</td></tr>
-<tr class="memdesc:a009e14c23044791c4250d8242ec811c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of the font <code>font_type</code>.  <br /></td></tr>
-<tr class="separator:a009e14c23044791c4250d8242ec811c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7365cbf5eae9bd5031842b29db13d370" id="r_a7365cbf5eae9bd5031842b29db13d370"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a7365cbf5eae9bd5031842b29db13d370">Printf</a> (const char *format,...)</td></tr>
 <tr class="memdesc:a7365cbf5eae9bd5031842b29db13d370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string.  <br /></td></tr>
 <tr class="separator:a7365cbf5eae9bd5031842b29db13d370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2bce93898870fbfd4541135b418c85c" id="r_ae2bce93898870fbfd4541135b418c85c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae2bce93898870fbfd4541135b418c85c">PrintfXY</a> (short x, short y, const char *format,...)</td></tr>
 <tr class="memdesc:ae2bce93898870fbfd4541135b418c85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string aligned to the top left corner at <code>(x, y)</code> px.  <br /></td></tr>
 <tr class="separator:ae2bce93898870fbfd4541135b418c85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a229f4c8b8227b91bf454504514feb41d" id="r_a229f4c8b8227b91bf454504514feb41d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a229f4c8b8227b91bf454504514feb41d">ShowGraphic</a> (short x, short y, <a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface, unsigned short flags)</td></tr>
-<tr class="memdesc:a229f4c8b8227b91bf454504514feb41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a surface onto current active LCD.  <br /></td></tr>
-<tr class="separator:a229f4c8b8227b91bf454504514feb41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04239638c97cb1c6a52bb11f22223862" id="r_a04239638c97cb1c6a52bb11f22223862"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a04239638c97cb1c6a52bb11f22223862">SizeofGraphic</a> (<a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface)</td></tr>
-<tr class="memdesc:a04239638c97cb1c6a52bb11f22223862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the total on-memory size of a surface (including descriptor).  <br /></td></tr>
-<tr class="separator:a04239638c97cb1c6a52bb11f22223862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae983d7fa372d0a7612b98b400aae8bfc" id="r_ae983d7fa372d0a7612b98b400aae8bfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae983d7fa372d0a7612b98b400aae8bfc">InitGraphic</a> (<a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface, short width, short height, short depth)</td></tr>
-<tr class="memdesc:ae983d7fa372d0a7612b98b400aae8bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a buffer as an all-in-one surface.  <br /></td></tr>
-<tr class="separator:ae983d7fa372d0a7612b98b400aae8bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7078127e59f0a75d66343edf2c7769fd" id="r_a7078127e59f0a75d66343edf2c7769fd"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a7078127e59f0a75d66343edf2c7769fd">GetFontType</a> ()</td></tr>
 <tr class="memdesc:a7078127e59f0a75d66343edf2c7769fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current font type.  <br /></td></tr>
 <tr class="separator:a7078127e59f0a75d66343edf2c7769fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -365,9 +186,6 @@ Functions</h2></td></tr>
 <tr class="memitem:adca965f3a7d9d1fceb2543b96a52dac2" id="r_adca965f3a7d9d1fceb2543b96a52dac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2">DeleteVirtualLCD</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *lcd)</td></tr>
 <tr class="memdesc:adca965f3a7d9d1fceb2543b96a52dac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose a previously created virtual LCD descriptor.  <br /></td></tr>
 <tr class="separator:adca965f3a7d9d1fceb2543b96a52dac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fa6c5c38a95c92f0b5c9e134311d637" id="r_a1fa6c5c38a95c92f0b5c9e134311d637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a1fa6c5c38a95c92f0b5c9e134311d637">_BitBlt</a> (<a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *dst, short xdstoffset, short ydstoffset, short xsize, short ysize, <a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *src, int xsrcoffset, int ysrcoffset, unsigned short flags)</td></tr>
-<tr class="memdesc:a1fa6c5c38a95c92f0b5c9e134311d637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform blit operation from <code>src</code> surface to <code>dst</code> surface.  <br /></td></tr>
-<tr class="separator:a1fa6c5c38a95c92f0b5c9e134311d637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2442aa53fb420d155f16e717ad5c221" id="r_aa2442aa53fb420d155f16e717ad5c221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#aa2442aa53fb420d155f16e717ad5c221">SetActiveLCD</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *new_lcd)</td></tr>
 <tr class="memdesc:aa2442aa53fb420d155f16e717ad5c221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an LCD descriptor as active.  <br /></td></tr>
 <tr class="separator:aa2442aa53fb420d155f16e717ad5c221"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -437,376 +255,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a8ea8e6ecb6c78f8721e204851174f7ba" id="r_a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba">SetDCObject</a> (<a class="el" href="structlcd__s.html">lcd_t</a> *lcd, <a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *new_surface)</td></tr>
 <tr class="memdesc:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link a surface (device context) to an LCD descriptor.  <br /></td></tr>
 <tr class="separator:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ababbf47f56c76a835a04e8709859bca0" id="r_ababbf47f56c76a835a04e8709859bca0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0">GetImageSize</a> (short width, short height)</td></tr>
-<tr class="memdesc:ababbf47f56c76a835a04e8709859bca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the buffer size required for an all-in-one surface of a specific size.  <br /></td></tr>
-<tr class="separator:ababbf47f56c76a835a04e8709859bca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6657b1c8003221140be603fc3c696150" id="r_a6657b1c8003221140be603fc3c696150"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a6657b1c8003221140be603fc3c696150">GetImageSizeExt</a> (short width, short height, short depth)</td></tr>
-<tr class="memdesc:a6657b1c8003221140be603fc3c696150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the buffer size required for an all-in-one surface of a specific pixel format and size.  <br /></td></tr>
-<tr class="separator:a6657b1c8003221140be603fc3c696150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2165c15c7ab6599b017cf6562f5db2e6" id="r_a2165c15c7ab6599b017cf6562f5db2e6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a2165c15c7ab6599b017cf6562f5db2e6">ImageData</a> (<a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface)</td></tr>
-<tr class="memdesc:a2165c15c7ab6599b017cf6562f5db2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the palette and bitmap buffer for an all-in-one surface.  <br /></td></tr>
-<tr class="separator:a2165c15c7ab6599b017cf6562f5db2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaee65f5adc0182e5b96e35bcb222e3f" id="r_afaee65f5adc0182e5b96e35bcb222e3f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#afaee65f5adc0182e5b96e35bcb222e3f">SizeofImage</a> (<a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface)</td></tr>
-<tr class="memdesc:afaee65f5adc0182e5b96e35bcb222e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total on-memory size of a surface, in bytes.  <br /></td></tr>
-<tr class="separator:afaee65f5adc0182e5b96e35bcb222e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ababdb62cafc2718b2e720bc8166157a2" id="r_ababdb62cafc2718b2e720bc8166157a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ababdb62cafc2718b2e720bc8166157a2">FreeImage</a> (<a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *surface)</td></tr>
-<tr class="memdesc:ababdb62cafc2718b2e720bc8166157a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose an all-in-one surface.  <br /></td></tr>
-<tr class="separator:ababdb62cafc2718b2e720bc8166157a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Display canvas (LCD) API. </p>
 <p>Note that the term "display canvas", "canvas" and "LCD" may be used interchangeably below. This may get rectified in a future release. </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a1d12e70227ae6a8e9e465d42a4de14bf" name="a1d12e70227ae6a8e9e465d42a4de14bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d12e70227ae6a8e9e465d42a4de14bf">&#9670;&#160;</a></span>RGB_FROM_U8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RGB_FROM_U8</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">r, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">g, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">b&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convert separate RGB values to integer RGB representation. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">r</td><td>Red value. </td></tr>
-    <tr><td class="paramname">g</td><td>Green value. </td></tr>
-    <tr><td class="paramname">b</td><td>Blue value. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a7ef9e48cde5ff06441262c36e162fba5" name="a7ef9e48cde5ff06441262c36e162fba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ef9e48cde5ff06441262c36e162fba5">&#9670;&#160;</a></span>lcd_rotate_callback_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* lcd_rotate_callback_t) (<a class="el" href="structlcd__s.html">lcd_t</a> *self, int rotation)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Callback type for handling canvas rotation. </p>
-<p>When <code>rotation</code> is set to <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607" title="Query the current rotation. Will not change the current location.">ROTATION_QUERY</a>, the current rotation value will be returned with no side effect. When <code>rotation</code> is set to <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" title="Actually rotate the buffer. Used internally.">ROTATION_APPLY</a>, the canvas will rotate based on current value of <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">self</td><td>The LCD descriptor this was called from. </td></tr>
-    <tr><td class="paramname">rotation</td><td>New rotation. This value will be written to <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> and this callback will be called recursively with <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" title="Actually rotate the buffer. Used internally.">ROTATION_APPLY</a> as the rotation value to actually apply the change. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Current rotation value in effect. This will be the same as <code>rotation</code> when no magic value documented above was used. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> Where the location value is stored in the LCD descriptor. </dd>
-<dd>
-<a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345" title="Rotation values used by lcd_rotate_callback_t.">rotation_value_e</a> Possible rotation values. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a41b02fda321c9d1ab9502aa8aa49adcd" name="a41b02fda321c9d1ab9502aa8aa49adcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41b02fda321c9d1ab9502aa8aa49adcd">&#9670;&#160;</a></span>blit_flag_e</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process flags for blit operations. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?) </dd></dl>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05" name="a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05"></a>BLIT_NONE&#160;</td><td class="fielddoc"><p>Nothing. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462" name="a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462"></a>BLIT_INVERT&#160;</td><td class="fielddoc"><p>Color is inverted. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="a626b23c6e6f587deeea5e3cc43b10171" name="a626b23c6e6f587deeea5e3cc43b10171"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a626b23c6e6f587deeea5e3cc43b10171">&#9670;&#160;</a></span>font_type_e</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Font types. </p>
-<p>The naming follows the following format, joined with underscores (_):</p>
-<p><code>&lt;style&gt;_[variant]_[size]_&lt;cjk&gt;_[cjkvariant]_[cjksize]_[index]</code></p>
-<p>Where</p><ul>
-<li><code>style</code> is one of <code>SANS</code>, <code>SERIF</code> or <code>MONOSPACE</code>.</li>
-<li><code>variant</code> or <code>cjkvariant</code> is one of <code>BOLD</code> (equivalent to <code>REGULAR</code> for CJK), <code>ITALIC</code>, <code>BOLDITALIC</code> (equivalent to <code>ITALIC</code> for CJK) or <code>REGULAR</code> (omitted for <code>variant</code>). For <code>cjkvariant</code>, if it is the same as <code>variant</code>, it will be omitted.</li>
-<li><code>size</code> or <code>cjksize</code> is one of <code>TINY</code> (8px height, not available for CJK), <code>SMALL</code> (12px), <code>NORMAL</code> (16px, omitted for <code>size</code>), <code>LARGE</code> (20px) or <code>HUGE</code> (22px, not available for CJK). For <code>cjksize</code>, if it is the same as <code>size</code>, it will be omitted.</li>
-<li><code>cjk</code> is either <code>CJK</code> (supports CJK character rendering) or <code>NOCJK</code> (does not support CJK character rendering).</li>
-<li><code>index</code> is the current index (only used when all the above fields collide). </li>
-</ul>
-
-</div>
-</div>
-<a id="a1f54f589f151bdd540c978eba5161591" name="a1f54f589f151bdd540c978eba5161591"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f54f589f151bdd540c978eba5161591">&#9670;&#160;</a></span>print_flag_e</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591">print_flag_e</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process flags for string and character printing. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!). </dd></dl>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf" name="a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf"></a>PRINT_NONE&#160;</td><td class="fielddoc"><p>No extra process. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591af6ea821e1d64905d021e49ec74f498f1" name="a1f54f589f151bdd540c978eba5161591af6ea821e1d64905d021e49ec74f498f1"></a>PRINT_INVERT&#160;</td><td class="fielddoc"><p>Invert colors. </p>
-<p>Within the bounding box of the glyphs to be rendered, the RGB pixel value is inverted. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224" name="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224"></a>PRINT_INVERT_ALT&#160;</td><td class="fielddoc"><p>Seems to be an alternative version of <code>PRINT_INVERT</code>. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c" name="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c"></a>PRINT_UNDERSCORE_ONLY&#160;</td><td class="fielddoc"><p>Draw underscores only. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="a5cdd9c950c7c047ddd0979f457a09579" name="a5cdd9c950c7c047ddd0979f457a09579"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cdd9c950c7c047ddd0979f457a09579">&#9670;&#160;</a></span>print_str_flag_e</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579">print_str_flag_e</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Process flags for string printing only. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752" name="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752"></a>PRINT_STR_ENCODING_BIG5&#160;</td><td class="fielddoc"><p>Assume text encoding to be BIG5 instead of UTF-16. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
-</td></tr>
-<tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6" name="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6"></a>PRINT_STR_ENCODING_GB18030&#160;</td><td class="fielddoc"><p>Assume text encoding to be GB18030 instead of UTF-16. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a413b73fb9378fcaa73f745607d800abe" name="a5cdd9c950c7c047ddd0979f457a09579a413b73fb9378fcaa73f745607d800abe"></a>PRINT_STR_ENCODING_TIS_620&#160;</td><td class="fielddoc"><p>Assume text encoding to be TIS-620 instead of UTF-16. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="a7a3ebca299d07bdf69299b4a5dfb6345" name="a7a3ebca299d07bdf69299b4a5dfb6345"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a3ebca299d07bdf69299b4a5dfb6345">&#9670;&#160;</a></span>rotation_value_e</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="canvas_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345">rotation_value_e</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Rotation values used by lcd_rotate_callback_t. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa" name="a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa"></a>ROTATION_TOP_SIDE_FACING_UP&#160;</td><td class="fielddoc"><p>Set the rotation so the top side of the canvas is facing up. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15" name="a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15"></a>ROTATION_TOP_SIDE_FACING_LEFT&#160;</td><td class="fielddoc"><p>Set the rotation so the top side of the canvas is facing left. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03" name="a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03"></a>ROTATION_TOP_SIDE_FACING_DOWN&#160;</td><td class="fielddoc"><p>Set the rotation so the top side of the canvas is facing down. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5" name="a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5"></a>ROTATION_TOP_SIDE_FACING_RIGHT&#160;</td><td class="fielddoc"><p>Set the rotation so the top side of the canvas is facing right. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607" name="a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607"></a>ROTATION_QUERY&#160;</td><td class="fielddoc"><p>Query the current rotation. Will not change the current location. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" name="a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493"></a>ROTATION_APPLY&#160;</td><td class="fielddoc"><p>Actually rotate the buffer. Used internally. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="af8edb33a562b4bcc85154e3e2a951650" name="af8edb33a562b4bcc85154e3e2a951650"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8edb33a562b4bcc85154e3e2a951650">&#9670;&#160;</a></span>str_align_e</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="canvas_8h.html#af8edb33a562b4bcc85154e3e2a951650">str_align_e</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>String alignment types. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a" name="af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a"></a>STR_ALIGN_LEFT&#160;</td><td class="fielddoc"><p>Align to top-left. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821" name="af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821"></a>STR_ALIGN_RIGHT&#160;</td><td class="fielddoc"><p>Align to top-right. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98" name="af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98"></a>STR_ALIGN_CENTER&#160;</td><td class="fielddoc"><p>Align to top-center. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="a2a3ead8fb0194794e230be112a87d4cb" name="a2a3ead8fb0194794e230be112a87d4cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a3ead8fb0194794e230be112a87d4cb">&#9670;&#160;</a></span>stroke_predefined_dash_e</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cb">stroke_predefined_dash_e</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Predefined dash patterns. </p>
-<p>The numbers here follows the SVG <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray">stroke-dasharray</a> property format. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Add graphic examples. </dd></dl>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3" name="a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3"></a>DASH_NONE&#160;</td><td class="fielddoc"><p>Solid line. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9" name="a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9"></a>DASH_CUSTOM&#160;</td><td class="fielddoc"><p>Custom dash pattern. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a1fa6c5c38a95c92f0b5c9e134311d637" name="a1fa6c5c38a95c92f0b5c9e134311d637"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fa6c5c38a95c92f0b5c9e134311d637">&#9670;&#160;</a></span>_BitBlt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void _BitBlt </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
-          <td class="paramname"><em>dst</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>xdstoffset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>ydstoffset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>xsize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>ysize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>xsrcoffset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ysrcoffset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned short&#160;</td>
-          <td class="paramname"><em>flags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Perform blit operation from <code>src</code> surface to <code>dst</code> surface. </p>
-<p>This copies a rectangle of size <code>(xsize, ysize)</code> px on the <code>src</code> surface, with its the top left corner located at <code>(xsrcoffset, ysrcoffset)</code> px, to the <code>dst</code> surface. The top left corner of that rectangle will be aligned to a point on the <code>dst</code> surface at <code>(xdstoffset, ydstoffset)</code> px. Optionally one can specify one or more processing <code>flags</code> to let the blitter perform certain pixel operations on-the-fly. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10089</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dst</td><td>Destination surface. </td></tr>
-    <tr><td class="paramname">xdstoffset</td><td>X coordinate of the destination surface that align with the top left corner of the blitted image, in pixels. </td></tr>
-    <tr><td class="paramname">ydstoffset</td><td>Y coordinate of the destination surface that align with the top left corner of the blitted image, in pixels. </td></tr>
-    <tr><td class="paramname">xsize</td><td>Number of pixel columns to copy. </td></tr>
-    <tr><td class="paramname">ysize</td><td>Number of pixel rows to copy. </td></tr>
-    <tr><td class="paramname">src</td><td>Source surface. </td></tr>
-    <tr><td class="paramname">xsrcoffset</td><td>X coordinate of the source surface that align with the top left corner of the blitted image, in pixels. </td></tr>
-    <tr><td class="paramname">ysrcoffset</td><td>Y coordinate of the source surface that align with the top left corner of the blitted image, in pixels. </td></tr>
-    <tr><td class="paramname">flags</td><td>Process flags.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd></dl>
-
-</div>
-</div>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="ac98bb3e2b7bdb7654679de8a70fc9692" name="ac98bb3e2b7bdb7654679de8a70fc9692"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac98bb3e2b7bdb7654679de8a70fc9692">&#9670;&#160;</a></span>ClearScreen()</h2>
 
@@ -832,6 +285,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fill the current display canvas with background color, effectively clearing it. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1007e</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fill_with_fg</td><td>Fill with foreground color instead of background color.</td></tr>
@@ -1584,44 +1038,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ababdb62cafc2718b2e720bc8166157a2" name="ababdb62cafc2718b2e720bc8166157a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ababdb62cafc2718b2e720bc8166157a2">&#9670;&#160;</a></span>FreeImage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void FreeImage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
-          <td class="paramname"><em>surface</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Dispose an all-in-one surface. </p>
-<p>This is simply a wrapper around <a class="el" href="memory_8h.html#a8f71293c4cba373e738bcfc0721901e6" title="Free previously allocated memory.">_lfree()</a>. </p><dl class="section warning"><dt>Warning</dt><dd>Behavior is undefined when not called on a dymically allocated (via <a class="el" href="memory_8h.html#a3aaeb9828173fa29b9788c7edeb490bb" title="Allocate heap memory.">lmalloc()</a>, <a class="el" href="memory_8h.html#a2e424db782d9834535c938da6b2d3890" title="Allocate and clear data units on the heap.">lcalloc()</a> or <a class="el" href="memory_8h.html#aa0d26131a5b76ad8d2e34fcb8d526ee8" title="Resize or reallocate memory.">lrealloc()</a>) all-in-one surface. </dd></dl>
-<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10099</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">surface</td><td>The surface descriptor.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p>
-
-</div>
-</div>
 <a id="a38aa2abfb190ac0a0a12249df8020ed7" name="a38aa2abfb190ac0a0a12249df8020ed7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38aa2abfb190ac0a0a12249df8020ed7">&#9670;&#160;</a></span>GetActiveLCD()</h2>
 
@@ -1649,52 +1065,6 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x1008d</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The current active LCD descriptor. </dd></dl>
-
-</div>
-</div>
-<a id="a2eddaf1d5fdc62b53e63bf3fcb53c09b" name="a2eddaf1d5fdc62b53e63bf3fcb53c09b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eddaf1d5fdc62b53e63bf3fcb53c09b">&#9670;&#160;</a></span>GetCharWidth()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">short GetCharWidth </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a>&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>font_type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the width of the character <code>c</code> used in <code>font_type</code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">c</td><td>UTF-16 codepoint of the character. </td></tr>
-    <tr><td class="paramname">font_type</td><td>The font type. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The width in pixels of that character. </dd></dl>
 
 </div>
 </div>
@@ -1798,7 +1168,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Document the actual type as an enum.</dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The cursor type. </dd></dl>
 
@@ -1866,41 +1236,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a009e14c23044791c4250d8242ec811c4" name="a009e14c23044791c4250d8242ec811c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a009e14c23044791c4250d8242ec811c4">&#9670;&#160;</a></span>GetFontHeight()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GetFontHeight </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>font_type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the height of the font <code>font_type</code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">font_type</td><td>The font type. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The height in pixels of that font. </dd></dl>
-
-</div>
-</div>
 <a id="a7078127e59f0a75d66343edf2c7769fd" name="a7078127e59f0a75d66343edf2c7769fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7078127e59f0a75d66343edf2c7769fd">&#9670;&#160;</a></span>GetFontType()</h2>
 
@@ -1928,7 +1263,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x1004f</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The current font type. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171" title="Font types.">font_type_e</a> Valid values for <code>font_type</code>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171" title="Font types.">font_type_e</a> Valid values for <code>font_type</code>. </dd></dl>
 
 </div>
 </div>
@@ -1985,7 +1320,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Copy a rectangle of pixels from current active LCD and save it to the specified buffer. </p>
-<p>This is similar to using <a class="el" href="canvas_8h.html#a1fa6c5c38a95c92f0b5c9e134311d637" title="Perform blit operation from src surface to dst surface.">_BitBlt()</a> on the active LCD surface but with a seemingly different implementation and a different function signature. Surface initialization is done implicitly by this function although calling <a class="el" href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0" title="Calculate the buffer size required for an all-in-one surface of a specific size.">GetImageSize()</a> in user code is still required in order to allocate a buffer of appropriate size. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10071</code> </dd></dl>
+<p>This is similar to using <a class="el" href="surface_8h.html#a1fa6c5c38a95c92f0b5c9e134311d637" title="Perform blit operation from src surface to dst surface.">_BitBlt()</a> on the active LCD surface but with a seemingly different implementation and a different function signature. Surface initialization is done implicitly by this function although calling <a class="el" href="surface_8h.html#ababbf47f56c76a835a04e8709859bca0" title="Calculate the buffer size required for an all-in-one surface of a specific size.">GetImageSize()</a> in user code is still required in order to allocate a buffer of appropriate size. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10071</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
@@ -1997,108 +1332,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Size of the surface. </dd></dl>
-
-</div>
-</div>
-<a id="ababbf47f56c76a835a04e8709859bca0" name="ababbf47f56c76a835a04e8709859bca0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ababbf47f56c76a835a04e8709859bca0">&#9670;&#160;</a></span>GetImageSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t GetImageSize </td>
-          <td>(</td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculate the buffer size required for an all-in-one surface of a specific size. </p>
-<p>This assumes the surface will be in the same format as the surface linked to the current active LCD. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10095</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">width</td><td>The width of the desired surface. </td></tr>
-    <tr><td class="paramname">height</td><td>The height of the desired surface. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The buffer size required to contain the entire surface. </dd></dl>
-
-</div>
-</div>
-<a id="a6657b1c8003221140be603fc3c696150" name="a6657b1c8003221140be603fc3c696150"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6657b1c8003221140be603fc3c696150">&#9670;&#160;</a></span>GetImageSizeExt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t GetImageSizeExt </td>
-          <td>(</td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>depth</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculate the buffer size required for an all-in-one surface of a specific pixel format and size. </p>
-<p>This is similar to <a class="el" href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0" title="Calculate the buffer size required for an all-in-one surface of a specific size.">GetImageSize()</a> but it allows arbitrary pixel bit depth. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10096</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">width</td><td>The width of the desired surface. </td></tr>
-    <tr><td class="paramname">height</td><td>The height of the desired surface. </td></tr>
-    <tr><td class="paramname">depth</td><td>The pixel bit depth of the desired surface. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The buffer size required to contain the entire surface. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#ae983d7fa372d0a7612b98b400aae8bfc" title="Initialize a buffer as an all-in-one surface.">InitGraphic</a> For some assumptions made for an all-in-one surface format. </dd></dl>
 
 </div>
 </div>
@@ -2251,106 +1484,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The RGB color value </dd></dl>
-
-</div>
-</div>
-<a id="a2165c15c7ab6599b017cf6562f5db2e6" name="a2165c15c7ab6599b017cf6562f5db2e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2165c15c7ab6599b017cf6562f5db2e6">&#9670;&#160;</a></span>ImageData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void * ImageData </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
-          <td class="paramname"><em>surface</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the palette and bitmap buffer for an all-in-one surface. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The behavior of calling this on a hardware framebuffer backed surface is undefined as those surfaces may allocate the palette and/or the pixel buffer not immediately after the descriptor. Use <a class="el" href="structlcd__surface__t.html#ac61a6181ba9c1ff5b5148436dc66eed8" title="Palette used to pack RGBA color into pixels.">lcd_surface_t::palette</a> or <a class="el" href="structlcd__surface__t.html#a7e90676db5c550bace9a930d2ddd99f1" title="The actual framebuffer/surface pixel buffer region.">lcd_surface_t::buffer</a> instead for those surfaces. </dd></dl>
-<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10097</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">surface</td><td>The surface descriptor. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to surface palette buffer when a palette is available, or otherwise pointer to the pixel buffer. </dd></dl>
-
-</div>
-</div>
-<a id="ae983d7fa372d0a7612b98b400aae8bfc" name="ae983d7fa372d0a7612b98b400aae8bfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae983d7fa372d0a7612b98b400aae8bfc">&#9670;&#160;</a></span>InitGraphic()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> * InitGraphic </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
-          <td class="paramname"><em>surface</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>depth</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Initialize a buffer as an all-in-one surface. </p>
-<p>If a palette is required (<code>depth</code> is 8-bit or less), the palette is assumed to follow the descriptor immediately, then the pixel buffer is assumed to start immediately after the palette. Otherwise the pixel buffer is assumed to follow the descriptor immediately (i.e. palette size is 0) and <a class="el" href="structlcd__surface__t.html#ac61a6181ba9c1ff5b5148436dc66eed8" title="Palette used to pack RGBA color into pixels.">lcd_surface_t::palette</a> will be set to NULL. </p><dl class="section note"><dt>Note</dt><dd>This function does not allocate any memory. The caller is responsible for allocating a buffer that is large enough to hold the descriptor, the palette (if required) and the pixel buffer. </dd></dl>
-<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1005b</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">surface</td><td>A buffer that will hold the data. </td></tr>
-    <tr><td class="paramname">width</td><td>Width of the surface in pixels. </td></tr>
-    <tr><td class="paramname">height</td><td>Height of the surface in pixels. </td></tr>
-    <tr><td class="paramname">depth</td><td>The pixel bit depth. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The same buffer. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a6657b1c8003221140be603fc3c696150" title="Calculate the buffer size required for an all-in-one surface of a specific pixel format and size.">GetImageSizeExt</a> A function that can be used to estimate the required size of the <code>surface</code> buffer, based on the same parameters that will be passed to this function. </dd></dl>
 
 </div>
 </div>
@@ -2571,7 +1704,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Copy pixels from a surface to current active LCD. </p>
-<p>This is very similar to <a class="el" href="canvas_8h.html#a229f4c8b8227b91bf454504514feb41d" title="Draw a surface onto current active LCD.">ShowGraphic()</a> except that it does not check whether or not <code>surface</code> is <code>NULL</code> and there is no indication of whether or not the process was completed successfully. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10072</code> </dd></dl>
+<p>This is very similar to <a class="el" href="surface_8h.html#a229f4c8b8227b91bf454504514feb41d" title="Draw a surface onto current active LCD.">ShowGraphic()</a> except that it does not check whether or not <code>surface</code> is <code>NULL</code> and there is no indication of whether or not the process was completed successfully. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10072</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>X coordinate. </td></tr>
@@ -2582,9 +1715,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd>
 <dd>
-<a class="el" href="canvas_8h.html#a229f4c8b8227b91bf454504514feb41d" title="Draw a surface onto current active LCD.">ShowGraphic</a> A function that pretty much does the same thing but with <code>NULL</code> check and a return value. </dd></dl>
+<a class="el" href="surface_8h.html#a229f4c8b8227b91bf454504514feb41d" title="Draw a surface onto current active LCD.">ShowGraphic</a> A function that pretty much does the same thing but with <code>NULL</code> check and a return value. </dd></dl>
 
 </div>
 </div>
@@ -3075,7 +2208,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the type of the cursor on the current canvas. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Document the actual type as an enum. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_type</td><td>The new cursor type. </td></tr>
@@ -3230,7 +2363,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a626b23c6e6f587deeea5e3cc43b10171" title="Font types.">font_type_e</a> Valid values for <code>font_type</code>. </dd></dl>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171" title="Font types.">font_type_e</a> Valid values for <code>font_type</code>. </dd></dl>
 
 </div>
 </div>
@@ -3293,7 +2426,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x1006b</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">dash</td><td>New predefined dash pattern. Set to <a class="el" href="canvas_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9" title="Custom dash pattern.">DASH_CUSTOM</a> to specify a custom pattern. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">dash</td><td>New predefined dash pattern. Set to <a class="el" href="ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9" title="Custom dash pattern.">DASH_CUSTOM</a> to specify a custom pattern. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">dash_pattern</td><td>New dash bit pattern. Will be set to the previous dash bit pattern once this function returns. </td></tr>
   </table>
   </dd>
@@ -3385,156 +2518,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a229f4c8b8227b91bf454504514feb41d" name="a229f4c8b8227b91bf454504514feb41d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a229f4c8b8227b91bf454504514feb41d">&#9670;&#160;</a></span>ShowGraphic()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ShowGraphic </td>
-          <td>(</td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
-          <td class="paramname"><em>surface</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned short&#160;</td>
-          <td class="paramname"><em>flags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Draw a surface onto current active LCD. </p>
-<p>If <code>surface</code> is set to <code>NULL</code> this will fail gracefully. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10059</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>X coordinate. </td></tr>
-    <tr><td class="paramname">y</td><td>Y coordinate. </td></tr>
-    <tr><td class="paramname">surface</td><td>The surface descriptor. </td></tr>
-    <tr><td class="paramname">flags</td><td>Processing flags. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
-    <tr><td class="paramname">-1</td><td>The operation failed with error.  </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd>
-<dd>
-<a class="el" href="canvas_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b" title="Copy pixels from a surface to current active LCD.">PutImage</a> A simplified version of this function. </dd></dl>
-
-</div>
-</div>
-<a id="a04239638c97cb1c6a52bb11f22223862" name="a04239638c97cb1c6a52bb11f22223862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04239638c97cb1c6a52bb11f22223862">&#9670;&#160;</a></span>SizeofGraphic()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t SizeofGraphic </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
-          <td class="paramname"><em>surface</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculate the total on-memory size of a surface (including descriptor). </p>
-<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1005a</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">surface</td><td>The surface descriptor. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The total on-memory size of this surface in bytes. </dd></dl>
-
-</div>
-</div>
-<a id="afaee65f5adc0182e5b96e35bcb222e3f" name="afaee65f5adc0182e5b96e35bcb222e3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaee65f5adc0182e5b96e35bcb222e3f">&#9670;&#160;</a></span>SizeofImage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t SizeofImage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td>
-          <td class="paramname"><em>surface</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the total on-memory size of a surface, in bytes. </p>
-<p>This is equivalent to </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> <a class="code hl_function" href="canvas_8h.html#afaee65f5adc0182e5b96e35bcb222e3f">SizeofImage</a>(<a class="code hl_struct" href="structlcd__surface__t.html">lcd_surface_t</a> *surface) {</div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0">GetImageSize</a>(surface-&gt;<a class="code hl_variable" href="structlcd__surface__t.html#a3ae8e51b2e20761f1bc6dbf1541b4642">width</a>, surface-&gt;<a class="code hl_variable" href="structlcd__surface__t.html#aa58d32dc40359ee9999b23046b63d983">height</a>);</div>
-<div class="line">}</div>
-<div class="ttc" id="acanvas_8h_html_ababbf47f56c76a835a04e8709859bca0"><div class="ttname"><a href="canvas_8h.html#ababbf47f56c76a835a04e8709859bca0">GetImageSize</a></div><div class="ttdeci">size_t GetImageSize(short width, short height)</div><div class="ttdoc">Calculate the buffer size required for an all-in-one surface of a specific size.</div></div>
-<div class="ttc" id="acanvas_8h_html_afaee65f5adc0182e5b96e35bcb222e3f"><div class="ttname"><a href="canvas_8h.html#afaee65f5adc0182e5b96e35bcb222e3f">SizeofImage</a></div><div class="ttdeci">size_t SizeofImage(lcd_surface_t *surface)</div><div class="ttdoc">Get the total on-memory size of a surface, in bytes.</div></div>
-<div class="ttc" id="astructlcd__surface__t_html"><div class="ttname"><a href="structlcd__surface__t.html">lcd_surface_t</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:154</div></div>
-<div class="ttc" id="astructlcd__surface__t_html_a3ae8e51b2e20761f1bc6dbf1541b4642"><div class="ttname"><a href="structlcd__surface__t.html#a3ae8e51b2e20761f1bc6dbf1541b4642">lcd_surface_t::width</a></div><div class="ttdeci">short width</div><div class="ttdoc">Width of the framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:163</div></div>
-<div class="ttc" id="astructlcd__surface__t_html_aa58d32dc40359ee9999b23046b63d983"><div class="ttname"><a href="structlcd__surface__t.html#aa58d32dc40359ee9999b23046b63d983">lcd_surface_t::height</a></div><div class="ttdeci">short height</div><div class="ttdoc">Height of the framebuffer.</div><div class="ttdef"><b>Definition</b> canvas.h:167</div></div>
-</div><!-- fragment --> <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10098</code> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">surface</td><td>Pointer to the surface descriptor. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The on-memory size of the surface. </dd></dl>
-
-</div>
-</div>
 <a id="aa411d0bb895097a6f63e5b897f7637a8" name="aa411d0bb895097a6f63e5b897f7637a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa411d0bb895097a6f63e5b897f7637a8">&#9670;&#160;</a></span>WriteAlignString()</h2>
 
@@ -3608,9 +2591,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd>
 <dd>
-<a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579" title="Process flags for string printing only.">print_str_flag_e</a> Encoding conversion flags. </dd></dl>
+<a class="el" href="ui_2common_8h.html#a5cdd9c950c7c047ddd0979f457a09579" title="Process flags for string printing only.">print_str_flag_e</a> Encoding conversion flags. </dd></dl>
 
 </div>
 </div>
@@ -3671,7 +2654,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd></dl>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd></dl>
 
 </div>
 </div>
@@ -3734,9 +2717,9 @@ Functions</h2></td></tr>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="canvas_8h.html#aa8759b123224e598b231e6c871632c4b" title="Draw a UTF-16 character c aligned to the top left corner at (x, y) px.">WriteChar</a> Similar function that displays single characters instead. </dd>
 <dd>
-<a class="el" href="canvas_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd>
+<a class="el" href="ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd>
 <dd>
-<a class="el" href="canvas_8h.html#a5cdd9c950c7c047ddd0979f457a09579" title="Process flags for string printing only.">print_str_flag_e</a> Encoding conversion flags. </dd></dl>
+<a class="el" href="ui_2common_8h.html#a5cdd9c950c7c047ddd0979f457a09579" title="Process flags for string printing only.">print_str_flag_e</a> Encoding conversion flags. </dd></dl>
 
 </div>
 </div>
