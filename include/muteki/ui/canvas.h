@@ -20,37 +20,22 @@ extern "C" {
 #endif
 
 /**
- * @brief Set display canvas transparent color.
- * @details This color will be removed from the image and replaced with transparency effect.
- * @x_syscall_num `0x10065`
- * @param color The integer RGB value representing a new color.
- * @return The integer RGB value representing the old color.
+ * @brief Get the current font type.
+ * @x_syscall_num `0x1004f`
+ * @x_void_param
+ * @return The current font type.
+ * @see font_type_e Valid values for `font_type`.
  */
-extern int SetTransparentColor(int color);
+extern short GetFontType();
 
 /**
- * @brief Set display canvas background fill color.
- * @x_syscall_num `0x10067`
- * @param color The integer RGB value representing a new color.
- * @return The integer RGB value representing the old color.
- */
-extern int rgbSetBkColor(int color);
-
-/**
- * @brief Set display canvas foreground fill color.
- * @x_syscall_num `0x10068`
- * @param color The integer RGB value representing a new color.
- * @return The integer RGB value representing the old color.
- */
-extern int rgbSetColor(int color);
-
-/**
- * @brief Fill the current display canvas with background color, effectively clearing it.
- * @x_syscall_num `0x1007e`
- * @param fill_with_fg Fill with foreground color instead of background color.
+ * @brief Set the current font type to `font_type`.
+ * @x_syscall_num `0x10051`
+ * @param font_type The font type.
  * @x_void_return
+ * @see font_type_e Valid values for `font_type`.
  */
-extern void ClearScreen(bool fill_with_fg);
+extern void SetFontType(short font_type);
 
 /**
  * @brief Draw a string `s` with specified alignment at `(x, y)` px.
@@ -72,60 +57,6 @@ extern void ClearScreen(bool fill_with_fg);
  * @see print_str_flag_e Encoding conversion flags.
  */
 extern void WriteAlignString(short x, short y, const void *s, short max_length, int align, unsigned int flags);
-
-/**
- * @brief Draw a surface onto current active LCD.
- * @details If `surface` is set to `NULL` this will fail gracefully.
- * @x_syscall_num `0x10059`
- * @param x X coordinate.
- * @param y Y coordinate.
- * @param surface The surface descriptor.
- * @param flags Processing flags.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
- * @see blit_flag_e Accepted processing flags.
- * @see PutImage A simplified version of this function.
- */
-extern int ShowGraphic(short x, short y, lcd_surface_t *surface, unsigned short flags);
-
-/**
- * @brief Format and draw a string.
- * @details Handles line wraps and screen scrolling automatically.
- * @x_syscall_num `0x10057`
- * @param format The format string.
- * @param ... Any subsequent values.
- * @x_void_return
- */
-extern void Printf(const char *format, ...);
-
-/**
- * @brief Format and draw a string aligned to the top left corner at `(x, y)` px.
- * @x_syscall_num `0x10058`
- * @param x X coordinate of the corner.
- * @param y Y coordinate of the corner.
- * @param format The format string passed to the built-in sprintf().
- * @param ... Any subsequent values passed to the built-in sprintf().
- * @x_void_return
- */
-extern void PrintfXY(short x, short y, const char *format, ...);
-
-/**
- * @brief Get the current font type.
- * @x_syscall_num `0x1004f`
- * @x_void_param
- * @return The current font type.
- * @see font_type_e Valid values for `font_type`.
- */
-extern short GetFontType();
-
-/**
- * @brief Set the current font type to `font_type`.
- * @x_syscall_num `0x10051`
- * @param font_type The font type.
- * @x_void_return
- * @see font_type_e Valid values for `font_type`.
- */
-extern void SetFontType(short font_type);
 
 /**
  * @brief Draw a UTF-16 character `c` aligned to the top left corner at `(x, y)` px.
@@ -154,83 +85,56 @@ extern void WriteChar(short x, short y, UTF16 c, unsigned int flags);
 extern void WriteString(short x, short y, const void *s, unsigned int flags);
 
 /**
- * @brief Get X coordinate of the rightmost visible pixels on the current canvas.
- * @details This is usually tied to the physical resolution of the display. Therefore it can be used to determine the
- * display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls.
- * @x_syscall_num `0x10190`
+ * @brief Format and draw a string.
+ * @details Handles line wraps and screen scrolling automatically.
+ * @x_syscall_num `0x10057`
+ * @param format The format string.
+ * @param ... Any subsequent values.
+ * @x_void_return
+ */
+extern void Printf(const char *format, ...);
+
+/**
+ * @brief Format and draw a string aligned to the top left corner at `(x, y)` px.
+ * @x_syscall_num `0x10058`
+ * @param x X coordinate of the corner.
+ * @param y Y coordinate of the corner.
+ * @param format The format string passed to the built-in sprintf().
+ * @param ... Any subsequent values passed to the built-in sprintf().
+ * @x_void_return
+ */
+extern void PrintfXY(short x, short y, const char *format, ...);
+
+/**
+ * @brief Draw a surface onto current active LCD.
+ * @details If `surface` is set to `NULL` this will fail gracefully.
+ * @x_syscall_num `0x10059`
+ * @param x X coordinate.
+ * @param y Y coordinate.
+ * @param surface The surface descriptor.
+ * @param flags Processing flags.
+ * @retval 0 @x_term ok
+ * @retval -1 @x_term ng
+ * @see blit_flag_e Accepted processing flags.
+ * @see PutImage A simplified version of this function.
+ */
+extern int ShowGraphic(short x, short y, lcd_surface_t *surface, unsigned short flags);
+
+/**
+ * @brief Set the size of the cursor on the current canvas.
+ * @x_syscall_num `0x1005d`
+ * @param new_size The new cursor size.
+ * @return The previous cursor size.
+ */
+extern unsigned int SetCursorSize(unsigned int new_size);
+
+/**
+ * @brief Get the size of the cursor on the current canvas.
+ * @x_syscall_num `0x1005e`
  * @x_void_param
- * @return The X coordinate of the rightmost visible pixels.
- * @see GetMaxScrY Returns the Y boundary instead.
+ * @return The cursor size.
  */
-extern short GetMaxScrX();
-
-/**
- * @brief Get Y coordinate of the bottom-most visible pixels on the current canvas.
- * @details This is usually tied to the physical resolution of the display. Therefore it can be used to determine the
- * display size. The display size can be calculated by adding 1 to the return values of both `GetMaxScr*` calls.
- * @x_syscall_num `0x10191`
- * @x_void_param
- * @return The Y coordinate of the bottom-most visible pixels.
- * @see GetMaxScrX Returns the X boundary instead.
- */
-extern short GetMaxScrY();
-
-/**
- * @brief Move a rectangle up by `amount` pixels.
- * @x_syscall_num `0x10083`
- * @param x0 @x_term x0
- * @param y0 @x_term y0
- * @param x1 @x_term x1
- * @param y1 @x_term y1
- * @param amount Amount of pixels to move.
- * @x_void_return
- */
-extern void ScrollUp(short x0, short y0, short x1, short y1, short amount);
-
-/**
- * @brief Move a rectangle down by `amount` pixels.
- * @x_syscall_num `0x10080`
- * @param x0 @x_term x0
- * @param y0 @x_term y0
- * @param x1 @x_term x1
- * @param y1 @x_term y1
- * @param amount Amount of pixels to move.
- * @x_void_return
- */
-extern void ScrollDown(short x0, short y0, short x1, short y1, short amount);
-
-/**
- * @brief Move a rectangle left by `amount` pixels.
- * @x_syscall_num `0x10081`
- * @param x0 @x_term x0
- * @param y0 @x_term y0
- * @param x1 @x_term x1
- * @param y1 @x_term y1
- * @param amount Amount of pixels to move.
- * @x_void_return
- */
-extern void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
-
-/**
- * @brief Move a rectangle right by `amount` pixels.
- * @x_syscall_num `0x10082`
- * @param x0 @x_term x0
- * @param y0 @x_term y0
- * @param x1 @x_term x1
- * @param y1 @x_term y1
- * @param amount Amount of pixels to move.
- * @x_void_return
- */
-extern void ScrollRight(short x0, short y0, short x1, short y1, short amount);
-
-/**
- * @brief Get the cursor position on the current canvas.
- * @x_syscall_num `0x10060`
- * @param[out] x The x coordinate of the cursor.
- * @param[out] y The y coordinate of the cursor.
- * @x_void_return
- */
-extern void GetCursorPosition(short *x, short *y);
+extern unsigned int GetCursorSize();
 
 /**
  * @brief Move the cursor position on the current canvas to the specified coordinate.
@@ -242,13 +146,13 @@ extern void GetCursorPosition(short *x, short *y);
 extern void SetCursorPosition(short x, short y);
 
 /**
- * @brief Get the type of the cursor on the current canvas.
- * @todo Document the actual type as an enum.
- * @x_syscall_num `0x10062`
- * @x_void_param
- * @return The cursor type.
+ * @brief Get the cursor position on the current canvas.
+ * @x_syscall_num `0x10060`
+ * @param[out] x The x coordinate of the cursor.
+ * @param[out] y The y coordinate of the cursor.
+ * @x_void_return
  */
-extern short GetCursorType();
+extern void GetCursorPosition(short *x, short *y);
 
 /**
  * @brief Set the type of the cursor on the current canvas.
@@ -260,20 +164,13 @@ extern short GetCursorType();
 extern short SetCursorType(short new_type);
 
 /**
- * @brief Get the size of the cursor on the current canvas.
- * @x_syscall_num `0x1005e`
+ * @brief Get the type of the cursor on the current canvas.
+ * @todo Document the actual type as an enum.
+ * @x_syscall_num `0x10062`
  * @x_void_param
- * @return The cursor size.
+ * @return The cursor type.
  */
-extern unsigned int GetCursorSize();
-
-/**
- * @brief Set the size of the cursor on the current canvas.
- * @x_syscall_num `0x1005d`
- * @param new_size The new cursor size.
- * @return The previous cursor size.
- */
-extern unsigned int SetCursorSize(unsigned int new_size);
+extern short GetCursorType();
 
 /**
  * @brief Lock the cursor on the current canvas.
@@ -290,41 +187,29 @@ extern void CursorLock();
 extern void CursorUnock();
 
 /**
- * @brief Create a virtual LCD descriptor.
- * @details Virtual LCDs allow the program to draw using the LCD/canvas API without committing the pixels to the screen
- * immediately.
- * @x_syscall_num `0x10087`
- * @param width Width of the virtual LCD.
- * @param height Height of the virtual LCD.
- * @param width_bytes If set to a value larger than the value calculated from `width`, the pixel buffer will be
- * allocated according to this value instead (i.e. `width_bytes * height`).
- * @return The virtual LCD descriptor.
+ * @brief Set display canvas transparent color.
+ * @details This color will be removed from the image and replaced with transparency effect.
+ * @x_syscall_num `0x10065`
+ * @param color The integer RGB value representing a new color.
+ * @return The integer RGB value representing the old color.
  */
-extern lcd_t *CreateVirtualLCD(short width, short height, short width_bytes);
+extern int SetTransparentColor(int color);
 
 /**
- * @brief Dispose a previously created virtual LCD descriptor.
- * @x_syscall_num `0x10088`
- * @param lcd Pointer to a virtual LCD descriptor.
- * @x_void_return
+ * @brief Set display canvas background fill color.
+ * @x_syscall_num `0x10067`
+ * @param color The integer RGB value representing a new color.
+ * @return The integer RGB value representing the old color.
  */
-extern void DeleteVirtualLCD(lcd_t *lcd);
+extern int rgbSetBkColor(int color);
 
 /**
- * @brief Set an LCD descriptor as active.
- * @x_syscall_num `0x1008b`
- * @param new_lcd Pointer to the new LCD descriptor. If `NULL`, only return the current active LCD descriptor.
- * @return The active LCD descriptor before `new_lcd` replaced it.
+ * @brief Set display canvas foreground fill color.
+ * @x_syscall_num `0x10068`
+ * @param color The integer RGB value representing a new color.
+ * @return The integer RGB value representing the old color.
  */
-extern lcd_t *SetActiveLCD(lcd_t *new_lcd);
-
-/**
- * @brief Get the current active LCD descriptor.
- * @x_syscall_num `0x1008d`
- * @x_void_param
- * @return The current active LCD descriptor.
- */
-extern lcd_t *GetActiveLCD();
+extern int rgbSetColor(int color);
 
 /**
  * @brief Set the stroke dash pattern.
@@ -551,6 +436,99 @@ extern void FillEllipse(short x, short y, short rx, short ry, int flags);
 extern void InverseSetArea(short x0, short y0, short x1, short y1);
 
 /**
+ * @brief Fill the current display canvas with background color, effectively clearing it.
+ * @x_syscall_num `0x1007e`
+ * @param fill_with_fg Fill with foreground color instead of background color.
+ * @x_void_return
+ */
+extern void ClearScreen(bool fill_with_fg);
+
+/**
+ * @brief Move a rectangle down by `amount` pixels.
+ * @x_syscall_num `0x10080`
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
+ * @param amount Amount of pixels to move.
+ * @x_void_return
+ */
+extern void ScrollDown(short x0, short y0, short x1, short y1, short amount);
+
+/**
+ * @brief Move a rectangle left by `amount` pixels.
+ * @x_syscall_num `0x10081`
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
+ * @param amount Amount of pixels to move.
+ * @x_void_return
+ */
+extern void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
+
+/**
+ * @brief Move a rectangle right by `amount` pixels.
+ * @x_syscall_num `0x10082`
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
+ * @param amount Amount of pixels to move.
+ * @x_void_return
+ */
+extern void ScrollRight(short x0, short y0, short x1, short y1, short amount);
+
+/**
+ * @brief Move a rectangle up by `amount` pixels.
+ * @x_syscall_num `0x10083`
+ * @param x0 @x_term x0
+ * @param y0 @x_term y0
+ * @param x1 @x_term x1
+ * @param y1 @x_term y1
+ * @param amount Amount of pixels to move.
+ * @x_void_return
+ */
+extern void ScrollUp(short x0, short y0, short x1, short y1, short amount);
+
+/**
+ * @brief Create a virtual LCD descriptor.
+ * @details Virtual LCDs allow the program to draw using the LCD/canvas API without committing the pixels to the screen
+ * immediately.
+ * @x_syscall_num `0x10087`
+ * @param width Width of the virtual LCD.
+ * @param height Height of the virtual LCD.
+ * @param width_bytes If set to a value larger than the value calculated from `width`, the pixel buffer will be
+ * allocated according to this value instead (i.e. `width_bytes * height`).
+ * @return The virtual LCD descriptor.
+ */
+extern lcd_t *CreateVirtualLCD(short width, short height, short width_bytes);
+
+/**
+ * @brief Dispose a previously created virtual LCD descriptor.
+ * @x_syscall_num `0x10088`
+ * @param lcd Pointer to a virtual LCD descriptor.
+ * @x_void_return
+ */
+extern void DeleteVirtualLCD(lcd_t *lcd);
+
+/**
+ * @brief Set an LCD descriptor as active.
+ * @x_syscall_num `0x1008b`
+ * @param new_lcd Pointer to the new LCD descriptor. If `NULL`, only return the current active LCD descriptor.
+ * @return The active LCD descriptor before `new_lcd` replaced it.
+ */
+extern lcd_t *SetActiveLCD(lcd_t *new_lcd);
+
+/**
+ * @brief Get the current active LCD descriptor.
+ * @x_syscall_num `0x1008d`
+ * @x_void_param
+ * @return The current active LCD descriptor.
+ */
+extern lcd_t *GetActiveLCD();
+
+/**
  * @brief Copy an LCD descriptor (excluding surface).
  * @details This function allocates a new LCD descriptor and copies everything from the source descriptor to the new
  * one. The new descriptor will not be linked to the source descriptor's lcd_t::surface, and lcd_t::saved_cursor
@@ -578,6 +556,28 @@ extern lcd_t *CreateCompatibleLCD(lcd_t *source);
  * @return The descriptor of the surface previously linked to `lcd`.
  */
 extern lcd_surface_t *SetDCObject(lcd_t *lcd, lcd_surface_t *new_surface);
+
+/**
+ * @brief Get X coordinate of the rightmost visible pixels on the current canvas.
+ * @details This is usually tied to the physical resolution of the display. Therefore it can be used to determine the
+ * display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls.
+ * @x_syscall_num `0x10190`
+ * @x_void_param
+ * @return The X coordinate of the rightmost visible pixels.
+ * @see GetMaxScrY Returns the Y boundary instead.
+ */
+extern short GetMaxScrX();
+
+/**
+ * @brief Get Y coordinate of the bottom-most visible pixels on the current canvas.
+ * @details This is usually tied to the physical resolution of the display. Therefore it can be used to determine the
+ * display size. The display size can be calculated by adding 1 to the return values of both `GetMaxScr*` calls.
+ * @x_syscall_num `0x10191`
+ * @x_void_param
+ * @return The Y coordinate of the bottom-most visible pixels.
+ * @see GetMaxScrX Returns the X boundary instead.
+ */
+extern short GetMaxScrY();
 
 #ifdef __cplusplus
 } // extern "C"
