@@ -18,21 +18,6 @@ extern "C" {
 #endif
 
 /**
- * @brief Draw a surface onto current active LCD.
- * @details If `surface` is set to `NULL` this will fail gracefully.
- * @x_syscall_num `0x10059`
- * @param x X coordinate.
- * @param y Y coordinate.
- * @param surface The surface descriptor.
- * @param flags Processing flags.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
- * @see blit_flag_e Accepted processing flags.
- * @see PutImage A simplified version of this function.
- */
-extern int ShowGraphic(short x, short y, lcd_surface_t *surface, unsigned short flags);
-
-/**
  * @brief Calculate the total on-memory size of a surface (including descriptor).
  * @x_syscall_num `0x1005a`
  * @param surface The surface descriptor.

@@ -74,8 +74,24 @@ extern void ClearScreen(bool fill_with_fg);
 extern void WriteAlignString(short x, short y, const void *s, short max_length, int align, unsigned int flags);
 
 /**
+ * @brief Draw a surface onto current active LCD.
+ * @details If `surface` is set to `NULL` this will fail gracefully.
+ * @x_syscall_num `0x10059`
+ * @param x X coordinate.
+ * @param y Y coordinate.
+ * @param surface The surface descriptor.
+ * @param flags Processing flags.
+ * @retval 0 @x_term ok
+ * @retval -1 @x_term ng
+ * @see blit_flag_e Accepted processing flags.
+ * @see PutImage A simplified version of this function.
+ */
+extern int ShowGraphic(short x, short y, lcd_surface_t *surface, unsigned short flags);
+
+/**
  * @brief Format and draw a string.
  * @details Handles line wraps and screen scrolling automatically.
+ * @x_syscall_num `0x10057`
  * @param format The format string.
  * @param ... Any subsequent values.
  * @x_void_return
@@ -84,6 +100,7 @@ extern void Printf(const char *format, ...);
 
 /**
  * @brief Format and draw a string aligned to the top left corner at `(x, y)` px.
+ * @x_syscall_num `0x10058`
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
  * @param format The format string passed to the built-in sprintf().
@@ -112,6 +129,7 @@ extern void SetFontType(short font_type);
 
 /**
  * @brief Draw a UTF-16 character `c` aligned to the top left corner at `(x, y)` px.
+ * @x_syscall_num `0x10053`
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
  * @param c UTF-16 codepoint of the character.
@@ -123,6 +141,7 @@ extern void WriteChar(short x, short y, UTF16 c, unsigned int flags);
 
 /**
  * @brief Draw a string `s` aligned to the top left corner at `(x, y)` px.
+ * @x_syscall_num `0x10054`
  * @param x X coordinate of the corner.
  * @param y Y coordinate of the corner.
  * @param[in] s String to be drawn. Exact encoding depends on the process flags being used.
@@ -138,6 +157,7 @@ extern void WriteString(short x, short y, const void *s, unsigned int flags);
  * @brief Get X coordinate of the rightmost visible pixels on the current canvas.
  * @details This is usually tied to the physical resolution of the display. Therefore it can be used to determine the
  * display size. The display size can be calculated by adding 1 to the return values of both GetMaxScr* calls.
+ * @x_syscall_num `0x10190`
  * @x_void_param
  * @return The X coordinate of the rightmost visible pixels.
  * @see GetMaxScrY Returns the Y boundary instead.
@@ -148,6 +168,7 @@ extern short GetMaxScrX();
  * @brief Get Y coordinate of the bottom-most visible pixels on the current canvas.
  * @details This is usually tied to the physical resolution of the display. Therefore it can be used to determine the
  * display size. The display size can be calculated by adding 1 to the return values of both `GetMaxScr*` calls.
+ * @x_syscall_num `0x10191`
  * @x_void_param
  * @return The Y coordinate of the bottom-most visible pixels.
  * @see GetMaxScrX Returns the X boundary instead.
@@ -156,6 +177,7 @@ extern short GetMaxScrY();
 
 /**
  * @brief Move a rectangle up by `amount` pixels.
+ * @x_syscall_num `0x10083`
  * @param x0 @x_term x0
  * @param y0 @x_term y0
  * @param x1 @x_term x1
@@ -167,6 +189,7 @@ extern void ScrollUp(short x0, short y0, short x1, short y1, short amount);
 
 /**
  * @brief Move a rectangle down by `amount` pixels.
+ * @x_syscall_num `0x10080`
  * @param x0 @x_term x0
  * @param y0 @x_term y0
  * @param x1 @x_term x1
@@ -178,6 +201,7 @@ extern void ScrollDown(short x0, short y0, short x1, short y1, short amount);
 
 /**
  * @brief Move a rectangle left by `amount` pixels.
+ * @x_syscall_num `0x10081`
  * @param x0 @x_term x0
  * @param y0 @x_term y0
  * @param x1 @x_term x1
@@ -189,6 +213,7 @@ extern void ScrollLeft(short x0, short y0, short x1, short y1, short amount);
 
 /**
  * @brief Move a rectangle right by `amount` pixels.
+ * @x_syscall_num `0x10082`
  * @param x0 @x_term x0
  * @param y0 @x_term y0
  * @param x1 @x_term x1
@@ -200,6 +225,7 @@ extern void ScrollRight(short x0, short y0, short x1, short y1, short amount);
 
 /**
  * @brief Get the cursor position on the current canvas.
+ * @x_syscall_num `0x10060`
  * @param[out] x The x coordinate of the cursor.
  * @param[out] y The y coordinate of the cursor.
  * @x_void_return
@@ -208,6 +234,7 @@ extern void GetCursorPosition(short *x, short *y);
 
 /**
  * @brief Move the cursor position on the current canvas to the specified coordinate.
+ * @x_syscall_num `0x1005f`
  * @param x The new x coordinate of the cursor.
  * @param y The new y coordinate of the cursor.
  * @x_void_return
@@ -217,6 +244,7 @@ extern void SetCursorPosition(short x, short y);
 /**
  * @brief Get the type of the cursor on the current canvas.
  * @todo Document the actual type as an enum.
+ * @x_syscall_num `0x10062`
  * @x_void_param
  * @return The cursor type.
  */
@@ -225,6 +253,7 @@ extern short GetCursorType();
 /**
  * @brief Set the type of the cursor on the current canvas.
  * @todo Document the actual type as an enum.
+ * @x_syscall_num `0x10061`
  * @param new_type The new cursor type.
  * @return The previous cursor type.
  */
@@ -232,6 +261,7 @@ extern short SetCursorType(short new_type);
 
 /**
  * @brief Get the size of the cursor on the current canvas.
+ * @x_syscall_num `0x1005e`
  * @x_void_param
  * @return The cursor size.
  */
@@ -239,6 +269,7 @@ extern unsigned int GetCursorSize();
 
 /**
  * @brief Set the size of the cursor on the current canvas.
+ * @x_syscall_num `0x1005d`
  * @param new_size The new cursor size.
  * @return The previous cursor size.
  */
@@ -246,12 +277,14 @@ extern unsigned int SetCursorSize(unsigned int new_size);
 
 /**
  * @brief Lock the cursor on the current canvas.
+ * @x_syscall_num `0x10063`
  * @x_void
  */
 extern void CursorLock();
 
 /**
  * @brief Unlock the cursor on the current canvas.
+ * @x_syscall_num `0x10064`
  * @x_void
  */
 extern void CursorUnock();
