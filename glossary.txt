@@ -19,24 +19,32 @@ The operation was completed successfully.
 //! [ok]
 
 //! [ng]
-The operation failed with error. 
+The operation failed with error.
 //! [ng]
 
 //! [x0]
-X coordinate of the top-left corner, in pixels (inclusive). 
+X coordinate of the top-left corner, in pixels (inclusive).
 //! [x0]
 
 //! [x1]
-X coordinate of the bottom-right corner, in pixels (inclusive). 
+X coordinate of the bottom-right corner, in pixels (inclusive).
 //! [x1]
 
 //! [y0]
-Y coordinate of the top-left corner, in pixels (inclusive). 
+Y coordinate of the top-left corner, in pixels (inclusive).
 //! [y0]
 
 //! [y1]
-Y coordinate of the bottom-right corner, in pixels (inclusive). 
+Y coordinate of the bottom-right corner, in pixels (inclusive).
 //! [y1]
+
+//! [x1-auto]
+X coordinate of the bottom-right corner, in pixels (inclusive), or 0 to let the function automatically decide the size.
+//! [x1-auto]
+
+//! [y1-auto]
+Y coordinate of the bottom-right corner, in pixels (inclusive), or 0 to let the function automatically decide the size.
+//! [y1-auto]
 
 //! [void-param]
 @par Parameters

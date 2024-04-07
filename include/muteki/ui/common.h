@@ -444,6 +444,75 @@ enum font_type_e {
     SANS_ITALIC_HUGE_CJK_LARGE,
 };
 
+struct ui_widget_s;
+typedef struct ui_widget_s ui_widget_t;
+
+/**
+ * @brief Common part of all widgets.
+ * @todo Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their `self`
+ * argument defined as `ui_widget_t *` (or `void *` if we opt to do that) which is a bit less ideal.
+ */
+struct ui_widget_s {
+    /**
+     * @brief Unknown. Set to 0.
+     */
+    int unk_0x0; // 0x0:0x4
+    /**
+     * @brief Next widget.
+     * @todo Determine what is common and define ui_widget_t in ui/common.h.
+     */
+    ui_widget_t *next; // 0x4:0x8
+    /**
+     * @brief Unknown. Set to 0.
+     */
+    short unk_0x8; // 0x8:0xa
+    /**
+     * @brief Unknown. Set to 1.
+     */
+    short unk_0xa; // 0xa:0xc
+    /**
+     * @brief Button footprint rectangle.
+     */
+    lcd_rect_t footprint; // 0xc:0x14
+    /**
+     * @brief Unknown.
+     */
+    void (*unk_callback_0x14)(); // 0x14:0x18
+    /**
+     * @brief Unknown.
+     */
+    void (*unk_callback_0x18)(); // 0x18:0x1c
+    /**
+     * @brief Widget draw callback.
+     */
+    void (*on_draw)(ui_widget_t *self); // 0x1c:0x20
+    /**
+     * @brief Widget event callback.
+     * @todo Verify.
+     */
+    void (*on_event)(ui_widget_t *self); // 0x20:0x24
+    /**
+     * @brief Unknown.
+     */
+    char unk_0x24[6]; // 0x24:0x2a;
+    /**
+     * @brief Unknown. Set to 0x65.
+     */
+    short unk_0x2a; // 0x2a:0x2c
+    /**
+     * @brief Unknown.
+     */
+    int unk_0x2c; // 0x2c:0x30
+    /**
+     * @brief Unknown. Initialized by AllocBlock().
+     */
+    short unk_0x30_arg1; // 0x30:0x32
+    /**
+     * @brief Unknown. Probably padding.
+     */
+    short unk_0x32; // 0x32:0x34
+};
+
 /**
  * @brief Convert separate RGB values to integer RGB representation
  * @param r Red value.
