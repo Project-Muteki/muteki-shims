@@ -4,7 +4,7 @@ var structlcd__s =
     [ "cursor", "structlcd__s.html#a94f82e769e382d51df9b20fce275034a", null ],
     [ "depth_bytes", "structlcd__s.html#a2b7b20c04513814fa20983cdf823d55b", null ],
     [ "draw", "structlcd__s.html#ae42dcc88823a09453b3b72eafe354bbc", null ],
-    [ "drawing_area", "structlcd__s.html#ae05b7cc55813d8b9724a26af9621e8b3", null ],
+    [ "drawing_area", "structlcd__s.html#a87c3a2ba18acdfabbc44191d48a50f5c", null ],
     [ "font", "structlcd__s.html#a8a29c336b0f07856e827df7ce77895ac", null ],
     [ "height", "structlcd__s.html#aa3a508db914b9c6cf1423a38637cc96a", null ],
     [ "pixel_end", "structlcd__s.html#a4ed274f877fe5848b33d286fec464df8", null ],

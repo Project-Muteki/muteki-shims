@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dt>Global <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a>  </dt>
 <dd><a class="anchor" id="_todo000007"></a>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?)  </dd>
 <dt>Global <a class="el" href="button_8h.html#a9e8dd4cd1f18a08f773c7b4faf1487b9">CreateButton</a>  (unsigned short arg1, short x0, short y0, short x1, short y1, UTF16 *label, int arg7, short flags)</dt>
-<dd><a class="anchor" id="_todo000018"></a>Need some ways to test this.  </dd>
+<dd><a class="anchor" id="_todo000017"></a>Need some ways to test this.  </dd>
 <dt>Global <a class="el" href="devio_8h.html#a6122359c7991a099f3e30c92338affb8">CreateFile</a>  (char *pathname, int access, int shmode, void *secattr, int on_noentry, int flags, void *template_file)</dt>
 <dd><a class="anchor" id="_todo000003"></a>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed.  </dd>
 <dt>Global <a class="el" href="canvas_8h.html#a3d961c1c3c7a87e1ccd0873e2aa5e262">GetCursorType</a>  ()</dt>
@@ -128,9 +128,7 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dt>Struct <a class="el" href="structui__widget__s.html">ui_widget_s</a>  </dt>
 <dd><a class="anchor" id="_todo000010"></a>Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their <code>self</code> argument defined as <code>ui_widget_t *</code> (or <code>void *</code> if we opt to do that) which is a bit less ideal.  </dd>
 <dt>Global <a class="el" href="structui__widget__s.html#adf55f01351e0d9e4d6fe7fe952d7873d">ui_widget_s::next</a>  </dt>
-<dd><a class="anchor" id="_todo000016"></a>Determine what is common and define ui_widget_t in <a class="el" href="ui_2common_8h.html" title="Common data structures and definitions for the UI subsystem.">ui/common.h</a>.  </dd>
-<dt>Global <a class="el" href="structui__widget__s.html#a2880a54170102941ebce23466e8dab81">ui_widget_s::on_event</a>  )(ui_widget_t *self)</dt>
-<dd><a class="anchor" id="_todo000017"></a>Verify. </dd>
+<dd><a class="anchor" id="_todo000016"></a>Determine what is common and define ui_widget_t in <a class="el" href="ui_2common_8h.html" title="Common data structures and definitions for the UI subsystem.">ui/common.h</a>. </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

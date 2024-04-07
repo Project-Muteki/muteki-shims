@@ -6,7 +6,7 @@ var searchData=
   ['filename_5flfn_3',['filename_lfn',['../structfind__context__t.html#aa6ee44165fe3d8c2770ee8131734f774',1,'find_context_t']]],
   ['flag_4',['flag',['../structevent__s.html#a53643386d8c1a657984760eca581503c',1,'event_s']]],
   ['font_5',['font',['../structlcd__s.html#a8a29c336b0f07856e827df7ce77895ac',1,'lcd_s']]],
-  ['footprint_6',['footprint',['../structui__widget__s.html#a0ade47f90d1241bce4337c2baba6736b',1,'ui_widget_s']]],
+  ['footprint_6',['footprint',['../structui__widget__s.html#ae401b94c2b07175fb57a89056c330ce6',1,'ui_widget_s']]],
   ['free_7',['free',['../structfs__stat__t.html#a4e5fc3d72b5304ba2d1f29e38203d7f5',1,'fs_stat_t']]],
   ['free_5fkb_8',['free_kb',['../structfs__stat__t.html#aa723d59d249ed835fcc3c11c389cb95c',1,'fs_stat_t']]]
 ];

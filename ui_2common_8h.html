@@ -115,8 +115,8 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__cursor__t.html">lcd_cursor_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cursor states usually linked to an LCD descriptor.  <a href="structlcd__cursor__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__rect__t.html">lcd_rect_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectangle used to represent usable drawing area in an LCD descriptor.  <a href="structlcd__rect__t.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__rect__t.html">ui_rect_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectangle used to represent usable drawing area in an LCD descriptor.  <a href="structui__rect__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__draw__t.html">lcd_draw_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing routine common states.  <a href="structlcd__draw__t.html#details">More...</a><br /></td></tr>
@@ -132,6 +132,9 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__thread__safe__t.html">lcd_thread_safe_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.  <a href="structlcd__thread__safe__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__t.html">ui_event_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for low level UI events.  <a href="structui__event__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__widget__s.html">ui_widget_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common part of all widgets.  <a href="structui__widget__s.html#details">More...</a><br /></td></tr>
@@ -220,6 +223,128 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a2a3ead8fb0194794e230be112a87d4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined dash patterns.  <a href="ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cb">More...</a><br /></td></tr>
 <tr class="separator:a2a3ead8fb0194794e230be112a87d4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cc0af385a79f99f5634d7050ad9920" id="r_af7cc0af385a79f99f5634d7050ad9920"><td class="memItemLeft" align="right" valign="top"><a id="af7cc0af385a79f99f5634d7050ad9920" name="af7cc0af385a79f99f5634d7050ad9920"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920">keycode_e</a> { <br />
+&#160;&#160;<b>KEY_ESC</b> = 0x01
+, <b>KEY_LEFT</b>
+, <b>KEY_UP</b>
+, <b>KEY_RIGHT</b>
+, <br />
+&#160;&#160;<b>KEY_DOWN</b>
+, <b>KEY_PGUP</b>
+, <b>KEY_PGDN</b>
+, <b>KEY_CAPS</b> = 0x0a
+, <br />
+&#160;&#160;<b>KEY_DEL</b> = 0xc
+, <b>KEY_ENTER</b> = 0x0d
+, <b>KEY_MENU</b> = 0x11
+, <b>KEY_FONT</b> = 0x12
+, <br />
+&#160;&#160;<b>KEY_SPACE</b> = ' '
+, <b>KEY_EXCL</b> = '!'
+, <b>KEY_TAB</b> = 0x22
+, <b>KEY_HASH</b> = '#'
+, <br />
+&#160;&#160;<b>KEY_DOLLAR</b> = '$'
+, <b>KEY_PERCENT</b> = ''
+, <b>KEY_LPAREN</b> = '('
+, <b>KEY_RPAREN</b> = ')'
+, <br />
+&#160;&#160;<b>KEY_STAR</b> = '*'
+, <b>KEY_COMMA</b> = ','
+, <b>KEY_DASH</b> = '-'
+, <b>KEY_DOT</b> = '.'
+, <br />
+&#160;&#160;<b>KEY_0</b> = '0'
+, <b>KEY_1</b> = '1'
+, <b>KEY_2</b> = '2'
+, <b>KEY_3</b> = '3'
+, <br />
+&#160;&#160;<b>KEY_4</b> = '4'
+, <b>KEY_5</b> = '5'
+, <b>KEY_6</b> = '6'
+, <b>KEY_7</b> = '7'
+, <br />
+&#160;&#160;<b>KEY_8</b> = '8'
+, <b>KEY_9</b> = '9'
+, <b>KEY_QUESTION</b> = '?'
+, <b>KEY_AT</b> = '@'
+, <br />
+&#160;&#160;<b>KEY_A</b> = 'A'
+, <b>KEY_B</b> = 'B'
+, <b>KEY_C</b> = 'C'
+, <b>KEY_D</b> = 'D'
+, <br />
+&#160;&#160;<b>KEY_E</b> = 'E'
+, <b>KEY_F</b> = 'F'
+, <b>KEY_G</b> = 'G'
+, <b>KEY_H</b> = 'H'
+, <br />
+&#160;&#160;<b>KEY_I</b> = 'I'
+, <b>KEY_J</b> = 'J'
+, <b>KEY_K</b> = 'K'
+, <b>KEY_L</b> = 'L'
+, <br />
+&#160;&#160;<b>KEY_M</b> = 'M'
+, <b>KEY_N</b> = 'N'
+, <b>KEY_O</b> = 'O'
+, <b>KEY_P</b> = 'P'
+, <br />
+&#160;&#160;<b>KEY_Q</b> = 'Q'
+, <b>KEY_R</b> = 'R'
+, <b>KEY_S</b> = 'S'
+, <b>KEY_T</b> = 'T'
+, <br />
+&#160;&#160;<b>KEY_U</b> = 'U'
+, <b>KEY_V</b> = 'V'
+, <b>KEY_W</b> = 'W'
+, <b>KEY_X</b> = 'X'
+, <br />
+&#160;&#160;<b>KEY_Y</b> = 'Y'
+, <b>KEY_Z</b> = 'Z'
+, <b>KEY_LANG_CHN</b> = 0x80
+, <b>KEY_LANG_ENG</b> = 0x82
+, <br />
+&#160;&#160;<b>KEY_POWER</b> = 0x83
+, <b>KEY_F1</b> = 0x84
+, <b>KEY_F2</b>
+, <b>KEY_F3</b>
+, <br />
+&#160;&#160;<b>KEY_F4</b>
+, <b>KEY_F5</b>
+, <b>KEY_SHIFT</b> = 0x8b
+, <b>KEY_IME</b> = 0x8e
+, <br />
+&#160;&#160;<b>KEY_SYMBOL</b> = 0x91
+, <b>KEY_HOME</b> = 0x93
+, <b>KEY_HELP</b> = 0x95
+, <b>KEY_SAVE</b> = 0x96
+, <br />
+&#160;&#160;<b>KEY_SYLLABLE</b> = 0x9e
+, <b>KEY_SEARCH</b> = 0xf6
+, <b>KEY_BACKLIGHT</b> = 0xf8
+, <b>KEY_VOL</b> = 0xfa
+, <br />
+&#160;&#160;<b>KEY_USB_INSERTION</b> = 0xfe
+, <b>KEY_REPEAT</b> = 0xff
+, <b>KEY_INS</b> = 0x101
+, <b>KEY_SHIFT_PGUP</b> = 0xe047
+, <br />
+&#160;&#160;<b>KEY_SHIFT_PGDN</b> = 0xe04f
+<br />
+ }</td></tr>
+<tr class="memdesc:af7cc0af385a79f99f5634d7050ad9920"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of available keycodes. <br /></td></tr>
+<tr class="separator:af7cc0af385a79f99f5634d7050ad9920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad23e002626a9b8e5b06b32178419966f" id="r_ad23e002626a9b8e5b06b32178419966f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f">ui_event_type_e</a> { <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa5548da93ad18a3bf7e02470f3f0c12b9">UI_EVENT_TYPE_INVALID</a> = 0
+, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf">UI_EVENT_TYPE_TOUCH_BEGIN</a> = 1
+, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741">UI_EVENT_TYPE_TOUCH_MOVE</a> = 2
+, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748">UI_EVENT_TYPE_TOUCH_END</a> = 8
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86">UI_EVENT_TYPE_KEY</a> = 16
+<br />
+ }</td></tr>
+<tr class="memdesc:ad23e002626a9b8e5b06b32178419966f"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI event types.  <a href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f">More...</a><br /></td></tr>
+<tr class="separator:ad23e002626a9b8e5b06b32178419966f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -522,6 +647,34 @@ Enumerations</h2></td></tr>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3" name="a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3"></a>DASH_NONE&#160;</td><td class="fielddoc"><p>Solid line. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9" name="a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9"></a>DASH_CUSTOM&#160;</td><td class="fielddoc"><p>Custom dash pattern. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad23e002626a9b8e5b06b32178419966f" name="ad23e002626a9b8e5b06b32178419966f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad23e002626a9b8e5b06b32178419966f">&#9670;&#160;</a></span>ui_event_type_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f">ui_event_type_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UI event types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa5548da93ad18a3bf7e02470f3f0c12b9" name="ad23e002626a9b8e5b06b32178419966fa5548da93ad18a3bf7e02470f3f0c12b9"></a>UI_EVENT_TYPE_INVALID&#160;</td><td class="fielddoc"><p>Invalid/cleared. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf" name="ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf"></a>UI_EVENT_TYPE_TOUCH_BEGIN&#160;</td><td class="fielddoc"><p>Beginning of touch/pen down event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741" name="ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741"></a>UI_EVENT_TYPE_TOUCH_MOVE&#160;</td><td class="fielddoc"><p>Touch/pen move event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748" name="ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748"></a>UI_EVENT_TYPE_TOUCH_END&#160;</td><td class="fielddoc"><p>End of touch/pen up event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" name="ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86"></a>UI_EVENT_TYPE_KEY&#160;</td><td class="fielddoc"><p>Key(s) pressed. </p>
 </td></tr>
 </table>
 

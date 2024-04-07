@@ -11,7 +11,6 @@ var annotated_dup =
     [ "lcd_draw_t", "structlcd__draw__t.html", "structlcd__draw__t" ],
     [ "lcd_font_t", "structlcd__font__t.html", "structlcd__font__t" ],
     [ "lcd_lock_t", "structlcd__lock__t.html", "structlcd__lock__t" ],
-    [ "lcd_rect_t", "structlcd__rect__t.html", "structlcd__rect__t" ],
     [ "lcd_s", "structlcd__s.html", "structlcd__s" ],
     [ "lcd_surface_t", "structlcd__surface__t.html", "structlcd__surface__t" ],
     [ "lcd_thread_safe_t", "structlcd__thread__safe__t.html", "structlcd__thread__safe__t" ],
@@ -23,5 +22,6 @@ var annotated_dup =
     [ "threading_waitable_t", "structthreading__waitable__t.html", "structthreading__waitable__t" ],
     [ "ui_button_s", "structui__button__s.html", "structui__button__s" ],
     [ "ui_event_t", "structui__event__t.html", "structui__event__t" ],
+    [ "ui_rect_t", "structui__rect__t.html", "structui__rect__t" ],
     [ "ui_widget_s", "structui__widget__s.html", "structui__widget__s" ]
 ];

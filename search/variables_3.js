@@ -6,5 +6,5 @@ var searchData=
   ['depth_5fbytes_3',['depth_bytes',['../structlcd__s.html#a2b7b20c04513814fa20983cdf823d55b',1,'lcd_s']]],
   ['dospath_4',['dospath',['../structapplet__args__v4__t.html#a76884adfcb7c6da9e0a94f40b3f0d932',1,'applet_args_v4_t']]],
   ['draw_5',['draw',['../structlcd__s.html#ae42dcc88823a09453b3b72eafe354bbc',1,'lcd_s']]],
-  ['drawing_5farea_6',['drawing_area',['../structlcd__s.html#ae05b7cc55813d8b9724a26af9621e8b3',1,'lcd_s']]]
+  ['drawing_5farea_6',['drawing_area',['../structlcd__s.html#a87c3a2ba18acdfabbc44191d48a50f5c',1,'lcd_s']]]
 ];
