@@ -146,6 +146,133 @@ enum stroke_predefined_dash_e {
 };
 
 /**
+ * @brief List of available keycodes.
+ */
+enum keycode_e {
+    /* 0x00 */
+    KEY_ESC = 0x01,
+    KEY_LEFT,
+    KEY_UP,
+    KEY_RIGHT,
+    KEY_DOWN,
+    KEY_PGUP,
+    KEY_PGDN,
+    KEY_CAPS = 0x0a,
+    KEY_DEL = 0xc,
+    KEY_ENTER = 0x0d,
+    /* 0x10 */
+    KEY_MENU = 0x11,
+    KEY_FONT = 0x12,
+    /* 0x20 */
+    KEY_SPACE = ' ',
+    KEY_EXCL = '!',
+    KEY_TAB = 0x22,
+    KEY_HASH = '#',
+    KEY_DOLLAR = '$',
+    KEY_PERCENT = '%',
+    KEY_LPAREN = '(',
+    KEY_RPAREN = ')',
+    KEY_STAR = '*',
+    KEY_COMMA = ',',
+    KEY_DASH = '-',
+    KEY_DOT = '.',
+    /* 0x30 */
+    KEY_0 = '0',
+    KEY_1 = '1',
+    KEY_2 = '2',
+    KEY_3 = '3',
+    KEY_4 = '4',
+    KEY_5 = '5',
+    KEY_6 = '6',
+    KEY_7 = '7',
+    KEY_8 = '8',
+    KEY_9 = '9',
+    KEY_QUESTION = '?',
+    /* 0x40 */
+    KEY_AT = '@',
+    KEY_A = 'A',
+    KEY_B = 'B',
+    KEY_C = 'C',
+    KEY_D = 'D',
+    KEY_E = 'E',
+    KEY_F = 'F',
+    KEY_G = 'G',
+    KEY_H = 'H',
+    KEY_I = 'I',
+    KEY_J = 'J',
+    KEY_K = 'K',
+    KEY_L = 'L',
+    KEY_M = 'M',
+    KEY_N = 'N',
+    KEY_O = 'O',
+    /* 0x50 */
+    KEY_P = 'P',
+    KEY_Q = 'Q',
+    KEY_R = 'R',
+    KEY_S = 'S',
+    KEY_T = 'T',
+    KEY_U = 'U',
+    KEY_V = 'V',
+    KEY_W = 'W',
+    KEY_X = 'X',
+    KEY_Y = 'Y',
+    KEY_Z = 'Z',
+    /* 0x80 */
+    KEY_LANG_CHN = 0x80,
+    KEY_LANG_ENG = 0x82,
+    KEY_POWER = 0x83,
+    KEY_F1 = 0x84,
+    KEY_F2,
+    KEY_F3,
+    KEY_F4,
+    KEY_F5,
+    KEY_SHIFT = 0x8b,
+    KEY_IME = 0x8e,
+    /* 0x90 */
+    KEY_SYMBOL = 0x91,
+    KEY_HOME = 0x93,
+    KEY_HELP = 0x95,
+    KEY_SAVE = 0x96,
+    KEY_SYLLABLE = 0x9e,
+    /* 0xf0 */
+    KEY_SEARCH = 0xf6,
+    KEY_BACKLIGHT = 0xf8,
+    KEY_VOL = 0xfa,
+    KEY_USB_INSERTION = 0xfe,
+    KEY_REPEAT = 0xff,
+    /* 0x100+ */
+    KEY_INS = 0x101,
+    KEY_SHIFT_PGUP = 0xe047,
+    KEY_SHIFT_PGDN = 0xe04f,
+};
+
+/**
+ * @brief UI event types.
+ */
+enum ui_event_type_e {
+    /**
+     * @brief Invalid/cleared.
+     */
+    UI_EVENT_TYPE_INVALID = 0,
+    /**
+     * @brief Beginning of touch/pen down event.
+     */
+    UI_EVENT_TYPE_TOUCH_BEGIN = 1,
+    /**
+     * @brief Touch/pen move event.
+     */
+    UI_EVENT_TYPE_TOUCH_MOVE = 2,
+    /**
+     * @brief End of touch/pen up event.
+     */
+    UI_EVENT_TYPE_TOUCH_END = 8,
+    /**
+     * @brief Key(s) pressed.
+     */
+    UI_EVENT_TYPE_KEY = 16,
+};
+
+/**
  * @brief Descriptor of an LCD drawing surface or hardware framebuffer.
  * @details This contains format description of the pixel/framebuffer and a pointer to the actual buffer.
  */
@@ -228,7 +355,7 @@ typedef struct {
     short x1; // (lcd_t[0x70:0x72])
     /** @brief @x_term y1 */
     short y1; // (lcd_t[0x72:0x74])
-} lcd_rect_t; // 0x8 bytes
+} ui_rect_t; // 0x8 bytes
 
 /**
  * @brief Drawing routine common states.
@@ -344,7 +471,7 @@ struct lcd_s {
     /** @brief A copy of the cursor states when the LCD descriptor was created. */
     lcd_cursor_t saved_cursor; // 0x5c:0x6c
     /** @brief Usable drawing area of the LCD. */
-    lcd_rect_t drawing_area; // 0x6c:0x74
+    ui_rect_t drawing_area; // 0x6c:0x74
     /** @brief Unknown. */
     int unk_0x74[3]; // 0x74:0x80
     /** @brief Cursor states. */
@@ -444,6 +571,68 @@ enum font_type_e {
     SANS_ITALIC_HUGE_CJK_LARGE,
 };
 
+/**
+ * @brief Structure for low level UI events
+ */
+typedef struct {
+    /**
+     * @brief Unknown.
+     * @details Maybe used on event types other than touch and key press.
+     */
+    void *unk0; // 0-4 sometimes a pointer especially on unstable USB connection? junk data?
+    /**
+     * @brief The type of event (0x10 being key event)
+     * @see ui_event_type_e List of event types.
+     */
+    int event_type; // 4-8 16: key (?).
+    union {
+        struct {
+            /** 
+             * @brief Keycode for the first pressed key.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
+             */
+            short key_code0; // 8-10
+            /**
+             * @brief Keycode for the second pressed key.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
+             * @note Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover,
+             * some devices may lack support of simultaneous key presses.
+             */
+            short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
+        };
+        struct {
+            /**
+             * @brief The X coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
+             */
+            short touch_x;
+            /**
+             * @brief The Y coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
+             */
+            short touch_y;
+        };
+    };
+    /**
+     * @brief Unknown.
+     * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
+     */
+    void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+    /**
+     * @brief Unknown.
+     * @details Maybe used on event types other than touch and key press.
+     */
+    void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
+    /**
+     * @brief Unknown.
+     * @details Seems to be always 0, although ClearEvent() explicitly sets this to 0. Maybe used on event types other
+     * than touch and key press.
+     */
+    void *unk20; // 20-24 seems to be always 0. Unused?
+} ui_event_t;
+
 struct ui_widget_s;
 typedef struct ui_widget_s ui_widget_t;
 
@@ -463,21 +652,21 @@ struct ui_widget_s {
      */
     ui_widget_t *next; // 0x4:0x8
     /**
-     * @brief Unknown. Set to 0.
+     * @brief Widget state bit field.
      */
-    short unk_0x8; // 0x8:0xa
+    unsigned short state; // 0x8:0xa
     /**
      * @brief Unknown. Set to 1.
      */
     short unk_0xa; // 0xa:0xc
     /**
-     * @brief Button footprint rectangle.
+     * @brief Widget footprint.
      */
-    lcd_rect_t footprint; // 0xc:0x14
+    ui_rect_t footprint; // 0xc:0x14
     /**
      * @brief Unknown.
      */
-    void (*unk_callback_0x14)(); // 0x14:0x18
+    void (*on_state_change)(ui_widget_t *self, unsigned short mask, bool value); // 0x14:0x18
     /**
      * @brief Unknown.
      */
@@ -488,9 +677,8 @@ struct ui_widget_s {
     void (*on_draw)(ui_widget_t *self); // 0x1c:0x20
     /**
      * @brief Widget event callback.
-     * @todo Verify.
      */
-    void (*on_event)(ui_widget_t *self); // 0x20:0x24
+    void (*on_event)(ui_widget_t *self, ui_event_t *event); // 0x20:0x24
     /**
      * @brief Unknown.
      */
