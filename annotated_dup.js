@@ -21,5 +21,7 @@ var annotated_dup =
     [ "semaphore_s", "structsemaphore__s.html", "structsemaphore__s" ],
     [ "thread_s", "structthread__s.html", "structthread__s" ],
     [ "threading_waitable_t", "structthreading__waitable__t.html", "structthreading__waitable__t" ],
-    [ "ui_event_t", "structui__event__t.html", "structui__event__t" ]
+    [ "ui_button_s", "structui__button__s.html", "structui__button__s" ],
+    [ "ui_event_t", "structui__event__t.html", "structui__event__t" ],
+    [ "ui_widget_s", "structui__widget__s.html", "structui__widget__s" ]
 ];

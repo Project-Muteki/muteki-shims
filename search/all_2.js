@@ -10,5 +10,6 @@ var searchData=
   ['blit_5fnone_7',['BLIT_NONE',['../ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05',1,'common.h']]],
   ['btime_8',['btime',['../structfind__context__t.html#a5bfdf38ee70aea97901b008d9dd81f30',1,'find_context_t']]],
   ['buffer_9',['buffer',['../structlcd__surface__t.html#a7e90676db5c550bace9a930d2ddd99f1',1,'lcd_surface_t']]],
-  ['buzzer_10',['Buzzer',['../system_8h.html#aef1cc89349e8bbf4146fdf74097c882f',1,'system.h']]]
+  ['button_2eh_10',['button.h',['../button_8h.html',1,'']]],
+  ['buzzer_11',['Buzzer',['../system_8h.html#aef1cc89349e8bbf4146fdf74097c882f',1,'system.h']]]
 ];

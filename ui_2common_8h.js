@@ -8,6 +8,7 @@ var ui_2common_8h =
     [ "lcd_lock_t", "structlcd__lock__t.html", "structlcd__lock__t" ],
     [ "lcd_s", "structlcd__s.html", "structlcd__s" ],
     [ "lcd_thread_safe_t", "structlcd__thread__safe__t.html", "structlcd__thread__safe__t" ],
+    [ "ui_widget_s", "structui__widget__s.html", "structui__widget__s" ],
     [ "RGB_FROM_U8", "ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf", null ],
     [ "lcd_rotate_callback_t", "ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5", null ],
     [ "blit_flag_e", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd", [
