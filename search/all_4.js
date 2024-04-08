@@ -13,7 +13,7 @@ var searchData=
   ['db_5fopen_5ffailed_10',['DB_OPEN_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a7555d9e53b2829fecb6402b95f5087d4',1,'errno.h']]],
   ['db_5ftoo_5fmany_5fopen_5ffiles_11',['DB_TOO_MANY_OPEN_FILES',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a99f23a399ca10332ef65938521c7e638',1,'errno.h']]],
   ['deletevirtuallcd_12',['DeleteVirtualLCD',['../canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2',1,'canvas.h']]],
-  ['depth_13',['depth',['../structlcd__surface__t.html#acaede65a1b43cf69cc87e590e90c455c',1,'lcd_surface_t']]],
+  ['depth_13',['depth',['../structlcd__surface__s.html#a5995a993993324a55e50625e50476e4d',1,'lcd_surface_s']]],
   ['depth_5fbytes_14',['depth_bytes',['../structlcd__s.html#a2b7b20c04513814fa20983cdf823d55b',1,'lcd_s']]],
   ['deviceiocontrol_15',['DeviceIoControl',['../devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b',1,'devio.h']]],
   ['devio_2eh_16',['devio.h',['../devio_8h.html',1,'']]],

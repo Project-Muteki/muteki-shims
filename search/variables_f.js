@@ -2,7 +2,7 @@ var searchData=
 [
   ['saved_5fcursor_0',['saved_cursor',['../structlcd__s.html#aa7295b5df6abae8fefdbcc25d363b034',1,'lcd_s']]],
   ['second_1',['second',['../structdatetime__t.html#a6e882ba06a6047a1e494203e9e09594b',1,'datetime_t']]],
-  ['size_2',['size',['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t::size'],['../structfs__stat__t.html#a1cf64bba642348e5eb10305141d5931b',1,'fs_stat_t::size'],['../structmessage__queue__nonatomic__t.html#a7b448a0c95fa58f12b0acf0ab41d2f32',1,'message_queue_nonatomic_t::size'],['../structlcd__cursor__t.html#aba3d4fd0071c9529e14e155343c882ae',1,'lcd_cursor_t::size']]],
+  ['size_2',['size',['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t::size'],['../structfs__stat__t.html#a1cf64bba642348e5eb10305141d5931b',1,'fs_stat_t::size'],['../structmessage__queue__nonatomic__t.html#a7b448a0c95fa58f12b0acf0ab41d2f32',1,'message_queue_nonatomic_t::size'],['../structlcd__cursor__s.html#a8746bbed31e3c5d4685e2f3090732a5b',1,'lcd_cursor_s::size']]],
   ['size2_3',['size2',['../structfs__stat__t.html#ab03c03a62dae55ba0473e33937d84701',1,'fs_stat_t']]],
   ['size2_5fkb_4',['size2_kb',['../structfs__stat__t.html#adccd3ed7fc787d55186473d3fba34758',1,'fs_stat_t']]],
   ['size3_5',['size3',['../structfs__stat__t.html#a15af04d62fc907a1fe30b571d712f5ab',1,'fs_stat_t']]],
@@ -18,11 +18,12 @@ var searchData=
   ['sp_15',['sp',['../structthread__s.html#af62f74539c792d26ec5c2a38189211b5',1,'thread_s']]],
   ['spare_5fpage_5fsize_16',['spare_page_size',['../structnand__params__t.html#a4e6f91eef2fc70b44efa046aba414018',1,'nand_params_t']]],
   ['stack_17',['stack',['../structthread__s.html#a28d2fca44aaeb67e49ba4003631d62ad',1,'thread_s']]],
-  ['state_18',['state',['../structui__widget__s.html#af91244591487164513b94e175ce866ad',1,'ui_widget_s']]],
+  ['state_18',['state',['../structui__component__s.html#ae891fa49afd249d98a675e6f5f4320b5',1,'ui_component_s']]],
   ['storage_19',['storage',['../structmessage__queue__s.html#a81f660bf62dff23628c6887e9161e303',1,'message_queue_s']]],
-  ['stroke_5fdash_20',['stroke_dash',['../structlcd__draw__t.html#aadca548594cd7ccc3c5f73ab2b10e1ef',1,'lcd_draw_t']]],
-  ['stroke_5fdash_5fpattern_21',['stroke_dash_pattern',['../structlcd__draw__t.html#ab821a54c692611b9baebe4d630145cd6',1,'lcd_draw_t']]],
-  ['stroke_5fsize_22',['stroke_size',['../structlcd__draw__t.html#a212774ed739a3a2403b3ae2299514489',1,'lcd_draw_t']]],
+  ['stroke_5fdash_20',['stroke_dash',['../structlcd__draw__s.html#a4a2216e9db418a31d193d0e28552aac4',1,'lcd_draw_s']]],
+  ['stroke_5fdash_5fpattern_21',['stroke_dash_pattern',['../structlcd__draw__s.html#a0de69aad561b388d27e962e1d6bfccfb',1,'lcd_draw_s']]],
+  ['stroke_5fsize_22',['stroke_size',['../structlcd__draw__s.html#a450646b42f111ecb03f724b41a163419',1,'lcd_draw_s']]],
   ['subroutine_23',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
-  ['surface_24',['surface',['../structlcd__s.html#ade3b9e5707e643ab6496affe332b1989',1,'lcd_s']]]
+  ['subtype_24',['subtype',['../structui__component__s.html#ab65d7c6bbdcc9c90e1e766ac18e8a09a',1,'ui_component_s']]],
+  ['surface_25',['surface',['../structlcd__s.html#ade3b9e5707e643ab6496affe332b1989',1,'lcd_s']]]
 ];

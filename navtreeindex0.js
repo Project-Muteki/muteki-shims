@@ -67,6 +67,7 @@ var NAVTREEINDEX0 =
 "datetime_8h.html":[4,0,0,0,2],
 "datetime_8h.html#a32e84df2811a0547e643cd22097004f8":[4,0,0,0,2,1],
 "datetime_8h_source.html":[4,0,0,0,2],
+"deskbox_8h_source.html":[4,0,0,0,0,0,0],
 "devio_8h.html":[4,0,0,0,3],
 "devio_8h.html#a6122359c7991a099f3e30c92338affb8":[4,0,0,0,3,1],
 "devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b":[4,0,0,0,3,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "globals.html":[4,1,0,0],
 "globals.html":[4,1,0],
 "globals_a.html":[4,1,0,1],
-"globals_b.html":[4,1,0,2],
-"globals_c.html":[4,1,0,3]
+"globals_b.html":[4,1,0,2]
 };

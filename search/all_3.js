@@ -14,7 +14,7 @@ var searchData=
   ['createvirtuallcd_11',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
   ['critical_5fsection_5fs_12',['critical_section_s',['../structcritical__section__s.html',1,'']]],
   ['critical_5fsection_5ft_13',['critical_section_t',['../threading_8h.html#a07c0d1458ed0f242cff7024401856fdc',1,'threading.h']]],
-  ['cs_14',['cs',['../structlcd__lock__t.html#a51fb701eb3ffb335c5746ab45adf9978',1,'lcd_lock_t']]],
+  ['cs_14',['cs',['../structlcd__lock__s.html#ab9de7c4cb2bac64ed550cef95ddd593c',1,'lcd_lock_s']]],
   ['ctr_15',['ctr',['../structsemaphore__s.html#a063ba0ee7ba3e28d83b8320240439860',1,'semaphore_s']]],
   ['cursor_16',['cursor',['../structlcd__s.html#a94f82e769e382d51df9b20fce275034a',1,'lcd_s']]],
   ['cursorlock_17',['CursorLock',['../canvas_8h.html#a6b82197758044bd6b4f728adadb1e481',1,'canvas.h']]],

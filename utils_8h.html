@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('utils_8h.html',''); initResizable(); }
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7ca12229db87d9d2a5431f9059e304d0" id="r_a7ca12229db87d9d2a5431f9059e304d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a> ()</td></tr>
+<tr class="memitem:a7ca12229db87d9d2a5431f9059e304d0" id="r_a7ca12229db87d9d2a5431f9059e304d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a> ()</td></tr>
 <tr class="memdesc:a7ca12229db87d9d2a5431f9059e304d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor of the currently active LCD surface.  <br /></td></tr>
 <tr class="separator:a7ca12229db87d9d2a5431f9059e304d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a212a842a05302253aae6192eaa1ec53f" id="r_a212a842a05302253aae6192eaa1ec53f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">WarningBeep</a> ()</td></tr>
@@ -130,7 +130,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structlcd__surface__t.html">lcd_surface_t</a> * GetActiveVRamAddress </td>
+          <td class="memname"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> * GetActiveVRamAddress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -144,12 +144,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the descriptor of the currently active LCD surface. </p>
-<p>This is functionally equivalent to the following: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structlcd__surface__t.html">lcd_surface_t</a> *<a class="code hl_function" href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a>() {</div>
+<p>This is functionally equivalent to the following: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structlcd__surface__s.html">lcd_surface_t</a> *<a class="code hl_function" href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a>() {</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a>()-&gt;<a class="code hl_variable" href="structlcd__s.html#ade3b9e5707e643ab6496affe332b1989">surface</a>;</div>
 <div class="line">}</div>
 <div class="ttc" id="acanvas_8h_html_a38aa2abfb190ac0a0a12249df8020ed7"><div class="ttname"><a href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a></div><div class="ttdeci">lcd_t * GetActiveLCD()</div><div class="ttdoc">Get the current active LCD descriptor.</div></div>
-<div class="ttc" id="astructlcd__s_html_ade3b9e5707e643ab6496affe332b1989"><div class="ttname"><a href="structlcd__s.html#ade3b9e5707e643ab6496affe332b1989">lcd_s::surface</a></div><div class="ttdeci">lcd_surface_t * surface</div><div class="ttdoc">Surface linked to the LCD.</div><div class="ttdef"><b>Definition</b> common.h:458</div></div>
-<div class="ttc" id="astructlcd__surface__t_html"><div class="ttname"><a href="structlcd__surface__t.html">lcd_surface_t</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> common.h:279</div></div>
+<div class="ttc" id="astructlcd__s_html_ade3b9e5707e643ab6496affe332b1989"><div class="ttname"><a href="structlcd__s.html#ade3b9e5707e643ab6496affe332b1989">lcd_s::surface</a></div><div class="ttdeci">lcd_surface_t * surface</div><div class="ttdoc">Surface linked to the LCD.</div><div class="ttdef"><b>Definition</b> common.h:536</div></div>
+<div class="ttc" id="astructlcd__surface__s_html"><div class="ttname"><a href="structlcd__surface__s.html">lcd_surface_s</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> common.h:360</div></div>
 <div class="ttc" id="autils_8h_html_a7ca12229db87d9d2a5431f9059e304d0"><div class="ttname"><a href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a></div><div class="ttdeci">lcd_surface_t * GetActiveVRamAddress()</div><div class="ttdoc">Get the descriptor of the currently active LCD surface.</div></div>
 </div><!-- fragment --><p> Requires <code>-lkrnllib</code> when dynamically linking with the shims.  </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x20022</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>

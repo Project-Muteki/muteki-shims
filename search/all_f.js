@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['palette_0',['palette',['../structlcd__surface__t.html#ac61a6181ba9c1ff5b5148436dc66eed8',1,'lcd_surface_t']]],
+  ['palette_0',['palette',['../structlcd__surface__s.html#a19c0ab393a6283ab9d143536a4a2ad51',1,'lcd_surface_s']]],
   ['peripheral_5fcomm_5ffailed_1',['PERIPHERAL_COMM_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a3e7f505e5c40405b66475bbdec7bdad1',1,'errno.h']]],
   ['pixel_5fend_2',['pixel_end',['../structlcd__s.html#a4ed274f877fe5848b33d286fec464df8',1,'lcd_s']]],
   ['pixel_5fsize_3',['pixel_size',['../structlcd__s.html#a9804d4997b395a5d18287b9e3deb0991',1,'lcd_s']]],

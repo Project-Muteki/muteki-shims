@@ -27,8 +27,8 @@ var searchData=
   ['toggle_5fkey_5finactive_24',['TOGGLE_KEY_INACTIVE',['../event_8h.html#a41db433e298d3572044a6b89993a5541a9049a0a8c683abb47b7aad26a9be5c37',1,'event.h']]],
   ['toggle_5fkey_5fstate_5fe_25',['toggle_key_state_e',['../event_8h.html#a41db433e298d3572044a6b89993a5541',1,'event.h']]],
   ['toggle_5fkey_5ftriggered_26',['TOGGLE_KEY_TRIGGERED',['../event_8h.html#a41db433e298d3572044a6b89993a5541a94931c479ed65c1f84d210e6843d6dc3',1,'event.h']]],
-  ['touch_5fx_27',['touch_x',['../structui__event__t.html#ade22d5f2d0a6242db811b167638d5b43',1,'ui_event_t']]],
-  ['touch_5fy_28',['touch_y',['../structui__event__t.html#a0c3afe79971a27af440185236d070794',1,'ui_event_t']]],
+  ['touch_5fx_27',['touch_x',['../structui__event__s.html#a6ed8517b4219791d6e9275354da15c8d',1,'ui_event_s']]],
+  ['touch_5fy_28',['touch_y',['../structui__event__s.html#ab194e55c475f8fa1436e3abb621bb60e',1,'ui_event_s']]],
   ['transparent_5fcolor_29',['transparent_color',['../structlcd__s.html#a00bab978e256b2a17e96820a130087af',1,'lcd_s']]],
-  ['type_30',['type',['../structlcd__font__t.html#a97495f197e07c2495766ef63726f5c45',1,'lcd_font_t::type'],['../structlcd__cursor__t.html#ae740d44314e5aafa4e544803268bc115',1,'lcd_cursor_t::type']]]
+  ['type_30',['type',['../structlcd__font__s.html#a1d95d8b604df2cb79d829e33f3a37686',1,'lcd_font_s::type'],['../structlcd__cursor__s.html#a2a55c9199ea2b9fa4cb188c92d7c0b37',1,'lcd_cursor_s::type']]]
 ];

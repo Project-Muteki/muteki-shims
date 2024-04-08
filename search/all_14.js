@@ -17,7 +17,7 @@ var searchData=
   ['waiting_5fby_14',['waiting_by',['../structthreading__waitable__t.html#a224dc7dc25c5440ed48e54d2183926b8',1,'threading_waitable_t']]],
   ['warningbeep_15',['WarningBeep',['../utils_8h.html#a212a842a05302253aae6192eaa1ec53f',1,'utils.h']]],
   ['weekday_16',['weekday',['../structdatetime__t.html#a65486e7763660a3e2787b334f941c1ae',1,'datetime_t']]],
-  ['width_17',['width',['../structlcd__s.html#acb6a41f9196c6ce38618d4d43639cf76',1,'lcd_s::width'],['../structlcd__surface__t.html#a3ae8e51b2e20761f1bc6dbf1541b4642',1,'lcd_surface_t::width']]],
+  ['width_17',['width',['../structlcd__s.html#acb6a41f9196c6ce38618d4d43639cf76',1,'lcd_s::width'],['../structlcd__surface__s.html#aa2b52d5992d38ee3ea4d8a2e97549159',1,'lcd_surface_s::width']]],
   ['writealignstring_18',['WriteAlignString',['../canvas_8h.html#aa411d0bb895097a6f63e5b897f7637a8',1,'canvas.h']]],
   ['writechar_19',['WriteChar',['../canvas_8h.html#aa8759b123224e598b231e6c871632c4b',1,'canvas.h']]],
   ['writecomdebugmsg_20',['WriteComDebugMsg',['../utils_8h.html#ac0177719e2182806b0224224bd7a12ba',1,'utils.h']]],
