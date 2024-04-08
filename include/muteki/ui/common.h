@@ -273,10 +273,91 @@ enum ui_event_type_e {
 };
 
 /**
+ * @brief Font types.
+ * @details The naming follows the following format, joined with underscores (_):
+ *
+ * `<style>_[variant]_[size]_<cjk>_[cjkvariant]_[cjksize]_[index]`
+ *
+ * Where
+ * - `style` is one of `SANS`, `SERIF` or `MONOSPACE`.
+ * - `variant` or `cjkvariant` is one of `BOLD` (equivalent to `REGULAR` for CJK), `ITALIC`, `BOLDITALIC`
+ *   (equivalent to `ITALIC` for CJK) or `REGULAR` (omitted for `variant`). For `cjkvariant`, if it is the same as
+ *   `variant`, it will be omitted.
+ * - `size` or `cjksize` is one of `TINY` (8px height, not available for CJK), `SMALL` (12px), `NORMAL` (16px,
+ *   omitted for `size`), `LARGE` (20px) or `HUGE` (22px, not available for CJK). For `cjksize`, if it is the
+ *   same as `size`, it will be omitted.
+ * - `cjk` is either `CJK` (supports CJK character rendering) or `NOCJK` (does not support CJK character rendering).
+ * - `index` is the current index (only used when all the above fields collide).
+ */
+enum font_type_e {
+    SANS_TINY_CJK_NORMAL = 0,
+    SANS_BOLD_TINY_CJK_NORMAL,
+    SANS_ITALIC_TINY_CJK_REGULAR_NORMAL,
+    SANS_BOLDITALIC_TINY_CJK_REGULAR_NORMAL,
+    SERIF_SMALL_CJK,
+    SERIF_BOLD_SMALL_CJK,
+    SERIF_ITALIC_SMALL_CJK_REGULAR,
+    SERIF_BOLDITALIC_SMALL_CJK_REGULAR,
+    SERIF_CJK,
+    SERIF_BOLD_CJK,
+    SERIF_ITALIC_CJK_REGULAR,
+    SERIF_BOLDITALIC_CJK_REGULAR,
+    SERIF_LARGE_CJK,
+    SERIF_BOLD_LARGE_CJK,
+    SERIF_ITALIC_LARGE_CJK,
+    SERIF_BOLDITALIC_LARGE_CJK,
+    MONOSPACE_CJK,
+    MONOSPACE_TINY_NOCJK,
+    SERIF_CJK_18,
+    SERIF_BOLD_CJK_19,
+    SERIF_SMALL_CJK_20,
+    SANS_TINY_NOCJK,
+    SANS_BOLD_TINY_NOCJK,
+    SANS_ITALIC_TINY_NOCJK,
+    SANS_BOLDITALIC_TINY_NOCJK,
+    SERIF_SMALL_CJK_25,
+    SERIF_BOLD_SMALL_CJK_26,
+    SERIF_ITALIC_SMALL_CJK_REGULAR_27,
+    SERIF_BOLDITALIC_SMALL_CJK_REGULAR_28,
+    SERIF_CJK_29,
+    SERIF_BOLD_CJK_30,
+    SERIF_ITALIC_CJK_REGULAR_31,
+    SERIF_BOLDITALIC_CJK_REGULAR_32,
+    SERIF_HUGE_CJK_LARGE,
+    SANS_HUGE_CJK_LARGE,
+    SERIF_ITALIC_HUGE_CJK_LARGE,
+    SANS_ITALIC_HUGE_CJK_LARGE,
+};
+
+struct lcd_surface_s;
+struct lcd_cursor_s;
+struct ui_rect_s;
+struct lcd_draw_s;
+struct lcd_font_s;
+struct lcd_lock_s;
+struct lcd_s;
+struct lcd_thread_safe_t;
+struct ui_event_s;
+struct ui_message_s;
+struct ui_component_s;
+
+typedef struct lcd_surface_s lcd_surface_t;
+typedef struct lcd_cursor_s lcd_cursor_t;
+typedef struct ui_rect_s ui_rect_t;
+typedef struct lcd_draw_s lcd_draw_t;
+typedef struct lcd_font_s lcd_font_t;
+typedef struct lcd_lock_s lcd_lock_t;
+typedef struct lcd_s lcd_t;
+typedef struct lcd_thread_safe_s lcd_thread_safe_t;
+typedef struct ui_event_s ui_event_t;
+typedef struct ui_message_s ui_message_t;
+typedef struct ui_component_s ui_component_t;
+
+/**
  * @brief Descriptor of an LCD drawing surface or hardware framebuffer.
  * @details This contains format description of the pixel/framebuffer and a pointer to the actual buffer.
  */
-typedef struct {
+struct lcd_surface_s {
     /**
      * @brief Header magic.
      * @details Always `"PX"` without NUL.
@@ -317,12 +398,12 @@ typedef struct {
      * @details The actual format varies and depends on the parameters provided above.
      */
     void *buffer; // 16:20
-} lcd_surface_t; // 20 bytes
+}; // 20 bytes
 
 /**
  * @brief Cursor states usually linked to an LCD descriptor.
  */
-typedef struct SYS_ALIGN(2) {
+struct lcd_cursor_s {
     /** @brief X coordinate of the cursor. */
     short x; // 0x0:0x2 (lcd_t[0x5c:0x5e])
     /** @brief Y coordinate of the cursor. */
@@ -340,13 +421,13 @@ typedef struct SYS_ALIGN(2) {
     short grab_count; // 0xc:0xe (lcd_t[0x68:0x6a])
     /** @brief Unknown. */
     short unk_0xe; // 0xe:0x10 (lcd_t[0x6a:0x6c])
-} lcd_cursor_t; // 0x10 bytes
+}; // 0x10 bytes
 
 /**
  * @brief Rectangle used to represent usable drawing area in an LCD descriptor.
  * @details The area is double-inclusive (i.e. `{0, 0, 479, 271}` represents an area of 480x272 px).
  */
-typedef struct {
+struct ui_rect_s {
     /** @brief @x_term x0 */
     short x0; // (lcd_t[0x6c:0x6e])
     /** @brief @x_term y0 */
@@ -355,12 +436,12 @@ typedef struct {
     short x1; // (lcd_t[0x70:0x72])
     /** @brief @x_term y1 */
     short y1; // (lcd_t[0x72:0x74])
-} ui_rect_t; // 0x8 bytes
+}; // 0x8 bytes
 
 /**
  * @brief Drawing routine common states.
  */
-typedef struct {
+struct lcd_draw_s {
     /** @brief Unknown. */
     int unk_0x0; // 0x0:0x4 (lcd_t[0x14:0x18])
     /** @brief Current foreground color. */
@@ -379,12 +460,12 @@ typedef struct {
     int unk_0x18; // 0x18:0x1c (lcd_t[0x2c:0x30])
     /** @brief Unknown. */
     int unk_0x1c; // 0x1c:0x20 (lcd_t[0x30:0x34])
-} lcd_draw_t; // 0x20 bytes
+}; // 0x20 bytes
 
 /**
  * @brief Font rendering routine common states.
  */
-typedef struct {
+struct lcd_font_s {
     /**
      * @brief Font type.
      * @see font_type_e
@@ -412,14 +493,14 @@ typedef struct {
      */
     short unk_0xc; // 0xc:0xe (lcd[0x40:0x42])
     short unk_0xe[13]; // 0xe:0x28 (lcd[0x42:0x5c])
-} lcd_font_t; // 0x28 bytes
+}; // 0x28 bytes
 
 /**
  * @brief An extended part of the LCD descriptor that implements descriptor locking.
  * @details This may not be present on all versions of Besta RTOS. It's confirmed to exist on BA742 but not BA110.
  * @todo Get a better picture of which systems have this and which do not.
  */
-typedef struct {
+struct lcd_lock_s {
     /** @brief Unknown. */
     int unk_0x0; // 0x0:0x4 (lcd_thread_safe_t[0x94:0x98])
     /** @brief A critical section descriptor. It's unclear where it is used. */
@@ -430,10 +511,7 @@ typedef struct {
     void (*unlock)(); // 0xc:0x10 (lcd_thread_safe_t[0xa0:0xa4])
     /** @brief Unknown. */
     int unk_0xa4[23]; // 0x10:0x6c (lcd_thread_safe_t[0xa4:0x100])
-} lcd_lock_t; // 0x6c bytes
-
-struct lcd_s;
-typedef struct lcd_s lcd_t;
+}; // 0x6c bytes
 
 /**
  * @brief Callback type for handling canvas rotation.
@@ -507,79 +585,23 @@ struct lcd_s {
  * @brief A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.
  * @details Cast lcd_t to this to access the extra fields if the data exists.
  */
-typedef struct {
+struct lcd_thread_safe_s {
     /** @brief The common part of the original LCD descriptor. */
     lcd_t lcd; // 0x0:0x94
     /** @brief The added part. */
     lcd_lock_t lock; // 0x94:0x100
-} lcd_thread_safe_t; // 0x100 bytes
-
-/**
- * @brief Font types.
- * @details The naming follows the following format, joined with underscores (_):
- *
- * `<style>_[variant]_[size]_<cjk>_[cjkvariant]_[cjksize]_[index]`
- *
- * Where
- * - `style` is one of `SANS`, `SERIF` or `MONOSPACE`.
- * - `variant` or `cjkvariant` is one of `BOLD` (equivalent to `REGULAR` for CJK), `ITALIC`, `BOLDITALIC`
- *   (equivalent to `ITALIC` for CJK) or `REGULAR` (omitted for `variant`). For `cjkvariant`, if it is the same as
- *   `variant`, it will be omitted.
- * - `size` or `cjksize` is one of `TINY` (8px height, not available for CJK), `SMALL` (12px), `NORMAL` (16px,
- *   omitted for `size`), `LARGE` (20px) or `HUGE` (22px, not available for CJK). For `cjksize`, if it is the
- *   same as `size`, it will be omitted.
- * - `cjk` is either `CJK` (supports CJK character rendering) or `NOCJK` (does not support CJK character rendering).
- * - `index` is the current index (only used when all the above fields collide).
- */
-enum font_type_e {
-    SANS_TINY_CJK_NORMAL = 0,
-    SANS_BOLD_TINY_CJK_NORMAL,
-    SANS_ITALIC_TINY_CJK_REGULAR_NORMAL,
-    SANS_BOLDITALIC_TINY_CJK_REGULAR_NORMAL,
-    SERIF_SMALL_CJK,
-    SERIF_BOLD_SMALL_CJK,
-    SERIF_ITALIC_SMALL_CJK_REGULAR,
-    SERIF_BOLDITALIC_SMALL_CJK_REGULAR,
-    SERIF_CJK,
-    SERIF_BOLD_CJK,
-    SERIF_ITALIC_CJK_REGULAR,
-    SERIF_BOLDITALIC_CJK_REGULAR,
-    SERIF_LARGE_CJK,
-    SERIF_BOLD_LARGE_CJK,
-    SERIF_ITALIC_LARGE_CJK,
-    SERIF_BOLDITALIC_LARGE_CJK,
-    MONOSPACE_CJK,
-    MONOSPACE_TINY_NOCJK,
-    SERIF_CJK_18,
-    SERIF_BOLD_CJK_19,
-    SERIF_SMALL_CJK_20,
-    SANS_TINY_NOCJK,
-    SANS_BOLD_TINY_NOCJK,
-    SANS_ITALIC_TINY_NOCJK,
-    SANS_BOLDITALIC_TINY_NOCJK,
-    SERIF_SMALL_CJK_25,
-    SERIF_BOLD_SMALL_CJK_26,
-    SERIF_ITALIC_SMALL_CJK_REGULAR_27,
-    SERIF_BOLDITALIC_SMALL_CJK_REGULAR_28,
-    SERIF_CJK_29,
-    SERIF_BOLD_CJK_30,
-    SERIF_ITALIC_CJK_REGULAR_31,
-    SERIF_BOLDITALIC_CJK_REGULAR_32,
-    SERIF_HUGE_CJK_LARGE,
-    SANS_HUGE_CJK_LARGE,
-    SERIF_ITALIC_HUGE_CJK_LARGE,
-    SANS_ITALIC_HUGE_CJK_LARGE,
-};
+}; // 0x100 bytes
 
 /**
  * @brief Structure for low level UI events
  */
-typedef struct {
+struct ui_event_s {
     /**
-     * @brief Unknown.
-     * @details Maybe used on event types other than touch and key press.
+     * @brief Event recipient.
+     * @details If set to `NULL`, the event is a broadcast event (e.g. input event). Otherwise, the
+     * widget's ui_component_t::on_event callback will be called with this event.
      */
-    void *unk0; // 0-4 sometimes a pointer especially on unstable USB connection? junk data?
+    ui_component_t *recipient; // 0-4
     /**
      * @brief The type of event (0x10 being key event)
      * @see ui_event_type_e List of event types.
@@ -631,26 +653,37 @@ typedef struct {
      * than touch and key press.
      */
     void *unk20; // 20-24 seems to be always 0. Unused?
-} ui_event_t;
-
-struct ui_widget_s;
-typedef struct ui_widget_s ui_widget_t;
+};
 
 /**
- * @brief Common part of all widgets.
- * @todo Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their `self`
- * argument defined as `ui_widget_t *` (or `void *` if we opt to do that) which is a bit less ideal.
+ * @brief Event struct used by SendMessage().
  */
-struct ui_widget_s {
+struct ui_message_s {
+    /**
+     * @brief The event struct.
+     */
+    ui_event_t event; // 0x0:0x18
+    /**
+     * @brief Unknown.
+     */
+    int unk_0x18; // 0x18:0x1c
+}; // 0x1c bytes
+
+/**
+ * @brief Common part of all widgets and views.
+ * @todo Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their `self`
+ * argument defined as `ui_component_t *` (or `void *` if we opt to do that) which is a bit less ideal.
+ */
+struct ui_component_s {
     /**
      * @brief Unknown. Set to 0.
      */
     int unk_0x0; // 0x0:0x4
     /**
      * @brief Next widget.
-     * @todo Determine what is common and define ui_widget_t in ui/common.h.
+     * @todo Determine what is common and define ui_component_t in ui/common.h.
      */
-    ui_widget_t *next; // 0x4:0x8
+    ui_component_t *next; // 0x4:0x8
     /**
      * @brief Widget state bit field.
      */
@@ -664,25 +697,30 @@ struct ui_widget_s {
      */
     ui_rect_t footprint; // 0xc:0x14
     /**
-     * @brief Unknown.
+     * @brief Component state change callback.
      */
-    void (*on_state_change)(ui_widget_t *self, unsigned short mask, bool value); // 0x14:0x18
+    void (*on_change_state)(ui_component_t *self, unsigned short mask, bool value); // 0x14:0x18
+    /**
+     * @brief Component callback for erasing background.
+     * @todo Figure out exactly what this does.
+     */
+    void (*on_erase_bg)(ui_component_t *self); // 0x18:0x1c
+    /**
+     * @brief Component draw callback.
+     */
+    void (*on_draw)(ui_component_t *self); // 0x1c:0x20
+    /**
+     * @brief Component event callback.
+     */
+    void (*on_event)(ui_component_t *self, ui_event_t *event); // 0x20:0x24
+    /**
+     * @brief Unknown. Used in MessageBox().
+     */
+    void *unk_0x24; // 0x24:0x2a
     /**
      * @brief Unknown.
      */
-    void (*unk_callback_0x18)(); // 0x18:0x1c
-    /**
-     * @brief Widget draw callback.
-     */
-    void (*on_draw)(ui_widget_t *self); // 0x1c:0x20
-    /**
-     * @brief Widget event callback.
-     */
-    void (*on_event)(ui_widget_t *self, ui_event_t *event); // 0x20:0x24
-    /**
-     * @brief Unknown.
-     */
-    char unk_0x24[6]; // 0x24:0x2a;
+    short unk_0x28;
     /**
      * @brief Unknown. Set to 0x65.
      */
@@ -692,9 +730,9 @@ struct ui_widget_s {
      */
     int unk_0x2c; // 0x2c:0x30
     /**
-     * @brief Unknown. Initialized by AllocBlock().
+     * @brief Probably subtype of component. Set in AllocBlock().
      */
-    short unk_0x30_arg1; // 0x30:0x32
+    short subtype; // 0x30:0x32
     /**
      * @brief Unknown. Probably padding.
      */

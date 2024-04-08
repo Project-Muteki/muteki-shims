@@ -21,7 +21,7 @@ struct ui_button_s;
 typedef ui_button_s ui_button_t;
 
 struct ui_button_s {
-    ui_widget_t widget; // 0x0:0x34
+    ui_component_t widget; // 0x0:0x34
     /**
      * @brief Unknown.
      */
