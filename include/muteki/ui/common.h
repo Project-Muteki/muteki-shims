@@ -676,24 +676,28 @@ struct ui_message_s {
  */
 struct ui_component_s {
     /**
-     * @brief Unknown. Set to 0.
+     * @brief Next component in a component ring or list.
+     * @details This will be set to `NULL` when initialized, and, depending on context, will be a pointer to the next
+     * component, a pointer to this component or `NULL`.
      */
-    int unk_0x0; // 0x0:0x4
+    ui_component_t *next; // 0x0:0x4
     /**
-     * @brief Next widget.
-     * @todo Determine what is common and define ui_component_t in ui/common.h.
+     * @brief Parent component.
+     * @details This will usually be a view.
      */
-    ui_component_t *next; // 0x4:0x8
+    ui_component_t *parent; // 0x4:0x8
     /**
-     * @brief Widget state bit field.
+     * @brief Component state bit field.
+     * @details Each component may use this differently to represent different states.
      */
     unsigned short state; // 0x8:0xa
     /**
-     * @brief Unknown. Set to 1.
+     * @brief Unknown. Set to 1 on buttons and 0xfd01 on deskbox views.
      */
     short unk_0xa; // 0xa:0xc
     /**
-     * @brief Widget footprint.
+     * @brief Component visual footprint.
+     * @details This defines the size and location of the component on screen.
      */
     ui_rect_t footprint; // 0xc:0x14
     /**
@@ -722,7 +726,7 @@ struct ui_component_s {
      */
     short unk_0x28;
     /**
-     * @brief Unknown. Set to 0x65.
+     * @brief Unknown. Set to 0x65 on buttons.
      */
     short unk_0x2a; // 0x2a:0x2c
     /**
@@ -730,9 +734,9 @@ struct ui_component_s {
      */
     int unk_0x2c; // 0x2c:0x30
     /**
-     * @brief Probably subtype of component. Set in AllocBlock().
+     * @brief @x_term tag
      */
-    short subtype; // 0x30:0x32
+    unsigned short tag; // 0x30:0x32
     /**
      * @brief Unknown. Probably padding.
      */

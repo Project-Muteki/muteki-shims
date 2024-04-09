@@ -17,10 +17,10 @@
 extern "C" {
 #endif
 
-struct ui_button_s;
-typedef ui_button_s ui_button_t;
+struct ui_widget_button_s;
+typedef ui_widget_button_s ui_widget_button_t;
 
-struct ui_button_s {
+struct ui_widget_button_s {
     ui_component_t widget; // 0x0:0x34
     /**
      * @brief Unknown.
@@ -37,9 +37,9 @@ struct ui_button_s {
      */
     int key_binding; // 0x3c:0x40
     /**
-     * @brief Set to arg7 of CreateButton().
+     * @brief Custom event to be sent on button press.
      */
-    int unk_0x40_arg7; // 0x40:0x44
+    unsigned int event; // 0x40:0x44
     /**
      * @brief Button label text.
      */
@@ -67,7 +67,7 @@ struct ui_button_s {
     /**
      * @brief Unknown. Set to arg8 of CreateButton().
      */
-    short unk_0x5a_arg8; // 0x5a:0x5c
+    unsigned short flags; // 0x5a:0x5c
     /**
      * @brief Unknown.
      */
@@ -76,26 +76,27 @@ struct ui_button_s {
 
 /**
  * @brief Create a button widget object.
- * @todo Need some ways to test this.
- * @param arg1 Unknown. Writes to offset 0x30 of the target object.
+ * @todo Test the event behavior. This needs more reverse engineering on the view event handling process.
+ * @todo Figure out the flags.
+ * @param tag @x_term tag
  * @param x0 @x_term x0
  * @param y0 @x_term y0
  * @param x1 @x_term x1-auto
  * @param y1 @x_term y1-auto
  * @param label UTF-16 encoded string to be used as a label.
- * @param arg7 Unknown.
+ * @param event Custom event to be sent on button press.
  * @param flags Flags. Valid options seem to be 2, 4, 0x40.
  * @return The allocated object.
  */
-void *CreateButton(
-    unsigned short arg1,
+ui_widget_button_t *CreateButton(
+    unsigned short tag,
     short x0,
     short y0,
     short x1,
     short y1,
     UTF16 *label,
-    int arg7,
-    short flags
+    unsigned int event,
+    unsigned short flags
 );
 
 #ifdef __cplusplus

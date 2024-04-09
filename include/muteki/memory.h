@@ -70,14 +70,14 @@ extern void _lfree(void *ptr);
  * @x_syscall_num `0x10145`
  *
  * @param size Size of the memory.
- * @param init_0x30 Write this value to `<allocated address> + 0x30` when the allocated memory is located on a fresh
- * chunk (i.e. allocated on previously unused memory directly following the last chunk). Exact reason of this existing
- * is unknown, but could be part of some descriptor initialization routine.
+ * @param tag Write this value to `<allocated address> + 0x30` when the allocated memory is located on a fresh
+ * chunk (i.e. allocated on previously unused memory directly following the last chunk). Seems to be used in UI
+ * subsystem to differentiate components in some circumstances.
  * @param new_segment Set to `true` to start a new segment. This will prevent this chunk and all chunks above from
  * being reused until this memory is freed.
  * @return The allocated memory.
  */
-extern void *AllocBlock(size_t size, unsigned short init_0x30, bool new_segment);
+extern void *AllocBlock(size_t size, unsigned short tag, bool new_segment);
 
 /**
  * @brief Free memory previously allocated with AllocBlock().
