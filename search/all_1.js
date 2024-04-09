@@ -2,7 +2,7 @@ var searchData=
 [
   ['a_20c_20compiler_0',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
   ['active_5fbytes_1',['active_bytes',['../structthreading__waitable__t.html#ae6a62d93701598190acf0e1ef40a323d',1,'threading_waitable_t']]],
-  ['allocblock_2',['AllocBlock',['../memory_8h.html#a3fd808fc09bb2b87f76a56322b32c5f5',1,'memory.h']]],
+  ['allocblock_2',['AllocBlock',['../memory_8h.html#aa75be9711c444f3e8494ea89a71cd0e8',1,'memory.h']]],
   ['applet_5farg1_3',['applet_arg1',['../structapplet__args__v4__t.html#a6cafd8f1e2b80b8580ac180e3c3b3ad1',1,'applet_args_v4_t']]],
   ['applet_5farg2_4',['applet_arg2',['../structapplet__args__v4__t.html#ac91db029298d0bab34479862c32dd7d8',1,'applet_args_v4_t']]],
   ['applet_5fargs_5fv4_5ft_5',['applet_args_v4_t',['../structapplet__args__v4__t.html',1,'']]],

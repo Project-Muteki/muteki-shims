@@ -8,7 +8,7 @@ var searchData=
   ['closehandle_5',['CloseHandle',['../devio_8h.html#afd675a81da99d1a03d218aa08caf16a6',1,'devio.h']]],
   ['common_2eh_6',['common.h',['../common_8h.html',1,'(Global Namespace)'],['../ui_2common_8h.html',1,'(Global Namespace)']]],
   ['compiler_7',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
-  ['createbutton_8',['CreateButton',['../button_8h.html#a9e8dd4cd1f18a08f773c7b4faf1487b9',1,'button.h']]],
+  ['createbutton_8',['CreateButton',['../button_8h.html#a2f7fcf7966b58a965ec4bcadf9e450b8',1,'button.h']]],
   ['createcompatiblelcd_9',['CreateCompatibleLCD',['../canvas_8h.html#ae8d53e141ab966cba778a9b9be545331',1,'canvas.h']]],
   ['createfile_10',['CreateFile',['../devio_8h.html#a6122359c7991a099f3e30c92338affb8',1,'devio.h']]],
   ['createvirtuallcd_11',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],

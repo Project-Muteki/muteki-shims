@@ -24,6 +24,5 @@ var searchData=
   ['stroke_5fdash_5fpattern_21',['stroke_dash_pattern',['../structlcd__draw__s.html#a0de69aad561b388d27e962e1d6bfccfb',1,'lcd_draw_s']]],
   ['stroke_5fsize_22',['stroke_size',['../structlcd__draw__s.html#a450646b42f111ecb03f724b41a163419',1,'lcd_draw_s']]],
   ['subroutine_23',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
-  ['subtype_24',['subtype',['../structui__component__s.html#ab65d7c6bbdcc9c90e1e766ac18e8a09a',1,'ui_component_s']]],
-  ['surface_25',['surface',['../structlcd__s.html#ade3b9e5707e643ab6496affe332b1989',1,'lcd_s']]]
+  ['surface_24',['surface',['../structlcd__s.html#ade3b9e5707e643ab6496affe332b1989',1,'lcd_s']]]
 ];

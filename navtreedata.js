@@ -54,7 +54,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "globals_c.html",
-"structui__component__s.html#aab73249ff71fabef7bc2d13a6d56e67a",
+"structui__event__s.html#a6ed8517b4219791d6e9275354da15c8d",
 "ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920aca9ea15d96656c7a9bc2c5e5d34a128b"
 ];
 
