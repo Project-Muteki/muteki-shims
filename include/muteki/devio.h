@@ -18,6 +18,67 @@ extern "C" {
 #endif
 
 /**
+ * @brief Magic for device IO descriptor.
+ * @details The value is ASCII `"BXCH"`.
+ */
+#define DEVIO_DESC_MAGIC (0x48435842u)
+
+/**
+ * @brief The device IO descriptor.
+ */
+typedef struct {
+    /**
+     * @brief Path to the device or DOS 8.3 path to the file.
+     */
+    char path[80];
+    /**
+     * @brief File descriptor if this descriptor is file-backed.
+     * @todo Change this to the file descriptor type when that is finished.
+     */
+    void *fd;
+    /**
+     * @brief Unknown.
+     */
+    int unk_0x54;
+    /**
+     * @brief Device descriptor if this descriptor is device-backed.
+     */
+    void *device;
+    /**
+     * @brief Reference counter.
+     */
+    int refcount;
+    /**
+     * @brief Access mode.
+     */
+    int access;
+    /**
+     * @brief Sharing mode.
+     */
+    int shmode;
+    /**
+     * @brief Behavior on no entry.
+     */
+    int on_noentry;
+    /**
+     * @brief Upper 16-bit of the flags.
+     */
+    unsigned int flags_upper;
+    /**
+     * @brief Lower 16-bit of the flags.
+     */
+    unsigned int flags_lower;
+    /**
+     * @brief Descriptor magic. Always `BXCH`.
+     */
+    unsigned int magic;
+    /**
+     * @brief Unknown.
+     */
+    int unk_0x78;
+} devio_descriptor_t; // 0x7c bytes
+
+/**
  * @brief Open or create a file/device by its `pathname`.
  * @details Analogous to the Windows CreateFile() API. Seems to wrap the internal _af* series syscalls.
  * @todo Documentation on accepted arguments are mostly based on speculations at this moment. More details and through
@@ -32,7 +93,15 @@ extern "C" {
  * @return File handle. Depending on the type of the handle it could either be a pointer reference to a file struct or
  * a device descriptor.
  */
-extern void *CreateFile(char *pathname, int access, int shmode, void *secattr, int on_noentry, int flags, void *template_file);
+extern devio_descriptor_t *CreateFile(
+    char *pathname,
+    int access,
+    int shmode,
+    void *secattr,
+    int on_noentry,
+    int flags,
+    void *template_file
+);
 
 /**
  * @brief Close a handle.
@@ -41,7 +110,7 @@ extern void *CreateFile(char *pathname, int access, int shmode, void *secattr, i
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool CloseHandle(void *h);
+extern bool CloseHandle(devio_descriptor_t *h);
 
 /**
  * @brief Send an IOCTL request to a device handle `h`.
@@ -57,7 +126,16 @@ extern bool CloseHandle(void *h);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool DeviceIoControl(void *h, int request, const void *in, int inlen, void *out, int outlen, int *retlen, void *overlapped);
+extern bool DeviceIoControl(
+    devio_descriptor_t *h,
+    int request,
+    const void *in,
+    int inlen,
+    void *out,
+    int outlen,
+    int *retlen,
+    void *overlapped
+);
 
 #ifdef __cplusplus
 } // extern "C"
