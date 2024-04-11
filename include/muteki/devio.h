@@ -32,7 +32,7 @@ typedef struct {
      */
     char path[80];
     /**
-     * @brief File descriptor if this descriptor is file-backed.
+     * @brief File descriptor if this descriptor is file-backed or has a file-like descriptor.
      * @todo Change this to the file descriptor type when that is finished.
      */
     void *fd;
@@ -41,9 +41,9 @@ typedef struct {
      */
     int unk_0x54;
     /**
-     * @brief Device descriptor if this descriptor is device-backed.
+     * @brief Device ID if this descriptor is device-backed.
      */
-    void *device;
+    unsigned int device_id;
     /**
      * @brief Reference counter.
      */
@@ -77,6 +77,12 @@ typedef struct {
      */
     int unk_0x78;
 } devio_descriptor_t; // 0x7c bytes
+
+/**
+ * @brief Invalid descriptor.
+ * @details This is usually returned by CreateFile() when an error occurred.
+ */
+#define DEVIO_DESC_INVALID ((devio_descriptor_t *) 0xffffffff)
 
 /**
  * @brief Open or create a file/device by its `pathname`.
