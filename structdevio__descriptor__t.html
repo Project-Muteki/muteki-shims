@@ -109,16 +109,16 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>path</b> [80]</td></t
 <tr class="memdesc:abd3541cb6cfa3b608f98283a166d271e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the device or DOS 8.3 path to the file. <br /></td></tr>
 <tr class="separator:abd3541cb6cfa3b608f98283a166d271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4362bf254498dda76d571af6afc374d1" id="r_a4362bf254498dda76d571af6afc374d1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevio__descriptor__t.html#a4362bf254498dda76d571af6afc374d1">fd</a></td></tr>
-<tr class="memdesc:a4362bf254498dda76d571af6afc374d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">File descriptor if this descriptor is file-backed.  <br /></td></tr>
+<tr class="memdesc:a4362bf254498dda76d571af6afc374d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">File descriptor if this descriptor is file-backed or has a file-like descriptor.  <br /></td></tr>
 <tr class="separator:a4362bf254498dda76d571af6afc374d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6431cbf7e821e7471beaf8f534ea46b" id="r_aa6431cbf7e821e7471beaf8f534ea46b"><td class="memItemLeft" align="right" valign="top"><a id="aa6431cbf7e821e7471beaf8f534ea46b" name="aa6431cbf7e821e7471beaf8f534ea46b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x54</b></td></tr>
 <tr class="memdesc:aa6431cbf7e821e7471beaf8f534ea46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. <br /></td></tr>
 <tr class="separator:aa6431cbf7e821e7471beaf8f534ea46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11f1f81330a922e929c19b857989bd7c" id="r_a11f1f81330a922e929c19b857989bd7c"><td class="memItemLeft" align="right" valign="top"><a id="a11f1f81330a922e929c19b857989bd7c" name="a11f1f81330a922e929c19b857989bd7c"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>device</b></td></tr>
-<tr class="memdesc:a11f1f81330a922e929c19b857989bd7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device descriptor if this descriptor is device-backed. <br /></td></tr>
-<tr class="separator:a11f1f81330a922e929c19b857989bd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a9ede1c274124e94d75841400a3bcc" id="r_aa0a9ede1c274124e94d75841400a3bcc"><td class="memItemLeft" align="right" valign="top"><a id="aa0a9ede1c274124e94d75841400a3bcc" name="aa0a9ede1c274124e94d75841400a3bcc"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>device_id</b></td></tr>
+<tr class="memdesc:aa0a9ede1c274124e94d75841400a3bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device ID if this descriptor is device-backed. <br /></td></tr>
+<tr class="separator:aa0a9ede1c274124e94d75841400a3bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a894b8dc09fbf027e283e82ead39ddeea" id="r_a894b8dc09fbf027e283e82ead39ddeea"><td class="memItemLeft" align="right" valign="top"><a id="a894b8dc09fbf027e283e82ead39ddeea" name="a894b8dc09fbf027e283e82ead39ddeea"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>refcount</b></td></tr>
 <tr class="memdesc:a894b8dc09fbf027e283e82ead39ddeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference counter. <br /></td></tr>
@@ -167,7 +167,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x78</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>File descriptor if this descriptor is file-backed. </p>
+<p>File descriptor if this descriptor is file-backed or has a file-like descriptor. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Change this to the file descriptor type when that is finished. </dd></dl>
 
 </div>

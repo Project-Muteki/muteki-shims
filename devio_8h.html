@@ -116,6 +116,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a5bda580cad8fb376cb89556a084769f2" id="r_a5bda580cad8fb376cb89556a084769f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a5bda580cad8fb376cb89556a084769f2">DEVIO_DESC_MAGIC</a>&#160;&#160;&#160;(0x48435842u)</td></tr>
 <tr class="memdesc:a5bda580cad8fb376cb89556a084769f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic for device IO descriptor.  <br /></td></tr>
 <tr class="separator:a5bda580cad8fb376cb89556a084769f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93b813cbecdfcd0a7b429e994763694" id="r_af93b813cbecdfcd0a7b429e994763694"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#af93b813cbecdfcd0a7b429e994763694">DEVIO_DESC_INVALID</a>&#160;&#160;&#160;((<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *) 0xffffffff)</td></tr>
+<tr class="memdesc:af93b813cbecdfcd0a7b429e994763694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid descriptor.  <br /></td></tr>
+<tr class="separator:af93b813cbecdfcd0a7b429e994763694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -132,6 +135,23 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Device IO API. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="af93b813cbecdfcd0a7b429e994763694" name="af93b813cbecdfcd0a7b429e994763694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93b813cbecdfcd0a7b429e994763694">&#9670;&#160;</a></span>DEVIO_DESC_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEVIO_DESC_INVALID&#160;&#160;&#160;((<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *) 0xffffffff)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invalid descriptor. </p>
+<p>This is usually returned by <a class="el" href="devio_8h.html#a02b3a1dfb5c5e845d51c6bd20e0d29a5" title="Open or create a file/device by its pathname.">CreateFile()</a> when an error occurred. </p>
+
+</div>
+</div>
 <a id="a5bda580cad8fb376cb89556a084769f2" name="a5bda580cad8fb376cb89556a084769f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bda580cad8fb376cb89556a084769f2">&#9670;&#160;</a></span>DEVIO_DESC_MAGIC</h2>
 
