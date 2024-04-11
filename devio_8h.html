@@ -92,6 +92,8 @@ $(document).ready(function(){initNavTree('devio_8h.html',''); initResizable(); }
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">devio.h File Reference</div></div>
 </div><!--header-->
@@ -103,23 +105,53 @@ $(document).ready(function(){initNavTree('devio_8h.html',''); initResizable(); }
 </div>
 <p><a href="devio_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The device IO descriptor.  <a href="structdevio__descriptor__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a5bda580cad8fb376cb89556a084769f2" id="r_a5bda580cad8fb376cb89556a084769f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a5bda580cad8fb376cb89556a084769f2">DEVIO_DESC_MAGIC</a>&#160;&#160;&#160;(0x48435842u)</td></tr>
+<tr class="memdesc:a5bda580cad8fb376cb89556a084769f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic for device IO descriptor.  <br /></td></tr>
+<tr class="separator:a5bda580cad8fb376cb89556a084769f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6122359c7991a099f3e30c92338affb8" id="r_a6122359c7991a099f3e30c92338affb8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a6122359c7991a099f3e30c92338affb8">CreateFile</a> (char *pathname, int access, int shmode, void *secattr, int on_noentry, int flags, void *template_file)</td></tr>
-<tr class="memdesc:a6122359c7991a099f3e30c92338affb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open or create a file/device by its <code>pathname</code>.  <br /></td></tr>
-<tr class="separator:a6122359c7991a099f3e30c92338affb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd675a81da99d1a03d218aa08caf16a6" id="r_afd675a81da99d1a03d218aa08caf16a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#afd675a81da99d1a03d218aa08caf16a6">CloseHandle</a> (void *h)</td></tr>
-<tr class="memdesc:afd675a81da99d1a03d218aa08caf16a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a handle.  <br /></td></tr>
-<tr class="separator:afd675a81da99d1a03d218aa08caf16a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a681a3c6f9e35869e66a83b5a4dab284b" id="r_a681a3c6f9e35869e66a83b5a4dab284b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b">DeviceIoControl</a> (void *h, int request, const void *in, int inlen, void *out, int outlen, int *retlen, void *overlapped)</td></tr>
-<tr class="memdesc:a681a3c6f9e35869e66a83b5a4dab284b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an IOCTL request to a device handle <code>h</code>.  <br /></td></tr>
-<tr class="separator:a681a3c6f9e35869e66a83b5a4dab284b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b3a1dfb5c5e845d51c6bd20e0d29a5" id="r_a02b3a1dfb5c5e845d51c6bd20e0d29a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a02b3a1dfb5c5e845d51c6bd20e0d29a5">CreateFile</a> (char *pathname, int access, int shmode, void *secattr, int on_noentry, int flags, void *template_file)</td></tr>
+<tr class="memdesc:a02b3a1dfb5c5e845d51c6bd20e0d29a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open or create a file/device by its <code>pathname</code>.  <br /></td></tr>
+<tr class="separator:a02b3a1dfb5c5e845d51c6bd20e0d29a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab742ba61bebc1ce70b621e244b511181" id="r_ab742ba61bebc1ce70b621e244b511181"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#ab742ba61bebc1ce70b621e244b511181">CloseHandle</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *h)</td></tr>
+<tr class="memdesc:ab742ba61bebc1ce70b621e244b511181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a handle.  <br /></td></tr>
+<tr class="separator:ab742ba61bebc1ce70b621e244b511181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28904c9202504d67df47306e187bef20" id="r_a28904c9202504d67df47306e187bef20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a28904c9202504d67df47306e187bef20">DeviceIoControl</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *h, int request, const void *in, int inlen, void *out, int outlen, int *retlen, void *overlapped)</td></tr>
+<tr class="memdesc:a28904c9202504d67df47306e187bef20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an IOCTL request to a device handle <code>h</code>.  <br /></td></tr>
+<tr class="separator:a28904c9202504d67df47306e187bef20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Device IO API. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="afd675a81da99d1a03d218aa08caf16a6" name="afd675a81da99d1a03d218aa08caf16a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd675a81da99d1a03d218aa08caf16a6">&#9670;&#160;</a></span>CloseHandle()</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a5bda580cad8fb376cb89556a084769f2" name="a5bda580cad8fb376cb89556a084769f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bda580cad8fb376cb89556a084769f2">&#9670;&#160;</a></span>DEVIO_DESC_MAGIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEVIO_DESC_MAGIC&#160;&#160;&#160;(0x48435842u)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Magic for device IO descriptor. </p>
+<p>The value is ASCII <code>"BXCH"</code>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab742ba61bebc1ce70b621e244b511181" name="ab742ba61bebc1ce70b621e244b511181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab742ba61bebc1ce70b621e244b511181">&#9670;&#160;</a></span>CloseHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,7 +162,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool CloseHandle </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td>
           <td class="paramname"><em>h</em></td><td>)</td>
           <td></td>
         </tr>
@@ -143,7 +175,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close a handle. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#afd675a81da99d1a03d218aa08caf16a6" title="Close a handle.">CloseHandle()</a> API. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#ab742ba61bebc1ce70b621e244b511181" title="Close a handle.">CloseHandle()</a> API. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">h</td><td>Handle to close. </td></tr>
   </table>
@@ -159,8 +191,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6122359c7991a099f3e30c92338affb8" name="a6122359c7991a099f3e30c92338affb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6122359c7991a099f3e30c92338affb8">&#9670;&#160;</a></span>CreateFile()</h2>
+<a id="a02b3a1dfb5c5e845d51c6bd20e0d29a5" name="a02b3a1dfb5c5e845d51c6bd20e0d29a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b3a1dfb5c5e845d51c6bd20e0d29a5">&#9670;&#160;</a></span>CreateFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +201,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void * CreateFile </td>
+          <td class="memname"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> * CreateFile </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>pathname</em>, </td>
@@ -224,7 +256,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open or create a file/device by its <code>pathname</code>. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#a6122359c7991a099f3e30c92338affb8" title="Open or create a file/device by its pathname.">CreateFile()</a> API. Seems to wrap the internal _af* series syscalls. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed. </dd></dl>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#a02b3a1dfb5c5e845d51c6bd20e0d29a5" title="Open or create a file/device by its pathname.">CreateFile()</a> API. Seems to wrap the internal _af* series syscalls. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>DOS 8.3 path to the file to be opened. </td></tr>
@@ -241,8 +273,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a681a3c6f9e35869e66a83b5a4dab284b" name="a681a3c6f9e35869e66a83b5a4dab284b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a681a3c6f9e35869e66a83b5a4dab284b">&#9670;&#160;</a></span>DeviceIoControl()</h2>
+<a id="a28904c9202504d67df47306e187bef20" name="a28904c9202504d67df47306e187bef20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28904c9202504d67df47306e187bef20">&#9670;&#160;</a></span>DeviceIoControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +285,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool DeviceIoControl </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td>
           <td class="paramname"><em>h</em>, </td>
         </tr>
         <tr>
@@ -312,7 +344,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Send an IOCTL request to a device handle <code>h</code>. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b" title="Send an IOCTL request to a device handle h.">DeviceIoControl()</a> API. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#a28904c9202504d67df47306e187bef20" title="Send an IOCTL request to a device handle h.">DeviceIoControl()</a> API. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">h</td><td>Device handle. </td></tr>
     <tr><td class="paramname">request</td><td>IOCTL request type. </td></tr>

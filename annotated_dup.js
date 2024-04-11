@@ -3,6 +3,7 @@ var annotated_dup =
     [ "applet_args_v4_t", "structapplet__args__v4__t.html", "structapplet__args__v4__t" ],
     [ "critical_section_s", "structcritical__section__s.html", "structcritical__section__s" ],
     [ "datetime_t", "structdatetime__t.html", "structdatetime__t" ],
+    [ "devio_descriptor_t", "structdevio__descriptor__t.html", "structdevio__descriptor__t" ],
     [ "event_s", "structevent__s.html", "structevent__s" ],
     [ "find_context_t", "structfind__context__t.html", "structfind__context__t" ],
     [ "fs_stat_t", "structfs__stat__t.html", "structfs__stat__t" ],

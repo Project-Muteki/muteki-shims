@@ -1,7 +1,7 @@
 var searchData=
 [
   ['recipient_0',['recipient',['../structui__event__s.html#a6afeee8b431b411dc82912a625445eed',1,'ui_event_s']]],
-  ['refcount_1',['refcount',['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s']]],
+  ['refcount_1',['refcount',['../structdevio__descriptor__t.html#a894b8dc09fbf027e283e82ead39ddeea',1,'devio_descriptor_t::refcount'],['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s::refcount']]],
   ['rgb_5ffrom_5fu8_2',['RGB_FROM_U8',['../ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf',1,'common.h']]],
   ['rgbsetbkcolor_3',['rgbSetBkColor',['../canvas_8h.html#aa7333109cd5c46ab957287b7722a1f77',1,'canvas.h']]],
   ['rgbsetcolor_4',['rgbSetColor',['../canvas_8h.html#a40fa1f62900939b0b578f94dc44d8db4',1,'canvas.h']]],

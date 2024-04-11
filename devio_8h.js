@@ -1,6 +1,8 @@
 var devio_8h =
 [
-    [ "CloseHandle", "devio_8h.html#afd675a81da99d1a03d218aa08caf16a6", null ],
-    [ "CreateFile", "devio_8h.html#a6122359c7991a099f3e30c92338affb8", null ],
-    [ "DeviceIoControl", "devio_8h.html#a681a3c6f9e35869e66a83b5a4dab284b", null ]
+    [ "devio_descriptor_t", "structdevio__descriptor__t.html", "structdevio__descriptor__t" ],
+    [ "DEVIO_DESC_MAGIC", "devio_8h.html#a5bda580cad8fb376cb89556a084769f2", null ],
+    [ "CloseHandle", "devio_8h.html#ab742ba61bebc1ce70b621e244b511181", null ],
+    [ "CreateFile", "devio_8h.html#a02b3a1dfb5c5e845d51c6bd20e0d29a5", null ],
+    [ "DeviceIoControl", "devio_8h.html#a28904c9202504d67df47306e187bef20", null ]
 ];
