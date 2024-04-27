@@ -10,11 +10,20 @@ var searchData=
   ['errno_5fns_5fkernel_7',['ERRNO_NS_KERNEL',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60',1,'errno.h']]],
   ['errno_5fns_5fuser_8',['ERRNO_NS_USER',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7',1,'errno.h']]],
   ['errno_5fuser_5fe_9',['errno_user_e',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455',1,'errno.h']]],
-  ['event_10',['event',['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s::event'],['../structui__message__s.html#a536d210016f0ed33f5598827e423ef43',1,'ui_message_s::event'],['../structui__widget__button__s.html#ac4d0cceb9ba8eb2e2524f0dcf39b57c5',1,'ui_widget_button_s::event']]],
+  ['event_10',['event',['../structui__widget__button__s.html#ac4d0cceb9ba8eb2e2524f0dcf39b57c5',1,'ui_widget_button_s::event'],['../structui__message__s.html#a536d210016f0ed33f5598827e423ef43',1,'ui_message_s::event'],['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s::event']]],
   ['event_2eh_11',['event.h',['../event_8h.html',1,'']]],
   ['event_5fs_12',['event_s',['../structevent__s.html',1,'']]],
   ['event_5ft_13',['event_t',['../threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb',1,'threading.h']]],
   ['event_5ftype_14',['event_type',['../structui__event__s.html#a27cd373cdf5ca166797e99b6f242f52f',1,'ui_event_s']]],
-  ['executeprogram_15',['ExecuteProgram',['../loader_8h.html#a02dd228d313ebb256fe4ced9425f274c',1,'loader.h']]],
-  ['exit_5fcode_16',['exit_code',['../structthread__s.html#af5c345bd409d4270b3d5544ac819d816',1,'thread_s']]]
+  ['exec_5fdecompression_5ffailed_15',['EXEC_DECOMPRESSION_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ae44221a7da49451c1886dac0463c5720',1,'errno.h']]],
+  ['exec_5fgeneric_5ferror_16',['EXEC_GENERIC_ERROR',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32aa187a4d74f8f243b0a3170124102580d',1,'errno.h']]],
+  ['exec_5finvalid_17',['EXEC_INVALID',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af95115c686b05e48b93049fc0519a6c5',1,'errno.h']]],
+  ['exec_5floader_5ffailure_18',['EXEC_LOADER_FAILURE',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a4ecbd599844c0f4864ca993b3d902dd5',1,'errno.h']]],
+  ['exec_5fmalloc_5ffailed_19',['EXEC_MALLOC_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ae2a8dc3f3525c2cc559143277139e279',1,'errno.h']]],
+  ['exec_5fmap_5ffull_20',['EXEC_MAP_FULL',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a896430c12d395f8968f1c2edfd12798a',1,'errno.h']]],
+  ['exec_5fmp3_5fplayer_5fis_5frunning_21',['EXEC_MP3_PLAYER_IS_RUNNING',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32acdb3b3998f3a7bf62730f0b27e9c5075',1,'errno.h']]],
+  ['exec_5fopen_5ffailed_22',['EXEC_OPEN_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a6209483baa6c26dac7e22bc7db5d3dd8',1,'errno.h']]],
+  ['exec_5funsupported_23',['EXEC_UNSUPPORTED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1',1,'errno.h']]],
+  ['executeprogram_24',['ExecuteProgram',['../loader_8h.html#a02dd228d313ebb256fe4ced9425f274c',1,'loader.h']]],
+  ['exit_5fcode_25',['exit_code',['../structthread__s.html#af5c345bd409d4270b3d5544ac819d816',1,'thread_s']]]
 ];

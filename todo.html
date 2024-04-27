@@ -96,9 +96,9 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Global <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a>  </dt>
-<dd><a class="anchor" id="_todo000008"></a>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?)  </dd>
+<dd><a class="anchor" id="_todo000010"></a>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?)  </dd>
 <dt>Global <a class="el" href="button_8h.html#a2f7fcf7966b58a965ec4bcadf9e450b8">CreateButton</a>  (unsigned short tag, short x0, short y0, short x1, short y1, UTF16 *label, unsigned int event, unsigned short flags)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000018"></a>Test the event behavior. This needs more reverse engineering on the view event handling process. </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000020"></a>Test the event behavior. This needs more reverse engineering on the view event handling process. </p>
 <p class="interdd"></p>
 <p class="enddd">Figure out the flags.  </p>
 </dd>
@@ -106,34 +106,38 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dd><a class="anchor" id="_todo000003"></a>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed.  </dd>
 <dt>Global <a class="el" href="structdevio__descriptor__t.html#a4362bf254498dda76d571af6afc374d1">devio_descriptor_t::fd</a>  </dt>
 <dd><a class="anchor" id="_todo000004"></a>Change this to the file descriptor type when that is finished.  </dd>
+<dt>Global <a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af95115c686b05e48b93049fc0519a6c5">EXEC_INVALID</a>  </dt>
+<dd><a class="anchor" id="_todo000006"></a>Double check.  </dd>
+<dt>Global <a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1">EXEC_UNSUPPORTED</a>  </dt>
+<dd><a class="anchor" id="_todo000005"></a>Double check.  </dd>
 <dt>Global <a class="el" href="canvas_8h.html#a3d961c1c3c7a87e1ccd0873e2aa5e262">GetCursorType</a>  ()</dt>
-<dd><a class="anchor" id="_todo000006"></a>Document the actual type as an enum.  </dd>
+<dd><a class="anchor" id="_todo000008"></a>Document the actual type as an enum.  </dd>
 <dt>Global <a class="el" href="structlcd__cursor__s.html#a2a55c9199ea2b9fa4cb188c92d7c0b37">lcd_cursor_s::type</a>  </dt>
-<dd><a class="anchor" id="_todo000014"></a>Document the actual meaning of this.  </dd>
+<dd><a class="anchor" id="_todo000016"></a>Document the actual meaning of this.  </dd>
 <dt>Struct <a class="el" href="structlcd__lock__s.html">lcd_lock_s</a>  </dt>
-<dd><a class="anchor" id="_todo000010"></a>Get a better picture of which systems have this and which do not.  </dd>
+<dd><a class="anchor" id="_todo000012"></a>Get a better picture of which systems have this and which do not.  </dd>
 <dt>Global <a class="el" href="structlcd__s.html#a2b7b20c04513814fa20983cdf823d55b">lcd_s::depth_bytes</a>  </dt>
-<dd><a class="anchor" id="_todo000015"></a>Verify.  </dd>
+<dd><a class="anchor" id="_todo000017"></a>Verify.  </dd>
 <dt>Global <a class="el" href="structlcd__s.html#a0dadedf9e673a542510f7b0f6478eb14">lcd_s::xsize</a>  </dt>
-<dd><a class="anchor" id="_todo000016"></a>Verify.  </dd>
+<dd><a class="anchor" id="_todo000018"></a>Verify.  </dd>
 <dt>Global <a class="el" href="ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591">print_flag_e</a>  </dt>
-<dd><a class="anchor" id="_todo000007"></a>A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!).  </dd>
+<dd><a class="anchor" id="_todo000009"></a>A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!).  </dd>
 <dt>Global <a class="el" href="ui_2common_8h.html#a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752">PRINT_STR_ENCODING_BIG5</a>  </dt>
-<dd><a class="anchor" id="_todo000013"></a>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result.  </dd>
+<dd><a class="anchor" id="_todo000015"></a>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result.  </dd>
 <dt>Global <a class="el" href="ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c">PRINT_UNDERSCORE_ONLY</a>  </dt>
-<dd><a class="anchor" id="_todo000012"></a>Speculation based on behavior. Seems to be very broken with &gt;16px fonts.  </dd>
+<dd><a class="anchor" id="_todo000014"></a>Speculation based on behavior. Seems to be very broken with &gt;16px fonts.  </dd>
 <dt>Global <a class="el" href="canvas_8h.html#aa88f019698b464c366243cf8ecff261d">SetCursorType</a>  (short new_type)</dt>
-<dd><a class="anchor" id="_todo000005"></a>Document the actual type as an enum.  </dd>
+<dd><a class="anchor" id="_todo000007"></a>Document the actual type as an enum.  </dd>
 <dt>Global <a class="el" href="ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cb">stroke_predefined_dash_e</a>  </dt>
-<dd><a class="anchor" id="_todo000009"></a>Add graphic examples.  </dd>
+<dd><a class="anchor" id="_todo000011"></a>Add graphic examples.  </dd>
 <dt>Global <a class="el" href="common_8h.html#a7cfbdd1a9e16d40f0f7c8ef00c18ae25">SYS_ALIGN</a>  (n)</dt>
 <dd><a class="anchor" id="_todo000002"></a>MSVC support  </dd>
 <dt>Global <a class="el" href="common_8h.html#a88f7ac10e602e1a35668915d9edd1030">SYS_DWORD</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a>MSVC support (is it possible?)  </dd>
 <dt>Struct <a class="el" href="structui__component__s.html">ui_component_s</a>  </dt>
-<dd><a class="anchor" id="_todo000011"></a>Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their <code>self</code> argument defined as <code>ui_component_t *</code> (or <code>void *</code> if we opt to do that) which is a bit less ideal.  </dd>
+<dd><a class="anchor" id="_todo000013"></a>Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their <code>self</code> argument defined as <code>ui_component_t *</code> (or <code>void *</code> if we opt to do that) which is a bit less ideal.  </dd>
 <dt>Global <a class="el" href="structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811">ui_component_s::on_erase_bg</a>  )(ui_component_t *self)</dt>
-<dd><a class="anchor" id="_todo000017"></a>Figure out exactly what this does. </dd>
+<dd><a class="anchor" id="_todo000019"></a>Figure out exactly what this does. </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

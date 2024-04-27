@@ -5,5 +5,6 @@ var searchData=
   ['applet_5farg1_2',['applet_arg1',['../structapplet__args__v4__t.html#a6cafd8f1e2b80b8580ac180e3c3b3ad1',1,'applet_args_v4_t']]],
   ['applet_5farg2_3',['applet_arg2',['../structapplet__args__v4__t.html#ac91db029298d0bab34479862c32dd7d8',1,'applet_args_v4_t']]],
   ['atime_4',['atime',['../structfind__context__t.html#a9c229b360aea9e0a18486814133b5700',1,'find_context_t']]],
-  ['attrib_5',['attrib',['../structfind__context__t.html#a336f228550c07e4f57cc61cb6c34d391',1,'find_context_t']]]
+  ['attrib_5',['attrib',['../structfind__context__t.html#aaf9ef2d837fe910e1689598cf233633e',1,'find_context_t']]],
+  ['attrib_5fmask_6',['attrib_mask',['../structfind__context__t.html#aac9e4050319bcc44aa33e99cf7e24b5c',1,'find_context_t']]]
 ];

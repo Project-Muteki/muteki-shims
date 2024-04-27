@@ -9,6 +9,8 @@ var errno_8h =
       [ "EXEC_MALLOC_FAILED", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ae2a8dc3f3525c2cc559143277139e279", null ],
       [ "EXEC_DECOMPRESSION_FAILED", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ae44221a7da49451c1886dac0463c5720", null ],
       [ "EXEC_MP3_PLAYER_IS_RUNNING", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32acdb3b3998f3a7bf62730f0b27e9c5075", null ],
+      [ "EXEC_GENERIC_ERROR", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32aa187a4d74f8f243b0a3170124102580d", null ],
+      [ "EXEC_MAP_FULL", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a896430c12d395f8968f1c2edfd12798a", null ],
       [ "EXEC_UNKNOWN_FORMAT", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a9c0242686c0f80b0e260c20a28e4d25a", null ]
     ] ],
     [ "errno_kernel_e", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73", [
@@ -48,7 +50,9 @@ var errno_8h =
       [ "FS_NO_SPACE_LEFT", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1279d9a807472f2d27d88068eeb03066", null ],
       [ "FS_NO_SUCH_ENTRY_ALT", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73af23b08ac650892a82a09d1e6b93694bc", null ],
       [ "FS_READ_ONLY_FILE", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a36f65a3b5e20cb67d64ed8ed25058aef", null ],
+      [ "FS_WRITE_ONLY_FILE", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73af01f7bf024d4fa4e7348453d0f75bf66", null ],
       [ "FS_PATH_TOO_LONG", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a134aa1230863f0e7f124e9ff504e045c", null ],
+      [ "FS_GENERIC_ERROR", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ae90da91c33cd07252c35fc7750235034", null ],
       [ "FS_DIR_FULL_ALT1", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a35973a57f7fe59f5d81754022bd8c737", null ],
       [ "FS_DIR_FULL_ALT2", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ac8b7c338f2af6aefe7128da1c62d8f16", null ],
       [ "DB_CORRUPTED", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4bb96a0cea4da7dfc4fac08d6c9fa9bc", null ],
