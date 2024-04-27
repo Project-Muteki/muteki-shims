@@ -28,8 +28,14 @@ extern "C" {
  * @brief Structure for find context.
  */
 typedef struct {
-    uint8_t *unk0; // 0x0
-    uint8_t *unk4; // 0x4
+    /**
+     * @brief Current file descriptor.
+     */
+    void *unk0; // 0x0
+    /**
+     * @brief Next file descriptor.
+     */
+    void *unk4; // 0x4
     /** UTF-16-encoded long filename of the entry. */
     UTF16 *filename_lfn; // 0x8
     /** DOS 8.3 filename of the entry. */
@@ -62,10 +68,10 @@ typedef struct {
      * @see mtime
      */
     unsigned int atime; // 0x20
-    /** Unknown */
-    uint8_t unk36; // 0x24
+    /** FAT filesystem file attribute mask. */
+    unsigned char attrib_mask; // 0x24
     /** FAT filesystem file attributes. */
-    uint8_t attrib; // 0x25
+    unsigned char attrib; // 0x25
 } find_context_t;
 
 /**

@@ -50,13 +50,50 @@ enum errno_ns_flag_e {
  * @brief Error code for ::ERRNO_NS_EXEC.
  */
 enum errno_exec_e {
+    /**
+     * @brief Unsupported executable type.
+     * @details This may be returned when attempting to execute a TLCS-900 executable or x86 EXE file on Arm systems.
+     * @todo Double check.
+     */
     EXEC_UNSUPPORTED = 0x0001,
+    /**
+     * @brief Invalid executable file.
+     * @details This may be returned when attempting to execute a data-only ROM.
+     * @todo Double check.
+     */
     EXEC_INVALID,
+    /**
+     * @brief Failed to open executable file.
+     */
     EXEC_OPEN_FAILED,
+    /**
+     * @brief Failed to read executable file.
+     */
     EXEC_LOADER_FAILURE,
+    /**
+     * @brief Failed to allocate memory when loading executable file.
+     */
     EXEC_MALLOC_FAILED,
+    /**
+     * @brief Decompression failed.
+     */
     EXEC_DECOMPRESSION_FAILED,
+    /**
+     * @brief Refuse to load an executable file because MP3 player is running in the background.
+     * @details Probably an left-over from the TLCS-900 days when MP3 can be played in the background.
+     */
     EXEC_MP3_PLAYER_IS_RUNNING,
+    /**
+     * @brief Generic error.
+     * @details This is usually shown when the loader functions encountered an internal error.
+     */
+    EXEC_GENERIC_ERROR,
+    /**
+     * @brief Executable mapping table is full.
+     * @details This is returned when too many executable is loaded. May be overwritten by a more generic code like
+     * #EXEC_LOADER_FAILURE.
+     */
+    EXEC_MAP_FULL,
     EXEC_UNKNOWN_FORMAT = 0x000a,
 };
 
@@ -168,10 +205,24 @@ enum errno_kernel_e {
 
     /** No such file or directory (alternative). */
     FS_NO_SUCH_ENTRY_ALT = 0x0154,
-    /** File is read-only. */
+    /**
+     * @brief File is read-only.
+     * @details File descriptor does not support read function.
+     */
     FS_READ_ONLY_FILE = 0x0158,
+    /**
+     * @brief File is write-only.
+     * @details File descriptor does not support write function.
+     */
+    FS_WRITE_ONLY_FILE,
     /** Path too long. */
     FS_PATH_TOO_LONG = 0x0162,
+    /**
+     * @brief Generic error.
+     * @details This is usually shown when the file and filesystem functions encountered an internal error, or that the
+     * supplied file descriptor is invalid.
+     */
+    FS_GENERIC_ERROR = 0x0163,
     /** Too many files in this directory (alternative). */
     FS_DIR_FULL_ALT1 = 0x0165,
     /** Too many files in this directory (alternative). */
