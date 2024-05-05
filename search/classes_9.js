@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['semaphore_5fs_0',['semaphore_s',['../structsemaphore__s.html',1,'']]]
+  ['power_5fbattery_5fstatus_5ft_0',['power_battery_status_t',['../structpower__battery__status__t.html',1,'']]]
 ];

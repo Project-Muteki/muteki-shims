@@ -18,6 +18,7 @@ var annotated_dup =
     [ "message_queue_nonatomic_t", "structmessage__queue__nonatomic__t.html", "structmessage__queue__nonatomic__t" ],
     [ "message_queue_s", "structmessage__queue__s.html", "structmessage__queue__s" ],
     [ "nand_params_t", "structnand__params__t.html", "structnand__params__t" ],
+    [ "power_battery_status_t", "structpower__battery__status__t.html", "structpower__battery__status__t" ],
     [ "semaphore_s", "structsemaphore__s.html", "structsemaphore__s" ],
     [ "thread_s", "structthread__s.html", "structthread__s" ],
     [ "threading_waitable_t", "structthreading__waitable__t.html", "structthreading__waitable__t" ],

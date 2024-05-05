@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('system_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -105,6 +106,12 @@ $(document).ready(function(){initNavTree('system_8h.html',''); initResizable(); 
 </div>
 <p><a href="system_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpower__battery__status__t.html">power_battery_status_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current battery status.  <a href="structpower__battery__status__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aa7a435c8a2cda84eaef92144c9ba0798" id="r_aa7a435c8a2cda84eaef92144c9ba0798"><td class="memItemLeft" align="right" valign="top"><a id="aa7a435c8a2cda84eaef92144c9ba0798" name="aa7a435c8a2cda84eaef92144c9ba0798"></a>
@@ -114,11 +121,11 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>timer1_call
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a5277b78fe436c15af3a76ce501ee4c1e" id="r_a5277b78fe436c15af3a76ce501ee4c1e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1e">battery_status_e</a> { <a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1ea089d66a3940c2a9c3f2f483de7bcb7e3">BATTERY_STATUS_DISCHARGING</a> = 1
-, <a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1eadb742fbbd562aba4778378a2fb18efb3">BATTERY_STATUS_CHARGING</a> = 4
+<tr class="memitem:a7aaf6f829cca7dec5a22c925d7c69d94" id="r_a7aaf6f829cca7dec5a22c925d7c69d94"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94">power_source_type_e</a> { <a class="el" href="system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94a88da2f02a30dc1bc97e65039977c9809">POWER_SOURCE_BATTERY</a> = 1
+, <a class="el" href="system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94a7ad789de1505a6c2cbf893b0ed66d4a0">POWER_SOURCE_AC</a> = 4
  }</td></tr>
-<tr class="memdesc:a5277b78fe436c15af3a76ce501ee4c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Battery charging status.  <a href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1e">More...</a><br /></td></tr>
-<tr class="separator:a5277b78fe436c15af3a76ce501ee4c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a7aaf6f829cca7dec5a22c925d7c69d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power status.  <a href="system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94">More...</a><br /></td></tr>
+<tr class="separator:a7aaf6f829cca7dec5a22c925d7c69d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -135,33 +142,36 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae78b6cf2d7a0a6aef82d74b43caf1797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power off the system immediately.  <br /></td></tr>
 <tr class="separator:ae78b6cf2d7a0a6aef82d74b43caf1797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a969fe31c7b2c59119466e82bb428ec54" id="r_a969fe31c7b2c59119466e82bb428ec54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a969fe31c7b2c59119466e82bb428ec54">GetBatteryType</a> ()</td></tr>
-<tr class="memdesc:a969fe31c7b2c59119466e82bb428ec54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the battery status.  <br /></td></tr>
+<tr class="memdesc:a969fe31c7b2c59119466e82bb428ec54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the system power source type.  <br /></td></tr>
 <tr class="separator:a969fe31c7b2c59119466e82bb428ec54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73d61f72896d4508d5264ce173f7a745" id="r_a73d61f72896d4508d5264ce173f7a745"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#a73d61f72896d4508d5264ce173f7a745">_GetSystemDirectory</a> (char *buffer, size_t size)</td></tr>
 <tr class="memdesc:a73d61f72896d4508d5264ce173f7a745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the DOS 8.3 path to the system configuration directory on user data partition.  <br /></td></tr>
 <tr class="separator:a73d61f72896d4508d5264ce173f7a745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af427422e4eaf7960a9348d0491fa47f4" id="r_af427422e4eaf7960a9348d0491fa47f4"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html#af427422e4eaf7960a9348d0491fa47f4">GetBatteryValue</a> (short sbz, <a class="el" href="structpower__battery__status__t.html">power_battery_status_t</a> *output)</td></tr>
+<tr class="memdesc:af427422e4eaf7960a9348d0491fa47f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the battery voltage and level.  <br /></td></tr>
+<tr class="separator:af427422e4eaf7960a9348d0491fa47f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>System management functions. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a5277b78fe436c15af3a76ce501ee4c1e" name="a5277b78fe436c15af3a76ce501ee4c1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5277b78fe436c15af3a76ce501ee4c1e">&#9670;&#160;</a></span>battery_status_e</h2>
+<a id="a7aaf6f829cca7dec5a22c925d7c69d94" name="a7aaf6f829cca7dec5a22c925d7c69d94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aaf6f829cca7dec5a22c925d7c69d94">&#9670;&#160;</a></span>power_source_type_e</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1e">battery_status_e</a></td>
+          <td class="memname">enum <a class="el" href="system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94">power_source_type_e</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Battery charging status. </p>
+<p>Power status. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5277b78fe436c15af3a76ce501ee4c1ea089d66a3940c2a9c3f2f483de7bcb7e3" name="a5277b78fe436c15af3a76ce501ee4c1ea089d66a3940c2a9c3f2f483de7bcb7e3"></a>BATTERY_STATUS_DISCHARGING&#160;</td><td class="fielddoc"><p>Battery is discharging. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7aaf6f829cca7dec5a22c925d7c69d94a88da2f02a30dc1bc97e65039977c9809" name="a7aaf6f829cca7dec5a22c925d7c69d94a88da2f02a30dc1bc97e65039977c9809"></a>POWER_SOURCE_BATTERY&#160;</td><td class="fielddoc"><p>System on battery power. </p>
 <p>On systems without a charging circuit this will always be returned. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5277b78fe436c15af3a76ce501ee4c1eadb742fbbd562aba4778378a2fb18efb3" name="a5277b78fe436c15af3a76ce501ee4c1eadb742fbbd562aba4778378a2fb18efb3"></a>BATTERY_STATUS_CHARGING&#160;</td><td class="fielddoc"><p>Battery is charging. </p>
+<tr><td class="fieldname"><a id="a7aaf6f829cca7dec5a22c925d7c69d94a7ad789de1505a6c2cbf893b0ed66d4a0" name="a7aaf6f829cca7dec5a22c925d7c69d94a7ad789de1505a6c2cbf893b0ed66d4a0"></a>POWER_SOURCE_AC&#160;</td><td class="fielddoc"><p>System on AC power. </p>
 </td></tr>
 </table>
 
@@ -290,11 +300,63 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the battery status. </p>
+<p>Get the system power source type. </p>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10035</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
- </p><dl class="section return"><dt>Returns</dt><dd>The battery status. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="system_8h.html#a5277b78fe436c15af3a76ce501ee4c1e" title="Battery charging status.">battery_status_e</a> </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The system power source type. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94" title="Power status.">power_source_type_e</a> </dd></dl>
+
+</div>
+</div>
+<a id="af427422e4eaf7960a9348d0491fa47f4" name="af427422e4eaf7960a9348d0491fa47f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af427422e4eaf7960a9348d0491fa47f4">&#9670;&#160;</a></span>GetBatteryValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short GetBatteryValue </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>sbz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpower__battery__status__t.html">power_battery_status_t</a> *&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read the battery voltage and level. </p>
+<p>Requires <code>-lkrnllib</code> when dynamically linking with the shims.  </p><dl class="section warning"><dt>Warning</dt><dd>On some versions of Besta RTOS, the return value may be undefined if the struct that <code>output</code> points to is not zero filled. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sbz</td><td>Unknown. Should be set to 0. </td></tr>
+    <tr><td class="paramname">output</td><td>Pointer to a battery status info struct that will contain the returned values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
