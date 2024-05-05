@@ -18,19 +18,52 @@ extern "C" {
 #endif
 
 /**
- * @brief Battery charging status.
+ * @brief Power status.
  */
-enum battery_status_e {
+enum power_source_type_e {
     /**
-     * @brief Battery is discharging.
+     * @brief System on battery power.
      * @details On systems without a charging circuit this will always be returned.
      */
-    BATTERY_STATUS_DISCHARGING = 1,
+    POWER_SOURCE_BATTERY = 1,
     /**
-     * @brief Battery is charging.
+     * @brief System on AC power.
      */
-    BATTERY_STATUS_CHARGING = 4,
+    POWER_SOURCE_AC = 4,
 };
+
+/**
+ * @brief Current battery status.
+ */
+typedef struct {
+    /**
+     * @brief Current battery voltage.
+     */
+    float voltage;
+    /**
+     * @brief Unknown.
+     * @details Will be set to the first parameter of GetBatteryValue().
+     */
+    short param_1_value;
+    /**
+     * @brief GetBatteryValue() query result.
+     */
+    short query_result;
+    /**
+     * @brief Unknown.
+     */
+    unsigned short unk_0x8;
+    /**
+     * @brief Battery level.
+     * @details This is equal to the number of bars shown on the battery level display.
+     */
+    unsigned short level;
+    /**
+     * @brief Unknown.
+     * @details Seems to be constantly 1.
+     */
+    unsigned char unk_0xc;
+} power_battery_status_t;
 
 /**
  * @brief Callback type for Timer1 interrupt
@@ -79,11 +112,11 @@ extern timer1_callback_t GetTimer1IntHandler(short *interval);
 extern void SysPowerOff();
 
 /**
- * @brief Get the battery status.
+ * @brief Get the system power source type.
  * @x_syscall_num `0x10035`
  * @x_void_param
- * @return The battery status.
- * @see ::battery_status_e
+ * @return The system power source type.
+ * @see ::power_source_type_e
  */
 extern int GetBatteryType();
 
@@ -97,6 +130,17 @@ extern int GetBatteryType();
  * @return The buffer that now contains the path, or `NULL` if the function fails.
  */
 extern char *_GetSystemDirectory(char *buffer, size_t size);
+
+/**
+ * @brief Read the battery voltage and level.
+ * @details @x_term require-krnllib
+ * @warning On some versions of Besta RTOS, the return value may be undefined if the struct that `output` points to is
+ * not zero filled.
+ * @param sbz Unknown. Should be set to 0.
+ * @param output Pointer to a battery status info struct that will contain the returned values.
+ * @retval 0 @x_term ok
+ */
+extern short GetBatteryValue(short sbz, power_battery_status_t *output);
 
 #ifdef __cplusplus
 } // extern "C"

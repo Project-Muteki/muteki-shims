@@ -67,7 +67,7 @@ enum errno_exec_e {
      */
     EXEC_OPEN_FAILED,
     /**
-     * @brief Failed to read executable file.
+     * @brief Failed to parse executable file.
      */
     EXEC_LOADER_FAILURE,
     /**
