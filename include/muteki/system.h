@@ -136,6 +136,7 @@ extern char *_GetSystemDirectory(char *buffer, size_t size);
  * @details @x_term require-krnllib
  * @warning On some versions of Besta RTOS, the return value may be undefined if the struct that `output` points to is
  * not zero filled.
+ * @x_syscall_num `0x2001a`
  * @param sbz Unknown. Should be set to 0.
  * @param output Pointer to a battery status info struct that will contain the returned values.
  * @retval 0 @x_term ok

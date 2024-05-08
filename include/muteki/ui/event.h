@@ -69,7 +69,7 @@ typedef struct {
 
 /**
  * @brief Read current configuration of key event generator.
- * @x_syscall_num 0x10032
+ * @x_syscall_num `0x10032`
  * @param[out] config The configuration struct for holding the exported configuration.
  * @x_void_return
  * @see key_press_event_config_t The config struct and details on the expected format.
@@ -78,7 +78,7 @@ void GetSysKeyState(key_press_event_config_t *config);
 
 /**
  * @brief Configure key event generator.
- * @x_syscall_num 0x10033
+ * @x_syscall_num `0x10033`
  * @param[in] config The configuration struct to be imported.
  * @x_void_return
  * @see key_press_event_config_t The config struct and details on the expected format.
