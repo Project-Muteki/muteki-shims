@@ -19,6 +19,7 @@
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -344,6 +345,7 @@ Functions</h2></td></tr>
 
 <p>Read the battery voltage and level. </p>
 <p>Requires <code>-lkrnllib</code> when dynamically linking with the shims.  </p><dl class="section warning"><dt>Warning</dt><dd>On some versions of Besta RTOS, the return value may be undefined if the struct that <code>output</code> points to is not zero filled. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x2001a</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sbz</td><td>Unknown. Should be set to 0. </td></tr>
