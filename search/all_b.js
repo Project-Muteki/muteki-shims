@@ -16,10 +16,12 @@ var searchData=
   ['list_13',['Todo List',['../todo.html',1,'']]],
   ['lmalloc_14',['lmalloc',['../memory_8h.html#a3aaeb9828173fa29b9788c7edeb490bb',1,'memory.h']]],
   ['loader_2eh_15',['loader.h',['../loader_8h.html',1,'']]],
-  ['loadprograma_16',['LoadProgramA',['../loader_8h.html#a199d8fee3b874fd0bc6abfdfa224760b',1,'loader.h']]],
-  ['loadprogramw_17',['LoadProgramW',['../loader_8h.html#a6a551e1d93c62d9a73f7167630ce95c7',1,'loader.h']]],
-  ['lock_18',['lock',['../structlcd__thread__safe__s.html#ae6d852a6c9ac2314165cf11f0b626d63',1,'lcd_thread_safe_s::lock'],['../structlcd__lock__s.html#ad6b4fc786071d611233eaf63cb2b07a0',1,'lcd_lock_s::lock']]],
-  ['long_5fpress_5fdelay_19',['long_press_delay',['../structkey__press__event__config__t.html#a2eaa31a1db305cec816920c58a371f5b',1,'key_press_event_config_t']]],
-  ['long_5fpress_5frepeat_5frate_20',['long_press_repeat_rate',['../structkey__press__event__config__t.html#af6cb0955d9bb6dd20cb35831c829f94f',1,'key_press_event_config_t']]],
-  ['lrealloc_21',['lrealloc',['../memory_8h.html#aa0d26131a5b76ad8d2e34fcb8d526ee8',1,'memory.h']]]
+  ['loader_5fcart_5fdescriptor_5ft_16',['loader_cart_descriptor_t',['../structloader__cart__descriptor__t.html',1,'']]],
+  ['loader_5ffile_5fdescriptor_5ft_17',['loader_file_descriptor_t',['../structloader__file__descriptor__t.html',1,'']]],
+  ['loadprograma_18',['LoadProgramA',['../loader_8h.html#a199d8fee3b874fd0bc6abfdfa224760b',1,'loader.h']]],
+  ['loadprogramw_19',['LoadProgramW',['../loader_8h.html#a6a551e1d93c62d9a73f7167630ce95c7',1,'loader.h']]],
+  ['lock_20',['lock',['../structlcd__thread__safe__s.html#ae6d852a6c9ac2314165cf11f0b626d63',1,'lcd_thread_safe_s::lock'],['../structlcd__lock__s.html#ad6b4fc786071d611233eaf63cb2b07a0',1,'lcd_lock_s::lock']]],
+  ['long_5fpress_5fdelay_21',['long_press_delay',['../structkey__press__event__config__t.html#a2eaa31a1db305cec816920c58a371f5b',1,'key_press_event_config_t']]],
+  ['long_5fpress_5frepeat_5frate_22',['long_press_repeat_rate',['../structkey__press__event__config__t.html#af6cb0955d9bb6dd20cb35831c829f94f',1,'key_press_event_config_t']]],
+  ['lrealloc_23',['lrealloc',['../memory_8h.html#aa0d26131a5b76ad8d2e34fcb8d526ee8',1,'memory.h']]]
 ];

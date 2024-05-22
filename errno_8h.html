@@ -147,6 +147,11 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a896430c12d395f8968f1c2edfd12798a">EXEC_MAP_FULL</a>
 , <b>EXEC_UNKNOWN_FORMAT</b> = 0x000a
+, <a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af313c0fc6301dcfb40dda60f4be07e3a">EXEC_BESTAPE_HEADER_PARSER_FAILURE</a> = 0x000f
+, <a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ab706886b0940b6439521df5bba29538a">EXEC_BESTAPE_LD_FAILURE</a> = 0x0010
+, <br />
+&#160;&#160;<a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a1a09302361386ef3a705ce99b10bd720">EXEC_BESTAPE_RELOC_FAILURE</a> = 0x0011
+, <b>EXEC_NO_SUCH_ENTRY</b> = 0x0012
 <br />
  }</td></tr>
 <tr class="memdesc:ad8c9085e0bdd5a9b0b159fb117161c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code for <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a42a7a9000abfbd639e750f5d124bfdfa">ERRNO_NS_EXEC</a>.  <a href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32">More...</a><br /></td></tr>
@@ -306,6 +311,12 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ad8c9085e0bdd5a9b0b159fb117161c32a896430c12d395f8968f1c2edfd12798a" name="ad8c9085e0bdd5a9b0b159fb117161c32a896430c12d395f8968f1c2edfd12798a"></a>EXEC_MAP_FULL&#160;</td><td class="fielddoc"><p>Executable mapping table is full. </p>
 <p>This is returned when too many executable is loaded. May be overwritten by a more generic code like <a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a4ecbd599844c0f4864ca993b3d902dd5" title="Failed to parse executable file.">EXEC_LOADER_FAILURE</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad8c9085e0bdd5a9b0b159fb117161c32af313c0fc6301dcfb40dda60f4be07e3a" name="ad8c9085e0bdd5a9b0b159fb117161c32af313c0fc6301dcfb40dda60f4be07e3a"></a>EXEC_BESTAPE_HEADER_PARSER_FAILURE&#160;</td><td class="fielddoc"><p>Failed to load executable file due to an error originated from the header parser. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad8c9085e0bdd5a9b0b159fb117161c32ab706886b0940b6439521df5bba29538a" name="ad8c9085e0bdd5a9b0b159fb117161c32ab706886b0940b6439521df5bba29538a"></a>EXEC_BESTAPE_LD_FAILURE&#160;</td><td class="fielddoc"><p>Failed to load executable file due to an error originated from the shared object loader. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad8c9085e0bdd5a9b0b159fb117161c32a1a09302361386ef3a705ce99b10bd720" name="ad8c9085e0bdd5a9b0b159fb117161c32a1a09302361386ef3a705ce99b10bd720"></a>EXEC_BESTAPE_RELOC_FAILURE&#160;</td><td class="fielddoc"><p>Failed to load executable file due to an error originated from the relocator. </p>
 </td></tr>
 </table>
 

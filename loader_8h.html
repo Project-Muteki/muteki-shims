@@ -112,6 +112,7 @@ $(document).ready(function(){initNavTree('loader_8h.html',''); initResizable(); 
 <p>Binary loader API.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="file_8h_source.html">muteki/file.h</a>&gt;</code><br />
 </div>
 <p><a href="loader_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -119,6 +120,10 @@ $(document).ready(function(){initNavTree('loader_8h.html',''); initResizable(); 
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structapplet__args__v4__t.html">applet_args_v4_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applet argument passing V4 struct.  <a href="structapplet__args__v4__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structloader__cart__descriptor__t.html">loader_cart_descriptor_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -148,6 +153,36 @@ Functions</h2></td></tr>
 <tr class="memitem:a7605f69e8452a0ed7e4e77ead04b9907" id="r_a7605f69e8452a0ed7e4e77ead04b9907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a7605f69e8452a0ed7e4e77ead04b9907">GetCurrentPathW</a> ()</td></tr>
 <tr class="memdesc:a7605f69e8452a0ed7e4e77ead04b9907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the current running executable (argv[0]). (UTF-16 variant)  <br /></td></tr>
 <tr class="separator:a7605f69e8452a0ed7e4e77ead04b9907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1112346cdf9957b295b3379673f99d9" id="r_ab1112346cdf9957b295b3379673f99d9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#ab1112346cdf9957b295b3379673f99d9">GetApplicationNameA</a> (const char *pathname, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *out_name, size_t max_size)</td></tr>
+<tr class="memdesc:ab1112346cdf9957b295b3379673f99d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title name of the ROM file.  <br /></td></tr>
+<tr class="separator:ab1112346cdf9957b295b3379673f99d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d000ce10b1dc7a883ac8652ccc4903" id="r_af6d000ce10b1dc7a883ac8652ccc4903"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#af6d000ce10b1dc7a883ac8652ccc4903">GetApplicationNameW</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *out_name, size_t max_size)</td></tr>
+<tr class="memdesc:af6d000ce10b1dc7a883ac8652ccc4903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title name of the ROM file (LFN path).  <br /></td></tr>
+<tr class="separator:af6d000ce10b1dc7a883ac8652ccc4903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a00f85d09969c332f31a432c55f07e" id="r_a08a00f85d09969c332f31a432c55f07e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a08a00f85d09969c332f31a432c55f07e">_OpenFile</a> (const char *pathname, const char *mode_or_subfile)</td></tr>
+<tr class="memdesc:a08a00f85d09969c332f31a432c55f07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a loader file descriptor from a file.  <br /></td></tr>
+<tr class="separator:a08a00f85d09969c332f31a432c55f07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f0c2a2280ddd8209fbaffc7c3e187e" id="r_a92f0c2a2280ddd8209fbaffc7c3e187e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a92f0c2a2280ddd8209fbaffc7c3e187e">_OpenFileW</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, const void *mode_or_subfile)</td></tr>
+<tr class="memdesc:a92f0c2a2280ddd8209fbaffc7c3e187e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a loader file descriptor from a file (LFN path).  <br /></td></tr>
+<tr class="separator:a92f0c2a2280ddd8209fbaffc7c3e187e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9777d26cdd3c036fd17f9aaf51f969" id="r_a8f9777d26cdd3c036fd17f9aaf51f969"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a8f9777d26cdd3c036fd17f9aaf51f969">_CloseFile</a> (<a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *ldrfd)</td></tr>
+<tr class="memdesc:a8f9777d26cdd3c036fd17f9aaf51f969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a loader file descriptor.  <br /></td></tr>
+<tr class="separator:a8f9777d26cdd3c036fd17f9aaf51f969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79c0f4373f5df39a2abbce2fb5f4677b" id="r_a79c0f4373f5df39a2abbce2fb5f4677b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a79c0f4373f5df39a2abbce2fb5f4677b">_ReadFile</a> (<a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *ldrfd, void *buf, size_t size)</td></tr>
+<tr class="memdesc:a79c0f4373f5df39a2abbce2fb5f4677b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from a loader file descriptor.  <br /></td></tr>
+<tr class="separator:a79c0f4373f5df39a2abbce2fb5f4677b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec81e34fa35e98b3e01e99699fda603" id="r_aeec81e34fa35e98b3e01e99699fda603"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#aeec81e34fa35e98b3e01e99699fda603">_FseekFile</a> (<a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *ldrfd, size_t offset, <a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51">sys_seek_whence_e</a> whence)</td></tr>
+<tr class="memdesc:aeec81e34fa35e98b3e01e99699fda603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek to a specific position in an opened sub-file.  <br /></td></tr>
+<tr class="separator:aeec81e34fa35e98b3e01e99699fda603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3adf7250c5473d7333a6fce13ba605" id="r_afe3adf7250c5473d7333a6fce13ba605"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#afe3adf7250c5473d7333a6fce13ba605">_FileSize</a> (<a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *ldrfd)</td></tr>
+<tr class="memdesc:afe3adf7250c5473d7333a6fce13ba605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of sub-file.  <br /></td></tr>
+<tr class="separator:afe3adf7250c5473d7333a6fce13ba605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40bea686a62736304340d056c2961982" id="r_a40bea686a62736304340d056c2961982"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a40bea686a62736304340d056c2961982">_OpenSubFile</a> (<a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *parent, size_t base, size_t max_size)</td></tr>
+<tr class="memdesc:a40bea686a62736304340d056c2961982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a sub-file from a parent loader file descriptor.  <br /></td></tr>
+<tr class="separator:a40bea686a62736304340d056c2961982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f57bb47afa29d74af0ce46996f9240a" id="r_a9f57bb47afa29d74af0ce46996f9240a"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a9f57bb47afa29d74af0ce46996f9240a">_TellFile</a> (<a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *ldrfd)</td></tr>
+<tr class="memdesc:a9f57bb47afa29d74af0ce46996f9240a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current offset of sub-file.  <br /></td></tr>
+<tr class="separator:a9f57bb47afa29d74af0ce46996f9240a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Binary loader API. </p>
@@ -174,6 +209,393 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a8f9777d26cdd3c036fd17f9aaf51f969" name="a8f9777d26cdd3c036fd17f9aaf51f969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9777d26cdd3c036fd17f9aaf51f969">&#9670;&#160;</a></span>_CloseFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _CloseFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>ldrfd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close a loader file descriptor. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100ef</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ldrfd</td><td>The loader file descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error.  </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe3adf7250c5473d7333a6fce13ba605" name="afe3adf7250c5473d7333a6fce13ba605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3adf7250c5473d7333a6fce13ba605">&#9670;&#160;</a></span>_FileSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t _FileSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>ldrfd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the size of sub-file. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100f2</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ldrfd</td><td>The loader file descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The size of the sub-file, or <code>-1</code> when something is wrong. </dd></dl>
+
+</div>
+</div>
+<a id="aeec81e34fa35e98b3e01e99699fda603" name="aeec81e34fa35e98b3e01e99699fda603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec81e34fa35e98b3e01e99699fda603">&#9670;&#160;</a></span>_FseekFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _FseekFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>ldrfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51">sys_seek_whence_e</a>&#160;</td>
+          <td class="paramname"><em>whence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Seek to a specific position in an opened sub-file. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100f1</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ldrfd</td><td>The loader file descriptor. </td></tr>
+    <tr><td class="paramname">offset</td><td>Seek offset. </td></tr>
+    <tr><td class="paramname">whence</td><td>Treat offset as relative to start of file/current offset/end of file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error.  </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a08a00f85d09969c332f31a432c55f07e" name="a08a00f85d09969c332f31a432c55f07e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a00f85d09969c332f31a432c55f07e">&#9670;&#160;</a></span>_OpenFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> * _OpenFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>mode_or_subfile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open a loader file descriptor from a file. </p>
+<p><code>mode_or_subfile</code> can either be a mode or one of the following UNC paths:</p>
+<table class="doxtable">
+<tr>
+<th>Path </th><th><p class="starttd">Effect</p>
+<p class="endtd"></p>
+</th></tr>
+<tr>
+<td><code>\\.\ROMFILE</code> </td><td>Reopens the current ROM/applet file. </td></tr>
+<tr>
+<td><code>\\.\DATAFILE</code> </td><td>Opens the data partition of the cartridge as a file. More details TBA. </td></tr>
+</table>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100ec</code></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>DOS 8.3 path to the file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode_or_subfile</td><td>Either a mode string accepted by <a class="el" href="file_8h.html#a535696580008f94390bddaaf6be0dea9" title="Open a file located at pathname.">_afopen()</a>, or a special UNC path to open assets of the current applet/cartridge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Loader file descriptor </dd></dl>
+
+</div>
+</div>
+<a id="a92f0c2a2280ddd8209fbaffc7c3e187e" name="a92f0c2a2280ddd8209fbaffc7c3e187e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f0c2a2280ddd8209fbaffc7c3e187e">&#9670;&#160;</a></span>_OpenFileW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> * _OpenFileW </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>mode_or_subfile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open a loader file descriptor from a file (LFN path). </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100ee</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>LFN path to the file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode_or_subfile</td><td>Either a mode string accepted by <a class="el" href="file_8h.html#a51cba4f4c49fb5f5e85a80e8236e08b8" title="Open a file located at UTF-16-encoded pathname.">__wfopen()</a> (in UTF-16), or a special UNC path (<b>in ASCII</b>) to open assets of the current applet/cartridge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Loader file descriptor </dd></dl>
+
+</div>
+</div>
+<a id="a40bea686a62736304340d056c2961982" name="a40bea686a62736304340d056c2961982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40bea686a62736304340d056c2961982">&#9670;&#160;</a></span>_OpenSubFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> * _OpenSubFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open a sub-file from a parent loader file descriptor. </p>
+<p>Sub-files are areas in the parent file. The parameter <code>base</code> and <code>max_size</code> controls where and how large the area will be. The sub-file descriptors operate independently of the parent file descriptor, a la <code>dup()</code> in POSIX. This is also used internally to parse ROM files and asset packs. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x100f3</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Parent file descriptor. </td></tr>
+    <tr><td class="paramname">base</td><td>Base offset of the file. </td></tr>
+    <tr><td class="paramname">max_size</td><td>Max size of the area included in this sub-file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The loader sub-file descriptor. </dd></dl>
+
+</div>
+</div>
+<a id="a79c0f4373f5df39a2abbce2fb5f4677b" name="a79c0f4373f5df39a2abbce2fb5f4677b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c0f4373f5df39a2abbce2fb5f4677b">&#9670;&#160;</a></span>_ReadFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t _ReadFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>ldrfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read data from a loader file descriptor. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100f0</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">ldrfd</td><td>The loader file descriptor. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>Buffer that holds the data. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">size</td><td>Number of bytes to be read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Actual number of bytes read. </dd></dl>
+
+</div>
+</div>
+<a id="a9f57bb47afa29d74af0ce46996f9240a" name="a9f57bb47afa29d74af0ce46996f9240a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f57bb47afa29d74af0ce46996f9240a">&#9670;&#160;</a></span>_TellFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t _TellFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structloader__file__descriptor__t.html">loader_file_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>ldrfd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current offset of sub-file. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100f4</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ldrfd</td><td>The loader file descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The offset of the sub-file, or <code>-1</code> when something is wrong. </dd></dl>
+
+</div>
+</div>
 <a id="a02dd228d313ebb256fe4ced9425f274c" name="a02dd228d313ebb256fe4ced9425f274c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02dd228d313ebb256fe4ced9425f274c">&#9670;&#160;</a></span>ExecuteProgram()</h2>
 
@@ -223,6 +645,7 @@ Functions</h2></td></tr>
 <p>Invoke a specific subroutine of the loaded applet with arguments. </p>
 <p>Once called, the control is fully transferred to the loaded applet and this function will block until the invoked subroutine fully exits.</p>
 <p>Actual format of arguments seem to be applet-specific.</p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10118</code></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prog</td><td>The loaded executable description returned by LoadProgramA or LoadProgramW. </td></tr>
@@ -264,6 +687,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Unload a loaded applet. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10117</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prog</td><td>The loaded executable description returned by <a class="el" href="loader_8h.html#a199d8fee3b874fd0bc6abfdfa224760b" title="Load an applet executable.">LoadProgramA()</a> or <a class="el" href="loader_8h.html#a6a551e1d93c62d9a73f7167630ce95c7" title="Load an applet executable. (UTF-16 variant)">LoadProgramW()</a>. </td></tr>
@@ -273,6 +697,115 @@ Functions</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="loader_8h.html#a199d8fee3b874fd0bc6abfdfa224760b" title="Load an applet executable.">LoadProgramA</a> </dd>
 <dd>
 <a class="el" href="loader_8h.html#a6a551e1d93c62d9a73f7167630ce95c7" title="Load an applet executable. (UTF-16 variant)">LoadProgramW</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab1112346cdf9957b295b3379673f99d9" name="ab1112346cdf9957b295b3379673f99d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1112346cdf9957b295b3379673f99d9">&#9670;&#160;</a></span>GetApplicationNameA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t GetApplicationNameA </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>out_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the title name of the ROM file. </p>
+<p>This will return UTF16-encoded localized title name that matches the current locale. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10115</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>DOS 8.3 path to the ROM file. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_name</td><td>The title name in current locale. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">max_size</td><td>Max size of the title name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Length of the title name in number of UTF16 code units. </dd></dl>
+
+</div>
+</div>
+<a id="af6d000ce10b1dc7a883ac8652ccc4903" name="af6d000ce10b1dc7a883ac8652ccc4903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d000ce10b1dc7a883ac8652ccc4903">&#9670;&#160;</a></span>GetApplicationNameW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t GetApplicationNameW </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>out_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the title name of the ROM file (LFN path). </p>
+<p>This will return UTF16-encoded localized title name that matches the current locale. </p><dl class="section warning"><dt>Warning</dt><dd>Not all systems implement this. When not implemented, the length read will always be 0. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10280</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>LFN path to the ROM file. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_name</td><td>The title name in current locale. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">max_size</td><td>Max size of the title name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Length of the title name in number of UTF16 code units. </dd></dl>
 
 </div>
 </div>
@@ -300,6 +833,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the path to the current running executable (argv[0]). </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10119</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The DOS 8.3 path to the current running executable. </dd></dl>
 
@@ -329,6 +863,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the path to the current running executable (argv[0]). (UTF-16 variant) </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10282</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The UTF-16 LFN path to the current running executable. </dd></dl>
 
@@ -359,7 +894,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Load an applet executable. </p>
-<p>The <code>pathname</code> specified must be a DOS 8.3 name. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The <code>pathname</code> specified must be a DOS 8.3 name. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10116</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>Path to executable. </td></tr>
   </table>
@@ -394,6 +930,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Load an applet executable. (UTF-16 variant) </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10281</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>UTF-16 LFN path to executable. </td></tr>

@@ -11,7 +11,11 @@ var errno_8h =
       [ "EXEC_MP3_PLAYER_IS_RUNNING", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32acdb3b3998f3a7bf62730f0b27e9c5075", null ],
       [ "EXEC_GENERIC_ERROR", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32aa187a4d74f8f243b0a3170124102580d", null ],
       [ "EXEC_MAP_FULL", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a896430c12d395f8968f1c2edfd12798a", null ],
-      [ "EXEC_UNKNOWN_FORMAT", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a9c0242686c0f80b0e260c20a28e4d25a", null ]
+      [ "EXEC_UNKNOWN_FORMAT", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a9c0242686c0f80b0e260c20a28e4d25a", null ],
+      [ "EXEC_BESTAPE_HEADER_PARSER_FAILURE", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af313c0fc6301dcfb40dda60f4be07e3a", null ],
+      [ "EXEC_BESTAPE_LD_FAILURE", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ab706886b0940b6439521df5bba29538a", null ],
+      [ "EXEC_BESTAPE_RELOC_FAILURE", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a1a09302361386ef3a705ce99b10bd720", null ],
+      [ "EXEC_NO_SUCH_ENTRY", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a4567f85dab4a5e1e9171e4730559a4d7", null ]
     ] ],
     [ "errno_kernel_e", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73", [
       [ "PERIPHERAL_COMM_FAILED", "errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a3e7f505e5c40405b66475bbdec7bdad1", null ],

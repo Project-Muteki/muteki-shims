@@ -15,6 +15,8 @@ var annotated_dup =
     [ "lcd_s", "structlcd__s.html", "structlcd__s" ],
     [ "lcd_surface_s", "structlcd__surface__s.html", "structlcd__surface__s" ],
     [ "lcd_thread_safe_s", "structlcd__thread__safe__s.html", "structlcd__thread__safe__s" ],
+    [ "loader_cart_descriptor_t", "structloader__cart__descriptor__t.html", "structloader__cart__descriptor__t" ],
+    [ "loader_file_descriptor_t", "structloader__file__descriptor__t.html", "structloader__file__descriptor__t" ],
     [ "message_queue_nonatomic_t", "structmessage__queue__nonatomic__t.html", "structmessage__queue__nonatomic__t" ],
     [ "message_queue_s", "structmessage__queue__s.html", "structmessage__queue__s" ],
     [ "nand_params_t", "structnand__params__t.html", "structnand__params__t" ],
