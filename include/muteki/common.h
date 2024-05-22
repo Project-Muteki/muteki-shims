@@ -25,6 +25,7 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
+#include <sys/types.h>
 
 // This only supports GCC, LLVM and probably also MSVC at the moment.
 #if defined(__CHAR16_TYPE__) && (__CHAR16_MAX__ < 0x10000)

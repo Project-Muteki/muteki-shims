@@ -95,6 +95,19 @@ enum errno_exec_e {
      */
     EXEC_MAP_FULL,
     EXEC_UNKNOWN_FORMAT = 0x000a,
+    /**
+     * @brief Failed to load executable file due to an error originated from the header parser.
+     */
+    EXEC_BESTAPE_HEADER_PARSER_FAILURE = 0x000f,
+    /**
+     * @brief Failed to load executable file due to an error originated from the shared object loader.
+     */
+    EXEC_BESTAPE_LD_FAILURE = 0x0010,
+    /**
+     * @brief Failed to load executable file due to an error originated from the relocator.
+     */
+    EXEC_BESTAPE_RELOC_FAILURE = 0x0011,
+    EXEC_NO_SUCH_ENTRY = 0x0012,
 };
 
 /**
