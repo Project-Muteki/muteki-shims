@@ -13,5 +13,6 @@ var dir_89e46442482f5622ab783d5d97d4fad2 =
     [ "memory.h", "memory_8h.html", "memory_8h" ],
     [ "system.h", "system_8h.html", "system_8h" ],
     [ "threading.h", "threading_8h.html", "threading_8h" ],
+    [ "utf16.h", "utf16_8h.html", "utf16_8h" ],
     [ "utils.h", "utils_8h.html", "utils_8h" ]
 ];
