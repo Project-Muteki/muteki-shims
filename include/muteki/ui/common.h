@@ -94,6 +94,41 @@ enum blit_flag_e {
 };
 
 /**
+ * @brief Valid pixel formats for LCD surfaces.
+ * @details All color values are assumed to be little endian.
+ */
+enum lcd_surface_pixfmt_e {
+    /**
+     * @brief 1-bit index color.
+     */
+    LCD_SURFACE_PIXFMT_L1 = 1,
+    /**
+     * @brief 4-bit index color.
+     */
+    LCD_SURFACE_PIXFMT_L4 = 4,
+    /**
+     * @brief 8-bit index color.
+     */
+    LCD_SURFACE_PIXFMT_L8 = 8,
+    /**
+     * @brief 12-bit RGB444.
+     */
+    LCD_SURFACE_PIXFMT_RGB444 = 12,
+    /**
+     * @brief 16-bit RGB565.
+     */
+    LCD_SURFACE_PIXFMT_RGB565 = 16,
+    /**
+     * @brief 24-bit RGB.
+     */
+    LCD_SURFACE_PIXFMT_RGB = 24,
+    /**
+     * @brief 32-bit XRGB.
+     */
+    LCD_SURFACE_PIXFMT_XRGB = 32,
+};
+
+/**
  * @brief Rotation values used by lcd_rotate_callback_t.
  */
 enum rotation_value_e {
@@ -336,7 +371,7 @@ struct lcd_draw_s;
 struct lcd_font_s;
 struct lcd_lock_s;
 struct lcd_s;
-struct lcd_thread_safe_t;
+struct lcd_thread_safe_s;
 struct ui_event_s;
 struct ui_message_s;
 struct ui_component_s;
@@ -373,8 +408,7 @@ struct lcd_surface_s {
     short height; // 4:6
     /**
      * @brief Depth of the color in bits.
-     * @details 32 for RGBA, 4 for 16 color grayscale. Could be other values depending on the platform and the display
-     * it uses.
+     * @see lcd_surface_pixfmt_e
      */
     short depth; // 6:8
     /**
