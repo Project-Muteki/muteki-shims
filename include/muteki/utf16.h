@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-present dogtopus
+ * Copyright 2024 dogtopus
  * SPDX-License-Identifier: MIT
  */
 
