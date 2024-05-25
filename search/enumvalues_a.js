@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['str_5falign_5fcenter_0',['STR_ALIGN_CENTER',['../ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98',1,'common.h']]],
-  ['str_5falign_5fleft_1',['STR_ALIGN_LEFT',['../ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a',1,'common.h']]],
-  ['str_5falign_5fright_2',['STR_ALIGN_RIGHT',['../ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821',1,'common.h']]],
-  ['sys_5ferase_5ffailed_3',['SYS_ERASE_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1a4bb2b630005160e7d9781e280e7011',1,'errno.h']]],
-  ['sys_5flock_5fswitch_5fenabled_4',['SYS_LOCK_SWITCH_ENABLED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aef656c2d75c8bd9ec763b63cf71b43c2',1,'errno.h']]],
-  ['sys_5flow_5fbattery_5',['SYS_LOW_BATTERY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4caeb4c37ddfa450dad5b16c51ad6e73',1,'errno.h']]],
-  ['sys_5fout_5fof_5fmemory_6',['SYS_OUT_OF_MEMORY',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ae664d39bd61bb26eb69c92c3051c29b4',1,'errno.h']]],
-  ['sys_5fstorage_5fdevice_5fnot_5ffound_7',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1',1,'errno.h']]]
+  ['rotation_5fapply_0',['ROTATION_APPLY',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493',1,'common.h']]],
+  ['rotation_5fquery_1',['ROTATION_QUERY',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607',1,'common.h']]],
+  ['rotation_5ftop_5fside_5ffacing_5fdown_2',['ROTATION_TOP_SIDE_FACING_DOWN',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03',1,'common.h']]],
+  ['rotation_5ftop_5fside_5ffacing_5fleft_3',['ROTATION_TOP_SIDE_FACING_LEFT',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15',1,'common.h']]],
+  ['rotation_5ftop_5fside_5ffacing_5fright_4',['ROTATION_TOP_SIDE_FACING_RIGHT',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5',1,'common.h']]],
+  ['rotation_5ftop_5fside_5ffacing_5fup_5',['ROTATION_TOP_SIDE_FACING_UP',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa',1,'common.h']]]
 ];

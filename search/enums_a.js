@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ui_5fevent_5ftype_5fe_0',['ui_event_type_e',['../ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f',1,'common.h']]]
+  ['thread_5fwait_5freason_5fe_0',['thread_wait_reason_e',['../threading_8h.html#a2ebb0866fd3be1d03bd9045ed804408d',1,'threading.h']]],
+  ['toggle_5fkey_5fstate_5fe_1',['toggle_key_state_e',['../event_8h.html#a41db433e298d3572044a6b89993a5541',1,'event.h']]]
 ];

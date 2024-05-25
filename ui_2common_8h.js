@@ -143,6 +143,15 @@ var ui_2common_8h =
       [ "KEY_SHIFT_PGUP", "ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920a1c9520ee1b8c92586bbff9543d2fd934", null ],
       [ "KEY_SHIFT_PGDN", "ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920ac47e416430e7feba138d2db3a1c1470e", null ]
     ] ],
+    [ "lcd_surface_pixfmt_e", "ui_2common_8h.html#a85735dada566607df198227a8c828b46", [
+      [ "LCD_SURFACE_PIXFMT_L1", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a2cde32fb3810caab6aca986952af209b", null ],
+      [ "LCD_SURFACE_PIXFMT_L4", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a0c6766a6b877f139b47b8c50fc84249e", null ],
+      [ "LCD_SURFACE_PIXFMT_L8", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a9d6401faf4d852500105fcd385d6f504", null ],
+      [ "LCD_SURFACE_PIXFMT_RGB444", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a70da573f60cc78458715369832e3b8c8", null ],
+      [ "LCD_SURFACE_PIXFMT_RGB565", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a8acea1c8d19b0074057c6098b34cd043", null ],
+      [ "LCD_SURFACE_PIXFMT_RGB", "ui_2common_8h.html#a85735dada566607df198227a8c828b46ac90567dac7b0e2c41a7792f7479cc037", null ],
+      [ "LCD_SURFACE_PIXFMT_XRGB", "ui_2common_8h.html#a85735dada566607df198227a8c828b46acceecb6b8e228a7fad7f16c93aee54e1", null ]
+    ] ],
     [ "print_flag_e", "ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591", [
       [ "PRINT_NONE", "ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf", null ],
       [ "PRINT_INVERT", "ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591af6ea821e1d64905d021e49ec74f498f1", null ],
