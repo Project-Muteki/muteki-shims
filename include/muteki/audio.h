@@ -19,18 +19,45 @@
 extern "C" {
 #endif
 
+/**
+ * @brief PCM codec direction/mode.
+ */
 enum pcm_direction_e {
+    /**
+     * @brief Default direction. Usually #DIRECTION_OUT.
+     */
     DIRECTION_DEFAULT,
+    /**
+     * @brief Output/playback mode.
+     */
     DIRECTION_OUT,
+    /**
+     * @brief Input/recording mode.
+     */
     DIRECTION_IN,
 };
 
+/**
+ * @brief Sample format.
+ */
 enum pcm_format_e {
+    /**
+     * @brief Use the default format. Usually #FORMAT_PCM_STEREO.
+     */
     FORMAT_AUTO = -1,
+    /**
+     * @brief PCM mono.
+     */
     FORMAT_PCM_MONO = 1,
+    /**
+     * @brief PCM stereo.
+     */
     FORMAT_PCM_STEREO = 3,
 };
 
+/**
+ * @brief Use the default sample rate. Usually this is equivalent to 44100Hz.
+ */
 const int SAMPLE_RATE_AUTO = -1;
 
 struct device_service_pcm_s;
@@ -78,7 +105,7 @@ struct pcm_config_s {
     int default_direction;
     /**
      * @brief Audio data frame format.
-     * @details Defaults to ::FORMAT_PCM.
+     * @details Defaults to ::FORMAT_PCM_STEREO.
      */
     int format;
     /**
@@ -186,7 +213,9 @@ struct pcm_decoder_buffer_s {
 /**
  * @brief Create PCM codec context.
  * @details
- * This changes the configuration of the \\?\PCM service.
+ * Use this to play/record audio in a streaming manner.
+ *
+ * This changes the configuration of the `\\?\PCM` service. More details TBA.
  *
  * The context object can be used directly, but it's recommended to open another descriptor using the CreateFile()
  * syscall, and use ReadFile() / WriteFile() / DeviceIoControl() to access the device.
@@ -222,10 +251,12 @@ struct pcm_decoder_buffer_s {
  *
  * @x_syscall_num `0x10250`
  *
- * @param direction Direction.
+ * @param direction Direction. Can either be input (record) or output (playback).
  * @param sample_rate Sample rate.
- * @param format Format
+ * @param format Sample format.
  * @return The context.
+ * @see pcm_direction_e Predefined values for codec direction.
+ * @see pcm_format_e Supported sample formats.
  */
 extern pcm_codec_context_t *OpenPCMCodec(int direction, int sample_rate, int format);
 
