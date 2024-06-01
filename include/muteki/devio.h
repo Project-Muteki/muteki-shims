@@ -108,7 +108,7 @@ typedef char device_service_t[0x4c];
  * @return Device IO descriptor.
  */
 extern devio_descriptor_t *CreateFile(
-    char *pathname,
+    const char *pathname,
     unsigned int access,
     unsigned int shmode,
     void *secattr,

@@ -30,13 +30,20 @@ enum sys_seek_whence_e {
 };
 
 /**
+ * @brief File descriptor struct.
+ * @todo Populate its internals.
+ */
+struct file_descriptor_s;
+typedef struct file_descriptor_s file_descriptor_t;
+
+/**
  * @brief Open a file located at @p pathname.
  * @details Analogous to the fopen() function in POSIX and Windows.
  * @param pathname DOS 8.3 path to the file to be opened.
  * @param mode Mode. Tested modes are @p "rb" and @p "wb+".
  * @return Pointer reference to the opened file.
  */
-extern void *_afopen(const char *pathname, const char *mode);
+extern file_descriptor_t *_afopen(const char *pathname, const char *mode);
 
 /**
  * @brief Open a file located at UTF-16-encoded @p pathname.
@@ -45,7 +52,7 @@ extern void *_afopen(const char *pathname, const char *mode);
  * @param mode Mode. Tested modes are @p _BUL("rb") and @p _BUL("wb+").
  * @return Pointer reference to the opened file.
  */
-extern void *__wfopen(const UTF16 *pathname, const UTF16 *mode);
+extern file_descriptor_t *__wfopen(const UTF16 *pathname, const UTF16 *mode);
 
 /**
  * @brief Read @p nmemb data units of size @p size from a file.
@@ -56,7 +63,7 @@ extern void *__wfopen(const UTF16 *pathname, const UTF16 *mode);
  * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Number of data units read.
  */
-extern size_t _fread(void *ptr, size_t size, size_t nmemb, void *stream);
+extern size_t _fread(file_descriptor_t *ptr, size_t size, size_t nmemb, void *stream);
 
 /**
  * @brief Write @p nmemb data units of size @p size to a file.
@@ -67,7 +74,7 @@ extern size_t _fread(void *ptr, size_t size, size_t nmemb, void *stream);
  * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Number of data units written.
  */
-extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, void *stream);
+extern size_t _fwrite(const file_descriptor_t *ptr, size_t size, size_t nmemb, void *stream);
 
 /**
  * @brief Seek to a specific position in an opened file.
@@ -79,7 +86,7 @@ extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, void *stream);
  * @retval -1 @x_term ng
  * @see sys_seek_whence_e
  */
-extern int __fseek(void *stream, long offset, int whence);
+extern int __fseek(file_descriptor_t *stream, long offset, int whence);
 
 /**
  * @brief Return the current position of the file.
@@ -87,7 +94,7 @@ extern int __fseek(void *stream, long offset, int whence);
  * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Current position when successful, -1 when there's an error.
  */
-extern long _ftell(void *stream);
+extern long _ftell(file_descriptor_t *stream);
 
 /**
  * @brief Flush the cached writes to the file.
@@ -96,7 +103,7 @@ extern long _ftell(void *stream);
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */
-extern int __fflush(void *stream);
+extern int __fflush(file_descriptor_t *stream);
 
 /**
  * @brief Close a file.
@@ -104,7 +111,7 @@ extern int __fflush(void *stream);
  * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Unclear. Could be similar to POSIX fclose().
  */
-extern int _fclose(void *stream);
+extern int _fclose(file_descriptor_t *stream);
 
 #ifdef __cplusplus
 } // extern "C"
