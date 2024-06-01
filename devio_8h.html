@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('devio_8h.html',''); initResizable(); }
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">devio.h File Reference</div></div>
 </div><!--header-->
@@ -130,17 +131,32 @@ Macros</h2></td></tr>
 <tr class="memdesc:af93b813cbecdfcd0a7b429e994763694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid descriptor.  <br /></td></tr>
 <tr class="separator:af93b813cbecdfcd0a7b429e994763694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aad905401d73d4d0eef800c430cede335" id="r_aad905401d73d4d0eef800c430cede335"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#aad905401d73d4d0eef800c430cede335">devio_backend_t</a></td></tr>
+<tr class="memdesc:aad905401d73d4d0eef800c430cede335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catchall device IO backend type.  <br /></td></tr>
+<tr class="separator:aad905401d73d4d0eef800c430cede335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a1bed3028ff342ff5bc1416adee418" id="r_a16a1bed3028ff342ff5bc1416adee418"><td class="memItemLeft" align="right" valign="top"><a id="a16a1bed3028ff342ff5bc1416adee418" name="a16a1bed3028ff342ff5bc1416adee418"></a>
+typedef char&#160;</td><td class="memItemRight" valign="bottom"><b>device_service_t</b>[0x4c]</td></tr>
+<tr class="separator:a16a1bed3028ff342ff5bc1416adee418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a02b3a1dfb5c5e845d51c6bd20e0d29a5" id="r_a02b3a1dfb5c5e845d51c6bd20e0d29a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a02b3a1dfb5c5e845d51c6bd20e0d29a5">CreateFile</a> (char *pathname, int access, int shmode, void *secattr, int on_noentry, int flags, void *template_file)</td></tr>
-<tr class="memdesc:a02b3a1dfb5c5e845d51c6bd20e0d29a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open or create a file/device by its <code>pathname</code>.  <br /></td></tr>
-<tr class="separator:a02b3a1dfb5c5e845d51c6bd20e0d29a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab742ba61bebc1ce70b621e244b511181" id="r_ab742ba61bebc1ce70b621e244b511181"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#ab742ba61bebc1ce70b621e244b511181">CloseHandle</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *h)</td></tr>
-<tr class="memdesc:ab742ba61bebc1ce70b621e244b511181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a handle.  <br /></td></tr>
-<tr class="separator:ab742ba61bebc1ce70b621e244b511181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28904c9202504d67df47306e187bef20" id="r_a28904c9202504d67df47306e187bef20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a28904c9202504d67df47306e187bef20">DeviceIoControl</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *h, int request, const void *in, int inlen, void *out, int outlen, int *retlen, void *overlapped)</td></tr>
-<tr class="memdesc:a28904c9202504d67df47306e187bef20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an IOCTL request to a device handle <code>h</code>.  <br /></td></tr>
-<tr class="separator:a28904c9202504d67df47306e187bef20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5bbdff6ce1445ce1315b7c4cef8089a" id="r_ab5bbdff6ce1445ce1315b7c4cef8089a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#ab5bbdff6ce1445ce1315b7c4cef8089a">CreateFile</a> (char *pathname, unsigned int access, unsigned int shmode, void *secattr, unsigned int on_noentry, unsigned int flags, void *template_file)</td></tr>
+<tr class="memdesc:ab5bbdff6ce1445ce1315b7c4cef8089a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open or create a file/device by its <code>pathname</code>.  <br /></td></tr>
+<tr class="separator:ab5bbdff6ce1445ce1315b7c4cef8089a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b978028308602d13c21f47be32f6a9" id="r_a98b978028308602d13c21f47be32f6a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a98b978028308602d13c21f47be32f6a9">ReadFile</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *devfd, void *buf, size_t size, size_t *actual_size, void *overlapped)</td></tr>
+<tr class="memdesc:a98b978028308602d13c21f47be32f6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read/receive data from a device IO descriptor.  <br /></td></tr>
+<tr class="separator:a98b978028308602d13c21f47be32f6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f4f33a3ff2ee699ece61fe83210508" id="r_ad1f4f33a3ff2ee699ece61fe83210508"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#ad1f4f33a3ff2ee699ece61fe83210508">WriteFile</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *devfd, const void *buf, size_t size, size_t *actual_size, void *overlapped)</td></tr>
+<tr class="memdesc:ad1f4f33a3ff2ee699ece61fe83210508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write/send data to a device IO descriptor.  <br /></td></tr>
+<tr class="separator:ad1f4f33a3ff2ee699ece61fe83210508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6617c6ab762772a5d8c3f8e0f1e25381" id="r_a6617c6ab762772a5d8c3f8e0f1e25381"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a6617c6ab762772a5d8c3f8e0f1e25381">DeviceIoControl</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *devfd, int request, const void *in, int inlen, void *out, int outlen, int *retlen, void *overlapped)</td></tr>
+<tr class="memdesc:a6617c6ab762772a5d8c3f8e0f1e25381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an IOCTL request to a device IO descriptor <code>devfd</code>.  <br /></td></tr>
+<tr class="separator:a6617c6ab762772a5d8c3f8e0f1e25381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b47953c6d83661123973faad449370" id="r_ae9b47953c6d83661123973faad449370"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#ae9b47953c6d83661123973faad449370">CloseHandle</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *devfd)</td></tr>
+<tr class="memdesc:ae9b47953c6d83661123973faad449370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a device IO descriptor.  <br /></td></tr>
+<tr class="separator:ae9b47953c6d83661123973faad449370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Device IO API. </p>
@@ -158,7 +174,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Invalid descriptor. </p>
-<p>This is usually returned by <a class="el" href="devio_8h.html#a02b3a1dfb5c5e845d51c6bd20e0d29a5" title="Open or create a file/device by its pathname.">CreateFile()</a> when an error occurred. </p>
+<p>This is usually returned by <a class="el" href="devio_8h.html#ab5bbdff6ce1445ce1315b7c4cef8089a" title="Open or create a file/device by its pathname.">CreateFile()</a> when an error occurred. </p>
 
 </div>
 </div>
@@ -179,9 +195,27 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="aad905401d73d4d0eef800c430cede335" name="aad905401d73d4d0eef800c430cede335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad905401d73d4d0eef800c430cede335">&#9670;&#160;</a></span>devio_backend_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="devio_8h.html#aad905401d73d4d0eef800c430cede335">devio_backend_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Catchall device IO backend type. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Add more details. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab742ba61bebc1ce70b621e244b511181" name="ab742ba61bebc1ce70b621e244b511181"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab742ba61bebc1ce70b621e244b511181">&#9670;&#160;</a></span>CloseHandle()</h2>
+<a id="ae9b47953c6d83661123973faad449370" name="ae9b47953c6d83661123973faad449370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b47953c6d83661123973faad449370">&#9670;&#160;</a></span>CloseHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +227,7 @@ Functions</h2></td></tr>
           <td class="memname">bool CloseHandle </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td>
-          <td class="paramname"><em>h</em></td><td>)</td>
+          <td class="paramname"><em>devfd</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -204,10 +238,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Close a handle. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#ab742ba61bebc1ce70b621e244b511181" title="Close a handle.">CloseHandle()</a> API. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Close a device IO descriptor. </p>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#ae9b47953c6d83661123973faad449370" title="Close a device IO descriptor.">CloseHandle()</a> API. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x102ad</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">h</td><td>Handle to close. </td></tr>
+    <tr><td class="paramname">devfd</td><td>Descriptor to close. </td></tr>
   </table>
   </dd>
 </dl>
@@ -221,8 +256,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a02b3a1dfb5c5e845d51c6bd20e0d29a5" name="a02b3a1dfb5c5e845d51c6bd20e0d29a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02b3a1dfb5c5e845d51c6bd20e0d29a5">&#9670;&#160;</a></span>CreateFile()</h2>
+<a id="ab5bbdff6ce1445ce1315b7c4cef8089a" name="ab5bbdff6ce1445ce1315b7c4cef8089a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5bbdff6ce1445ce1315b7c4cef8089a">&#9670;&#160;</a></span>CreateFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,13 +274,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>access</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>shmode</em>, </td>
         </tr>
         <tr>
@@ -257,13 +292,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>on_noentry</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>flags</em>, </td>
         </tr>
         <tr>
@@ -286,7 +321,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open or create a file/device by its <code>pathname</code>. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#a02b3a1dfb5c5e845d51c6bd20e0d29a5" title="Open or create a file/device by its pathname.">CreateFile()</a> API. Seems to wrap the internal _af* series syscalls. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed. </dd></dl>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#ab5bbdff6ce1445ce1315b7c4cef8089a" title="Open or create a file/device by its pathname.">CreateFile()</a> API. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x102a7</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>DOS 8.3 path to the file to be opened. </td></tr>
@@ -299,12 +335,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>File handle. Depending on the type of the handle it could either be a pointer reference to a file struct or a device descriptor. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Device IO descriptor. </dd></dl>
 
 </div>
 </div>
-<a id="a28904c9202504d67df47306e187bef20" name="a28904c9202504d67df47306e187bef20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28904c9202504d67df47306e187bef20">&#9670;&#160;</a></span>DeviceIoControl()</h2>
+<a id="a6617c6ab762772a5d8c3f8e0f1e25381" name="a6617c6ab762772a5d8c3f8e0f1e25381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6617c6ab762772a5d8c3f8e0f1e25381">&#9670;&#160;</a></span>DeviceIoControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +352,7 @@ Functions</h2></td></tr>
           <td class="memname">bool DeviceIoControl </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
+          <td class="paramname"><em>devfd</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -373,10 +409,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Send an IOCTL request to a device handle <code>h</code>. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#a28904c9202504d67df47306e187bef20" title="Send an IOCTL request to a device handle h.">DeviceIoControl()</a> API. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Send an IOCTL request to a device IO descriptor <code>devfd</code>. </p>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#a6617c6ab762772a5d8c3f8e0f1e25381" title="Send an IOCTL request to a device IO descriptor devfd.">DeviceIoControl()</a> API. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x102ac</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">h</td><td>Device handle. </td></tr>
+    <tr><td class="paramname">devfd</td><td>Device IO descriptor. </td></tr>
     <tr><td class="paramname">request</td><td>IOCTL request type. </td></tr>
     <tr><td class="paramname">in</td><td>The input buffer, or NULL if not applicable. </td></tr>
     <tr><td class="paramname">inlen</td><td>The size of the input buffer in bytes. </td></tr>
@@ -384,6 +421,154 @@ Functions</h2></td></tr>
     <tr><td class="paramname">outlen</td><td>The size of the output buffer in bytes. </td></tr>
     <tr><td class="paramname">retlen</td><td>The size of returned data (if applicable). </td></tr>
     <tr><td class="paramname">overlapped</td><td>Probably ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error.  </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a98b978028308602d13c21f47be32f6a9" name="a98b978028308602d13c21f47be32f6a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b978028308602d13c21f47be32f6a9">&#9670;&#160;</a></span>ReadFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReadFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>devfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>actual_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>overlapped</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read/receive data from a device IO descriptor. </p>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#a98b978028308602d13c21f47be32f6a9" title="Read/receive data from a device IO descriptor.">ReadFile()</a> API. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x102a9</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">devfd</td><td>The device IO descriptor. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>Buffer to hold data read from the descriptor. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">size</td><td>Number of bytes to read. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">actual_size</td><td>Number of bytes actually read. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">overlapped</td><td>Reserved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error.  </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad1f4f33a3ff2ee699ece61fe83210508" name="ad1f4f33a3ff2ee699ece61fe83210508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f4f33a3ff2ee699ece61fe83210508">&#9670;&#160;</a></span>WriteFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WriteFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>devfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>actual_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>overlapped</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write/send data to a device IO descriptor. </p>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#ad1f4f33a3ff2ee699ece61fe83210508" title="Write/send data to a device IO descriptor.">WriteFile()</a> API. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x102aa</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">devfd</td><td>The device IO descriptor. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Buffer to hold data to be written to the descriptor. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">size</td><td>Number of bytes to write. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">actual_size</td><td>Number of bytes actually written. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">overlapped</td><td>Reserved. </td></tr>
   </table>
   </dd>
 </dl>

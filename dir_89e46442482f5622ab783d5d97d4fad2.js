@@ -1,6 +1,7 @@
 var dir_89e46442482f5622ab783d5d97d4fad2 =
 [
     [ "ui", "dir_fc0f3252f3a072e51ecf0f9666ed4795.html", "dir_fc0f3252f3a072e51ecf0f9666ed4795" ],
+    [ "audio.h", "audio_8h.html", "audio_8h" ],
     [ "common.h", "common_8h.html", "common_8h" ],
     [ "datetime.h", "datetime_8h.html", "datetime_8h" ],
     [ "devio.h", "devio_8h.html", "devio_8h" ],

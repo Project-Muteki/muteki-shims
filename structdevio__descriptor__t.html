@@ -118,9 +118,10 @@ Data Fields</h2></td></tr>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>path</b> [80]</td></tr>
 <tr class="memdesc:abd3541cb6cfa3b608f98283a166d271e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the device or DOS 8.3 path to the file. <br /></td></tr>
 <tr class="separator:abd3541cb6cfa3b608f98283a166d271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4362bf254498dda76d571af6afc374d1" id="r_a4362bf254498dda76d571af6afc374d1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevio__descriptor__t.html#a4362bf254498dda76d571af6afc374d1">fd</a></td></tr>
-<tr class="memdesc:a4362bf254498dda76d571af6afc374d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">File descriptor if this descriptor is file-backed or has a file-like descriptor.  <br /></td></tr>
-<tr class="separator:a4362bf254498dda76d571af6afc374d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8786fba95d181d2b4e79bbfd38c2e9e0" id="r_a8786fba95d181d2b4e79bbfd38c2e9e0"><td class="memItemLeft" align="right" valign="top"><a id="a8786fba95d181d2b4e79bbfd38c2e9e0" name="a8786fba95d181d2b4e79bbfd38c2e9e0"></a>
+<a class="el" href="devio_8h.html#aad905401d73d4d0eef800c430cede335">devio_backend_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>backend</b></td></tr>
+<tr class="memdesc:a8786fba95d181d2b4e79bbfd38c2e9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backend of this descriptor. Can be a file descriptor or a service. <br /></td></tr>
+<tr class="separator:a8786fba95d181d2b4e79bbfd38c2e9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6431cbf7e821e7471beaf8f534ea46b" id="r_aa6431cbf7e821e7471beaf8f534ea46b"><td class="memItemLeft" align="right" valign="top"><a id="aa6431cbf7e821e7471beaf8f534ea46b" name="aa6431cbf7e821e7471beaf8f534ea46b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x54</b></td></tr>
 <tr class="memdesc:aa6431cbf7e821e7471beaf8f534ea46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. <br /></td></tr>
@@ -164,25 +165,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x78</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The device IO descriptor. </p>
-</div><h2 class="groupheader">Field Documentation</h2>
-<a id="a4362bf254498dda76d571af6afc374d1" name="a4362bf254498dda76d571af6afc374d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4362bf254498dda76d571af6afc374d1">&#9670;&#160;</a></span>fd</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* devio_descriptor_t::fd</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>File descriptor if this descriptor is file-backed or has a file-like descriptor. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Change this to the file descriptor type when that is finished. </dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/muteki/<a class="el" href="devio_8h_source.html">devio.h</a></li>
 </ul>
 </div><!-- contents -->
