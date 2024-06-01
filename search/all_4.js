@@ -24,12 +24,15 @@ var searchData=
   ['devio_5fdesc_5finvalid_21',['DEVIO_DESC_INVALID',['../devio_8h.html#af93b813cbecdfcd0a7b429e994763694',1,'devio.h']]],
   ['devio_5fdesc_5fmagic_22',['DEVIO_DESC_MAGIC',['../devio_8h.html#a5bda580cad8fb376cb89556a084769f2',1,'devio.h']]],
   ['devio_5fdescriptor_5ft_23',['devio_descriptor_t',['../structdevio__descriptor__t.html',1,'']]],
-  ['dospath_24',['dospath',['../structapplet__args__v4__t.html#a76884adfcb7c6da9e0a94f40b3f0d932',1,'applet_args_v4_t']]],
-  ['draw_25',['draw',['../structlcd__s.html#ae42dcc88823a09453b3b72eafe354bbc',1,'lcd_s']]],
-  ['drawcircle_26',['DrawCircle',['../canvas_8h.html#a3d9a764b417dcf41fc09e1e1ae4dcdc4',1,'canvas.h']]],
-  ['drawellipse_27',['DrawEllipse',['../canvas_8h.html#ad0de766096edcc7773d2136513b139c1',1,'canvas.h']]],
-  ['drawing_5farea_28',['drawing_area',['../structlcd__s.html#a87c3a2ba18acdfabbc44191d48a50f5c',1,'lcd_s']]],
-  ['drawline_29',['DrawLine',['../canvas_8h.html#af86e2055057b46240bf715cd56496699',1,'canvas.h']]],
-  ['drawrect_30',['DrawRect',['../canvas_8h.html#afa3ab157afc2b7c28ea0fb9aa0529a94',1,'canvas.h']]],
-  ['drawroundrect_31',['DrawRoundRect',['../canvas_8h.html#a92cc4c7b95e3cbd29adf24002348c055',1,'canvas.h']]]
+  ['direction_5fdefault_24',['DIRECTION_DEFAULT',['../audio_8h.html#a1d6d3f6a69949cf8d7d0686124d90e85abcef02f91550ca5a4e8f091ff37a73d9',1,'audio.h']]],
+  ['direction_5fin_25',['DIRECTION_IN',['../audio_8h.html#a1d6d3f6a69949cf8d7d0686124d90e85a66a3c638b3f4a3d2e144245311b29241',1,'audio.h']]],
+  ['direction_5fout_26',['DIRECTION_OUT',['../audio_8h.html#a1d6d3f6a69949cf8d7d0686124d90e85a110d8bc2cf7464da0e5b438dc51ee183',1,'audio.h']]],
+  ['dospath_27',['dospath',['../structapplet__args__v4__t.html#a76884adfcb7c6da9e0a94f40b3f0d932',1,'applet_args_v4_t']]],
+  ['draw_28',['draw',['../structlcd__s.html#ae42dcc88823a09453b3b72eafe354bbc',1,'lcd_s']]],
+  ['drawcircle_29',['DrawCircle',['../canvas_8h.html#a3d9a764b417dcf41fc09e1e1ae4dcdc4',1,'canvas.h']]],
+  ['drawellipse_30',['DrawEllipse',['../canvas_8h.html#ad0de766096edcc7773d2136513b139c1',1,'canvas.h']]],
+  ['drawing_5farea_31',['drawing_area',['../structlcd__s.html#a87c3a2ba18acdfabbc44191d48a50f5c',1,'lcd_s']]],
+  ['drawline_32',['DrawLine',['../canvas_8h.html#af86e2055057b46240bf715cd56496699',1,'canvas.h']]],
+  ['drawrect_33',['DrawRect',['../canvas_8h.html#afa3ab157afc2b7c28ea0fb9aa0529a94',1,'canvas.h']]],
+  ['drawroundrect_34',['DrawRoundRect',['../canvas_8h.html#a92cc4c7b95e3cbd29adf24002348c055',1,'canvas.h']]]
 ];
