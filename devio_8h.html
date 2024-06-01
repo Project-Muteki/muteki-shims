@@ -142,9 +142,9 @@ typedef char&#160;</td><td class="memItemRight" valign="bottom"><b>device_servic
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab5bbdff6ce1445ce1315b7c4cef8089a" id="r_ab5bbdff6ce1445ce1315b7c4cef8089a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#ab5bbdff6ce1445ce1315b7c4cef8089a">CreateFile</a> (char *pathname, unsigned int access, unsigned int shmode, void *secattr, unsigned int on_noentry, unsigned int flags, void *template_file)</td></tr>
-<tr class="memdesc:ab5bbdff6ce1445ce1315b7c4cef8089a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open or create a file/device by its <code>pathname</code>.  <br /></td></tr>
-<tr class="separator:ab5bbdff6ce1445ce1315b7c4cef8089a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d5c8ec17bb4eaa87daeaf1007e5736" id="r_a53d5c8ec17bb4eaa87daeaf1007e5736"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736">CreateFile</a> (const char *pathname, unsigned int access, unsigned int shmode, void *secattr, unsigned int on_noentry, unsigned int flags, void *template_file)</td></tr>
+<tr class="memdesc:a53d5c8ec17bb4eaa87daeaf1007e5736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open or create a file/device by its <code>pathname</code>.  <br /></td></tr>
+<tr class="separator:a53d5c8ec17bb4eaa87daeaf1007e5736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b978028308602d13c21f47be32f6a9" id="r_a98b978028308602d13c21f47be32f6a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="devio_8h.html#a98b978028308602d13c21f47be32f6a9">ReadFile</a> (<a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> *devfd, void *buf, size_t size, size_t *actual_size, void *overlapped)</td></tr>
 <tr class="memdesc:a98b978028308602d13c21f47be32f6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read/receive data from a device IO descriptor.  <br /></td></tr>
 <tr class="separator:a98b978028308602d13c21f47be32f6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,7 +174,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Invalid descriptor. </p>
-<p>This is usually returned by <a class="el" href="devio_8h.html#ab5bbdff6ce1445ce1315b7c4cef8089a" title="Open or create a file/device by its pathname.">CreateFile()</a> when an error occurred. </p>
+<p>This is usually returned by <a class="el" href="devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736" title="Open or create a file/device by its pathname.">CreateFile()</a> when an error occurred. </p>
 
 </div>
 </div>
@@ -256,8 +256,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab5bbdff6ce1445ce1315b7c4cef8089a" name="ab5bbdff6ce1445ce1315b7c4cef8089a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5bbdff6ce1445ce1315b7c4cef8089a">&#9670;&#160;</a></span>CreateFile()</h2>
+<a id="a53d5c8ec17bb4eaa87daeaf1007e5736" name="a53d5c8ec17bb4eaa87daeaf1007e5736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d5c8ec17bb4eaa87daeaf1007e5736">&#9670;&#160;</a></span>CreateFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +268,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structdevio__descriptor__t.html">devio_descriptor_t</a> * CreateFile </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>pathname</em>, </td>
         </tr>
         <tr>
@@ -321,7 +321,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open or create a file/device by its <code>pathname</code>. </p>
-<p>Analogous to the Windows <a class="el" href="devio_8h.html#ab5bbdff6ce1445ce1315b7c4cef8089a" title="Open or create a file/device by its pathname.">CreateFile()</a> API. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed. </dd></dl>
+<p>Analogous to the Windows <a class="el" href="devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736" title="Open or create a file/device by its pathname.">CreateFile()</a> API. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x102a7</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

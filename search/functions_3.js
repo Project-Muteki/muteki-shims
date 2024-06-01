@@ -9,7 +9,7 @@ var searchData=
   ['convstrtounicode_6',['ConvStrToUnicode',['../utf16_8h.html#a28c3557ce0b22dda56167d7d34271dfe',1,'utf16.h']]],
   ['createbutton_7',['CreateButton',['../button_8h.html#a2f7fcf7966b58a965ec4bcadf9e450b8',1,'button.h']]],
   ['createcompatiblelcd_8',['CreateCompatibleLCD',['../canvas_8h.html#ae8d53e141ab966cba778a9b9be545331',1,'canvas.h']]],
-  ['createfile_9',['CreateFile',['../devio_8h.html#ab5bbdff6ce1445ce1315b7c4cef8089a',1,'devio.h']]],
+  ['createfile_9',['CreateFile',['../devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736',1,'devio.h']]],
   ['createvirtuallcd_10',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
   ['cursorlock_11',['CursorLock',['../canvas_8h.html#a6b82197758044bd6b4f728adadb1e481',1,'canvas.h']]],
   ['cursorunock_12',['CursorUnock',['../canvas_8h.html#a83fb9bd1df11fb75ad36fd154c76dcaa',1,'canvas.h']]]
