@@ -6,6 +6,7 @@ var annotated_dup =
     [ "device_service_pcm_s", "structdevice__service__pcm__s.html", null ],
     [ "devio_descriptor_t", "structdevio__descriptor__t.html", "structdevio__descriptor__t" ],
     [ "event_s", "structevent__s.html", "structevent__s" ],
+    [ "filepicker_context_s", "structfilepicker__context__s.html", "structfilepicker__context__s" ],
     [ "find_context_t", "structfind__context__t.html", "structfind__context__t" ],
     [ "fs_stat_t", "structfs__stat__t.html", "structfs__stat__t" ],
     [ "key_press_event_config_t", "structkey__press__event__config__t.html", "structkey__press__event__config__t" ],
