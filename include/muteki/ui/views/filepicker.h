@@ -213,8 +213,9 @@ extern bool _GetSaveFileName(filepicker_context_t *ctx);
 
 /**
  * @brief Read the next path from a context struct.
+ * @x_syscall_num `0x101d4`
  * @param ctx The file picker context.
- * @param out UTF16 string. Recommended to be at least 260 CUs long.
+ * @param[out] out UTF16 string. Recommended to be at least 260 CUs long.
  * @retval 0 @x_term ok
  * @retval 1 @x_term ng
  */
