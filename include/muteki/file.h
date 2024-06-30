@@ -63,7 +63,7 @@ extern file_descriptor_t *__wfopen(const UTF16 *pathname, const UTF16 *mode);
  * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Number of data units read.
  */
-extern size_t _fread(file_descriptor_t *ptr, size_t size, size_t nmemb, void *stream);
+extern size_t _fread(void *ptr, size_t size, size_t nmemb, file_descriptor_t *stream);
 
 /**
  * @brief Write @p nmemb data units of size @p size to a file.
@@ -74,7 +74,7 @@ extern size_t _fread(file_descriptor_t *ptr, size_t size, size_t nmemb, void *st
  * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @return Number of data units written.
  */
-extern size_t _fwrite(const file_descriptor_t *ptr, size_t size, size_t nmemb, void *stream);
+extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, file_descriptor_t *stream);
 
 /**
  * @brief Seek to a specific position in an opened file.

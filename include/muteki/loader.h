@@ -278,7 +278,7 @@ extern size_t _ReadFile(loader_file_descriptor_t *ldrfd, void *buf, size_t size)
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */
-extern int _FseekFile(loader_file_descriptor_t *ldrfd, size_t offset, sys_seek_whence_e whence);
+extern int _FseekFile(loader_file_descriptor_t *ldrfd, size_t offset, int whence);
 
 /**
  * @brief Get the size of sub-file.
