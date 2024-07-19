@@ -129,6 +129,20 @@ enum lcd_surface_pixfmt_e {
 };
 
 /**
+ * @brief Valid pixel buffer encoding for LCD surfaces.
+ */
+enum lcd_surface_encoding_e {
+    /**
+     * @brief Pixel buffer is contained in HCA container.
+     */
+    LCD_SURFACE_ENCODING_HCA = 1,
+    /**
+     * @brief Pixel buffer is in raw format.
+     */
+    LCD_SURFACE_ENCODING_RAW = 2,
+};
+
+/**
  * @brief Rotation values used by lcd_rotate_callback_t.
  */
 enum rotation_value_e {
@@ -417,10 +431,10 @@ struct lcd_surface_s {
      */
     short xsize; // 8:10
     /**
-     * @brief Purpose unknown.
-     * @details Seems to be always 0x2.
+     * @brief Pixel buffer encoding.
+     * @see lcd_surface_encoding_e
      */
-    short unk_0xa; // 10:12
+    short encoding; // 10:12
     /**
      * @brief Palette used to pack RGBA color into pixels.
      * @details Probably only make sense when using pixfmt other than RGBA (i.e. depth of 32). It should be NULL in
