@@ -143,6 +143,10 @@ var ui_2common_8h =
       [ "KEY_SHIFT_PGUP", "ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920a1c9520ee1b8c92586bbff9543d2fd934", null ],
       [ "KEY_SHIFT_PGDN", "ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920ac47e416430e7feba138d2db3a1c1470e", null ]
     ] ],
+    [ "lcd_surface_encoding_e", "ui_2common_8h.html#ac8ad346137bfb59adac20e2fb680f76d", [
+      [ "LCD_SURFACE_ENCODING_HCA", "ui_2common_8h.html#ac8ad346137bfb59adac20e2fb680f76da6bc24f25680455a1709b49f8d93dd8e0", null ],
+      [ "LCD_SURFACE_ENCODING_RAW", "ui_2common_8h.html#ac8ad346137bfb59adac20e2fb680f76da07a8c73511b55fbeba3784617f888b79", null ]
+    ] ],
     [ "lcd_surface_pixfmt_e", "ui_2common_8h.html#a85735dada566607df198227a8c828b46", [
       [ "LCD_SURFACE_PIXFMT_L1", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a2cde32fb3810caab6aca986952af209b", null ],
       [ "LCD_SURFACE_PIXFMT_L4", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a0c6766a6b877f139b47b8c50fc84249e", null ],

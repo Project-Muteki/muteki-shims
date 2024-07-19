@@ -138,12 +138,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aefa9bd4f56dad0bd15ec58277df301eb" id="r_aefa9bd4f56dad0bd15ec58277df301eb"><td class="memItemLeft" align="right" valign="top">file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#aefa9bd4f56dad0bd15ec58277df301eb">__wfopen</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *mode)</td></tr>
 <tr class="memdesc:aefa9bd4f56dad0bd15ec58277df301eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file located at UTF-16-encoded <code>pathname</code>.  <br /></td></tr>
 <tr class="separator:aefa9bd4f56dad0bd15ec58277df301eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8c2acb4ac0b94bf3ee5af5d18913927" id="r_ad8c2acb4ac0b94bf3ee5af5d18913927"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#ad8c2acb4ac0b94bf3ee5af5d18913927">_fread</a> (file_descriptor_t *ptr, size_t size, size_t nmemb, void *stream)</td></tr>
-<tr class="memdesc:ad8c2acb4ac0b94bf3ee5af5d18913927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read <code>nmemb</code> data units of size <code>size</code> from a file.  <br /></td></tr>
-<tr class="separator:ad8c2acb4ac0b94bf3ee5af5d18913927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7b6cb871bc5b33fb53f5c27f5d2002d" id="r_ab7b6cb871bc5b33fb53f5c27f5d2002d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#ab7b6cb871bc5b33fb53f5c27f5d2002d">_fwrite</a> (const file_descriptor_t *ptr, size_t size, size_t nmemb, void *stream)</td></tr>
-<tr class="memdesc:ab7b6cb871bc5b33fb53f5c27f5d2002d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write <code>nmemb</code> data units of size <code>size</code> to a file.  <br /></td></tr>
-<tr class="separator:ab7b6cb871bc5b33fb53f5c27f5d2002d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61f4c0f79548886158e019d812eba61" id="r_ab61f4c0f79548886158e019d812eba61"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#ab61f4c0f79548886158e019d812eba61">_fread</a> (void *ptr, size_t size, size_t nmemb, file_descriptor_t *stream)</td></tr>
+<tr class="memdesc:ab61f4c0f79548886158e019d812eba61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read <code>nmemb</code> data units of size <code>size</code> from a file.  <br /></td></tr>
+<tr class="separator:ab61f4c0f79548886158e019d812eba61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91b869693f31100f7d847588f830972" id="r_af91b869693f31100f7d847588f830972"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#af91b869693f31100f7d847588f830972">_fwrite</a> (const void *ptr, size_t size, size_t nmemb, file_descriptor_t *stream)</td></tr>
+<tr class="memdesc:af91b869693f31100f7d847588f830972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write <code>nmemb</code> data units of size <code>size</code> to a file.  <br /></td></tr>
+<tr class="separator:af91b869693f31100f7d847588f830972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c11cd43bf9ac1607c0c6de35de24280" id="r_a5c11cd43bf9ac1607c0c6de35de24280"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a5c11cd43bf9ac1607c0c6de35de24280">__fseek</a> (file_descriptor_t *stream, long offset, int whence)</td></tr>
 <tr class="memdesc:a5c11cd43bf9ac1607c0c6de35de24280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek to a specific position in an opened file.  <br /></td></tr>
 <tr class="separator:a5c11cd43bf9ac1607c0c6de35de24280"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -413,8 +413,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8c2acb4ac0b94bf3ee5af5d18913927" name="ad8c2acb4ac0b94bf3ee5af5d18913927"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8c2acb4ac0b94bf3ee5af5d18913927">&#9670;&#160;</a></span>_fread()</h2>
+<a id="ab61f4c0f79548886158e019d812eba61" name="ab61f4c0f79548886158e019d812eba61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61f4c0f79548886158e019d812eba61">&#9670;&#160;</a></span>_fread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +425,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t _fread </td>
           <td>(</td>
-          <td class="paramtype">file_descriptor_t *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>ptr</em>, </td>
         </tr>
         <tr>
@@ -443,7 +443,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">file_descriptor_t *&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -508,8 +508,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab7b6cb871bc5b33fb53f5c27f5d2002d" name="ab7b6cb871bc5b33fb53f5c27f5d2002d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7b6cb871bc5b33fb53f5c27f5d2002d">&#9670;&#160;</a></span>_fwrite()</h2>
+<a id="af91b869693f31100f7d847588f830972" name="af91b869693f31100f7d847588f830972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91b869693f31100f7d847588f830972">&#9670;&#160;</a></span>_fwrite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,7 +520,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t _fwrite </td>
           <td>(</td>
-          <td class="paramtype">const file_descriptor_t *&#160;</td>
+          <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>ptr</em>, </td>
         </tr>
         <tr>
@@ -538,7 +538,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype">file_descriptor_t *&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>

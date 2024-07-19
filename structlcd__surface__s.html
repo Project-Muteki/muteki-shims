@@ -131,9 +131,9 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
 <tr class="memitem:a264e253c76cbbdf0da1dbf1fcb3e5781" id="r_a264e253c76cbbdf0da1dbf1fcb3e5781"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__surface__s.html#a264e253c76cbbdf0da1dbf1fcb3e5781">xsize</a></td></tr>
 <tr class="memdesc:a264e253c76cbbdf0da1dbf1fcb3e5781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel row size in bytes.  <br /></td></tr>
 <tr class="separator:a264e253c76cbbdf0da1dbf1fcb3e5781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01b7f62dade43592a2429d128d73191c" id="r_a01b7f62dade43592a2429d128d73191c"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__surface__s.html#a01b7f62dade43592a2429d128d73191c">unk_0xa</a></td></tr>
-<tr class="memdesc:a01b7f62dade43592a2429d128d73191c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purpose unknown.  <br /></td></tr>
-<tr class="separator:a01b7f62dade43592a2429d128d73191c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9247241238c334b2fdc51df91c00bb71" id="r_a9247241238c334b2fdc51df91c00bb71"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__surface__s.html#a9247241238c334b2fdc51df91c00bb71">encoding</a></td></tr>
+<tr class="memdesc:a9247241238c334b2fdc51df91c00bb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel buffer encoding.  <br /></td></tr>
+<tr class="separator:a9247241238c334b2fdc51df91c00bb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19c0ab393a6283ab9d143536a4a2ad51" id="r_a19c0ab393a6283ab9d143536a4a2ad51"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__surface__s.html#a19c0ab393a6283ab9d143536a4a2ad51">palette</a></td></tr>
 <tr class="memdesc:a19c0ab393a6283ab9d143536a4a2ad51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Palette used to pack RGBA color into pixels.  <br /></td></tr>
 <tr class="separator:a19c0ab393a6283ab9d143536a4a2ad51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +179,23 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
 
 </div>
 </div>
+<a id="a9247241238c334b2fdc51df91c00bb71" name="a9247241238c334b2fdc51df91c00bb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9247241238c334b2fdc51df91c00bb71">&#9670;&#160;</a></span>encoding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short lcd_surface_s::encoding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pixel buffer encoding. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#ac8ad346137bfb59adac20e2fb680f76d" title="Valid pixel buffer encoding for LCD surfaces.">lcd_surface_encoding_e</a> </dd></dl>
+
+</div>
+</div>
 <a id="a2f96dc50466bc9202ca976c204f589bc" name="a2f96dc50466bc9202ca976c204f589bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f96dc50466bc9202ca976c204f589bc">&#9670;&#160;</a></span>magic</h2>
 
@@ -210,23 +227,6 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
 
 <p>Palette used to pack RGBA color into pixels. </p>
 <p>Probably only make sense when using pixfmt other than RGBA (i.e. depth of 32). It should be NULL in that case. </p>
-
-</div>
-</div>
-<a id="a01b7f62dade43592a2429d128d73191c" name="a01b7f62dade43592a2429d128d73191c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01b7f62dade43592a2429d128d73191c">&#9670;&#160;</a></span>unk_0xa</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short lcd_surface_s::unk_0xa</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Purpose unknown. </p>
-<p>Seems to be always 0x2. </p>
 
 </div>
 </div>

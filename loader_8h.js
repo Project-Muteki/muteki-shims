@@ -9,7 +9,7 @@ var loader_8h =
     ] ],
     [ "_CloseFile", "loader_8h.html#a8f9777d26cdd3c036fd17f9aaf51f969", null ],
     [ "_FileSize", "loader_8h.html#afe3adf7250c5473d7333a6fce13ba605", null ],
-    [ "_FseekFile", "loader_8h.html#aeec81e34fa35e98b3e01e99699fda603", null ],
+    [ "_FseekFile", "loader_8h.html#a6b1f09cb123d2a6f157bbdf6e11e7790", null ],
     [ "_OpenFile", "loader_8h.html#a08a00f85d09969c332f31a432c55f07e", null ],
     [ "_OpenFileW", "loader_8h.html#a92f0c2a2280ddd8209fbaffc7c3e187e", null ],
     [ "_OpenSubFile", "loader_8h.html#a40bea686a62736304340d056c2961982", null ],

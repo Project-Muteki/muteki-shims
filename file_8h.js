@@ -10,7 +10,7 @@ var file_8h =
     [ "__wfopen", "file_8h.html#aefa9bd4f56dad0bd15ec58277df301eb", null ],
     [ "_afopen", "file_8h.html#a8980ef8033e0f7097ab1ff7244b67800", null ],
     [ "_fclose", "file_8h.html#aca01556c61c6038965e8013cbf618f85", null ],
-    [ "_fread", "file_8h.html#ad8c2acb4ac0b94bf3ee5af5d18913927", null ],
+    [ "_fread", "file_8h.html#ab61f4c0f79548886158e019d812eba61", null ],
     [ "_ftell", "file_8h.html#a44b2033b575c5de50f66e551b515f363", null ],
-    [ "_fwrite", "file_8h.html#ab7b6cb871bc5b33fb53f5c27f5d2002d", null ]
+    [ "_fwrite", "file_8h.html#af91b869693f31100f7d847588f830972", null ]
 ];
