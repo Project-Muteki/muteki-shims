@@ -18,7 +18,7 @@ extern "C" {
 #endif
 
 struct ui_widget_button_s;
-typedef ui_widget_button_s ui_widget_button_t;
+typedef struct ui_widget_button_s ui_widget_button_t;
 
 struct ui_widget_button_s {
     ui_component_t widget; // 0x0:0x34

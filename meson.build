@@ -80,6 +80,17 @@ shared_library(
 
 endif # get_option('generate_dll_replicas')
 
+local_includes = include_directories('include')
+
+executable(
+    'test-build-c',
+    'src/test.c',
+    include_directories: local_includes,
+    install: false,
+    build_by_default: false,
+)
+
 # Headers for the shims
+install_headers('include/muteki.h')
 install_subdir('include/muteki/',
     install_dir : 'include/')
