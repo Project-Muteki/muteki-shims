@@ -399,11 +399,13 @@ struct ui_rect_s;
 struct lcd_draw_s;
 struct lcd_font_s;
 struct lcd_lock_s;
-struct lcd_s;
+struct lcd_base_s;
 struct lcd_thread_safe_s;
-struct ui_event_s;
+struct ui_event_base_s;
+struct ui_event_prime_s;
 struct ui_message_s;
 struct ui_component_s;
+struct ui_multipress_event_s;
 
 typedef struct lcd_surface_s lcd_surface_t;
 typedef struct lcd_cursor_s lcd_cursor_t;
@@ -411,11 +413,29 @@ typedef struct ui_rect_s ui_rect_t;
 typedef struct lcd_draw_s lcd_draw_t;
 typedef struct lcd_font_s lcd_font_t;
 typedef struct lcd_lock_s lcd_lock_t;
-typedef struct lcd_s lcd_t;
+typedef struct lcd_base_s lcd_base_t;
 typedef struct lcd_thread_safe_s lcd_thread_safe_t;
-typedef struct ui_event_s ui_event_t;
+typedef struct ui_event_base_s ui_event_base_t;
+typedef struct ui_event_prime_s ui_event_prime_t;
 typedef struct ui_message_s ui_message_t;
 typedef struct ui_component_s ui_component_t;
+typedef struct ui_multipress_event_s ui_multipress_event_t;
+
+#if defined(MUTEKI_HAS_PRIME_UI_EVENT) && MUTEKI_HAS_PRIME_UI_EVENT == 1
+#define ui_event_s ui_event_prime_s
+typedef struct ui_event_prime_s ui_event_t;
+#else
+#define ui_event_s ui_event_base_s
+typedef struct ui_event_base_s ui_event_t;
+#endif
+
+#if defined(MUTEKI_HAS_THREAD_SAFE_LCD) && MUTEKI_HAS_THREAD_SAFE_LCD == 1
+#define lcd_s lcd_thread_safe_s
+typedef struct lcd_thread_safe_s lcd_t;
+#else
+#define lcd_s lcd_base_s
+typedef struct lcd_base_s lcd_t;
+#endif
 
 /**
  * @brief Descriptor of an LCD drawing surface or hardware framebuffer.
@@ -593,8 +613,9 @@ typedef int (*lcd_rotate_callback_t)(lcd_t *self, int rotation);
 
 /**
  * @brief The LCD descriptor.
+ * @see lcd_thread_safe_t Thread-safe variant of this struct that is used on some Besta RTOS devices.
  */
-struct lcd_s {
+struct lcd_base_s {
     /** @brief Surface linked to the LCD. */
     lcd_surface_t *surface; // 0x0:0x4
     /** @brief End address of the pixel/framebuffer. */
@@ -646,19 +667,120 @@ struct lcd_s {
 
 /**
  * @brief A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.
- * @details Cast lcd_t to this to access the extra fields if the data exists.
+ * @details Define `MUTEKI_HAS_THREAD_SAFE_LCD` as 1 to make this the underlying type of ::lcd_t.
  */
 struct lcd_thread_safe_s {
-    /** @brief The common part of the original LCD descriptor. */
-    lcd_t lcd; // 0x0:0x94
-    /** @brief The added part. */
-    lcd_lock_t lock; // 0x94:0x100
-}; // 0x100 bytes
+    /** @brief Surface linked to the LCD. */
+    lcd_surface_t *surface; // 0x0:0x4
+    /** @brief End address of the pixel/framebuffer. */
+    void *pixel_end; // 0x4:0x8
+    /** @brief Total size of the pixel/framebuffer in bytes. */
+    size_t pixel_size; // 0x8:0xc
+    /** @brief Current background color. */
+    int bg_color; // 0xc:0x10
+    /** @brief Current transparent color. */
+    int transparent_color; // 0x10:0x14
+    /** @brief Per-LCD states shared by drawing routines. */
+    lcd_draw_t draw; // 0x14:0x34
+    /** @brief Per-LCD states shared by specifically font rendering routines. */
+    lcd_font_t font; // 0x34:0x5c
+    /** @brief A copy of the cursor states when the LCD descriptor was created. */
+    lcd_cursor_t saved_cursor; // 0x5c:0x6c
+    /** @brief Usable drawing area of the LCD. */
+    ui_rect_t drawing_area; // 0x6c:0x74
+    /** @brief Unknown. */
+    int unk_0x74[3]; // 0x74:0x80
+    /** @brief Cursor states. */
+    lcd_cursor_t *cursor; // 0x80:0x84
+    /** @brief Width of the LCD in pixels. */
+    short width; // 0x84:0x86
+    /** @brief Height of the LCD in pixels. */
+    short height; // 0x86:0x88
+    /**
+     * @brief Current canvas rotation.
+     * @details The value is `90deg * rotation` **counter-clockwise**.
+     */
+    int rotation; // 0x88:0x8c
+    /**
+     * @brief Integer size of each pixel in bytes.
+     * @note This will be 0 when a pixel takes less than a byte.
+     * @todo Verify.
+     */
+    short depth_bytes; // 0x8c:0x8e
+    /**
+     * @brief Pixel row size in bytes.
+     * @todo Verify.
+     */
+    short xsize; // 0x8e:0x90
+    /**
+     * @brief Rotation callback.
+     * @see lcd_rotate_callback_t
+     */
+    lcd_rotate_callback_t rotate; // 0x90:0x94
+    /** @brief Unknown. */
+    int unk_0x94; // 0x94:0x98
+    /** @brief A critical section descriptor. It's unclear where it is used. */
+    critical_section_t *cs; // 0x98:0x9c
+    /** @brief Shortcut to lock the descriptor. */
+    void (*lock)(); // 0x9c:0xa0
+     /** @brief Shortcut to unlock the descriptor. */
+    void (*unlock)(); // 0xa0:0xa4
+    /** @brief Unknown. */
+    int unk_0xa4[23]; // 0xa4:0x100
+};
 
 /**
- * @brief Structure for low level UI events
+ * @brief Multipress/multitouch event.
+ * @details This is a simplified version of the main UI event struct, that only contains the necessary fields to
+ * represent a multitouch or a key-press event. Used on Prime G1.
  */
-struct ui_event_s {
+struct ui_multipress_event_s {
+    /**
+     * @brief Type of event.
+     * @see ui_event_type_e List of event types.
+     */
+    unsigned int type;
+    /**
+     * @brief Finger ID of a touch event.
+     */
+    unsigned short finger_id;
+    union {
+        struct {
+            /**
+             * @brief Keycode for the first pressed key.
+             */
+            unsigned short key_code0;
+            /**
+             * @brief Keycode for the second pressed key (maybe unused).
+             */
+            unsigned short key_code1;
+        };
+        struct {
+            /**
+             * @brief The X coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
+             */
+            unsigned short touch_x;
+            /**
+             * @brief The Y coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
+             */
+            unsigned short touch_y;
+        };
+    };
+    /**
+     * @brief Unknown. Maybe unused.
+     */
+    unsigned short unk_0xb;
+};
+
+/**
+ * @brief Structure for low level UI events.
+ * @see ui_event_prime_s HP Prime G1's extension of this struct.
+ */
+struct ui_event_base_s {
     /**
      * @brief Event recipient.
      * @details If set to `NULL`, the event is a broadcast event (e.g. input event). Otherwise, the
@@ -716,6 +838,78 @@ struct ui_event_s {
      * than touch and key press.
      */
     void *unk20; // 20-24 seems to be always 0. Unused?
+};
+
+/**
+ * @brief Structure for low level UI events (Prime G1 extension).
+ * @details Define `MUTEKI_HAS_PRIME_UI_EVENT` as 1 to make this the underlying type of ui_event_t.
+ */
+struct ui_event_prime_s {
+    /**
+     * @brief Event recipient.
+     * @details If set to `NULL`, the event is a broadcast event (e.g. input event). Otherwise, the
+     * widget's ui_component_t::on_event callback will be called with this event.
+     */
+    ui_component_t *recipient; // 0-4
+    /**
+     * @brief The type of event (0x10 being key event)
+     * @see ui_event_type_e List of event types.
+     */
+    int event_type; // 4-8 16: key (?).
+    union {
+        struct {
+            /** 
+             * @brief Keycode for the first pressed key.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
+             */
+            unsigned short key_code0; // 8-10
+            /**
+             * @brief Keycode for the second pressed key.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
+             * @note Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover,
+             * some devices may lack support of simultaneous key presses.
+             */
+            unsigned short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
+        };
+        struct {
+            /**
+             * @brief The X coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
+             */
+            unsigned short touch_x;
+            /**
+             * @brief The Y coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
+             */
+            unsigned short touch_y;
+        };
+    };
+    /**
+     * @brief Unknown.
+     * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
+     */
+    void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+    /**
+     * @brief Unknown.
+     * @details Maybe used on event types other than touch and key press.
+     */
+    void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
+    /**
+     * @brief Unknown.
+     * @details Seems to be always 0, although ClearEvent() explicitly sets this to 0. Maybe used on event types other
+     * than touch and key press.
+     */
+    void *unk20; // 20-24 seems to be always 0. Unused?
+    /**
+     * @brief Number of valid multipress events available for processing.
+     */
+    size_t available_multipress_events;
+    /**
+     * @brief The multipress events.
+     */
+    ui_multipress_event_t multipress_events[8];
 };
 
 /**
