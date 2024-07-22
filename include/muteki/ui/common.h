@@ -196,6 +196,7 @@ enum stroke_predefined_dash_e {
 
 /**
  * @brief List of available keycodes.
+ * @details Keycodes starting with `KEY_PRIME_` are extended keycodes exclusive to HP Prime G1 (EA656).
  */
 enum keycode_e {
     /* 0x00 */
@@ -211,6 +212,7 @@ enum keycode_e {
     KEY_ENTER = 0x0d,
     /* 0x10 */
     KEY_MENU = 0x11,
+    KEY_FUNC_MENU = 0x11,
     KEY_FONT = 0x12,
     /* 0x20 */
     KEY_SPACE = ' ',
@@ -280,9 +282,21 @@ enum keycode_e {
     /* 0x90 */
     KEY_SYMBOL = 0x91,
     KEY_HOME = 0x93,
+    KEY_HOME_MENU = 0x93,
+    KEY_PRIME_MENU = 0x93,
     KEY_HELP = 0x95,
     KEY_SAVE = 0x96,
     KEY_SYLLABLE = 0x9e,
+    /* 0xb0 */
+    KEY_PRIME_APPS = 0xb1,
+    KEY_PRIME_PLOT,
+    KEY_PRIME_NUM,
+    KEY_PRIME_VIEW,
+    KEY_PRIME_CAS,
+    KEY_PRIME_ALPHA,
+    KEY_PRIME_MINUS,
+    KEY_PRIME_DECIMAL_POINT,
+    KEY_PRIME_PLUS,
     /* 0xf0 */
     KEY_SEARCH = 0xf6,
     KEY_BACKLIGHT = 0xf8,
@@ -292,6 +306,7 @@ enum keycode_e {
     /* 0x100+ */
     KEY_INS = 0x101,
     KEY_SHIFT_PGUP = 0xe047,
+    KEY_PRIME_HOME = 0xe047,
     KEY_SHIFT_PGDN = 0xe04f,
 };
 
