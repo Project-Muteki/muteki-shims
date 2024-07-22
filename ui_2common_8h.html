@@ -137,14 +137,20 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__lock__s.html">lcd_lock_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An extended part of the LCD descriptor that implements descriptor locking.  <a href="structlcd__lock__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__s.html">lcd_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LCD descriptor.  <a href="structlcd__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__base__s.html">lcd_base_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The LCD descriptor.  <a href="structlcd__base__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__thread__safe__s.html">lcd_thread_safe_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.  <a href="structlcd__thread__safe__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__s.html">ui_event_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for low level UI events.  <a href="structui__event__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__multipress__event__s.html">ui_multipress_event_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multipress/multitouch event.  <a href="structui__multipress__event__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__base__s.html">ui_event_base_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for low level UI events.  <a href="structui__event__base__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__prime__s.html">ui_event_prime_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for low level UI events (Prime G1 extension).  <a href="structui__event__prime__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__message__s.html">ui_message_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event struct used by SendMessage().  <a href="structui__message__s.html#details">More...</a><br /></td></tr>
@@ -155,6 +161,12 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a345fc2016c20f349464d40ae3bc795b5" id="r_a345fc2016c20f349464d40ae3bc795b5"><td class="memItemLeft" align="right" valign="top"><a id="a345fc2016c20f349464d40ae3bc795b5" name="a345fc2016c20f349464d40ae3bc795b5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_s</b>&#160;&#160;&#160;<a class="el" href="structui__event__base__s.html">ui_event_base_s</a></td></tr>
+<tr class="separator:a345fc2016c20f349464d40ae3bc795b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d63ad6a3852cf9527d45e19ae8c4b12" id="r_a4d63ad6a3852cf9527d45e19ae8c4b12"><td class="memItemLeft" align="right" valign="top"><a id="a4d63ad6a3852cf9527d45e19ae8c4b12" name="a4d63ad6a3852cf9527d45e19ae8c4b12"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_s</b>&#160;&#160;&#160;<a class="el" href="structlcd__base__s.html">lcd_base_s</a></td></tr>
+<tr class="separator:a4d63ad6a3852cf9527d45e19ae8c4b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d12e70227ae6a8e9e465d42a4de14bf" id="r_a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf">RGB_FROM_U8</a>(r,  g,  b)&#160;&#160;&#160;((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</td></tr>
 <tr class="memdesc:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert separate RGB values to integer RGB representation.  <br /></td></tr>
 <tr class="separator:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,22 +191,34 @@ typedef struct <a class="el" href="structlcd__font__s.html">lcd_font_s</a>&#160;
 <tr class="memitem:a26b900705e9f5ffce32d611e5231373e" id="r_a26b900705e9f5ffce32d611e5231373e"><td class="memItemLeft" align="right" valign="top"><a id="a26b900705e9f5ffce32d611e5231373e" name="a26b900705e9f5ffce32d611e5231373e"></a>
 typedef struct <a class="el" href="structlcd__lock__s.html">lcd_lock_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_lock_t</b></td></tr>
 <tr class="separator:a26b900705e9f5ffce32d611e5231373e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5d59276663ba11284c84cb7dcc915cf" id="r_ab5d59276663ba11284c84cb7dcc915cf"><td class="memItemLeft" align="right" valign="top"><a id="ab5d59276663ba11284c84cb7dcc915cf" name="ab5d59276663ba11284c84cb7dcc915cf"></a>
-typedef struct <a class="el" href="structlcd__s.html">lcd_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_t</b></td></tr>
-<tr class="separator:ab5d59276663ba11284c84cb7dcc915cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14cf00a9609c8ab40592d711921c7188" id="r_a14cf00a9609c8ab40592d711921c7188"><td class="memItemLeft" align="right" valign="top"><a id="a14cf00a9609c8ab40592d711921c7188" name="a14cf00a9609c8ab40592d711921c7188"></a>
+typedef struct <a class="el" href="structlcd__base__s.html">lcd_base_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_base_t</b></td></tr>
+<tr class="separator:a14cf00a9609c8ab40592d711921c7188"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a672ecacc55975da31df89ba6de942631" id="r_a672ecacc55975da31df89ba6de942631"><td class="memItemLeft" align="right" valign="top"><a id="a672ecacc55975da31df89ba6de942631" name="a672ecacc55975da31df89ba6de942631"></a>
 typedef struct <a class="el" href="structlcd__thread__safe__s.html">lcd_thread_safe_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_thread_safe_t</b></td></tr>
 <tr class="separator:a672ecacc55975da31df89ba6de942631"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f3ebe0658cbdbff05b8e0806245062" id="r_a13f3ebe0658cbdbff05b8e0806245062"><td class="memItemLeft" align="right" valign="top"><a id="a13f3ebe0658cbdbff05b8e0806245062" name="a13f3ebe0658cbdbff05b8e0806245062"></a>
-typedef struct <a class="el" href="structui__event__s.html">ui_event_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_t</b></td></tr>
-<tr class="separator:a13f3ebe0658cbdbff05b8e0806245062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30c0b3ae5570cafc84658e45604dfda" id="r_ac30c0b3ae5570cafc84658e45604dfda"><td class="memItemLeft" align="right" valign="top"><a id="ac30c0b3ae5570cafc84658e45604dfda" name="ac30c0b3ae5570cafc84658e45604dfda"></a>
+typedef struct <a class="el" href="structui__event__base__s.html">ui_event_base_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_base_t</b></td></tr>
+<tr class="separator:ac30c0b3ae5570cafc84658e45604dfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f39d7d5fe5d04f76f76544c1260aa23" id="r_a1f39d7d5fe5d04f76f76544c1260aa23"><td class="memItemLeft" align="right" valign="top"><a id="a1f39d7d5fe5d04f76f76544c1260aa23" name="a1f39d7d5fe5d04f76f76544c1260aa23"></a>
+typedef struct <a class="el" href="structui__event__prime__s.html">ui_event_prime_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_prime_t</b></td></tr>
+<tr class="separator:a1f39d7d5fe5d04f76f76544c1260aa23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a129e7efc3eed2c7224aa8836902ec20a" id="r_a129e7efc3eed2c7224aa8836902ec20a"><td class="memItemLeft" align="right" valign="top"><a id="a129e7efc3eed2c7224aa8836902ec20a" name="a129e7efc3eed2c7224aa8836902ec20a"></a>
 typedef struct <a class="el" href="structui__message__s.html">ui_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_message_t</b></td></tr>
 <tr class="separator:a129e7efc3eed2c7224aa8836902ec20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d6d9f1cc52acef63b2bcb922d9f312a" id="r_a8d6d9f1cc52acef63b2bcb922d9f312a"><td class="memItemLeft" align="right" valign="top"><a id="a8d6d9f1cc52acef63b2bcb922d9f312a" name="a8d6d9f1cc52acef63b2bcb922d9f312a"></a>
 typedef struct <a class="el" href="structui__component__s.html">ui_component_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_component_t</b></td></tr>
 <tr class="separator:a8d6d9f1cc52acef63b2bcb922d9f312a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ef9e48cde5ff06441262c36e162fba5" id="r_a7ef9e48cde5ff06441262c36e162fba5"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5">lcd_rotate_callback_t</a>) (<a class="el" href="structlcd__s.html">lcd_t</a> *self, int rotation)</td></tr>
+<tr class="memitem:ab319ff33cb05ce60cb3e35af842e80b7" id="r_ab319ff33cb05ce60cb3e35af842e80b7"><td class="memItemLeft" align="right" valign="top"><a id="ab319ff33cb05ce60cb3e35af842e80b7" name="ab319ff33cb05ce60cb3e35af842e80b7"></a>
+typedef struct <a class="el" href="structui__multipress__event__s.html">ui_multipress_event_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_multipress_event_t</b></td></tr>
+<tr class="separator:ab319ff33cb05ce60cb3e35af842e80b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60dfc45aaf8437a0ec1d966fd504f094" id="r_a60dfc45aaf8437a0ec1d966fd504f094"><td class="memItemLeft" align="right" valign="top"><a id="a60dfc45aaf8437a0ec1d966fd504f094" name="a60dfc45aaf8437a0ec1d966fd504f094"></a>
+typedef struct <a class="el" href="structui__event__base__s.html">ui_event_base_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_t</b></td></tr>
+<tr class="separator:a60dfc45aaf8437a0ec1d966fd504f094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569ee32aab18538abd9aba90ff98b3f7" id="r_a569ee32aab18538abd9aba90ff98b3f7"><td class="memItemLeft" align="right" valign="top"><a id="a569ee32aab18538abd9aba90ff98b3f7" name="a569ee32aab18538abd9aba90ff98b3f7"></a>
+typedef struct <a class="el" href="structlcd__base__s.html">lcd_base_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_t</b></td></tr>
+<tr class="separator:a569ee32aab18538abd9aba90ff98b3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef9e48cde5ff06441262c36e162fba5" id="r_a7ef9e48cde5ff06441262c36e162fba5"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5">lcd_rotate_callback_t</a>) (<a class="el" href="structlcd__base__s.html">lcd_t</a> *self, int rotation)</td></tr>
 <tr class="memdesc:a7ef9e48cde5ff06441262c36e162fba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback type for handling canvas rotation.  <br /></td></tr>
 <tr class="separator:a7ef9e48cde5ff06441262c36e162fba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -281,7 +305,7 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a2a3ead8fb0194794e230be112a87d4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined dash patterns.  <a href="ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cb">More...</a><br /></td></tr>
 <tr class="separator:a2a3ead8fb0194794e230be112a87d4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7cc0af385a79f99f5634d7050ad9920" id="r_af7cc0af385a79f99f5634d7050ad9920"><td class="memItemLeft" align="right" valign="top"><a id="af7cc0af385a79f99f5634d7050ad9920" name="af7cc0af385a79f99f5634d7050ad9920"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920">keycode_e</a> { <br />
+<tr class="memitem:af7cc0af385a79f99f5634d7050ad9920" id="r_af7cc0af385a79f99f5634d7050ad9920"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920">keycode_e</a> { <br />
 &#160;&#160;<b>KEY_ESC</b> = 0x01
 , <b>KEY_LEFT</b>
 , <b>KEY_UP</b>
@@ -295,89 +319,104 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>KEY_DEL</b> = 0xc
 , <b>KEY_ENTER</b> = 0x0d
 , <b>KEY_MENU</b> = 0x11
-, <b>KEY_FONT</b> = 0x12
+, <b>KEY_FUNC_MENU</b> = 0x11
 , <br />
-&#160;&#160;<b>KEY_SPACE</b> = ' '
+&#160;&#160;<b>KEY_FONT</b> = 0x12
+, <b>KEY_SPACE</b> = ' '
 , <b>KEY_EXCL</b> = '!'
 , <b>KEY_TAB</b> = 0x22
-, <b>KEY_HASH</b> = '#'
 , <br />
-&#160;&#160;<b>KEY_DOLLAR</b> = '$'
+&#160;&#160;<b>KEY_HASH</b> = '#'
+, <b>KEY_DOLLAR</b> = '$'
 , <b>KEY_PERCENT</b> = ''
 , <b>KEY_LPAREN</b> = '('
-, <b>KEY_RPAREN</b> = ')'
 , <br />
-&#160;&#160;<b>KEY_STAR</b> = '*'
+&#160;&#160;<b>KEY_RPAREN</b> = ')'
+, <b>KEY_STAR</b> = '*'
 , <b>KEY_COMMA</b> = ','
 , <b>KEY_DASH</b> = '-'
-, <b>KEY_DOT</b> = '.'
 , <br />
-&#160;&#160;<b>KEY_0</b> = '0'
+&#160;&#160;<b>KEY_DOT</b> = '.'
+, <b>KEY_0</b> = '0'
 , <b>KEY_1</b> = '1'
 , <b>KEY_2</b> = '2'
-, <b>KEY_3</b> = '3'
 , <br />
-&#160;&#160;<b>KEY_4</b> = '4'
+&#160;&#160;<b>KEY_3</b> = '3'
+, <b>KEY_4</b> = '4'
 , <b>KEY_5</b> = '5'
 , <b>KEY_6</b> = '6'
-, <b>KEY_7</b> = '7'
 , <br />
-&#160;&#160;<b>KEY_8</b> = '8'
+&#160;&#160;<b>KEY_7</b> = '7'
+, <b>KEY_8</b> = '8'
 , <b>KEY_9</b> = '9'
 , <b>KEY_QUESTION</b> = '?'
-, <b>KEY_AT</b> = '@'
 , <br />
-&#160;&#160;<b>KEY_A</b> = 'A'
+&#160;&#160;<b>KEY_AT</b> = '@'
+, <b>KEY_A</b> = 'A'
 , <b>KEY_B</b> = 'B'
 , <b>KEY_C</b> = 'C'
-, <b>KEY_D</b> = 'D'
 , <br />
-&#160;&#160;<b>KEY_E</b> = 'E'
+&#160;&#160;<b>KEY_D</b> = 'D'
+, <b>KEY_E</b> = 'E'
 , <b>KEY_F</b> = 'F'
 , <b>KEY_G</b> = 'G'
-, <b>KEY_H</b> = 'H'
 , <br />
-&#160;&#160;<b>KEY_I</b> = 'I'
+&#160;&#160;<b>KEY_H</b> = 'H'
+, <b>KEY_I</b> = 'I'
 , <b>KEY_J</b> = 'J'
 , <b>KEY_K</b> = 'K'
-, <b>KEY_L</b> = 'L'
 , <br />
-&#160;&#160;<b>KEY_M</b> = 'M'
+&#160;&#160;<b>KEY_L</b> = 'L'
+, <b>KEY_M</b> = 'M'
 , <b>KEY_N</b> = 'N'
 , <b>KEY_O</b> = 'O'
-, <b>KEY_P</b> = 'P'
 , <br />
-&#160;&#160;<b>KEY_Q</b> = 'Q'
+&#160;&#160;<b>KEY_P</b> = 'P'
+, <b>KEY_Q</b> = 'Q'
 , <b>KEY_R</b> = 'R'
 , <b>KEY_S</b> = 'S'
-, <b>KEY_T</b> = 'T'
 , <br />
-&#160;&#160;<b>KEY_U</b> = 'U'
+&#160;&#160;<b>KEY_T</b> = 'T'
+, <b>KEY_U</b> = 'U'
 , <b>KEY_V</b> = 'V'
 , <b>KEY_W</b> = 'W'
-, <b>KEY_X</b> = 'X'
 , <br />
-&#160;&#160;<b>KEY_Y</b> = 'Y'
+&#160;&#160;<b>KEY_X</b> = 'X'
+, <b>KEY_Y</b> = 'Y'
 , <b>KEY_Z</b> = 'Z'
 , <b>KEY_LANG_CHN</b> = 0x80
-, <b>KEY_LANG_ENG</b> = 0x82
 , <br />
-&#160;&#160;<b>KEY_POWER</b> = 0x83
+&#160;&#160;<b>KEY_LANG_ENG</b> = 0x82
+, <b>KEY_POWER</b> = 0x83
 , <b>KEY_F1</b> = 0x84
 , <b>KEY_F2</b>
-, <b>KEY_F3</b>
 , <br />
-&#160;&#160;<b>KEY_F4</b>
+&#160;&#160;<b>KEY_F3</b>
+, <b>KEY_F4</b>
 , <b>KEY_F5</b>
 , <b>KEY_SHIFT</b> = 0x8b
-, <b>KEY_IME</b> = 0x8e
 , <br />
-&#160;&#160;<b>KEY_SYMBOL</b> = 0x91
+&#160;&#160;<b>KEY_IME</b> = 0x8e
+, <b>KEY_SYMBOL</b> = 0x91
 , <b>KEY_HOME</b> = 0x93
+, <b>KEY_HOME_MENU</b> = 0x93
+, <br />
+&#160;&#160;<b>KEY_PRIME_MENU</b> = 0x93
 , <b>KEY_HELP</b> = 0x95
 , <b>KEY_SAVE</b> = 0x96
+, <b>KEY_SYLLABLE</b> = 0x9e
 , <br />
-&#160;&#160;<b>KEY_SYLLABLE</b> = 0x9e
+&#160;&#160;<b>KEY_PRIME_APPS</b> = 0xb1
+, <b>KEY_PRIME_PLOT</b>
+, <b>KEY_PRIME_NUM</b>
+, <b>KEY_PRIME_VIEW</b>
+, <br />
+&#160;&#160;<b>KEY_PRIME_CAS</b>
+, <b>KEY_PRIME_ALPHA</b>
+, <b>KEY_PRIME_MINUS</b>
+, <b>KEY_PRIME_DECIMAL_POINT</b>
+, <br />
+&#160;&#160;<b>KEY_PRIME_PLUS</b>
 , <b>KEY_SEARCH</b> = 0xf6
 , <b>KEY_BACKLIGHT</b> = 0xf8
 , <b>KEY_VOL</b> = 0xfa
@@ -387,10 +426,11 @@ Enumerations</h2></td></tr>
 , <b>KEY_INS</b> = 0x101
 , <b>KEY_SHIFT_PGUP</b> = 0xe047
 , <br />
-&#160;&#160;<b>KEY_SHIFT_PGDN</b> = 0xe04f
+&#160;&#160;<b>KEY_PRIME_HOME</b> = 0xe047
+, <b>KEY_SHIFT_PGDN</b> = 0xe04f
 <br />
  }</td></tr>
-<tr class="memdesc:af7cc0af385a79f99f5634d7050ad9920"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of available keycodes. <br /></td></tr>
+<tr class="memdesc:af7cc0af385a79f99f5634d7050ad9920"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of available keycodes.  <a href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920">More...</a><br /></td></tr>
 <tr class="separator:af7cc0af385a79f99f5634d7050ad9920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad23e002626a9b8e5b06b32178419966f" id="r_ad23e002626a9b8e5b06b32178419966f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f">ui_event_type_e</a> { <br />
 &#160;&#160;<a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa5548da93ad18a3bf7e02470f3f0c12b9">UI_EVENT_TYPE_INVALID</a> = 0
@@ -510,21 +550,21 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int(* lcd_rotate_callback_t) (<a class="el" href="structlcd__s.html">lcd_t</a> *self, int rotation)</td>
+          <td class="memname">typedef int(* lcd_rotate_callback_t) (<a class="el" href="structlcd__base__s.html">lcd_t</a> *self, int rotation)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Callback type for handling canvas rotation. </p>
-<p>When <code>rotation</code> is set to <a class="el" href="ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607" title="Query the current rotation. Will not change the current location.">ROTATION_QUERY</a>, the current rotation value will be returned with no side effect. When <code>rotation</code> is set to <a class="el" href="ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" title="Actually rotate the buffer. Used internally.">ROTATION_APPLY</a>, the canvas will rotate based on current value of <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>When <code>rotation</code> is set to <a class="el" href="ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607" title="Query the current rotation. Will not change the current location.">ROTATION_QUERY</a>, the current rotation value will be returned with no side effect. When <code>rotation</code> is set to <a class="el" href="ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" title="Actually rotate the buffer. Used internally.">ROTATION_APPLY</a>, the canvas will rotate based on current value of <a class="el" href="structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0" title="Current canvas rotation.">lcd_t::rotation</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>The LCD descriptor this was called from. </td></tr>
-    <tr><td class="paramname">rotation</td><td>New rotation. This value will be written to <a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> and this callback will be called recursively with <a class="el" href="ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" title="Actually rotate the buffer. Used internally.">ROTATION_APPLY</a> as the rotation value to actually apply the change. </td></tr>
+    <tr><td class="paramname">rotation</td><td>New rotation. This value will be written to <a class="el" href="structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0" title="Current canvas rotation.">lcd_t::rotation</a> and this callback will be called recursively with <a class="el" href="ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493" title="Actually rotate the buffer. Used internally.">ROTATION_APPLY</a> as the rotation value to actually apply the change. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Current rotation value in effect. This will be the same as <code>rotation</code> when no magic value documented above was used. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlcd__s.html#a3eb57952c9c40e045e3bf494b4c49813" title="Current canvas rotation.">lcd_t::rotation</a> Where the location value is stored in the LCD descriptor. </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0" title="Current canvas rotation.">lcd_t::rotation</a> Where the location value is stored in the LCD descriptor. </dd>
 <dd>
 <a class="el" href="ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345" title="Rotation values used by lcd_rotate_callback_t.">rotation_value_e</a> Possible rotation values. </dd></dl>
 
@@ -576,6 +616,23 @@ Enumerations</h2></td></tr>
 <li><code>cjk</code> is either <code>CJK</code> (supports CJK character rendering) or <code>NOCJK</code> (does not support CJK character rendering).</li>
 <li><code>index</code> is the current index (only used when all the above fields collide). </li>
 </ul>
+
+</div>
+</div>
+<a id="af7cc0af385a79f99f5634d7050ad9920" name="af7cc0af385a79f99f5634d7050ad9920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7cc0af385a79f99f5634d7050ad9920">&#9670;&#160;</a></span>keycode_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920">keycode_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of available keycodes. </p>
+<p>Keycodes starting with <code>KEY_PRIME_</code> are extended keycodes exclusive to HP Prime G1 (EA656). </p>
 
 </div>
 </div>

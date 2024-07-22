@@ -16,7 +16,7 @@ var searchData=
   ['event_2eh_13',['event.h',['../event_8h.html',1,'']]],
   ['event_5fs_14',['event_s',['../structevent__s.html',1,'']]],
   ['event_5ft_15',['event_t',['../threading_8h.html#ada2c77252a33c839a00748f3e7e96bcb',1,'threading.h']]],
-  ['event_5ftype_16',['event_type',['../structui__event__s.html#a27cd373cdf5ca166797e99b6f242f52f',1,'ui_event_s']]],
+  ['event_5ftype_16',['event_type',['../structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff',1,'ui_event_prime_s::event_type'],['../structui__event__base__s.html#af4cabc2f81242d43a634af04ceb13829',1,'ui_event_base_s::event_type']]],
   ['exec_5fbestape_5fheader_5fparser_5ffailure_17',['EXEC_BESTAPE_HEADER_PARSER_FAILURE',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af313c0fc6301dcfb40dda60f4be07e3a',1,'errno.h']]],
   ['exec_5fbestape_5fld_5ffailure_18',['EXEC_BESTAPE_LD_FAILURE',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ab706886b0940b6439521df5bba29538a',1,'errno.h']]],
   ['exec_5fbestape_5freloc_5ffailure_19',['EXEC_BESTAPE_RELOC_FAILURE',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a1a09302361386ef3a705ce99b10bd720',1,'errno.h']]],

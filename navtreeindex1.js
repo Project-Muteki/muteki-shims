@@ -29,8 +29,8 @@ var NAVTREEINDEX1 =
 "ftl_8h.html#af641b186facc7ee474d06ddda52bfefc":[4,0,0,0,8,1],
 "ftl_8h.html#afd4c3fb305847b79d0f97d61530ac579":[4,0,0,0,8,5],
 "ftl_8h_source.html":[4,0,0,0,8],
-"functions.html":[3,2,0],
 "functions.html":[3,2,0,0],
+"functions.html":[3,2,0],
 "functions_b.html":[3,2,0,1],
 "functions_c.html":[3,2,0,2],
 "functions_d.html":[3,2,0,3],
@@ -77,8 +77,8 @@ var NAVTREEINDEX1 =
 "functions_w.html":[3,2,0,20],
 "functions_x.html":[3,2,0,21],
 "functions_y.html":[3,2,0,22],
-"globals.html":[4,1,0,0],
 "globals.html":[4,1,0],
+"globals.html":[4,1,0,0],
 "globals_a.html":[4,1,0,1],
 "globals_b.html":[4,1,0,2],
 "globals_c.html":[4,1,0,3],
@@ -161,6 +161,8 @@ var NAVTREEINDEX1 =
 "messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7ac6782c2ab7c70f0d91a54a7fc5bdc50f":[4,0,0,0,0,0,2,0,2],
 "messagebox_8h.html#ad78c013e2566e007b32d4c78ded0a63d":[4,0,0,0,0,0,2,2],
 "messagebox_8h_source.html":[4,0,0,0,0,0,2],
+"muteki_8h.html":[4,0,0,1],
+"muteki_8h_source.html":[4,0,0,1],
 "pages.html":[],
 "structapplet__args__v4__t.html":[3,0,0],
 "structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01":[3,0,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "structfs__stat__t.html#a15af04d62fc907a1fe30b571d712f5ab":[3,0,8,5],
 "structfs__stat__t.html#a1cf64bba642348e5eb10305141d5931b":[3,0,8,2],
 "structfs__stat__t.html#a4e5fc3d72b5304ba2d1f29e38203d7f5":[3,0,8,0],
-"structfs__stat__t.html#a6f58d3d54c60c843e1d4aad386564dfa":[3,0,8,6],
-"structfs__stat__t.html#a96946b8114ed6bc26aed76733b82b703":[3,0,8,8],
-"structfs__stat__t.html#aa1258524872869be947b2df681796d10":[3,0,8,7]
+"structfs__stat__t.html#a6f58d3d54c60c843e1d4aad386564dfa":[3,0,8,6]
 };

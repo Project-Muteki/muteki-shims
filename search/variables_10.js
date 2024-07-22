@@ -2,11 +2,11 @@ var searchData=
 [
   ['sample_5frate_0',['sample_rate',['../structpcm__decoder__buffer__s.html#abf1756adfb7b939b4071fc6239c3b25e',1,'pcm_decoder_buffer_s::sample_rate'],['../structpcm__config__s.html#a5e382dc6717daa1cc99425752b7fa878',1,'pcm_config_s::sample_rate']]],
   ['sample_5frate_5fauto_1',['SAMPLE_RATE_AUTO',['../audio_8h.html#af55be39d044b9238d9beef8a80809b15',1,'audio.h']]],
-  ['saved_5fcursor_2',['saved_cursor',['../structlcd__s.html#aa7295b5df6abae8fefdbcc25d363b034',1,'lcd_s']]],
+  ['saved_5fcursor_2',['saved_cursor',['../structlcd__thread__safe__s.html#adbeffc3c26fa06d8f2230dce4753c46d',1,'lcd_thread_safe_s::saved_cursor'],['../structlcd__base__s.html#aebac51ee7c8d1975232be89a0867a6f5',1,'lcd_base_s::saved_cursor']]],
   ['second_3',['second',['../structdatetime__t.html#a6e882ba06a6047a1e494203e9e09594b',1,'datetime_t']]],
   ['service_4',['service',['../structpcm__codec__context__s.html#a4308fed503d0e97a97546d8ea7a0a1f9',1,'pcm_codec_context_s']]],
   ['shmode_5',['shmode',['../structdevio__descriptor__t.html#ac10f4471671073083b09431a115c3152',1,'devio_descriptor_t']]],
-  ['size_6',['size',['../structpcm__decoder__buffer__s.html#a8caaf7770ede330c1bb51a2fd08576e9',1,'pcm_decoder_buffer_s::size'],['../structlcd__cursor__s.html#a8746bbed31e3c5d4685e2f3090732a5b',1,'lcd_cursor_s::size'],['../structmessage__queue__nonatomic__t.html#a7b448a0c95fa58f12b0acf0ab41d2f32',1,'message_queue_nonatomic_t::size'],['../structfs__stat__t.html#a1cf64bba642348e5eb10305141d5931b',1,'fs_stat_t::size'],['../structpcm__frame__s.html#ad390d9c464276c619787845a82cbb5d1',1,'pcm_frame_s::size'],['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t::size'],['../structloader__file__descriptor__t.html#ae449480f03db8f49945d5a855beec97a',1,'loader_file_descriptor_t::size']]],
+  ['size_6',['size',['../structpcm__frame__s.html#ad390d9c464276c619787845a82cbb5d1',1,'pcm_frame_s::size'],['../structlcd__cursor__s.html#a8746bbed31e3c5d4685e2f3090732a5b',1,'lcd_cursor_s::size'],['../structmessage__queue__nonatomic__t.html#a7b448a0c95fa58f12b0acf0ab41d2f32',1,'message_queue_nonatomic_t::size'],['../structfs__stat__t.html#a1cf64bba642348e5eb10305141d5931b',1,'fs_stat_t::size'],['../structpcm__decoder__buffer__s.html#a8caaf7770ede330c1bb51a2fd08576e9',1,'pcm_decoder_buffer_s::size'],['../structfind__context__t.html#aee5ea39b103d2698f5c5016d84c426d6',1,'find_context_t::size'],['../structloader__file__descriptor__t.html#ae449480f03db8f49945d5a855beec97a',1,'loader_file_descriptor_t::size']]],
   ['size2_7',['size2',['../structfs__stat__t.html#ab03c03a62dae55ba0473e33937d84701',1,'fs_stat_t']]],
   ['size2_5fkb_8',['size2_kb',['../structfs__stat__t.html#adccd3ed7fc787d55186473d3fba34758',1,'fs_stat_t']]],
   ['size3_9',['size3',['../structfs__stat__t.html#a15af04d62fc907a1fe30b571d712f5ab',1,'fs_stat_t']]],
@@ -34,5 +34,5 @@ var searchData=
   ['subfile_5fbase_31',['subfile_base',['../structloader__file__descriptor__t.html#aac030a1baeb948ba77665daee453e75d',1,'loader_file_descriptor_t']]],
   ['subfile_5foffset_32',['subfile_offset',['../structloader__file__descriptor__t.html#a12bb7897bc5d9998c9cfb154e17f7486',1,'loader_file_descriptor_t']]],
   ['subroutine_33',['subroutine',['../structapplet__args__v4__t.html#a033d5681b0df5b1130bf8250da0aca01',1,'applet_args_v4_t']]],
-  ['surface_34',['surface',['../structlcd__s.html#ade3b9e5707e643ab6496affe332b1989',1,'lcd_s']]]
+  ['surface_34',['surface',['../structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a',1,'lcd_base_s::surface'],['../structlcd__thread__safe__s.html#a13044bc39c21be2f0e91c788826363ac',1,'lcd_thread_safe_s::surface']]]
 ];
