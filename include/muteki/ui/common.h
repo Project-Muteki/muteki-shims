@@ -771,7 +771,7 @@ struct ui_multipress_event_s {
         };
     };
     /**
-     * @brief Unknown. Maybe unused.
+     * @brief Unknown. Maybe unused and probably padding.
      */
     unsigned short unk_0xb;
 };
@@ -905,11 +905,15 @@ struct ui_event_prime_s {
     /**
      * @brief Number of valid multipress events available for processing.
      */
-    size_t available_multipress_events;
+    unsigned short available_multipress_events; // 24-26
+    /**
+     * @brief Unknown. Sometimes can be 0x2 on startup.
+     */
+    unsigned short unk_0x1a; // 26-28
     /**
      * @brief The multipress events.
      */
-    ui_multipress_event_t multipress_events[8];
+    ui_multipress_event_t multipress_events[8]; // 28-124
 };
 
 /**
