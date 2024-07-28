@@ -337,7 +337,7 @@ extern void GetDrawArea(short *x0, short *y0, short *x1, short *y1);
  * @param flags Blit processing flags.
  * @x_void_return
  */
-extern void DrawLine(short x0, short y0, short x1, short y1, int flags);
+extern void DrawLine(short x0, short y0, short x1, short y1, unsigned int flags);
 
 /**
  * @brief Stroke a rectangle on the current active LCD.
@@ -349,7 +349,7 @@ extern void DrawLine(short x0, short y0, short x1, short y1, int flags);
  * @param flags Blit processing flags.
  * @x_void_return
  */
-extern void DrawRect(short x0, short y0, short x1, short y1, int flags);
+extern void DrawRect(short x0, short y0, short x1, short y1, unsigned int flags);
 
 /**
  * @brief Fill a rectangle on the current active LCD.
@@ -361,7 +361,7 @@ extern void DrawRect(short x0, short y0, short x1, short y1, int flags);
  * @param flags Blit processing flags.
  * @x_void_return
  */
-extern void FillRect(short x0, short y0, short x1, short y1, int flags);
+extern void FillRect(short x0, short y0, short x1, short y1, unsigned int flags);
 
 /**
  * @brief Stroke a rounded corner rectangle on the current active LCD.
@@ -375,7 +375,7 @@ extern void FillRect(short x0, short y0, short x1, short y1, int flags);
  * @param flags Blit processing flags.
  * @x_void_return
  */
-extern void DrawRoundRect(short x0, short y0, short x1, short y1, short rx, short ry, int flags);
+extern void DrawRoundRect(short x0, short y0, short x1, short y1, short rx, short ry, unsigned int flags);
 
 /**
  * @brief Stroke a circle on the current active LCD.
@@ -386,7 +386,7 @@ extern void DrawRoundRect(short x0, short y0, short x1, short y1, short rx, shor
  * @param flags Blit processing flags.
  * @x_void_return
  */
-extern void DrawCircle(short x, short y, short r, int flags);
+extern void DrawCircle(short x, short y, short r, unsigned int flags);
 
 /**
  * @brief Fill a circle on the current active LCD.
@@ -398,7 +398,7 @@ extern void DrawCircle(short x, short y, short r, int flags);
  * @param flags Blit processing flags.
  * @x_void_return
  */
-extern void FillCircle(short x, short y, short r, int flags);
+extern void FillCircle(short x, short y, short r, unsigned int flags);
 
 /**
  * @brief Stroke an ellipse on the current active LCD.
@@ -410,7 +410,7 @@ extern void FillCircle(short x, short y, short r, int flags);
  * @param flags Blit processing flags.
  * @x_void_return
  */
-extern void DrawEllipse(short x, short y, short rx, short ry, int flags);
+extern void DrawEllipse(short x, short y, short rx, short ry, unsigned int flags);
 
 /**
  * @brief Fill an ellipse on the current active LCD.
@@ -422,7 +422,7 @@ extern void DrawEllipse(short x, short y, short rx, short ry, int flags);
  * @param flags Blit processing flags.
  * @x_void_return
  */
-extern void FillEllipse(short x, short y, short rx, short ry, int flags);
+extern void FillEllipse(short x, short y, short rx, short ry, unsigned int flags);
 
 /**
  * @brief Invert color within a rectangle.
