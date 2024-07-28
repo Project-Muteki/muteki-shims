@@ -243,8 +243,16 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:af8edb33a562b4bcc85154e3e2a951650"><td class="mdescLeft">&#160;</td><td class="mdescRight">String alignment types.  <a href="ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650">More...</a><br /></td></tr>
 <tr class="separator:af8edb33a562b4bcc85154e3e2a951650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41b02fda321c9d1ab9502aa8aa49adcd" id="r_a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a> { <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05">BLIT_NONE</a> = 0
-, <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462">BLIT_INVERT</a> = 0x4
+<tr class="memitem:a41b02fda321c9d1ab9502aa8aa49adcd" id="r_a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a> { <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05">BLIT_NONE</a> = 0
+, <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdab09108491dca48f71f3784108c9b5137">BLIT_AND</a> = 0x2
+, <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda5ab586bc19c613fc6d806f4000573f46">BLIT_OR</a> = 0x3
+, <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2ed0db7536274d43537c663a26bc7a23">BLIT_XOR</a> = 0x4
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdab2de94bebe319a861270572bebef8349">BLIT_TRANSPARENT</a> = 0xe
+, <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda864243b80a19945e013259d3145a8cf4">BLIT_ALPHA_BLENDING</a> = 0xf
+, <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdaf39803d24f9b685b4661637d3bf75a1a">BLIT_ALPHA_BLENDING_FAST</a> = 0x10
+<br />
  }</td></tr>
 <tr class="memdesc:a41b02fda321c9d1ab9502aa8aa49adcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process flags for blit operations.  <a href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">More...</a><br /></td></tr>
 <tr class="separator:a41b02fda321c9d1ab9502aa8aa49adcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,6 +265,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="ui_2common_8h.html#a85735dada566607df198227a8c828b46a8acea1c8d19b0074057c6098b34cd043">LCD_SURFACE_PIXFMT_RGB565</a> = 16
 , <a class="el" href="ui_2common_8h.html#a85735dada566607df198227a8c828b46ac90567dac7b0e2c41a7792f7479cc037">LCD_SURFACE_PIXFMT_RGB</a> = 24
 , <a class="el" href="ui_2common_8h.html#a85735dada566607df198227a8c828b46acceecb6b8e228a7fad7f16c93aee54e1">LCD_SURFACE_PIXFMT_XRGB</a> = 32
+, <a class="el" href="ui_2common_8h.html#a85735dada566607df198227a8c828b46adad6311385d0cecc2be648ce73a01cd4">LCD_SURFACE_PIXFMT_ARGB</a> = 32
 <br />
  }</td></tr>
 <tr class="memdesc:a85735dada566607df198227a8c828b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid pixel formats for LCD surfaces.  <a href="ui_2common_8h.html#a85735dada566607df198227a8c828b46">More...</a><br /></td></tr>
@@ -584,11 +593,29 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Process flags for blit operations. </p>
+<dl class="section warning"><dt>Warning</dt><dd>These are stand-alone and not stackable with bitwise-OR operations (<code>'|'</code>). </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?) </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05" name="a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05"></a>BLIT_NONE&#160;</td><td class="fielddoc"><p>Nothing. </p>
+<p>This just copies the pixels as-is. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462" name="a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462"></a>BLIT_INVERT&#160;</td><td class="fielddoc"><p>Color is inverted. </p>
+<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcdab09108491dca48f71f3784108c9b5137" name="a41b02fda321c9d1ab9502aa8aa49adcdab09108491dca48f71f3784108c9b5137"></a>BLIT_AND&#160;</td><td class="fielddoc"><p>Perform AND operation between source line and destination line. </p>
+<p>This effectively does a bit-wise color masking of the destination surface. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcda5ab586bc19c613fc6d806f4000573f46" name="a41b02fda321c9d1ab9502aa8aa49adcda5ab586bc19c613fc6d806f4000573f46"></a>BLIT_OR&#160;</td><td class="fielddoc"><p>Perform OR operation between source line and destination line. </p>
+<p>This effectively does a bit-wise painting onto the destination surface. Colors will also be mixed in a bit-wise fashion. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcda2ed0db7536274d43537c663a26bc7a23" name="a41b02fda321c9d1ab9502aa8aa49adcda2ed0db7536274d43537c663a26bc7a23"></a>BLIT_XOR&#160;</td><td class="fielddoc"><p>Perform XOR operation between source line and destination line. </p>
+<p>This effectively does a bit-wise color inversion of the destination surface. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcdab2de94bebe319a861270572bebef8349" name="a41b02fda321c9d1ab9502aa8aa49adcdab2de94bebe319a861270572bebef8349"></a>BLIT_TRANSPARENT&#160;</td><td class="fielddoc"><p>Honor transparent color settings on the current LCD canvas. </p>
+<p>This copies the pixels when it's not exactly the same as the transparent color of the current LCD canvas. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcda864243b80a19945e013259d3145a8cf4" name="a41b02fda321c9d1ab9502aa8aa49adcda864243b80a19945e013259d3145a8cf4"></a>BLIT_ALPHA_BLENDING&#160;</td><td class="fielddoc"><p>Perform alpha blending (when supported). </p>
+<p>This is done without gamma correction. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a41b02fda321c9d1ab9502aa8aa49adcdaf39803d24f9b685b4661637d3bf75a1a" name="a41b02fda321c9d1ab9502aa8aa49adcdaf39803d24f9b685b4661637d3bf75a1a"></a>BLIT_ALPHA_BLENDING_FAST&#160;</td><td class="fielddoc"><p>Perform alpha blending (when supported). </p>
+<p>This is similar to <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda864243b80a19945e013259d3145a8cf4" title="Perform alpha blending (when supported).">BLIT_ALPHA_BLENDING</a> but instead of using alpha values per-pixel, it uses only the alpha value of the first pixel for the entire surface. This makes the process slightly faster if the entire image has the same alpha values for every pixel. </p>
 </td></tr>
 </table>
 
@@ -686,6 +713,8 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a85735dada566607df198227a8c828b46ac90567dac7b0e2c41a7792f7479cc037" name="a85735dada566607df198227a8c828b46ac90567dac7b0e2c41a7792f7479cc037"></a>LCD_SURFACE_PIXFMT_RGB&#160;</td><td class="fielddoc"><p>24-bit RGB. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a85735dada566607df198227a8c828b46acceecb6b8e228a7fad7f16c93aee54e1" name="a85735dada566607df198227a8c828b46acceecb6b8e228a7fad7f16c93aee54e1"></a>LCD_SURFACE_PIXFMT_XRGB&#160;</td><td class="fielddoc"><p>32-bit XRGB. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a85735dada566607df198227a8c828b46adad6311385d0cecc2be648ce73a01cd4" name="a85735dada566607df198227a8c828b46adad6311385d0cecc2be648ce73a01cd4"></a>LCD_SURFACE_PIXFMT_ARGB&#160;</td><td class="fielddoc"><p>32-bit ARGB (alias of <a class="el" href="ui_2common_8h.html#a85735dada566607df198227a8c828b46acceecb6b8e228a7fad7f16c93aee54e1" title="32-bit XRGB.">LCD_SURFACE_PIXFMT_XRGB</a>). </p>
 </td></tr>
 </table>
 

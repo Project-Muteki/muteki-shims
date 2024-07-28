@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['fillcircle_0',['FillCircle',['../canvas_8h.html#a0d2bdedce90970f7e1a2eb805b93da32',1,'canvas.h']]],
-  ['fillellipse_1',['FillEllipse',['../canvas_8h.html#ab629badb7791688864ba021ab4e60b70',1,'canvas.h']]],
-  ['fillrect_2',['FillRect',['../canvas_8h.html#a061c7faadcc06d7a35572a22a7c9c73f',1,'canvas.h']]],
+  ['fillcircle_0',['FillCircle',['../canvas_8h.html#a73f22a1469db3dfb3a500c31fcdd9ec1',1,'canvas.h']]],
+  ['fillellipse_1',['FillEllipse',['../canvas_8h.html#aa860b38dee697167a49c229950e3398d',1,'canvas.h']]],
+  ['fillrect_2',['FillRect',['../canvas_8h.html#a7830e2462907acf5b63ceab341075b8c',1,'canvas.h']]],
   ['formatmessage_3',['FormatMessage',['../errno_8h.html#a30ded332e224f861b7b50f11568f091d',1,'errno.h']]],
   ['freeblock_4',['FreeBlock',['../memory_8h.html#a2902ddabae243afba311b771c36a483c',1,'memory.h']]],
   ['freeimage_5',['FreeImage',['../surface_8h.html#ababdb62cafc2718b2e720bc8166157a2',1,'surface.h']]],

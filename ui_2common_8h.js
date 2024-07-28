@@ -17,7 +17,12 @@ var ui_2common_8h =
     [ "lcd_rotate_callback_t", "ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5", null ],
     [ "blit_flag_e", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd", [
       [ "BLIT_NONE", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05", null ],
-      [ "BLIT_INVERT", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2c1d59100177551ce620e8cc552ef462", null ]
+      [ "BLIT_AND", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdab09108491dca48f71f3784108c9b5137", null ],
+      [ "BLIT_OR", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda5ab586bc19c613fc6d806f4000573f46", null ],
+      [ "BLIT_XOR", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2ed0db7536274d43537c663a26bc7a23", null ],
+      [ "BLIT_TRANSPARENT", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdab2de94bebe319a861270572bebef8349", null ],
+      [ "BLIT_ALPHA_BLENDING", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda864243b80a19945e013259d3145a8cf4", null ],
+      [ "BLIT_ALPHA_BLENDING_FAST", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdaf39803d24f9b685b4661637d3bf75a1a", null ]
     ] ],
     [ "font_type_e", "ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171", [
       [ "SANS_TINY_CJK_NORMAL", "ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171adb8a92be649647322cd612411e8270d8", null ],
@@ -169,7 +174,8 @@ var ui_2common_8h =
       [ "LCD_SURFACE_PIXFMT_RGB444", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a70da573f60cc78458715369832e3b8c8", null ],
       [ "LCD_SURFACE_PIXFMT_RGB565", "ui_2common_8h.html#a85735dada566607df198227a8c828b46a8acea1c8d19b0074057c6098b34cd043", null ],
       [ "LCD_SURFACE_PIXFMT_RGB", "ui_2common_8h.html#a85735dada566607df198227a8c828b46ac90567dac7b0e2c41a7792f7479cc037", null ],
-      [ "LCD_SURFACE_PIXFMT_XRGB", "ui_2common_8h.html#a85735dada566607df198227a8c828b46acceecb6b8e228a7fad7f16c93aee54e1", null ]
+      [ "LCD_SURFACE_PIXFMT_XRGB", "ui_2common_8h.html#a85735dada566607df198227a8c828b46acceecb6b8e228a7fad7f16c93aee54e1", null ],
+      [ "LCD_SURFACE_PIXFMT_ARGB", "ui_2common_8h.html#a85735dada566607df198227a8c828b46adad6311385d0cecc2be648ce73a01cd4", null ]
     ] ],
     [ "print_flag_e", "ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591", [
       [ "PRINT_NONE", "ui_2common_8h.html#a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf", null ],
