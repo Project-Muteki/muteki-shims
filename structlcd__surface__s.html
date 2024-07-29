@@ -129,7 +129,7 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
 <tr class="memdesc:a5995a993993324a55e50625e50476e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth of the color in bits.  <br /></td></tr>
 <tr class="separator:a5995a993993324a55e50625e50476e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a264e253c76cbbdf0da1dbf1fcb3e5781" id="r_a264e253c76cbbdf0da1dbf1fcb3e5781"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__surface__s.html#a264e253c76cbbdf0da1dbf1fcb3e5781">xsize</a></td></tr>
-<tr class="memdesc:a264e253c76cbbdf0da1dbf1fcb3e5781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel row size in bytes.  <br /></td></tr>
+<tr class="memdesc:a264e253c76cbbdf0da1dbf1fcb3e5781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel row size in bytes (aka. pitch if you know SDL).  <br /></td></tr>
 <tr class="separator:a264e253c76cbbdf0da1dbf1fcb3e5781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9247241238c334b2fdc51df91c00bb71" id="r_a9247241238c334b2fdc51df91c00bb71"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__surface__s.html#a9247241238c334b2fdc51df91c00bb71">encoding</a></td></tr>
 <tr class="memdesc:a9247241238c334b2fdc51df91c00bb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel buffer encoding.  <br /></td></tr>
@@ -226,7 +226,7 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
 </div><div class="memdoc">
 
 <p>Palette used to pack RGBA color into pixels. </p>
-<p>Probably only make sense when using pixfmt other than RGBA (i.e. depth of 32). It should be NULL in that case. </p>
+<p>Only make sense when using indexed color. It should be <code>NULL</code> otherwise. </p>
 
 </div>
 </div>
@@ -242,7 +242,7 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pixel row size in bytes. </p>
+<p>Pixel row size in bytes (aka. pitch if you know SDL). </p>
 <p>This is usually 4-bytes aligned. </p>
 
 </div>
