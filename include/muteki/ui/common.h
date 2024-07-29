@@ -501,7 +501,7 @@ struct lcd_surface_s {
      */
     short depth; // 6:8
     /**
-     * @brief Pixel row size in bytes.
+     * @brief Pixel row size in bytes (aka. pitch if you know SDL).
      * @details This is usually 4-bytes aligned.
      */
     short xsize; // 8:10
@@ -512,8 +512,7 @@ struct lcd_surface_s {
     short encoding; // 10:12
     /**
      * @brief Palette used to pack RGBA color into pixels.
-     * @details Probably only make sense when using pixfmt other than RGBA (i.e. depth of 32). It should be NULL in
-     * that case.
+     * @details Only make sense when using indexed color. It should be `NULL` otherwise.
      */
     int *palette; // 12:16
     /**
