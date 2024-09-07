@@ -310,6 +310,7 @@ enum keycode_e {
     KEY_Z = 'Z',
     /* 0x80 */
     KEY_LANG_CHN = 0x80,
+    KEY_LANG_YUE = 0x81,
     KEY_LANG_ENG = 0x82,
     KEY_POWER = 0x83,
     KEY_F1 = 0x84,
@@ -317,16 +318,35 @@ enum keycode_e {
     KEY_F3,
     KEY_F4,
     KEY_F5,
+    KEY_APP_REC = 0x89,
     KEY_SHIFT = 0x8b,
     KEY_IME = 0x8e,
+    KEY_LANG_JPN = 0x8f,
     /* 0x90 */
     KEY_SYMBOL = 0x91,
     KEY_HOME = 0x93,
     KEY_HOME_MENU = 0x93,
     KEY_PRIME_MENU = 0x93,
+    KEY_TOGGLE_SC_TC = 0x94,
     KEY_HELP = 0x95,
     KEY_SAVE = 0x96,
+    KEY_APP_MP3_PLAYER = 0x98,
+    KEY_VOL_BRIGHTNESS = 0x9c,
     KEY_SYLLABLE = 0x9e,
+    KEY_ORIGINAL_INPUT = 0x9f,
+    /* 0xa0 */
+    KEY_APP_MISC_3 = 0xa3,
+    KEY_APP_FLASHCAD = 0xa3,
+    KEY_APP_MISC_5 = 0xa5,
+    KEY_APP_DICT_JA_DAJIRIN = 0xa5,
+    KEY_APP_MISC_6 = 0xa6,
+    KEY_APP_DICT_JA_SHINMEIKAI = 0xa6,
+    KEY_APP_ALBUM = 0xa6,
+    KEY_APP_MISC_7 = 0xa7,
+    KEY_APP_DICT_EN_LONGMAN = 0xa7,
+    KEY_APP_DICT_JA_EN_GENIUS = 0xa7,
+    KEY_APP_MISC_8 = 0xa8,
+    KEY_APP_DICT_EN_JA_GENIUS = 0xa8,
     /* 0xb0 */
     KEY_PRIME_APPS = 0xb1,
     KEY_PRIME_PLOT,
@@ -337,10 +357,23 @@ enum keycode_e {
     KEY_PRIME_MINUS,
     KEY_PRIME_DECIMAL_POINT,
     KEY_PRIME_PLUS,
+    /* 0xc0 */
+    KEY_FAV = 0xc0,
+    /* 0xd0 */
+    KEY_APP_VIDEO_PLAYER = 0xd0,
+    KEY_APP_DICT_EN_PRO = 0xd4,
+    /* 0xe0 */
+    KEY_APP_DICT_ZH_EN_BESTA = 0xe8,
+    KEY_APP_DICT_JA_ZH_BESTA = 0xe9,
+    KEY_APP_DICT_ZH_JA_BESTA = 0xea,
     /* 0xf0 */
+    KEY_APP_DICT_EN_OXFORD = 0xf2,
+    KEY_APP_DICT_EN_ZH_BESTA = 0xf3,
+    KEY_EDIT = 0xf5,
     KEY_SEARCH = 0xf6,
     KEY_BACKLIGHT = 0xf8,
     KEY_VOL = 0xfa,
+    KEY_BATTERY = 0xfb,
     KEY_USB_INSERTION = 0xfe,
     KEY_REPEAT = 0xff,
     /* 0x100+ */
@@ -374,6 +407,11 @@ enum ui_event_type_e {
      * @brief Key(s) pressed.
      */
     UI_EVENT_TYPE_KEY = 16,
+    /**
+     * @brief Key(s) released.
+     * @details Only seem to available on S3C-based boards.
+     */
+    UI_EVENT_TYPE_KEY_UP = 0x100000,
 };
 
 /**
