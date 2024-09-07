@@ -251,8 +251,19 @@ enum keycode_e {
     KEY_DEL = 0xc,
     KEY_ENTER = 0x0d,
     /* 0x10 */
+    /**
+     * @brief Bring up the function menu of the current scene.
+     * @details Not to be confused with the function menu.
+     */
     KEY_MENU = 0x11,
+    /**
+     * @brief Bring up the function menu of the current scene.
+     * @details Alias of #KEY_MENU.
+     */
     KEY_FUNC_MENU = 0x11,
+    /**
+     * @brief Change font size.
+     */
     KEY_FONT = 0x12,
     /* 0x20 */
     KEY_SPACE = ' ',
@@ -309,43 +320,147 @@ enum keycode_e {
     KEY_Y = 'Y',
     KEY_Z = 'Z',
     /* 0x80 */
+    /**
+     * @brief Trigger TTS in Mandarain Chinese.
+     */
     KEY_LANG_CHN = 0x80,
+    /**
+     * @brief Trigger TTS in Cantonese.
+     */
     KEY_LANG_YUE = 0x81,
+    /**
+     * @brief Trigger TTS in English.
+     */
     KEY_LANG_ENG = 0x82,
+    /**
+     * @brief Power button event.
+     */
     KEY_POWER = 0x83,
     KEY_F1 = 0x84,
     KEY_F2,
     KEY_F3,
     KEY_F4,
     KEY_F5,
+    /**
+     * @brief Launch voice recorder.
+     */
     KEY_APP_REC = 0x89,
     KEY_SHIFT = 0x8b,
+    /**
+     * @brief Switch input method.
+     */
     KEY_IME = 0x8e,
+    /**
+     * @brief Trigger TTS in Japanese.
+     */
     KEY_LANG_JPN = 0x8f,
     /* 0x90 */
+    /**
+     * @brief Activate the symbol selection input method.
+     */
     KEY_SYMBOL = 0x91,
+    /**
+     * @brief Return to home menu.
+     */
     KEY_HOME = 0x93,
+    /**
+     * @brief Return to home menu.
+     * @details Alias of #KEY_HOME
+     */
     KEY_HOME_MENU = 0x93,
+    /**
+     * @brief The MENU key on HP Prime.
+     * @details Alias of #KEY_HOME
+     */
     KEY_PRIME_MENU = 0x93,
+    /** 
+     * @brief Toggle simplified/traditional Chinese.
+     */
     KEY_TOGGLE_SC_TC = 0x94,
+    /**
+     * @brief Show in-app help.
+     */
     KEY_HELP = 0x95,
+    /**
+     * @brief Save current change and exit.
+     */
     KEY_SAVE = 0x96,
+    /**
+     * @brief Launch MP3 player.
+     */
     KEY_APP_MP3_PLAYER = 0x98,
-    KEY_VOL_BRIGHTNESS = 0x9c,
+    /**
+     * @brief Open the Volume + Backlight adjustment menu.
+     */
+    KEY_VOL_BACKLIGHT = 0x9c,
+    /**
+     * @brief Dictionary: Pronounce the current word syllable-by-syllable.
+     */
     KEY_SYLLABLE = 0x9e,
+    /**
+     * @brief Dictionary and search: Go back to the first screen the user initiated a search (with input memorized).
+     */
     KEY_ORIGINAL_INPUT = 0x9f,
     /* 0xa0 */
+    /**
+     * @brief Board-specific app launching shortcut.
+     */
     KEY_APP_MISC_3 = 0xa3,
-    KEY_APP_FLASHCAD = 0xa3,
+    /**
+     * @brief Launch the flashcard app.
+     * @details Available on CA743.
+     */
+    KEY_APP_FLASHCARD = 0xa3,
+    /**
+     * @brief Board-specific app launching shortcut.
+     */
     KEY_APP_MISC_5 = 0xa5,
+    /**
+     * @brief Launch Daijirin Japanese dictionary.
+     * @details Available on JA738.
+     */
     KEY_APP_DICT_JA_DAJIRIN = 0xa5,
+    /**
+     * @brief Launch the Games app.
+     * @details Available on CA743.
+     */
+    KEY_APP_GAMES = 0xa5,
+    /**
+     * @brief Board-specific app launching shortcut.
+     */
     KEY_APP_MISC_6 = 0xa6,
+    /**
+     * @brief Launch Shin-Meikai Japanese dictionary.
+     * @details Available on JA738.
+     */
     KEY_APP_DICT_JA_SHINMEIKAI = 0xa6,
+    /**
+     * @brief Launch the album app.
+     * @details Available on CA743.
+     */
     KEY_APP_ALBUM = 0xa6,
+    /**
+     * @brief Board-specific app launching shortcut.
+     */
     KEY_APP_MISC_7 = 0xa7,
+    /**
+     * @brief Launch Longman dictionary.
+     * @details Available on CA743.
+     */
     KEY_APP_DICT_EN_LONGMAN = 0xa7,
+    /**
+     * @brief Launch Genius Japanese-English dictionary.
+     * @details Available on JA738.
+     */
     KEY_APP_DICT_JA_EN_GENIUS = 0xa7,
+    /**
+     * @brief Board-specific app launching shortcut.
+     */
     KEY_APP_MISC_8 = 0xa8,
+    /**
+     * @brief Launch Genius English-Japanese dictionary.
+     * @details Available on JA738.
+     */
     KEY_APP_DICT_EN_JA_GENIUS = 0xa8,
     /* 0xb0 */
     KEY_PRIME_APPS = 0xb1,
@@ -358,23 +473,71 @@ enum keycode_e {
     KEY_PRIME_DECIMAL_POINT,
     KEY_PRIME_PLUS,
     /* 0xc0 */
+    /**
+     * @brief Show the Favorites menu.
+     */
     KEY_FAV = 0xc0,
     /* 0xd0 */
+    /**
+     * @brief Launch video player app.
+     */
     KEY_APP_VIDEO_PLAYER = 0xd0,
+    /**
+     * @brief Launch Besta professional vocabulary dictionary.
+     */
     KEY_APP_DICT_EN_PRO = 0xd4,
     /* 0xe0 */
+    /**
+     * @brief Launch Besta Chinese-English dictionary.
+     */
     KEY_APP_DICT_ZH_EN_BESTA = 0xe8,
+    /**
+     * @brief Launch Besta Japanese-Chinese dictionary.
+     */
     KEY_APP_DICT_JA_ZH_BESTA = 0xe9,
+    /**
+     * @brief Launch Besta Chinese-Japanese dictionary.
+     */
     KEY_APP_DICT_ZH_JA_BESTA = 0xea,
     /* 0xf0 */
+    /**
+     * @brief Launch Oxford dictionary.
+     */
     KEY_APP_DICT_EN_OXFORD = 0xf2,
+    /**
+     * @brief Launch Besta English-Chinese dictionary.
+     */
     KEY_APP_DICT_EN_ZH_BESTA = 0xf3,
     KEY_EDIT = 0xf5,
+    /**
+     * @brief Launch the unified search app.
+     */
     KEY_SEARCH = 0xf6,
+    /**
+     * @brief Open the Backlight adjustment menu.
+     * @details May be an alias to #KEY_VOL_BACKLIGHT.
+     */
     KEY_BACKLIGHT = 0xf8,
+    /**
+     * @brief Dictionary: Parrot the current word and compare the pronunciations.
+     */
+    KEY_COMPARE = 0xf9,
+    /**
+     * @brief Open the Volume adjustment menu.
+     * @details May be an alias to #KEY_VOL_BACKLIGHT.
+     */
     KEY_VOL = 0xfa,
+    /**
+     * @brief Display battery indicator popup.
+     */
     KEY_BATTERY = 0xfb,
+    /**
+     * @brief Event on USB cable insertion.
+     */
     KEY_USB_INSERTION = 0xfe,
+    /**
+     * @brief Dictionary: Repeatedly read out the current word.
+     */
     KEY_REPEAT = 0xff,
     /* 0x100+ */
     KEY_INS = 0x101,
