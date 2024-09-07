@@ -508,6 +508,9 @@ enum keycode_e {
      * @brief Launch Besta English-Chinese dictionary.
      */
     KEY_APP_DICT_EN_ZH_BESTA = 0xf3,
+    /**
+     * @brief Show the edit menu (cut/copy/paste).
+     */
     KEY_EDIT = 0xf5,
     /**
      * @brief Launch the unified search app.
