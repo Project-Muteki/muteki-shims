@@ -1041,14 +1041,14 @@ struct ui_event_base_s {
              * @brief Keycode for the first pressed key.
              * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
              */
-            short key_code0; // 8-10
+            unsigned short key_code0; // 8-10
             /**
              * @brief Keycode for the second pressed key.
              * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
              * @note Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover,
              * some devices may lack support of simultaneous key presses.
              */
-            short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
+            unsigned short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
         };
         struct {
             /**
@@ -1056,13 +1056,13 @@ struct ui_event_base_s {
              * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
              * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
              */
-            short touch_x;
+            unsigned short touch_x;
             /**
              * @brief The Y coordinate of where the touch event is located, in pixels.
              * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
              * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
              */
-            short touch_y;
+            unsigned short touch_y;
         };
     };
     /**
