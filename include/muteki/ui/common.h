@@ -575,7 +575,7 @@ enum ui_event_type_e {
     UI_EVENT_TYPE_KEY = 16,
     /**
      * @brief Key(s) released.
-     * @details Only seem to available on S3C-based boards.
+     * @details Available on S3C and TCC boards.
      */
     UI_EVENT_TYPE_KEY_UP = 0x100000,
 };
