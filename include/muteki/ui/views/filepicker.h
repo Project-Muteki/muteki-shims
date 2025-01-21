@@ -28,6 +28,11 @@ extern "C" {
     calloc_impl(entries * 260 + 2, is_utf16 ? sizeof(UTF16) : sizeof(char))
 
 /**
+ * @brief Max LFN path size for file picker.
+ */
+#define FILEPICKER_CONTEXT_OUTPUT_MAX_LFN 260
+
+/**
  * @brief Known file picker flags.
  * @todo Add more.
  */
@@ -116,11 +121,12 @@ struct filepicker_context_s {
      */
     unsigned short type_list_max_size;
     /**
-     * @brief Unknown.
+     * @brief Max size of each path in code units.
      * @details _GetOpenFileName() seems to compare this value to the length of the first #paths string and will clear
-     * #paths if the length is larger or equal to this value. Setting this to `0xffff` is recommended.
+     * #paths if the length is larger or equal to this value. Use FILEPICKER_CONTEXT_OUTPUT_MAX_LFN if starting the
+     * file picker in LFN mode.
      */
-    unsigned short unk_0x30;
+    unsigned short path_max_cu;
     /**
      * @brief Unknown.
      */
