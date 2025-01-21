@@ -2,6 +2,7 @@ var filepicker_8h =
 [
     [ "filepicker_context_s", "structfilepicker__context__s.html", "structfilepicker__context__s" ],
     [ "FILEPICKER_CONTEXT_OUTPUT_ALLOC", "filepicker_8h.html#a4d86250eb6687fa80ec40c29ac99b32a", null ],
+    [ "FILEPICKER_CONTEXT_OUTPUT_MAX_LFN", "filepicker_8h.html#ad4f94109871cf139788f86d3f2b1bda5", null ],
     [ "filepicker_flag_e", "filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deb", [
       [ "FILEPICKER_ALLOW_MULTIPLE", "filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deba8030cc3692410ca853444cf12b1fb2c3", null ],
       [ "FILEPICKER_USE_MB", "filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deba9adccc774ce96a1a78404cf5531f5883", null ]

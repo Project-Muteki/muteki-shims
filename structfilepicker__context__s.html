@@ -162,9 +162,9 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x2c</b></td></t
 unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>type_list_max_size</b></td></tr>
 <tr class="memdesc:abe42005fbc399e34ebe1fc25a8a56d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max size of the type list. <br /></td></tr>
 <tr class="separator:abe42005fbc399e34ebe1fc25a8a56d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74e8f09285919e94cbb89369ad9e1934" id="r_a74e8f09285919e94cbb89369ad9e1934"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfilepicker__context__s.html#a74e8f09285919e94cbb89369ad9e1934">unk_0x30</a></td></tr>
-<tr class="memdesc:a74e8f09285919e94cbb89369ad9e1934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown.  <br /></td></tr>
-<tr class="separator:a74e8f09285919e94cbb89369ad9e1934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b774a9cb82da2f91b9ce91405a40ca" id="r_af3b774a9cb82da2f91b9ce91405a40ca"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfilepicker__context__s.html#af3b774a9cb82da2f91b9ce91405a40ca">path_max_cu</a></td></tr>
+<tr class="memdesc:af3b774a9cb82da2f91b9ce91405a40ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max size of each path in code units.  <br /></td></tr>
+<tr class="separator:af3b774a9cb82da2f91b9ce91405a40ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f0e988ee7b009a0a3af80cec0889005" id="r_a9f0e988ee7b009a0a3af80cec0889005"><td class="memItemLeft" align="right" valign="top"><a id="a9f0e988ee7b009a0a3af80cec0889005" name="a9f0e988ee7b009a0a3af80cec0889005"></a>
 unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></tr>
 <tr class="memdesc:a9f0e988ee7b009a0a3af80cec0889005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. <br /></td></tr>
@@ -266,6 +266,23 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x52</b></td></t
 
 </div>
 </div>
+<a id="af3b774a9cb82da2f91b9ce91405a40ca" name="af3b774a9cb82da2f91b9ce91405a40ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b774a9cb82da2f91b9ce91405a40ca">&#9670;&#160;</a></span>path_max_cu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short filepicker_context_s::path_max_cu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Max size of each path in code units. </p>
+<p><a class="el" href="filepicker_8h.html#a8d15fb9767f809ba6792fc9e70576b15" title="Show a file picker in open mode.">_GetOpenFileName()</a> seems to compare this value to the length of the first <a class="el" href="structfilepicker__context__s.html#a055e0893afe30311a5eb535756a32822" title="Paths buffer.">paths</a> string and will clear <a class="el" href="structfilepicker__context__s.html#a055e0893afe30311a5eb535756a32822" title="Paths buffer.">paths</a> if the length is larger or equal to this value. Use FILEPICKER_CONTEXT_OUTPUT_MAX_LFN if starting the file picker in LFN mode. </p>
+
+</div>
+</div>
 <a id="a055e0893afe30311a5eb535756a32822" name="a055e0893afe30311a5eb535756a32822"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a055e0893afe30311a5eb535756a32822">&#9670;&#160;</a></span>paths</h2>
 
@@ -333,23 +350,6 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x52</b></td></t
 <p>Can be overridden by the user before invoking the file picker.</p>
 <p>The list must be in this format: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *list = <span class="stringliteral">&quot;&lt;description&gt;\0&lt;fnmatch_pattern&gt;\0...&lt;description&gt;\0&lt;fnmatch_pattern&gt;\0\0\0\0&quot;</span>;</div>
 </div><!-- fragment --><p><code>description</code> should be a string describing the format and <code>fnmatch_pattern</code> should be an fnmatch pattern supported by <a class="el" href="fs_8h.html#ae6047991471893cb5e52e6a310314474" title="Begin a file/directory search.">_afindfirst()</a>. The string also needs to be terminated with triple NULs (<code>"\0\0\0"</code>). </p>
-
-</div>
-</div>
-<a id="a74e8f09285919e94cbb89369ad9e1934" name="a74e8f09285919e94cbb89369ad9e1934"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74e8f09285919e94cbb89369ad9e1934">&#9670;&#160;</a></span>unk_0x30</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned short filepicker_context_s::unk_0x30</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unknown. </p>
-<p><a class="el" href="filepicker_8h.html#a8d15fb9767f809ba6792fc9e70576b15" title="Show a file picker in open mode.">_GetOpenFileName()</a> seems to compare this value to the length of the first <a class="el" href="structfilepicker__context__s.html#a055e0893afe30311a5eb535756a32822" title="Paths buffer.">paths</a> string and will clear <a class="el" href="structfilepicker__context__s.html#a055e0893afe30311a5eb535756a32822" title="Paths buffer.">paths</a> if the length is larger or equal to this value. Setting this to <code>0xffff</code> is recommended. </p>
 
 </div>
 </div>
