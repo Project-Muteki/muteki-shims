@@ -147,12 +147,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a33c58ebe30082278157831d17eaa8e86" id="r_a33c58ebe30082278157831d17eaa8e86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a33c58ebe30082278157831d17eaa8e86">FreeProgram</a> (void *prog)</td></tr>
 <tr class="memdesc:a33c58ebe30082278157831d17eaa8e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a loaded applet.  <br /></td></tr>
 <tr class="separator:a33c58ebe30082278157831d17eaa8e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19b1201278ff7a64cd3c93b07c295ba1" id="r_a19b1201278ff7a64cd3c93b07c295ba1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a19b1201278ff7a64cd3c93b07c295ba1">GetCurrentPathA</a> ()</td></tr>
-<tr class="memdesc:a19b1201278ff7a64cd3c93b07c295ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the current running executable (argv[0]).  <br /></td></tr>
-<tr class="separator:a19b1201278ff7a64cd3c93b07c295ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7605f69e8452a0ed7e4e77ead04b9907" id="r_a7605f69e8452a0ed7e4e77ead04b9907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a7605f69e8452a0ed7e4e77ead04b9907">GetCurrentPathW</a> ()</td></tr>
-<tr class="memdesc:a7605f69e8452a0ed7e4e77ead04b9907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the current running executable (argv[0]). (UTF-16 variant)  <br /></td></tr>
-<tr class="separator:a7605f69e8452a0ed7e4e77ead04b9907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65d3f51edf9e367fd4fc3974f76fcf5" id="r_ae65d3f51edf9e367fd4fc3974f76fcf5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#ae65d3f51edf9e367fd4fc3974f76fcf5">GetCurrentPathA</a> ()</td></tr>
+<tr class="memdesc:ae65d3f51edf9e367fd4fc3974f76fcf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the current running executable (argv[0]).  <br /></td></tr>
+<tr class="separator:ae65d3f51edf9e367fd4fc3974f76fcf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5743bb2e33cbd9136386a6596c39c97" id="r_ad5743bb2e33cbd9136386a6596c39c97"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#ad5743bb2e33cbd9136386a6596c39c97">GetCurrentPathW</a> ()</td></tr>
+<tr class="memdesc:ad5743bb2e33cbd9136386a6596c39c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the current running executable (argv[0]). (UTF-16 variant)  <br /></td></tr>
+<tr class="separator:ad5743bb2e33cbd9136386a6596c39c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1112346cdf9957b295b3379673f99d9" id="r_ab1112346cdf9957b295b3379673f99d9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#ab1112346cdf9957b295b3379673f99d9">GetApplicationNameA</a> (const char *pathname, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *out_name, size_t max_size)</td></tr>
 <tr class="memdesc:ab1112346cdf9957b295b3379673f99d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title name of the ROM file.  <br /></td></tr>
 <tr class="separator:ab1112346cdf9957b295b3379673f99d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -809,8 +809,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a19b1201278ff7a64cd3c93b07c295ba1" name="a19b1201278ff7a64cd3c93b07c295ba1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19b1201278ff7a64cd3c93b07c295ba1">&#9670;&#160;</a></span>GetCurrentPathA()</h2>
+<a id="ae65d3f51edf9e367fd4fc3974f76fcf5" name="ae65d3f51edf9e367fd4fc3974f76fcf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65d3f51edf9e367fd4fc3974f76fcf5">&#9670;&#160;</a></span>GetCurrentPathA()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -819,7 +819,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char * GetCurrentPathA </td>
+          <td class="memname">const char * GetCurrentPathA </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -839,8 +839,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7605f69e8452a0ed7e4e77ead04b9907" name="a7605f69e8452a0ed7e4e77ead04b9907"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7605f69e8452a0ed7e4e77ead04b9907">&#9670;&#160;</a></span>GetCurrentPathW()</h2>
+<a id="ad5743bb2e33cbd9136386a6596c39c97" name="ad5743bb2e33cbd9136386a6596c39c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5743bb2e33cbd9136386a6596c39c97">&#9670;&#160;</a></span>GetCurrentPathW()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -849,7 +849,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> * GetCurrentPathW </td>
+          <td class="memname">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> * GetCurrentPathW </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
