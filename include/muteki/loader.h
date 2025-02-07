@@ -185,7 +185,7 @@ extern int FreeProgram(void *prog);
  * @x_void_param
  * @return The DOS 8.3 path to the current running executable.
  */
-extern char *GetCurrentPathA();
+extern const char *GetCurrentPathA();
 
 /**
  * @brief Get the path to the current running executable (argv[0]). (UTF-16 variant)
@@ -193,7 +193,7 @@ extern char *GetCurrentPathA();
  * @x_void_param
  * @return The UTF-16 LFN path to the current running executable.
  */
-extern UTF16 *GetCurrentPathW();
+extern const UTF16 *GetCurrentPathW();
 
 /**
  * @brief Get the title name of the ROM file.
