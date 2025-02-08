@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['on_5fchange_5fstate_0',['on_change_state',['../structui__component__s.html#aa2e78f7777457b2290f8232c0b337b5d',1,'ui_component_s']]],
-  ['on_5fdraw_1',['on_draw',['../structui__component__s.html#aae7e87991174116e83bb255db0c31cb6',1,'ui_component_s']]],
-  ['on_5ferase_5fbg_2',['on_erase_bg',['../structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811',1,'ui_component_s']]],
-  ['on_5fevent_3',['on_event',['../structui__component__s.html#aab73249ff71fabef7bc2d13a6d56e67a',1,'ui_component_s']]],
-  ['on_5fnoentry_4',['on_noentry',['../structdevio__descriptor__t.html#a282c61d15d84304863cded08f39fdf47',1,'devio_descriptor_t']]]
+  ['name_0',['name',['../structnand__params__t.html#a21407778ebd3e858c47443294ce5a6d7',1,'nand_params_t']]],
+  ['nand_5fid_1',['nand_id',['../structnand__params__t.html#a4a7c140fc3e2a8f707b6069ce96e250d',1,'nand_params_t']]],
+  ['nand_5fid_5flength_2',['nand_id_length',['../structnand__params__t.html#a36880ad8a1ada4e2d921043e0a47a56d',1,'nand_params_t']]],
+  ['next_3',['next',['../structthread__s.html#a91a5ec60bf6c739683397da137fe3f9f',1,'thread_s::next'],['../structui__component__s.html#ad3ba772f21cf112205f5241b5940665b',1,'ui_component_s::next']]],
+  ['npaths_4',['npaths',['../structfilepicker__context__s.html#a7daa2aae3f0de3c2db088b93e1ca32b7',1,'filepicker_context_s']]]
 ];

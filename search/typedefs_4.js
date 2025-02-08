@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lcd_5frotate_5fcallback_5ft_0',['lcd_rotate_callback_t',['../ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5',1,'common.h']]]
+  ['kerrno_5ft_0',['kerrno_t',['../errno_8h.html#a10935ed5a8e001707b2cc7bfc07cdfc6',1,'errno.h']]]
 ];

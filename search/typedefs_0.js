@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['critical_5fsection_5ft_0',['critical_section_t',['../threading_8h.html#a07c0d1458ed0f242cff7024401856fdc',1,'threading.h']]]
+  ['applet_5fargs_5fv4_5ft_0',['applet_args_v4_t',['../loader_8h.html#a9398f49c049a2df8ffab792cc2b18006',1,'loader.h']]]
 ];

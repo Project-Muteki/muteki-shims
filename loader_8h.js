@@ -1,8 +1,21 @@
 var loader_8h =
 [
-    [ "applet_args_v4_t", "structapplet__args__v4__t.html", "structapplet__args__v4__t" ],
-    [ "loader_cart_descriptor_t", "structloader__cart__descriptor__t.html", "structloader__cart__descriptor__t" ],
-    [ "loader_file_descriptor_t", "structloader__file__descriptor__t.html", "structloader__file__descriptor__t" ],
+    [ "applet_args_v4_s", "structapplet__args__v4__s.html", "structapplet__args__v4__s" ],
+    [ "loader_cart_descriptor_s", "structloader__cart__descriptor__s.html", "structloader__cart__descriptor__s" ],
+    [ "loader_file_descriptor_s", "structloader__file__descriptor__s.html", "structloader__file__descriptor__s" ],
+    [ "loader_resource_descriptor_s", "structloader__resource__descriptor__s.html", null ],
+    [ "loader_resource_subfile_request_s", "structloader__resource__subfile__request__s.html", null ],
+    [ "loader_image_info_s", "structloader__image__info__s.html", null ],
+    [ "loader_impl_s", "structloader__impl__s.html", null ],
+    [ "loader_loaded_s", "structloader__loaded__s.html", "structloader__loaded__s" ],
+    [ "applet_args_v4_t", "loader_8h.html#a9398f49c049a2df8ffab792cc2b18006", null ],
+    [ "loader_cart_descriptor_t", "loader_8h.html#a36560a68b70972e2a304de6f3ec5f06f", null ],
+    [ "loader_file_descriptor_t", "loader_8h.html#a184563acf3d4edda4e0df664c9f5b298", null ],
+    [ "loader_image_info_t", "loader_8h.html#ad9d396ef2630eec25c9a1a29f79a190c", null ],
+    [ "loader_impl_t", "loader_8h.html#a0190db9a9ff71c083bc749ebcb65e091", null ],
+    [ "loader_loaded_t", "loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049", null ],
+    [ "loader_resource_descriptor_t", "loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8", null ],
+    [ "loader_resource_subfile_request_t", "loader_8h.html#a60398856a9baefcc4c1e54b6447efbb0", null ],
     [ "applet_subroutine_e", "loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7", [
       [ "APPLET_SUBROUTINE_MAIN", "loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7af8b203b9e4563640ffe858ee8b69cb8d", null ],
       [ "APPLET_SUBROUTINE_RESET_STATES", "loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7a9dee8d89a07e1b6622f3c1c50f7f3946", null ]
@@ -19,6 +32,8 @@ var loader_8h =
     [ "FreeProgram", "loader_8h.html#a33c58ebe30082278157831d17eaa8e86", null ],
     [ "GetApplicationNameA", "loader_8h.html#ab1112346cdf9957b295b3379673f99d9", null ],
     [ "GetApplicationNameW", "loader_8h.html#af6d000ce10b1dc7a883ac8652ccc4903", null ],
+    [ "GetApplicationProcA", "loader_8h.html#a64365d82f725618acac1571ff300fe7f", null ],
+    [ "GetApplicationProcW", "loader_8h.html#a984b0d87357847cbabd207db76989e11", null ],
     [ "GetCurrentPathA", "loader_8h.html#ae65d3f51edf9e367fd4fc3974f76fcf5", null ],
     [ "GetCurrentPathW", "loader_8h.html#ad5743bb2e33cbd9136386a6596c39c97", null ],
     [ "LoadProgramA", "loader_8h.html#a199d8fee3b874fd0bc6abfdfa224760b", null ],

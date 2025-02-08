@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['y_0',['y',['../structlcd__cursor__s.html#ad4f1f48545677d9eaac599b6768b7109',1,'lcd_cursor_s']]],
-  ['y0_1',['y0',['../structui__rect__s.html#a74bd143e279ebaa7c9720cb21da1962f',1,'ui_rect_s']]],
-  ['y1_2',['y1',['../structui__rect__s.html#a8e230d7158eaa59f37d0e53da0f98809',1,'ui_rect_s']]],
-  ['year_3',['year',['../structdatetime__t.html#a30ca3bffab9f715331bd93c77b0ffc4b',1,'datetime_t']]]
+  ['x_0',['x',['../structlcd__cursor__s.html#a019a7609e710f7966a056c65185b26db',1,'lcd_cursor_s']]],
+  ['x0_1',['x0',['../structui__rect__s.html#af3aa67c905a3b9121e5376a1d4da18ea',1,'ui_rect_s']]],
+  ['x1_2',['x1',['../structui__rect__s.html#a0df8a98246fb5be61464287ae6ac76a6',1,'ui_rect_s']]],
+  ['xsize_3',['xsize',['../structlcd__surface__s.html#a264e253c76cbbdf0da1dbf1fcb3e5781',1,'lcd_surface_s::xsize'],['../structlcd__base__s.html#abdffa1f11d9b50882aea1a310037d6d5',1,'lcd_base_s::xsize'],['../structlcd__thread__safe__s.html#aee0fef719c53262a72fa8b019f1c1119',1,'lcd_thread_safe_s::xsize']]]
 ];

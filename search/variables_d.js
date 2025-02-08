@@ -1,16 +1,8 @@
 var searchData=
 [
-  ['palette_0',['palette',['../structlcd__surface__s.html#a19c0ab393a6283ab9d143536a4a2ad51',1,'lcd_surface_s']]],
-  ['param_5f1_5fvalue_1',['param_1_value',['../structpower__battery__status__t.html#a885a900a1c7b321291144149c0da481c',1,'power_battery_status_t']]],
-  ['parent_2',['parent',['../structui__component__s.html#a276cd9841f77795f1c1c77d7acb26769',1,'ui_component_s']]],
-  ['parent_5ffd_3',['parent_fd',['../structloader__file__descriptor__t.html#a7a911a8d53a08397bc9f7da4c28c77b7',1,'loader_file_descriptor_t']]],
-  ['path_4',['path',['../structdevio__descriptor__t.html#abd3541cb6cfa3b608f98283a166d271e',1,'devio_descriptor_t']]],
-  ['path_5fmax_5fcu_5',['path_max_cu',['../structfilepicker__context__s.html#af3b774a9cb82da2f91b9ce91405a40ca',1,'filepicker_context_s']]],
-  ['paths_6',['paths',['../structfilepicker__context__s.html#a055e0893afe30311a5eb535756a32822',1,'filepicker_context_s']]],
-  ['pending_5fsize_7',['pending_size',['../structpcm__frame__s.html#a8f091dc64a684b148e1bc32c0f6419cf',1,'pcm_frame_s']]],
-  ['pixel_5fend_8',['pixel_end',['../structlcd__base__s.html#a91336ecbb49f824f44230820ee684f18',1,'lcd_base_s::pixel_end'],['../structlcd__thread__safe__s.html#abe4fe3d70fb6d59ed39dd34008305f57',1,'lcd_thread_safe_s::pixel_end']]],
-  ['pixel_5fsize_9',['pixel_size',['../structlcd__base__s.html#aa5b0c5117508e29ee512256150dec98f',1,'lcd_base_s::pixel_size'],['../structlcd__thread__safe__s.html#a9fcd2cf13d136cd09977e291f3aa308a',1,'lcd_thread_safe_s::pixel_size']]],
-  ['pop_5fidx_10',['pop_idx',['../structmessage__queue__nonatomic__t.html#a51724e301a863f0a3c4ed661f66b9714',1,'message_queue_nonatomic_t']]],
-  ['prev_11',['prev',['../structthread__s.html#ad222a518be35c3a59f8378c575a96da2',1,'thread_s']]],
-  ['push_5fidx_12',['push_idx',['../structmessage__queue__nonatomic__t.html#a3b18561837a40feb2770f4652ad8fe28',1,'message_queue_nonatomic_t']]]
+  ['on_5fchange_5fstate_0',['on_change_state',['../structui__component__s.html#aa2e78f7777457b2290f8232c0b337b5d',1,'ui_component_s']]],
+  ['on_5fdraw_1',['on_draw',['../structui__component__s.html#aae7e87991174116e83bb255db0c31cb6',1,'ui_component_s']]],
+  ['on_5ferase_5fbg_2',['on_erase_bg',['../structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811',1,'ui_component_s']]],
+  ['on_5fevent_3',['on_event',['../structui__component__s.html#aab73249ff71fabef7bc2d13a6d56e67a',1,'ui_component_s']]],
+  ['on_5fnoentry_4',['on_noentry',['../structdevio__descriptor__t.html#a282c61d15d84304863cded08f39fdf47',1,'devio_descriptor_t']]]
 ];

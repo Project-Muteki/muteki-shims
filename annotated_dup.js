@@ -1,6 +1,6 @@
 var annotated_dup =
 [
-    [ "applet_args_v4_t", "structapplet__args__v4__t.html", "structapplet__args__v4__t" ],
+    [ "applet_args_v4_s", "structapplet__args__v4__s.html", "structapplet__args__v4__s" ],
     [ "critical_section_s", "structcritical__section__s.html", "structcritical__section__s" ],
     [ "datetime_t", "structdatetime__t.html", "structdatetime__t" ],
     [ "device_service_pcm_s", "structdevice__service__pcm__s.html", null ],
@@ -17,8 +17,13 @@ var annotated_dup =
     [ "lcd_lock_s", "structlcd__lock__s.html", "structlcd__lock__s" ],
     [ "lcd_surface_s", "structlcd__surface__s.html", "structlcd__surface__s" ],
     [ "lcd_thread_safe_s", "structlcd__thread__safe__s.html", "structlcd__thread__safe__s" ],
-    [ "loader_cart_descriptor_t", "structloader__cart__descriptor__t.html", "structloader__cart__descriptor__t" ],
-    [ "loader_file_descriptor_t", "structloader__file__descriptor__t.html", "structloader__file__descriptor__t" ],
+    [ "loader_cart_descriptor_s", "structloader__cart__descriptor__s.html", "structloader__cart__descriptor__s" ],
+    [ "loader_file_descriptor_s", "structloader__file__descriptor__s.html", "structloader__file__descriptor__s" ],
+    [ "loader_image_info_s", "structloader__image__info__s.html", null ],
+    [ "loader_impl_s", "structloader__impl__s.html", null ],
+    [ "loader_loaded_s", "structloader__loaded__s.html", "structloader__loaded__s" ],
+    [ "loader_resource_descriptor_s", "structloader__resource__descriptor__s.html", null ],
+    [ "loader_resource_subfile_request_s", "structloader__resource__subfile__request__s.html", null ],
     [ "message_queue_nonatomic_t", "structmessage__queue__nonatomic__t.html", "structmessage__queue__nonatomic__t" ],
     [ "message_queue_s", "structmessage__queue__s.html", "structmessage__queue__s" ],
     [ "nand_params_t", "structnand__params__t.html", "structnand__params__t" ],
