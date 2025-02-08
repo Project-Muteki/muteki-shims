@@ -34,7 +34,7 @@ enum applet_subroutine_e {
  * @details Mirrors the parameter set by the parent ExecuteProgram() call.
  * @see ExecuteProgram
  */
-typedef struct {
+typedef struct applet_args_v4_s {
     /** DOS 8.3 path to executable. */
     char *dospath;
     /** Subroutine to invoke. */
@@ -45,7 +45,11 @@ typedef struct {
     void **applet_arg2;
 } applet_args_v4_t;
 
-typedef struct {
+/**
+ * @brief Cart file descriptor.
+ * @todo Add more details.
+ */
+typedef struct loader_cart_descriptor_s {
     /**
      * @brief Unknown.
      */
@@ -92,7 +96,10 @@ typedef struct {
     unsigned int unk_0x1c;
 } loader_cart_descriptor_t; // 0x20
 
-typedef struct {
+/**
+ * @brief File descriptor specific to loader.
+ */
+typedef struct loader_file_descriptor_s {
     /**
      * @brief ROM cart descriptor.
      */
@@ -131,6 +138,128 @@ typedef struct {
      */
     unsigned int unk_0x1c;
 } loader_file_descriptor_t;
+
+/**
+ * @brief Resource descriptor.
+ * @todo Add more details.
+ */
+typedef struct loader_resource_descriptor_s {
+    size_t mapped_size;
+    size_t mapped_offset;
+    size_t data_size;
+    size_t data_offset;
+    loader_file_descriptor_t *ldrfd;
+} loader_resource_descriptor_t;
+
+/**
+ * @brief Resource descriptor subfile request.
+ * @todo Add more details.
+ */
+typedef struct loader_resource_subfile_request_s {
+    size_t base;
+    size_t size;
+} loader_resource_subfile_request_t;
+
+/**
+ * @brief Executable image info.
+ * @todo Add more details.
+ */
+typedef struct loader_image_info_s {
+    size_t bestape_code_size;
+    size_t bestape_data_size;
+    size_t bestape_bss_size;
+    size_t bestape_total_raw_size; /* Size of headers and all raw section data */
+    size_t bestape_total_size;
+    size_t bestape_header_size;
+    unsigned int bestape_checksum;
+    unsigned int unk_0x1c;
+    unsigned char unk_0x20[24];
+} loader_image_info_t;
+
+/**
+ * @brief Loader implementation vtable.
+ * @todo Add more details.
+ */
+typedef struct loader_impl_s {
+    void *load;
+    void *load_into;
+    void *unload;
+    void *exec;
+    void *probe;
+    unsigned char *(*dlopen)(char *);
+    void *unk_0x18;
+    void *dlsym;
+    void *unk_0x20;
+    void *unk_0x24;
+    loader_resource_descriptor_t * (*open_resource_descriptor)(loader_file_descriptor_t *);
+    void (*close_resource_descriptor)(loader_resource_descriptor_t *);
+    int (*get_resource)(loader_resource_descriptor_t *, UTF16 *, UTF16 *, loader_resource_subfile_request_t *);
+    int (*collect_image_info)(loader_file_descriptor_t *, loader_image_info_t *);
+} loader_impl_t;
+
+/**
+ * @brief Loaded applet executable.
+ */
+typedef struct loader_loaded_s {
+    /**
+     * @brief DOS 8.3 path to executable file.
+     */
+    char path[80];
+    /**
+     * @brief Numerical ID of loaded applet.
+     */
+    int id;
+    /**
+     * @brief Reference counter.
+     */
+    int refcount;
+    /**
+     * @brief Unknown.
+     */
+    unsigned int unk_0x58;
+    /**
+     * @brief Mapped executable.
+     */
+    unsigned char *mapped_executable;
+    /**
+     * @brief Loader implementation being used to load this applet.
+     */
+    loader_impl_t *loader;
+    /**
+     * @brief Unknown.
+     */
+    short unk_0x64;
+    /**
+     * @brief Executable type.
+     */
+    short type;
+    /**
+     * @brief Unknown.
+     * @details Seems to be copied from offset `0xc` of the corresponding ROM sepc file.
+     */
+    unsigned int rom_spec_offset_0xc;
+    /**
+     * @brief LFN path.
+     */
+    void *path_lfn;
+    /**
+     * @brief Assets bundle file descriptor.
+     */
+    loader_file_descriptor_t *asset_file;
+    /**
+     * @brief Executable file descriptors.
+     */
+    loader_file_descriptor_t *ldrfd;
+    /**
+     * @brief Unknown.
+     */
+    unsigned char unk_0x78[28];
+    /**
+     * @brief POSIX file descriptor of the executable.
+     * @details Probably only set when POSIX file descriptors are supported.
+     */
+    void *posixfd_rom;
+} loader_loaded_t;
 
 /**
  * @brief Load an applet executable.
@@ -217,6 +346,36 @@ extern size_t GetApplicationNameA(const char *pathname, UTF16 *out_name, size_t 
  * @return Length of the title name in number of UTF16 code units.
  */
 extern size_t GetApplicationNameW(const UTF16 *pathname, UTF16 *out_name, size_t max_size);
+
+/**
+ * @brief Search and return the applet instance by DOS 8.3 pathname.
+ * @details To query the current applet, one can use the following:
+ *
+ * @code{.c}
+ * loader_loaded_t *current_applet = GetApplicationProcA(GetCurrentPathA());
+ * @endcode
+ *
+ * @x_syscall_num `0x10289`
+ * @param pathname DOS 8.3 path to the loaded applet file.
+ * @return Pointer to the applet instance, or `NULL` when applet is not loaded.
+ */
+extern loader_loaded_t *GetApplicationProcA(const char *pathname);
+
+/**
+ * @brief Search and return the applet instance by LFN.
+ * @details Similar to GetApplicationProcA(), to query the current applet, one can use the following:
+ *
+ * @code{.c}
+ * loader_loaded_t *current_applet = GetApplicationProcW(GetCurrentPathW());
+ * @endcode
+ *
+ * However using the GetApplicationProcA() counterpart results in slightly more performant code.
+ *
+ * @x_syscall_num `0x10292`
+ * @param pathname LFN path to the loaded applet file.
+ * @return Pointer to the applet instance, or `NULL` when applet is not loaded.
+ */
+extern loader_loaded_t *GetApplicationProcW(const UTF16 *pathname);
 
 /**
  * @brief Open a loader file descriptor from a file.
