@@ -108,6 +108,10 @@ enum errno_exec_e {
      */
     EXEC_BESTAPE_RELOC_FAILURE = 0x0011,
     EXEC_NO_SUCH_ENTRY = 0x0012,
+    /**
+     * @brief Executable is not loaded.
+     */
+    EXEC_NOT_LOADED = 0x0016,
 };
 
 /**

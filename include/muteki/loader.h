@@ -214,9 +214,9 @@ typedef struct loader_loaded_s {
      */
     int refcount;
     /**
-     * @brief Unknown.
+     * @brief Reference counter for currently active (running) instances.
      */
-    unsigned int unk_0x58;
+    int active_refcount;
     /**
      * @brief Mapped executable.
      */
@@ -269,6 +269,15 @@ typedef struct loader_loaded_s {
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
  */
 extern void *LoadProgramA(const char *pathname);
+
+/**
+ * @brief Return the instance of a running applet by its DOS 8.3 path name.
+ * @details This is similar to GetApplicationProcA() but will return `NULL` in case loader_loaded_s::active_refcount of that applet is 0.
+ * @x_syscall_num `0x1011a`
+ * @param pathname DOS 8.3 path to the ROM file or executable.
+ * @return Pointer to the applet instance, or `NULL` when applet is not loaded or not currently running.
+ */
+extern loader_loaded_t *ProgramIsRunningA(const char *pathname);
 
 /**
  * @brief Load an applet executable. (UTF-16 variant)
@@ -328,7 +337,7 @@ extern const UTF16 *GetCurrentPathW();
  * @brief Get the title name of the ROM file.
  * @details This will return UTF16-encoded localized title name that matches the current locale.
  * @x_syscall_num `0x10115`
- * @param[in] pathname DOS 8.3 path to the ROM file.
+ * @param[in] pathname DOS 8.3 path to the ROM file or executable.
  * @param[out] out_name The title name in current locale.
  * @param max_size Max size of the title name.
  * @return Length of the title name in number of UTF16 code units.
@@ -340,7 +349,7 @@ extern size_t GetApplicationNameA(const char *pathname, UTF16 *out_name, size_t 
  * @details This will return UTF16-encoded localized title name that matches the current locale.
  * @warning Not all systems implement this. When not implemented, the length read will always be 0.
  * @x_syscall_num `0x10280`
- * @param[in] pathname LFN path to the ROM file.
+ * @param[in] pathname LFN path to the ROM file or executable.
  * @param[out] out_name The title name in current locale.
  * @param max_size Max size of the title name.
  * @return Length of the title name in number of UTF16 code units.
@@ -348,11 +357,26 @@ extern size_t GetApplicationNameA(const char *pathname, UTF16 *out_name, size_t 
 extern size_t GetApplicationNameW(const UTF16 *pathname, UTF16 *out_name, size_t max_size);
 
 /**
+ * @brief Return the instance of a running applet by its LFN.
+ * @details This is similar to GetApplicationProcW() but will return `NULL` in case loader_loaded_s::active_refcount of that applet is 0.
+ * @x_syscall_num `0x10283`
+ * @param pathname LFN path to the ROM file or executable.
+ * @return Pointer to the applet instance, or `NULL` when applet is not loaded or not currently running.
+ */
+extern loader_loaded_t *ProgramIsRunningW(const UTF16 *pathname);
+
+/**
  * @brief Search and return the applet instance by DOS 8.3 pathname.
  * @details To query the current applet, one can use the following:
  *
  * @code{.c}
  * loader_loaded_t *current_applet = GetApplicationProcA(GetCurrentPathA());
+ * @endcode
+ *
+ * or
+ *
+ * @code{.c}
+ * loader_loaded_t *current_applet = ProgramIsRunningA(GetCurrentPathA());
  * @endcode
  *
  * @x_syscall_num `0x10289`
@@ -367,6 +391,12 @@ extern loader_loaded_t *GetApplicationProcA(const char *pathname);
  *
  * @code{.c}
  * loader_loaded_t *current_applet = GetApplicationProcW(GetCurrentPathW());
+ * @endcode
+ *
+ * or
+ *
+ * @code{.c}
+ * loader_loaded_t *current_applet = ProgramIsRunningW(GetCurrentPathW());
  * @endcode
  *
  * However using the GetApplicationProcA() counterpart results in slightly more performant code.
