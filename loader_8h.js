@@ -37,5 +37,7 @@ var loader_8h =
     [ "GetCurrentPathA", "loader_8h.html#ae65d3f51edf9e367fd4fc3974f76fcf5", null ],
     [ "GetCurrentPathW", "loader_8h.html#ad5743bb2e33cbd9136386a6596c39c97", null ],
     [ "LoadProgramA", "loader_8h.html#a199d8fee3b874fd0bc6abfdfa224760b", null ],
-    [ "LoadProgramW", "loader_8h.html#a6a551e1d93c62d9a73f7167630ce95c7", null ]
+    [ "LoadProgramW", "loader_8h.html#a6a551e1d93c62d9a73f7167630ce95c7", null ],
+    [ "ProgramIsRunningA", "loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5", null ],
+    [ "ProgramIsRunningW", "loader_8h.html#acef8c80267888eadf86ee52e625e6534", null ]
 ];

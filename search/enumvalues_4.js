@@ -14,6 +14,7 @@ var searchData=
   ['exec_5fmalloc_5ffailed_11',['EXEC_MALLOC_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ae2a8dc3f3525c2cc559143277139e279',1,'errno.h']]],
   ['exec_5fmap_5ffull_12',['EXEC_MAP_FULL',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a896430c12d395f8968f1c2edfd12798a',1,'errno.h']]],
   ['exec_5fmp3_5fplayer_5fis_5frunning_13',['EXEC_MP3_PLAYER_IS_RUNNING',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32acdb3b3998f3a7bf62730f0b27e9c5075',1,'errno.h']]],
-  ['exec_5fopen_5ffailed_14',['EXEC_OPEN_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a6209483baa6c26dac7e22bc7db5d3dd8',1,'errno.h']]],
-  ['exec_5funsupported_15',['EXEC_UNSUPPORTED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1',1,'errno.h']]]
+  ['exec_5fnot_5floaded_14',['EXEC_NOT_LOADED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a99b71b6ad1eaf774808033e88fded275',1,'errno.h']]],
+  ['exec_5fopen_5ffailed_15',['EXEC_OPEN_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a6209483baa6c26dac7e22bc7db5d3dd8',1,'errno.h']]],
+  ['exec_5funsupported_16',['EXEC_UNSUPPORTED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1',1,'errno.h']]]
 ];

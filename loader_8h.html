@@ -185,6 +185,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a199d8fee3b874fd0bc6abfdfa224760b" id="r_a199d8fee3b874fd0bc6abfdfa224760b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a199d8fee3b874fd0bc6abfdfa224760b">LoadProgramA</a> (const char *pathname)</td></tr>
 <tr class="memdesc:a199d8fee3b874fd0bc6abfdfa224760b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an applet executable.  <br /></td></tr>
 <tr class="separator:a199d8fee3b874fd0bc6abfdfa224760b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b3aae10043dbc221a7ae34a59d71b5" id="r_a49b3aae10043dbc221a7ae34a59d71b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5">ProgramIsRunningA</a> (const char *pathname)</td></tr>
+<tr class="memdesc:a49b3aae10043dbc221a7ae34a59d71b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the instance of a running applet by its DOS 8.3 path name.  <br /></td></tr>
+<tr class="separator:a49b3aae10043dbc221a7ae34a59d71b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a551e1d93c62d9a73f7167630ce95c7" id="r_a6a551e1d93c62d9a73f7167630ce95c7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a6a551e1d93c62d9a73f7167630ce95c7">LoadProgramW</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname)</td></tr>
 <tr class="memdesc:a6a551e1d93c62d9a73f7167630ce95c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an applet executable. (UTF-16 variant)  <br /></td></tr>
 <tr class="separator:a6a551e1d93c62d9a73f7167630ce95c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,6 +209,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af6d000ce10b1dc7a883ac8652ccc4903" id="r_af6d000ce10b1dc7a883ac8652ccc4903"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#af6d000ce10b1dc7a883ac8652ccc4903">GetApplicationNameW</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *out_name, size_t max_size)</td></tr>
 <tr class="memdesc:af6d000ce10b1dc7a883ac8652ccc4903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the title name of the ROM file (LFN path).  <br /></td></tr>
 <tr class="separator:af6d000ce10b1dc7a883ac8652ccc4903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef8c80267888eadf86ee52e625e6534" id="r_acef8c80267888eadf86ee52e625e6534"><td class="memItemLeft" align="right" valign="top"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#acef8c80267888eadf86ee52e625e6534">ProgramIsRunningW</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname)</td></tr>
+<tr class="memdesc:acef8c80267888eadf86ee52e625e6534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the instance of a running applet by its LFN.  <br /></td></tr>
+<tr class="separator:acef8c80267888eadf86ee52e625e6534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64365d82f725618acac1571ff300fe7f" id="r_a64365d82f725618acac1571ff300fe7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a64365d82f725618acac1571ff300fe7f">GetApplicationProcA</a> (const char *pathname)</td></tr>
 <tr class="memdesc:a64365d82f725618acac1571ff300fe7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search and return the applet instance by DOS 8.3 pathname.  <br /></td></tr>
 <tr class="separator:a64365d82f725618acac1571ff300fe7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -900,7 +906,7 @@ Functions</h2></td></tr>
 <p>This will return UTF16-encoded localized title name that matches the current locale. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10115</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>DOS 8.3 path to the ROM file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>DOS 8.3 path to the ROM file or executable. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">out_name</td><td>The title name in current locale. </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">max_size</td><td>Max size of the title name. </td></tr>
   </table>
@@ -955,7 +961,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10280</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>LFN path to the ROM file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>LFN path to the ROM file or executable. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">out_name</td><td>The title name in current locale. </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">max_size</td><td>Max size of the title name. </td></tr>
   </table>
@@ -995,6 +1001,9 @@ Functions</h2></td></tr>
 <div class="ttc" id="aloader_8h_html_a64365d82f725618acac1571ff300fe7f"><div class="ttname"><a href="loader_8h.html#a64365d82f725618acac1571ff300fe7f">GetApplicationProcA</a></div><div class="ttdeci">loader_loaded_t * GetApplicationProcA(const char *pathname)</div><div class="ttdoc">Search and return the applet instance by DOS 8.3 pathname.</div></div>
 <div class="ttc" id="aloader_8h_html_ae65d3f51edf9e367fd4fc3974f76fcf5"><div class="ttname"><a href="loader_8h.html#ae65d3f51edf9e367fd4fc3974f76fcf5">GetCurrentPathA</a></div><div class="ttdeci">const char * GetCurrentPathA()</div><div class="ttdoc">Get the path to the current running executable (argv[0]).</div></div>
 <div class="ttc" id="astructloader__loaded__s_html"><div class="ttname"><a href="structloader__loaded__s.html">loader_loaded_s</a></div><div class="ttdoc">Loaded applet executable.</div><div class="ttdef"><b>Definition</b> loader.h:203</div></div>
+</div><!-- fragment --><p>or</p>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="structloader__loaded__s.html">loader_loaded_t</a> *current_applet = <a class="code hl_function" href="loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5">ProgramIsRunningA</a>(<a class="code hl_function" href="loader_8h.html#ae65d3f51edf9e367fd4fc3974f76fcf5">GetCurrentPathA</a>());</div>
+<div class="ttc" id="aloader_8h_html_a49b3aae10043dbc221a7ae34a59d71b5"><div class="ttname"><a href="loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5">ProgramIsRunningA</a></div><div class="ttdeci">loader_loaded_t * ProgramIsRunningA(const char *pathname)</div><div class="ttdoc">Return the instance of a running applet by its DOS 8.3 path name.</div></div>
 </div><!-- fragment --><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10289</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1035,6 +1044,9 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structloader__loaded__s.html">loader_loaded_t</a> *current_applet = <a class="code hl_function" href="loader_8h.html#a984b0d87357847cbabd207db76989e11">GetApplicationProcW</a>(<a class="code hl_function" href="loader_8h.html#ad5743bb2e33cbd9136386a6596c39c97">GetCurrentPathW</a>());</div>
 <div class="ttc" id="aloader_8h_html_a984b0d87357847cbabd207db76989e11"><div class="ttname"><a href="loader_8h.html#a984b0d87357847cbabd207db76989e11">GetApplicationProcW</a></div><div class="ttdeci">loader_loaded_t * GetApplicationProcW(const UTF16 *pathname)</div><div class="ttdoc">Search and return the applet instance by LFN.</div></div>
 <div class="ttc" id="aloader_8h_html_ad5743bb2e33cbd9136386a6596c39c97"><div class="ttname"><a href="loader_8h.html#ad5743bb2e33cbd9136386a6596c39c97">GetCurrentPathW</a></div><div class="ttdeci">const UTF16 * GetCurrentPathW()</div><div class="ttdoc">Get the path to the current running executable (argv[0]). (UTF-16 variant)</div></div>
+</div><!-- fragment --><p>or</p>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="structloader__loaded__s.html">loader_loaded_t</a> *current_applet = <a class="code hl_function" href="loader_8h.html#acef8c80267888eadf86ee52e625e6534">ProgramIsRunningW</a>(<a class="code hl_function" href="loader_8h.html#ad5743bb2e33cbd9136386a6596c39c97">GetCurrentPathW</a>());</div>
+<div class="ttc" id="aloader_8h_html_acef8c80267888eadf86ee52e625e6534"><div class="ttname"><a href="loader_8h.html#acef8c80267888eadf86ee52e625e6534">ProgramIsRunningW</a></div><div class="ttdeci">loader_loaded_t * ProgramIsRunningW(const UTF16 *pathname)</div><div class="ttdoc">Return the instance of a running applet by its LFN.</div></div>
 </div><!-- fragment --><p>However using the <a class="el" href="loader_8h.html#a64365d82f725618acac1571ff300fe7f" title="Search and return the applet instance by DOS 8.3 pathname.">GetApplicationProcA()</a> counterpart results in slightly more performant code.</p>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10292</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1177,6 +1189,78 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a structure describing the loaded executable, or NULL if the loading process failed. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="loader_8h.html#a199d8fee3b874fd0bc6abfdfa224760b" title="Load an applet executable.">LoadProgramA</a> </dd></dl>
+
+</div>
+</div>
+<a id="a49b3aae10043dbc221a7ae34a59d71b5" name="a49b3aae10043dbc221a7ae34a59d71b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b3aae10043dbc221a7ae34a59d71b5">&#9670;&#160;</a></span>ProgramIsRunningA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> * ProgramIsRunningA </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pathname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the instance of a running applet by its DOS 8.3 path name. </p>
+<p>This is similar to <a class="el" href="loader_8h.html#a64365d82f725618acac1571ff300fe7f" title="Search and return the applet instance by DOS 8.3 pathname.">GetApplicationProcA()</a> but will return <code>NULL</code> in case <a class="el" href="structloader__loaded__s.html#a5ff5a21ee89aaaa35b113c149b6b4630" title="Reference counter for currently active (running) instances.">loader_loaded_s::active_refcount</a> of that applet is 0. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1011a</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathname</td><td>DOS 8.3 path to the ROM file or executable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the applet instance, or <code>NULL</code> when applet is not loaded or not currently running. </dd></dl>
+
+</div>
+</div>
+<a id="acef8c80267888eadf86ee52e625e6534" name="acef8c80267888eadf86ee52e625e6534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef8c80267888eadf86ee52e625e6534">&#9670;&#160;</a></span>ProgramIsRunningW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> * ProgramIsRunningW </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>pathname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the instance of a running applet by its LFN. </p>
+<p>This is similar to <a class="el" href="loader_8h.html#a984b0d87357847cbabd207db76989e11" title="Search and return the applet instance by LFN.">GetApplicationProcW()</a> but will return <code>NULL</code> in case <a class="el" href="structloader__loaded__s.html#a5ff5a21ee89aaaa35b113c149b6b4630" title="Reference counter for currently active (running) instances.">loader_loaded_s::active_refcount</a> of that applet is 0. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10283</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathname</td><td>LFN path to the ROM file or executable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the applet instance, or <code>NULL</code> when applet is not loaded or not currently running. </dd></dl>
 
 </div>
 </div>
