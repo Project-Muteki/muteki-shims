@@ -65,7 +65,7 @@ var searchData=
   ['unk_5fcallback_5f0x38_62',['unk_callback_0x38',['../structui__widget__button__s.html#a242ed0f7a00250c75bff6d6f4acfcf09',1,'ui_widget_button_s']]],
   ['unlock_63',['unlock',['../structlcd__lock__s.html#a0f578f753fd3fa87f29992a377f4d711',1,'lcd_lock_s::unlock'],['../structlcd__thread__safe__s.html#a1b72a5740d9238358e8a330eda1d3d4f',1,'lcd_thread_safe_s::unlock']]],
   ['unstayresidentprograma_64',['UnStayResidentProgramA',['../loader_8h.html#ad87db8d02ec26f100e6579b6780614ef',1,'loader.h']]],
-  ['unstayresidentprogramw_65',['UnStayResidentProgramW',['../loader_8h.html#a9e3d6ec72aa83d17d0e0bcc0194a54a5',1,'loader.h']]],
+  ['unstayresidentprogramw_65',['UnStayResidentProgramW',['../loader_8h.html#a22dc0180dbc473a01a37c6b75485554c',1,'loader.h']]],
   ['usb_5fdata_66',['usb_data',['../structui__event__prime__s.html#aa440213d307e0789aec1522142cd7308',1,'ui_event_prime_s::usb_data'],['../structui__event__base__s.html#af812bdcd50769ca5b7c09ec4e3ad58d8',1,'ui_event_base_s::usb_data']]],
   ['used_67',['used',['../structfs__stat__t.html#a96946b8114ed6bc26aed76733b82b703',1,'fs_stat_t']]],
   ['used_5fkb_68',['used_kb',['../structfs__stat__t.html#abb1cfe3d6ce071d624477adde47a223a',1,'fs_stat_t']]],

@@ -55,7 +55,7 @@ var searchData=
   ['state_52',['state',['../structui__component__s.html#ae891fa49afd249d98a675e6f5f4320b5',1,'ui_component_s']]],
   ['status_53',['status',['../structfilepicker__context__s.html#aee6a3db6942684f44fe844bd3e10589d',1,'filepicker_context_s']]],
   ['stayresidentprograma_54',['StayResidentProgramA',['../loader_8h.html#a6f2dc7db8597901ee254841406a2bb7b',1,'loader.h']]],
-  ['stayresidentprogramw_55',['StayResidentProgramW',['../loader_8h.html#a76b314fb337d18fda508565edaec98d5',1,'loader.h']]],
+  ['stayresidentprogramw_55',['StayResidentProgramW',['../loader_8h.html#a3331c2eaef9c8ce6c893e6b512348609',1,'loader.h']]],
   ['storage_56',['storage',['../structmessage__queue__s.html#a81f660bf62dff23628c6887e9161e303',1,'message_queue_s']]],
   ['str_5falign_5fcenter_57',['STR_ALIGN_CENTER',['../ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98',1,'common.h']]],
   ['str_5falign_5fe_58',['str_align_e',['../ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650',1,'common.h']]],

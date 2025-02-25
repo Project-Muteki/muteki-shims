@@ -44,7 +44,7 @@ var loader_8h =
     [ "RunApplicationA", "loader_8h.html#aef3be04b023364a3ea972c21ce96bebb", null ],
     [ "RunApplicationW", "loader_8h.html#a5584725fc2dfe03172015d3f99751da5", null ],
     [ "StayResidentProgramA", "loader_8h.html#a6f2dc7db8597901ee254841406a2bb7b", null ],
-    [ "StayResidentProgramW", "loader_8h.html#a76b314fb337d18fda508565edaec98d5", null ],
+    [ "StayResidentProgramW", "loader_8h.html#a3331c2eaef9c8ce6c893e6b512348609", null ],
     [ "UnStayResidentProgramA", "loader_8h.html#ad87db8d02ec26f100e6579b6780614ef", null ],
-    [ "UnStayResidentProgramW", "loader_8h.html#a9e3d6ec72aa83d17d0e0bcc0194a54a5", null ]
+    [ "UnStayResidentProgramW", "loader_8h.html#a22dc0180dbc473a01a37c6b75485554c", null ]
 ];
