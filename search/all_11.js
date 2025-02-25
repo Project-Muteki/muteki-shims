@@ -2,7 +2,7 @@ var searchData=
 [
   ['readfile_0',['ReadFile',['../devio_8h.html#a98b978028308602d13c21f47be32f6a9',1,'devio.h']]],
   ['recipient_1',['recipient',['../structui__event__prime__s.html#a05ddf0f048d9e588293b8a41e882084b',1,'ui_event_prime_s::recipient'],['../structui__event__base__s.html#af59ae22188d83376bc07bb6f77202115',1,'ui_event_base_s::recipient']]],
-  ['refcount_2',['refcount',['../structloader__loaded__s.html#a6a1ae993e34d50523fc55ef3beadeb73',1,'loader_loaded_s::refcount'],['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s::refcount'],['../structdevio__descriptor__t.html#a894b8dc09fbf027e283e82ead39ddeea',1,'devio_descriptor_t::refcount']]],
+  ['refcount_2',['refcount',['../structdevio__descriptor__t.html#a894b8dc09fbf027e283e82ead39ddeea',1,'devio_descriptor_t::refcount'],['../structloader__loaded__s.html#a6a1ae993e34d50523fc55ef3beadeb73',1,'loader_loaded_s::refcount'],['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s::refcount']]],
   ['rgb_5ffrom_5fu8_3',['RGB_FROM_U8',['../ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf',1,'common.h']]],
   ['rgbsetbkcolor_4',['rgbSetBkColor',['../canvas_8h.html#aa7333109cd5c46ab957287b7722a1f77',1,'canvas.h']]],
   ['rgbsetcolor_5',['rgbSetColor',['../canvas_8h.html#a40fa1f62900939b0b578f94dc44d8db4',1,'canvas.h']]],
@@ -15,5 +15,7 @@ var searchData=
   ['rotation_5ftop_5fside_5ffacing_5fleft_12',['ROTATION_TOP_SIDE_FACING_LEFT',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15',1,'common.h']]],
   ['rotation_5ftop_5fside_5ffacing_5fright_13',['ROTATION_TOP_SIDE_FACING_RIGHT',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5',1,'common.h']]],
   ['rotation_5ftop_5fside_5ffacing_5fup_14',['ROTATION_TOP_SIDE_FACING_UP',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa',1,'common.h']]],
-  ['rotation_5fvalue_5fe_15',['rotation_value_e',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345',1,'common.h']]]
+  ['rotation_5fvalue_5fe_15',['rotation_value_e',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345',1,'common.h']]],
+  ['runapplicationa_16',['RunApplicationA',['../loader_8h.html#aef3be04b023364a3ea972c21ce96bebb',1,'loader.h']]],
+  ['runapplicationw_17',['RunApplicationW',['../loader_8h.html#a5584725fc2dfe03172015d3f99751da5',1,'loader.h']]]
 ];

@@ -22,5 +22,7 @@ var searchData=
   ['showgraphic_19',['ShowGraphic',['../canvas_8h.html#a229f4c8b8227b91bf454504514feb41d',1,'canvas.h']]],
   ['sizeofgraphic_20',['SizeofGraphic',['../surface_8h.html#a04239638c97cb1c6a52bb11f22223862',1,'surface.h']]],
   ['sizeofimage_21',['SizeofImage',['../surface_8h.html#afaee65f5adc0182e5b96e35bcb222e3f',1,'surface.h']]],
-  ['syspoweroff_22',['SysPowerOff',['../system_8h.html#ae78b6cf2d7a0a6aef82d74b43caf1797',1,'system.h']]]
+  ['stayresidentprograma_22',['StayResidentProgramA',['../loader_8h.html#a6f2dc7db8597901ee254841406a2bb7b',1,'loader.h']]],
+  ['stayresidentprogramw_23',['StayResidentProgramW',['../loader_8h.html#a76b314fb337d18fda508565edaec98d5',1,'loader.h']]],
+  ['syspoweroff_24',['SysPowerOff',['../system_8h.html#ae78b6cf2d7a0a6aef82d74b43caf1797',1,'system.h']]]
 ];
