@@ -557,7 +557,7 @@ extern loader_loaded_t *GetApplicationProcW(const UTF16 *pathname);
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */
-extern int StayResidentProgramW(const char *pathname);
+extern int StayResidentProgramW(const UTF16 *pathname);
 
 /**
  * @brief Unmark a loaded applet as stay resident by its LFN pathname.
@@ -567,7 +567,7 @@ extern int StayResidentProgramW(const char *pathname);
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */
-extern int UnStayResidentProgramW(const char *pathname);
+extern int UnStayResidentProgramW(const UTF16 *pathname);
 
 #ifdef __cplusplus
 } // extern "C"
