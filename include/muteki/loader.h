@@ -456,7 +456,7 @@ extern size_t GetApplicationNameW(const UTF16 *pathname, UTF16 *out_name, size_t
  * @brief Load an applet executable. (UTF-16 variant)
  * @x_syscall_num `0x10281`
  * @param pathname UTF-16 LFN path to executable.
- * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
+ * @return A pointer to a structure describing the loaded executable, or `NULL` if the loading process failed.
  * @see LoadProgramA
  */
 extern loader_loaded_t *LoadProgramW(const UTF16 *pathname);
@@ -477,6 +477,24 @@ extern const UTF16 *GetCurrentPathW();
  * @return Pointer to the applet instance, or `NULL` when applet is not loaded or not currently running.
  */
 extern loader_loaded_t *ProgramIsRunningW(const UTF16 *pathname);
+
+/**
+ * @brief Load an applet executable from a loader file descriptor.
+ * @x_syscall_num `0x10284`
+ * @param ldrfd Loader file descriptor of the applet executable.
+ * @param pathname LFN path to the applet executable.
+ * @return A pointer to a structure describing the loaded executable, or `NULL` if `ldrfd` is `NULL` or the loading process failed.
+ */
+extern loader_loaded_t *LoadHFileProgramW(loader_file_descriptor_t *ldrfd, const UTF16 *pathname);
+
+/**
+ * @brief Load an applet executable from a loader file descriptor.
+ * @x_syscall_num `0x10285`
+ * @param ldrfd Loader file descriptor of the applet executable.
+ * @param pathname DOS 8.3 path to the applet executable, or name of a registered system applet.
+ * @return A pointer to a structure describing the loaded executable, or `NULL` if `ldrfd` is `NULL` or the loading process failed.
+ */
+extern loader_loaded_t *LoadHFileProgramA(loader_file_descriptor_t *ldrfd, const char *pathname);
 
 /**
  * @brief Search and return the applet instance by DOS 8.3 pathname.
