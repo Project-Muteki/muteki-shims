@@ -242,6 +242,12 @@ Functions</h2></td></tr>
 <tr class="memitem:acef8c80267888eadf86ee52e625e6534" id="r_acef8c80267888eadf86ee52e625e6534"><td class="memItemLeft" align="right" valign="top"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#acef8c80267888eadf86ee52e625e6534">ProgramIsRunningW</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname)</td></tr>
 <tr class="memdesc:acef8c80267888eadf86ee52e625e6534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the instance of a running applet by its LFN.  <br /></td></tr>
 <tr class="separator:acef8c80267888eadf86ee52e625e6534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947000033a438ff67c586db375742782" id="r_a947000033a438ff67c586db375742782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a947000033a438ff67c586db375742782">LoadHFileProgramW</a> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *ldrfd, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname)</td></tr>
+<tr class="memdesc:a947000033a438ff67c586db375742782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an applet executable from a loader file descriptor.  <br /></td></tr>
+<tr class="separator:a947000033a438ff67c586db375742782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2802c846066794a7ef942a45de8694af" id="r_a2802c846066794a7ef942a45de8694af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a2802c846066794a7ef942a45de8694af">LoadHFileProgramA</a> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *ldrfd, const char *pathname)</td></tr>
+<tr class="memdesc:a2802c846066794a7ef942a45de8694af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an applet executable from a loader file descriptor.  <br /></td></tr>
+<tr class="separator:a2802c846066794a7ef942a45de8694af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64365d82f725618acac1571ff300fe7f" id="r_a64365d82f725618acac1571ff300fe7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a64365d82f725618acac1571ff300fe7f">GetApplicationProcA</a> (const char *pathname)</td></tr>
 <tr class="memdesc:a64365d82f725618acac1571ff300fe7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search and return the applet instance by DOS 8.3 pathname.  <br /></td></tr>
 <tr class="separator:a64365d82f725618acac1571ff300fe7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1182,6 +1188,100 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2802c846066794a7ef942a45de8694af" name="a2802c846066794a7ef942a45de8694af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2802c846066794a7ef942a45de8694af">&#9670;&#160;</a></span>LoadHFileProgramA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> * LoadHFileProgramA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>ldrfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pathname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load an applet executable from a loader file descriptor. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10285</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ldrfd</td><td>Loader file descriptor of the applet executable. </td></tr>
+    <tr><td class="paramname">pathname</td><td>DOS 8.3 path to the applet executable, or name of a registered system applet. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a structure describing the loaded executable, or <code>NULL</code> if <code>ldrfd</code> is <code>NULL</code> or the loading process failed. </dd></dl>
+
+</div>
+</div>
+<a id="a947000033a438ff67c586db375742782" name="a947000033a438ff67c586db375742782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a947000033a438ff67c586db375742782">&#9670;&#160;</a></span>LoadHFileProgramW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> * LoadHFileProgramW </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>ldrfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>pathname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load an applet executable from a loader file descriptor. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10284</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ldrfd</td><td>Loader file descriptor of the applet executable. </td></tr>
+    <tr><td class="paramname">pathname</td><td>LFN path to the applet executable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a structure describing the loaded executable, or <code>NULL</code> if <code>ldrfd</code> is <code>NULL</code> or the loading process failed. </dd></dl>
+
+</div>
+</div>
 <a id="a5ca6aba1421aa133bad77031f74987b6" name="a5ca6aba1421aa133bad77031f74987b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ca6aba1421aa133bad77031f74987b6">&#9670;&#160;</a></span>LoadProgramA()</h2>
 
@@ -1250,7 +1350,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to a structure describing the loaded executable, or NULL if the loading process failed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a structure describing the loaded executable, or <code>NULL</code> if the loading process failed. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="loader_8h.html#a5ca6aba1421aa133bad77031f74987b6" title="Load an applet executable.">LoadProgramA</a> </dd></dl>
 
 </div>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"structdevio__descriptor__t.html#aa020c984f1c8860f127a3e5a158e2d65":[3,0,4,4],
+"structdevio__descriptor__t.html#aa0a9ede1c274124e94d75841400a3bcc":[3,0,4,2],
 "structdevio__descriptor__t.html#aa6431cbf7e821e7471beaf8f534ea46b":[3,0,4,10],
 "structdevio__descriptor__t.html#aaea1952dee4fffe5d0243ccb7c5985dc":[3,0,4,3],
 "structdevio__descriptor__t.html#abd3541cb6cfa3b608f98283a166d271e":[3,0,4,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "structsemaphore__s.html#a063ba0ee7ba3e28d83b8320240439860":[3,0,33,0],
 "structsemaphore__s.html#a97cb5a2da761eed482ebcd28b8fadf54":[3,0,33,2],
 "structsemaphore__s.html#af38b5696860a0d47d6e0afcfd80092dd":[3,0,33,1],
-"structthread__s.html":[3,0,34],
-"structthread__s.html#a14b7c85dfa24c97be5e24bde3b8293af":[3,0,34,2],
-"structthread__s.html#a28d2fca44aaeb67e49ba4003631d62ad":[3,0,34,13]
+"structthread__s.html":[3,0,34]
 };

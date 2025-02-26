@@ -37,6 +37,8 @@ var loader_8h =
     [ "GetApplicationProcW", "loader_8h.html#a984b0d87357847cbabd207db76989e11", null ],
     [ "GetCurrentPathA", "loader_8h.html#ae65d3f51edf9e367fd4fc3974f76fcf5", null ],
     [ "GetCurrentPathW", "loader_8h.html#ad5743bb2e33cbd9136386a6596c39c97", null ],
+    [ "LoadHFileProgramA", "loader_8h.html#a2802c846066794a7ef942a45de8694af", null ],
+    [ "LoadHFileProgramW", "loader_8h.html#a947000033a438ff67c586db375742782", null ],
     [ "LoadProgramA", "loader_8h.html#a5ca6aba1421aa133bad77031f74987b6", null ],
     [ "LoadProgramW", "loader_8h.html#af006a59018b5d7ff716527e1e236a68b", null ],
     [ "ProgramIsRunningA", "loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5", null ],

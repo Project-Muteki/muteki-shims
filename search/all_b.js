@@ -43,10 +43,12 @@ var searchData=
   ['loader_5fresource_5fdescriptor_5ft_40',['loader_resource_descriptor_t',['../loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8',1,'loader.h']]],
   ['loader_5fresource_5fsubfile_5frequest_5fs_41',['loader_resource_subfile_request_s',['../structloader__resource__subfile__request__s.html',1,'']]],
   ['loader_5fresource_5fsubfile_5frequest_5ft_42',['loader_resource_subfile_request_t',['../loader_8h.html#a60398856a9baefcc4c1e54b6447efbb0',1,'loader.h']]],
-  ['loadprograma_43',['LoadProgramA',['../loader_8h.html#a5ca6aba1421aa133bad77031f74987b6',1,'loader.h']]],
-  ['loadprogramw_44',['LoadProgramW',['../loader_8h.html#af006a59018b5d7ff716527e1e236a68b',1,'loader.h']]],
-  ['lock_45',['lock',['../structlcd__lock__s.html#ad6b4fc786071d611233eaf63cb2b07a0',1,'lcd_lock_s::lock'],['../structlcd__thread__safe__s.html#a4baaba6fe00c1a84391a6c0c2f95dea0',1,'lcd_thread_safe_s::lock']]],
-  ['long_5fpress_5fdelay_46',['long_press_delay',['../structkey__press__event__config__t.html#a2eaa31a1db305cec816920c58a371f5b',1,'key_press_event_config_t']]],
-  ['long_5fpress_5frepeat_5frate_47',['long_press_repeat_rate',['../structkey__press__event__config__t.html#af6cb0955d9bb6dd20cb35831c829f94f',1,'key_press_event_config_t']]],
-  ['lrealloc_48',['lrealloc',['../memory_8h.html#aa0d26131a5b76ad8d2e34fcb8d526ee8',1,'memory.h']]]
+  ['loadhfileprograma_43',['LoadHFileProgramA',['../loader_8h.html#a2802c846066794a7ef942a45de8694af',1,'loader.h']]],
+  ['loadhfileprogramw_44',['LoadHFileProgramW',['../loader_8h.html#a947000033a438ff67c586db375742782',1,'loader.h']]],
+  ['loadprograma_45',['LoadProgramA',['../loader_8h.html#a5ca6aba1421aa133bad77031f74987b6',1,'loader.h']]],
+  ['loadprogramw_46',['LoadProgramW',['../loader_8h.html#af006a59018b5d7ff716527e1e236a68b',1,'loader.h']]],
+  ['lock_47',['lock',['../structlcd__lock__s.html#ad6b4fc786071d611233eaf63cb2b07a0',1,'lcd_lock_s::lock'],['../structlcd__thread__safe__s.html#a4baaba6fe00c1a84391a6c0c2f95dea0',1,'lcd_thread_safe_s::lock']]],
+  ['long_5fpress_5fdelay_48',['long_press_delay',['../structkey__press__event__config__t.html#a2eaa31a1db305cec816920c58a371f5b',1,'key_press_event_config_t']]],
+  ['long_5fpress_5frepeat_5frate_49',['long_press_repeat_rate',['../structkey__press__event__config__t.html#af6cb0955d9bb6dd20cb35831c829f94f',1,'key_press_event_config_t']]],
+  ['lrealloc_50',['lrealloc',['../memory_8h.html#aa0d26131a5b76ad8d2e34fcb8d526ee8',1,'memory.h']]]
 ];
