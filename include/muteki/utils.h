@@ -56,7 +56,7 @@ extern bool WarningBeep();
  * @param ... Any subsequent values.
  * @x_void_return
  */
-extern void WriteComDebugMsg(char *format, ...);
+extern void WriteComDebugMsg(char *format, ...) SYS_IS_PRINTF(1, 2);
 
 #ifdef __cplusplus
 } // extern "C"

@@ -58,6 +58,7 @@ typedef wchar_t __BESTA_UTF_TYPE;
 
 #define __SYS_DWORD __attribute__((packed, aligned(4)))
 #define __SYS_ALIGN(n) __attribute__((aligned(n)))
+#define __SYS_IS_PRINTF(arg_index_str, arg_index_fmt) __attribute__((format(printf, arg_index_str, arg_index_fmt)))
 
 /**
  * @brief Attribute for structure fields that are DWORD (64-bit), that are used by system calls.
@@ -80,6 +81,12 @@ typedef wchar_t __BESTA_UTF_TYPE;
  */
 #define SYS_ALIGN(n) __SYS_ALIGN(n)
 
+/**
+ * @brief Attribute for opting a function in for printf static checking.
+ * @todo MSVC support (or simply bypass it).
+ */
+#define SYS_IS_PRINTF(arg_index_str, arg_index_fmt) __SYS_IS_PRINTF(arg_index_str, arg_index_fmt)
+
 #else // defined(__GHIDRA__)
 
 // Type stubs for Ghidra
@@ -94,6 +101,7 @@ typedef ulong uintptr_t;
 #define _BUL(x) x
 #define SYS_DWORD
 #define SYS_ALIGN(n)
+#define SYS_IS_PRINTF(arg_index_str, arg_index_fmt)
 
 #endif // defined(__GHIDRA__)
 

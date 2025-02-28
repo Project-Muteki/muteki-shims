@@ -92,7 +92,7 @@ extern void WriteString(short x, short y, const void *s, unsigned int flags);
  * @param ... Any subsequent values.
  * @x_void_return
  */
-extern void Printf(const char *format, ...);
+extern void Printf(const char *format, ...) SYS_IS_PRINTF(1, 2);
 
 /**
  * @brief Format and draw a string aligned to the top left corner at `(x, y)` px.
@@ -103,7 +103,7 @@ extern void Printf(const char *format, ...);
  * @param ... Any subsequent values passed to the built-in sprintf().
  * @x_void_return
  */
-extern void PrintfXY(short x, short y, const char *format, ...);
+extern void PrintfXY(short x, short y, const char *format, ...) SYS_IS_PRINTF(3, 4);
 
 /**
  * @brief Draw a surface onto current active LCD.
