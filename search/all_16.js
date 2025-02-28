@@ -20,7 +20,7 @@ var searchData=
   ['width_17',['width',['../structlcd__thread__safe__s.html#ad26b5c69bfa15f2c72f4ea2a544a61c8',1,'lcd_thread_safe_s::width'],['../structlcd__base__s.html#aa6a49914dece316f4bdabae44badc83c',1,'lcd_base_s::width'],['../structlcd__surface__s.html#aa2b52d5992d38ee3ea4d8a2e97549159',1,'lcd_surface_s::width']]],
   ['writealignstring_18',['WriteAlignString',['../canvas_8h.html#aa411d0bb895097a6f63e5b897f7637a8',1,'canvas.h']]],
   ['writechar_19',['WriteChar',['../canvas_8h.html#aa8759b123224e598b231e6c871632c4b',1,'canvas.h']]],
-  ['writecomdebugmsg_20',['WriteComDebugMsg',['../utils_8h.html#ac0177719e2182806b0224224bd7a12ba',1,'utils.h']]],
+  ['writecomdebugmsg_20',['WriteComDebugMsg',['../utils_8h.html#a5a5b205f6db107bad75c2b66dc4ec088',1,'utils.h']]],
   ['writefile_21',['WriteFile',['../devio_8h.html#ad1f4f33a3ff2ee699ece61fe83210508',1,'devio.h']]],
   ['writestring_22',['WriteString',['../canvas_8h.html#a453e0e54d4003711d33a1c0ccdb64e29',1,'canvas.h']]]
 ];

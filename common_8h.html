@@ -130,12 +130,18 @@ Macros</h2></td></tr>
 <tr class="memitem:a418cf46c774b0dca8c8412013cd8b681" id="r_a418cf46c774b0dca8c8412013cd8b681"><td class="memItemLeft" align="right" valign="top"><a id="a418cf46c774b0dca8c8412013cd8b681" name="a418cf46c774b0dca8c8412013cd8b681"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__SYS_ALIGN</b>(n)&#160;&#160;&#160;__attribute__((aligned(n)))</td></tr>
 <tr class="separator:a418cf46c774b0dca8c8412013cd8b681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01955f66f6ff4be8e4aab380c8fc1c2f" id="r_a01955f66f6ff4be8e4aab380c8fc1c2f"><td class="memItemLeft" align="right" valign="top"><a id="a01955f66f6ff4be8e4aab380c8fc1c2f" name="a01955f66f6ff4be8e4aab380c8fc1c2f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__SYS_IS_PRINTF</b>(arg_index_str,  arg_index_fmt)&#160;&#160;&#160;__attribute__((format(printf, arg_index_str, arg_index_fmt)))</td></tr>
+<tr class="separator:a01955f66f6ff4be8e4aab380c8fc1c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88f7ac10e602e1a35668915d9edd1030" id="r_a88f7ac10e602e1a35668915d9edd1030"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a88f7ac10e602e1a35668915d9edd1030">SYS_DWORD</a>&#160;&#160;&#160;__SYS_DWORD</td></tr>
 <tr class="memdesc:a88f7ac10e602e1a35668915d9edd1030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute for structure fields that are DWORD (64-bit), that are used by system calls.  <br /></td></tr>
 <tr class="separator:a88f7ac10e602e1a35668915d9edd1030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cfbdd1a9e16d40f0f7c8ef00c18ae25" id="r_a7cfbdd1a9e16d40f0f7c8ef00c18ae25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a7cfbdd1a9e16d40f0f7c8ef00c18ae25">SYS_ALIGN</a>(n)&#160;&#160;&#160;__SYS_ALIGN(n)</td></tr>
 <tr class="memdesc:a7cfbdd1a9e16d40f0f7c8ef00c18ae25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute for forcing alignment.  <br /></td></tr>
 <tr class="separator:a7cfbdd1a9e16d40f0f7c8ef00c18ae25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad78f1ddd0830141e8ad38443423b42a" id="r_aad78f1ddd0830141e8ad38443423b42a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#aad78f1ddd0830141e8ad38443423b42a">SYS_IS_PRINTF</a>(arg_index_str,  arg_index_fmt)&#160;&#160;&#160;__SYS_IS_PRINTF(arg_index_str, arg_index_fmt)</td></tr>
+<tr class="memdesc:aad78f1ddd0830141e8ad38443423b42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute for opting a function in for printf static checking.  <br /></td></tr>
+<tr class="separator:aad78f1ddd0830141e8ad38443423b42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common include file for all muteki-shims headers. </p>
@@ -199,6 +205,37 @@ Macros</h2></td></tr>
 <p>This will align the struct fields to 4 bytes so ldr/str can still work as normal while all 64-bit values are retrieved with 2 ldr/str instructions instead of 1 ldrd/strd instruction (when compiling the program for armv5 and up) or emulated counterpart (when compiling the program for armv4). This is needed because Besta RTOS uses 4-byte alignment for 64-bit fields by default and ldrd/strd will not work on those fields.</p>
 <p>For single variable this is not necessary since 8-byte aligned variables can be understood by code that uses 4-byte alignment.</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>MSVC support (is it possible?) </dd></dl>
+
+</div>
+</div>
+<a id="aad78f1ddd0830141e8ad38443423b42a" name="aad78f1ddd0830141e8ad38443423b42a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad78f1ddd0830141e8ad38443423b42a">&#9670;&#160;</a></span>SYS_IS_PRINTF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYS_IS_PRINTF</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg_index_str, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg_index_fmt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;__SYS_IS_PRINTF(arg_index_str, arg_index_fmt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attribute for opting a function in for printf static checking. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>MSVC support (or simply bypass it). </dd></dl>
 
 </div>
 </div>

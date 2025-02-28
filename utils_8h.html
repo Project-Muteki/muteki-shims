@@ -122,9 +122,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a212a842a05302253aae6192eaa1ec53f" id="r_a212a842a05302253aae6192eaa1ec53f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">WarningBeep</a> ()</td></tr>
 <tr class="memdesc:a212a842a05302253aae6192eaa1ec53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker.  <br /></td></tr>
 <tr class="separator:a212a842a05302253aae6192eaa1ec53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0177719e2182806b0224224bd7a12ba" id="r_ac0177719e2182806b0224224bd7a12ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ac0177719e2182806b0224224bd7a12ba">WriteComDebugMsg</a> (char *format,...)</td></tr>
-<tr class="memdesc:ac0177719e2182806b0224224bd7a12ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and send a message to debug UART port.  <br /></td></tr>
-<tr class="separator:ac0177719e2182806b0224224bd7a12ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a5b205f6db107bad75c2b66dc4ec088" id="r_a5a5b205f6db107bad75c2b66dc4ec088"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a5a5b205f6db107bad75c2b66dc4ec088">WriteComDebugMsg</a> (char *format,...) <a class="el" href="common_8h.html#aad78f1ddd0830141e8ad38443423b42a">SYS_IS_PRINTF</a>(1</td></tr>
+<tr class="memdesc:a5a5b205f6db107bad75c2b66dc4ec088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and send a message to debug UART port.  <br /></td></tr>
+<tr class="separator:a5a5b205f6db107bad75c2b66dc4ec088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Miscellaneous utility syscalls. </p>
@@ -202,8 +202,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac0177719e2182806b0224224bd7a12ba" name="ac0177719e2182806b0224224bd7a12ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0177719e2182806b0224224bd7a12ba">&#9670;&#160;</a></span>WriteComDebugMsg()</h2>
+<a id="a5a5b205f6db107bad75c2b66dc4ec088" name="a5a5b205f6db107bad75c2b66dc4ec088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5b205f6db107bad75c2b66dc4ec088">&#9670;&#160;</a></span>WriteComDebugMsg()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +237,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Format and send a message to debug UART port. </p>
-<p>Supports all conversion specifiers <a class="el" href="canvas_8h.html#a7365cbf5eae9bd5031842b29db13d370" title="Format and draw a string.">Printf()</a> and <a class="el" href="canvas_8h.html#ae2bce93898870fbfd4541135b418c85c" title="Format and draw a string aligned to the top left corner at (x, y) px.">PrintfXY()</a> supports. This internally calls an implementation of <code>vsnprintf()</code> to generate the final message. </p><dl class="section note"><dt>Note</dt><dd>This function may be stubbed on some devices and UART test point availability vary between devices. Moreover, the size of the internal buffer used by <code>vsnprintf()</code> to save formatted message might also be device-specific. On BA742 this buffer is <code>0x800</code> bytes long, with <code>0x7ff</code> bytes actually available to the formatted message. </dd></dl>
+<p>Supports all conversion specifiers <a class="el" href="canvas_8h.html#a2a6f9f393e5e4765c4dda1837a6a69af" title="Format and draw a string.">Printf()</a> and <a class="el" href="canvas_8h.html#a7c41a12f427a08332e20a9b5c201544e" title="Format and draw a string aligned to the top left corner at (x, y) px.">PrintfXY()</a> supports. This internally calls an implementation of <code>vsnprintf()</code> to generate the final message. </p><dl class="section note"><dt>Note</dt><dd>This function may be stubbed on some devices and UART test point availability vary between devices. Moreover, the size of the internal buffer used by <code>vsnprintf()</code> to save formatted message might also be device-specific. On BA742 this buffer is <code>0x800</code> bytes long, with <code>0x7ff</code> bytes actually available to the formatted message. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x102a1</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
