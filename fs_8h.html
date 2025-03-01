@@ -754,7 +754,7 @@ Functions</h2></td></tr>
 <p>Build an DOS 8.3 pathname from parts. </p>
 <p>DOS 8.3 counterpart of <a class="el" href="fs_8h.html#a9936e5ea7a797bd5fc45b1dbc7830a23" title="Build an LFN pathname from parts.">_wfnmerge()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">pathname</td><td>Pointer to a buffer where the constructed pathname will be stored. This buffer must be at least as long as FNSPLIT_DOS_PATHNAME_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pathname</td><td>Pointer to a buffer where the constructed pathname will be stored. This buffer must be at least as long as <a class="el" href="fs_8h.html#af2718d94ecd6f3c61c961c96ddeccaf4">FNSPLIT_DOS_PATHNAME_MAX</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">drive</td><td>Drive specifier (e.g., <code>C</code> or <code>C:</code>). If provided, it must be a valid drive name. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dirname</td><td>Directory path (e.g., <code>\path\to\a\</code>). If provided, it must end with a backslash. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">basename</td><td>Base name without a suffix (e.g., <code>file</code>). </td></tr>
@@ -823,10 +823,10 @@ Functions</h2></td></tr>
 <p>DOS 8.3 counterpart of <a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14" title="Split an LFN pathname into parts.">_wfnsplit()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>Pathname to be split. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">drive</td><td>Drive name, or NULL to omit this part. Must be at least as long as FNSPLIT_DOS_DRIVE_MAX. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">dirname</td><td>Directory, or NULL to omit this part. Must be at least as long as FNSPLIT_DOS_DIRNAME_MAX. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">basename</td><td>Basename without suffix, or NULL to omit this part. Must be at least as long as FNSPLIT_DOS_BASENAME_MAX. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">suffix</td><td>Suffix, or NULL to omit this part. Must be at least as long as FNSPLIT_DOS_SUFFIX_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">drive</td><td>Drive name, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#ad8cfbbceb9db6242652dbd002cfb09e6">FNSPLIT_DOS_DRIVE_MAX</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dirname</td><td>Directory, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#ac50d7b89068a21b7fcfb2afebdd24f5f">FNSPLIT_DOS_DIRNAME_MAX</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">basename</td><td>Basename without suffix, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#a712477813b0182267cf9c0a9a4baeb70">FNSPLIT_DOS_BASENAME_MAX</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">suffix</td><td>Suffix, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#a0b509c3119c9ba53b5028b83b1589bf3">FNSPLIT_DOS_SUFFIX_MAX</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1399,7 +1399,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x1026c</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">pathname</td><td>Pointer to a buffer where the constructed pathname will be stored. This buffer must be at least as long as FNSPLIT_LFN_PATHNAME_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pathname</td><td>Pointer to a buffer where the constructed pathname will be stored. This buffer must be at least as long as <a class="el" href="fs_8h.html#a12bb551b566519b579c951d6df8370f9">FNSPLIT_LFN_PATHNAME_MAX</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">drive</td><td>Drive specifier (e.g., <code>C</code> or <code>C:</code>). If provided, it must be a valid drive name. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dirname</td><td>Directory path (e.g., <code>\path\to\a\</code>). If provided, it must end with a backslash. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">basename</td><td>Base name without a suffix (e.g., <code>file</code>). </td></tr>
@@ -1475,10 +1475,10 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>Pathname to be split. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">drive</td><td>Drive name, or NULL to omit this part. Must be at least as long as FNSPLIT_LFN_DRIVE_MAX. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">dirname</td><td>Directory, or NULL to omit this part. Must be at least as long as FNSPLIT_LFN_DIRNAME_MAX. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">basename</td><td>Basename without suffix, or NULL to omit this part. Must be at least as long as FNSPLIT_LFN_BASENAME_MAX. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">suffix</td><td>Suffix, or NULL to omit this part. Must be at least as long as FNSPLIT_LFN_SUFFIX_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">drive</td><td>Drive name, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#a103c4b7dc2e0391ff7a075a92c028eff">FNSPLIT_LFN_DRIVE_MAX</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dirname</td><td>Directory, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#a3d90a37b04db17a9774c37883d3ddd08">FNSPLIT_LFN_DIRNAME_MAX</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">basename</td><td>Basename without suffix, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#a047c5a80374681047ce1f732893c5859">FNSPLIT_LFN_BASENAME_MAX</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">suffix</td><td>Suffix, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#aacb79f1d3e464b37e2b8a8e1fe159d03">FNSPLIT_LFN_SUFFIX_MAX</a>. </td></tr>
   </table>
   </dd>
 </dl>
