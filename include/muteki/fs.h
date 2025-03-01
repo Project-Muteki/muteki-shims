@@ -400,13 +400,13 @@ extern int FSGetDiskRoomState(int fsid, fs_stat_t *fs_stat);
  * @details DOS 8.3 counterpart of _wfnsplit().
  * @param[in] pathname Pathname to be split.
  * @param[out] drive Drive name, or NULL to omit this part.
- * Must be at least as long as FNSPLIT_DOS_DRIVE_MAX.
+ * Must be at least as long as ::FNSPLIT_DOS_DRIVE_MAX.
  * @param[out] dirname Directory, or NULL to omit this part.
- * Must be at least as long as FNSPLIT_DOS_DIRNAME_MAX.
+ * Must be at least as long as ::FNSPLIT_DOS_DIRNAME_MAX.
  * @param[out] basename Basename without suffix, or NULL to omit this part.
- * Must be at least as long as FNSPLIT_DOS_BASENAME_MAX.
+ * Must be at least as long as ::FNSPLIT_DOS_BASENAME_MAX.
  * @param[out] suffix Suffix, or NULL to omit this part.
- * Must be at least as long as FNSPLIT_DOS_SUFFIX_MAX.
+ * Must be at least as long as ::FNSPLIT_DOS_SUFFIX_MAX.
  * @return Bitfield that indicates which parts were being extracted successfully.
  * @see _wfnsplit Its LFN counterpart.
  */
@@ -416,7 +416,7 @@ extern int _afnsplit(const char *pathname, char *drive, char *dirname, char *bas
  * @brief Build an DOS 8.3 pathname from parts.
  * @details DOS 8.3 counterpart of _wfnmerge().
  * @param[out] pathname Pointer to a buffer where the constructed pathname will be stored.
- * This buffer must be at least as long as FNSPLIT_DOS_PATHNAME_MAX.
+ * This buffer must be at least as long as ::FNSPLIT_DOS_PATHNAME_MAX.
  * @param[in] drive Drive specifier (e.g., `C` or `C:`). If provided, it must be a valid drive name.
  * @param[in] dirname Directory path (e.g., `\path\to\a\`). If provided, it must end with a backslash.
  * @param[in] basename Base name without a suffix (e.g., `file`).
@@ -442,13 +442,13 @@ extern int _afnmerge(char *pathname, const char *drive, const char *dirname, con
  * @x_syscall_num `0x1026b`
  * @param[in] pathname Pathname to be split.
  * @param[out] drive Drive name, or NULL to omit this part.
- * Must be at least as long as FNSPLIT_LFN_DRIVE_MAX.
+ * Must be at least as long as ::FNSPLIT_LFN_DRIVE_MAX.
  * @param[out] dirname Directory, or NULL to omit this part.
- * Must be at least as long as FNSPLIT_LFN_DIRNAME_MAX.
+ * Must be at least as long as ::FNSPLIT_LFN_DIRNAME_MAX.
  * @param[out] basename Basename without suffix, or NULL to omit this part.
- * Must be at least as long as FNSPLIT_LFN_BASENAME_MAX.
+ * Must be at least as long as ::FNSPLIT_LFN_BASENAME_MAX.
  * @param[out] suffix Suffix, or NULL to omit this part.
- * Must be at least as long as FNSPLIT_LFN_SUFFIX_MAX.
+ * Must be at least as long as ::FNSPLIT_LFN_SUFFIX_MAX.
  * @return Bitfield that indicates which parts were being extracted successfully.
  */
 extern int _wfnsplit(const UTF16 *pathname, UTF16 *drive, UTF16 *dirname, UTF16 *basename, UTF16 *suffix);
@@ -469,7 +469,7 @@ extern int _wfnsplit(const UTF16 *pathname, UTF16 *drive, UTF16 *dirname, UTF16 
  *
  * @x_syscall_num `0x1026c`
  * @param[out] pathname Pointer to a buffer where the constructed pathname will be stored.
- * This buffer must be at least as long as FNSPLIT_LFN_PATHNAME_MAX.
+ * This buffer must be at least as long as ::FNSPLIT_LFN_PATHNAME_MAX.
  * @param[in] drive Drive specifier (e.g., `C` or `C:`). If provided, it must be a valid drive name.
  * @param[in] dirname Directory path (e.g., `\path\to\a\`). If provided, it must end with a backslash.
  * @param[in] basename Base name without a suffix (e.g., `file`).
