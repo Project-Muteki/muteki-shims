@@ -127,7 +127,7 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a9f8d8fd8933220f6f35209cdb65d7cfb" id="r_a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb">SYS_PATH_MAX_CU</a>&#160;&#160;&#160;256</td></tr>
+<tr class="memitem:a9f8d8fd8933220f6f35209cdb65d7cfb" id="r_a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb">SYS_PATH_MAX_CU</a>&#160;&#160;&#160;256u</td></tr>
 <tr class="memdesc:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max code units (ASCII or UTF-16) a path can contain.  <br /></td></tr>
 <tr class="separator:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2cfbb03e319776b36d0b1169a83f54" id="r_a2c2cfbb03e319776b36d0b1169a83f54"><td class="memItemLeft" align="right" valign="top"><a id="a2c2cfbb03e319776b36d0b1169a83f54" name="a2c2cfbb03e319776b36d0b1169a83f54"></a>
@@ -154,6 +154,26 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>FIND_TS_SECOND</b>(ts)&#160;&#160;&#160;((ts &amp; 0xf) * 4)</td></tr>
 <tr class="memdesc:a214672671b2f6a1bca9481f25b07b65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read second from find timestamp. <br /></td></tr>
 <tr class="separator:a214672671b2f6a1bca9481f25b07b65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12bb551b566519b579c951d6df8370f9" id="r_a12bb551b566519b579c951d6df8370f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a12bb551b566519b579c951d6df8370f9">FNSPLIT_LFN_PATHNAME_MAX</a>&#160;&#160;&#160;261u</td></tr>
+<tr class="separator:a12bb551b566519b579c951d6df8370f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a103c4b7dc2e0391ff7a075a92c028eff" id="r_a103c4b7dc2e0391ff7a075a92c028eff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a103c4b7dc2e0391ff7a075a92c028eff">FNSPLIT_LFN_DRIVE_MAX</a>&#160;&#160;&#160;4u</td></tr>
+<tr class="separator:a103c4b7dc2e0391ff7a075a92c028eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d90a37b04db17a9774c37883d3ddd08" id="r_a3d90a37b04db17a9774c37883d3ddd08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a3d90a37b04db17a9774c37883d3ddd08">FNSPLIT_LFN_DIRNAME_MAX</a>&#160;&#160;&#160;257u</td></tr>
+<tr class="separator:a3d90a37b04db17a9774c37883d3ddd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047c5a80374681047ce1f732893c5859" id="r_a047c5a80374681047ce1f732893c5859"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a047c5a80374681047ce1f732893c5859">FNSPLIT_LFN_BASENAME_MAX</a>&#160;&#160;&#160;257u</td></tr>
+<tr class="separator:a047c5a80374681047ce1f732893c5859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb79f1d3e464b37e2b8a8e1fe159d03" id="r_aacb79f1d3e464b37e2b8a8e1fe159d03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#aacb79f1d3e464b37e2b8a8e1fe159d03">FNSPLIT_LFN_SUFFIX_MAX</a>&#160;&#160;&#160;259u</td></tr>
+<tr class="separator:aacb79f1d3e464b37e2b8a8e1fe159d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2718d94ecd6f3c61c961c96ddeccaf4" id="r_af2718d94ecd6f3c61c961c96ddeccaf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#af2718d94ecd6f3c61c961c96ddeccaf4">FNSPLIT_DOS_PATHNAME_MAX</a>&#160;&#160;&#160;81u</td></tr>
+<tr class="separator:af2718d94ecd6f3c61c961c96ddeccaf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8cfbbceb9db6242652dbd002cfb09e6" id="r_ad8cfbbceb9db6242652dbd002cfb09e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#ad8cfbbceb9db6242652dbd002cfb09e6">FNSPLIT_DOS_DRIVE_MAX</a>&#160;&#160;&#160;4u</td></tr>
+<tr class="separator:ad8cfbbceb9db6242652dbd002cfb09e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50d7b89068a21b7fcfb2afebdd24f5f" id="r_ac50d7b89068a21b7fcfb2afebdd24f5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#ac50d7b89068a21b7fcfb2afebdd24f5f">FNSPLIT_DOS_DIRNAME_MAX</a>&#160;&#160;&#160;67u</td></tr>
+<tr class="separator:ac50d7b89068a21b7fcfb2afebdd24f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712477813b0182267cf9c0a9a4baeb70" id="r_a712477813b0182267cf9c0a9a4baeb70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a712477813b0182267cf9c0a9a4baeb70">FNSPLIT_DOS_BASENAME_MAX</a>&#160;&#160;&#160;10u</td></tr>
+<tr class="separator:a712477813b0182267cf9c0a9a4baeb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b509c3119c9ba53b5028b83b1589bf3" id="r_a0b509c3119c9ba53b5028b83b1589bf3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a0b509c3119c9ba53b5028b83b1589bf3">FNSPLIT_DOS_SUFFIX_MAX</a>&#160;&#160;&#160;9u</td></tr>
+<tr class="separator:a0b509c3119c9ba53b5028b83b1589bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -239,10 +259,172 @@ Functions</h2></td></tr>
 <tr class="memitem:addc301eb3ca382ad5dc5de8e0dca892c" id="r_addc301eb3ca382ad5dc5de8e0dca892c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#addc301eb3ca382ad5dc5de8e0dca892c">FSGetDiskRoomState</a> (int fsid, <a class="el" href="structfs__stat__t.html">fs_stat_t</a> *fs_stat)</td></tr>
 <tr class="memdesc:addc301eb3ca382ad5dc5de8e0dca892c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get filesystem usage stats.  <br /></td></tr>
 <tr class="separator:addc301eb3ca382ad5dc5de8e0dca892c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73cf8b16895ba0710ccc22400970403c" id="r_a73cf8b16895ba0710ccc22400970403c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a73cf8b16895ba0710ccc22400970403c">_afnsplit</a> (const char *pathname, char *drive, char *dirname, char *basename, char *suffix)</td></tr>
+<tr class="memdesc:a73cf8b16895ba0710ccc22400970403c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a DOS 8.3 pathname into parts.  <br /></td></tr>
+<tr class="separator:a73cf8b16895ba0710ccc22400970403c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80180d63e9d1ec42c6190257cc7dae32" id="r_a80180d63e9d1ec42c6190257cc7dae32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a80180d63e9d1ec42c6190257cc7dae32">_afnmerge</a> (char *pathname, const char *drive, const char *dirname, const char *basename, const char *suffix)</td></tr>
+<tr class="memdesc:a80180d63e9d1ec42c6190257cc7dae32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an DOS 8.3 pathname from parts.  <br /></td></tr>
+<tr class="separator:a80180d63e9d1ec42c6190257cc7dae32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb95f38e78d45eaa909dc0b80bcfa14" id="r_a0cb95f38e78d45eaa909dc0b80bcfa14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14">_wfnsplit</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *drive, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *dirname, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *basename, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *suffix)</td></tr>
+<tr class="memdesc:a0cb95f38e78d45eaa909dc0b80bcfa14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split an LFN pathname into parts.  <br /></td></tr>
+<tr class="separator:a0cb95f38e78d45eaa909dc0b80bcfa14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9936e5ea7a797bd5fc45b1dbc7830a23" id="r_a9936e5ea7a797bd5fc45b1dbc7830a23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a9936e5ea7a797bd5fc45b1dbc7830a23">_wfnmerge</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *drive, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *dirname, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *basename, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *suffix)</td></tr>
+<tr class="memdesc:a9936e5ea7a797bd5fc45b1dbc7830a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an LFN pathname from parts.  <br /></td></tr>
+<tr class="separator:a9936e5ea7a797bd5fc45b1dbc7830a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Filesystem access API. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a712477813b0182267cf9c0a9a4baeb70" name="a712477813b0182267cf9c0a9a4baeb70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712477813b0182267cf9c0a9a4baeb70">&#9670;&#160;</a></span>FNSPLIT_DOS_BASENAME_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_DOS_BASENAME_MAX&#160;&#160;&#160;10u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units a DOS 8.3 base name can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="ac50d7b89068a21b7fcfb2afebdd24f5f" name="ac50d7b89068a21b7fcfb2afebdd24f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50d7b89068a21b7fcfb2afebdd24f5f">&#9670;&#160;</a></span>FNSPLIT_DOS_DIRNAME_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_DOS_DIRNAME_MAX&#160;&#160;&#160;67u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units a DOS 8.3 directory name can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="ad8cfbbceb9db6242652dbd002cfb09e6" name="ad8cfbbceb9db6242652dbd002cfb09e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8cfbbceb9db6242652dbd002cfb09e6">&#9670;&#160;</a></span>FNSPLIT_DOS_DRIVE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_DOS_DRIVE_MAX&#160;&#160;&#160;4u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units a DOS 8.3 drive specifier can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="af2718d94ecd6f3c61c961c96ddeccaf4" name="af2718d94ecd6f3c61c961c96ddeccaf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2718d94ecd6f3c61c961c96ddeccaf4">&#9670;&#160;</a></span>FNSPLIT_DOS_PATHNAME_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_DOS_PATHNAME_MAX&#160;&#160;&#160;81u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units an DOS 8.3 pathname can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="a0b509c3119c9ba53b5028b83b1589bf3" name="a0b509c3119c9ba53b5028b83b1589bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b509c3119c9ba53b5028b83b1589bf3">&#9670;&#160;</a></span>FNSPLIT_DOS_SUFFIX_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_DOS_SUFFIX_MAX&#160;&#160;&#160;9u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units a DOS 8.3 file suffix can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="a047c5a80374681047ce1f732893c5859" name="a047c5a80374681047ce1f732893c5859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047c5a80374681047ce1f732893c5859">&#9670;&#160;</a></span>FNSPLIT_LFN_BASENAME_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_LFN_BASENAME_MAX&#160;&#160;&#160;257u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units an LFN base name can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="a3d90a37b04db17a9774c37883d3ddd08" name="a3d90a37b04db17a9774c37883d3ddd08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d90a37b04db17a9774c37883d3ddd08">&#9670;&#160;</a></span>FNSPLIT_LFN_DIRNAME_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_LFN_DIRNAME_MAX&#160;&#160;&#160;257u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units an LFN directory name can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="a103c4b7dc2e0391ff7a075a92c028eff" name="a103c4b7dc2e0391ff7a075a92c028eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a103c4b7dc2e0391ff7a075a92c028eff">&#9670;&#160;</a></span>FNSPLIT_LFN_DRIVE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_LFN_DRIVE_MAX&#160;&#160;&#160;4u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units an LFN drive specifier can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="a12bb551b566519b579c951d6df8370f9" name="a12bb551b566519b579c951d6df8370f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12bb551b566519b579c951d6df8370f9">&#9670;&#160;</a></span>FNSPLIT_LFN_PATHNAME_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_LFN_PATHNAME_MAX&#160;&#160;&#160;261u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units an LFN pathname can have including the trailing NUL. </p>
+
+</div>
+</div>
+<a id="aacb79f1d3e464b37e2b8a8e1fe159d03" name="aacb79f1d3e464b37e2b8a8e1fe159d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb79f1d3e464b37e2b8a8e1fe159d03">&#9670;&#160;</a></span>FNSPLIT_LFN_SUFFIX_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FNSPLIT_LFN_SUFFIX_MAX&#160;&#160;&#160;259u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of code units an LFN file suffix can have including the trailing NUL. </p>
+
+</div>
+</div>
 <a id="a9f8d8fd8933220f6f35209cdb65d7cfb" name="a9f8d8fd8933220f6f35209cdb65d7cfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f8d8fd8933220f6f35209cdb65d7cfb">&#9670;&#160;</a></span>SYS_PATH_MAX_CU</h2>
 
@@ -250,7 +432,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SYS_PATH_MAX_CU&#160;&#160;&#160;256</td>
+          <td class="memname">#define SYS_PATH_MAX_CU&#160;&#160;&#160;256u</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -318,6 +500,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Delete a file. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10274</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>UTF-16 LFN path to the file being removed. </td></tr>
@@ -359,6 +542,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Change system working directory to a new path. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100e2</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>DOS 8.3 path. </td></tr>
@@ -400,7 +584,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get attributes of specific path. </p>
-<p>Similar to GetFileAttributeA() in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Similar to GetFileAttributeA() in Windows. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x100db</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>DOS 8.3 path. </td></tr>
   </table>
@@ -452,7 +637,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Begin a file/directory search. </p>
-<p>Matches the first file/directory based on fnmatch pattern <code>fnmatch</code> and attribute mask <code>attrib_mask</code>. Saves context at <code>ctx</code>, which can be used later with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> and <a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767" title="Terminate a file/directory search.">_findclose()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Matches the first file/directory based on fnmatch pattern <code>fnmatch</code> and attribute mask <code>attrib_mask</code>. Saves context at <code>ctx</code>, which can be used later with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> and <a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767" title="Terminate a file/directory search.">_findclose()</a>.</p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100d8</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fnmatch</td><td>The pattern. </td></tr>
     <tr><td class="paramname">ctx</td><td>The context object. </td></tr>
@@ -495,7 +682,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Continue a previously started file/directory search. </p>
-<p>Matches the next file/directory. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Matches the next file/directory. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x100d9</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ctx</td><td>The context object. </td></tr>
   </table>
@@ -508,6 +696,142 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a80180d63e9d1ec42c6190257cc7dae32" name="a80180d63e9d1ec42c6190257cc7dae32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80180d63e9d1ec42c6190257cc7dae32">&#9670;&#160;</a></span>_afnmerge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _afnmerge </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>drive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dirname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>basename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>suffix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Build an DOS 8.3 pathname from parts. </p>
+<p>DOS 8.3 counterpart of <a class="el" href="fs_8h.html#a9936e5ea7a797bd5fc45b1dbc7830a23" title="Build an LFN pathname from parts.">_wfnmerge()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pathname</td><td>Pointer to a buffer where the constructed pathname will be stored. This buffer must be at least as long as FNSPLIT_DOS_PATHNAME_MAX. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">drive</td><td>Drive specifier (e.g., <code>C</code> or <code>C:</code>). If provided, it must be a valid drive name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dirname</td><td>Directory path (e.g., <code>\path\to\a\</code>). If provided, it must end with a backslash. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">basename</td><td>Base name without a suffix (e.g., <code>file</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">suffix</td><td>File suffix (e.g., <code>.txt</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Bitfield that indicates which parts were added into the resulting pathname. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#a9936e5ea7a797bd5fc45b1dbc7830a23" title="Build an LFN pathname from parts.">_wfnmerge</a> Its LFN counterpart. </dd></dl>
+
+</div>
+</div>
+<a id="a73cf8b16895ba0710ccc22400970403c" name="a73cf8b16895ba0710ccc22400970403c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73cf8b16895ba0710ccc22400970403c">&#9670;&#160;</a></span>_afnsplit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _afnsplit </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>drive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dirname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>basename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>suffix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Split a DOS 8.3 pathname into parts. </p>
+<p>DOS 8.3 counterpart of <a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14" title="Split an LFN pathname into parts.">_wfnsplit()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>Pathname to be split. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">drive</td><td>Drive name, or NULL to omit this part. Must be at least as long as FNSPLIT_DOS_DRIVE_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dirname</td><td>Directory, or NULL to omit this part. Must be at least as long as FNSPLIT_DOS_DIRNAME_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">basename</td><td>Basename without suffix, or NULL to omit this part. Must be at least as long as FNSPLIT_DOS_BASENAME_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">suffix</td><td>Suffix, or NULL to omit this part. Must be at least as long as FNSPLIT_DOS_SUFFIX_MAX. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Bitfield that indicates which parts were being extracted successfully. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14" title="Split an LFN pathname into parts.">_wfnsplit</a> Its LFN counterpart. </dd></dl>
 
 </div>
 </div>
@@ -546,7 +870,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set attributes of specific path. </p>
-<p>Similar to SetFileAttributeA() in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Similar to SetFileAttributeA() in Windows. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x100dc</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>DOS 8.3 path. </td></tr>
     <tr><td class="paramname">attrs</td><td>The new attribute. </td></tr>
@@ -593,6 +918,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get system CWD value. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100e3</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
@@ -635,6 +961,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a new directory. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100e0</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>DOS 8.3 path to the new directory. </td></tr>
@@ -676,6 +1003,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Delete a file. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100dd</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pathname</td><td>DOS 8.3 path to the file being removed. </td></tr>
@@ -727,6 +1055,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Rename/move a file. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100de</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">old_path</td><td>Old DOS 8.3 path. </td></tr>
@@ -769,6 +1098,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove a directory. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100e1</code></dd></dl>
 <p>Sets kerrno namespace to <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a> and error code to <code>0xffff</code> when directory is not empty. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>DOS 8.3 path to the directory being removed. </td></tr>
@@ -810,6 +1140,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Terminate a file/directory search. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100da</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ctx</td><td>The context object. </td></tr>
@@ -850,6 +1181,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Change system working directory to a new path. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10279</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path. </td></tr>
@@ -891,7 +1223,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get attributes of specific path. </p>
-<p>Similar to GetFileAttributeW() in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Similar to GetFileAttributeW() in Windows. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10272</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path. </td></tr>
   </table>
@@ -943,7 +1276,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Begin a file/directory search (LFN support). </p>
-<p>Matches the first file/directory based on fnmatch pattern <code>fnmatch</code> and attribute mask <code>attrib_mask</code>. Saves context at <code>ctx</code>, which can be used later with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> and <a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767" title="Terminate a file/directory search.">_findclose()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Matches the first file/directory based on fnmatch pattern <code>fnmatch</code> and attribute mask <code>attrib_mask</code>. Saves context at <code>ctx</code>, which can be used later with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> and <a class="el" href="fs_8h.html#ad652522d592b9c474449cc2be25cb767" title="Terminate a file/directory search.">_findclose()</a>.</p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10270</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fnmatch</td><td>The pattern (encoded in UTF-16). </td></tr>
     <tr><td class="paramname">ctx</td><td>The context object. </td></tr>
@@ -988,6 +1323,7 @@ Functions</h2></td></tr>
 <p>Continue a previously started file/directory search. </p>
 <p>Matches the next file/directory.</p>
 <p>Not sure if interchangeable with <a class="el" href="fs_8h.html#ad59ec34968c0743ce9100b33d7072b52" title="Continue a previously started file/directory search.">_afindnext()</a> since it should have no dependency on different find context. Needs to be verified later.</p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10271</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ctx</td><td>The context object. </td></tr>
@@ -1001,6 +1337,152 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9936e5ea7a797bd5fc45b1dbc7830a23" name="a9936e5ea7a797bd5fc45b1dbc7830a23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9936e5ea7a797bd5fc45b1dbc7830a23">&#9670;&#160;</a></span>_wfnmerge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _wfnmerge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>drive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>dirname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>basename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>suffix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Build an LFN pathname from parts. </p>
+<p>Borland libc style path parsing helper. It constructs a pathname by combining the components: drive, directory, basename, and suffix. It is designed to be the inverse of the <a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14" title="Split an LFN pathname into parts.">_wfnsplit()</a> syscall, allowing users to reconstruct a full pathname from its individual parts.</p>
+<p>Each component is optional and can be provided as <code>NULL</code> if it is not needed in the final pathname. The syscall will concatenate the non-NULL components in the order of drive, directory, basename, and suffix, ensuring proper formatting such as adding backslashes where necessary.</p>
+<p>Borland C++ has a documentation regarding to their implementation: <a href="https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Fnmerge,_wfnmerge">https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Fnmerge,_wfnmerge</a>.</p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1026c</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pathname</td><td>Pointer to a buffer where the constructed pathname will be stored. This buffer must be at least as long as FNSPLIT_LFN_PATHNAME_MAX. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">drive</td><td>Drive specifier (e.g., <code>C</code> or <code>C:</code>). If provided, it must be a valid drive name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dirname</td><td>Directory path (e.g., <code>\path\to\a\</code>). If provided, it must end with a backslash. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">basename</td><td>Base name without a suffix (e.g., <code>file</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">suffix</td><td>File suffix (e.g., <code>.txt</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Bitfield that indicates which parts were added into the resulting pathname. </dd></dl>
+
+</div>
+</div>
+<a id="a0cb95f38e78d45eaa909dc0b80bcfa14" name="a0cb95f38e78d45eaa909dc0b80bcfa14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cb95f38e78d45eaa909dc0b80bcfa14">&#9670;&#160;</a></span>_wfnsplit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _wfnsplit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>drive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>dirname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>basename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>suffix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Split an LFN pathname into parts. </p>
+<p>Borland libc style path parsing helper. It takes a pathname in the format of <code>C:\path\to\a\file.txt</code> and parse it into 4 parts:</p><ul>
+<li>drive: The drive name consists of the drive letter and a single colon (<code>C:</code>)</li>
+<li>dirname: The directory name with the root backslash and training backslash (<code>\path\to\a\</code>)</li>
+<li>basename: Basename without the suffix (<code>file</code>)</li>
+<li>suffix: Suffix with the leading dot (<code>.txt</code>)</li>
+</ul>
+<p>Borland C++ has a documentation regarding to their implementation: <a href="https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Fnsplit,_wfnsplit">https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Fnsplit,_wfnsplit</a>.</p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1026b</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>Pathname to be split. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">drive</td><td>Drive name, or NULL to omit this part. Must be at least as long as FNSPLIT_LFN_DRIVE_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dirname</td><td>Directory, or NULL to omit this part. Must be at least as long as FNSPLIT_LFN_DIRNAME_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">basename</td><td>Basename without suffix, or NULL to omit this part. Must be at least as long as FNSPLIT_LFN_BASENAME_MAX. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">suffix</td><td>Suffix, or NULL to omit this part. Must be at least as long as FNSPLIT_LFN_SUFFIX_MAX. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Bitfield that indicates which parts were being extracted successfully. </dd></dl>
 
 </div>
 </div>
@@ -1039,7 +1521,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set attributes of specific path. </p>
-<p>Similar to SetFileAttributeW() in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Similar to SetFileAttributeW() in Windows. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10273</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path. </td></tr>
     <tr><td class="paramname">attrs</td><td>The new attribute. </td></tr>
@@ -1086,6 +1569,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get system CWD value. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1027a</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
@@ -1128,6 +1612,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a new directory. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10277</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path to the new directory. </td></tr>
@@ -1179,6 +1664,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Rename/move a file. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10275</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">old_path</td><td>Old UTF-16 LFN path. </td></tr>
@@ -1221,6 +1707,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove a directory. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10278</code></dd></dl>
 <p>Sets kerrno namespace to <a class="el" href="errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60">ERRNO_NS_KERNEL</a> and error code to <code>0xffff</code> when directory is not empty. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>UTF-16 LFN path to the directory being removed. </td></tr>
@@ -1272,6 +1759,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get filesystem usage stats. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x100eb</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fsid</td><td>Filesystem ID. </td></tr>
