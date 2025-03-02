@@ -262,6 +262,41 @@ typedef struct loader_loaded_s {
 } loader_loaded_t;
 
 /**
+ * @brief Basic info on a loaded applet.
+ */
+typedef struct loader_applet_info_s {
+    /**
+     * @brief Magic bytes of ROM spec.
+     */
+    unsigned short rom_magic;
+    /**
+     * @brief Unknown, seems unused.
+     */
+    unsigned short unused_0x2;
+    /**
+     * @brief Type field inside the ROM spec.
+     */
+    unsigned short rom_type;
+    /**
+     * @brief Unknown, seems unused.
+     */
+    unsigned short unused_0x4;
+    /**
+     * @brief Checksum of the executable file.
+     * @details On Besta RTOS Arm, this seems to be the checksum of the PE file.
+     */
+    unsigned int exe_checksum;
+    /**
+     * @brief File size of the executable.
+     */
+    size_t exe_raw_size;
+    /**
+     * @brief Unknown, seems unused.
+     */
+    unsigned char unused_0x10[0x74];
+} loader_applet_info_t;
+
+/**
  * @brief Open a loader file descriptor from a file.
  * @details
  *
@@ -586,6 +621,26 @@ extern int StayResidentProgramW(const UTF16 *pathname);
  * @retval -1 @x_term ng
  */
 extern int UnStayResidentProgramW(const UTF16 *pathname);
+
+/**
+ * @brief Obtain information on loaded applet by its DOS 8.3 pathname.
+ * @x_syscall_num `0x102cb`
+ * @param pathname Pathname of the applet.
+ * @param[out] Information on the applet.
+ * @retval 0 @x_term ok
+ * @retval -1 @x_term ng
+ */
+extern int GetApplicationHeadInfoA(const char *pathname,loader_applet_info_t *info);
+
+/**
+ * @brief Obtain information on loaded applet by its LFN pathname.
+ * @x_syscall_num `0x102cc`
+ * @param pathname Pathname of the applet.
+ * @param[out] Information on the applet.
+ * @retval 0 @x_term ok
+ * @retval -1 @x_term ng
+ */
+extern int GetApplicationHeadInfoW(const UTF16 *pathname, loader_applet_info_t *info);
 
 #ifdef __cplusplus
 } // extern "C"
