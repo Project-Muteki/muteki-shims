@@ -143,6 +143,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structloader__loaded__s.html">loader_loaded_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loaded applet executable.  <a href="structloader__loaded__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structloader__applet__info__s.html">loader_applet_info_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic info on a loaded applet.  <a href="structloader__applet__info__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -172,6 +175,10 @@ typedef struct <a class="el" href="structloader__file__descriptor__s.html">loade
 typedef struct <a class="el" href="structloader__loaded__s.html">loader_loaded_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loader_loaded_t</b></td></tr>
 <tr class="memdesc:a60bf1c38fe0f6c77ee48ad16faeee049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loaded applet executable. <br /></td></tr>
 <tr class="separator:a60bf1c38fe0f6c77ee48ad16faeee049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae9a784ebd91a6770b181af26581d95" id="r_afae9a784ebd91a6770b181af26581d95"><td class="memItemLeft" align="right" valign="top"><a id="afae9a784ebd91a6770b181af26581d95" name="afae9a784ebd91a6770b181af26581d95"></a>
+typedef struct <a class="el" href="structloader__applet__info__s.html">loader_applet_info_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loader_applet_info_t</b></td></tr>
+<tr class="memdesc:afae9a784ebd91a6770b181af26581d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic info on a loaded applet. <br /></td></tr>
+<tr class="separator:afae9a784ebd91a6770b181af26581d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -269,6 +276,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a22dc0180dbc473a01a37c6b75485554c" id="r_a22dc0180dbc473a01a37c6b75485554c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a22dc0180dbc473a01a37c6b75485554c">UnStayResidentProgramW</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname)</td></tr>
 <tr class="memdesc:a22dc0180dbc473a01a37c6b75485554c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmark a loaded applet as stay resident by its LFN pathname.  <br /></td></tr>
 <tr class="separator:a22dc0180dbc473a01a37c6b75485554c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd95cf87f251b4c907761e3bd1373e6d" id="r_abd95cf87f251b4c907761e3bd1373e6d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#abd95cf87f251b4c907761e3bd1373e6d">GetApplicationHeadInfoA</a> (const char *pathname, <a class="el" href="loader_8h.html#afae9a784ebd91a6770b181af26581d95">loader_applet_info_t</a> *info)</td></tr>
+<tr class="memdesc:abd95cf87f251b4c907761e3bd1373e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain information on loaded applet by its DOS 8.3 pathname.  <br /></td></tr>
+<tr class="separator:abd95cf87f251b4c907761e3bd1373e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd65551efdc5c961aa75a85390c9194" id="r_a0bd65551efdc5c961aa75a85390c9194"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a0bd65551efdc5c961aa75a85390c9194">GetApplicationHeadInfoW</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, <a class="el" href="loader_8h.html#afae9a784ebd91a6770b181af26581d95">loader_applet_info_t</a> *info)</td></tr>
+<tr class="memdesc:a0bd65551efdc5c961aa75a85390c9194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain information on loaded applet by its LFN pathname.  <br /></td></tr>
+<tr class="separator:a0bd65551efdc5c961aa75a85390c9194"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Binary loader API. </p>
@@ -928,6 +941,112 @@ Functions</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="loader_8h.html#a5ca6aba1421aa133bad77031f74987b6" title="Load an applet executable.">LoadProgramA</a> </dd>
 <dd>
 <a class="el" href="loader_8h.html#af006a59018b5d7ff716527e1e236a68b" title="Load an applet executable. (UTF-16 variant)">LoadProgramW</a> </dd></dl>
+
+</div>
+</div>
+<a id="abd95cf87f251b4c907761e3bd1373e6d" name="abd95cf87f251b4c907761e3bd1373e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd95cf87f251b4c907761e3bd1373e6d">&#9670;&#160;</a></span>GetApplicationHeadInfoA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetApplicationHeadInfoA </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="loader_8h.html#afae9a784ebd91a6770b181af26581d95">loader_applet_info_t</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain information on loaded applet by its DOS 8.3 pathname. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x102cb</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">pathname</td><td>Pathname of the applet. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Information</td><td>on the applet. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error.  </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0bd65551efdc5c961aa75a85390c9194" name="a0bd65551efdc5c961aa75a85390c9194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bd65551efdc5c961aa75a85390c9194">&#9670;&#160;</a></span>GetApplicationHeadInfoW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetApplicationHeadInfoW </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramname"><em>pathname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="loader_8h.html#afae9a784ebd91a6770b181af26581d95">loader_applet_info_t</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain information on loaded applet by its LFN pathname. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x102cc</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">pathname</td><td>Pathname of the applet. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Information</td><td>on the applet. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error.  </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
