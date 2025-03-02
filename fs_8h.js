@@ -2,6 +2,8 @@ var fs_8h =
 [
     [ "find_context_t", "structfind__context__t.html", "structfind__context__t" ],
     [ "fs_stat_t", "structfs__stat__t.html", "structfs__stat__t" ],
+    [ "fn_parts_lfn_s", "structfn__parts__lfn__s.html", "structfn__parts__lfn__s" ],
+    [ "fn_parts_dos_s", "structfn__parts__dos__s.html", "structfn__parts__dos__s" ],
     [ "FIND_TS_DAY", "fs_8h.html#a0a14a0c1912146f7750a367521a9ca72", null ],
     [ "FIND_TS_HOUR", "fs_8h.html#a79a116f2aa0a82a027d75019085986cd", null ],
     [ "FIND_TS_MINUTE", "fs_8h.html#a23d085a5b7bd67057e0d35fd61d17c1b", null ],
@@ -19,6 +21,8 @@ var fs_8h =
     [ "FNSPLIT_LFN_PATHNAME_MAX", "fs_8h.html#a12bb551b566519b579c951d6df8370f9", null ],
     [ "FNSPLIT_LFN_SUFFIX_MAX", "fs_8h.html#aacb79f1d3e464b37e2b8a8e1fe159d03", null ],
     [ "SYS_PATH_MAX_CU", "fs_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb", null ],
+    [ "fs_parts_dos_t", "fs_8h.html#a4a9b0a73cc30651c70d8a0dcee7d60ba", null ],
+    [ "fs_parts_lfn_t", "fs_8h.html#a7fe79bbaa9158a111d732641a477ec58", null ],
     [ "fs_attribute_e", "fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4", [
       [ "ATTR_READONLY", "fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4a1f203c5ea7f1e20ecfcc74768344e7f3", null ],
       [ "ATTR_HIDDEN", "fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4adba6b13cf372c3604ae08f82d1cec0cf", null ],

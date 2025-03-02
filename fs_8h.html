@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('fs_8h.html',''); initResizable(); });
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">fs.h File Reference</div></div>
@@ -123,6 +124,12 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfs__stat__t.html">fs_stat_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem usage statistics.  <a href="structfs__stat__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfn__parts__lfn__s.html">fn_parts_lfn_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">All-in-one struct that contain all parts used in <a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14" title="Split an LFN pathname into parts.">_wfnsplit()</a> and <a class="el" href="fs_8h.html#a9936e5ea7a797bd5fc45b1dbc7830a23" title="Build an LFN pathname from parts.">_wfnmerge()</a>  <a href="structfn__parts__lfn__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfn__parts__dos__s.html">fn_parts_dos_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">All-in-one struct that contain all parts used in <a class="el" href="fs_8h.html#a73cf8b16895ba0710ccc22400970403c" title="Split a DOS 8.3 pathname into parts.">_afnsplit()</a> and <a class="el" href="fs_8h.html#a80180d63e9d1ec42c6190257cc7dae32" title="Build an DOS 8.3 pathname from parts.">_afnmerge()</a>  <a href="structfn__parts__dos__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -174,6 +181,17 @@ Macros</h2></td></tr>
 <tr class="separator:a712477813b0182267cf9c0a9a4baeb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b509c3119c9ba53b5028b83b1589bf3" id="r_a0b509c3119c9ba53b5028b83b1589bf3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs_8h.html#a0b509c3119c9ba53b5028b83b1589bf3">FNSPLIT_DOS_SUFFIX_MAX</a>&#160;&#160;&#160;9u</td></tr>
 <tr class="separator:a0b509c3119c9ba53b5028b83b1589bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a7fe79bbaa9158a111d732641a477ec58" id="r_a7fe79bbaa9158a111d732641a477ec58"><td class="memItemLeft" align="right" valign="top"><a id="a7fe79bbaa9158a111d732641a477ec58" name="a7fe79bbaa9158a111d732641a477ec58"></a>
+typedef struct <a class="el" href="structfn__parts__lfn__s.html">fn_parts_lfn_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fs_parts_lfn_t</b></td></tr>
+<tr class="memdesc:a7fe79bbaa9158a111d732641a477ec58"><td class="mdescLeft">&#160;</td><td class="mdescRight">All-in-one struct that contain all parts used in <a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14" title="Split an LFN pathname into parts.">_wfnsplit()</a> and <a class="el" href="fs_8h.html#a9936e5ea7a797bd5fc45b1dbc7830a23" title="Build an LFN pathname from parts.">_wfnmerge()</a> <br /></td></tr>
+<tr class="separator:a7fe79bbaa9158a111d732641a477ec58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a9b0a73cc30651c70d8a0dcee7d60ba" id="r_a4a9b0a73cc30651c70d8a0dcee7d60ba"><td class="memItemLeft" align="right" valign="top"><a id="a4a9b0a73cc30651c70d8a0dcee7d60ba" name="a4a9b0a73cc30651c70d8a0dcee7d60ba"></a>
+typedef struct <a class="el" href="structfn__parts__dos__s.html">fn_parts_dos_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fs_parts_dos_t</b></td></tr>
+<tr class="memdesc:a4a9b0a73cc30651c70d8a0dcee7d60ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">All-in-one struct that contain all parts used in <a class="el" href="fs_8h.html#a73cf8b16895ba0710ccc22400970403c" title="Split a DOS 8.3 pathname into parts.">_afnsplit()</a> and <a class="el" href="fs_8h.html#a80180d63e9d1ec42c6190257cc7dae32" title="Build an DOS 8.3 pathname from parts.">_afnmerge()</a> <br /></td></tr>
+<tr class="separator:a4a9b0a73cc30651c70d8a0dcee7d60ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -752,7 +770,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Build an DOS 8.3 pathname from parts. </p>
-<p>DOS 8.3 counterpart of <a class="el" href="fs_8h.html#a9936e5ea7a797bd5fc45b1dbc7830a23" title="Build an LFN pathname from parts.">_wfnmerge()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>DOS 8.3 counterpart of <a class="el" href="fs_8h.html#a9936e5ea7a797bd5fc45b1dbc7830a23" title="Build an LFN pathname from parts.">_wfnmerge()</a>. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x100c6</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">pathname</td><td>Pointer to a buffer where the constructed pathname will be stored. This buffer must be at least as long as <a class="el" href="fs_8h.html#af2718d94ecd6f3c61c961c96ddeccaf4">FNSPLIT_DOS_PATHNAME_MAX</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">drive</td><td>Drive specifier (e.g., <code>C</code> or <code>C:</code>). If provided, it must be a valid drive name. </td></tr>
@@ -820,7 +839,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Split a DOS 8.3 pathname into parts. </p>
-<p>DOS 8.3 counterpart of <a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14" title="Split an LFN pathname into parts.">_wfnsplit()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>DOS 8.3 counterpart of <a class="el" href="fs_8h.html#a0cb95f38e78d45eaa909dc0b80bcfa14" title="Split an LFN pathname into parts.">_wfnsplit()</a>. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x100c5</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pathname</td><td>Pathname to be split. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">drive</td><td>Drive name, or NULL to omit this part. Must be at least as long as <a class="el" href="fs_8h.html#ad8cfbbceb9db6242652dbd002cfb09e6">FNSPLIT_DOS_DRIVE_MAX</a>. </td></tr>

@@ -8,6 +8,8 @@ var annotated_dup =
     [ "event_s", "structevent__s.html", "structevent__s" ],
     [ "filepicker_context_s", "structfilepicker__context__s.html", "structfilepicker__context__s" ],
     [ "find_context_t", "structfind__context__t.html", "structfind__context__t" ],
+    [ "fn_parts_dos_s", "structfn__parts__dos__s.html", "structfn__parts__dos__s" ],
+    [ "fn_parts_lfn_s", "structfn__parts__lfn__s.html", "structfn__parts__lfn__s" ],
     [ "fs_stat_t", "structfs__stat__t.html", "structfs__stat__t" ],
     [ "key_press_event_config_t", "structkey__press__event__config__t.html", "structkey__press__event__config__t" ],
     [ "lcd_base_s", "structlcd__base__s.html", "structlcd__base__s" ],
