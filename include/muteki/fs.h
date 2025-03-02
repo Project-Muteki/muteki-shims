@@ -25,6 +25,75 @@ extern "C" {
 #define SYS_PATH_MAX_CU 256u
 
 /**
+ * @brief Read year from find timestamp.
+ */
+#define FIND_TS_YEAR(ts) ((ts >> 25) + 1980)
+/**
+ * @brief Read month from find timestamp.
+ */
+#define FIND_TS_MONTH(ts) ((ts >> 21) & 0xf)
+/**
+ * @brief Read day from find timestamp.
+ */
+#define FIND_TS_DAY(ts) ((ts >> 16) & 0x1f)
+
+/**
+ * @brief Read hour from find timestamp.
+ */
+#define FIND_TS_HOUR(ts) ((ts >> 11) & 0x1f)
+/**
+ * @brief Read minute from find timestamp.
+ */
+#define FIND_TS_MINUTE(ts) ((ts >> 5) & 0x3f)
+/**
+ * @brief Read second from find timestamp.
+ */
+#define FIND_TS_SECOND(ts) ((ts & 0xf) * 4)
+
+/** Maximum number of code units an LFN pathname can have including the trailing NUL. */
+#define FNSPLIT_LFN_PATHNAME_MAX 261u
+/** Maximum number of code units an LFN drive specifier can have including the trailing NUL. */
+#define FNSPLIT_LFN_DRIVE_MAX 4u
+/** Maximum number of code units an LFN directory name can have including the trailing NUL. */
+#define FNSPLIT_LFN_DIRNAME_MAX 257u
+/** Maximum number of code units an LFN base name can have including the trailing NUL. */
+#define FNSPLIT_LFN_BASENAME_MAX 257u
+/** Maximum number of code units an LFN file suffix can have including the trailing NUL. */
+#define FNSPLIT_LFN_SUFFIX_MAX 259u
+
+/** Maximum number of code units an DOS 8.3 pathname can have including the trailing NUL. */
+#define FNSPLIT_DOS_PATHNAME_MAX 81u
+/** Maximum number of code units a DOS 8.3 drive specifier can have including the trailing NUL. */
+#define FNSPLIT_DOS_DRIVE_MAX 4u
+/** Maximum number of code units a DOS 8.3 directory name can have including the trailing NUL. */
+#define FNSPLIT_DOS_DIRNAME_MAX 67u
+/** Maximum number of code units a DOS 8.3 base name can have including the trailing NUL. */
+#define FNSPLIT_DOS_BASENAME_MAX 10u
+/** Maximum number of code units a DOS 8.3 file suffix can have including the trailing NUL. */
+#define FNSPLIT_DOS_SUFFIX_MAX 9u
+
+/**
+ * @brief File/directory attributes.
+ * @details Just the attributes in FAT32.
+ * @see https://docs.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants
+ */
+enum fs_attribute_e {
+    /** Entry is read only. */
+    ATTR_READONLY = 0x1,
+    /** Entry is hidden. */
+    ATTR_HIDDEN = 0x2,
+    /** Entry is a system file/directory. */
+    ATTR_SYSTEM = 0x4,
+    /** Entry is a directory. */
+    ATTR_DIR = 0x10,
+    /** Entry is archived. */
+    ATTR_ARCHIVE = 0x20,
+    ATTR_DEVICE = 0x40,
+    /** Entry does not have any other attribute. */
+    ATTR_NONE = 0x80,
+};
+
+/**
  * @brief Structure for find context.
  */
 typedef struct {
@@ -101,73 +170,56 @@ typedef struct {
 } fs_stat_t;
 
 /**
- * @brief Read year from find timestamp.
+ * @brief All-in-one struct that contain all parts used in _wfnsplit() and _wfnmerge()
  */
-#define FIND_TS_YEAR(ts) ((ts >> 25) + 1980)
-/**
- * @brief Read month from find timestamp.
- */
-#define FIND_TS_MONTH(ts) ((ts >> 21) & 0xf)
-/**
- * @brief Read day from find timestamp.
- */
-#define FIND_TS_DAY(ts) ((ts >> 16) & 0x1f)
+typedef struct fn_parts_lfn_s {
+    /**
+     * @brief Pathname.
+     */
+    UTF16 pathname[FNSPLIT_LFN_PATHNAME_MAX];
+    /**
+     * @brief Drive.
+     */
+    UTF16 drive[FNSPLIT_LFN_DRIVE_MAX];
+    /**
+     * @brief Directory name.
+     */
+    UTF16 dirname[FNSPLIT_LFN_DIRNAME_MAX];
+    /**
+     * @brief Base name without suffix.
+     */
+    UTF16 basename[FNSPLIT_LFN_BASENAME_MAX];
+    /**
+     * @brief Suffix.
+     */
+    UTF16 suffix[FNSPLIT_LFN_SUFFIX_MAX];
+} fs_parts_lfn_t;
 
 /**
- * @brief Read hour from find timestamp.
+ * @brief All-in-one struct that contain all parts used in _afnsplit() and _afnmerge()
  */
-#define FIND_TS_HOUR(ts) ((ts >> 11) & 0x1f)
-/**
- * @brief Read minute from find timestamp.
- */
-#define FIND_TS_MINUTE(ts) ((ts >> 5) & 0x3f)
-/**
- * @brief Read second from find timestamp.
- */
-#define FIND_TS_SECOND(ts) ((ts & 0xf) * 4)
-
-/** Maximum number of code units an LFN pathname can have including the trailing NUL. */
-#define FNSPLIT_LFN_PATHNAME_MAX 261u
-/** Maximum number of code units an LFN drive specifier can have including the trailing NUL. */
-#define FNSPLIT_LFN_DRIVE_MAX 4u
-/** Maximum number of code units an LFN directory name can have including the trailing NUL. */
-#define FNSPLIT_LFN_DIRNAME_MAX 257u
-/** Maximum number of code units an LFN base name can have including the trailing NUL. */
-#define FNSPLIT_LFN_BASENAME_MAX 257u
-/** Maximum number of code units an LFN file suffix can have including the trailing NUL. */
-#define FNSPLIT_LFN_SUFFIX_MAX 259u
-
-/** Maximum number of code units an DOS 8.3 pathname can have including the trailing NUL. */
-#define FNSPLIT_DOS_PATHNAME_MAX 81u
-/** Maximum number of code units a DOS 8.3 drive specifier can have including the trailing NUL. */
-#define FNSPLIT_DOS_DRIVE_MAX 4u
-/** Maximum number of code units a DOS 8.3 directory name can have including the trailing NUL. */
-#define FNSPLIT_DOS_DIRNAME_MAX 67u
-/** Maximum number of code units a DOS 8.3 base name can have including the trailing NUL. */
-#define FNSPLIT_DOS_BASENAME_MAX 10u
-/** Maximum number of code units a DOS 8.3 file suffix can have including the trailing NUL. */
-#define FNSPLIT_DOS_SUFFIX_MAX 9u
-
-/**
- * @brief File/directory attributes.
- * @details Just the attributes in FAT32.
- * @see https://docs.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants
- */
-enum fs_attribute_e {
-    /** Entry is read only. */
-    ATTR_READONLY = 0x1,
-    /** Entry is hidden. */
-    ATTR_HIDDEN = 0x2,
-    /** Entry is a system file/directory. */
-    ATTR_SYSTEM = 0x4,
-    /** Entry is a directory. */
-    ATTR_DIR = 0x10,
-    /** Entry is archived. */
-    ATTR_ARCHIVE = 0x20,
-    ATTR_DEVICE = 0x40,
-    /** Entry does not have any other attribute. */
-    ATTR_NONE = 0x80,
-};
+typedef struct fn_parts_dos_s {
+    /**
+     * @brief Pathname.
+     */
+    char pathname[FNSPLIT_DOS_PATHNAME_MAX];
+    /**
+     * @brief Drive.
+     */
+    char drive[FNSPLIT_DOS_DRIVE_MAX];
+    /**
+     * @brief Directory name.
+     */
+    char dirname[FNSPLIT_DOS_DIRNAME_MAX];
+    /**
+     * @brief Base name without suffix.
+     */
+    char basename[FNSPLIT_DOS_BASENAME_MAX];
+    /**
+     * @brief Suffix.
+     */
+    char suffix[FNSPLIT_DOS_SUFFIX_MAX];
+} fs_parts_dos_t;
 
 /**
  * @brief Delete a file.
@@ -398,6 +450,7 @@ extern int FSGetDiskRoomState(int fsid, fs_stat_t *fs_stat);
 /**
  * @brief Split a DOS 8.3 pathname into parts.
  * @details DOS 8.3 counterpart of _wfnsplit().
+ * @x_syscall_num `0x100c5`
  * @param[in] pathname Pathname to be split.
  * @param[out] drive Drive name, or NULL to omit this part.
  * Must be at least as long as ::FNSPLIT_DOS_DRIVE_MAX.
@@ -415,6 +468,7 @@ extern int _afnsplit(const char *pathname, char *drive, char *dirname, char *bas
 /**
  * @brief Build an DOS 8.3 pathname from parts.
  * @details DOS 8.3 counterpart of _wfnmerge().
+ * @x_syscall_num `0x100c6`
  * @param[out] pathname Pointer to a buffer where the constructed pathname will be stored.
  * This buffer must be at least as long as ::FNSPLIT_DOS_PATHNAME_MAX.
  * @param[in] drive Drive specifier (e.g., `C` or `C:`). If provided, it must be a valid drive name.
