@@ -1,6 +1,6 @@
 var errno_8h =
 [
-    [ "kerrno_t", "errno_8h.html#a10935ed5a8e001707b2cc7bfc07cdfc6", null ],
+    [ "kerrno_t", "errno_8h.html#a14bbb6278a7fec64c786bc03cf3da0a7", null ],
     [ "errno_exec_e", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32", [
       [ "EXEC_UNSUPPORTED", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1", null ],
       [ "EXEC_INVALID", "errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af95115c686b05e48b93049fc0519a6c5", null ],
@@ -92,7 +92,7 @@ var errno_8h =
     ] ],
     [ "_GetLastError", "errno_8h.html#a3e86bca27cfb284b8afb25762cc4f372", null ],
     [ "_SetLastError", "errno_8h.html#a445cee9577bc3d31d4b41b7d2f47d28f", null ],
-    [ "FormatMessage", "errno_8h.html#a30ded332e224f861b7b50f11568f091d", null ],
+    [ "FormatMessage", "errno_8h.html#adf9dcc5640b9f66851e35a5f7e3f4d03", null ],
     [ "OSGetLastError", "errno_8h.html#ad18c4185692b2c3c69c7fc7612bca683", null ],
     [ "OSSetLastError", "errno_8h.html#aeaa5fa918b295c79d957f225a271dd13", null ]
 ];
