@@ -19,7 +19,7 @@ extern "C" {
 #endif
 
 /** Kernel error code type */
-typedef int32_t kerrno_t;
+typedef unsigned int kerrno_t;
 
 /**
  * @brief Flags for FormatMessage()
@@ -297,7 +297,7 @@ static inline unsigned short KERRNO_ERR(kerrno_t kerrno) {
  * this is the minimum size of the buffer allocated for the message by the function.
  * @return Length of the message written, or 0 if fails.
  */
-extern size_t FormatMessage(int32_t flags, int32_t _sbz0, int32_t _sbz1, int32_t _sbz2, void *outbuf, size_t outlen);
+extern size_t FormatMessage(unsigned int flags, int _sbz0, int _sbz1, int _sbz2, void *outbuf, size_t outlen);
 
 /**
  * @brief Set the global errno.

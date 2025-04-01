@@ -62,7 +62,6 @@ shared_library(
     link_args : ld_flags,
     name_suffix : lib_suffix_override,
     name_prefix : lib_prefix_override,
-    pic: false,
 )
 
 # krnllib replica
@@ -75,7 +74,6 @@ shared_library(
     link_args : ld_flags,
     name_suffix : lib_suffix_override,
     name_prefix : lib_prefix_override,
-    pic: false,
 )
 
 endif # get_option('generate_dll_replicas')
