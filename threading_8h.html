@@ -283,6 +283,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8fc9a0fc505ff2a9317fcf65c5fd8d46" id="r_a8fc9a0fc505ff2a9317fcf65c5fd8d46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#a8fc9a0fc505ff2a9317fcf65c5fd8d46">OSCloseMsgQue</a> (<a class="el" href="threading_8h.html#a1a1f817f37bcfda2900b3e58a2c2f868">message_queue_t</a> *queue)</td></tr>
 <tr class="memdesc:a8fc9a0fc505ff2a9317fcf65c5fd8d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a message queue descriptor.  <br /></td></tr>
 <tr class="separator:a8fc9a0fc505ff2a9317fcf65c5fd8d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9d173c4bbe67e8aabc06c33354b095" id="r_aee9d173c4bbe67e8aabc06c33354b095"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="threading_8h.html#aee9d173c4bbe67e8aabc06c33354b095">OSGetCurrentlyRunningTCBPrio</a> ()</td></tr>
+<tr class="memdesc:aee9d173c4bbe67e8aabc06c33354b095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current running thread's priority (slot number).  <br /></td></tr>
+<tr class="separator:aee9d173c4bbe67e8aabc06c33354b095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Native threading API. </p>
@@ -770,6 +773,48 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aee9d173c4bbe67e8aabc06c33354b095" name="aee9d173c4bbe67e8aabc06c33354b095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9d173c4bbe67e8aabc06c33354b095">&#9670;&#160;</a></span>OSGetCurrentlyRunningTCBPrio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short OSGetCurrentlyRunningTCBPrio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current running thread's priority (slot number). </p>
+<p>So far only Pocket Challenge implements this syscall. Calling it on other devices will very likely cause the NOSYS handler to be called, which in turn will crash the system.</p>
+<p>On other devices, this can be simulated using mutekix:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="threading_8h.html">muteki/threading.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;mutekix/threading.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">short</span> <a class="code hl_function" href="threading_8h.html#aee9d173c4bbe67e8aabc06c33354b095">OSGetCurrentlyRunningTCBPrio</a>() {</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">OSGetThreadPriority</a>(mutekix_thread_get_current());</div>
+<div class="line">}</div>
+<div class="ttc" id="athreading_8h_html"><div class="ttname"><a href="threading_8h.html">threading.h</a></div><div class="ttdoc">Native threading API.</div></div>
+<div class="ttc" id="athreading_8h_html_ab275a73337d748fdf9eb651e5f031569"><div class="ttname"><a href="threading_8h.html#ab275a73337d748fdf9eb651e5f031569">OSGetThreadPriority</a></div><div class="ttdeci">short OSGetThreadPriority(thread_t *thr)</div><div class="ttdoc">Get the thread priority (slot number).</div></div>
+<div class="ttc" id="athreading_8h_html_aee9d173c4bbe67e8aabc06c33354b095"><div class="ttname"><a href="threading_8h.html#aee9d173c4bbe67e8aabc06c33354b095">OSGetCurrentlyRunningTCBPrio</a></div><div class="ttdeci">short OSGetCurrentlyRunningTCBPrio()</div><div class="ttdoc">Get the current running thread's priority (slot number).</div></div>
+</div><!-- fragment --><p>Requires <code>-lkrnllib</code> when dynamically linking with the shims. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x200a2</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The current running thread's priority. </dd></dl>
 
 </div>
 </div>
