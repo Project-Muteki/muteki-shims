@@ -6,7 +6,7 @@ c_flags = ['-mcpu=arm7tdmi', '-nostdlib', '-nostdinc']
 ld_flags = c_flags
 
 syscall_files_sdk = ['syscall_def/syscalls_sdk.json', 'syscall_def/syscalls_sdk_hpprime.json']
-syscall_files_krnl = ['syscall_def/syscalls_krnl.json', 'syscall_def/syscalls_krnl_hpprime.json']
+syscall_files_krnl = ['syscall_def/syscalls_krnl.json', 'syscall_def/syscalls_krnl_hpprime.json', 'syscall_def/syscalls_krnl_pocketchallenge.json']
 
 # For gen_syscall_shim.py.
 python_interp = import('python').find_installation('python3')
@@ -26,7 +26,8 @@ syscalls_sdk = custom_target('syscalls_sdk.s',
 _syscall_table = run_command([python_interp, 'scripts/gen_syscall_shim.py',
     '-Sd',
     'syscall_def/syscalls_sdk.json', 'syscall_def/syscalls_sdk_hpprime.json',
-    'syscall_def/syscalls_krnl.json', 'syscall_def/syscalls_krnl_hpprime.json',],
+    'syscall_def/syscalls_krnl.json', 'syscall_def/syscalls_krnl_hpprime.json',
+    'syscall_def/syscalls_krnl_pocketchallenge.json'],
     check : true)
 
 _syscall_split_files = _syscall_table.stdout().strip().split('\n')
@@ -34,7 +35,7 @@ _syscall_split_files = _syscall_table.stdout().strip().split('\n')
 syscalls_split = custom_target('syscalls_split',
     output : _syscall_split_files,
     input : ['scripts/gen_syscall_shim.py', syscall_files_sdk, syscall_files_krnl],
-    command: [python_interp, '@INPUT0@', '-t', 'gas-eabi', '-So', '@BUILD_ROOT@', '@INPUT1@', '@INPUT2@', '@INPUT3@', '@INPUT4@'],)
+    command: [python_interp, '@INPUT0@', '-t', 'gas-eabi', '-So', '@BUILD_ROOT@', '@INPUT1@', '@INPUT2@', '@INPUT3@', '@INPUT4@', '@INPUT5@'],)
 
 # Static library that bundles both sdk and krnl shims.
 static_library(

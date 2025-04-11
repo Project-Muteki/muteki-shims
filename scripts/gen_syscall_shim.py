@@ -59,7 +59,8 @@ def parse_args():
     return p, p.parse_args()
 
 def generate_syscall_shim(mappings, output, assembler_type, type_='normal', scandeps=False, scandeps_prefix=None):
-    mapping = {}
+    mapping = []
+    known_functions = set()
     sub_mappings = []
     sub_mapping_entries = 0
     for mapping_path in mappings:
@@ -67,19 +68,11 @@ def generate_syscall_shim(mappings, output, assembler_type, type_='normal', scan
             sub_mapping = json.load(fmapping)
             sub_mappings.append(sub_mapping)
             sub_mapping_entries += len(sub_mapping)
-            mapping.update(sub_mapping)
-
-    if sub_mapping_entries != len(mapping):
-        # find out the overlapping names
-        function_tables = (set(sub_mapping.keys) for sub_mapping in sub_mappings)
-        constructed_function_table = set()
-        overlaps = set()
-        for function_table in function_tables:
-            intersection = constructed_function_table.intersection(function_table)
-            if len(intersection) != 0:
-                overlaps.update(intersection)
-            constructed_function_table.update(function_table)
-        sys.stdout.write(f'WARNING: Overlapped function names {tuple(overlaps).join(", ")}\n')
+            for num, name in sub_mapping.items():
+                if name in known_functions:
+                    raise RuntimeError(f'Function {name} was redefined.')
+                known_functions.add(name)
+            mapping.extend(sub_mapping.items())
 
     if type_ in ('normal', 'standalone'):
         with open(output, 'w') as fout:
@@ -88,12 +81,12 @@ def generate_syscall_shim(mappings, output, assembler_type, type_='normal', scan
             if type_ == 'standalone':
                 fout.write(HEADERS[assembler_type][1])
                 fout.write('\n\n')
-            for num, name in mapping.items():
+            for num, name in mapping:
                 fout.write(f'define_syscall {num} {name}\n')
     elif type_ == 'split':
         if output is not None:
             os.makedirs(output, exist_ok=True)
-        for num, name in mapping.items():
+        for num, name in mapping:
             subfile_name = os.path.join(scandeps_prefix, f'{name}.s') if scandeps_prefix is not None else f'{name}.s'
             if scandeps:
                 print(subfile_name)
