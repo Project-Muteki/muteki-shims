@@ -465,6 +465,31 @@ extern bool OSGetMsgQue(message_queue_t *queue, message_queue_message_t *message
  */
 extern bool OSCloseMsgQue(message_queue_t *queue);
 
+/**
+ * @brief Get the current running thread's priority (slot number).
+ * @details
+ * So far only Pocket Challenge implements this syscall. Calling it on other devices will very likely cause the NOSYS
+ * handler to be called, which in turn will crash the system.
+ *
+ * On other devices, this can be simulated using mutekix:
+ *
+ * @code{.c}
+ * #include <muteki/threading.h>
+ * #include <mutekix/threading.h>
+ *
+ * short OSGetCurrentlyRunningTCBPrio() {
+ *     return OSGetThreadPriority(mutekix_thread_get_current());
+ * }
+ * @endcode
+ *
+ * @x_term require-krnllib
+ *
+ * @x_syscall_num `0x200a2`
+ * @x_void_param
+ * @return The current running thread's priority.
+ */
+extern short OSGetCurrentlyRunningTCBPrio();
+
 #ifdef __cplusplus
 } // extern "C"
 #endif
