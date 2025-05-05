@@ -54,5 +54,6 @@ var searchData=
   ['muteki_20shims_51',['muteki-shims',['../index.html',1,'']]],
   ['muteki_20shims_20into_20a_20c_20compiler_52',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
   ['muteki_20shims_20into_20ghidra_53',['Integrating muteki-shims into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['muteki_2eh_54',['muteki.h',['../muteki_8h.html',1,'']]]
+  ['muteki_20shims_20using_20clangd_54',['Developing muteki-shims using clangd',['../index.html#autotoc_md3',1,'']]],
+  ['muteki_2eh_55',['muteki.h',['../muteki_8h.html',1,'']]]
 ];

@@ -119,6 +119,10 @@ Integrating muteki-shims into Ghidra</h1>
 <blockquote class="doxtable">
 <p>&zwj;[!NOTE] The parser profile needs to be regenerated when the file names or layout under <code>include/</code> changes, or the project root directory is moved or renamed. Failure to do so may cause unexpected behaviors during import. </p>
 </blockquote>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Developing muteki-shims using clangd</h1>
+<p>Generate a fresh build directory named <code>builddir/</code> and specify <code>--query-driver=/path/to/arm-none-bestaeabi-gcc</code> in the clangd command line to get started.</p>
+<p>clangd <a href="https://github.com/clangd/clangd/issues/45">does not support stand-alone (headers-only) files</a> at this moment. To make the language server work properly, open the test file under <code>src/test.c</code> first before opening any of the header files. Fail to do so may cause the language server to output bogus errors on how it cannot find system headers. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

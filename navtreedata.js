@@ -27,6 +27,7 @@ var NAVTREE =
   [ "muteki-shims", "index.html", [
     [ "Integrating muteki-shims into a C compiler", "index.html#autotoc_md1", null ],
     [ "Integrating muteki-shims into Ghidra", "index.html#autotoc_md2", null ],
+    [ "Developing muteki-shims using clangd", "index.html#autotoc_md3", null ],
     [ "Todo List", "todo.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -55,9 +56,9 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "fs_8h.html#a3d90a37b04db17a9774c37883d3ddd08",
-"structcritical__section__s.html#a7f5372482763b84d38dcf5298a894446",
-"structnand__params__t.html#a9a22833df756b5a869d0e1dbbe4e1c37",
-"ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171a23cb30556e7725ba3418254595bb598a"
+"structcritical__section__s.html",
+"structnand__params__t.html#a9921e8774e63116450ab16e6a218c1f4",
+"ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171a229bda5f74a16af93e1f59e2b269964c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
