@@ -19,3 +19,9 @@ Run `python scripts/gen_ghidra_prf.py <path-to-your-ghidra-user-dir>/parserprofi
 
 > [!NOTE]
 > The parser profile needs to be regenerated when the file names or layout under `include/` changes, or the project root directory is moved or renamed. Failure to do so may cause unexpected behaviors during import.
+
+## Developing muteki-shims using clangd
+
+Generate a fresh build directory named `builddir/` and specify `--query-driver=/path/to/arm-none-bestaeabi-gcc` in the clangd command line to get started.
+
+clangd [does not support stand-alone (headers-only) files](https://github.com/clangd/clangd/issues/45) at this moment. To make the language server work properly, open the test file under `src/test.c` first before opening any of the header files. Fail to do so may cause the language server to output bogus errors on how it cannot find system headers.

@@ -1,0 +1,8 @@
+CompileFlags:
+    Add:
+        - '-fshort-wchar'
+    CompilationDatabase: './builddir'
+
+Style:
+    AngledHeaders:
+        - './include/.*'
