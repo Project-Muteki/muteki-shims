@@ -483,6 +483,18 @@ enum keycode_e {
      */
     KEY_APP_VIDEO_PLAYER = 0xd0,
     /**
+     * @brief Open the global auxilary menu on touchscreen-only devices.
+     */
+    KEY_AUX_MENU = 0xd1,
+    /**
+     * @brief Open the English to Chinese translator app.
+     */
+    KEY_APP_TRANSLATOR_EN_ZH = 0xd2,
+    /**
+     * @brief Open the Chinese to English translator app.
+     */
+    KEY_APP_TRANSLATOR_ZH_EN = 0xd3,
+    /**
      * @brief Launch Besta professional vocabulary dictionary.
      */
     KEY_APP_DICT_EN_PRO = 0xd4,
@@ -535,6 +547,10 @@ enum keycode_e {
      */
     KEY_BATTERY = 0xfb,
     /**
+     * @brief Open LCD backlight and contrast adjustment menu.
+     */
+    KEY_CONTRAST = 0xfc,
+    /**
      * @brief Event on USB cable insertion.
      */
     KEY_USB_INSERTION = 0xfe,
@@ -544,6 +560,15 @@ enum keycode_e {
     KEY_REPEAT = 0xff,
     /* 0x100+ */
     KEY_INS = 0x101,
+    /**
+     * @brief Scroll wheel event.
+     */
+    KEY_SCROLL_WHEEL_EVENT = 0x102,
+    /**
+     * @brief Trigger TTS.
+     * @details Some models may have this key instead of the usual `KEY_LANG_*` series keys for triggering TTS.
+     */
+    KEY_TTS = 0x104,
     KEY_SHIFT_PGUP = 0xe047,
     KEY_PRIME_HOME = 0xe047,
     KEY_SHIFT_PGDN = 0xe04f,
