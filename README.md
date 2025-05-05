@@ -24,4 +24,4 @@ Run `python scripts/gen_ghidra_prf.py <path-to-your-ghidra-user-dir>/parserprofi
 
 Generate a fresh build directory named `builddir/` and specify `--query-driver=/path/to/arm-none-bestaeabi-gcc` in the clangd command line to get started.
 
-clangd [does not support stand-alone (headers-only) files](https://github.com/clangd/clangd/issues/45) at this moment. To make the language server work properly, open the test file under `src/test.c` first before opening any of the header files. Fail to do so may cause the language server to output bogus errors on how it cannot find system headers.
+clangd [does not support non-stand-alone (headers-only) files](https://github.com/clangd/clangd/issues/45) at this moment. To make the language server work properly, open the test file under `src/test.c` first before opening any of the header files. Fail to do so may cause the language server to output bogus errors on how it cannot find system headers.
