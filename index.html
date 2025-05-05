@@ -122,7 +122,7 @@ Integrating muteki-shims into Ghidra</h1>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Developing muteki-shims using clangd</h1>
 <p>Generate a fresh build directory named <code>builddir/</code> and specify <code>--query-driver=/path/to/arm-none-bestaeabi-gcc</code> in the clangd command line to get started.</p>
-<p>clangd <a href="https://github.com/clangd/clangd/issues/45">does not support stand-alone (headers-only) files</a> at this moment. To make the language server work properly, open the test file under <code>src/test.c</code> first before opening any of the header files. Fail to do so may cause the language server to output bogus errors on how it cannot find system headers. </p>
+<p>clangd <a href="https://github.com/clangd/clangd/issues/45">does not support non-stand-alone (headers-only) files</a> at this moment. To make the language server work properly, open the test file under <code>src/test.c</code> first before opening any of the header files. Fail to do so may cause the language server to output bogus errors on how it cannot find system headers. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
