@@ -11,7 +11,7 @@ var searchData=
   ['osdeletecriticalsection_8',['OSDeleteCriticalSection',['../threading_8h.html#ac14aa1981ef8fc2e005953d87682ddf9',1,'threading.h']]],
   ['osentercriticalsection_9',['OSEnterCriticalSection',['../threading_8h.html#aaf193d4994c1a9097fc193880d801190',1,'threading.h']]],
   ['osexitthread_10',['OSExitThread',['../threading_8h.html#af11dbf56f12f0f049d6d1dc061bf7e83',1,'threading.h']]],
-  ['osgetcurrentlyrunningtcbprio_11',['OSGetCurrentlyRunningTCBPrio',['../threading_8h.html#aee9d173c4bbe67e8aabc06c33354b095',1,'threading.h']]],
+  ['osgetcurrentlyrunningtcbprio_11',['OSGetCurrentlyRunningTCBPrio',['../threading_8h.html#aa9503bd24a31b76eea7b6db739eecf45',1,'threading.h']]],
   ['osgetlasterror_12',['OSGetLastError',['../errno_8h.html#ad18c4185692b2c3c69c7fc7612bca683',1,'errno.h']]],
   ['osgetmsgque_13',['OSGetMsgQue',['../threading_8h.html#adf5aef3bc2a84991243a3e5aa86f6047',1,'threading.h']]],
   ['osgetthreadpriority_14',['OSGetThreadPriority',['../threading_8h.html#ab275a73337d748fdf9eb651e5f031569',1,'threading.h']]],

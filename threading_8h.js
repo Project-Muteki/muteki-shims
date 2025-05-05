@@ -39,7 +39,7 @@ var threading_8h =
     [ "OSDeleteCriticalSection", "threading_8h.html#ac14aa1981ef8fc2e005953d87682ddf9", null ],
     [ "OSEnterCriticalSection", "threading_8h.html#aaf193d4994c1a9097fc193880d801190", null ],
     [ "OSExitThread", "threading_8h.html#af11dbf56f12f0f049d6d1dc061bf7e83", null ],
-    [ "OSGetCurrentlyRunningTCBPrio", "threading_8h.html#aee9d173c4bbe67e8aabc06c33354b095", null ],
+    [ "OSGetCurrentlyRunningTCBPrio", "threading_8h.html#aa9503bd24a31b76eea7b6db739eecf45", null ],
     [ "OSGetMsgQue", "threading_8h.html#adf5aef3bc2a84991243a3e5aa86f6047", null ],
     [ "OSGetThreadPriority", "threading_8h.html#ab275a73337d748fdf9eb651e5f031569", null ],
     [ "OSInitCriticalSection", "threading_8h.html#ab114633e9c60a49f7cc11b7ce5e0f7e0", null ],
