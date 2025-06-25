@@ -138,14 +138,14 @@ Enumerations</h2></td></tr>
 , <a class="el" href="messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7ac6782c2ab7c70f0d91a54a7fc5bdc50f">MB_RESULT_YES</a> = 5
 , <a class="el" href="messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7a6587e339e749832a44e902ace6139a1e">MB_RESULT_NO</a> = 6
  }</td></tr>
-<tr class="memdesc:abb00ba0ce0413f07101a74085629a5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results returned by the <a class="el" href="messagebox_8h.html#ad78c013e2566e007b32d4c78ded0a63d" title="High level message box function.">MessageBox()</a> function after the user dismisses the message box.  <a href="messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7">More...</a><br /></td></tr>
+<tr class="memdesc:abb00ba0ce0413f07101a74085629a5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results returned by the <a class="el" href="messagebox_8h.html#a405b7e2f7937bcfef87a415edc42f6ee" title="High level message box function.">MessageBox()</a> function after the user dismisses the message box.  <a href="messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7">More...</a><br /></td></tr>
 <tr class="separator:abb00ba0ce0413f07101a74085629a5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad78c013e2566e007b32d4c78ded0a63d" id="r_ad78c013e2566e007b32d4c78ded0a63d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messagebox_8h.html#ad78c013e2566e007b32d4c78ded0a63d">MessageBox</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *text, unsigned short type)</td></tr>
-<tr class="memdesc:ad78c013e2566e007b32d4c78ded0a63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">High level message box function.  <br /></td></tr>
-<tr class="separator:ad78c013e2566e007b32d4c78ded0a63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405b7e2f7937bcfef87a415edc42f6ee" id="r_a405b7e2f7937bcfef87a415edc42f6ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="messagebox_8h.html#a405b7e2f7937bcfef87a415edc42f6ee">MessageBox</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *text, unsigned short type)</td></tr>
+<tr class="memdesc:a405b7e2f7937bcfef87a415edc42f6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">High level message box function.  <br /></td></tr>
+<tr class="separator:a405b7e2f7937bcfef87a415edc42f6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions related to the message box view. </p>
@@ -162,7 +162,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Results returned by the <a class="el" href="messagebox_8h.html#ad78c013e2566e007b32d4c78ded0a63d" title="High level message box function.">MessageBox()</a> function after the user dismisses the message box. </p>
+<p>Results returned by the <a class="el" href="messagebox_8h.html#a405b7e2f7937bcfef87a415edc42f6ee" title="High level message box function.">MessageBox()</a> function after the user dismisses the message box. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abb00ba0ce0413f07101a74085629a5f7a7899324599e9c2e400713172c4291661" name="abb00ba0ce0413f07101a74085629a5f7a7899324599e9c2e400713172c4291661"></a>MB_RESULT_OK&#160;</td><td class="fielddoc"><p>The OK button was pressed by the user. </p>
 <p>Pressing <code>Y</code> key on the keyboard could also trigger this (specifically when OK button is enabled via <a class="el" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7aaaeb146cff843e3ac963d8efcc82a181" title="Provide OK button on the message box.">MB_BUTTON_OK</a>). </p>
@@ -193,12 +193,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Message box types. </p>
-<p>A valid message box type is either <code>MB_DEFAULT</code> or a <code>MB_ICON_</code> enum joined by one or more <code>MB_BUTTON_</code> enums with the bitwise-or operator (<code>|</code>). For example, </p><div class="fragment"><div class="line"><a class="code hl_function" href="messagebox_8h.html#ad78c013e2566e007b32d4c78ded0a63d">MessageBox</a>(<a class="code hl_define" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(<span class="stringliteral">&quot;hello world&quot;</span>), <a class="code hl_enumvalue" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7aa446d5edaaefc56e1783fb516b72f58e">MB_ICON_WARNING</a> | <a class="code hl_enumvalue" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a596382a0d812d1ae8a2e9d8822e88742">MB_BUTTON_YES</a> | <a class="code hl_enumvalue" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a6cb123b721b6d4fee9b67a4c0d4b322e">MB_BUTTON_NO</a>);</div>
+<p>A valid message box type is either <code>MB_DEFAULT</code> or a <code>MB_ICON_</code> enum joined by one or more <code>MB_BUTTON_</code> enums with the bitwise-or operator (<code>|</code>). For example, </p><div class="fragment"><div class="line"><a class="code hl_function" href="messagebox_8h.html#a405b7e2f7937bcfef87a415edc42f6ee">MessageBox</a>(<a class="code hl_define" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(<span class="stringliteral">&quot;hello world&quot;</span>), <a class="code hl_enumvalue" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7aa446d5edaaefc56e1783fb516b72f58e">MB_ICON_WARNING</a> | <a class="code hl_enumvalue" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a596382a0d812d1ae8a2e9d8822e88742">MB_BUTTON_YES</a> | <a class="code hl_enumvalue" href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a6cb123b721b6d4fee9b67a4c0d4b322e">MB_BUTTON_NO</a>);</div>
 <div class="ttc" id="acommon_8h_html_a1f2319b35fdcf33e9544b53a14371156"><div class="ttname"><a href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a></div><div class="ttdeci">#define _BUL(x)</div><div class="ttdoc">Besta UTF-16 string literal.</div><div class="ttdef"><b>Definition</b> common.h:57</div></div>
 <div class="ttc" id="amessagebox_8h_html_a0e51ae1bb45dc6694697cdf16cf4bfd7a596382a0d812d1ae8a2e9d8822e88742"><div class="ttname"><a href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a596382a0d812d1ae8a2e9d8822e88742">MB_BUTTON_YES</a></div><div class="ttdeci">@ MB_BUTTON_YES</div><div class="ttdoc">Provide Yes button on the message box.</div><div class="ttdef"><b>Definition</b> messagebox.h:56</div></div>
 <div class="ttc" id="amessagebox_8h_html_a0e51ae1bb45dc6694697cdf16cf4bfd7a6cb123b721b6d4fee9b67a4c0d4b322e"><div class="ttname"><a href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a6cb123b721b6d4fee9b67a4c0d4b322e">MB_BUTTON_NO</a></div><div class="ttdeci">@ MB_BUTTON_NO</div><div class="ttdoc">Provide No button on the message box.</div><div class="ttdef"><b>Definition</b> messagebox.h:60</div></div>
 <div class="ttc" id="amessagebox_8h_html_a0e51ae1bb45dc6694697cdf16cf4bfd7aa446d5edaaefc56e1783fb516b72f58e"><div class="ttname"><a href="messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7aa446d5edaaefc56e1783fb516b72f58e">MB_ICON_WARNING</a></div><div class="ttdeci">@ MB_ICON_WARNING</div><div class="ttdoc">Display a warning (exclamation-point) icon on the message box.</div><div class="ttdef"><b>Definition</b> messagebox.h:48</div></div>
-<div class="ttc" id="amessagebox_8h_html_ad78c013e2566e007b32d4c78ded0a63d"><div class="ttname"><a href="messagebox_8h.html#ad78c013e2566e007b32d4c78ded0a63d">MessageBox</a></div><div class="ttdeci">int MessageBox(UTF16 *text, unsigned short type)</div><div class="ttdoc">High level message box function.</div></div>
+<div class="ttc" id="amessagebox_8h_html_a405b7e2f7937bcfef87a415edc42f6ee"><div class="ttname"><a href="messagebox_8h.html#a405b7e2f7937bcfef87a415edc42f6ee">MessageBox</a></div><div class="ttdeci">int MessageBox(const UTF16 *text, unsigned short type)</div><div class="ttdoc">High level message box function.</div></div>
 </div><!-- fragment --><p> will cause a message box with the message <code>"hello world"</code>, the exclamation-point icon, and both the Yes and No buttons to be shown. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0e51ae1bb45dc6694697cdf16cf4bfd7a78612ab1042f18e75827cf00659d4957" name="a0e51ae1bb45dc6694697cdf16cf4bfd7a78612ab1042f18e75827cf00659d4957"></a>MB_DEFAULT&#160;</td><td class="fielddoc"><p>The default type. </p>
@@ -228,8 +228,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad78c013e2566e007b32d4c78ded0a63d" name="ad78c013e2566e007b32d4c78ded0a63d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad78c013e2566e007b32d4c78ded0a63d">&#9670;&#160;</a></span>MessageBox()</h2>
+<a id="a405b7e2f7937bcfef87a415edc42f6ee" name="a405b7e2f7937bcfef87a415edc42f6ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405b7e2f7937bcfef87a415edc42f6ee">&#9670;&#160;</a></span>MessageBox()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +240,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int MessageBox </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
           <td class="paramname"><em>text</em>, </td>
         </tr>
         <tr>
