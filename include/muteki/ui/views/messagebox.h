@@ -125,7 +125,7 @@ enum message_box_result_e {
  * @see message_box_type_e Valid message box types.
  * @see message_box_result_e Valid return values of this function.
  */
-extern int MessageBox(UTF16 *text, unsigned short type);
+extern int MessageBox(const UTF16 *text, unsigned short type);
 
 #ifdef __cplusplus
 } // extern "C"
