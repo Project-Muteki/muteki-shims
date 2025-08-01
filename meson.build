@@ -93,3 +93,5 @@ executable(
 install_headers('include/muteki.h')
 install_subdir('include/muteki/',
     install_dir : 'include/')
+install_subdir('include/osdep/',
+    install_dir : 'include/')
