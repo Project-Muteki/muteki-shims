@@ -1,3 +1,8 @@
+/*
+ * Copyright 2025 dogtopus
+ * SPDX-License-Identifier: MIT
+ */
+
 #ifndef __OSDEP_ABI_H__
 #define __OSDEP_ABI_H__
 
@@ -75,4 +80,4 @@
  */
 #define APCS_WRAPPER_STATIC(NAME, RETTYPE, ARGS) __APCS_WRAPPER_BASE(NAME, static, RETTYPE, ARGS)
 
-#endif // __OSDEP_ABI_H__
+#endif  // __OSDEP_ABI_H__

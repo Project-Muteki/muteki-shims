@@ -25,7 +25,11 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
-#include <sys/types.h>
+#if (defined(__MUTEKI_IS_BOOTSTRAPPING__) && __MUTEKI_IS_BOOTSTRAPPING__ == 1)
+typedef long ssize_t; 
+#else
+#include <sys/types.h> // for ssize_t
+#endif
 
 // This only supports GCC, LLVM and probably also MSVC at the moment.
 #if defined(__WCHAR_TYPE__) && (__WCHAR_MAX__ < 0x10000)
