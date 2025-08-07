@@ -51,9 +51,9 @@ var searchData=
   ['month_48',['month',['../structdatetime__t.html#a5d2ac4cfe4155d71e613dc9a6c8b0ece',1,'datetime_t']]],
   ['mtime_49',['mtime',['../structfind__context__t.html#a8db4ad446253092c6ca188481f352b51',1,'find_context_t']]],
   ['multipress_5fevents_50',['multipress_events',['../structui__event__prime__s.html#a6eaabdd633230c8ab3ba306a575e015e',1,'ui_event_prime_s']]],
-  ['muteki_20shims_51',['muteki-shims',['../index.html',1,'']]],
-  ['muteki_20shims_20into_20a_20c_20compiler_52',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
-  ['muteki_20shims_20into_20ghidra_53',['Integrating muteki-shims into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['muteki_20shims_20using_20clangd_54',['Developing muteki-shims using clangd',['../index.html#autotoc_md3',1,'']]],
+  ['muteki_51',['muteki',['../index.html',1,'']]],
+  ['muteki_20into_20a_20c_20compiler_52',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
+  ['muteki_20syscall_20definitions_20into_20ghidra_53',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
+  ['muteki_20using_20clangd_54',['Developing muteki using clangd',['../index.html#autotoc_md3',1,'']]],
   ['muteki_2eh_55',['muteki.h',['../muteki_8h.html',1,'']]]
 ];

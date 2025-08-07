@@ -72,7 +72,7 @@ var searchData=
   ['usb_5fdata_69',['usb_data',['../structui__event__base__s.html#af812bdcd50769ca5b7c09ec4e3ad58d8',1,'ui_event_base_s::usb_data'],['../structui__event__prime__s.html#aa440213d307e0789aec1522142cd7308',1,'ui_event_prime_s::usb_data']]],
   ['used_70',['used',['../structfs__stat__t.html#a96946b8114ed6bc26aed76733b82b703',1,'fs_stat_t']]],
   ['used_5fkb_71',['used_kb',['../structfs__stat__t.html#abb1cfe3d6ce071d624477adde47a223a',1,'fs_stat_t']]],
-  ['using_20clangd_72',['Developing muteki-shims using clangd',['../index.html#autotoc_md3',1,'']]],
+  ['using_20clangd_72',['Developing muteki using clangd',['../index.html#autotoc_md3',1,'']]],
   ['utf16_73',['UTF16',['../common_8h.html#a11673b324737202065319b55ec126bec',1,'common.h']]],
   ['utf16_2eh_74',['utf16.h',['../utf16_8h.html',1,'']]],
   ['utf16_5fmb_5fencoding_5fe_75',['utf16_mb_encoding_e',['../utf16_8h.html#ab6a92aef40ffa0f5a93c20d19b5033b2',1,'utf16_mb_encoding_e:&#160;utf16.h'],['../utf16_8h.html#ac7e7c273b4855771f0d987c46523a54c',1,'utf16_mb_encoding_e:&#160;utf16.h']]],

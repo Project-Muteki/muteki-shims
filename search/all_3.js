@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['c_20compiler_0',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
+  ['c_20compiler_0',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
   ['canvas_2eh_1',['canvas.h',['../canvas_8h.html',1,'']]],
   ['cart_2',['cart',['../structloader__file__descriptor__s.html#a59e7b4f877cde53279ba45369897499a',1,'loader_file_descriptor_s']]],
   ['channels_3',['channels',['../structpcm__decoder__buffer__s.html#a7cd04e0204afe5b3b1f5b19ff38500fe',1,'pcm_decoder_buffer_s']]],
   ['checkprogramisstayresident_4',['CheckProgramIsStayResident',['../loader_8h.html#ac9a6a038d9485febd3cce82181dcafc4',1,'loader.h']]],
-  ['clangd_5',['Developing muteki-shims using clangd',['../index.html#autotoc_md3',1,'']]],
+  ['clangd_5',['Developing muteki using clangd',['../index.html#autotoc_md3',1,'']]],
   ['clearallevents_6',['ClearAllEvents',['../event_8h.html#a2ffd8f47dae072b34d94f6ec43dde598',1,'event.h']]],
   ['clearevent_7',['ClearEvent',['../event_8h.html#a136666b9c0c1ba3629a1e511764ee2a7',1,'event.h']]],
   ['clearscreen_8',['ClearScreen',['../canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692',1,'canvas.h']]],
@@ -13,7 +13,7 @@ var searchData=
   ['closepcmcodec_10',['ClosePCMCodec',['../audio_8h.html#a6e10cce977d859ad0586d00d2cdc7750',1,'audio.h']]],
   ['codec_11',['codec',['../structpcm__config__s.html#a57af4653f44f20892481886dcc74669e',1,'pcm_config_s']]],
   ['common_2eh_12',['common.h',['../common_8h.html',1,'(Global Namespace)'],['../ui_2common_8h.html',1,'(Global Namespace)']]],
-  ['compiler_13',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
+  ['compiler_13',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
   ['config_14',['config',['../structpcm__codec__context__s.html#ab1cd9b4f3f517195ce12312bad58e414',1,'pcm_codec_context_s']]],
   ['convchartounicode_15',['ConvCharToUnicode',['../utf16_8h.html#a7fd29bb7b87579c21ea7502dff6fdebb',1,'utf16.h']]],
   ['convstrtounicode_16',['ConvStrToUnicode',['../utf16_8h.html#a28c3557ce0b22dda56167d7d34271dfe',1,'utf16.h']]],

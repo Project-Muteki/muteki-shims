@@ -24,10 +24,10 @@
 */
 var NAVTREE =
 [
-  [ "muteki-shims", "index.html", [
-    [ "Integrating muteki-shims into a C compiler", "index.html#autotoc_md1", null ],
-    [ "Integrating muteki-shims into Ghidra", "index.html#autotoc_md2", null ],
-    [ "Developing muteki-shims using clangd", "index.html#autotoc_md3", null ],
+  [ "muteki", "index.html", [
+    [ "Integrating muteki into a C compiler", "index.html#autotoc_md1", null ],
+    [ "Integrating muteki syscall definitions into Ghidra", "index.html#autotoc_md2", null ],
+    [ "Developing muteki using clangd", "index.html#autotoc_md3", null ],
     [ "Todo List", "todo.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -54,12 +54,12 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"abi_8h_source.html",
-"fs_8h.html#a2c2cfbb03e319776b36d0b1169a83f54",
-"messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a596382a0d812d1ae8a2e9d8822e88742",
-"structlcd__thread__safe__s.html#a4b8a84a642cd579b137fe9be67b52eac",
-"ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cba3b91a7b803803a5c7b892921df1544de",
-"utils_8h.html#a5a5b205f6db107bad75c2b66dc4ec088"
+"abi_8h.html",
+"fs_8h.html#a214672671b2f6a1bca9481f25b07b65a",
+"messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7",
+"structlcd__thread__safe__s.html#a3e19bbbded6c976bf4d6915778534fb5",
+"ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cba1b1161738e758c349e9133f2765a0af7",
+"utf16_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

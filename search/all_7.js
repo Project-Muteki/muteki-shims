@@ -35,6 +35,6 @@ var searchData=
   ['getsyskeystate_32',['GetSysKeyState',['../event_8h.html#a562d456e1940f303308135ac5dac9788',1,'event.h']]],
   ['getsystime_33',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]],
   ['gettimer1inthandler_34',['GetTimer1IntHandler',['../system_8h.html#a77c18dab7a63ff188e452878d5907582',1,'system.h']]],
-  ['ghidra_35',['Integrating muteki-shims into Ghidra',['../index.html#autotoc_md2',1,'']]],
+  ['ghidra_35',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
   ['grab_5fcount_36',['grab_count',['../structlcd__cursor__s.html#add5ec584db82326ca5743de44f1037ed',1,'lcd_cursor_s']]]
 ];

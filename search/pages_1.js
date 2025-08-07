@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['muteki_20shims_0',['muteki-shims',['../index.html',1,'']]]
+  ['muteki_0',['muteki',['../index.html',1,'']]]
 ];
