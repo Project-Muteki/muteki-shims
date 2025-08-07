@@ -1,5 +1,5 @@
-project('muteki-shims', 'c',
-    version : '4.0.0',
+project('muteki', 'c',
+    version : '5.0.0',
     default_options : ['warning_level=3'])
 
 c_flags = ['-mcpu=arm7tdmi', '-ffreestanding']
@@ -45,7 +45,7 @@ syscalls_split = custom_target('syscalls_split',
 
 # Static library that bundles both sdk and krnl shims.
 static_library(
-    'mutekishims',
+    'muteki-shims',
     syscalls_split,
     install : true,
     c_args : c_flags,
