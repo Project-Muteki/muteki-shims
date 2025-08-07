@@ -1,4 +1,4 @@
-#include <osdep/threading.h>
+#include "osdep/threading.h"
 
 thread_t *osdep_thread_get_current(void) {
     critical_section_t cs;

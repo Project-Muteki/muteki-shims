@@ -1,10 +1,6 @@
-/*
- * Copyright 2025 dogtopus
- * SPDX-License-Identifier: MIT
- */
-
 #include "osdep/heap.h"
 #include "muteki/memory.h"  // for _lfree() and lmalloc()
+#include "muteki/file.h"  // for _afopen() et al
 
 typedef struct {
     size_t usable_size;
@@ -12,6 +8,11 @@ typedef struct {
 } __mchx_t;
 
 static const size_t __OVER_ALLOC_SIZE = 4 + sizeof(__mchx_t);
+static const char TRACE_START[4] = {'H', 'T', 'R', 'C'};
+static file_descriptor_t *__heap_tracer_osfh = NULL;
+
+// So we lose as little performance as possible when heap tracer is turned off.
+#define _unlikely(x) __builtin_expect(!!(x), 0)
 
 /**
  * @brief A hack that fixes allocator alignment by adding an extra header to allocated memchunk.
@@ -58,11 +59,31 @@ static inline void *__mchx_get_raw(void *p) {
     return mchx->raw_ptr;
 }
 
+static void _heaptracer_on_malloc(void *p, size_t size) {
+    uintptr_t r = (uintptr_t) p;
+    size_t s = size;
+    if (_unlikely(__heap_tracer_osfh != NULL)) {
+        _fwrite(&r, 1, sizeof(r), __heap_tracer_osfh);
+        _fwrite(&s, 1, sizeof(s), __heap_tracer_osfh);
+        __fflush(__heap_tracer_osfh);
+    }
+}
+
+static void _heaptracer_on_free(void *p) {
+    uintptr_t r = (uintptr_t) p;
+    size_t s = 0;
+    if (_unlikely(__heap_tracer_osfh != NULL)) {
+        _fwrite(&r, 1, sizeof(r), __heap_tracer_osfh);
+        _fwrite(&s, 1, sizeof(s), __heap_tracer_osfh);
+        __fflush(__heap_tracer_osfh);
+    }
+}
+
 __attribute__((assume_aligned(8)))
 void *osdep_heap_alloc(size_t size) {
     void *q = lmalloc(size + __OVER_ALLOC_SIZE);
 
-    //_heaptracer_on_malloc(q, size + __OVER_ALLOC_SIZE);
+    _heaptracer_on_malloc(q, size + __OVER_ALLOC_SIZE);
 
     if (q == NULL) {
         return NULL;
@@ -82,6 +103,33 @@ void osdep_heap_free(void *ptr) {
 
     void *q = __mchx_get_raw(ptr);
 
-    //_heaptracer_on_free(q);
+    _heaptracer_on_free(q);
     _lfree(q);
+}
+
+bool osdep_heap_trace_start(void) {
+    if (__heap_tracer_osfh != NULL) {
+        return false;
+    }
+    // ab+ doesn't seem to work
+    __heap_tracer_osfh = _afopen("C:\\HEAPT.BIN", "rb+");
+    if (__heap_tracer_osfh == NULL) {
+        __heap_tracer_osfh = _afopen("C:\\HEAPT.BIN", "wb+");
+        if (__heap_tracer_osfh == NULL) {
+            return false;
+        }
+    }
+    __fseek(__heap_tracer_osfh, 0, _SYS_SEEK_END);
+    _fwrite(TRACE_START, 1, sizeof(TRACE_START), __heap_tracer_osfh);
+    __fflush(__heap_tracer_osfh);
+    return true;
+}
+
+bool osdep_heap_trace_stop(void) {
+    if (__heap_tracer_osfh == NULL) {
+        return false;
+    }
+    _fclose(__heap_tracer_osfh);
+    __heap_tracer_osfh = NULL;
+    return true;
 }

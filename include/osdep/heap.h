@@ -34,7 +34,7 @@ __attribute__((assume_aligned(8))) extern void *osdep_heap_alloc(size_t size);
 
 /**
  * @brief Get usable size of an allocated mchx memchunk.
- * 
+ *
  * @param ptr Memory allocated by osdep_heap_alloc().
  * @return Size of usable memory.
  */
@@ -47,6 +47,24 @@ size_t osdep_heap_get_alloc_size(const void *ptr);
  * @x_void_return
  */
 extern void osdep_heap_free(void *ptr);
+
+/**
+ * @brief Start the heap tracer.
+ *
+ * @x_void_param
+ * @retval true @x_term ok
+ * @retval false @x_term ok
+ */
+extern bool osdep_heap_trace_start(void);
+
+/**
+ * @brief Stop the heap tracer.
+ *
+ * @x_void_param
+ * @retval true @x_term ok
+ * @retval false @x_term ok
+ */
+extern bool osdep_heap_trace_stop(void);
 
 #ifdef __cplusplus
 } // extern "C"
