@@ -83,7 +83,9 @@
  *
  * extern int test_eabi(int arg0, char *arg1);
  *
- * APCS_WRAPPER(test, int, args) {
+ * // Use void in place of the last 2 parameters is also acceptable if test() will not be passed as a callback
+ * // with specific requirement on its function signature.
+ * APCS_WRAPPER(test, args, int, int arg0, char *arg1) {
  *   int arg0 = va_arg(args, int);
  *   char *arg1 = va_arg(args, char *);
  *   return test_eabi(arg0, arg1);
