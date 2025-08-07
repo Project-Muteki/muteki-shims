@@ -3,6 +3,11 @@
  * SPDX-License-Identifier: MIT
  */
 
+/**
+ * @file abi.h
+ * @brief ABI compatibility helpers.
+ */
+
 #ifndef __OSDEP_ABI_H__
 #define __OSDEP_ABI_H__
 
