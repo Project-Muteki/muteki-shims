@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['semaphore_5ft_0',['semaphore_t',['../threading_8h.html#a37e4075b8f630bcb49b25435a1af5c4b',1,'threading.h']]]
+  ['osdep_5futls_5fstats_5ft_0',['osdep_utls_stats_t',['../utls_8h.html#acdb3bccf42b7c8c5f6d1564b77fb2af3',1,'utls.h']]]
 ];

@@ -8,5 +8,6 @@ var searchData=
   ['integrating_20muteki_20shims_20into_20ghidra_5',['Integrating muteki-shims into Ghidra',['../index.html#autotoc_md2',1,'']]],
   ['into_20a_20c_20compiler_6',['Integrating muteki-shims into a C compiler',['../index.html#autotoc_md1',1,'']]],
   ['into_20ghidra_7',['Integrating muteki-shims into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['inversesetarea_8',['InverseSetArea',['../canvas_8h.html#a5ab7d9158ebf7827aa1317d2d8379bb4',1,'canvas.h']]]
+  ['inversesetarea_8',['InverseSetArea',['../canvas_8h.html#a5ab7d9158ebf7827aa1317d2d8379bb4',1,'canvas.h']]],
+  ['is_5finitialized_9',['is_initialized',['../structosdep__utls__stats__s.html#a623f4e29dd0638e68479f3d78bf57b0c',1,'osdep_utls_stats_s']]]
 ];

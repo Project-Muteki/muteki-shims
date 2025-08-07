@@ -22,7 +22,7 @@ var searchData=
   ['createfile_19',['CreateFile',['../devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736',1,'devio.h']]],
   ['createvirtuallcd_20',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
   ['critical_5fsection_5fs_21',['critical_section_s',['../structcritical__section__s.html',1,'']]],
-  ['critical_5fsection_5ft_22',['critical_section_t',['../threading_8h.html#a07c0d1458ed0f242cff7024401856fdc',1,'threading.h']]],
+  ['critical_5fsection_5ft_22',['critical_section_t',['../muteki_2threading_8h.html#a07c0d1458ed0f242cff7024401856fdc',1,'threading.h']]],
   ['cs_23',['cs',['../structlcd__thread__safe__s.html#a46a34cbc680af9d6f33f77fae68b9bf0',1,'lcd_thread_safe_s::cs'],['../structlcd__lock__s.html#ab9de7c4cb2bac64ed550cef95ddd593c',1,'lcd_lock_s::cs']]],
   ['ctr_24',['ctr',['../structsemaphore__s.html#a063ba0ee7ba3e28d83b8320240439860',1,'semaphore_s']]],
   ['ctx_5fsize_25',['ctx_size',['../structfilepicker__context__s.html#a3e743dcf07d42b6024fd992809fafc1f',1,'filepicker_context_s']]],

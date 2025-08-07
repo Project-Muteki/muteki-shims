@@ -3,6 +3,7 @@ var structthread__s =
     [ "event", "structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9", null ],
     [ "exit_code", "structthread__s.html#af5c345bd409d4270b3d5544ac819d816", null ],
     [ "kerrno", "structthread__s.html#a14b7c85dfa24c97be5e24bde3b8293af", null ],
+    [ "ktls", "structthread__s.html#a6ad6c486e52f0697109e5f825a023ad4", null ],
     [ "magic", "structthread__s.html#a76fa0c7a73730f6448a8510709e47ca7", null ],
     [ "next", "structthread__s.html#a91a5ec60bf6c739683397da137fe3f9f", null ],
     [ "prev", "structthread__s.html#ad222a518be35c3a59f8378c575a96da2", null ],

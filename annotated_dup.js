@@ -30,6 +30,7 @@ var annotated_dup =
     [ "message_queue_nonatomic_t", "structmessage__queue__nonatomic__t.html", "structmessage__queue__nonatomic__t" ],
     [ "message_queue_s", "structmessage__queue__s.html", "structmessage__queue__s" ],
     [ "nand_params_t", "structnand__params__t.html", "structnand__params__t" ],
+    [ "osdep_utls_stats_s", "structosdep__utls__stats__s.html", "structosdep__utls__stats__s" ],
     [ "pcm_codec_context_s", "structpcm__codec__context__s.html", "structpcm__codec__context__s" ],
     [ "pcm_config_s", "structpcm__config__s.html", "structpcm__config__s" ],
     [ "pcm_decoder_buffer_s", "structpcm__decoder__buffer__s.html", "structpcm__decoder__buffer__s" ],
