@@ -1,9 +1,15 @@
-project('muteki-shims', 'c',
-    version : '4.0.0',
+project('muteki', 'c',
+    version : '5.0.0',
     default_options : ['warning_level=3'])
 
-c_flags = ['-mcpu=arm7tdmi', '-nostdlib', '-nostdinc']
+c_flags = ['-mcpu=arm7tdmi', '-ffreestanding']
 ld_flags = c_flags
+
+# Define __MUTEKI_IS_BOOTSTRAPPING__ for the entire project when sys/types.h is missing.
+c = meson.get_compiler('c')
+if not c.has_header('sys/types.h')
+    add_project_arguments(['-D__MUTEKI_IS_BOOTSTRAPPING__=1'], language: 'c')
+endif
 
 syscall_files_sdk = ['syscall_def/syscalls_sdk.json', 'syscall_def/syscalls_sdk_hpprime.json']
 syscall_files_krnl = ['syscall_def/syscalls_krnl.json', 'syscall_def/syscalls_krnl_hpprime.json', 'syscall_def/syscalls_krnl_pocketchallenge.json']
@@ -39,12 +45,29 @@ syscalls_split = custom_target('syscalls_split',
 
 # Static library that bundles both sdk and krnl shims.
 static_library(
-    'mutekishims',
+    'muteki-shims',
     syscalls_split,
     install : true,
     c_args : c_flags,
     link_args : ld_flags,
     pic: false,
+)
+
+osdep_src = [
+    'src/osdep/threading.c',
+    'src/osdep/ktls.c',
+    'src/osdep/utls.c',
+    'src/osdep/heap.c',
+]
+
+static_library(
+    'muteki-osdep',
+    osdep_src,
+    include_directories: ['include/'],
+    install : true,
+    c_args : c_flags,
+    link_args : ld_flags,
+    pic : false,
 )
 
 if get_option('generate_dll_replicas')
@@ -92,4 +115,6 @@ executable(
 # Headers for the shims
 install_headers('include/muteki.h')
 install_subdir('include/muteki/',
+    install_dir : 'include/')
+install_subdir('include/osdep/',
     install_dir : 'include/')
