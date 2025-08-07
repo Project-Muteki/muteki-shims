@@ -1,6 +1,6 @@
 #include <muteki.h>
 #include <osdep/abi.h>
 
-int main() {
+int main(void) {
 
 }

@@ -154,8 +154,12 @@ struct thread_s {
     thread_t *prev;
     /** Next thread descriptor. */
     thread_t *next;
-    /** Unknown and seems to be uninitialized. */
-    char unk_0x34[0x20];
+    union {
+        /** Unknown and seems to be uninitialized. */
+        char unk_0x34[0x20];
+        /** Kernel TLS (reusing the seemingly unused unk_0x34 fields) */
+        uintptr_t ktls[8];
+    };
 };
 
 /**

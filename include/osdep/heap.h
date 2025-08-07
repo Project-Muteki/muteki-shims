@@ -30,7 +30,7 @@ extern "C" {
  * @param size Size of the memory to allocate.
  * @return Pointer to allocated memory, or NULL if allocation fails.
  */
-extern void *osdep_heap_alloc(size_t size);
+__attribute__((assume_aligned(8))) extern void *osdep_heap_alloc(size_t size);
 
 /**
  * @brief Get usable size of an allocated mchx memchunk.

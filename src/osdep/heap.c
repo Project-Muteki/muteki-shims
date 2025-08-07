@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <osdep/heap.h>
-#include <muteki/memory.h>  // for _lfree() and lmalloc()
+#include "osdep/heap.h"
+#include "muteki/memory.h"  // for _lfree() and lmalloc()
 
 typedef struct {
     size_t usable_size;
@@ -16,7 +16,11 @@ static const size_t __OVER_ALLOC_SIZE = 4 + sizeof(__mchx_t);
 /**
  * @brief A hack that fixes allocator alignment by adding an extra header to allocated memchunk.
  *
- * Besta allocator is 4-bytes aligned but EABI requires 8-bytes aligned allocations. We can use compiler directives to cover this up but it might introduce performance penalty. This essentially over-allocates the memory and makes sure that there are at least 8 bytes available for us to store the original pointer and the allocation size so we don't have to resort to using the memchunk header to determine whether we're at the original pointer or not.
+ * @details
+ * Besta allocator is 4-bytes aligned but EABI requires 8-bytes aligned allocations. We can use compiler directives to
+ * cover this up but it might introduce performance penalty. This essentially over-allocates the memory and makes sure
+ * that there are at least 8 bytes available for us to store the original pointer and the allocation size so we don't
+ * have to resort to using the memchunk header to determine whether we're at the original pointer or not.
  *
  * @param q Unaligned pointer given by Besta lmalloc().
  * @param size Usable size of the allocation.
@@ -54,6 +58,7 @@ static inline void *__mchx_get_raw(void *p) {
     return mchx->raw_ptr;
 }
 
+__attribute__((assume_aligned(8)))
 void *osdep_heap_alloc(size_t size) {
     void *q = lmalloc(size + __OVER_ALLOC_SIZE);
 
@@ -65,7 +70,6 @@ void *osdep_heap_alloc(size_t size) {
 
     return __mchx_format(q, size);
 }
-
 
 size_t osdep_heap_get_alloc_size(const void *ptr) {
     return __mchx_get_size(ptr);

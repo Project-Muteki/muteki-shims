@@ -56,6 +56,8 @@ static_library(
 osdep_src = [
     'src/osdep/threading.c',
     'src/osdep/ktls.c',
+    'src/osdep/utls.c',
+    'src/osdep/heap.c',
 ]
 
 static_library(

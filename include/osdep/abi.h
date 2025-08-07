@@ -6,8 +6,36 @@
 #ifndef __OSDEP_ABI_H__
 #define __OSDEP_ABI_H__
 
-#define __APCS_WRAPPER_BASE(NAME, STATIC, RETTYPE, ARGS) \
-    __attribute__((naked)) STATIC RETTYPE NAME(void) { \
+#if defined(__clang__)
+
+// clang: Ignore unused parameter warning and clangd's warning on asm().
+#define NO_EXPECTED_WARNINGS_BEGIN \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored \"-Wunused-parameter\"") \
+    _Pragma("clang diagnostic ignored \"-Wlanguage-extension-token\"")
+#define NO_EXPECTED_WARNINGS_END \
+    _Pragma("clang diagnostic pop")
+
+#elif defined(__GNUC__)  // !defined(__clang__)
+
+// gcc: Ignore unused parameter warning.
+#define NO_EXPECTED_WARNINGS_BEGIN \
+    _Pragma("GCC diagnostic push") \
+    _Pragma("GCC diagnostic ignored \"-Wunused-parameter\"")
+#define NO_EXPECTED_WARNINGS_END \
+    _Pragma("GCC diagnostic pop")
+
+#else  // !defined(__GNUC__)
+
+// No-op
+#define NO_EXPECTED_WARNINGS_BEGIN
+#define NO_EXPECTED_WARNINGS_END
+
+#endif  // defined(__clang__) || defined(__GNUC__)
+
+#define __APCS_WRAPPER_BASE(NAME, VA_LIST_NAME, STATIC, RETTYPE, ...) \
+    NO_EXPECTED_WARNINGS_BEGIN \
+    __attribute__((naked)) STATIC RETTYPE NAME(__VA_ARGS__) { \
         asm ( \
             /* x x x x | a0 a1 a2 a3 ... */ \
             "push {r0-r3}\n\t" \
@@ -37,7 +65,8 @@
             "bx r2" \
         ); \
     } \
-    __attribute__((used)) static RETTYPE __osdep_apcs_thunk_##NAME(va_list ARGS)
+    NO_EXPECTED_WARNINGS_END \
+    __attribute__((used)) static RETTYPE __osdep_apcs_thunk_##NAME(va_list VA_LIST_NAME)
 
 /**
  * @brief Create thunk for an APCS caller.
@@ -66,18 +95,26 @@
  * better to read them as 2 integers, then concatenate them, and finally cast the result back to double.
  *
  * @param NAME Name of the thunk that will be called from APCS functions.
- * @param RETTYPE Return type of the thunk.
- * @param ARGS The name of the variadic list object.
+ * @param VA_LIST_NAME The name of the variadic list object.
+ * @param RETTYPE Return type of the thunk. Used to match the signature of the outer thunk to those of a kernel
+ * callback pointer.
+ * @param ... Parameter signature of the outer thunk. Used to match the signature of the outer thunk to those of
+ * a kernel callback pointer.
  */
-#define APCS_WRAPPER(NAME, RETTYPE, ARGS) __APCS_WRAPPER_BASE(NAME, , RETTYPE, ARGS)
+#define APCS_WRAPPER(NAME, VA_LIST_NAME, RETTYPE, ...) \
+    __APCS_WRAPPER_BASE(NAME, VA_LIST_NAME, , RETTYPE, __VA_ARGS__)
 
 /**
- * @brief Same as APCS_WRAPPER(), but marks the thunk as `static`.
+ * @brief Same as APCS_WRAPPER(), but marks the outer thunk as `static`.
  *
  * @param NAME Name of the thunk that will be called from APCS functions.
- * @param RETTYPE Return type of the thunk.
- * @param ARGS The name of the variadic list object.
+ * @param VA_LIST_NAME The name of the variadic list object.
+ * @param RETTYPE Return type of the thunk. Used to match the signature of the outer thunk to those of a kernel
+ * callback pointer.
+ * @param ... Parameter signature of the outer thunk. Used to match the signature of the outer thunk to those of
+ * a kernel callback pointer.
  */
-#define APCS_WRAPPER_STATIC(NAME, RETTYPE, ARGS) __APCS_WRAPPER_BASE(NAME, static, RETTYPE, ARGS)
+#define APCS_WRAPPER_STATIC(NAME, VA_LIST_NAME, RETTYPE, ...) \
+    __APCS_WRAPPER_BASE(NAME, VA_LIST_NAME, static, RETTYPE, __VA_ARGS__)
 
 #endif  // __OSDEP_ABI_H__
